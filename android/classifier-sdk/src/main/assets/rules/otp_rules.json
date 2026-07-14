@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "OTP_CN_001",
+      "language": "zh",
+      "type": "OTP_PROTECT",
+      "priority": 100,
+      "pattern": "(?:验证码|动态密码|校验码|短信密码)\\s*[:：是为]?\\s*([0-9]{4,8})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "OTP_WITH_NEARBY_CODE",
+      "enabled": true
+    },
+    {
+      "id": "OTP_EN_001",
+      "language": "en",
+      "type": "OTP_PROTECT",
+      "priority": 100,
+      "pattern": "(?:verification\\s+code|passcode|one[- ]time\\s+password|OTP|code)\\s*[:#]?\\s*([0-9]{4,8})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "OTP_WITH_NEARBY_CODE",
+      "enabled": true
+    },
+    {
+      "id": "OTP_HI_001",
+      "language": "hi",
+      "type": "OTP_PROTECT",
+      "priority": 100,
+      "pattern": "(?:OTP|ओटीपी|कोड|सत्यापन\\s*कोड)\\s*[:：]?\\s*([0-9]{4,8})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "OTP_WITH_NEARBY_CODE",
+      "enabled": true
+    },
+    {
+      "id": "OTP_ID_001",
+      "language": "id",
+      "type": "OTP_PROTECT",
+      "priority": 100,
+      "pattern": "(?:OTP|kode\\s+verifikasi|kode\\s+rahasia|kode)\\s*[:：]?\\s*([0-9]{4,8})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "OTP_WITH_NEARBY_CODE",
+      "enabled": true
+    }
+  ]
+}

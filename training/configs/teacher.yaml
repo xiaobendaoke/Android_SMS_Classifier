@@ -1,0 +1,24 @@
+# 教师模型：bert-base-multilingual-cased
+
+version: "1.0.0"
+seed: 42
+
+model:
+  name: bert-base-multilingual-cased
+  hub_id: google-bert/bert-base-multilingual-cased
+  max_length: 512
+
+training:
+  batch_size: 16
+  learning_rate: 2.0e-5
+  epochs: 3
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+
+data:
+  train_manifest: data/processed/train.jsonl
+  val_manifest: data/processed/validation.jsonl
+
+output:
+  checkpoint_dir: artifacts/teacher
+  manifest: data/manifests/teacher_manifest.json

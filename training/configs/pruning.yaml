@@ -1,0 +1,19 @@
+# 结构化通道剪枝
+
+version: "1.0.0"
+seed: 42
+
+importance: l1_norm
+
+prune_ratios: [0.25, 0.15, 0.10]
+
+constraints:
+  max_transaction_recall_drop: 0.005
+  max_macro_f1_drop: 0.01
+
+input_model: artifacts/student/sms_bytecnn_fp32.keras
+output_model: artifacts/student/sms_bytecnn_pruned.keras
+
+finetune:
+  epochs: 3
+  learning_rate: 5.0e-4

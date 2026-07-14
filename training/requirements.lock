@@ -1,0 +1,8 @@
+# Pinned light dependencies for Python 3.8 (audit / baseline / evaluate)
+numpy==1.24.4
+PyYAML==6.0.1
+pytest==7.4.4
+
+# Heavy training deps — install separately on training machine:
+#   pip install -r requirements-train.txt
+# See docs/异机测试环境安装清单.md

@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "splits": {
+    "train": {
+      "path": "data/processed/train.jsonl",
+      "count": 32,
+      "sha256": "843b1b57eef40a69260446c05925c389ca4175ce0cddd230d37c13a5f6c466e1"
+    },
+    "validation": {
+      "path": "data/processed/validation.jsonl",
+      "count": 10,
+      "sha256": "33bee40522827e19d060c5d4f7a1cdab6392847910c7f8c9b8aae52b8b23275e"
+    },
+    "test": {
+      "path": "data/processed/test.jsonl",
+      "count": 10,
+      "sha256": "78a957f1c3145b0abc7b03c6a68f7bfdb328547373b4d7dd81c01fc9955a0316"
+    }
+  },
+  "dedupe": {
+    "removed_exact": 0,
+    "removed_normalized": 0
+  }
+}

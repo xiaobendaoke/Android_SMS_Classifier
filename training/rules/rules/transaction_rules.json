@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "TXN_CN_001",
+      "language": "zh",
+      "type": "TRANSACTION_HINT",
+      "priority": 80,
+      "pattern": "(?:入账|扣款|航班|订单|余额变动|信用卡消费)",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "TRANSACTION_HINT",
+      "enabled": true
+    },
+    {
+      "id": "TXN_CN_002",
+      "language": "zh",
+      "type": "TRANSACTION_HINT",
+      "priority": 75,
+      "pattern": "(?:银行|储蓄卡|借记卡).{0,20}(?:入账|到账|转入)",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "BANK_CREDIT_HINT",
+      "enabled": true
+    },
+    {
+      "id": "PICKUP_CN_001",
+      "language": "zh",
+      "type": "PICKUP_PROTECT",
+      "priority": 95,
+      "pattern": "(?:取件码|提货码|快递柜|自提码)\\s*[:：]?\\s*([A-Za-z0-9]{4,10})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "PICKUP_WITH_NEARBY_CODE",
+      "enabled": true
+    },
+    {
+      "id": "PICKUP_EN_001",
+      "language": "en",
+      "type": "PICKUP_PROTECT",
+      "priority": 95,
+      "pattern": "(?:pickup\\s+code|parcel\\s+locker|collection\\s+code)\\s*[:#]?\\s*([A-Za-z0-9]{4,10})",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "PICKUP_WITH_NEARBY_CODE",
+      "enabled": true
+    },
+    {
+      "id": "TXN_EN_001",
+      "language": "en",
+      "type": "TRANSACTION_HINT",
+      "priority": 70,
+      "pattern": "(?:credited|debited|payment\\s+received|flight\\s+booking|order\\s+confirmed)",
+      "categoryHint": "TRANSACTION",
+      "action": "INBOX",
+      "reasonCode": "TRANSACTION_HINT",
+      "enabled": true
+    }
+  ]
+}

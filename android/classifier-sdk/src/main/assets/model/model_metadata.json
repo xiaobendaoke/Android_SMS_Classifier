@@ -1,0 +1,25 @@
+{
+  "modelVersion": "1.0.0",
+  "architecture": "byte_textcnn",
+  "inputLength": 512,
+  "padId": 0,
+  "byteOffset": 1,
+  "labels": [
+    "TRANSACTION",
+    "AD",
+    "HARASS",
+    "FRAUD"
+  ],
+  "normalizationVersion": "1.0.0",
+  "rulesVersion": "1.0.0",
+  "quantization": "INT8",
+  "modelSha256": "REPLACE_DURING_BUILD",
+  "thresholds": {
+    "default": {
+      "TRANSACTION": 0.55,
+      "AD": 0.7,
+      "HARASS": 0.7,
+      "FRAUD": 0.75
+    }
+  }
+}

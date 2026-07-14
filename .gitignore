@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Training data (keep directory structure via .gitkeep)
+training/data/raw/*
+!training/data/raw/.gitkeep
+training/data/interim/*
+!training/data/interim/.gitkeep
+training/data/processed/*
+!training/data/processed/.gitkeep
+
+# Models (keep SDK asset path placeholder; ignore trained artifacts elsewhere)
+*.tflite
+!android/classifier-sdk/src/main/assets/model/.gitkeep
+*.h5
+*.keras
+*.pb
+*.ckpt
+*.pt
+*.pth
+*.onnx
+checkpoints/
+artifacts/
+
+# Reports generated binaries
+reports/metrics/*
+!reports/metrics/.gitkeep
+reports/benchmarks/*
+!reports/benchmarks/.gitkeep
+reports/audit/*
+!reports/audit/.gitkeep
+reports/release/*
+!reports/release/.gitkeep
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/**/build/
+android/local.properties
+android/.idea/
+android/*.iml
+android/**/.cxx/
+android/captures/
+
+# Build outputs
+*.apk
+*.aab
+*.aar
+!android/classifier-sdk/build/outputs/aar/.gitkeep
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Logs
+*.log

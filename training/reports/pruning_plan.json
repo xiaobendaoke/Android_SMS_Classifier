@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "importance": "l1_norm",
+  "prune_ratios": [
+    0.25,
+    0.15,
+    0.1
+  ],
+  "constraints": {
+    "max_transaction_recall_drop": 0.005,
+    "max_macro_f1_drop": 0.01
+  },
+  "input_model": "artifacts/student/sms_bytecnn_fp32.keras",
+  "output_model": "artifacts/student/sms_bytecnn_pruned.keras",
+  "steps": [
+    {
+      "ratio": 0.25,
+      "method": "structured_conv1d_channel_prune",
+      "importance": "l1_norm"
+    },
+    {
+      "ratio": 0.15,
+      "method": "structured_conv1d_channel_prune",
+      "importance": "l1_norm"
+    },
+    {
+      "ratio": 0.1,
+      "method": "structured_conv1d_channel_prune",
+      "importance": "l1_norm"
+    }
+  ]
+}

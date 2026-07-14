@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">短信分类器</string>
+
+    <!-- Bottom tabs -->
+    <string name="tab_inbox">收件箱</string>
+    <string name="tab_suspect">可疑</string>
+    <string name="tab_review">待复核</string>
+    <string name="tab_evaluation">离线评估</string>
+    <string name="tab_performance">性能</string>
+    <string name="tab_about">关于</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">欢迎使用短信分类器</string>
+    <string name="onboarding_privacy">本应用完全离线运行，不会上传短信内容。分类元数据（类别、置信度等）保存在本地数据库，不含短信正文。</string>
+    <string name="onboarding_role_hint">请将本应用设为默认短信应用，以便接收并分类新短信。</string>
+    <string name="onboarding_request_role">申请默认短信角色</string>
+    <string name="onboarding_role_granted">已持有默认短信角色</string>
+    <string name="onboarding_continue">进入应用</string>
+
+    <!-- Inbox / lists -->
+    <string name="inbox_empty">暂无短信</string>
+    <string name="suspect_empty">暂无可疑短信</string>
+    <string name="review_empty">暂无待复核短信</string>
+    <string name="suspect_restore">恢复至收件箱</string>
+
+    <!-- Detail -->
+    <string name="detail_title">消息详情</string>
+    <string name="detail_category">类别</string>
+    <string name="detail_action">动作</string>
+    <string name="detail_confidence">置信度</string>
+    <string name="detail_reason">原因码</string>
+    <string name="detail_rules">命中规则</string>
+    <string name="detail_model_version">模型版本</string>
+    <string name="detail_rules_version">规则版本</string>
+    <string name="detail_no_meta">暂无分类元数据</string>
+    <string name="detail_safety_note">安全提示：请谨慎点击短信中的链接，勿向陌生人转账或泄露验证码。</string>
+
+    <!-- Evaluation -->
+    <string name="eval_run">运行离线评估</string>
+
+    <!-- Performance -->
+    <string name="performance_title">分类性能指标</string>
+    <string name="performance_p50">P50 延迟</string>
+    <string name="performance_p95">P95 延迟</string>
+    <string name="performance_p99">P99 延迟</string>
+    <string name="performance_throughput">吞吐量</string>
+    <string name="performance_placeholder_hint">指标将在后续版本从 benchmark 模块采集。</string>
+
+    <!-- About -->
+    <string name="about_title">关于</string>
+    <string name="about_version">版本 0.1.0-phase0</string>
+    <string name="about_opensource">开源组件声明</string>
+    <string name="about_opensource_link">Android Jetpack · Kotlin · Room · Compose · Material3</string>
+
+    <!-- Compose SMS -->
+    <string name="compose_title">撰写短信</string>
+    <string name="compose_address">收件人</string>
+    <string name="compose_body">内容</string>
+    <string name="compose_send">发送</string>
+    <string name="compose_sent">已发送</string>
+    <string name="compose_send_failed">发送失败</string>
+    <string name="compose_permission_denied">需要 SEND_SMS 权限</string>
+
+    <!-- Notifications -->
+    <string name="channel_inbox">收件箱通知</string>
+    <string name="channel_suspect">可疑短信</string>
+    <string name="channel_mms">彩信</string>
+    <string name="notification_inbox_title">新短信</string>
+    <string name="notification_suspect_title">可疑短信</string>
+    <string name="notification_review_title">待复核短信</string>
+    <string name="notification_mms_title">收到彩信</string>
+    <string name="notification_mms_body">彩信已接收（占位处理）</string>
+</resources>
