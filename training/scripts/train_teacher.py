@@ -51,6 +51,14 @@ def build_parser() -> argparse.ArgumentParser:
         default=0,
         help="Optional cap for quick smoke runs (0 = all).",
     )
+    parser.add_argument("--max-length", type=int, default=0, help="Override config max_length (0=config).")
+    parser.add_argument("--batch-size", type=int, default=0, help="Override config batch_size (0=config).")
+    parser.add_argument("--epochs", type=int, default=0, help="Override config epochs (0=config).")
+    parser.add_argument(
+        "--no-fp16",
+        action="store_true",
+        help="Disable FP16 even if config enables it.",
+    )
     return parser
 
 
@@ -97,7 +105,19 @@ def predict_logits(model, tokenizer, texts: Sequence[str], max_length: int, batc
     return np.concatenate(chunks, axis=0).astype(np.float32)
 
 
-def train_epoch(model, tokenizer, records, label_to_idx, max_length, batch_size, optimizer, device):
+def train_epoch(
+    model,
+    tokenizer,
+    records,
+    label_to_idx,
+    max_length,
+    batch_size,
+    optimizer,
+    device,
+    *,
+    use_fp16: bool,
+    scaler,
+):
     import torch
 
     model.train()
@@ -112,12 +132,23 @@ def train_epoch(model, tokenizer, records, label_to_idx, max_length, batch_size,
         batch_y = torch.tensor(labels[idx], dtype=torch.long, device=device)
         batch = encode_batch(tokenizer, batch_texts, max_length, device)
         optimizer.zero_grad(set_to_none=True)
-        out = model(**batch, labels=batch_y)
-        loss = out.loss
-        loss.backward()
-        optimizer.step()
-        total_loss += float(loss.item())
+        if use_fp16 and device.type == "cuda":
+            with torch.autocast(device_type="cuda", dtype=torch.float16):
+                out = model(**batch, labels=batch_y)
+                loss = out.loss
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            out = model(**batch, labels=batch_y)
+            loss = out.loss
+            loss.backward()
+            optimizer.step()
+        total_loss += float(loss.detach().item())
         n_batches += 1
+        del batch, batch_y, out, loss
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
     return total_loss / max(1, n_batches)
 
 
@@ -152,7 +183,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     model_name = cfg.get("model", {}).get("name", "bert-base-multilingual-cased")
     hub_id = cfg.get("model", {}).get("hub_id", model_name)
-    max_length = int(cfg.get("model", {}).get("max_length", 128))
+    max_length = int(args.max_length or cfg.get("model", {}).get("max_length", 128))
     train_path = ROOT / cfg.get("data", {}).get("train_manifest", "data/processed/train.jsonl")
     val_path = ROOT / cfg.get("data", {}).get("val_manifest", "data/processed/validation.jsonl")
     output_dir = ROOT / cfg.get("output", {}).get("checkpoint_dir", "artifacts/teacher")
@@ -199,13 +230,21 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 1
 
     model.to(device)
-    label_to_idx = {label: i for i, label in enumerate(LABEL_ORDER)}
-    batch_size = int(cfg.get("training", {}).get("batch_size", 8))
-    epochs = int(cfg.get("training", {}).get("epochs", 2))
-    lr = float(cfg.get("training", {}).get("learning_rate", 2e-5))
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
+    if bool(cfg.get("training", {}).get("gradient_checkpointing", True)):
+        if hasattr(model, "gradient_checkpointing_enable"):
+            model.gradient_checkpointing_enable()
+            print("gradient_checkpointing: enabled")
 
-    history: Dict[str, List[float]] = {"loss": [], "accuracy": [], "val_accuracy": []}
+    label_to_idx = {label: i for i, label in enumerate(LABEL_ORDER)}
+    batch_size = int(args.batch_size or cfg.get("training", {}).get("batch_size", 8))
+    epochs = int(args.epochs or cfg.get("training", {}).get("epochs", 2))
+    lr = float(cfg.get("training", {}).get("learning_rate", 2e-5))
+    use_fp16 = bool(cfg.get("training", {}).get("fp16", True)) and not args.no_fp16 and device.type == "cuda"
+    scaler = torch.cuda.amp.GradScaler(enabled=use_fp16)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
+    print(f"  batch_size={batch_size} epochs={epochs} fp16={use_fp16}")
+
+    history: Dict[str, List[float]] = {"loss": [], "val_accuracy": []}
     for epoch in range(epochs):
         train_loss = train_epoch(
             model,
@@ -216,23 +255,18 @@ def main(argv: Optional[List[str]] = None) -> int:
             batch_size,
             optimizer,
             device,
-        )
-        train_acc, _, _ = eval_accuracy(
-            model, tokenizer, train_records, label_to_idx, max_length, batch_size, device
+            use_fp16=use_fp16,
+            scaler=scaler,
         )
         history["loss"].append(train_loss)
-        history["accuracy"].append(train_acc)
         if val_records:
             val_acc, _, _ = eval_accuracy(
                 model, tokenizer, val_records, label_to_idx, max_length, batch_size, device
             )
             history["val_accuracy"].append(val_acc)
-            print(
-                f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} "
-                f"acc={train_acc:.4f} val_acc={val_acc:.4f}"
-            )
+            print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} val_acc={val_acc:.4f}")
         else:
-            print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} acc={train_acc:.4f}")
+            print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f}")
 
     output_dir.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(output_dir)
