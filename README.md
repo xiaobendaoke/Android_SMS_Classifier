@@ -26,6 +26,7 @@
 - Gradle Wrapper（见 `android/README-GRADLE.md`）
 
 **换机测试前必读：** [docs/异机测试环境安装清单.md](./docs/异机测试环境安装清单.md)  
+**Colab 训练微调：** [docs/colab-training-guide.md](./docs/colab-training-guide.md)  
 **当前进度：** [docs/progress.md](./docs/progress.md)
 
 > Windows 路径含中文时，Gradle 单测可能 ClassNotFound：请建 ASCII junction，例如  

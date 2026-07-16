@@ -48,12 +48,25 @@
 | 2026-07-16 | `generate_synthetic_dataset` + `build_dataset --augment-train` + `check_split_leakage` | leakage PASS；manifest SHA 已刷新 |
 | 2026-07-16 | `pytest training/tests` | **18 passed** |
 
+## 你需要亲自完成的事项（详细步骤）
+
+完整 Colab 手册见：[colab-training-guide.md](./colab-training-guide.md)
+
+摘要：
+
+1. **本机**跑 `generate_synthetic_dataset` → `build_dataset` → `check_split_leakage`（必须 PASS）
+2. **Colab GPU** 下载 `google-bert/bert-base-multilingual-cased`【第三方】到本地目录
+3. Colab 执行 `train_teacher.py --model-path ...` → 产出 `teacher_logits_manifest.json`
+4. 再跑 `distill_student.py`（不要 `--hard-only`）→ `prune` → `quantize` → `verify` → `evaluate --mode tflite`
+5. 把 `artifacts/` + metrics + manifests 下载回本机，执行 `export_android_assets.py` 后编 APK
+6. **禁止**把真实短信上传 Colab；合成指标不得宣称事务召回 ≥98%
+
 ## 遗留问题
 
-1. 真实/合规标注冻结测试集（每类 ≥500）与双人标注
-2. 教师 `bert-base-multilingual-cased` 本地缓存后跑 `train_teacher.py` 再蒸馏
+1. 真实/合规标注冻结测试集（每类 ≥500）与双人标注（内网，勿上公共 Colab）
+2. 教师 BERT 在 Colab/训练机微调 + 真蒸馏（见 colab 手册）
 3. 4GB/6GB 真机 PSS / 时延 / 默认短信飞行模式验收
 4. 事务召回 ≥98% 达标前不得在审核报告写 PASS
-5. MMS 仍为占位；发送未写 Sent Provider；SAF 评测导入未完成
+5. MMS 仍为占位；发送未写 Sent Provider
 6. Android 仪器化测试矩阵（multipart/幂等/隐私）仍缺
-7. 旧 INT8 模型可能仍为 hybrid 且在塌缩数据上训练 — 需在无泄漏数据上重跑 distill→prune→quantize
+7. 旧 INT8 模型可能仍为 hybrid — 需在无泄漏数据上重跑全训练链
