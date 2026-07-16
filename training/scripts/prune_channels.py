@@ -51,6 +51,26 @@ def build_parser() -> argparse.ArgumentParser:
         default=ROOT / "reports" / "metrics" / "prune_plan.json",
         help="Pruning plan/report path.",
     )
+    parser.add_argument(
+        "--allow-dense-fallback",
+        action="store_true",
+        help=(
+            "If all prune ratios exceed accuracy budget, copy the dense FP32 model "
+            "to the pruned output path and exit 0 (for Colab/synthetic smoke)."
+        ),
+    )
+    parser.add_argument(
+        "--max-macro-f1-drop",
+        type=float,
+        default=None,
+        help="Override config max_macro_f1_drop (e.g. 0.15 on tiny val sets).",
+    )
+    parser.add_argument(
+        "--max-txn-recall-drop",
+        type=float,
+        default=None,
+        help="Override config max_transaction_recall_drop.",
+    )
     return parser
 
 
@@ -151,8 +171,16 @@ def main(argv: Optional[List[str]] = None) -> int:
     input_model = ROOT / cfg.get("input_model", "artifacts/student/sms_bytecnn_fp32.keras")
     output_model = ROOT / cfg.get("output_model", "artifacts/student/sms_bytecnn_pruned.keras")
     constraints = cfg.get("constraints", {})
-    max_txn_drop = float(constraints.get("max_transaction_recall_drop", 0.005))
-    max_f1_drop = float(constraints.get("max_macro_f1_drop", 0.01))
+    max_txn_drop = float(
+        args.max_txn_recall_drop
+        if args.max_txn_recall_drop is not None
+        else constraints.get("max_transaction_recall_drop", 0.005)
+    )
+    max_f1_drop = float(
+        args.max_macro_f1_drop
+        if args.max_macro_f1_drop is not None
+        else constraints.get("max_macro_f1_drop", 0.01)
+    )
 
     plan = {
         "seed": args.seed,
@@ -219,11 +247,35 @@ def main(argv: Optional[List[str]] = None) -> int:
     if chosen is None:
         # Keep densest (lowest ratio last tried) but mark FAIL — do not silently accept.
         plan["status"] = "FAIL_BUDGET"
+        plan["effective_constraints"] = {
+            "max_transaction_recall_drop": max_txn_drop,
+            "max_macro_f1_drop": max_f1_drop,
+        }
         write_json(args.report, plan)
         write_json(ROOT / "reports" / "metrics" / "prune.json", plan)
+        if args.allow_dense_fallback and input_model.exists():
+            import shutil
+
+            output_model.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(input_model, output_model)
+            plan["status"] = "DENSE_FALLBACK"
+            plan["note"] = (
+                "All prune ratios exceeded budget on current val set; "
+                "copied dense FP32 model to pruned path so quantize can continue. "
+                "Not a production prune accept."
+            )
+            write_json(args.report, plan)
+            write_json(ROOT / "reports" / "metrics" / "prune.json", plan)
+            print(
+                "WARN: prune budget failed; dense fallback written to "
+                f"{output_model} (status=DENSE_FALLBACK)",
+                file=sys.stderr,
+            )
+            return 0
         print(
             "FAIL: all prune ratios exceeded accuracy budget. "
-            "Keeping dense model; do not export pruned artifact.",
+            "Keeping dense model; do not export pruned artifact. "
+            "Retry with --allow-dense-fallback for smoke pipelines.",
             file=sys.stderr,
         )
         return 3
