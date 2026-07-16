@@ -59,6 +59,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Disable FP16 even if config enables it.",
     )
+    parser.add_argument(
+        "--allow-cpu",
+        action="store_true",
+        help="Allow CPU training (default: require CUDA GPU).",
+    )
     return parser
 
 
@@ -210,6 +215,19 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 1
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if not args.allow_cpu and device.type != "cuda":
+        print(
+            "ERROR: CUDA GPU required but not available.\n"
+            "  - Colab: Runtime → Change runtime type → GPU (T4), then Restart session.\n"
+            "  - Do not pip-install the default CPU torch wheel over Colab's CUDA build.\n"
+            "  - Smoke on CPU only: pass --allow-cpu",
+            file=sys.stderr,
+        )
+        return 3
+    if device.type == "cuda":
+        # Force visible device 0 when CUDA is present
+        torch.cuda.set_device(0)
+        print(f"Using GPU 0: {torch.cuda.get_device_name(0)}")
     print(f"Teacher fine-tune: source={pretrained} seed={args.seed} device={device}")
     print(f"  train={len(train_records)} val={len(val_records)} max_length={max_length}")
 
