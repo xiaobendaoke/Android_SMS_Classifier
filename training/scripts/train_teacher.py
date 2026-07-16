@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Fine-tune multilingual BERT teacher (local cache preferred)."""
+"""Fine-tune multilingual BERT teacher with PyTorch (transformers 5+ has no TF)."""
 from __future__ import annotations
 
 import argparse
 import hashlib
-import json
 import sys
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 import yaml
@@ -26,11 +25,11 @@ from src.train_utils import load_labeled_records, set_seed, write_json  # noqa: 
 
 def check_deps() -> Optional[str]:
     try:
-        import tensorflow  # noqa: F401
+        import torch  # noqa: F401
         import transformers  # noqa: F401
     except ImportError:
         return (
-            f"TensorFlow + transformers required for teacher fine-tuning. "
+            f"PyTorch + transformers required for teacher fine-tuning. "
             f"Install per {SETUP_DOC} (see requirements-train.txt)."
         )
     return None
@@ -66,6 +65,71 @@ def sha256_dir_manifest(path: Path) -> str:
     return h.hexdigest()
 
 
+def encode_batch(
+    tokenizer,
+    texts: Sequence[str],
+    max_length: int,
+    device,
+):
+    enc = tokenizer(
+        list(texts),
+        truncation=True,
+        padding="max_length",
+        max_length=max_length,
+        return_tensors="pt",
+    )
+    return {k: v.to(device) for k, v in enc.items()}
+
+
+def predict_logits(model, tokenizer, texts: Sequence[str], max_length: int, batch_size: int, device):
+    import torch
+
+    model.eval()
+    chunks: List[np.ndarray] = []
+    with torch.no_grad():
+        for start in range(0, len(texts), batch_size):
+            batch_texts = texts[start : start + batch_size]
+            batch = encode_batch(tokenizer, batch_texts, max_length, device)
+            out = model(**batch)
+            chunks.append(out.logits.detach().cpu().numpy())
+    if not chunks:
+        return np.zeros((0, len(LABEL_ORDER)), dtype=np.float32)
+    return np.concatenate(chunks, axis=0).astype(np.float32)
+
+
+def train_epoch(model, tokenizer, records, label_to_idx, max_length, batch_size, optimizer, device):
+    import torch
+
+    model.train()
+    total_loss = 0.0
+    n_batches = 0
+    texts = [r.text for r in records]
+    labels = np.asarray([label_to_idx[r.label] for r in records], dtype=np.int64)
+    order = np.random.permutation(len(records))
+    for start in range(0, len(order), batch_size):
+        idx = order[start : start + batch_size]
+        batch_texts = [texts[i] for i in idx]
+        batch_y = torch.tensor(labels[idx], dtype=torch.long, device=device)
+        batch = encode_batch(tokenizer, batch_texts, max_length, device)
+        optimizer.zero_grad(set_to_none=True)
+        out = model(**batch, labels=batch_y)
+        loss = out.loss
+        loss.backward()
+        optimizer.step()
+        total_loss += float(loss.item())
+        n_batches += 1
+    return total_loss / max(1, n_batches)
+
+
+def eval_accuracy(model, tokenizer, records, label_to_idx, max_length, batch_size, device) -> Tuple[float, np.ndarray, np.ndarray]:
+    texts = [r.text for r in records]
+    y_true = np.asarray([label_to_idx[r.label] for r in records], dtype=np.int64)
+    logits = predict_logits(model, tokenizer, texts, max_length, batch_size, device)
+    preds = np.argmax(logits, axis=-1)
+    acc = float(np.mean(preds == y_true)) if len(y_true) else 0.0
+    return acc, y_true, preds
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     args = build_parser().parse_args(argv)
     if not args.config.exists():
@@ -77,13 +141,14 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(err, file=sys.stderr)
         return 2
 
-    import tensorflow as tf
-    from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+    import torch
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
     with args.config.open(encoding="utf-8") as fh:
         cfg = yaml.safe_load(fh) or {}
 
     set_seed(int(cfg.get("seed", args.seed)))
+    torch.manual_seed(int(cfg.get("seed", args.seed)))
 
     model_name = cfg.get("model", {}).get("name", "bert-base-multilingual-cased")
     hub_id = cfg.get("model", {}).get("hub_id", model_name)
@@ -113,12 +178,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         print("Provide --model-path to an offline cache, or allow hub access.", file=sys.stderr)
         return 1
 
-    print(f"Teacher fine-tune: source={pretrained} seed={args.seed}")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Teacher fine-tune: source={pretrained} seed={args.seed} device={device}")
     print(f"  train={len(train_records)} val={len(val_records)} max_length={max_length}")
 
     try:
         tokenizer = AutoTokenizer.from_pretrained(pretrained, local_files_only=bool(args.model_path))
-        model = TFAutoModelForSequenceClassification.from_pretrained(
+        model = AutoModelForSequenceClassification.from_pretrained(
             pretrained,
             num_labels=len(LABEL_ORDER),
             local_files_only=bool(args.model_path),
@@ -132,38 +198,41 @@ def main(argv: Optional[List[str]] = None) -> int:
         )
         return 1
 
+    model.to(device)
     label_to_idx = {label: i for i, label in enumerate(LABEL_ORDER)}
-
-    def encode_records(records):
-        texts = [r.text for r in records]
-        labels = [label_to_idx[r.label] for r in records]
-        enc = tokenizer(
-            texts,
-            truncation=True,
-            padding="max_length",
-            max_length=max_length,
-            return_tensors="tf",
-        )
-        return dict(enc), np.asarray(labels, dtype=np.int32)
-
-    train_x, train_y = encode_records(train_records)
     batch_size = int(cfg.get("training", {}).get("batch_size", 8))
     epochs = int(cfg.get("training", {}).get("epochs", 2))
     lr = float(cfg.get("training", {}).get("learning_rate", 2e-5))
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
 
-    optimizer = tf.keras.optimizers.Adam(learning_rate=lr)
-    loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-    model.compile(optimizer=optimizer, loss=loss, metrics=["accuracy"])
-
-    fit_kwargs = {
-        "epochs": epochs,
-        "batch_size": batch_size,
-    }
-    if val_records:
-        val_x, val_y = encode_records(val_records)
-        fit_kwargs["validation_data"] = (val_x, val_y)
-
-    history = model.fit(train_x, train_y, **fit_kwargs)
+    history: Dict[str, List[float]] = {"loss": [], "accuracy": [], "val_accuracy": []}
+    for epoch in range(epochs):
+        train_loss = train_epoch(
+            model,
+            tokenizer,
+            train_records,
+            label_to_idx,
+            max_length,
+            batch_size,
+            optimizer,
+            device,
+        )
+        train_acc, _, _ = eval_accuracy(
+            model, tokenizer, train_records, label_to_idx, max_length, batch_size, device
+        )
+        history["loss"].append(train_loss)
+        history["accuracy"].append(train_acc)
+        if val_records:
+            val_acc, _, _ = eval_accuracy(
+                model, tokenizer, val_records, label_to_idx, max_length, batch_size, device
+            )
+            history["val_accuracy"].append(val_acc)
+            print(
+                f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} "
+                f"acc={train_acc:.4f} val_acc={val_acc:.4f}"
+            )
+        else:
+            print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} acc={train_acc:.4f}")
 
     output_dir.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(output_dir)
@@ -171,17 +240,20 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     metrics = {}
     if val_records:
-        logits = model.predict(val_x, batch_size=batch_size).logits
-        preds = np.argmax(logits, axis=-1)
+        _, val_y, val_preds = eval_accuracy(
+            model, tokenizer, val_records, label_to_idx, max_length, batch_size, device
+        )
         metrics = summarize_metrics(
             [LABEL_ORDER[i] for i in val_y.tolist()],
-            [LABEL_ORDER[i] for i in preds.tolist()],
+            [LABEL_ORDER[i] for i in val_preds.tolist()],
             LABEL_ORDER,
         )
 
-    # Cache teacher logits for distillation on the training split.
     logits_path = output_dir / "teacher_logits_train.npz"
-    train_logits = model.predict(train_x, batch_size=batch_size).logits
+    train_texts = [r.text for r in train_records]
+    train_logits = predict_logits(
+        model, tokenizer, train_texts, max_length, batch_size, device
+    )
     np.savez_compressed(
         logits_path,
         ids=np.asarray([r.id for r in train_records]),
@@ -200,12 +272,14 @@ def main(argv: Optional[List[str]] = None) -> int:
         "seed": args.seed,
         "model_name": model_name,
         "pretrained_source": pretrained,
+        "backend": "pytorch",
+        "device": str(device),
         "local_files_only": bool(args.model_path),
         "checkpoint_dir": str(output_dir.relative_to(ROOT)),
         "checkpoint_sha256": sha256_dir_manifest(output_dir),
         "train_count": len(train_records),
         "val_count": len(val_records),
-        "history": {k: [float(x) for x in v] for k, v in history.history.items()},
+        "history": history,
         "val_metrics": metrics,
         "license_note": "bert-base-multilingual-cased is third-party; record hash and license.",
         "third_party": True,

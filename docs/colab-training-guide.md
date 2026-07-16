@@ -150,6 +150,10 @@ print("GPU", tf.config.list_physical_devices("GPU"))
 
 ### 单元格 4：下载教师模型（BERT）
 
+> **注意（2026）：** `transformers` 5+ 已移除 TensorFlow API（无 `TFAutoModel*`）。  
+> 教师微调请用 **PyTorch**：`AutoModelForSequenceClassification`。学生蒸馏仍用 TensorFlow。  
+> 仓库脚本 `train_teacher.py` 与 `init.ipynb` 已按此更新。
+
 默认模型：
 
 ```text
@@ -162,17 +166,16 @@ google-bert/bert-base-multilingual-cased
 **推荐做法（先下载到本地目录，训练时用 `--model-path`，可复现）：**
 
 ```python
-from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from pathlib import Path
 
 MODEL_ID = "google-bert/bert-base-multilingual-cased"
 CACHE = Path("/content/hf_cache/bert-base-multilingual-cased")
 CACHE.mkdir(parents=True, exist_ok=True)
 
-# 首次联网下载并落盘
+# 首次联网下载并落盘（PyTorch 权重）
 tok = AutoTokenizer.from_pretrained(MODEL_ID)
-# 先按 4 分类头下载骨架（微调脚本会再加载）
-mdl = TFAutoModelForSequenceClassification.from_pretrained(MODEL_ID, num_labels=4)
+mdl = AutoModelForSequenceClassification.from_pretrained(MODEL_ID, num_labels=4)
 tok.save_pretrained(CACHE)
 mdl.save_pretrained(CACHE)
 print("Saved to", CACHE)
