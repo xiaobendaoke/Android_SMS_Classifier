@@ -23,7 +23,7 @@ class DecisionRouter(
         val rawModelCategory = if (hasModelOutput) {
             argmaxCategory(modelProbs!!)
         } else {
-            signals.categoryHint ?: SmsCategory.TRANSACTION
+            signals.categoryHint ?: SmsCategory.AD
         }
 
         val modelConfidence = if (hasModelOutput) {
@@ -113,7 +113,8 @@ class DecisionRouter(
         if (hasModelOutput && modelCategory != null) {
             return modelCategory
         }
-        return signals.categoryHint ?: SmsCategory.TRANSACTION
+        // Without model: only use explicit rule hints — never invent TRANSACTION.
+        return signals.categoryHint ?: SmsCategory.AD
     }
 
     private fun resolveAction(

@@ -17,8 +17,10 @@ PROCESSED = ROOT / "data" / "processed"
 sys.path.insert(0, str(ROOT))
 from src.augment import augment_text  # noqa: E402
 from src.deduplicate import deduplicate_exact, deduplicate_normalized  # noqa: E402
+from src.leakage import audit_leakage  # noqa: E402
 from src.schema import SmsRecord, load_jsonl, write_jsonl  # noqa: E402
 from src.split_groups import split_groups  # noqa: E402
+from src.train_utils import set_seed  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -97,6 +99,8 @@ def augment_train_records(records: List[SmsRecord], seed: int) -> List[SmsRecord
 
 def main(argv: Optional[List[str]] = None) -> int:
     args = build_parser().parse_args(argv)
+    set_seed(args.seed)
+    removed_exact = removed_norm = 0
 
     if args.use_processed:
         if not args.output_dir.exists():
@@ -106,9 +110,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         if not records:
             print("No records found in processed directory.", file=sys.stderr)
             return 1
-        # Re-assign splits via group split
+        # Re-assign splits via group split (clears any prior leaky assignment).
         for record in records:
             record.split = "train"
+            record.parent_id = None
+            record.is_adversarial = False
+        records, removed_exact = deduplicate_exact(records)
+        records, removed_norm = deduplicate_normalized(records)
         splits = split_groups(records, seed=args.seed)
     elif args.raw_dir.exists() and any(args.raw_dir.glob("*.jsonl")):
         records = load_raw_records(args.raw_dir)
@@ -118,21 +126,10 @@ def main(argv: Optional[List[str]] = None) -> int:
         records, removed_exact = deduplicate_exact(records)
         records, removed_norm = deduplicate_normalized(records)
         splits = split_groups(records, seed=args.seed)
-    elif (args.output_dir / "train.jsonl").exists():
-        print(
-            f"No raw JSONL in {args.raw_dir}; copying existing processed data.",
-            file=sys.stderr,
-        )
-        records = load_processed_pool(args.output_dir)
-        splits = {
-            "train": [r for r in records if r.split == "train"],
-            "validation": [r for r in records if r.split == "validation"],
-            "test": [r for r in records if r.split == "test"],
-        }
-        removed_exact = removed_norm = 0
     else:
         print(
-            f"Raw data missing and no processed fallback: {args.raw_dir}",
+            f"Raw data missing: {args.raw_dir}. "
+            "Run generate_synthetic_dataset.py first (writes raw only).",
             file=sys.stderr,
         )
         return 1
@@ -140,30 +137,50 @@ def main(argv: Optional[List[str]] = None) -> int:
     if args.augment_train:
         splits["train"] = augment_train_records(splits.get("train", []), args.seed)
 
+    flat: List[SmsRecord] = []
+    for split_name in ("train", "validation", "test"):
+        for record in splits.get(split_name, []):
+            record.split = split_name
+            flat.append(record)
+    leakage = audit_leakage(flat)
+    if leakage["status"] != "PASS":
+        print(json.dumps(leakage, indent=2, ensure_ascii=False), file=sys.stderr)
+        print("Refusing to write splits with leakage.", file=sys.stderr)
+        return 1
+
     args.output_dir.mkdir(parents=True, exist_ok=True)
     split_hashes = {}
     for split_name in ("train", "validation", "test"):
         out_path = args.output_dir / f"{split_name}.jsonl"
         write_jsonl(out_path, splits.get(split_name, []))
         split_hashes[split_name] = {
-            "path": str(out_path.relative_to(ROOT)),
+            "path": str(out_path.relative_to(ROOT)).replace("\\", "/"),
             "count": len(splits.get(split_name, [])),
             "sha256": sha256_file(out_path),
         }
 
     manifest_path = ROOT / "data" / "manifests" / "dataset_manifest.json"
+    leakage_path = ROOT / "reports" / "metrics" / "dataset_leakage.json"
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    leakage_path.parent.mkdir(parents=True, exist_ok=True)
     manifest = {
         "seed": args.seed,
         "splits": split_hashes,
         "dedupe": {
-            "removed_exact": locals().get("removed_exact", 0),
-            "removed_normalized": locals().get("removed_norm", 0),
+            "removed_exact": removed_exact,
+            "removed_normalized": removed_norm,
         },
+        "leakage": leakage,
     }
-    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    manifest_path.write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    leakage_path.write_text(
+        json.dumps(leakage, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
     print(f"Wrote splits to {args.output_dir}")
     print(f"Wrote manifest to {manifest_path}")
+    print(f"Leakage audit PASS → {leakage_path}")
     return 0
 
 

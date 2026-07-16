@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "issue_count": 0,
+  "issues": [],
+  "split_counts": {
+    "train": 157,
+    "validation": 13,
+    "test": 14
+  },
+  "group_counts": {
+    "train": 105,
+    "validation": 13,
+    "test": 14
+  }
+}

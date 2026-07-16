@@ -13,7 +13,7 @@
   "normalizationVersion": "1.0.0",
   "rulesVersion": "1.0.0",
   "quantization": "INT8",
-  "modelSha256": "REPLACE_DURING_BUILD",
+  "modelSha256": "1cf5aa5309788cbdfda0fc3987c5ff3a649967b85c405c01c8e246ad0918173e",
   "thresholds": {
     "default": {
       "TRANSACTION": 0.55,

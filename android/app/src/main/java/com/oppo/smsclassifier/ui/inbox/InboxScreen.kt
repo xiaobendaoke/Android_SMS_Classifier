@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.oppo.smsclassifier.R
+import com.oppo.smsclassifier.SmsAction
 import com.oppo.smsclassifier.SmsClassifierApplication
 import com.oppo.smsclassifier.data.SmsProviderRepository
 import com.oppo.smsclassifier.ui.common.MessageListItem
@@ -42,10 +43,14 @@ fun InboxScreen(onOpenDetail: (String) -> Unit) {
             val app = context.applicationContext as SmsClassifierApplication
             val smsRepo = SmsProviderRepository(context)
             val dao = app.database.classificationDao()
-            smsRepo.queryRecentMessages().map { msg ->
+            smsRepo.queryRecentMessages().mapNotNull { msg ->
                 val uri = smsRepo.messageUriForId(msg.id)
                 val meta = dao.getByUri(uri)
-                msg.toListItem(meta)
+                // Isolate SUSPECT/REVIEW from the main inbox view.
+                when (meta?.action) {
+                    SmsAction.SUSPECT.name, SmsAction.REVIEW.name -> null
+                    else -> msg.toListItem(meta)
+                }
             }
         }
         loading = false

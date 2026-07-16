@@ -1,11 +1,16 @@
 # Heavy training dependencies — install on GPU/CPU training machine only.
 # Not required for baseline training, evaluation, or dataset validation.
 #
-# Python 3.8 compatible pins (adjust CUDA variant per platform):
-tensorflow==2.13.1
-tensorflow-model-optimization==0.7.5
-transformers==4.30.2
-scikit-learn==1.3.2
+# Python 3.10–3.12: prefer recent TensorFlow wheels, e.g. tensorflow>=2.16
+# Python 3.8–3.11 legacy pin example:
+# tensorflow==2.13.1
+tensorflow>=2.16.0
+tensorflow-model-optimization>=0.8.0
+transformers>=4.30.2
+scikit-learn>=1.3.2
+
+# Teacher weights: provide --model-path to a local bert-base-multilingual-cased
+# cache. Prefer intranet mirror; mark Hugging Face downloads as third-party.
 
 # Optional: torch for alternative teacher experiments (not used by default scripts)
 # torch==2.0.1

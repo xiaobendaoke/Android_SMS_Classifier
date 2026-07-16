@@ -1,0 +1,59 @@
+{
+  "accuracy": 0.6818181818181818,
+  "macro_f1": 0.20270270270270271,
+  "per_class": {
+    "TRANSACTION": {
+      "precision": 0.6818181818181818,
+      "recall": 1.0,
+      "f1": 0.8108108108108109
+    },
+    "AD": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "HARASS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "FRAUD": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      15,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0
+    ]
+  ],
+  "label_order": [
+    "TRANSACTION",
+    "AD",
+    "HARASS",
+    "FRAUD"
+  ],
+  "count": 22
+}

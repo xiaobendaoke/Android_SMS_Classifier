@@ -65,6 +65,17 @@ def build_metadata(model_path: Optional[Path]) -> dict:
     model_sha = "REPLACE_DURING_BUILD"
     if model_path and model_path.exists():
         model_sha = sha256_bytes(model_path.read_bytes())
+    quant_report = ROOT / "reports" / "metrics" / "quantize.json"
+    quantization = "INT8"
+    if quant_report.exists():
+        try:
+            q = json.loads(quant_report.read_text(encoding="utf-8"))
+            if q.get("quantization") == "hybrid_fallback":
+                quantization = "HYBRID"
+            elif q.get("quantization") == "full_integer_int8":
+                quantization = "INT8"
+        except json.JSONDecodeError:
+            pass
     return {
         "modelVersion": cfg.get("version", "1.0.0"),
         "architecture": cfg.get("architecture", "byte_textcnn"),
@@ -74,7 +85,7 @@ def build_metadata(model_path: Optional[Path]) -> dict:
         "labels": ["TRANSACTION", "AD", "HARASS", "FRAUD"],
         "normalizationVersion": "1.0.0",
         "rulesVersion": "1.0.0",
-        "quantization": "INT8",
+        "quantization": quantization,
         "modelSha256": model_sha,
         "thresholds": {
             "default": {

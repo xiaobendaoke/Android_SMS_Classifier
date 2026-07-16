@@ -23,6 +23,7 @@
     <string name="suspect_empty">暂无可疑短信</string>
     <string name="review_empty">暂无待复核短信</string>
     <string name="suspect_restore">恢复至收件箱</string>
+    <string name="review_restore">恢复至收件箱</string>
 
     <!-- Detail -->
     <string name="detail_title">消息详情</string>
@@ -38,20 +39,27 @@
 
     <!-- Evaluation -->
     <string name="eval_run">运行离线评估</string>
+    <string name="eval_import_saf">从文件导入测试集</string>
+    <string name="eval_export">导出脱敏报告</string>
+    <string name="eval_summary">样本 %1$d · 有标签 %2$d · 类别正确 %3$d · 准确率 %4$d%%</string>
 
     <!-- Performance -->
     <string name="performance_title">分类性能指标</string>
+    <string name="performance_run">本地测速</string>
     <string name="performance_p50">P50 延迟</string>
     <string name="performance_p95">P95 延迟</string>
     <string name="performance_p99">P99 延迟</string>
     <string name="performance_throughput">吞吐量</string>
-    <string name="performance_placeholder_hint">指标将在后续版本从 benchmark 模块采集。</string>
+    <string name="performance_placeholder_hint">点击「本地测速」在本机运行离线分类基准（冷/热路径混合）。</string>
+    <string name="performance_model_on">模型路径：已加载 TFLite（或规则+模型混合）</string>
+    <string name="performance_model_off">模型路径：无模型或降级为规则</string>
+    <string name="performance_budget_hint">验收预算：单条全链路 ≤500 ms；端侧额外内存 ≤100 MB（需真机 PSS）。</string>
 
     <!-- About -->
     <string name="about_title">关于</string>
-    <string name="about_version">版本 0.1.0-phase0</string>
+    <string name="about_version">版本 0.2.0-ml-pipeline</string>
     <string name="about_opensource">开源组件声明</string>
-    <string name="about_opensource_link">Android Jetpack · Kotlin · Room · Compose · Material3</string>
+    <string name="about_opensource_link">Android Jetpack · Kotlin · Room · Compose · Material3 · TensorFlow Lite</string>
 
     <!-- Compose SMS -->
     <string name="compose_title">撰写短信</string>
@@ -62,7 +70,7 @@
     <string name="compose_send_failed">发送失败</string>
     <string name="compose_permission_denied">需要 SEND_SMS 权限</string>
 
-    <!-- Notifications -->
+    <!-- Notifications (lock-screen safe: no body / OTP) -->
     <string name="channel_inbox">收件箱通知</string>
     <string name="channel_suspect">可疑短信</string>
     <string name="channel_mms">彩信</string>
@@ -71,4 +79,6 @@
     <string name="notification_review_title">待复核短信</string>
     <string name="notification_mms_title">收到彩信</string>
     <string name="notification_mms_body">彩信已接收（占位处理）</string>
+    <string name="notification_private_body">有新消息，解锁后查看</string>
+    <string name="notification_from_redacted">来自 %1$s</string>
 </resources>

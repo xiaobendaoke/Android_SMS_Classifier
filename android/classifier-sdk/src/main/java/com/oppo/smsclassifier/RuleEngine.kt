@@ -59,6 +59,7 @@ class RuleEngine(
             "rules/transaction_rules.json",
             "rules/fraud_rules.json",
             "rules/ad_rules.json",
+            "rules/harass_rules.json",
         )
 
         fun fromAssetJsons(

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [ClassificationMeta::class],
-    version = 1,
+    version = 2,
     exportSchema = false,
 )
 abstract class ClassificationDatabase : RoomDatabase() {
@@ -23,7 +23,11 @@ abstract class ClassificationDatabase : RoomDatabase() {
                     context.applicationContext,
                     ClassificationDatabase::class.java,
                     "classification_meta.db",
-                ).build().also { instance = it }
+                )
+                    // Demo DB: schema additions (deliverKey) — wipe local meta on upgrade.
+                    .fallbackToDestructiveMigration()
+                    .build()
+                    .also { instance = it }
             }
         }
     }

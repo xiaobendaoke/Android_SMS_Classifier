@@ -19,4 +19,7 @@ interface ClassificationDao {
 
     @Query("SELECT * FROM classification_meta WHERE action = :action ORDER BY createdAt DESC")
     suspend fun listByAction(action: String): List<ClassificationMeta>
+
+    @Query("SELECT * FROM classification_meta WHERE deliverKey = :deliverKey LIMIT 1")
+    suspend fun getByDeliverKey(deliverKey: String): ClassificationMeta?
 }

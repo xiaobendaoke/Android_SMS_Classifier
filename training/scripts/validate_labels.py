@@ -23,8 +23,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--input",
         type=Path,
-        default=ROOT / "data" / "processed" / "train.jsonl",
-        help="JSONL file or directory to validate.",
+        default=ROOT / "data" / "processed",
+        help="JSONL file or directory to validate (default: all processed splits).",
     )
     parser.add_argument(
         "--config",

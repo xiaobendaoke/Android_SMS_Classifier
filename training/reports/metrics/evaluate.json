@@ -1,22 +1,22 @@
 {
   "seed": 42,
   "classifier": "rule_heuristics",
-  "test_count": 10,
-  "evaluated_count": 10,
+  "test_count": 26,
+  "evaluated_count": 26,
   "needs_review_count": 0,
   "metrics": {
-    "accuracy": 0.8,
-    "macro_f1": 0.5833333333333333,
+    "accuracy": 0.5384615384615384,
+    "macro_f1": 0.4761904761904762,
     "per_class": {
       "TRANSACTION": {
-        "precision": 0.7142857142857143,
+        "precision": 0.4,
         "recall": 1.0,
-        "f1": 0.8333333333333333
+        "f1": 0.5714285714285715
       },
       "AD": {
         "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1": 0.5
+        "recall": 0.2,
+        "f1": 0.33333333333333337
       },
       "HARASS": {
         "precision": 1.0,
@@ -31,21 +31,21 @@
     },
     "confusion_matrix": [
       [
-        5,
+        8,
         0,
         0,
         0
       ],
       [
-        2,
-        1,
+        12,
+        3,
         0,
         0
       ],
       [
         0,
         0,
-        2,
+        3,
         0
       ],
       [
@@ -61,14 +61,14 @@
       "HARASS",
       "FRAUD"
     ],
-    "count": 10
+    "count": 26
   },
   "transaction_recall": 1.0,
   "transaction_recall_ci95": [
-    0.5655085052479191,
+    0.6755843804891231,
     1.0
   ],
-  "macro_f1": 0.5833333333333333,
+  "macro_f1": 0.4761904761904762,
   "review_semantics": {
     "NEEDS_REVIEW": "Ambiguous or policy-escalation label excluded from training and macro metrics. On-device routing may send low-confidence or conflicting-rule messages to human review instead of forcing a four-class prediction.",
     "excluded_from_training": [

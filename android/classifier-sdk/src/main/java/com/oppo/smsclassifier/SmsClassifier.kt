@@ -24,7 +24,7 @@ class DefaultSmsClassifier(
     )
     private val normalizer: TextNormalizer = TextNormalizer(
         version = metadata.normalizationVersion,
-        confusables = TextNormalizer.loadConfusablesFromJson(
+        confusableReplacements = TextNormalizer.loadConfusablesFromJson(
             readAsset("normalize/confusables.json"),
         ),
     )

@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "mode": "ptq",
+  "input_model": "artifacts\\student\\sms_bytecnn_pruned.keras",
+  "output_tflite": "artifacts\\student\\sms_bytecnn_int8.tflite",
+  "bytes": 75776,
+  "sha256": "1cf5aa5309788cbdfda0fc3987c5ff3a649967b85c405c01c8e246ad0918173e"
+}

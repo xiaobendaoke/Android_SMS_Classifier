@@ -59,7 +59,7 @@ fun MessageListRow(
 
 fun SmsProviderRepository.SmsMessageDisplay.toListItem(meta: ClassificationMeta?): MessageListItem =
     MessageListItem(
-        messageUri = messageUriForId(id),
+        messageUri = "${android.provider.Telephony.Sms.CONTENT_URI}/$id",
         address = address,
         body = body,
         date = date,

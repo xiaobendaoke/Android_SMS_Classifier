@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "total": 320,
+  "raw_path": "data/raw/synthetic_v2.jsonl",
+  "per_label_lang": 20,
+  "note": "Synthetic raw only. Run build_dataset.py for group-aware splits. Business metrics pending real labeled data."
+}

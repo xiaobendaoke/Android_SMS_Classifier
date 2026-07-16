@@ -26,7 +26,10 @@
 - Gradle Wrapper（见 `android/README-GRADLE.md`）
 
 **换机测试前必读：** [docs/异机测试环境安装清单.md](./docs/异机测试环境安装清单.md)  
-（本仓库框架可在弱虚拟机维护；完整编译、训练、真机验收在其他电脑安装组件后进行。）
+**当前进度：** [docs/progress.md](./docs/progress.md)
+
+> Windows 路径含中文时，Gradle 单测可能 ClassNotFound：请建 ASCII junction，例如  
+> `mklink /J C:\dev\Android_SMS_Classifier "<本仓库绝对路径>"`，再在 junction 下执行 `gradlew`。
 
 ## Make 目标
 

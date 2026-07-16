@@ -1,7 +1,10 @@
-# Pinned light dependencies for Python 3.8 (audit / baseline / evaluate)
-numpy==1.24.4
-PyYAML==6.0.1
-pytest==7.4.4
+# Pinned light dependencies (prefer Python 3.8–3.11 for exact pins).
+# On Python 3.12+, install compatible wheels instead, e.g.:
+#   pip install numpy PyYAML pytest
+#   pip install "tensorflow>=2.16"  # training machine
+numpy>=1.24.4
+PyYAML>=6.0.1
+pytest>=7.4.4
 
 # Heavy training deps — install separately on training machine:
 #   pip install -r requirements-train.txt

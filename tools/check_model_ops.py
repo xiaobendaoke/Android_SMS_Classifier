@@ -53,7 +53,8 @@ def main(argv=None) -> int:
     try:
         import tensorflow as tf  # type: ignore
 
-        interpreter = tf.lite.Interpreter(model_path=str(args.model))
+        # model_content avoids TFLite path issues on non-ASCII Windows directories.
+        interpreter = tf.lite.Interpreter(model_content=args.model.read_bytes())
         interpreter.allocate_tensors()
         details = interpreter.get_tensor_details()
         op_names = sorted({d.get("name", "") for d in details})

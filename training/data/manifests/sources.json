@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generated": "synthetic",
-  "note": "Public synthetic SMS samples only — no real private SMS data.",
+  "note": "Public synthetic SMS samples only - no real private SMS data.",
   "sources": [
     {
       "id": "synthetic_public_v1",
@@ -18,6 +18,16 @@
       "name": "Synthetic SMS CC0 Templates",
       "description": "Additional synthetic variants released under CC0",
       "license": "CC0",
+      "languages": ["zh", "en", "hi", "id"],
+      "labels": ["TRANSACTION", "AD", "HARASS", "FRAUD"],
+      "is_synthetic": true,
+      "approved_for_git": true
+    },
+    {
+      "id": "synthetic_public_v2",
+      "name": "Synthetic SMS Generator v2",
+      "description": "Expanded template-based synthetic messages for pipeline testing",
+      "license": "Apache-2.0",
       "languages": ["zh", "en", "hi", "id"],
       "labels": ["TRANSACTION", "AD", "HARASS", "FRAUD"],
       "is_synthetic": true,

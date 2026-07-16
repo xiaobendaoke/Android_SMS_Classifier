@@ -1,10 +1,10 @@
 {
   "seed": 42,
-  "timestamp_utc": "2026-07-14T09:19:39.835021+00:00",
+  "timestamp_utc": "2026-07-16T02:56:07.053326+00:00",
   "manifest_version": "1.0.0",
-  "source_count": 2,
-  "synthetic_source_count": 2,
-  "approved_for_git_count": 2,
+  "source_count": 3,
+  "synthetic_source_count": 3,
+  "approved_for_git_count": 3,
   "licenses": [
     "Apache-2.0",
     "CC0"
@@ -35,6 +35,26 @@
       "name": "Synthetic SMS CC0 Templates",
       "description": "Additional synthetic variants released under CC0",
       "license": "CC0",
+      "languages": [
+        "zh",
+        "en",
+        "hi",
+        "id"
+      ],
+      "labels": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "is_synthetic": true,
+      "approved_for_git": true
+    },
+    {
+      "id": "synthetic_public_v2",
+      "name": "Synthetic SMS Generator v2",
+      "description": "Expanded template-based synthetic messages for pipeline testing",
+      "license": "Apache-2.0",
       "languages": [
         "zh",
         "en",

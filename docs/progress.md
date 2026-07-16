@@ -4,48 +4,56 @@
 
 ## 当前状态
 
-**框架代码已搭好（弱虚拟机）** — 不在本机做 Android SDK 全量构建、BERT 训练与真机验收。  
-异机安装与验证步骤见：[异机测试环境安装清单.md](./异机测试环境安装清单.md)
+**工程闭环 0.2.1-p0-fixes（合成数据）** — 修复跨 split 泄漏门禁、Receiver 幂等/安全通知、锁屏隐私、评测默认 TFLite、剪枝预算回退、量化 hybrid 标注。  
+**未宣称**事务召回 ≥98%（冻结真标测试集与 4GB/6GB 真机 PSS 仍缺）。
+
+异机构建提示：仓库路径含中文时，建议使用 ASCII junction：`C:\dev\Android_SMS_Classifier`。
 
 ## 已完成
 
-### 框架 / SDK
+### 阶段 0/1
 
-- [x] 目录树与 Makefile / README / LICENSE / NOTICE
-- [x] `classifier-sdk`：NFKC 归一化、ByteEncoder、JSON 规则引擎、DecisionRouter、无模型降级
-- [x] 规则资产：otp / transaction / fraud / ad + confusables + model_metadata
-- [x] JVM 单测用例（OTP、冲突→REVIEW、Hindi、byte 一致性）— **需异机装 SDK 后跑 Gradle**
+- [x] 目录树 / Makefile / README / LICENSE
+- [x] `android.overridePathCheck=true`（非 ASCII 路径）
 - [x] Manifest 无 `INTERNET`
+- [x] HARASS 规则资产 `harass_rules.json`
 
-### App 框架
+### P0 修复（2026-07-16）
 
-- [x] ROLE_SMS 资格组件与申请页
-- [x] `SmsDeliverReceiver`：先写系统 Provider 再分类、超时 REVIEW
-- [x] Room 仅存分类元数据（无正文）
-- [x] Compose：收件箱 / 疑似垃圾 / 复核 / 评测 / 性能 / 关于
+- [x] 废弃泄漏切分脚本 `_generate_synthetic_data.py`（拒绝执行）
+- [x] `generate_synthetic_dataset.py` 只写 raw；`build_dataset.py` 统一 group 切分 + 泄漏门禁
+- [x] `check_split_leakage.py` + `training/src/leakage.py`；当前合成集 **leakage PASS**（train 157 / val 13 / test 14）
+- [x] Receiver：幂等 `deliverKey`、超时 category=`UNKNOWN`、异常仍安全通知
+- [x] 通知锁屏隐私：`VISIBILITY_PRIVATE` + public redacted（无正文/OTP）
+- [x] Inbox 隔离 SUSPECT/REVIEW
+- [x] `evaluate.py` 默认 TFLite；`--mode rule` 必须显式；塌缩单类退出码 3
+- [x] 蒸馏类别权重 + 验证塌缩门禁；剪枝 25→15→10 预算回退；量化记录 hybrid vs full INT8
 
-### 训练流水线框架
+### LiteRT / SDK
 
-- [x] 合成 JSONL 样例（四语四类）
-- [x] audit / build / validate / baseline / evaluate（numpy 可跑）
-- [x] teacher / distill / prune / quantize / verify（缺 TF 时 exit 2 + 提示）
-- [x] `requirements-train.txt` 重依赖清单
+- [x] `LiteRtClassifier` 反射加载；INT8 输出反量化尝试
+- [x] 无模型时规则降级 + REVIEW（不再默认 TRANSACTION）
 
-### 文档与工具
+### App 闭环代码
 
-- [x] [异机测试环境安装清单.md](./异机测试环境安装清单.md)
-- [x] `tools/audit_release.py` 等审核脚本骨架
+- [x] SmsDeliver：先写 Provider → 500ms 超时 REVIEW；不自动删除
+- [x] 可疑/复核可恢复收件箱
+- [x] 评测页摘要 + 脱敏导出；性能页本地测速
 
-## 命令记录（本机）
+## 命令记录
 
 | 日期 | 命令 | 结果 |
 |------|------|------|
-| 2026-07-14 | `PYTHONPATH=training python3 -m pytest training/tests -q` | 通过（历史记录：10+ passed） |
-| 2026-07-14 | `./gradlew :classifier-sdk:test` | 失败：本机无 Android SDK（预期） |
+| 2026-07-16 | junction + `gradlew :classifier-sdk:test :app:assembleDebug` | 先前 36/18 tests；需在 junction 复跑 |
+| 2026-07-16 | `generate_synthetic_dataset` + `build_dataset --augment-train` + `check_split_leakage` | leakage PASS；manifest SHA 已刷新 |
+| 2026-07-16 | `pytest training/tests` | **18 passed** |
 
-## 遗留问题（异机关闭）
+## 遗留问题
 
-1. 配置 `android/local.properties` 后执行 `./gradlew test assembleDebug`
-2. 安装 `training/requirements-train.txt` 后跑完整蒸馏量化链，导出 `.tflite`
-3. 4GB/6GB 真机性能与默认短信闭环验收
-4. 冻结测试集事务召回达标后再宣称指标 PASS
+1. 真实/合规标注冻结测试集（每类 ≥500）与双人标注
+2. 教师 `bert-base-multilingual-cased` 本地缓存后跑 `train_teacher.py` 再蒸馏
+3. 4GB/6GB 真机 PSS / 时延 / 默认短信飞行模式验收
+4. 事务召回 ≥98% 达标前不得在审核报告写 PASS
+5. MMS 仍为占位；发送未写 Sent Provider；SAF 评测导入未完成
+6. Android 仪器化测试矩阵（multipart/幂等/隐私）仍缺
+7. 旧 INT8 模型可能仍为 hybrid 且在塌缩数据上训练 — 需在无泄漏数据上重跑 distill→prune→quantize
