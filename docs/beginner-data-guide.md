@@ -177,10 +177,15 @@ A：改 `label` 列即可，保留 `notes` 说明。
 A：UCI 是公开研究数据，用于学习可以；但**私有真实短信不要发给公网 AI**。且冻结测试集最终仍要双人人工确认。
 
 **Q：标完下一步做什么？**  
-A：告诉我「试点 50/500 条标完了」，我再教你：  
-1）合并两人结果算一致性；  
-2）转成项目 `jsonl`；  
-3）是否开始下 SpamShield。
+A：已提供转换与作业级训练入口（**非冻结验收**）：
+
+```bash
+make prepare-annotation-bootstrap
+PYTHONPATH=training python training/scripts/distill_student.py \
+  --config training/configs/student_homework_bootstrap.yaml --hard-only
+```
+
+说明见 `docs/homework-bootstrap-training-report.md`。冻结测试集仍需：四语、每类≥500、双人真标。
 
 ---
 

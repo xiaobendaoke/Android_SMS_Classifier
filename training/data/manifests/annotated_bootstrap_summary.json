@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "note": "Homework bootstrap from audited annotation CSVs. NEEDS_REVIEW excluded. NOT frozen acceptance gold. iiitd language=hi is Hinglish/en-IN (not Devanagari).",
+  "output": "data/raw/annotated_homework_bootstrap.jsonl",
+  "n_records": 10658,
+  "duplicate_ids_dropped": 0,
+  "label_dist": {
+    "TRANSACTION": 2233,
+    "AD": 5852,
+    "FRAUD": 918,
+    "HARASS": 1655
+  },
+  "language_label_dist": {
+    "en": {
+      "AD": 393,
+      "HARASS": 134,
+      "TRANSACTION": 12,
+      "FRAUD": 220
+    },
+    "hi": {
+      "HARASS": 79,
+      "TRANSACTION": 17,
+      "AD": 889,
+      "FRAUD": 13
+    },
+    "id": {
+      "AD": 327,
+      "TRANSACTION": 80,
+      "FRAUD": 369,
+      "HARASS": 98
+    },
+    "zh": {
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    }
+  },
+  "packs": [
+    {
+      "file": "zh_all_suggested.csv",
+      "language": "zh",
+      "source": "gitcode_zh_sms_8a104",
+      "kept": 8027,
+      "skipped_non_trainable": 1790,
+      "label_dist": {
+        "TRANSACTION": 2124,
+        "AD": 4243,
+        "FRAUD": 316,
+        "HARASS": 1344
+      }
+    },
+    {
+      "file": "uci_all_suggested.csv",
+      "language": "en",
+      "source": "uci_sms_spam_collection_v1",
+      "kept": 759,
+      "skipped_non_trainable": 4815,
+      "label_dist": {
+        "AD": 393,
+        "HARASS": 134,
+        "TRANSACTION": 12,
+        "FRAUD": 220
+      }
+    },
+    {
+      "file": "id_yudiwbs_all_suggested.csv",
+      "language": "id",
+      "source": "yudiwbs_id_sms_spam_v1",
+      "kept": 565,
+      "skipped_non_trainable": 578,
+      "label_dist": {
+        "AD": 210,
+        "TRANSACTION": 80,
+        "FRAUD": 236,
+        "HARASS": 39
+      }
+    },
+    {
+      "file": "id_spamshield_all_suggested.csv",
+      "language": "id",
+      "source": "spamshield_indonesian_v1",
+      "kept": 309,
+      "skipped_non_trainable": 961,
+      "label_dist": {
+        "FRAUD": 133,
+        "AD": 117,
+        "HARASS": 59
+      }
+    },
+    {
+      "file": "iiitd_all_suggested.csv",
+      "language": "hi",
+      "source": "iiitd_sms_spam_v1",
+      "kept": 998,
+      "skipped_non_trainable": 1002,
+      "label_dist": {
+        "HARASS": 79,
+        "TRANSACTION": 17,
+        "AD": 889,
+        "FRAUD": 13
+      }
+    }
+  ],
+  "excluded_labels": [
+    "NEEDS_REVIEW"
+  ],
+  "usage": "merge with synthetic raw/*.jsonl via build_dataset.py; engineering/homework only"
+}

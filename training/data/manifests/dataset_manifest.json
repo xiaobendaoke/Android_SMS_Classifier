@@ -3,37 +3,37 @@
   "splits": {
     "train": {
       "path": "data/processed/train.jsonl",
-      "count": 282,
-      "sha256": "082fac3e5d98bc9e1dd76988ff69fa28fc5f3e72a492252ac545fe006416a732"
+      "count": 10305,
+      "sha256": "58ef4f2758fbc6fcdaa4191bc6e54fdb037c82f19c21a2a759eddb650c632057"
     },
     "validation": {
       "path": "data/processed/validation.jsonl",
-      "count": 21,
-      "sha256": "57c92160f8b4476bf94b4909702e3a5d9f937043a6701a74f13aa6d4b9c8f038"
+      "count": 811,
+      "sha256": "3f76d1fe3445135b304578bb1ce0cfc2d7dfa6c78781574585a7f7857a242bef"
     },
     "test": {
       "path": "data/processed/test.jsonl",
-      "count": 25,
-      "sha256": "e3ba7c7821a363eba9514e19d353b4f8ff45200bec1f4fed2b270c4674ba287e"
+      "count": 819,
+      "sha256": "954b1e61a9170f78cc8821c79c4d574e1bbfa62ecdd1b1ca787bb8665ae82b4c"
     }
   },
   "dedupe": {
-    "removed_exact": 413,
-    "removed_normalized": 0
+    "removed_exact": 3135,
+    "removed_normalized": 8
   },
   "leakage": {
     "status": "PASS",
     "issue_count": 0,
     "issues": [],
     "split_counts": {
-      "train": 282,
-      "validation": 21,
-      "test": 25
+      "train": 10305,
+      "validation": 811,
+      "test": 819
     },
     "group_counts": {
-      "train": 126,
-      "validation": 15,
-      "test": 17
+      "train": 6468,
+      "validation": 808,
+      "test": 810
     }
   }
 }

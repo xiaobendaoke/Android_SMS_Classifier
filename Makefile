@@ -1,4 +1,5 @@
-.PHONY: help setup-python audit-data prepare-data train-baseline train-teacher \
+.PHONY: help setup-python audit-data prepare-data prepare-annotation-bootstrap \
+	train-baseline train-teacher \
 	distill prune quantize verify-model evaluate export-android-assets \
 	android-test android-build benchmark audit-release package-release \
 	check-leakage pipeline
@@ -14,10 +15,12 @@ help:
 	@echo "  setup-python          创建 .venv 并安装 training/requirements.lock"
 	@echo "  audit-data            数据来源与许可证审计 + 切分泄漏检查"
 	@echo "  prepare-data          生成合成 raw + group 切分 + 泄漏门禁"
+	@echo "  prepare-annotation-bootstrap  标注 CSV→JSONL + 与合成混合切分（作业级，非冻结）"
 	@echo "  check-leakage         仅检查 train/val/test 泄漏"
 	@echo "  train-baseline        训练 n-gram 基线"
 	@echo "  train-teacher         微调 bert-base-multilingual-cased 教师"
 	@echo "  distill               蒸馏 Byte TextCNN 学生"
+	@echo "  distill-homework-bootstrap  作业级 hard-only 学生（标注+合成，非冻结）"
 	@echo "  prune                 结构化通道剪枝"
 	@echo "  quantize              INT8 PTQ/QAT 量化"
 	@echo "  verify-model          Keras 与 TFLite 一致性验证"
@@ -48,6 +51,16 @@ prepare-data:
 	$(PYTHON) training/scripts/validate_labels.py
 	$(PYTHON) training/scripts/check_split_leakage.py
 
+# Homework bootstrap: audited annotation CSVs + synthetic raw → processed splits.
+# NOT frozen acceptance. Requires local interim CSVs under data/interim/annotation/.
+prepare-annotation-bootstrap:
+	$(PYTHON) training/scripts/convert_annotation_csv_to_jsonl.py
+	$(PYTHON) training/scripts/generate_synthetic_dataset.py
+	$(PYTHON) training/scripts/build_dataset.py --augment-train
+	$(PYTHON) training/scripts/build_adversarial_slices.py
+	$(PYTHON) training/scripts/validate_labels.py
+	$(PYTHON) training/scripts/check_split_leakage.py
+
 check-leakage:
 	$(PYTHON) training/scripts/check_split_leakage.py
 
@@ -59,6 +72,11 @@ train-teacher:
 
 distill:
 	$(PYTHON) training/scripts/distill_student.py
+
+# Homework bootstrap hard-label student (annotation CSV + synthetic). NOT frozen acceptance.
+distill-homework-bootstrap:
+	$(PYTHON) training/scripts/distill_student.py \
+		--config training/configs/student_homework_bootstrap.yaml --hard-only
 
 prune:
 	$(PYTHON) training/scripts/prune_channels.py

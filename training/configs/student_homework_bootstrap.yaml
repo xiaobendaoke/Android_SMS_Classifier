@@ -1,0 +1,42 @@
+# Homework bootstrap student config (annotation CSV + synthetic mix).
+# NOT for frozen acceptance claims.
+
+version: "1.0.0-homework-bootstrap"
+seed: 42
+
+architecture: byte_textcnn
+
+input:
+  max_bytes: 512
+  head_bytes: 384
+  tail_bytes: 128
+  pad_id: 0
+  byte_offset: 1
+  vocab_size: 257
+
+model:
+  embedding_dim: 48
+  conv_filters: 64
+  conv_kernels: [3, 5, 7]
+  dense_units: 96
+  dropout: 0.2
+  num_classes: 4
+
+training:
+  batch_size: 64
+  learning_rate: 1.0e-3
+  epochs: 3
+
+distillation:
+  temperature: 4.0
+  alpha: 0.6
+  beta: 0.4
+  teacher_manifest: data/manifests/teacher_logits_manifest.json
+
+data:
+  train_manifest: data/processed/train.jsonl
+  val_manifest: data/processed/validation.jsonl
+
+output:
+  checkpoint_dir: artifacts/student_homework_bootstrap
+  keras_path: artifacts/student_homework_bootstrap/sms_bytecnn_fp32.keras
