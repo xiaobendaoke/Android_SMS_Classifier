@@ -1,0 +1,71 @@
+{
+  "seed": 42,
+  "model_type": "byte_ngram_logistic_numpy",
+  "train_count": 180,
+  "validation_count": 22,
+  "validation": {
+    "accuracy": 0.8636363636363636,
+    "macro_f1": 0.4494949494949495,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091
+      },
+      "AD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "HARASS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "FRAUD": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889
+      }
+    },
+    "confusion_matrix": [
+      [
+        15,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        4
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 22
+  },
+  "transaction_recall": 1.0,
+  "transaction_recall_ci95": [
+    0.7961107336956521,
+    1.0
+  ],
+  "macro_f1": 0.4494949494949495
+}

@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "mode": "ptq",
+  "quantization": "hybrid_fallback",
+  "input_model": "artifacts/student/sms_bytecnn_pruned.keras",
+  "output_tflite": "artifacts/student/sms_bytecnn_int8.tflite",
+  "bytes": 92232,
+  "sha256": "782cfbf3dd8b08c8bc77cd42e202841c7928b599a9bcc8dd63bb6cc64fa9013c",
+  "note": "hybrid_fallback is not the acceptance baseline; metadata must not claim full INT8 unless quantization=full_integer_int8."
+}

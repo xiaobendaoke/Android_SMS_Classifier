@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "tflite": "artifacts/student/sms_bytecnn_int8.tflite",
+  "keras": "artifacts/student/sms_bytecnn_pruned.keras",
+  "ops_sample": [
+    "0",
+    "123",
+    "2",
+    "22",
+    "3",
+    "36",
+    "58",
+    "6",
+    "70",
+    "82",
+    "9"
+  ],
+  "forbidden_ops": [],
+  "agreement_rate": 1.0,
+  "min_agreement_rate": 0.99,
+  "status": "PASS",
+  "bytes": 92232
+}
