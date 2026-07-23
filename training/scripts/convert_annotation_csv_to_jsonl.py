@@ -10,6 +10,7 @@ Default inputs (under training/data/interim/annotation/):
   id_yudiwbs_all_suggested.csv
   id_spamshield_all_suggested.csv
   iiitd_all_suggested.csv
+  en_otp_phishing_10k_all_suggested.csv
 
 Default output:
   training/data/raw/annotated_homework_bootstrap.jsonl
@@ -64,6 +65,12 @@ PACKS: List[Tuple[str, str, str, str]] = [
         "hi",
         "iiitd_sms_spam_v1",
         "Academic use per IIIT-D Precog distribution",
+    ),
+    (
+        "en_otp_phishing_10k_all_suggested.csv",
+        "en",
+        "hf_sms_otp_phishing_10k",
+        "MIT (dataset card README)",
     ),
 ]
 

@@ -54,29 +54,34 @@ class SmsProviderRepository(private val context: Context) {
             Telephony.Sms.DATE,
             Telephony.Sms.THREAD_ID,
         )
-        context.contentResolver.query(
-            Telephony.Sms.Inbox.CONTENT_URI,
-            projection,
-            null,
-            null,
-            "${Telephony.Sms.DATE} DESC LIMIT $limit",
-        )?.use { cursor ->
-            val idIdx = cursor.getColumnIndexOrThrow(Telephony.Sms._ID)
-            val addressIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.ADDRESS)
-            val bodyIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.BODY)
-            val dateIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.DATE)
-            val threadIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.THREAD_ID)
-            while (cursor.moveToNext()) {
-                results += SmsMessageDisplay(
-                    id = cursor.getLong(idIdx),
-                    address = cursor.getString(addressIdx) ?: "",
-                    body = cursor.getString(bodyIdx) ?: "",
-                    date = cursor.getLong(dateIdx),
-                    threadId = cursor.getLong(threadIdx),
-                )
+        return try {
+            context.contentResolver.query(
+                Telephony.Sms.Inbox.CONTENT_URI,
+                projection,
+                null,
+                null,
+                "${Telephony.Sms.DATE} DESC LIMIT $limit",
+            )?.use { cursor ->
+                val idIdx = cursor.getColumnIndexOrThrow(Telephony.Sms._ID)
+                val addressIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.ADDRESS)
+                val bodyIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.BODY)
+                val dateIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.DATE)
+                val threadIdx = cursor.getColumnIndexOrThrow(Telephony.Sms.THREAD_ID)
+                while (cursor.moveToNext()) {
+                    results += SmsMessageDisplay(
+                        id = cursor.getLong(idIdx),
+                        address = cursor.getString(addressIdx) ?: "",
+                        body = cursor.getString(bodyIdx) ?: "",
+                        date = cursor.getLong(dateIdx),
+                        threadId = cursor.getLong(threadIdx),
+                    )
+                }
             }
+            results
+        } catch (_: SecurityException) {
+            // READ_SMS not granted yet — callers should request runtime permission.
+            emptyList()
         }
-        return results
     }
 
     fun messageUriForId(messageId: Long): String =

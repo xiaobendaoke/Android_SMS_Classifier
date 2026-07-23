@@ -1,0 +1,394 @@
+{
+  "version": "1.0.0",
+  "note": "Homework annotated pool vs acceptance targets. Freeze claim still requires dual-annotated dedicated freeze SHA.",
+  "annotated_path": "C:/Users/woshinibaba/Documents/oppo的项目/Android_SMS_Classifier/training/data/raw/annotated_homework_bootstrap.jsonl",
+  "annotated_exists": true,
+  "targets": {
+    "freeze_per_class": 500,
+    "train_aspirational_per_class": 1000,
+    "txn_special_per_language": 500
+  },
+  "annotated_counts": {
+    "en": {
+      "AD": 393,
+      "HARASS": 134,
+      "TRANSACTION": 12,
+      "FRAUD": 220
+    },
+    "hi": {
+      "HARASS": 79,
+      "TRANSACTION": 17,
+      "AD": 889,
+      "FRAUD": 13
+    },
+    "id": {
+      "AD": 327,
+      "TRANSACTION": 80,
+      "FRAUD": 369,
+      "HARASS": 98
+    },
+    "zh": {
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    }
+  },
+  "csv_trainable_counts": {
+    "en": {
+      "AD": 393,
+      "HARASS": 134,
+      "TRANSACTION": 12,
+      "FRAUD": 220
+    },
+    "hi": {
+      "HARASS": 79,
+      "TRANSACTION": 17,
+      "AD": 889,
+      "FRAUD": 13
+    },
+    "id": {
+      "AD": 327,
+      "TRANSACTION": 80,
+      "FRAUD": 369,
+      "HARASS": 98
+    },
+    "zh": {
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    }
+  },
+  "csv_needs_review_counts": {
+    "zh": 1790,
+    "en": 4815,
+    "id": 1539,
+    "hi": 1002
+  },
+  "freeze_gaps": {
+    "en": {
+      "TRANSACTION": {
+        "have": 12,
+        "target": 500,
+        "shortfall": 488,
+        "ok": false
+      },
+      "AD": {
+        "have": 393,
+        "target": 500,
+        "shortfall": 107,
+        "ok": false
+      },
+      "HARASS": {
+        "have": 134,
+        "target": 500,
+        "shortfall": 366,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 220,
+        "target": 500,
+        "shortfall": 280,
+        "ok": false
+      }
+    },
+    "hi": {
+      "TRANSACTION": {
+        "have": 17,
+        "target": 500,
+        "shortfall": 483,
+        "ok": false
+      },
+      "AD": {
+        "have": 889,
+        "target": 500,
+        "shortfall": 0,
+        "ok": true
+      },
+      "HARASS": {
+        "have": 79,
+        "target": 500,
+        "shortfall": 421,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 13,
+        "target": 500,
+        "shortfall": 487,
+        "ok": false
+      }
+    },
+    "id": {
+      "TRANSACTION": {
+        "have": 80,
+        "target": 500,
+        "shortfall": 420,
+        "ok": false
+      },
+      "AD": {
+        "have": 327,
+        "target": 500,
+        "shortfall": 173,
+        "ok": false
+      },
+      "HARASS": {
+        "have": 98,
+        "target": 500,
+        "shortfall": 402,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 369,
+        "target": 500,
+        "shortfall": 131,
+        "ok": false
+      }
+    },
+    "zh": {
+      "TRANSACTION": {
+        "have": 2124,
+        "target": 500,
+        "shortfall": 0,
+        "ok": true
+      },
+      "AD": {
+        "have": 4243,
+        "target": 500,
+        "shortfall": 0,
+        "ok": true
+      },
+      "HARASS": {
+        "have": 1344,
+        "target": 500,
+        "shortfall": 0,
+        "ok": true
+      },
+      "FRAUD": {
+        "have": 316,
+        "target": 500,
+        "shortfall": 184,
+        "ok": false
+      }
+    }
+  },
+  "train_aspirational_gaps": {
+    "en": {
+      "TRANSACTION": {
+        "have": 12,
+        "target": 1000,
+        "shortfall": 988,
+        "ok": false
+      },
+      "AD": {
+        "have": 393,
+        "target": 1000,
+        "shortfall": 607,
+        "ok": false
+      },
+      "HARASS": {
+        "have": 134,
+        "target": 1000,
+        "shortfall": 866,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 220,
+        "target": 1000,
+        "shortfall": 780,
+        "ok": false
+      }
+    },
+    "hi": {
+      "TRANSACTION": {
+        "have": 17,
+        "target": 1000,
+        "shortfall": 983,
+        "ok": false
+      },
+      "AD": {
+        "have": 889,
+        "target": 1000,
+        "shortfall": 111,
+        "ok": false
+      },
+      "HARASS": {
+        "have": 79,
+        "target": 1000,
+        "shortfall": 921,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 13,
+        "target": 1000,
+        "shortfall": 987,
+        "ok": false
+      }
+    },
+    "id": {
+      "TRANSACTION": {
+        "have": 80,
+        "target": 1000,
+        "shortfall": 920,
+        "ok": false
+      },
+      "AD": {
+        "have": 327,
+        "target": 1000,
+        "shortfall": 673,
+        "ok": false
+      },
+      "HARASS": {
+        "have": 98,
+        "target": 1000,
+        "shortfall": 902,
+        "ok": false
+      },
+      "FRAUD": {
+        "have": 369,
+        "target": 1000,
+        "shortfall": 631,
+        "ok": false
+      }
+    },
+    "zh": {
+      "TRANSACTION": {
+        "have": 2124,
+        "target": 1000,
+        "shortfall": 0,
+        "ok": true
+      },
+      "AD": {
+        "have": 4243,
+        "target": 1000,
+        "shortfall": 0,
+        "ok": true
+      },
+      "HARASS": {
+        "have": 1344,
+        "target": 1000,
+        "shortfall": 0,
+        "ok": true
+      },
+      "FRAUD": {
+        "have": 316,
+        "target": 1000,
+        "shortfall": 684,
+        "ok": false
+      }
+    }
+  },
+  "txn_special_gaps": {
+    "en": {
+      "have": 12,
+      "target": 500,
+      "shortfall": 488
+    },
+    "hi": {
+      "have": 17,
+      "target": 500,
+      "shortfall": 483
+    },
+    "id": {
+      "have": 80,
+      "target": 500,
+      "shortfall": 420
+    },
+    "zh": {
+      "have": 2124,
+      "target": 500,
+      "shortfall": 0
+    }
+  },
+  "priority_fill_order": [
+    {
+      "language": "en",
+      "label": "TRANSACTION",
+      "shortfall": 488,
+      "have": 12,
+      "target": 500
+    },
+    {
+      "language": "hi",
+      "label": "FRAUD",
+      "shortfall": 487,
+      "have": 13,
+      "target": 500
+    },
+    {
+      "language": "hi",
+      "label": "TRANSACTION",
+      "shortfall": 483,
+      "have": 17,
+      "target": 500
+    },
+    {
+      "language": "hi",
+      "label": "HARASS",
+      "shortfall": 421,
+      "have": 79,
+      "target": 500
+    },
+    {
+      "language": "id",
+      "label": "TRANSACTION",
+      "shortfall": 420,
+      "have": 80,
+      "target": 500
+    },
+    {
+      "language": "id",
+      "label": "HARASS",
+      "shortfall": 402,
+      "have": 98,
+      "target": 500
+    },
+    {
+      "language": "en",
+      "label": "HARASS",
+      "shortfall": 366,
+      "have": 134,
+      "target": 500
+    },
+    {
+      "language": "en",
+      "label": "FRAUD",
+      "shortfall": 280,
+      "have": 220,
+      "target": 500
+    },
+    {
+      "language": "zh",
+      "label": "FRAUD",
+      "shortfall": 184,
+      "have": 316,
+      "target": 500
+    },
+    {
+      "language": "id",
+      "label": "AD",
+      "shortfall": 173,
+      "have": 327,
+      "target": 500
+    },
+    {
+      "language": "id",
+      "label": "FRAUD",
+      "shortfall": 131,
+      "have": 369,
+      "target": 500
+    },
+    {
+      "language": "en",
+      "label": "AD",
+      "shortfall": 107,
+      "have": 393,
+      "target": 500
+    }
+  ],
+  "notes": [
+    "hi pool is mostly Hinglish/en-IN (iiitd); Devanagari still required for real hi acceptance.",
+    "en TRANSACTION is extremely scarce in UCI; need other EN transactional SMS sources.",
+    "NEEDS_REVIEW rows in interim CSVs are the primary refill pool for gap packs."
+  ]
+}

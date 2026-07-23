@@ -17,6 +17,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.oppo.smsclassifier.notification.NotificationHelper
+import com.oppo.smsclassifier.permission.SmsPermissions
 import com.oppo.smsclassifier.role.SmsRoleManager
 import com.oppo.smsclassifier.ui.about.AboutScreen
 import com.oppo.smsclassifier.ui.common.MainBottomBar
@@ -35,8 +36,16 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.StartActivityForResult(),
     ) { /* role result handled on next resume */ }
 
+    private val permissionRequest = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions(),
+    ) { /* inbox screens re-check permission on next composition */ }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val missing = SmsPermissions.missing(this)
+        if (missing.isNotEmpty() && OnboardingPrefs.isComplete(this)) {
+            permissionRequest.launch(missing)
+        }
         val deepLinkUri = intent?.getStringExtra(NotificationHelper.EXTRA_MESSAGE_URI)
 
         setContent {

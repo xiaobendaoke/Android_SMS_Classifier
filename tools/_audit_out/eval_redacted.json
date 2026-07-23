@@ -1,0 +1,74 @@
+{
+  "total": 6,
+  "labeled": 6,
+  "categoryCorrect": 3,
+  "accuracy": 0.5,
+  "rows": [
+    {
+      "id": "1",
+      "expectedCategory": "TRANSACTION",
+      "predictedCategory": "TRANSACTION",
+      "action": "INBOX",
+      "confidence": 0.9986303,
+      "elapsedMs": 4.4555,
+      "reasonCode": "MODEL_PREDICTION",
+      "bodyRedacted": true,
+      "bodyLength": 37
+    },
+    {
+      "id": "2",
+      "expectedCategory": "TRANSACTION",
+      "predictedCategory": "AD",
+      "action": "REVIEW",
+      "confidence": 0.5707519,
+      "elapsedMs": 1.6532,
+      "reasonCode": "MODEL_LOW_CONFIDENCE",
+      "bodyRedacted": true,
+      "bodyLength": 54
+    },
+    {
+      "id": "3",
+      "expectedCategory": "AD",
+      "predictedCategory": "AD",
+      "action": "SUSPECT",
+      "confidence": 0.84917176,
+      "elapsedMs": 1.9767,
+      "reasonCode": "AD_HINT",
+      "bodyRedacted": true,
+      "bodyLength": 29
+    },
+    {
+      "id": "4",
+      "expectedCategory": "FRAUD",
+      "predictedCategory": "AD",
+      "action": "REVIEW",
+      "confidence": 0.41838542,
+      "elapsedMs": 1.4536,
+      "reasonCode": "MODEL_LOW_CONFIDENCE",
+      "bodyRedacted": true,
+      "bodyLength": 45
+    },
+    {
+      "id": "5",
+      "expectedCategory": "FRAUD",
+      "predictedCategory": "TRANSACTION",
+      "action": "INBOX",
+      "confidence": 0.80503887,
+      "elapsedMs": 1.7749,
+      "reasonCode": "MODEL_PREDICTION",
+      "bodyRedacted": true,
+      "bodyLength": 42
+    },
+    {
+      "id": "6",
+      "expectedCategory": "TRANSACTION",
+      "predictedCategory": "TRANSACTION",
+      "action": "INBOX",
+      "confidence": 0.79466957,
+      "elapsedMs": 1.5803,
+      "reasonCode": "MODEL_PREDICTION",
+      "bodyRedacted": true,
+      "bodyLength": 30
+    }
+  ]
+}

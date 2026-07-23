@@ -17,9 +17,14 @@
     <string name="onboarding_request_role">申请默认短信角色</string>
     <string name="onboarding_role_granted">已持有默认短信角色</string>
     <string name="onboarding_continue">进入应用</string>
+    <string name="onboarding_permission_hint">首次使用需授予读取短信权限，否则收件箱无法加载。</string>
+    <string name="onboarding_request_permission">授予短信权限</string>
+    <string name="onboarding_permission_granted">已授予短信权限</string>
 
     <!-- Inbox / lists -->
     <string name="inbox_empty">暂无短信</string>
+    <string name="sms_permission_needed">需要读取短信权限才能显示收件箱</string>
+    <string name="sms_permission_grant">授予权限</string>
     <string name="suspect_empty">暂无可疑短信</string>
     <string name="review_empty">暂无待复核短信</string>
     <string name="suspect_restore">恢复至收件箱</string>

@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "source": "hf_sms_otp_phishing_10k",
+  "source_license": "MIT (dataset card README)",
+  "input_sha256": "e5133915120cac8adb2cb5baff0ec9c96658fab961d943c32e11d757d0f222d9",
+  "stats": {
+    "input_rows": 10000,
+    "excluded_non_success": 8308,
+    "suggested_NEEDS_REVIEW": 168,
+    "suggested_TRANSACTION": 903,
+    "suggested_FRAUD": 432,
+    "excluded_exact_duplicate": 189,
+    "output_rows": 1503
+  },
+  "pilot_rows": 1000,
+  "pilot_distribution": {
+    "TRANSACTION": 478,
+    "FRAUD": 354,
+    "NEEDS_REVIEW": 168
+  },
+  "usage": "human annotation candidate only; not frozen acceptance gold",
+  "safety": "sender field intentionally not exported"
+}

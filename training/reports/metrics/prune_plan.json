@@ -1,65 +1,67 @@
 {
   "seed": 42,
   "importance": "l1_norm",
-  "prune_ratio": 0.25,
-  "input_model": "artifacts\\student\\sms_bytecnn_fp32.keras",
-  "output_model": "artifacts\\student\\sms_bytecnn_pruned.keras",
+  "prune_ratios_tried": [
+    0.25,
+    0.15,
+    0.1
+  ],
+  "input_model": "artifacts/student/sms_bytecnn_fp32.keras",
+  "output_model": "artifacts/student/sms_bytecnn_pruned.keras",
   "constraints": {
     "max_transaction_recall_drop": 0.005,
     "max_macro_f1_drop": 0.01
   },
   "method": "rebuild_smaller_conv_channels",
-  "kept_filters": 48,
-  "original_filters": 64,
-  "val_metrics": {
-    "accuracy": 0.6818181818181818,
-    "macro_f1": 0.20270270270270271,
+  "baseline_val_metrics": {
+    "accuracy": 0.8791615289765722,
+    "macro_f1": 0.8258489502483665,
     "per_class": {
       "TRANSACTION": {
-        "precision": 0.6818181818181818,
-        "recall": 1.0,
-        "f1": 0.8108108108108109
+        "precision": 0.9113300492610837,
+        "recall": 0.9024390243902439,
+        "f1": 0.9068627450980392
       },
       "AD": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
+        "precision": 0.8964059196617337,
+        "recall": 0.9177489177489178,
+        "f1": 0.906951871657754
       },
       "HARASS": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
+        "precision": 0.9411764705882353,
+        "recall": 0.6,
+        "f1": 0.7328244274809161
       },
       "FRAUD": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
+        "precision": 0.6666666666666666,
+        "recall": 0.875,
+        "f1": 0.7567567567567567
       }
     },
     "confusion_matrix": [
       [
-        15,
+        185,
+        17,
         0,
-        0,
-        0
+        3
       ],
       [
-        1,
-        0,
-        0,
-        0
+        14,
+        424,
+        3,
+        21
       ],
       [
-        1,
-        0,
-        0,
-        0
+        2,
+        26,
+        48,
+        4
       ],
       [
-        5,
+        2,
+        6,
         0,
-        0,
-        0
+        56
       ]
     ],
     "label_order": [
@@ -68,7 +70,135 @@
       "HARASS",
       "FRAUD"
     ],
-    "count": 22
+    "count": 811
   },
-  "status": "APPLIED"
+  "attempts": [
+    {
+      "prune_ratio": 0.25,
+      "kept_filters": 48,
+      "val_metrics": {
+        "accuracy": 0.8951911220715166,
+        "macro_f1": 0.8440394010690826,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.9246231155778895,
+            "recall": 0.8975609756097561,
+            "f1": 0.9108910891089109
+          },
+          "AD": {
+            "precision": 0.9012345679012346,
+            "recall": 0.948051948051948,
+            "f1": 0.9240506329113924
+          },
+          "HARASS": {
+            "precision": 0.8983050847457628,
+            "recall": 0.6625,
+            "f1": 0.762589928057554
+          },
+          "FRAUD": {
+            "precision": 0.7611940298507462,
+            "recall": 0.796875,
+            "f1": 0.7786259541984732
+          }
+        },
+        "confusion_matrix": [
+          [
+            184,
+            18,
+            1,
+            2
+          ],
+          [
+            10,
+            438,
+            3,
+            11
+          ],
+          [
+            2,
+            22,
+            53,
+            3
+          ],
+          [
+            3,
+            8,
+            2,
+            51
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 811
+      },
+      "within_budget": true
+    }
+  ],
+  "status": "APPLIED",
+  "prune_ratio": 0.25,
+  "kept_filters": 48,
+  "original_filters": 64,
+  "val_metrics": {
+    "accuracy": 0.8951911220715166,
+    "macro_f1": 0.8440394010690826,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9246231155778895,
+        "recall": 0.8975609756097561,
+        "f1": 0.9108910891089109
+      },
+      "AD": {
+        "precision": 0.9012345679012346,
+        "recall": 0.948051948051948,
+        "f1": 0.9240506329113924
+      },
+      "HARASS": {
+        "precision": 0.8983050847457628,
+        "recall": 0.6625,
+        "f1": 0.762589928057554
+      },
+      "FRAUD": {
+        "precision": 0.7611940298507462,
+        "recall": 0.796875,
+        "f1": 0.7786259541984732
+      }
+    },
+    "confusion_matrix": [
+      [
+        184,
+        18,
+        1,
+        2
+      ],
+      [
+        10,
+        438,
+        3,
+        11
+      ],
+      [
+        2,
+        22,
+        53,
+        3
+      ],
+      [
+        3,
+        8,
+        2,
+        51
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 811
+  }
 }

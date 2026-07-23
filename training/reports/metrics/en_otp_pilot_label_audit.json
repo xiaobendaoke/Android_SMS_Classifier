@@ -1,0 +1,342 @@
+{
+  "total": 1000,
+  "label_dist": {
+    "TRANSACTION": 960,
+    "AD": 20,
+    "FRAUD": 17,
+    "NEEDS_REVIEW": 3
+  },
+  "annotator": {
+    "cursor-agent": 1000
+  },
+  "suggested": {
+    "TRANSACTION": 478,
+    "FRAUD": 354,
+    "NEEDS_REVIEW": 168
+  },
+  "agree_rate": 0.497,
+  "disagreements": [
+    {
+      "from": "FRAUD",
+      "to": "TRANSACTION",
+      "n": 321
+    },
+    {
+      "from": "NEEDS_REVIEW",
+      "to": "TRANSACTION",
+      "n": 161
+    },
+    {
+      "from": "FRAUD",
+      "to": "AD",
+      "n": 15
+    },
+    {
+      "from": "NEEDS_REVIEW",
+      "to": "AD",
+      "n": 5
+    },
+    {
+      "from": "FRAUD",
+      "to": "NEEDS_REVIEW",
+      "n": 1
+    }
+  ],
+  "minority_examples": {
+    "FRAUD": [
+      {
+        "id": "en_otp_web_48162",
+        "sug": "FRAUD",
+        "text": "08712300220 250 350 app award claim code ending holiday london match numbers quoting rates receive selected standard stay todays voda worth"
+      },
+      {
+        "id": "en_otp_web_44888",
+        "sug": "FRAUD",
+        "text": "12 24 900 claim code collect customer hours network prize receive reward selected valid valued winner"
+      },
+      {
+        "id": "en_otp_web_45294",
+        "sug": "FRAUD",
+        "text": "04 10 11 2003 800 account code expires identifier points private redeemed shows statement"
+      },
+      {
+        "id": "en_otp_web_53943",
+        "sug": "FRAUD",
+        "text": "सरप्राइज फर्स्ट डिपॉजिट बोनस - खोया हुआ रिकवरी बोनस आपका इंतजार कर रहा है!\n🎉 हमारे बड़े परिवार में शामिल होने के लिए आपका स्वागत है! 🎉\n\n1लॉटरी पर आपके पहले भरोसे और समर्थन के लिए आपको धन्यवाद देने के लिए, हमने आपके लिए एक विशेष आश्चर्य बोनस"
+      },
+      {
+        "id": "en_otp_web_47656",
+        "sug": "FRAUD",
+        "text": "1000 12hrs 519p 900 claim code contact draw guaranteed pm prize shows trying urgent valid weekends won"
+      },
+      {
+        "id": "en_otp_web_45316",
+        "sug": "FRAUD",
+        "text": "04 11 2003 800 account code expires identifier points private redeemed shows statement"
+      },
+      {
+        "id": "en_otp_web_66598",
+        "sug": "FRAUD",
+        "text": "Todays Voda numbers ending 7548 are selected to receive a $350 award. If you have a match please call 08712300220 quoting claim code 4041 standard rates app"
+      },
+      {
+        "id": "en_otp_web_45661",
+        "sug": "FRAUD",
+        "text": "12 900 claim code customer hours network prize reward selected valid valued winner"
+      },
+      {
+        "id": "en_otp_web_46016",
+        "sug": "FRAUD",
+        "text": "04 10 11 2003 26 800 account code expires fone identifier points private redeemed shows statement"
+      },
+      {
+        "id": "en_otp_web_47606",
+        "sug": "FRAUD",
+        "text": "04 06 11 18 2003 800 account code expires identifier points private redeemed shows statement"
+      },
+      {
+        "id": "en_otp_web_68115",
+        "sug": "FRAUD",
+        "text": "Urgent Ur å£500 guaranteed award is still unclaimed! Call 09066368327 NOW closingdate04/09/02 claimcode M39M51 å£1.50pmmorefrommobile2Bremoved-MobyPOBox734LS27YF"
+      },
+      {
+        "id": "en_otp_web_46765",
+        "sug": "FRAUD",
+        "text": "08712300220 350 app award claim code ending match matches number numbers quoting rates receive selected standard todays voda vodafone"
+      },
+      {
+        "id": "en_otp_web_42457",
+        "sug": "FRAUD",
+        "text": "900 claim code contact draw guaranteed prize shows trying urgent valid weekends won"
+      },
+      {
+        "id": "en_otp_web_47774",
+        "sug": "FRAUD",
+        "text": "08712300220 350 app award claim code ending match numbers quoting rates receive selected standard todays voda"
+      },
+      {
+        "id": "en_otp_web_48077",
+        "sug": "FRAUD",
+        "text": "04 10 2003 800 account code expires identifier points private redeemed shows statement"
+      },
+      {
+        "id": "en_otp_web_47412",
+        "sug": "FRAUD",
+        "text": "12hrs 533 claim code contact draw guaranteed prize shows trying urgent valid weekends won"
+      },
+      {
+        "id": "en_otp_web_45579",
+        "sug": "FRAUD",
+        "text": "04 06 11 2003 26 800 account code expires identifier points private redeemed shows statement"
+      }
+    ],
+    "AD": [
+      {
+        "id": "en_otp_web_3329",
+        "sug": "FRAUD",
+        "text": "Sandeep Jaiswal has invited you to network from home with Lunchclub! Accept invitation at https://lunchclub.ai/?i=gandharv-bakshi-609"
+      },
+      {
+        "id": "en_otp_web_55461",
+        "sug": "FRAUD",
+        "text": "Use code MOVIE & get an instant discount of upto INR 566* + cashback upto INR 951* using PayZapp wallet, only on BookMyShow. *T&C Apply- http://bit.ly/250mvs"
+      },
+      {
+        "id": "en_otp_web_11627",
+        "sug": "NEEDS_REVIEW",
+        "text": "Dear Customer,\nARRIVING TODAY: Midweek Munchies!\nFLAT Rs.634 off on juicy ready-to-cook Kebabs, Tandoori delights & more. Code: MUNCH50\nklr.pw/MUNCH\n-Licious"
+      },
+      {
+        "id": "en_otp_web_67722",
+        "sug": "FRAUD",
+        "text": "Here is your discount code RP176781. To stop further messages reply stop. www.regalportfolio.co.uk. Customer Services 08717205546"
+      },
+      {
+        "id": "en_otp_web_56363",
+        "sug": "FRAUD",
+        "text": "Akash, Rs. 472 is added in your Fynd Cash account (Expires soon).\n\nUse Code: FIRST20 get EXTRA 20% OFF.\n\nVisit: http://go.fyndi.ng/wlfc"
+      },
+      {
+        "id": "en_otp_web_5961",
+        "sug": "NEEDS_REVIEW",
+        "text": "Big Savings!\nDear customer,\nFLAT 20% off on our wide range of delicious ready-to-cook dishes. Use code 20RTC. Order now.\nct1.io/8VESJvS -Licious"
+      },
+      {
+        "id": "en_otp_web_58363",
+        "sug": "FRAUD",
+        "text": "This is for all Food Lovers..! Get Rs950 OFF at Foodpanda at Rs8 Only. To get offer code click http://m.mydelights.in/pr/16"
+      },
+      {
+        "id": "en_otp_web_2848",
+        "sug": "FRAUD",
+        "text": "Never miss a payment! Make payment and set-up UPI today with a single click and enjoy hassle-free bill payments. To set-up now, click https://vi.app.link/vibp"
+      },
+      {
+        "id": "en_otp_web_59041",
+        "sug": "FRAUD",
+        "text": "FreeCharge offer! Get Rs.74 cashback on min. Recharge/DTH/Bill of Rs.09.Use code RT20 for manohar9600@gmail.com. Offer valid till 5 Feb. frch.in/F"
+      },
+      {
+        "id": "en_otp_web_51156",
+        "sug": "NEEDS_REVIEW",
+        "text": "सावधान! आपने ई-कॉमर्स/बैंकिंग और अन्य सेवाओं से जुड़े OTPs और SMS मिस किए हैं। इन्हें फिर से प्राप्त करने के लिए सुझाए गए पैक्स से रिचार्ज करें।\nअधिक जानकारी के लिए: https://vi.app.link/rcir"
+      },
+      {
+        "id": "en_otp_web_1716",
+        "sug": "FRAUD",
+        "text": "Ready to lead? Show your vision for India's development in the 'Viksit Bharat Young Leaders Dialogue' quiz. Prizes for top scorers! https://mybharat.gov.in/quiz"
+      },
+      {
+        "id": "en_otp_web_36877",
+        "sug": "FRAUD",
+        "text": "Trusted by 50000+ Sellers\nSame/Next Day Delivery across 27000+ pin codes\n17+ courier @23/500gm \nGet your Free account > https://bit.ly/35KCgrG"
+      },
+      {
+        "id": "en_otp_web_1849",
+        "sug": "FRAUD",
+        "text": "Cancellation Alert: There's still time to save your cancelled GoDaddy products! Renew now: https://go.godaddy.com/KpppnF Reply STOP to unsubscribe."
+      },
+      {
+        "id": "en_otp_web_33403",
+        "sug": "NEEDS_REVIEW",
+        "text": "Alert!\n500 FreshCash has been added to your account\nExpiry 28 Feb\n\nTriple Combo(Goat+Chicken+Baasa Fillet)@575\ncode:575GCB\n\nnow available.\nwww.freshtohome.com/d"
+      },
+      {
+        "id": "en_otp_web_58709",
+        "sug": "FRAUD",
+        "text": "This is for all Food Lovers..! Get Rs082 OFF at Foodpanda at Rs1 Only. To get offer code click http://m.mydelights.in/pr/16"
+      },
+      {
+        "id": "en_otp_web_12338",
+        "sug": "FRAUD",
+        "text": "Dear Customer,\n\nWe have an exclusive offer for you.\n\nUse code: EMTNOW & save upto 5000/- on flight & hotels.\n\nDownload EaseMyTrip APP now\nhttps://emt.bio/Kef1rS"
+      },
+      {
+        "id": "en_otp_web_11594",
+        "sug": "FRAUD",
+        "text": "Dear customer,\nWeekends call for meaty treats!\nEnjoy FLAT Rs.577 cashback using code GFD100 | Valid on orders above Rs.480\nOrder now klr.pw/GO\n-Licious"
+      },
+      {
+        "id": "en_otp_web_3322",
+        "sug": "FRAUD",
+        "text": "Join us at Amazon Smbhav 2021,15-18th April 2021. Register now https://bit.ly/3rGa1Dq to learn from eminent leaders like Indra Nooyi, Sunil Bharti Mittal & more"
+      },
+      {
+        "id": "en_otp_web_58157",
+        "sug": "NEEDS_REVIEW",
+        "text": "Thank you for generating coupon code through MyJio. To get Jio SIM & experience Jio Digital Life, visit Jio Store with your Aadhar Card or PoA/PoI documents & passport size photo. Click www.jio.com/Jio/portal/storeLocator for nearest Jio St"
+      },
+      {
+        "id": "en_otp_web_55462",
+        "sug": "FRAUD",
+        "text": "Use code MOVIES125 & get 50% off upto INR 953 on your favorite movies, only on BookMyShow. Book now! *T&C Apply- http://bit.ly/125MVS"
+      }
+    ],
+    "NEEDS_REVIEW": [
+      {
+        "id": "en_otp_web_9734",
+        "sug": "FRAUD",
+        "text": "Yes but strangely my cousin Raj who is a dean of a university  texted me at 7 asking me to share a 6 digit otp which he sent to me by mistake.i knew I was being targetted."
+      },
+      {
+        "id": "en_otp_web_38191",
+        "sug": "NEEDS_REVIEW",
+        "text": "Oh shit, totally missed your msg in all the otps and spam"
+      },
+      {
+        "id": "en_otp_web_2572",
+        "sug": "NEEDS_REVIEW",
+        "text": "\"Quit Drugs, Choose Life.\nIssued in public interest by Narcotics Control Bureau, Govt. of India, Bengaluru Zonal Unit\""
+      }
+    ]
+  },
+  "strong_phish_as_txn_count": 9,
+  "strong_phish_as_txn_samples": [
+    {
+      "id": "en_otp_web_3036",
+      "sug": "FRAUD",
+      "text": "You have a membership update from JioMart Quick. Click here: https://relianceretail.com/JioMart/?jm50=3017de68fbfa71d67099f8eb0919cda2"
+    },
+    {
+      "id": "en_otp_web_2974",
+      "sug": "FRAUD",
+      "text": "You have a membership update from JioMart Quick! Click here: https://relianceretail.com/JioMart/?jm25=9881F18D-FDAB-4472-8A58-97C1917C7ADE"
+    },
+    {
+      "id": "en_otp_web_2493",
+      "sug": "FRAUD",
+      "text": "Alert:On receiving any unwanted SMS,please complain by calling 1909 or send SMS on 1909 in format SMS Content,Sender No,dd/mm/yy or visit https://bit.ly/37gyXNC"
+    },
+    {
+      "id": "en_otp_web_2826",
+      "sug": "FRAUD",
+      "text": "Hi! Your Jul'23 bill for Vi Postpaid no. 9739XXXX25 has been sent to your registered email ID - gandharv.bakshi@gmail.com. Please pay your due amount, Rs 901.12 by the due date 04/08/2023 failing which the new payment due would be Rs 732.48"
+    },
+    {
+      "id": "en_otp_web_31815",
+      "sug": "FRAUD",
+      "text": "Out for Delivery: Your order from PURE SNACKS PVTL LTD. vide Order id #7610 shall be attempted for delivery today. \nIf received any otp, share it with the delivery boy after delivery.\n\nYou can track your parcel and update your details here:"
+    },
+    {
+      "id": "en_otp_web_2808",
+      "sug": "FRAUD",
+      "text": "Your Jun'21 bill for Vi no. 9739XXXX25 of Rs.601.90 due on 05/07/2021, is sent to your registered email ID gandharv.bakshi@gmail.com.Our new Whatsapp assistant VIC is now LIVE! For any billing/payment/any other information, click https://wa"
+    },
+    {
+      "id": "en_otp_web_29620",
+      "sug": "FRAUD",
+      "text": "X81669795 is delivered on 25/1/2023. Share feedback tinyurl.com/2gx3xq45 DTDC won't ask for any payment OTP"
+    },
+    {
+      "id": "en_otp_web_2786",
+      "sug": "FRAUD",
+      "text": "Hi! Your Vi bill for 7687855081 of Rs.524.65 is due today 30-07-2025. Late payment charges of Rs.513 will be applicable post due date. Make payment through UPI or any other online mode with a single click. For hassle free bill payment, clic"
+    },
+    {
+      "id": "en_otp_web_3305",
+      "sug": "FRAUD",
+      "text": "Thank you for going ahead with Acko. We shall get back to you with your quote / next steps. We'd love to hear your feedback to help us understand how we can improve our services for you. Please click here to answer a quick 2 question survey"
+    }
+  ],
+  "fraud_to_txn": {
+    "total": 321,
+    "looks_legit_kw": 217,
+    "looks_sus_kw": 8,
+    "other": 96,
+    "sus_samples": [
+      {
+        "id": "en_otp_web_3036",
+        "text": "You have a membership update from JioMart Quick. Click here: https://relianceretail.com/JioMart/?jm50=3017de68fbfa71d67099f8eb0919cda2"
+      },
+      {
+        "id": "en_otp_web_2974",
+        "text": "You have a membership update from JioMart Quick! Click here: https://relianceretail.com/JioMart/?jm25=9881F18D-FDAB-4472-8A58-97C1917C7ADE"
+      },
+      {
+        "id": "en_otp_web_2493",
+        "text": "Alert:On receiving any unwanted SMS,please complain by calling 1909 or send SMS on 1909 in format SMS Content,Sender No,dd/mm/yy or visit https://bit.ly/37gyXNC"
+      },
+      {
+        "id": "en_otp_web_2826",
+        "text": "Hi! Your Jul'23 bill for Vi Postpaid no. 9739XXXX25 has been sent to your registered email ID - gandharv.bakshi@gmail.com. Please pay your due amount, Rs 901.12 by the due date 04/08/2023 failing which the new payment due would be Rs 732.48"
+      },
+      {
+        "id": "en_otp_web_2808",
+        "text": "Your Jun'21 bill for Vi no. 9739XXXX25 of Rs.601.90 due on 05/07/2021, is sent to your registered email ID gandharv.bakshi@gmail.com.Our new Whatsapp assistant VIC is now LIVE! For any billing/payment/any other information, click https://wa"
+      },
+      {
+        "id": "en_otp_web_29620",
+        "text": "X81669795 is delivered on 25/1/2023. Share feedback tinyurl.com/2gx3xq45 DTDC won't ask for any payment OTP"
+      },
+      {
+        "id": "en_otp_web_2786",
+        "text": "Hi! Your Vi bill for 7687855081 of Rs.524.65 is due today 30-07-2025. Late payment charges of Rs.513 will be applicable post due date. Make payment through UPI or any other online mode with a single click. For hassle free bill payment, clic"
+      },
+      {
+        "id": "en_otp_web_3305",
+        "text": "Thank you for going ahead with Acko. We shall get back to you with your quote / next steps. We'd love to hear your feedback to help us understand how we can improve our services for you. Please click here to answer a quick 2 question survey"
+      }
+    ]
+  },
+  "fraud_bag_of_words_style": 14
+}

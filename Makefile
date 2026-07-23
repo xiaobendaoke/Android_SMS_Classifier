@@ -1,4 +1,5 @@
 .PHONY: help setup-python audit-data prepare-data prepare-annotation-bootstrap \
+	prepare-acceptance-packs \
 	train-baseline train-teacher \
 	distill prune quantize verify-model evaluate export-android-assets \
 	android-test android-build benchmark audit-release package-release \
@@ -16,6 +17,7 @@ help:
 	@echo "  audit-data            数据来源与许可证审计 + 切分泄漏检查"
 	@echo "  prepare-data          生成合成 raw + group 切分 + 泄漏门禁"
 	@echo "  prepare-annotation-bootstrap  标注 CSV→JSONL + 与合成混合切分（作业级，非冻结）"
+	@echo "  prepare-acceptance-packs  缺口表 + HARASS/id 待标 + 冻结双人任务包（非金标）"
 	@echo "  check-leakage         仅检查 train/val/test 泄漏"
 	@echo "  train-baseline        训练 n-gram 基线"
 	@echo "  train-teacher         微调 bert-base-multilingual-cased 教师"
@@ -50,6 +52,12 @@ prepare-data:
 	$(PYTHON) training/scripts/build_adversarial_slices.py
 	$(PYTHON) training/scripts/validate_labels.py
 	$(PYTHON) training/scripts/check_split_leakage.py
+
+# Gap report + HARASS/id relabel packs + dual freeze work queues (NOT gold yet).
+prepare-acceptance-packs:
+	$(PYTHON) training/scripts/report_label_gaps.py
+	$(PYTHON) training/scripts/prepare_harass_id_relabel_packs.py
+	$(PYTHON) training/scripts/prepare_freeze_dual_annotation_packs.py
 
 # Homework bootstrap: audited annotation CSVs + synthetic raw → processed splits.
 # NOT frozen acceptance. Requires local interim CSVs under data/interim/annotation/.
