@@ -3,7 +3,8 @@
 详细分类标准已按主规格重写（与中文同一套），请以这个为准：
 
 - 完整版：`docs/labeling-guide.md`（含「英文 UCI 补充」）
-- 短版：`training/data/interim/annotation/README_EN_ANNOTATORS.txt`
+- 短版（历史归档）：`recent/prior_training/annotation/README_EN_ANNOTATORS.txt`
+- 新跑会写回：`training/data/interim/annotation/`
 
 ## 核心变化（相对旧英文说明）
 
@@ -28,7 +29,7 @@
 python training\scripts\prepare_uci_annotation_pack.py
 ```
 
-3. 打开 `uci_pilot_500.csv`
+3. 打开 `uci_pilot_500.csv`（新生成在 `training/data/interim/annotation/`；历史副本在 `recent/prior_training/annotation/`）
 4. 只填 `label` + `annotator`
 5. 已标过的请按新标准复查一遍
 

@@ -3,7 +3,8 @@
 详细分类标准已重写，请以这个为准：
 
 - 完整版：`docs/labeling-guide.md`
-- 短版：`training/data/interim/annotation/README_ZH_ANNOTATORS.txt`
+- 短版（历史归档）：`recent/prior_training/annotation/README_ZH_ANNOTATORS.txt`
+- 新跑脚本会把短版/表重新写到：`training/data/interim/annotation/`
 
 ## 核心变化（相对旧说明）
 
@@ -21,7 +22,7 @@
 ## 你要做的
 
 1. 重新看一遍 `README_ZH_ANNOTATORS.txt` / `docs/labeling-guide.md`
-2. 打开 `zh_pilot_800.csv`
+2. 打开历史试点表（归档）：`recent/prior_training/annotation/zh_pilot_800.csv`；或先跑 `prepare_zh_annotation_pack.py` 生成新表到 `training/data/interim/annotation/`
 3. 只填 `label` + `annotator`
 4. 已标过的请按新标准复查一遍
 

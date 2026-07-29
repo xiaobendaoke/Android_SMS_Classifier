@@ -1,0 +1,359 @@
+{
+  "changes": [
+    {
+      "id": "zh_00335",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "车市二手车到货推销"
+    },
+    {
+      "id": "zh_00477",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "车市二手车到货推销"
+    },
+    {
+      "id": "zh_01665",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "直充话费打折促销"
+    },
+    {
+      "id": "zh_01796",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "明确快递取件通知（地点/中通）"
+    },
+    {
+      "id": "zh_02725",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "车市二手车到货推销"
+    },
+    {
+      "id": "zh_04127",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "招行金卡理财产品发售"
+    },
+    {
+      "id": "zh_04494",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "新世纪商城礼品卡满额加赠"
+    },
+    {
+      "id": "zh_04515",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "众信旅游会员春季特卖会"
+    },
+    {
+      "id": "zh_04555",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "强人皮鞋清仓甩卖"
+    },
+    {
+      "id": "zh_04656",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "广东联通3G速率包推销"
+    },
+    {
+      "id": "zh_04688",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "交通银行抽奖活动推销"
+    },
+    {
+      "id": "zh_04690",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "永佳丰田车型降价钜惠"
+    },
+    {
+      "id": "zh_04791",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "建行龙卡刷卡半价优惠"
+    },
+    {
+      "id": "zh_04814",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "美大集成灶实体店促销"
+    },
+    {
+      "id": "zh_04815",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "日产4S店开业车展钜惠"
+    },
+    {
+      "id": "zh_04821",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "禾健保健品满减/任领促销"
+    },
+    {
+      "id": "zh_04908",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "明确快递取件通知（楼下申通）"
+    },
+    {
+      "id": "zh_04968",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "招行关联信用卡领礼包"
+    },
+    {
+      "id": "zh_04970",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "合宏奥迪4S店团购会促销"
+    },
+    {
+      "id": "zh_05097",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "光大银行理财产品发售"
+    },
+    {
+      "id": "zh_05223",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "湘潭福特夏季健诊返礼促销"
+    },
+    {
+      "id": "zh_05247",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "新玛特年中庆打折满送"
+    },
+    {
+      "id": "zh_05254",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "浦发信用卡欠款余额/最低还款额告知"
+    },
+    {
+      "id": "zh_05303",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "浦发信用卡欠款余额/最低还款额告知"
+    },
+    {
+      "id": "zh_05494",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "浦发信用卡欠款余额/最低还款额告知"
+    },
+    {
+      "id": "zh_05501",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "海峡银行理财产品销售"
+    },
+    {
+      "id": "zh_05521",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "银河证券理财产品发售"
+    },
+    {
+      "id": "zh_05544",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "明确账单扣款日提醒"
+    },
+    {
+      "id": "zh_05549",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "格力/西门子家电促销"
+    },
+    {
+      "id": "zh_05585",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "陆金所投资满额返现促销"
+    },
+    {
+      "id": "zh_05616",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "华润万家ochirly特卖2-5折"
+    },
+    {
+      "id": "zh_05687",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "移动企业400电话办理送礼"
+    },
+    {
+      "id": "zh_05771",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "邮储银行理财产品发售"
+    },
+    {
+      "id": "zh_05829",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "浦发信用卡欠款余额/最低还款额告知"
+    },
+    {
+      "id": "zh_05889",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "女装店清仓大甩卖"
+    },
+    {
+      "id": "zh_05985",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "雷克萨斯车型降价促销"
+    },
+    {
+      "id": "zh_06009",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "海底捞本次消费积分成功"
+    },
+    {
+      "id": "zh_06118",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "兴业银行理财产品推销"
+    },
+    {
+      "id": "zh_06170",
+      "old": "NEEDS_REVIEW",
+      "new": "HARASS",
+      "reason": "明确发票代开招揽"
+    },
+    {
+      "id": "zh_06173",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "海航客户端购票直减"
+    },
+    {
+      "id": "zh_06190",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "京东会员礼包促销"
+    },
+    {
+      "id": "zh_06237",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "楼盘住宅/门面房促销"
+    },
+    {
+      "id": "zh_06299",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "院线通电影票五折促销"
+    },
+    {
+      "id": "zh_06306",
+      "old": "NEEDS_REVIEW",
+      "new": "HARASS",
+      "reason": "无抵押快速放款+个人经理电话，灰产贷款"
+    },
+    {
+      "id": "zh_06360",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "佳兆业楼盘售楼促销"
+    },
+    {
+      "id": "zh_06392",
+      "old": "NEEDS_REVIEW",
+      "new": "TRANSACTION",
+      "reason": "美团团购券验证/消费结果告知"
+    },
+    {
+      "id": "zh_06400",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "锦绣山河楼盘认购促销"
+    },
+    {
+      "id": "zh_06476",
+      "old": "NEEDS_REVIEW",
+      "new": "HARASS",
+      "reason": "股票期货配资、无需抵押，灰产招揽"
+    },
+    {
+      "id": "zh_06495",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "雷克萨斯车型降价促销（重复）"
+    },
+    {
+      "id": "zh_06866",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "锦绣山河楼盘认购促销（重复）"
+    },
+    {
+      "id": "zh_07550",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "日产4S店开业车展钜惠（重复）"
+    },
+    {
+      "id": "zh_07928",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "光大银行理财产品发售（重复）"
+    },
+    {
+      "id": "zh_08000",
+      "old": "NEEDS_REVIEW",
+      "new": "HARASS",
+      "reason": "个人/企业快速放贷推销"
+    },
+    {
+      "id": "zh_08017",
+      "old": "NEEDS_REVIEW",
+      "new": "HARASS",
+      "reason": "伪装银行无抵押放款，灰产贷款"
+    },
+    {
+      "id": "zh_08136",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "麦乐迪会员储值送礼促销"
+    },
+    {
+      "id": "zh_08365",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "博雅盛世楼盘节日促销"
+    },
+    {
+      "id": "zh_09366",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "移动电源限时抢购促销"
+    },
+    {
+      "id": "zh_10197",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "湘潭福特夏季健诊促销（重复）"
+    },
+    {
+      "id": "zh_10860",
+      "old": "NEEDS_REVIEW",
+      "new": "AD",
+      "reason": "移动电源限时抢购促销（重复）"
+    }
+  ],
+  "reviewed": 1775
+}

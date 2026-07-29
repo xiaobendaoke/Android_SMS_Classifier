@@ -1,0 +1,1650 @@
+{
+  "changes": [
+    {
+      "id": "zh_00522",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_00768",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_00788",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_00939",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01187",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01205",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01221",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01246",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01347",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01431",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01458",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01470",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01494",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01498",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01546",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01560",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01610",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01614",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01634",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01637",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01695",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01711",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01755",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01765",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01779",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01801",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01847",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01855",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_01985",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02134",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02136",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02215",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02218",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02243",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02248",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02327",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02381",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02385",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02392",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02433",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02626",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02674",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02749",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02823",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02825",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02894",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02931",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02958",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02962",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02963",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_02983",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03017",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03092",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03156",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03164",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03200",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03213",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03251",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03263",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03294",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03307",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03329",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03349",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03379",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03460",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03486",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03511",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03559",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03618",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03623",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03625",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03687",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03765",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03832",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03869",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03964",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_03990",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04072",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04117",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04126",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04143",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04190",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04207",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04208",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04215",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04217",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04242",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04286",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04334",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04353",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04358",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04365",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04380",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04416",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04698",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04798",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04802",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_04981",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05029",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05109",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05114",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05235",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05306",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05316",
+      "old": "HARASS",
+      "new": "TRANSACTION",
+      "reason": "支付验证码+防诈骗提示，主意图事务",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05408",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05416",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05580",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "私人电话灰产贷款推销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05695",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05700",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05705",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05721",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05757",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05784",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_05839",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06006",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06065",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06082",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06083",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06089",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06212",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06277",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06291",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06294",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06373",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06523",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06542",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06570",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06572",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06606",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06613",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06629",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06691",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06696",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06711",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06721",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06786",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06792",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06811",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06835",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06873",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "诈骗硬信号误标AD",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06886",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06947",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_06995",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07097",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07142",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07280",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07296",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07374",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07379",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07392",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07454",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07476",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07493",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07537",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07618",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07645",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07701",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07820",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07826",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07836",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07850",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "私人电话灰产贷款推销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07851",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07868",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07869",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07880",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07908",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07911",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_07998",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08026",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08028",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08036",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08049",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08116",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08123",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08236",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08243",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "私人电话灰产贷款推销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08257",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08377",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08508",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08511",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08515",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08548",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08606",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08611",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08627",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08640",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08786",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08821",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08833",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08907",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08925",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_08941",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09074",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09080",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09152",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09164",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09242",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09255",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09322",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09344",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09407",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09424",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09448",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09455",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09461",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09476",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09511",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09661",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09698",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09731",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09741",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09899",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09902",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09927",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09950",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_09978",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10057",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10063",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "银行贷款营销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10145",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10177",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "彩票投注促销/荐号",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10376",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10418",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10471",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "私人电话灰产贷款推销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10484",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10542",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10658",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "优惠券/抽奖促销，非业务结果主意图",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10661",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10666",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "私人电话灰产贷款推销",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10724",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10824",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10849",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    },
+    {
+      "id": "zh_10874",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股推销无典型诈骗话术",
+      "source": "rule_based"
+    }
+  ],
+  "reviewed": 9817
+}

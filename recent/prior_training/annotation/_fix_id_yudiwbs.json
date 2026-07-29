@@ -1,0 +1,47 @@
+{
+  "changes": [
+    {
+      "id": "id_yudi_00258",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "诱导向私人号充值话费→FRAUD"
+    },
+    {
+      "id": "id_yudi_00270",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "超低价BB/手机+BBM PIN灰产店→FRAUD"
+    },
+    {
+      "id": "id_yudi_00335",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "假冒TELKOMSEL中奖PIN→FRAUD"
+    },
+    {
+      "id": "id_yudi_00370",
+      "old": "HARASS",
+      "new": "AD",
+      "reason": "课程推销硬广（非贷/赌/成人）→AD"
+    },
+    {
+      "id": "id_yudi_00393",
+      "old": "HARASS",
+      "new": "FRAUD",
+      "reason": "假中奖TABUNGAN HAJI+PIN→FRAUD"
+    },
+    {
+      "id": "id_yudi_00541",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "超低价BB灰产网店→FRAUD"
+    },
+    {
+      "id": "id_yudi_00552",
+      "old": "AD",
+      "new": "FRAUD",
+      "reason": "超低价BB灰产店+PIN BB→FRAUD"
+    }
+  ],
+  "reviewed": 256
+}

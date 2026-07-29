@@ -1,0 +1,839 @@
+{
+  "changes": [
+    {
+      "id": "zh_05353",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_05514",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_06428",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_06468",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_06678",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_08619",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_09231",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_09245",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_09822",
+      "old": "AD",
+      "new": "TRANSACTION",
+      "reason": "账户扣款/入账等业务结果告知（主意图）"
+    },
+    {
+      "id": "zh_00319",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_00766",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_00796",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "成人/色情服务招揽"
+    },
+    {
+      "id": "zh_00979",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_01102",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_01139",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_01183",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_01341",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_01979",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_02030",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_02151",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_02346",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_02501",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_02512",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "资金中介/灰产合作招揽"
+    },
+    {
+      "id": "zh_03050",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_03392",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_03947",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_04078",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_04999",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "成人/色情服务招揽"
+    },
+    {
+      "id": "zh_05580",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_05593",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_05624",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "代开发票灰产招揽"
+    },
+    {
+      "id": "zh_05706",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_05817",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "代开发票灰产招揽"
+    },
+    {
+      "id": "zh_06016",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_06059",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_06243",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_06320",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "赌博/博彩招揽"
+    },
+    {
+      "id": "zh_06489",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_07248",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_07432",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_07555",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_07850",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_07976",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_08203",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_08243",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_08244",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_08277",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_09375",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_09875",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "成人/色情服务招揽"
+    },
+    {
+      "id": "zh_09996",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_10105",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_10149",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_10179",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "荐股带客灰产硬推销"
+    },
+    {
+      "id": "zh_10218",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_10346",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "荐股带客灰产硬推销"
+    },
+    {
+      "id": "zh_10471",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_10525",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "代开发票灰产招揽"
+    },
+    {
+      "id": "zh_10527",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_10572",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_10614",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_10622",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "荐股带客灰产硬推销"
+    },
+    {
+      "id": "zh_10666",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "无抵押/当天放款/私人中介硬推销贷款"
+    },
+    {
+      "id": "zh_10716",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "代办证件/学历灰产"
+    },
+    {
+      "id": "zh_10791",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "荐股带客灰产硬推销"
+    },
+    {
+      "id": "zh_10838",
+      "old": "AD",
+      "new": "HARASS",
+      "reason": "彩票投注招揽（专家荐号诱导投注）"
+    },
+    {
+      "id": "zh_04580",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_04649",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_04745",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_04879",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05019",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "私人飞信/闲聊非目标域"
+    },
+    {
+      "id": "zh_05070",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_05187",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05198",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "私人飞信/闲聊非目标域"
+    },
+    {
+      "id": "zh_05284",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "私人飞信/闲聊非目标域"
+    },
+    {
+      "id": "zh_05285",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "信息碎片无法判断"
+    },
+    {
+      "id": "zh_05341",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_05342",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05372",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05455",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05545",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05592",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05876",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_05916",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06000",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06024",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06133",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06162",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06180",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06193",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06256",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06278",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06444",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_06514",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "信息碎片无法判断"
+    },
+    {
+      "id": "zh_07512",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07561",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_07592",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07594",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_07716",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07717",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_07736",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_07840",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07855",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07882",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_07905",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08016",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "过短无法判断"
+    },
+    {
+      "id": "zh_08024",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08158",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08263",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08280",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_08325",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08354",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08360",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_08416",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08431",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08532",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_08558",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_08561",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_09908",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_09936",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_09955",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_09982",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10004",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10062",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_10067",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_10136",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "信息碎片无法判断"
+    },
+    {
+      "id": "zh_10198",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    },
+    {
+      "id": "zh_10236",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10292",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10311",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10362",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10375",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10400",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10409",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10433",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10444",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10533",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10568",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10659",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "券商投研/行情推送非四类目标域"
+    },
+    {
+      "id": "zh_10784",
+      "old": "AD",
+      "new": "NEEDS_REVIEW",
+      "reason": "纯新闻/资讯推送（冲浪助手）"
+    }
+  ],
+  "reviewed": 4282
+}

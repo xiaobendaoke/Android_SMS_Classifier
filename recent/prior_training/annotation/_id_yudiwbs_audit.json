@@ -1,0 +1,545 @@
+{
+  "_meta": {
+    "total": 1143,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "orig_label",
+      "label",
+      "annotator",
+      "template_group",
+      "notes",
+      "label_reason"
+    ],
+    "label_dist": {
+      "AD": 210,
+      "TRANSACTION": 80,
+      "NEEDS_REVIEW": 578,
+      "HARASS": 42,
+      "FRAUD": 233
+    },
+    "annotator_dist": {
+      "audit_fixpass_id": 1143
+    },
+    "orig_dist": {
+      "2": 239,
+      "1": 335,
+      "0": 569
+    },
+    "empty_label": 0,
+    "invalid": [],
+    "unique_texts": 1142,
+    "label_conflicts": 0,
+    "orig_to_label": {
+      "0->NEEDS_REVIEW": 542,
+      "1->FRAUD": 229,
+      "2->AD": 181,
+      "2->TRANSACTION": 52,
+      "1->HARASS": 41,
+      "1->NEEDS_REVIEW": 33,
+      "1->AD": 29,
+      "0->TRANSACTION": 25,
+      "2->NEEDS_REVIEW": 3,
+      "1->TRANSACTION": 3,
+      "2->FRAUD": 2,
+      "0->FRAUD": 2,
+      "2->HARASS": 1
+    },
+    "issue_counts": {
+      "TXN却像广告促销": 17,
+      "原标诈骗却标成事务": 3,
+      "AD却像假中奖诈骗": 2,
+      "疑似假中奖未标FRAUD": 1
+    }
+  },
+  "_random_per_class": {
+    "AD": [
+      {
+        "id": "id_yudi_00217",
+        "orig": "2",
+        "suggested": null,
+        "text": "Terima kasih telah menjadi Sahabat IndosatOoredoo, dapatkan Video & Game seru + Gratis telp di *323*2#"
+      },
+      {
+        "id": "id_yudi_00039",
+        "orig": "2",
+        "suggested": null,
+        "text": "BONUS PULSA Rp 100 rb..!! Spesial untuk kamu pelanggan setia Indosat Ooredo.Hanya dengan isi ulang Rp150rb skrg juga! Penawaran berlaku s.d 13 Jan 2016 (bonus h"
+      },
+      {
+        "id": "id_yudi_00008",
+        "orig": "2",
+        "suggested": null,
+        "text": "Aktifkan iRing Coboy Jr - Terhebat. Tekan *808*7#. Info: 100&111 Ada hits terbaru dari NOAH - Jika Engkau. Aktifkan iRing nya di HP kamu. Ketik MG NOAH02 kirim "
+      },
+      {
+        "id": "id_yudi_00281",
+        "orig": "1",
+        "suggested": null,
+        "text": "Daptkn e-TIKET pesawat PROMO melayani Domestik and internasional booking ONLINE cepat & aman hub: 085217845777/082310204777 Link www.citiling-travel.com"
+      },
+      {
+        "id": "id_yudi_00085",
+        "orig": "2",
+        "suggested": null,
+        "text": "HARI TERAKHIR! Kunjungi Galeri Smartfren skrng, buat kamu Andromax A 4G jd 99rb (nrml 649rb). Tunggu apa lagi?!Stok terbatas.sd 22Agt.S&K.Info888.DL46J"
+      },
+      {
+        "id": "id_yudi_00077",
+        "orig": "2",
+        "suggested": null,
+        "text": "Hallo urang minang, ado sticker rancak di Group Line Urang Kampuang MINANG GUY, beli pake pulsa Telkomsel"
+      },
+      {
+        "id": "id_yudi_00072",
+        "orig": "2",
+        "suggested": null,
+        "text": "Gunakan Grab dan nikmati 75% diskon untuk 10x bagi pengguna baru. Masukkan kode COBAGRABCAR sekarang juga dan ajak teman-temanmu keliling bandung tanp"
+      },
+      {
+        "id": "id_yudi_00046",
+        "orig": "2",
+        "suggested": null,
+        "text": "cuma Rp 7500 dapat nelpon dan SMS UNLIMITED ke sesama Indosat Ooredoo ? internetan sepuasnya 3 hari dengan paket Ramadhan Unlimited. ketik *123*88#"
+      },
+      {
+        "id": "id_yudi_00279",
+        "orig": "1",
+        "suggested": null,
+        "text": "Dapatkan Segera TIKET Murah & Promo DiTRAVEL Kmi,Untuk Penerbangan Domestik & Internasional ONLINE BOOKING 24 Jam Anda Berminat Hub:085318303276"
+      },
+      {
+        "id": "id_yudi_00036",
+        "orig": "2",
+        "suggested": null,
+        "text": "BONUS PULSA 10RB! Ayo isi pulsa min. 5rb & dapetkan bonus pulsa 10rb utk nelp ke nmr Tri! Hanya hari ini saja! Ayo buruan isi pulsa! T530"
+      }
+    ],
+    "TRANSACTION": [
+      {
+        "id": "id_yudi_00996",
+        "orig": "0",
+        "suggested": null,
+        "text": "Permintaan Anda sedang diproses. Beberapa saat lagi Paket Internet anda akan di non-aktifkan, dan akan berlaku tariff dasar internet."
+      },
+      {
+        "id": "id_yudi_00064",
+        "orig": "2",
+        "suggested": null,
+        "text": "Dptkn Free member card Larissa Aesthetic Center, disc 15% high treatment & asuransi jiwa, tiap isi ulang pulsa Rp 100rb di Galeri Indosat Jateng DIY s.d 31Des 1"
+      },
+      {
+        "id": "id_yudi_01079",
+        "orig": "0",
+        "suggested": null,
+        "text": "Terimakasih telah melakukan pengisian ulang dgn SN 41000795569091 senilai 20000."
+      },
+      {
+        "id": "id_yudi_00410",
+        "orig": "1",
+        "suggested": null,
+        "text": "Permintaan Anda akan segera kami proses untuk keyword REG GITA dari layanan PT. Hypermind"
+      },
+      {
+        "id": "id_yudi_00012",
+        "orig": "2",
+        "suggested": null,
+        "text": "Anda akan membeli Paket Gampang Internetan Rp.1250 utk Chatting Sepuasnya (BBM, WhatsApp dan Line)/1 hari.Jika setuju balas FLASH<spasi>YA kirim ke 3636 utk mel"
+      },
+      {
+        "id": "id_yudi_00011",
+        "orig": "2",
+        "suggested": null,
+        "text": "Anda akan berlangganan paket Rp. 10000 utk 150 MB 2G/3G + 250 MB 3G/90hari. Jika setuju balas FLASH<spasi>YA kirim ke 3636 utk melanjutkan. Paket diperpanjang p"
+      },
+      {
+        "id": "id_yudi_01091",
+        "orig": "0",
+        "suggested": null,
+        "text": "TOPUP pulsa Rp50000 berhasil via transfer ATM BNI kode trx 01123190427523627. Pulsa anda saat ini Rp 54205. Terima kasih telah menggunakan INDOSAT OOREDOO"
+      },
+      {
+        "id": "id_yudi_00164",
+        "orig": "2",
+        "suggested": null,
+        "text": "Paket Flash anda 10 MB utk 1 hari akan berakhir pd 08/07/2016. Tarif non paket berlaku setelah tgl tsb. Info hubungi *363#. Cek Kuota *889#."
+      },
+      {
+        "id": "id_yudi_00168",
+        "orig": "2",
+        "suggested": null,
+        "text": "Paket super Ngebut 3.5GB, 30hr, Rp25rb Anda sudah aktif. Nikmati 500MB di 12.00:24.00 & 3G di 00:00-12:00 di 3G. Diperpanjang pada 11-Mar-2013 jam 23:59. Info 8"
+      },
+      {
+        "id": "id_yudi_00901",
+        "orig": "0",
+        "suggested": null,
+        "text": "Maaf, pesan Anda belum terkirim. Silakan coba beberapa saat lagi. Terimakasih"
+      }
+    ],
+    "NEEDS_REVIEW": [
+      {
+        "id": "id_yudi_00536",
+        "orig": "1",
+        "suggested": null,
+        "text": "Terima kasih telah melakukan pengisian di counter kami WAR PUL CELL. Info: kami Melayani pembayaran tagihan PLN"
+      },
+      {
+        "id": "id_yudi_01139",
+        "orig": "0",
+        "suggested": null,
+        "text": "?? sebelumnya ga ad nulis kerudung. Kirain warna jins"
+      },
+      {
+        "id": "id_yudi_00743",
+        "orig": "0",
+        "suggested": null,
+        "text": "Eh gatau, td Bagus yang nanyain"
+      },
+      {
+        "id": "id_yudi_01123",
+        "orig": "0",
+        "suggested": null,
+        "text": "Ya ampuun pak jendral wk"
+      },
+      {
+        "id": "id_yudi_00979",
+        "orig": "0",
+        "suggested": null,
+        "text": "Pak kalau seporsi berapa ya ?"
+      },
+      {
+        "id": "id_yudi_00765",
+        "orig": "0",
+        "suggested": null,
+        "text": "Gais kyknya bapa ga akan bls sms aku. Mau gmn? Tp bapa bls sms teh tia blg dia ada dikantor dan tia jg blg kita kekantor hari ini."
+      },
+      {
+        "id": "id_yudi_01015",
+        "orig": "0",
+        "suggested": null,
+        "text": "Sama ingetin ya, ini kan web nya mau di publish, kita kan ikut develop tuh, nah di web nya ada nama kita atau jurusan ga?"
+      },
+      {
+        "id": "id_yudi_00826",
+        "orig": "0",
+        "suggested": null,
+        "text": "Jadi nanti barang yg dipilih nyesuain budget aja diantara 7 pilihan diatas~"
+      },
+      {
+        "id": "id_yudi_00254",
+        "orig": "1",
+        "suggested": null,
+        "text": "Ass. Maaf sy by hj.suri yang kemarin survey rumah anda. Mengenai harga bisa hub suami saya H. SIGIT tlp 081316005639.terima kasih"
+      },
+      {
+        "id": "id_yudi_00703",
+        "orig": "0",
+        "suggested": null,
+        "text": "cari yang seken, murah meriah kualiatasnya masih bagus kok"
+      }
+    ],
+    "HARASS": [
+      {
+        "id": "id_yudi_00374",
+        "orig": "1",
+        "suggested": null,
+        "text": "Mohon maaf, Promosi pinjaman uang tunai, syarat copy kartu kredit, bunga mulai 1,5 % bln, gratis asuransi, hub ANI 021 - 91949720 / LIA 021 - 34343669 , proses "
+      },
+      {
+        "id": "id_yudi_00362",
+        "orig": "1",
+        "suggested": null,
+        "text": "Manfaatkan segera creditCard anda utk apply pinjaman 20-250jt ada cashback berminat hub: Bintang 021-27450166.tks"
+      },
+      {
+        "id": "id_yudi_00340",
+        "orig": "1",
+        "suggested": null,
+        "text": "Kesempatan menjadi agen pulsa/ALL Operator MKIOS, Harga murah; 5=4500, 10=8500, 20=18000, 25=22000, 50=45000, Ketik GABUNG Kirim ke 087775777917"
+      },
+      {
+        "id": "id_yudi_00276",
+        "orig": "1",
+        "suggested": null,
+        "text": "Casino online terbesar, www.jayabet4.com , daftarkan diri+ Raih bonus referral+ bonus cashback sportsbook 0.25% setiap minggu. Mainkan di Smartphone dan PC anda"
+      },
+      {
+        "id": "id_yudi_00316",
+        "orig": "1",
+        "suggested": null,
+        "text": "Ingin Tahu Angka Jitu! Yg Keluar Putaran Pada Hari ini 20/01/2013 Hubungi : 082-335555-454. mbah TOGEL semarang \"Jamin 100% Tembus\" Raja SHIO (Buka 24 Jam)"
+      },
+      {
+        "id": "id_yudi_00533",
+        "orig": "1",
+        "suggested": null,
+        "text": "Sy RUDI di jambi, bgi tman2 yg sering kalah Togel saatnya kalahkan bandar hub mbah ROS 082325557768 di jamin tembus, sy sdh buktikan 4D 50jt."
+      },
+      {
+        "id": "id_yudi_00247",
+        "orig": "1",
+        "suggested": null,
+        "text": "Anda pmain togel sring kalah.mau bagi hasil. MBAH JOKO bisah mbntu anda SIO/ANGKA dari RETUWAL Berminat. Hub : MBAH JOKO.di. 085217984299 Dijamin 100% tembus"
+      },
+      {
+        "id": "id_yudi_00245",
+        "orig": "1",
+        "suggested": null,
+        "text": "ANDA MAU MENANG TOGEL 100% Tembus pasang shio 7 tunggal angka 07.31.19.43....ingat maharnya pulsa 100rb dikirim ke no 0823...xxx khusus putaran SGP SENIN"
+      },
+      {
+        "id": "id_yudi_00369",
+        "orig": "1",
+        "suggested": null,
+        "text": "Melayani fasilitas pinjaman dana tunai melalui jaminan BPKB mobil. Cover area seluruh daerah Indonesia..bunga 0,8 -1% flat /bulan, No BI Cheking, proses cepat,,"
+      },
+      {
+        "id": "id_yudi_00436",
+        "orig": "1",
+        "suggested": null,
+        "text": "PLENETCELL Cari agen U/jual pulsa All operator Harga pulsa, P5=4500 P10=8500 P20=17rb Untuk info ketik:INFO kirim ke: 085280948777 Atau Hhb CS: 082328823345"
+      }
+    ],
+    "FRAUD": [
+      {
+        "id": "id_yudi_00396",
+        "orig": "1",
+        "suggested": null,
+        "text": "Pelanggan yth,saya mba muliani operator Tri. Telah menghubungi anda tapi tidak tersambung jadi informasi ini saya sampaikan lewat SMS sebelum hadiahnya jatuh te"
+      },
+      {
+        "id": "id_yudi_00549",
+        "orig": "1",
+        "suggested": null,
+        "text": "Tolong uangnya Di transfer sekarang aja ke bank BNI: 022-741-3681. A/n FRISKA ANANDA, sms kalau sudah di Transfer, trimksi... - See more at: http://metropolitan"
+      },
+      {
+        "id": "id_yudi_00392",
+        "orig": "1",
+        "suggested": null,
+        "text": "Pelanggan Yth SimCARD Anda M-dptkan Cek Tuanai Rp:27jt Dari PT.TRICARE INDONESIA Pin Anda HDR7JN7 U/Cek Pin Kunjungi www.programundiantricare-2015.blogspot.co.i"
+      },
+      {
+        "id": "id_yudi_00474",
+        "orig": "1",
+        "suggested": null,
+        "text": "Selamat !!! Anda mndptkan cek tunai Rp.27jt dr PT.Bank Rakyat Indonesia pin anda:ijh76k79 u/info klik www.bri-untungbeliung.blogspot.com atau hub:021-3677-1839"
+      },
+      {
+        "id": "id_yudi_00354",
+        "orig": "1",
+        "suggested": null,
+        "text": "Maaf' Soal Angsuran bulan ini Pembayaran harus melalui ke bpk.Yogi, HP: 08562115779, soalnya sdh dikuasakan"
+      },
+      {
+        "id": "id_yudi_00537",
+        "orig": "1",
+        "suggested": null,
+        "text": "Terpilih dapat cek 27jt. KODE TRIPLE CEK ANDA (02599875) U/Info Klik Website www.undianbri.co.vu"
+      },
+      {
+        "id": "id_yudi_00261",
+        "orig": "1",
+        "suggested": null,
+        "text": "BELANJA ONLINE TOKO RESKY DISCON 50% BB LAPTOP SAMSUNG IPAD NOKIA DLL U/pemesanan/order ?call/sms 085322222699 kunjungi web kami di www.reskiy-shop.blogspot.com"
+      },
+      {
+        "id": "id_yudi_00509",
+        "orig": "1",
+        "suggested": null,
+        "text": "Slmt!!No anda Mendpt hadiah Rp.75jt.dari TELKOMSELpoin Diundi tadi mlm Pukul.23:30.wib Di RCTI.info Hub: 085217777509 Drs.H.SRIANTO Pengirim: +777"
+      },
+      {
+        "id": "id_yudi_00426",
+        "orig": "1",
+        "suggested": null,
+        "text": "PESAN RESMI PT.3care indonesia Mengucapkan slmt'No.simcard anda resmi meraih hadiah ke-3 dengan pin ; b8337h9 u/info hadiah klik www.pesta-hadiah3.blogspot.com"
+      },
+      {
+        "id": "id_yudi_00449",
+        "orig": "1",
+        "suggested": null,
+        "text": "PROMO BLACKBERRY BB DAKOTA 2,9jt BB Torch 2jt BB Davis 1,5jt BB Onyx 1,4jt BB Gemini 950rb Berminat hub : 085715186696 Promo terbatas*"
+      }
+    ]
+  },
+  "TXN却像广告促销": [
+    {
+      "id": "id_yudi_00002",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "2016-07-08 11:47:11.Plg Yth, sisa kuota Flash Anda 478KB. Download MyTelkomsel apps di http://tsel.me/tsel utk cek kuota&beli paket Flash atau hub *363#"
+    },
+    {
+      "id": "id_yudi_00003",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "2016-08-07 11:29:47.Plg Yth, sisa kuota Flash Anda 7160KB. Download MyTelkomsel apps di http://tsel.me/tsel utk cek kuota&beli paket Flash atau hub *363#"
+    },
+    {
+      "id": "id_yudi_00012",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Anda akan membeli Paket Gampang Internetan Rp.1250 utk Chatting Sepuasnya (BBM, WhatsApp dan Line)/1 hari.Jika setuju balas FLASH<spasi>YA kirim ke 3636 utk melanjutkan.Tunggu SMS "
+    },
+    {
+      "id": "id_yudi_00014",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Anda akan mengaktifkan Paket BBM Gratis berlaku 30 hari dari pertama kali aktivasi. Ketik FLASH (spasi) YA untuk melanjutkan"
+    },
+    {
+      "id": "id_yudi_00095",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Isi ulang Rp50000.0 berhasil. Kode transaksi 99100827288792. Cek *123*888# untuk promo RABU RAWIT & JUMAT BAIK buat semua Pelanggan AXIS!"
+    },
+    {
+      "id": "id_yudi_00116",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Loopers, PaketTelkomselFlash Rp.50000 utk 600 MB & tambahan 600 MB di 3G + 11 GB(00-12)(berlaku 30 hari) tlh diaktifkan. Paket otomatis diperpanjang pd akhir masa aktif jika kamu b"
+    },
+    {
+      "id": "id_yudi_00159",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Paket 1.5GB berhasil diaktifkan. Restart hape kamu utk dpt menikmati kuota internetan selama 90hari. Cek sisa kuota di *557*8#"
+    },
+    {
+      "id": "id_yudi_00160",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Paket Anda sudah di non-aktifkan atas permintaan Anda. Penggunaan Internet anda akan di kenakan Tariff Dasar Internet sesuai skema tariff kartu Anda. Hubungi *363# untuk aktifkan P"
+    },
+    {
+      "id": "id_yudi_00161",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "PAKET BRONET 24JAM 15MB 1hr sudah aktif. Nikmati 15MB berlaku di 00-23.59 aktif s.d 28-08-2016. Promo AXIS lainnya, telp *123#. Info838"
+    },
+    {
+      "id": "id_yudi_00163",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Paket BRONET 2GB 60hr 24jam sudah aktif. Nikmati internet 2GB berlaku hingga jam 23.59 aktif s.d 27-10-2016. Promo AXIS lainnya, telp *123#. Info838"
+    },
+    {
+      "id": "id_yudi_00197",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Selamat Paket BBM Gratis Anda telah diaktifkan. Paket BBM ini berlaku untuk 30 hari"
+    },
+    {
+      "id": "id_yudi_00198",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Selamat Paket Flash 10 MB (1 hari) Rp.2500 telah diaktifkan, berlaku s/d tgl 07/08/2016 pk. 23:59 WIB. Paket langsung diperpanjang pada akhir masa aktif paket dengan tarif sesuai l"
+    },
+    {
+      "id": "id_yudi_00201",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Selamat! Anda sudah mengaktifkan INSTINK utk dpt info menarik dari Telkomsel. Info berhenti program:*600*600#. CS:133/188"
+    },
+    {
+      "id": "id_yudi_00204",
+      "label": "TRANSACTION",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Selamat, Anda telah membeli Paket Combo Kenyang  Internet As. Cek bonus di *889#."
+    },
+    {
+      "id": "id_yudi_00896",
+      "label": "TRANSACTION",
+      "orig": "0",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Maaf Anda tidak bisa mengaktifkan paket FLASH ini karena nomor anda tidak terdaftar"
+    }
+  ],
+  "AD却像假中奖诈骗": [
+    {
+      "id": "id_yudi_00018",
+      "label": "AD",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Anda tlh menukarkan poin 95 poin, Tukarkan terus poinnya siapa tahu anda pemenang hadih LG G3 32gb, pemenang adalah yang menukarkan poin tertinggi s/d 30 November 15"
+    },
+    {
+      "id": "id_yudi_00065",
+      "label": "AD",
+      "orig": "2",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Dptkn kesempatan raih hadiah utama mobil Alphard dg cara tukar 500 poin senyum Anda dg 1 kupon Undian s.d tgl 20Jun13,ketik Undian Jmlh Poin ke 7887(Rp25)"
+    }
+  ],
+  "疑似假中奖未标FRAUD": [
+    {
+      "id": "id_yudi_00328",
+      "label": "AD",
+      "orig": "1",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "ISI PULSA lebih untung di MYVPLUS! selain dpt PULSA kamu bisa lsg dpt voucher diskon, dpt hadiah dan juga dpt point. Yuk klik : http://bit.ly/Myvplus"
+    }
+  ],
+  "原标诈骗却标成事务": [
+    {
+      "id": "id_yudi_00329",
+      "label": "TRANSACTION",
+      "orig": "1",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Isi ulang Pulsa Rp.5000 regular oleh HD COM 4 SUKSES pada 09/02 12:34.Ref:763179369.GRATIS PULSA sd 250rb hg 7Hr 7Mlm.Ktk:GRATIS krm ke 123"
+    },
+    {
+      "id": "id_yudi_00330",
+      "label": "TRANSACTION",
+      "orig": "1",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Isi ulang Pulsa Rp.5000 Regular oleh PUTERA SUKSES pada 11/02 19:57.Ref:78330280.GRATIS PULSA sd 250rb hg 7Hr 7Mlm.Ktk:GRATIS krm ke 123"
+    },
+    {
+      "id": "id_yudi_00410",
+      "label": "TRANSACTION",
+      "orig": "1",
+      "suggested": null,
+      "annotator": "audit_fixpass_id",
+      "text": "Permintaan Anda akan segera kami proses untuk keyword REG GITA dari layanan PT. Hypermind"
+    }
+  ]
+}

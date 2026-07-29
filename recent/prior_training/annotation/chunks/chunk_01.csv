@@ -1,0 +1,301 @@
+id,text,language,source,uci_binary,label,annotator,template_group,notes
+uci_00300,Need a coffee run tomo?Can't believe it's that time of week already,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dc7ff2e4dccb,无法明确归类，内容不确定或不属于以上四类
+uci_00301,"Awesome, I remember the last time we got somebody high for the first time with diesel :V",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9216d7ace710,无法明确归类，内容不确定或不属于以上四类
+uci_00302,"Shit that is really shocking and scary, cant imagine for a second. Def up for night out. Do u think there is somewhere i could crash for night, save on taxi?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,116828f2f9b5,无法明确归类，内容不确定或不属于以上四类
+uci_00303,Oh and by the way you do have more food in your fridge! Want to go out for a meal tonight?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b1e142e9cc56,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00304,He is a womdarfull actor,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,77950a160ab1,无法明确归类，内容不确定或不属于以上四类
+uci_00305,"SMS. ac Blind Date 4U!: Rodds1 is 21/m from Aberdeen, United Kingdom. Check Him out http://img. sms. ac/W/icmb3cktz8r7!-4 no Blind Dates send HIDE",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,7d5d0e3cb160,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00306,Yup... From what i remb... I think should be can book...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f773016fc8e6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00307,Jos ask if u wana meet up?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f11226c4508c,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00308,Lol yes. Our friendship is hanging on a thread cause u won't buy stuff.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,37ccb4ff2c2f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00309,"TheMob> Check out our newest selection of content, Games, Tones, Gossip, babes and sport, Keep your mobile fit and funky text WAP to 82468",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,d9919dcda919,无法明确归类，内容不确定或不属于以上四类
+uci_00310,Where are the garage keys? They aren't on the bookshelf,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7855ff7ba28c,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00311,Today is ACCEPT DAY..U Accept me as? Brother Sister Lover Dear1 Best1 Clos1 Lvblefrnd Jstfrnd Cutefrnd Lifpartnr Belovd Swtheart Bstfrnd No rply means enemy,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,43dcff411bd8,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00312,"Think ur smart ? Win ¡ê200 this week in our weekly quiz, text PLAY to 85222 now!T&Cs WinnersClub PO BOX 84, M26 3UZ. 16+. GBP1.50/week",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,cfe969a81d01,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00313,He says he'll give me a call when his friend's got the money but that he's definitely buying before the end of the week,en,uci_sms_spam_collection_v1,ham,HARASS,,42f571b88ee2,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00314,"Hi the way I was with u 2day, is the normal way&this is the real me. UR unique&I hope I know u 4 the rest of mylife. Hope u find wot was lost.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,11ce8f20da29,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00315,You made my day. Do have a great day too.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8306cba6af85,无法明确归类，内容不确定或不属于以上四类
+uci_00316,K.k:)advance happy pongal.,en,uci_sms_spam_collection_v1,ham,AD,,be3ef819634a,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00317,"Hmmm... Guess we can go 4 kb n power yoga... Haha, dunno we can tahan power yoga anot... Thk got lo oso, forgot liao...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1b643e91dedf,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00318,"Not really dude, have no friends i'm afraid :(",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ed049fbf9a67,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00319,December only! Had your mobile 11mths+? You are entitled to update to the latest colour camera mobile for Free! Call The Mobile Update Co FREE on 08002986906,en,uci_sms_spam_collection_v1,spam,HARASS,,9a321c2fcc76,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00320,"Coffee cake, i guess...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6b6bbbabe3c2,无法明确归类，内容不确定或不属于以上四类
+uci_00321,"Merry Christmas to you too babe, i love ya *kisses*",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,532612f5a17c,无法明确归类，内容不确定或不属于以上四类
+uci_00322,Hey... Why dont we just go watch x men and have lunch... Haha,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,310e73177e8e,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00323,cud u tell ppl im gona b a bit l8 cos 2 buses hav gon past cos they were full & im still waitin 4 1. Pete x,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0fecaf7b18f3,无法明确归类，内容不确定或不属于以上四类
+uci_00324,That would be great. We'll be at the Guild. Could meet on Bristol road or somewhere - will get in touch over weekend. Our plans take flight! Have a good week,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9523b3db9019,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00325,No problem. How are you doing?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0579ac95e090,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00326,No calls..messages..missed calls,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,816670b22ffb,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00327,Hi da:)how is the todays class?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c1d1609bc534,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00328,"I'd say that's a good sign but, well, you know my track record at reading women",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3c08f0a1eebe,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00329,"Cool, text me when you're parked",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b787407737e9,无法明确归类，内容不确定或不属于以上四类
+uci_00330,I'm reading the text i just sent you. Its meant to be a joke. So read it in that light,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,39215601f93e,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00331,K.k:)apo k.good movie.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7b8bbe3d6c14,无法明确归类，内容不确定或不属于以上四类
+uci_00332,Maybe i could get book out tomo then return it immediately ..? Or something.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1117714b0ed0,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00333,Call Germany for only 1 pence per minute! Call from a fixed line via access number 0844 861 85 85. No prepayment. Direct access!,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,ce11830da3db,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00334,Any chance you might have had with me evaporated as soon as you violated my privacy by stealing my phone number from your employer's paperwork. Not cool at all. Please do not contact me again or I will report you to your supervisor.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5d27bc1f3738,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00335,Valentines Day Special! Win over ¡ê1000 in our quiz and take your partner on the trip of a lifetime! Send GO to 83600 now. 150p/msg rcvd. CustCare:08718720201.,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,71595565c77a,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00336,"Ta-Daaaaa! I am home babe, are you still up ?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9995b1cdd096,无法明确归类，内容不确定或不属于以上四类
+uci_00337,Cool. So how come you havent been wined and dined before?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4f844235a6cd,无法明确归类，内容不确定或不属于以上四类
+uci_00338,Just sleeping..and surfing,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0d3c95a0235a,无法明确归类，内容不确定或不属于以上四类
+uci_00339,"Sorry, I'll call later",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d5081f7715ce,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00340,U calling me right? Call my hand phone...,en,uci_sms_spam_collection_v1,ham,HARASS,,0ecd5fee3832,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00341,Ok that's great thanx a lot.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fc06ce007dec,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00342,I take it the post has come then! You must have 1000s of texts now! Happy reading. My one from wiv hello caroline at the end is my favourite. Bless him,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a88db8348f52,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00343,Where u been hiding stranger?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bdd9d81c973d,无法明确归类，内容不确定或不属于以上四类
+uci_00344,Am not interested to do like that.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d8d6e532caa7,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00345,My sister cleared two round in birla soft yesterday.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3547c45870c6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00346,Gudnite....tc...practice going on,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,555aef7c613a,无法明确归类，内容不确定或不属于以上四类
+uci_00347,Dis is yijue. I jus saw ur mail. In case huiming havent sent u my num. Dis is my num.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ae7bcc91f7ac,无法明确归类，内容不确定或不属于以上四类
+uci_00348,One small prestige problem now.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f2f380b05812,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00349,Fancy a shag? I do.Interested? sextextuk.com txt XXUK SUZY to 69876. Txts cost 1.50 per msg. TnCs on website. X,en,uci_sms_spam_collection_v1,spam,HARASS,,170ae9b37fa9,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00350,Just checking in on you. Really do miss seeing Jeremiah. Do have a great month,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b2b24598e68c,无法明确归类，内容不确定或不属于以上四类
+uci_00351,"Nah can't help you there, I've never had an iphone",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,86f34fe98100,无法明确归类，内容不确定或不属于以上四类
+uci_00352,If you're not in my car in an hour and a half I'm going apeshit,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c445cc866f8f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00353,"TODAY is Sorry day.! If ever i was angry with you, if ever i misbehaved or hurt you? plz plz JUST SLAP URSELF Bcoz, Its ur fault, I'm basically GOOD",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ab9a08c8c51c,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00354,Yo you guys ever figure out how much we need for alcohol? Jay and I are trying to figure out how much we can safely spend on weed,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e0803565e654,无法明确归类，内容不确定或不属于以上四类
+uci_00355,&lt;#&gt; ISH MINUTES WAS 5 MINUTES AGO. WTF.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0e2d104edbf0,无法明确归类，内容不确定或不属于以上四类
+uci_00356,"Thank You for calling.Forgot to say Happy Onam to you Sirji.I am fine here and remembered you when i met an insurance person.Meet You in Qatar Insha Allah.Rakhesh, ex Tata AIG who joined TISSCO,Tayseer.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d518c8b93b37,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00357,Congratulations ur awarded 500 of CD vouchers or 125gift guaranteed & Free entry 2 100 wkly draw txt MUSIC to 87066 TnCs www.Ldew.com1win150ppmx3age16,en,uci_sms_spam_collection_v1,spam,FRAUD,,6094ceb44934,虚假中奖/获奖信息，属于诈骗
+uci_00358,Ur cash-balance is currently 500 pounds - to maximize ur cash-in now send CASH to 86688 only 150p/msg. CC: 08708800282 HG/Suite342/2Lands Row/W1J6HL,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,30216cebbdfb,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00359,"I'm an actor. When i work, i work in the evening and sleep late. Since i'm unemployed at the moment, i ALWAYS sleep late. When you're unemployed, every day is saturday.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0150b25ec293,无法明确归类，内容不确定或不属于以上四类
+uci_00360,"Hello! Just got here, st andrews-boy its a long way! Its cold. I will keep you posted",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,851803787ab7,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00361,Ha ha cool cool chikku chikku:-):-DB-),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,55c154ee14b1,无法明确归类，内容不确定或不属于以上四类
+uci_00362,Oh ok no prob..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,20b177b835ff,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00363,Check audrey's status right now,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f58518f7d67d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00364,Busy here. Trying to finish for new year. I am looking forward to finally meeting you...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d61c36c92abe,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00365,"Good afternoon sunshine! How dawns that day ? Are we refreshed and happy to be alive? Do we breathe in the air and smile ? I think of you, my love ... As always",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4390d6674346,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00366,Well i know Z will take care of me. So no worries.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f2698426a731,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00367,"Update_Now - Xmas Offer! Latest Motorola, SonyEricsson & Nokia & FREE Bluetooth! Double Mins & 1000 Txt on Orange. Call MobileUpd8 on 08000839402 or call2optout/F4Q=",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,276e8068d1fa,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00368,Here is your discount code RP176781. To stop further messages reply stop. www.regalportfolio.co.uk. Customer Services 08717205546,en,uci_sms_spam_collection_v1,spam,FRAUD,,5d286bc25e80,冒充客服/官方机构，属于诈骗
+uci_00369,Wat uniform? In where get?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,521f90019c90,无法明确归类，内容不确定或不属于以上四类
+uci_00370,"Cool, text me when you're ready",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,505be239fc45,无法明确归类，内容不确定或不属于以上四类
+uci_00371,"Hello my boytoy ... Geeee I miss you already and I just woke up. I wish you were here in bed with me, cuddling me. I love you ...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,eb72875de554,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00372,I will spoil you in bed as well :),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9bec91b1cb33,无法明确归类，内容不确定或不属于以上四类
+uci_00373,I'm going for bath will msg you next  &lt;#&gt;  min..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9828a3969471,无法明确归类，内容不确定或不属于以上四类
+uci_00374,I cant keep talking to people if am not sure i can pay them if they agree to price. So pls tell me what you want to really buy and how much you are willing to pay,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9bfd7c88737b,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00375,"Thanks for your Ringtone Order, Reference T91. You will be charged GBP 4 per week. You can unsubscribe at anytime by calling customer services on 09057039994",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,37f1ea74b925,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00376,Can you say what happen,en,uci_sms_spam_collection_v1,ham,AD,,30b12fff1ff3,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00377,You could have seen me..i did't recognise you Face.:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,eb78d854d13a,无法明确归类，内容不确定或不属于以上四类
+uci_00378,Well there's not a lot of things happening in Lindsay on New years *sighs* Some bars in Ptbo and the blue heron has something going,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,379b91826a7b,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00379,Keep my payasam there if rinu brings,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7c9cd309c1e7,无法明确归类，内容不确定或不属于以上四类
+uci_00380,I taught that Ranjith sir called me. So only i sms like that. Becaus hes verifying about project. Prabu told today so only pa dont mistake me..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6ef30e9c8073,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00381,"I guess that's why you re worried. You must know that there's a way the body repairs itself. And i'm quite sure you shouldn't worry. We'll take it slow. First the tests, they will guide when your ovulation is then just relax. Nothing you've said is a reason to worry but i.ll keep on followin you up.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,127ebddab53f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00382,"Yeah sure, give me a couple minutes to track down my wallet",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,04ca51538cf1,无法明确归类，内容不确定或不属于以上四类
+uci_00383,Hey leave it. not a big deal:-) take care.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3349aa155db0,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00384,Hey i will be late ah... Meet you at 945+,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b6e78ad2790d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00385,"Double mins and txts 4 6months FREE Bluetooth on Orange. Available on Sony, Nokia Motorola phones. Call MobileUpd8 on 08000839402 or call2optout/N9DX",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,f3f38a15efff,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00386,It took Mr owl 3 licks,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3cde1ee28e91,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00387,Customer place i will call you.,en,uci_sms_spam_collection_v1,ham,HARASS,,72d9b87a057e,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00388,Mm that time you dont like fun,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,52cd17a76ce0,无法明确归类，内容不确定或不属于以上四类
+uci_00389,4mths half price Orange line rental & latest camera phones 4 FREE. Had your phone 11mths ? Call MobilesDirect free on 08000938767 to update now! or2stoptxt,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,29d3faf35d22,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00390,Yup having my lunch buffet now.. U eat already?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ceca8295c8bd,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00391,Huh so late... Fr dinner?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a01828bb89c7,无法明确归类，内容不确定或不属于以上四类
+uci_00392,Hey so this sat are we going for the intro pilates only? Or the kickboxing too?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1445ea4b9ce1,无法明确归类，内容不确定或不属于以上四类
+uci_00393,Morning only i can ok.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2615701b28fa,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00394,Yes i think so. I am in office but my lap is in room i think thats on for the last few days. I didnt shut that down,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4d11bbfd4cc5,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00395,Pick you up bout 7.30ish? What time are  and that going?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6d5ce72e13ca,无法明确归类，内容不确定或不属于以上四类
+uci_00396,From here after The performance award is calculated every two month.not for current one month period..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,74f4bdb01f4c,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00397,Was actually sleeping and still might when u call back. So a text is gr8. You rock sis. Will send u a text wen i wake.,en,uci_sms_spam_collection_v1,ham,HARASS,,d7bc1246af29,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00398,"You are always putting your business out there. You put pictures of your ass on facebook. You are one of the most open people i've ever met. Why would i think a picture of your room would hurt you, make you feel violated.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,84a9289365d8,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00399,"Good evening Sir, Al Salam Wahleykkum.sharing a happy news.By the grace of God, i got an offer from Tayseer,TISSCO and i joined.Hope you are fine.Inshah Allah,meet you sometime.Rakhesh,visitor from India.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,27837728d58a,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00400,Hmmm...k...but i want to change the field quickly da:-)i wanna get system administrator or network administrator..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c9bcf1089b9e,无法明确归类，内容不确定或不属于以上四类
+uci_00401,"FREE RINGTONE text FIRST to 87131 for a poly or text GET to 87131 for a true tone! Help? 0845 2814032 16 after 1st free, tones are 3x¡ê150pw to e¡ênd txt stop",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,7f4788889589,无法明确归类，内容不确定或不属于以上四类
+uci_00402,Dear how is chechi. Did you talk to her,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,da48a7f4f658,无法明确归类，内容不确定或不属于以上四类
+uci_00403,The hair cream has not been shipped.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8ef3297adb5f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00404,None of that's happening til you get here though,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b89307b07e21,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00405,"Yep, the great loxahatchee xmas tree burning of  &lt;#&gt;  starts in an hour",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,06e9a15167bb,无法明确归类，内容不确定或不属于以上四类
+uci_00406,"Haha get used to driving to usf man, I know a lot of stoners",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,88cb0e6647aa,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00407,All was well until slightly disastrous class this pm with my fav darlings! Hope day off ok. Coffee wld be good as can't stay late tomorrow. Same time + place as always?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dab147f53afe,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00408,Hello! Good week? Fancy a drink or something later?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7b9f977e1840,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00409,Headin towards busetop,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e1d3e98077c3,无法明确归类，内容不确定或不属于以上四类
+uci_00410,Message:some text missing* Sender:Name Missing* *Number Missing *Sent:Date missing *Missing U a lot thats y everything is missing sent via fullonsms.com,en,uci_sms_spam_collection_v1,ham,HARASS,,2ecb9bbcdeb3,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00411,Come by our room at some point so we can iron out the plan for this weekend,en,uci_sms_spam_collection_v1,ham,AD,,3ce8f58cd154,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00412,Cos i want it to be your thing,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c9fe2c411dca,无法明确归类，内容不确定或不属于以上四类
+uci_00413,"Okies... I'll go yan jiu too... We can skip ard oso, go cine den go mrt one, blah blah blah...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d1c9ee268530,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00414,Bring home some Wendy =D,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bd4c71c69106,无法明确归类，内容不确定或不属于以上四类
+uci_00415,100 dating service cal;l 09064012103 box334sk38ch,en,uci_sms_spam_collection_v1,spam,AD,,8a9fd713378f,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00416,Whatsup there. Dont u want to sleep,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d5df1c86fcc5,无法明确归类，内容不确定或不属于以上四类
+uci_00417,Alright i have a new goal now,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,756cfc087a51,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00418,FREE entry into our ¡ê250 weekly competition just text the word WIN to 80086 NOW. 18 T&C www.txttowin.co.uk,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,4ed7037bc2c1,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00419,"Alright, I'll head out in a few minutes, text me where to meet you",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3407dfefb2db,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00420,Send a logo 2 ur lover - 2 names joined by a heart. Txt LOVE NAME1 NAME2 MOBNO eg LOVE ADAM EVE 07123456789 to 87077 Yahoo! POBox36504W45WQ TxtNO 4 no ads 150p,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,a69268ca5044,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00421,Yes:)from last week itself i'm taking live call.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6900be5edb51,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00422,Someone has contacted our dating service and entered your phone because they fancy you! To find out who it is call from a landline 09111032124 . PoBox12n146tf150p,en,uci_sms_spam_collection_v1,spam,AD,,2a3988af97e1,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00423,Siva is in hostel aha:-.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,50dbbfa8e6d9,无法明确归类，内容不确定或不属于以上四类
+uci_00424,URGENT! Your Mobile number has been awarded with a ¡ê2000 prize GUARANTEED. Call 09058094455 from land line. Claim 3030. Valid 12hrs only,en,uci_sms_spam_collection_v1,spam,FRAUD,,97d9641a0632,虚假中奖/获奖信息，属于诈骗
+uci_00425,Send this to ur friends and receive something about ur voice..... How is my speaking expression? 1.childish 2.naughty 3.Sentiment 4.rowdy 5.ful of attitude 6.romantic 7.shy 8.Attractive 9.funny  &lt;#&gt; .irritating  &lt;#&gt; .lovable. reply me..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6c707488995d,无法明确归类，内容不确定或不属于以上四类
+uci_00426,Ok. She'll be ok. I guess,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,014d1a0bece4,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00427,aathi..where are you dear..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cf5db01a5669,无法明确归类，内容不确定或不属于以上四类
+uci_00428,Any pain on urination any thing else?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dfc8f6883652,无法明确归类，内容不确定或不属于以上四类
+uci_00429,7 at esplanade.. Do ¨¹ mind giving me a lift cos i got no car today..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,be91c48809e6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00430,I wnt to buy a BMW car urgently..its vry urgent.but hv a shortage of  &lt;#&gt; Lacs.there is no source to arng dis amt. &lt;#&gt; lacs..thats my prob,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,91d2e9075b42,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00431,At home watching tv lor.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,93e1ccb211f0,无法明确归类，内容不确定或不属于以上四类
+uci_00432,Does she usually take fifteen fucking minutes to respond to a yes or no question,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4b199d8bf5e5,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00433,Congrats! Nokia 3650 video camera phone is your Call 09066382422 Calls cost 150ppm Ave call 3mins vary from mobiles 16+ Close 300603 post BCM4284 Ldn WC1N3XX,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,4bf59461f7a9,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00434,Booked ticket for pongal?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,30181ebab37f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00435,You available now? I'm like right around hillsborough &amp;  &lt;#&gt; th,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d114806560f4,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00436,The message sent is askin for  &lt;#&gt; dollars. Shoul i pay  &lt;#&gt;  or  &lt;#&gt; ?,en,uci_sms_spam_collection_v1,ham,HARASS,,393ac9476c4a,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00437,"Ask g or iouri, I've told the story like ten times already",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,91ea68ae57b8,无法明确归类，内容不确定或不属于以上四类
+uci_00438,How long does applebees fucking take,en,uci_sms_spam_collection_v1,ham,AD,,c3b895f5b7c7,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00439,"Hi hope u get this txt~journey hasnt been gd,now about 50 mins late I think.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7a2bb3558c26,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00440,But i have to. I like to have love and arrange.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b84544e360b2,无法明确归类，内容不确定或不属于以上四类
+uci_00441,Yes..he is really great..bhaji told kallis best cricketer after sachin in world:).very tough to get out.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0f5f3fcabd05,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00442,You were supposed to wake ME up &gt;:(,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,88b34ebe0210,无法明确归类，内容不确定或不属于以上四类
+uci_00443,Oic... I saw him too but i tot he din c me... I found a group liao...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6872efe68cd8,无法明确归类，内容不确定或不属于以上四类
+uci_00444,"Sorry, I'll call later",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d5081f7715ce,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00445,"""HEY HEY WERETHE MONKEESPEOPLE SAY WE MONKEYAROUND! HOWDY GORGEOUS, HOWU DOIN? FOUNDURSELF A JOBYET SAUSAGE?LOVE JEN XXX""",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,061568a6bebb,无法明确归类，内容不确定或不属于以上四类
+uci_00446,"Sorry, my battery died, I can come by but I'm only getting a gram for now, where's your place?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ff78278debad,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00447,"Well done, blimey, exercise, yeah, i kinda remember wot that is, hmm.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6719641c595a,无法明确归类，内容不确定或不属于以上四类
+uci_00448,I wont get concentration dear you know you are my mind and everything :-),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,55f37e76038d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00449,LOL ... Have you made plans for new years?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,639a1a5fbedf,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00450,10 min later k...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,df0e908cf1cb,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00451,hanks lotsly!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c5be5ed582ee,无法明确归类，内容不确定或不属于以上四类
+uci_00452,Thanks for this hope you had a good day today,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,df91b7d25d22,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00453,K:)k:)what are detail you want to transfer?acc no enough?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a20c29b8cb7d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00454,Ok i will tell her to stay out. Yeah its been tough but we are optimistic things will improve this month.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0ed07ab548d7,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00455,"Loan for any purpose ¡ê500 - ¡ê75,000. Homeowners + Tenants welcome. Have you been previously refused? We can still help. Call Free 0800 1956669 or text back 'help'",en,uci_sms_spam_collection_v1,spam,HARASS,,5cb9262d83ee,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00456,Si si. I think ill go make those oreo truffles.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,15e9f337c70c,无法明确归类，内容不确定或不属于以上四类
+uci_00457,"LOOK AT AMY URE A BEAUTIFUL, INTELLIGENT WOMAN AND I LIKE U A LOT. I KNOW U DON?T LIKE ME LIKE THAT SO DON?T WORRY.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fde192d11f99,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00458,I hope you that's the result of being consistently intelligent and kind. Start asking him about practicum links and keep your ears open and all the best. ttyl,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6772aced56a3,无法明确归类，内容不确定或不属于以上四类
+uci_00459,"1.20 that call cost. Which i guess isnt bad. Miss ya, need ya, want ya, love ya",en,uci_sms_spam_collection_v1,ham,HARASS,,66c303f598e8,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00460,Going thru a very different feeling.wavering decisions and coping up with the same is the same individual.time will heal everything i believe.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,071aea0ed0b4,无法明确归类，内容不确定或不属于以上四类
+uci_00461,Where did u go? My phone is gonna die you have to stay in here,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cc69bf034ec1,无法明确归类，内容不确定或不属于以上四类
+uci_00462,Great. Never been better. Each day gives even more reasons to thank God,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8a164d609f95,无法明确归类，内容不确定或不属于以上四类
+uci_00463,"UpgrdCentre Orange customer, you may now claim your FREE CAMERA PHONE upgrade for your loyalty. Call now on 0207 153 9153. Offer ends 26th July. T&C's apply. Opt-out available",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,c68a8c1e1313,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00464,"Sorry, I'll call later ok bye",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fb3c9b5fe223,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00465,Ok i am on the way to railway,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a3d5d2da97a3,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00466,great princess! I love giving and receiving oral. Doggy style is my fave position. How about you? I enjoy making love  &lt;#&gt;  times per night :),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3348035094a9,无法明确归类，内容不确定或不属于以上四类
+uci_00467,They don't put that stuff on the roads to keep it from getting slippery over there?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,095f9a65c3b7,无法明确归类，内容不确定或不属于以上四类
+uci_00468,When are you going to ride your bike?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,48f1cef4bee8,无法明确归类，内容不确定或不属于以上四类
+uci_00469,"Yup, no need. I'll jus wait 4 e rain 2 stop.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,46e82c127e87,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00470,There are many company. Tell me the language.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e2a1136c959d,无法明确归类，内容不确定或不属于以上四类
+uci_00471,okmail: Dear Dave this is your final notice to collect your 4* Tenerife Holiday or #5000 CASH award! Call 09061743806 from landline. TCs SAE Box326 CW25WX 150ppm,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,468624a1ca38,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00472,"How long has it been since you screamed, princess?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,74d3aaca0688,无法明确归类，内容不确定或不属于以上四类
+uci_00473,"Nothing. I meant that once the money enters your account here, the bank will remove its flat rate. Someone transfered  &lt;#&gt;  to my account and  &lt;#&gt; dollars got removed. So the banks differ and charges also differ.be sure you trust the 9ja person you are sending account details to cos...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0149deef3be6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00474,Want 2 get laid tonight? Want real Dogging locations sent direct 2 ur Mob? Join the UK's largest Dogging Network by txting MOAN to 69888Nyt. ec2a. 31p.msg@150p,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,29a6c0e35ef9,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00475,Nice line said by a broken heart- Plz don't cum 1 more times infront of me... Other wise once again I ll trust U... Good 9t:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6a8baf27ec37,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00476,Ok I'm gonna head up to usf in like fifteen minutes,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a20045743230,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00477,Love you aathi..love u lot..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2b5eb7b6cae1,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00478,Tension ah?what machi?any problem?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1505c92429f2,无法明确归类，内容不确定或不属于以上四类
+uci_00479,"K, can I pick up another 8th when you're done?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e12634b3e35f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00480,When're you guys getting back? G said you were thinking about not staying for mcr,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3e832b3401f3,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00481,"Almost there, see u in a sec",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5e0465c60d2a,无法明确归类，内容不确定或不属于以上四类
+uci_00482,"Yo carlos, a few friends are already asking me about you, you working at all this weekend?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ae69ec99aae5,无法明确归类，内容不确定或不属于以上四类
+uci_00483,Watching tv lor...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fff8ceb5f5fc,无法明确归类，内容不确定或不属于以上四类
+uci_00484,Thank you baby! I cant wait to taste the real thing...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,86e438ab1ce1,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00485,You should change your fb to jaykwon thuglyfe falconerf,en,uci_sms_spam_collection_v1,ham,FRAUD,,42fbf5bdd372,虚假中奖/获奖信息，属于诈骗
+uci_00486,If we win its really no 1 side for long time.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6692967ccf8f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00487,"FREE MESSAGE Activate your 500 FREE Text Messages by replying to this message with the word FREE For terms & conditions, visit www.07781482378.com",en,uci_sms_spam_collection_v1,spam,HARASS,,0ba0618a4615,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00488,Dear reached railway. What happen to you,en,uci_sms_spam_collection_v1,ham,AD,,b5a84f95db7e,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00489,"Depends on quality. If you want the type i sent boye, faded glory, then about 6. If you want ralphs maybe 2",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,592751c29318,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00490,I think i've fixed it can you send a test message?,en,uci_sms_spam_collection_v1,ham,HARASS,,bca228ca8522,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00491,"Sorry man my account's dry or I would, if you want we could trade back half or I could buy some shit with my credit card",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,80c1b6914a7b,无法明确归类，内容不确定或不属于以上四类
+uci_00492,"Congrats! 1 year special cinema pass for 2 is yours. call 09061209465 now! C Suprman V, Matrix3, StarWars3, etc all 4 FREE! bx420-ip4-5we. 150pm. Dont miss out!",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,eedcb588d9de,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00493,"Sorry,in meeting I'll call later",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b8dada72c4b3,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00494,What class of  &lt;#&gt;  reunion?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,35f0066ecf57,无法明确归类，内容不确定或不属于以上四类
+uci_00495,Are you free now?can i call now?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dfa0124d72a2,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00496,Got meh... When?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f5630aee1eec,无法明确归类，内容不确定或不属于以上四类
+uci_00497,Nope... Think i will go for it on monday... Sorry i replied so late,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2f38f1d55435,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00498,Some of them told accenture is not confirm. Is it true.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,12304d7a8890,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00499,"Kate jackson rec center before 7ish, right?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d8571a094435,无法明确归类，内容不确定或不属于以上四类
+uci_00500,Dear i have reache room,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fce1fa4b8f66,无法明确归类，内容不确定或不属于以上四类
+uci_00501,"Fighting with the world is easy, u either win or lose bt fightng with some1 who is close to u is dificult if u lose - u lose if u win - u still lose.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,19b0b3d007e1,无法明确归类，内容不确定或不属于以上四类
+uci_00502,When can ¨¹ come out?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,631a4689d22b,无法明确归类，内容不确定或不属于以上四类
+uci_00503,Check with nuerologist.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,477b334270ba,无法明确归类，内容不确定或不属于以上四类
+uci_00504,Lolnice. I went from a fish to ..water.?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5c2cee681dc0,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00505,+123 Congratulations - in this week's competition draw u have won the ¡ê1450 prize to claim just call 09050002311 b4280703. T&Cs/stop SMS 08718727868. Over 18 only 150ppm,en,uci_sms_spam_collection_v1,spam,FRAUD,,ffb7b9796e09,虚假中奖/获奖信息，属于诈骗
+uci_00506,No it's waiting in e car dat's bored wat. Cos wait outside got nothing 2 do. At home can do my stuff or watch tv wat.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b1b8e8e4570d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00507,"Maybe westshore or hyde park village, the place near my house?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,745a6ebf6284,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00508,You should know now. So how's anthony. Are you bringing money. I've school fees to pay and rent and stuff like that. Thats why i need your help. A friend in need....|,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fc5413a3bfcc,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00509,What's the significance?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,660fbcec1439,无法明确归类，内容不确定或不属于以上四类
+uci_00510,Your opinion about me? 1. Over 2. Jada 3. Kusruthi 4. Lovable 5. Silent 6. Spl character 7. Not matured 8. Stylish 9. Simple Pls reply..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c12d6b402956,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00511,"8 at the latest, g's still there if you can scrounge up some ammo and want to give the new ak a try",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,77365446fed6,无法明确归类，内容不确定或不属于以上四类
+uci_00512,Prabha..i'm soryda..realy..frm heart i'm sory,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,99e5a0efad24,无法明确归类，内容不确定或不属于以上四类
+uci_00513,Lol ok your forgiven :),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f93944bef247,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00514,No..jst change tat only..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,84cb42baa4fb,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00515,"You are guaranteed the latest Nokia Phone, a 40GB iPod MP3 player or a ¡ê500 prize! Txt word: COLLECT to No: 83355! IBHltd LdnW15H 150p/Mtmsgrcvd18+",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,b77dca8a9a14,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00516,S:)no competition for him.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cc25f2af45c1,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00517,Boltblue tones for 150p Reply POLY# or MONO# eg POLY3 1. Cha Cha Slide 2. Yeah 3. Slow Jamz 6. Toxic 8. Come With Me or STOP 4 more tones txt MORE,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,4988a6810f15,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00518,Your credits have been topped up for http://www.bubbletext.com Your renewal Pin is tgxxrz,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,fa8dd2e2899b,无法明确归类，内容不确定或不属于以上四类
+uci_00519,"That way transport is less problematic than on sat night. By the way, if u want to ask  n  to join my bday, feel free. But need to know definite nos as booking on fri.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c3e6ee1ad8ea,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00520,Usually the person is unconscious that's in children but in adults they may just behave abnormally. I.ll call you now,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6b1d752b866a,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00521,But that's on ebay it might be less elsewhere.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3679f0d7f2c8,无法明确归类，内容不确定或不属于以上四类
+uci_00522,Shall i come to get pickle,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cdead4402a3d,无法明确归类，内容不确定或不属于以上四类
+uci_00523,Were gonna go get some tacos,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,00690d3d087d,无法明确归类，内容不确定或不属于以上四类
+uci_00524,"That's very rude, you on campus?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,69d2e248e0c3,无法明确归类，内容不确定或不属于以上四类
+uci_00525,"URGENT!: Your Mobile No. was awarded a ¡ê2,000 Bonus Caller Prize on 02/09/03! This is our 2nd attempt to contact YOU! Call 0871-872-9755 BOX95QU",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,dfa141e2aaa6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00526,Hi i won't b ard 4 christmas. But do enjoy n merry x'mas.,en,uci_sms_spam_collection_v1,ham,FRAUD,,417bea29a46a,虚假中奖/获奖信息，属于诈骗
+uci_00527,"Today's Offer! Claim ur ¡ê150 worth of discount vouchers! Text YES to 85023 now! SavaMob, member offers mobile! T Cs 08717898035. ¡ê3.00 Sub. 16 . Unsub reply X",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,a897a8152f5e,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00528,Yes! How is a pretty lady like you single?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0617aefcb966,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00529,You will recieve your tone within the next 24hrs. For Terms and conditions please see Channel U Teletext Pg 750,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,19b885d2acc2,无法明确归类，内容不确定或不属于以上四类
+uci_00530,Jay says that you're a double-faggot,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,45d7896532ad,无法明确归类，内容不确定或不属于以上四类
+uci_00531,PRIVATE! Your 2003 Account Statement for 07815296484 shows 800 un-redeemed S.I.M. points. Call 08718738001 Identifier Code 41782 Expires 18/11/04,en,uci_sms_spam_collection_v1,spam,FRAUD,,fabe2760eace,虚假积分/奖励兑换，属于诈骗
+uci_00532,What Today-sunday..sunday is holiday..so no work..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3d953d6687d9,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00533,Gudnite....tc...practice going on,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,555aef7c613a,无法明确归类，内容不确定或不属于以上四类
+uci_00534,I'll be late...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,289022aad605,无法明确归类，内容不确定或不属于以上四类
+uci_00535,"I've not called you in a while. This is hoping it was l8r malaria and that you know that we miss you guys. I miss Bani big, so pls give her my love especially. Have a great day.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b395ff3cc79b,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00536,"Good afternoon, my love! How goes that day ? I hope maybe you got some leads on a job. I think of you, boytoy and send you a passionate kiss from across the sea",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f45f54f78b7a,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00537,"Probably gonna be here for a while, see you later tonight &lt;)",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,07e37bdd7dfa,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00538,Or maybe my fat fingers just press all these buttons and it doesn't know what to do.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,22b29a99fee6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00539,Ummmmmaah Many many happy returns of d day my dear sweet heart.. HAPPY BIRTHDAY dear,en,uci_sms_spam_collection_v1,ham,AD,,2d9852cfdff1,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00540,"I am in tirupur da, once you started from office call me.",en,uci_sms_spam_collection_v1,ham,HARASS,,f112da4a4896,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00541,from www.Applausestore.com MonthlySubscription@50p/msg max6/month T&CsC web age16 2stop txt stop,en,uci_sms_spam_collection_v1,spam,AD,,43328771d12a,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00542,"A famous quote : when you develop the ability to listen to 'anything' unconditionally without losing your temper or self confidence, it means you are ......... 'MARRIED'",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0f04fb8ab837,无法明确归类，内容不确定或不属于以上四类
+uci_00543,But am going to college pa. What to do. are else ill come there it self. Pa.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8536b18fa4e4,无法明确归类，内容不确定或不属于以上四类
+uci_00544,4 oclock at mine. Just to bash out a flat plan.,en,uci_sms_spam_collection_v1,ham,AD,,80fa420ecdb5,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00545,This girl does not stay in bed. This girl doesn't need recovery time. Id rather pass out while having fun then be cooped up in bed,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b2e556062a32,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00546,Then any special there?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1743cfbd0af5,无法明确归类，内容不确定或不属于以上四类
+uci_00547,I know but you need to get hotel now. I just got my invitation but i had to apologise. Cali is to sweet for me to come to some english bloke's weddin,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e86c095c7aac,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00548,"Sorry that took so long, omw now",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bd45446a4527,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00549,Wait  &lt;#&gt;  min..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,48a2abc88520,无法明确归类，内容不确定或不属于以上四类
+uci_00550,Ok give me 5 minutes I think I see her. BTW you're my alibi. You were cutting my hair the whole time.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,67471262a101,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00551,"Imagine you finally get to sink into that bath after I have put you through your paces, maybe even having you eat me for a while before I left ... But also imagine the feel of that cage on your cock surrounded by the bath water, reminding you always who owns you ... Enjoy, my cuck",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bc4e5ab15807,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00552,"Hurry up, I've been weed-deficient for like three days",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ef8887c6ab8d,无法明确归类，内容不确定或不属于以上四类
+uci_00553,"Sure, if I get an acknowledgement from you that it's astoundingly tactless and generally faggy to demand a blood oath fo",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3142385467be,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00554,Ok. Every night take a warm bath drink a cup of milk and you'll see a work of magic. You still need to loose weight. Just so that you know,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e6553c230d7f,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00555,I¡®ll have a look at the frying pan in case it¡®s cheap or a book perhaps. No that¡®s silly a frying pan isn¡®t likely to be a book,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,20a261ec7a2c,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00556,O. Well uv causes mutations. Sunscreen is like essential thesedays,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,647b351a694d,无法明确归类，内容不确定或不属于以上四类
+uci_00557,Having lunch:)you are not in online?why?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,903d580783cc,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00558,I know that my friend already told that.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,77eb98f79a01,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00559,Hi Princess! Thank you for the pics. You are very pretty. How are you?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6d81a6ed9900,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00560,"Aiyo... U always c our ex one... I dunno abt mei, she haven reply... First time u reply so fast... Y so lucky not workin huh, got bao by ur sugardad ah...gee..",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b7ffe0f8d1bb,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00561,Hi msg me:)i'm in office..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3980c4af309f,无法明确归类，内容不确定或不属于以上四类
+uci_00562,Thanx 4 e brownie it's v nice...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f22af83c0bbe,无法明确归类，内容不确定或不属于以上四类
+uci_00563,Geeeee ... I love you so much I can barely stand it,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8744b2f7633d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00564,GENT! We are trying to contact you. Last weekends draw shows that you won a ¡ê1000 prize GUARANTEED. Call 09064012160. Claim Code K52. Valid 12hrs only. 150ppm,en,uci_sms_spam_collection_v1,spam,FRAUD,,e9ec92d192eb,虚假中奖/获奖信息，属于诈骗
+uci_00565,"Fuck babe ... I miss you already, you know ? Can't you let me send you some money towards your net ? I need you ... I want you ... I crave you ...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4bc050243d52,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00566,"Ill call u 2mrw at ninish, with my address that icky American freek wont stop callin me 2 bad Jen k eh?",en,uci_sms_spam_collection_v1,ham,FRAUD,,8b77b4853539,虚假中奖/获奖信息，属于诈骗
+uci_00567,Oooh bed ridden ey? What are YOU thinking of?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,81c4a7807a61,无法明确归类，内容不确定或不属于以上四类
+uci_00568,"So anyways, you can just go to your gym or whatever, my love *smiles* I hope your ok and having a good day babe ... I miss you so much already",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7a5046d002c1,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00569,Love it! Daddy will make you scream with pleasure! I am going to slap your ass with my dick!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4f50e959389f,无法明确归类，内容不确定或不属于以上四类
+uci_00570,WOT U WANNA DO THEN MISSY?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2ca805a0334d,无法明确归类，内容不确定或不属于以上四类
+uci_00571,Yar lor wait 4 my mum 2 finish sch then have lunch lor... I whole morning stay at home clean my room now my room quite clean... Hee...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c094b8380453,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00572,Do you know where my lab goggles went,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5217b29407d6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00573,Can you open the door?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,22774ec99bf0,无法明确归类，内容不确定或不属于以上四类
+uci_00574,Waiting for your call.,en,uci_sms_spam_collection_v1,ham,HARASS,,548c65f18771,骚扰类内容：包含成人/交友/催收/反复推销等扰民信息，无欺诈性质
+uci_00575,Nope i waiting in sch 4 daddy...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,95d9899c7ed6,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00576,"You have won ?1,000 cash or a ?2,000 prize! To claim, call09050000327",en,uci_sms_spam_collection_v1,spam,FRAUD,,5714ae640462,虚假中奖/获奖信息，属于诈骗
+uci_00577,"I'm tired of arguing with you about this week after week. Do what you want and from now on, i'll do the same.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d370e407d46a,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00578,¨¹ wait 4 me in sch i finish ard 5..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c6c6ab0f0407,无法明确归类，内容不确定或不属于以上四类
+uci_00579,"our mobile number has won ¡ê5000, to claim calls us back or ring the claims hot line on 09050005321.",en,uci_sms_spam_collection_v1,spam,FRAUD,,a6bf9cb06769,虚假中奖/获奖信息，属于诈骗
+uci_00580,"Arngd marriage is while u r walkin unfortuntly a snake bites u. bt love marriage is dancing in frnt of d snake &amp; sayin Bite me, bite me.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ae3ca3ce5426,无法明确归类，内容不确定或不属于以上四类
+uci_00581,Huh so early.. Then ¨¹ having dinner outside izzit?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,df6d47efebb1,无法明确归类，内容不确定或不属于以上四类
+uci_00582,Ok anyway no need to change with what you said,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ce8aa61e4174,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00583,We tried to contact you re your reply to our offer of 750 mins 150 textand a new video phone call 08002988890 now or reply for free delivery tomorrow,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,c104221dccbe,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00584,my ex-wife was not able to have kids. Do you want kids one day?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a6757ed8e5ad,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00585,So how's scotland. Hope you are not over showing your JJC tendencies. Take care. Live the dream,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bc6ee2316e78,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00586,Tell them u have a headache and just want to use 1 hour of sick time.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fd7607e95c6c,无法明确归类，内容不确定或不属于以上四类
+uci_00587,"I dun thk i'll quit yet... Hmmm, can go jazz ? Yogasana oso can... We can go meet em after our lessons den...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2c1d476f88dc,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00588,"""Pete can you please ring meive hardly gotany credit""",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,facc73317eaf,无法明确归类，内容不确定或不属于以上四类
+uci_00589,Ya srsly better than yi tho,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2bf2eb1246c8,无法明确归类，内容不确定或不属于以上四类
+uci_00590,"I'm in a meeting, call me later at",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,359f150b6411,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00591,"For ur chance to win a ¡ê250 wkly shopping spree TXT: SHOP to 80878. T's&C's www.txt-2-shop.com custcare 08715705022, 1x150p/wk",en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,283f3bbd46f6,无法明确归类，内容不确定或不属于以上四类
+uci_00592,You have been specially selected to receive a 2000 pound award! Call 08712402050 BEFORE the lines close. Cost 10ppm. 16+. T&Cs apply. AG Promo,en,uci_sms_spam_collection_v1,spam,AD,,b2a8ae22b80b,正规商业促销/广告内容，目的是推广商品或服务，无欺诈性质
+uci_00593,PRIVATE! Your 2003 Account Statement for 07753741225 shows 800 un-redeemed S. I. M. points. Call 08715203677 Identifier Code: 42478 Expires 24/10/04,en,uci_sms_spam_collection_v1,spam,FRAUD,,fabe2760eace,虚假积分/奖励兑换，属于诈骗
+uci_00594,You still at grand prix?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,82d9e3f141cb,无法明确归类，内容不确定或不属于以上四类
+uci_00595,"I met you as a stranger and choose you as my friend. As long as the world stands, our friendship never ends. Lets be Friends forever!!! Gud nitz...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3aa5287489b6,无法明确归类，内容不确定或不属于以上四类
+uci_00596,I am great! How are you?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f3d5fa2410f7,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00597,Gud mrng dear have a nice day,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bea0c5cece21,无法明确归类，内容不确定或不属于以上四类
+uci_00598,You have an important customer service announcement. Call FREEPHONE 0800 542 0825 now!,en,uci_sms_spam_collection_v1,spam,NEEDS_REVIEW,,004b4d58694d,私人闲聊/日常问候，无业务或欺诈内容，属于UCI ham类个人消息
+uci_00599,Will do. Was exhausted on train this morning. Too much wine and pie. You sleep well too,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1d8d1b117990,无法明确归类，内容不确定或不属于以上四类

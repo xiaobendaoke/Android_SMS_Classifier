@@ -1,0 +1,3502 @@
+[
+  {
+    "id": "iiitd_01000",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01001",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01002",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01003",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01004",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01005",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01006",
+    "label": "HARASS",
+    "reason": "骚扰式推销/灰产"
+  },
+  {
+    "id": "iiitd_01007",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01008",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01009",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01010",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01011",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01012",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01013",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01014",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01015",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01016",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01017",
+    "label": "HARASS",
+    "reason": "骚扰式推销/灰产"
+  },
+  {
+    "id": "iiitd_01018",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01019",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01020",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01021",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01022",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01023",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01024",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01025",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01026",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01027",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01028",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01029",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01030",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01031",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01032",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01033",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01034",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01035",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01036",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01037",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01038",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01039",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01040",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01041",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01042",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01043",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01044",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01045",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01046",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01047",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01048",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01049",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01050",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01051",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01052",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01053",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01054",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01055",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01056",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01057",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01058",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01059",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01060",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01061",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01062",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01063",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01064",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01065",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01066",
+    "label": "TRANSACTION",
+    "reason": "账户余额/信息查询指引"
+  },
+  {
+    "id": "iiitd_01067",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01068",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01069",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01070",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01071",
+    "label": "TRANSACTION",
+    "reason": "账户余额/信息查询指引"
+  },
+  {
+    "id": "iiitd_01072",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01073",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01074",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01075",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01076",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01077",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01078",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01079",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01080",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01081",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01082",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01083",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01084",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01085",
+    "label": "HARASS",
+    "reason": "高薪课程/工作诱惑"
+  },
+  {
+    "id": "iiitd_01086",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01087",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01088",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01089",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01090",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01091",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01092",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01093",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01094",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01095",
+    "label": "AD",
+    "reason": "竞赛/活动广告"
+  },
+  {
+    "id": "iiitd_01096",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01097",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01098",
+    "label": "AD",
+    "reason": "招聘广告"
+  },
+  {
+    "id": "iiitd_01099",
+    "label": "FRAUD",
+    "reason": "虚假免费汽车/房产诱惑"
+  },
+  {
+    "id": "iiitd_01100",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01101",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01102",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01103",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01104",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01105",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01106",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01107",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01108",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01109",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01110",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01111",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01112",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01113",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01114",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01115",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01116",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01117",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01118",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01119",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01120",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01121",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01122",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01123",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01124",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01125",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01126",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01127",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01128",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01129",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01130",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01131",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01132",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01133",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01134",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01135",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01136",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01137",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01138",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01139",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01140",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01141",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01142",
+    "label": "TRANSACTION",
+    "reason": "移动办公设置激活通知"
+  },
+  {
+    "id": "iiitd_01143",
+    "label": "TRANSACTION",
+    "reason": "服务请求超时/系统通知"
+  },
+  {
+    "id": "iiitd_01144",
+    "label": "TRANSACTION",
+    "reason": "服务请求超时/系统通知"
+  },
+  {
+    "id": "iiitd_01145",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01146",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01147",
+    "label": "AD",
+    "reason": "招聘广告"
+  },
+  {
+    "id": "iiitd_01148",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01149",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01150",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01151",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01152",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01153",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01154",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01155",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01156",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01157",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01158",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01159",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01160",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01161",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01162",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01163",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01164",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01165",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01166",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01167",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01168",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01169",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01170",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01171",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01172",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01173",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01174",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01175",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01176",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01177",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01178",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01179",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01180",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01181",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01182",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01183",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01184",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01185",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01186",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01187",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01188",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01189",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01190",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01191",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01192",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01193",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01194",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01195",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01196",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01197",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01198",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01199",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01200",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01201",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01202",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01203",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01204",
+    "label": "FRAUD",
+    "reason": "虚假旅游奖品诱导"
+  },
+  {
+    "id": "iiitd_01205",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01206",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01207",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01208",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01209",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01210",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01211",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01212",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01213",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01214",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01215",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01216",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01217",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01218",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01219",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01220",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01221",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01222",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01223",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01224",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01225",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01226",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01227",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01228",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01229",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01230",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01231",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01232",
+    "label": "AD",
+    "reason": "招聘广告"
+  },
+  {
+    "id": "iiitd_01233",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01234",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01235",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01236",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01237",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01238",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01239",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01240",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01241",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01242",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01243",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01244",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01245",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01246",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01247",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01248",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01249",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01250",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01251",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01252",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01253",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01254",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01255",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01256",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01257",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01258",
+    "label": "HARASS",
+    "reason": "商业机会/加盟骚扰"
+  },
+  {
+    "id": "iiitd_01259",
+    "label": "HARASS",
+    "reason": "商业机会/加盟骚扰"
+  },
+  {
+    "id": "iiitd_01260",
+    "label": "HARASS",
+    "reason": "商业机会/加盟骚扰"
+  },
+  {
+    "id": "iiitd_01261",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01262",
+    "label": "HARASS",
+    "reason": "代发短信/网络兼职骚扰"
+  },
+  {
+    "id": "iiitd_01263",
+    "label": "HARASS",
+    "reason": "代发短信/网络兼职骚扰"
+  },
+  {
+    "id": "iiitd_01264",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01265",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01266",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01267",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01268",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01269",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01270",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01271",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01272",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01273",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01274",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01275",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01276",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01277",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01278",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01279",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01280",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01281",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01282",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01283",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01284",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01285",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01286",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01287",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01288",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01289",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01290",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01291",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01292",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01293",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01294",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01295",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01296",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01297",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01298",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01299",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01300",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01301",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01302",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01303",
+    "label": "AD",
+    "reason": "短信抽奖促销"
+  },
+  {
+    "id": "iiitd_01304",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01305",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01306",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01307",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01308",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01309",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01310",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01311",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01312",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01313",
+    "label": "TRANSACTION",
+    "reason": "3G激活/服务通知"
+  },
+  {
+    "id": "iiitd_01314",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01315",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01316",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01317",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01318",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01319",
+    "label": "AD",
+    "reason": "限时促销广告"
+  },
+  {
+    "id": "iiitd_01320",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01321",
+    "label": "TRANSACTION",
+    "reason": "3G激活/服务通知"
+  },
+  {
+    "id": "iiitd_01322",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01323",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01324",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01325",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01326",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01327",
+    "label": "TRANSACTION",
+    "reason": "账户余额/信息查询指引"
+  },
+  {
+    "id": "iiitd_01328",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01329",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01330",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01331",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01332",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01333",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01334",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01335",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01336",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01337",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01338",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01339",
+    "label": "TRANSACTION",
+    "reason": "服务请求超时/系统通知"
+  },
+  {
+    "id": "iiitd_01340",
+    "label": "TRANSACTION",
+    "reason": "服务请求超时/系统通知"
+  },
+  {
+    "id": "iiitd_01341",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01342",
+    "label": "AD",
+    "reason": "限时促销广告"
+  },
+  {
+    "id": "iiitd_01343",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01344",
+    "label": "AD",
+    "reason": "有奖活动促销"
+  },
+  {
+    "id": "iiitd_01345",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01346",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01347",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01348",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01349",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01350",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01351",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01352",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01353",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01354",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01355",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01356",
+    "label": "NEEDS_REVIEW",
+    "reason": "内容不确定，需人工审核"
+  },
+  {
+    "id": "iiitd_01357",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01358",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01359",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01360",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01361",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01362",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01363",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01364",
+    "label": "AD",
+    "reason": "限时促销广告"
+  },
+  {
+    "id": "iiitd_01365",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01366",
+    "label": "HARASS",
+    "reason": "代发短信/网络兼职骚扰"
+  },
+  {
+    "id": "iiitd_01367",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01368",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01369",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01370",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01371",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01372",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01373",
+    "label": "AD",
+    "reason": "时尚/服装广告"
+  },
+  {
+    "id": "iiitd_01374",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01375",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01376",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01377",
+    "label": "AD",
+    "reason": "时尚/服装广告"
+  },
+  {
+    "id": "iiitd_01378",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01379",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01380",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01381",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01382",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01383",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01384",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01385",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01386",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01387",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01388",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01389",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01390",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01391",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01392",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01393",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01394",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01395",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01396",
+    "label": "AD",
+    "reason": "时尚/服装广告"
+  },
+  {
+    "id": "iiitd_01397",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01398",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01399",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01400",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01401",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01402",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01403",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01404",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01405",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01406",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01407",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01408",
+    "label": "AD",
+    "reason": "有奖活动促销"
+  },
+  {
+    "id": "iiitd_01409",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01410",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01411",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01412",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01413",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01414",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01415",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01416",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01417",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01418",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01419",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01420",
+    "label": "AD",
+    "reason": "有奖活动促销"
+  },
+  {
+    "id": "iiitd_01421",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01422",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01423",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01424",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01425",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01426",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01427",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01428",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01429",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01430",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01431",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01432",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01433",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01434",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01435",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01436",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01437",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01438",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01439",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01440",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01441",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01442",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01443",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01444",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01445",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01446",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01447",
+    "label": "FRAUD",
+    "reason": "虚假旅游奖品诱导"
+  },
+  {
+    "id": "iiitd_01448",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01449",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01450",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01451",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01452",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01453",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01454",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01455",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01456",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01457",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01458",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01459",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01460",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01461",
+    "label": "HARASS",
+    "reason": "高薪诱惑"
+  },
+  {
+    "id": "iiitd_01462",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01463",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01464",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01465",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01466",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01467",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01468",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01469",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01470",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01471",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01472",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01473",
+    "label": "NEEDS_REVIEW",
+    "reason": "内容不确定，需人工审核"
+  },
+  {
+    "id": "iiitd_01474",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01475",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01476",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01477",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01478",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01479",
+    "label": "HARASS",
+    "reason": "骚扰式推销/灰产"
+  },
+  {
+    "id": "iiitd_01480",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01481",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01482",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01483",
+    "label": "TRANSACTION",
+    "reason": "套餐到期提醒"
+  },
+  {
+    "id": "iiitd_01484",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01485",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01486",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01487",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01488",
+    "label": "HARASS",
+    "reason": "高薪诱惑/在家工作诈骗"
+  },
+  {
+    "id": "iiitd_01489",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01490",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01491",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01492",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01493",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01494",
+    "label": "FRAUD",
+    "reason": "虚假抽奖/奖品诈骗"
+  },
+  {
+    "id": "iiitd_01495",
+    "label": "FRAUD",
+    "reason": "虚假中奖/奖品诈骗"
+  },
+  {
+    "id": "iiitd_01496",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01497",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01498",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01499",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01500",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01501",
+    "label": "FRAUD",
+    "reason": "虚假公司名义中奖诈骗"
+  },
+  {
+    "id": "iiitd_01502",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01503",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01504",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01505",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01506",
+    "label": "AD",
+    "reason": "餐饮/食品促销"
+  },
+  {
+    "id": "iiitd_01507",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01508",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01509",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01510",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01511",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01512",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01513",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01514",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01515",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01516",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01517",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01518",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01519",
+    "label": "FRAUD",
+    "reason": "虚假免费汽车/房产诱惑"
+  },
+  {
+    "id": "iiitd_01520",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01521",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01522",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01523",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01524",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01525",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01526",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01527",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01528",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01529",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01530",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01531",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01532",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01533",
+    "label": "TRANSACTION",
+    "reason": "扣费通知"
+  },
+  {
+    "id": "iiitd_01534",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01535",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01536",
+    "label": "AD",
+    "reason": "限时促销广告"
+  },
+  {
+    "id": "iiitd_01537",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01538",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01539",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01540",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01541",
+    "label": "AD",
+    "reason": "旅游/度假套餐广告"
+  },
+  {
+    "id": "iiitd_01542",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01543",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01544",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01545",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01546",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01547",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01548",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01549",
+    "label": "AD",
+    "reason": "招聘广告"
+  },
+  {
+    "id": "iiitd_01550",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01551",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01552",
+    "label": "AD",
+    "reason": "竞赛/活动广告"
+  },
+  {
+    "id": "iiitd_01553",
+    "label": "AD",
+    "reason": "数据卡/网络服务广告"
+  },
+  {
+    "id": "iiitd_01554",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01555",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01556",
+    "label": "HARASS",
+    "reason": "骚扰式推销/灰产"
+  },
+  {
+    "id": "iiitd_01557",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01558",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01559",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01560",
+    "label": "FRAUD",
+    "reason": "虚假银币奖励诱导"
+  },
+  {
+    "id": "iiitd_01561",
+    "label": "FRAUD",
+    "reason": "虚假中奖/奖品诈骗"
+  },
+  {
+    "id": "iiitd_01562",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01563",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01564",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01565",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01566",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01567",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01568",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01569",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01570",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01571",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01572",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01573",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01574",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01575",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01576",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01577",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01578",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01579",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01580",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01581",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01582",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01583",
+    "label": "AD",
+    "reason": "招聘广告"
+  },
+  {
+    "id": "iiitd_01584",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01585",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01586",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01587",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01588",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01589",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01590",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01591",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01592",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01593",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01594",
+    "label": "AD",
+    "reason": "银行/信用卡广告"
+  },
+  {
+    "id": "iiitd_01595",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01596",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01597",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01598",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01599",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01600",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01601",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01602",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01603",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01604",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01605",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01606",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01607",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01608",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01609",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01610",
+    "label": "TRANSACTION",
+    "reason": "业务通知/服务消息"
+  },
+  {
+    "id": "iiitd_01611",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01612",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01613",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01614",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01615",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01616",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01617",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01618",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01619",
+    "label": "AD",
+    "reason": "维修服务广告"
+  },
+  {
+    "id": "iiitd_01620",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01621",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01622",
+    "label": "AD",
+    "reason": "有奖活动促销"
+  },
+  {
+    "id": "iiitd_01623",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01624",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01625",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01626",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01627",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01628",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01629",
+    "label": "AD",
+    "reason": "教育/课程招生广告"
+  },
+  {
+    "id": "iiitd_01630",
+    "label": "TRANSACTION",
+    "reason": "账户余额/信息查询指引"
+  },
+  {
+    "id": "iiitd_01631",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01632",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01633",
+    "label": "AD",
+    "reason": "彩铃/音乐服务广告"
+  },
+  {
+    "id": "iiitd_01634",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01635",
+    "label": "HARASS",
+    "reason": "高薪诱惑"
+  },
+  {
+    "id": "iiitd_01636",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01637",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01638",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01639",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01640",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01641",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01642",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01643",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01644",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01645",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01646",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01647",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01648",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01649",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01650",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01651",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01652",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01653",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01654",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01655",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01656",
+    "label": "FRAUD",
+    "reason": "假中奖诈骗，声称用户已中奖"
+  },
+  {
+    "id": "iiitd_01657",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01658",
+    "label": "AD",
+    "reason": "医疗/健康服务广告"
+  },
+  {
+    "id": "iiitd_01659",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01660",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01661",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01662",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01663",
+    "label": "AD",
+    "reason": "贷款/保险广告"
+  },
+  {
+    "id": "iiitd_01664",
+    "label": "TRANSACTION",
+    "reason": "充值/有效期到期提醒"
+  },
+  {
+    "id": "iiitd_01665",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01666",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01667",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01668",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01669",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01670",
+    "label": "AD",
+    "reason": "新品/新款广告"
+  },
+  {
+    "id": "iiitd_01671",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01672",
+    "label": "AD",
+    "reason": "电商/旅游促销"
+  },
+  {
+    "id": "iiitd_01673",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01674",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01675",
+    "label": "AD",
+    "reason": "免费/赠品促销"
+  },
+  {
+    "id": "iiitd_01676",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01677",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01678",
+    "label": "AD",
+    "reason": "折扣促销广告"
+  },
+  {
+    "id": "iiitd_01679",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01680",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01681",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01682",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01683",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01684",
+    "label": "AD",
+    "reason": "购物/预订广告"
+  },
+  {
+    "id": "iiitd_01685",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01686",
+    "label": "FRAUD",
+    "reason": "虚假银币奖励诱导"
+  },
+  {
+    "id": "iiitd_01687",
+    "label": "AD",
+    "reason": "充值/话费优惠促销"
+  },
+  {
+    "id": "iiitd_01688",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01689",
+    "label": "AD",
+    "reason": "娱乐/内容服务广告"
+  },
+  {
+    "id": "iiitd_01690",
+    "label": "HARASS",
+    "reason": "Blyk互动问答/骚扰式推销"
+  },
+  {
+    "id": "iiitd_01691",
+    "label": "HARASS",
+    "reason": "代发短信/网络兼职骚扰"
+  },
+  {
+    "id": "iiitd_01692",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01693",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01694",
+    "label": "AD",
+    "reason": "商业促销广告"
+  },
+  {
+    "id": "iiitd_01695",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01696",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01697",
+    "label": "AD",
+    "reason": "促销/优惠活动广告"
+  },
+  {
+    "id": "iiitd_01698",
+    "label": "AD",
+    "reason": "房产广告"
+  },
+  {
+    "id": "iiitd_01699",
+    "label": "TRANSACTION",
+    "reason": "PNR/列车信息查询服务"
+  }
+]

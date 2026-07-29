@@ -125,7 +125,7 @@ UCI 原文是 **ham / spam 二分类**，不等于四类。英文集有三个坑
 | `Hey running late, see you at 4` | NEEDS_REVIEW |
 | 朋友要你银行卡号（聊天，非冒充客服） | NEEDS_REVIEW |
 
-短版操作说明：`training/data/interim/annotation/README_EN_ANNOTATORS.txt`
+短版操作说明（历史归档）：`recent/prior_training/annotation/README_EN_ANNOTATORS.txt`；新跑写回 `training/data/interim/annotation/`。
 
 ## 6. 操作要求
 

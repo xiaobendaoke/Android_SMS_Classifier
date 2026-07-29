@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "per_class_target": 500,
+  "seed": 42,
+  "total_sampled": 4058,
+  "by_lang_label": {
+    "en": {
+      "TRANSACTION": {
+        "have_in_pool": 12,
+        "sampled": 12,
+        "target": 500,
+        "shortfall": 488
+      },
+      "AD": {
+        "have_in_pool": 393,
+        "sampled": 393,
+        "target": 500,
+        "shortfall": 107
+      },
+      "HARASS": {
+        "have_in_pool": 134,
+        "sampled": 134,
+        "target": 500,
+        "shortfall": 366
+      },
+      "FRAUD": {
+        "have_in_pool": 220,
+        "sampled": 220,
+        "target": 500,
+        "shortfall": 280
+      }
+    },
+    "hi": {
+      "TRANSACTION": {
+        "have_in_pool": 17,
+        "sampled": 17,
+        "target": 500,
+        "shortfall": 483
+      },
+      "AD": {
+        "have_in_pool": 889,
+        "sampled": 500,
+        "target": 500,
+        "shortfall": 0
+      },
+      "HARASS": {
+        "have_in_pool": 79,
+        "sampled": 79,
+        "target": 500,
+        "shortfall": 421
+      },
+      "FRAUD": {
+        "have_in_pool": 13,
+        "sampled": 13,
+        "target": 500,
+        "shortfall": 487
+      }
+    },
+    "id": {
+      "TRANSACTION": {
+        "have_in_pool": 80,
+        "sampled": 80,
+        "target": 500,
+        "shortfall": 420
+      },
+      "AD": {
+        "have_in_pool": 327,
+        "sampled": 327,
+        "target": 500,
+        "shortfall": 173
+      },
+      "HARASS": {
+        "have_in_pool": 98,
+        "sampled": 98,
+        "target": 500,
+        "shortfall": 402
+      },
+      "FRAUD": {
+        "have_in_pool": 369,
+        "sampled": 369,
+        "target": 500,
+        "shortfall": 131
+      }
+    },
+    "zh": {
+      "TRANSACTION": {
+        "have_in_pool": 2124,
+        "sampled": 500,
+        "target": 500,
+        "shortfall": 0
+      },
+      "AD": {
+        "have_in_pool": 4243,
+        "sampled": 500,
+        "target": 500,
+        "shortfall": 0
+      },
+      "HARASS": {
+        "have_in_pool": 1344,
+        "sampled": 500,
+        "target": 500,
+        "shortfall": 0
+      },
+      "FRAUD": {
+        "have_in_pool": 316,
+        "sampled": 316,
+        "target": 500,
+        "shortfall": 184
+      }
+    }
+  },
+  "total_shortfall": 3942,
+  "annotator_files": {
+    "annotator_A": "freeze_annotator_A.csv",
+    "annotator_B": "freeze_annotator_B.csv"
+  },
+  "claim_note": "Sampling alone does NOT create acceptance gold. Both annotators must label independently; merge agreements; record freeze SHA before evaluate claim."
+}

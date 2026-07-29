@@ -1,0 +1,482 @@
+{
+  "_meta": {
+    "total": 2000,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "orig_label",
+      "label",
+      "annotator",
+      "template_group",
+      "notes",
+      "reason"
+    ],
+    "label_dist": {
+      "NEEDS_REVIEW": 993,
+      "AD": 756,
+      "FRAUD": 31,
+      "TRANSACTION": 37,
+      "HARASS": 183
+    },
+    "annotator_dist": {
+      "manual": 2000
+    },
+    "orig_dist": {
+      "ham": 1000,
+      "spam": 1000
+    },
+    "empty_label": 0,
+    "invalid": [],
+    "unique_texts": 1983,
+    "label_conflicts": 0,
+    "devanagari_rows": 0,
+    "orig_to_label": {
+      "ham->NEEDS_REVIEW": 986,
+      "spam->AD": 748,
+      "spam->HARASS": 183,
+      "spam->TRANSACTION": 32,
+      "spam->FRAUD": 30,
+      "ham->AD": 8,
+      "spam->NEEDS_REVIEW": 7,
+      "ham->TRANSACTION": 5,
+      "ham->FRAUD": 1
+    },
+    "issue_counts": {
+      "原spam却标事务": 28,
+      "AD却像骚扰": 1,
+      "TXN短句无事务信号": 1
+    }
+  },
+  "_random_per_class": {
+    "NEEDS_REVIEW": [
+      {
+        "id": "iiitd_00656",
+        "orig": "ham",
+        "suggested": null,
+        "text": "INDIANEWSLINE AP High Court grants bail 2Rama Raju,4 others Uttarbanga driver violated red signal-Signal in-charge Syria bans Islamic veil at universities"
+      },
+      {
+        "id": "iiitd_00114",
+        "orig": "ham",
+        "suggested": null,
+        "text": "Importance of percentage.. Boy: Teri 12 me kitni %age thi? Girl: 97%..  Boy: Baap re! Itne me to kisi gareeb k 2no bacche pass ho jate..!!"
+      },
+      {
+        "id": "iiitd_00025",
+        "orig": "ham",
+        "suggested": null,
+        "text": "In raghav sir cls"
+      },
+      {
+        "id": "iiitd_00764",
+        "orig": "ham",
+        "suggested": null,
+        "text": "i have one business plan alredy! my minor project! :) wil tell u abt it wen m free."
+      },
+      {
+        "id": "iiitd_00281",
+        "orig": "ham",
+        "suggested": null,
+        "text": "If Love is your greatest weakness then you will be the strongest person in the world. - Rabindranath Tagore"
+      },
+      {
+        "id": "iiitd_00250",
+        "orig": "ham",
+        "suggested": null,
+        "text": "If swiming is a gud xercise 2 stay fit, y r whales fat? Y is dat evry1 wants 2 go 2 heven bt nobdy wantz 2 die? Shal i say dat der is racial discrimnat4 sardaro ne mil ke petrol pu"
+      },
+      {
+        "id": "iiitd_00228",
+        "orig": "ham",
+        "suggested": null,
+        "text": "If u dont know who is Rajnikanth.. 1) Rajnikanth can delete d Recycle Bin 2) Rajnikanth can drown a fish. 3) Rajnikanth can kill a bird with two stones.  4) In an avrg living room "
+      },
+      {
+        "id": "iiitd_00142",
+        "orig": "ham",
+        "suggested": null,
+        "text": "il jit len wo najar ham bhi rakhte h katl kar den wo jigar ham b rakte h apse wada h hamara muskurana ka warna ankho me samundar ham b rakhte"
+      },
+      {
+        "id": "iiitd_00759",
+        "orig": "ham",
+        "suggested": null,
+        "text": "I havta ask smbdy..doubts list mei hei!"
+      },
+      {
+        "id": "iiitd_00104",
+        "orig": "ham",
+        "suggested": null,
+        "text": "Imprtance of THUMB - child use it 4 chewing, Illiterate ppl use it 4 sign, winners 4 victory & my FANS use it 4 reading my msgs Oh..U too? Crazy fans!"
+      }
+    ],
+    "AD": [
+      {
+        "id": "iiitd_01903",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Welcome back to Airtel! Call 121312 Toll Free to know your BEST FULL TALKTIME RECHARGE OFFER. Aaj BAARAH TERAH BAARAH lagaya kya? Call 121312 Toll Free now!!"
+      },
+      {
+        "id": "iiitd_01716",
+        "orig": "spam",
+        "suggested": null,
+        "text": "njoy weekend with Domino's!Get Garlic Bread+Dip FREE on a minimum bill of Rs.350.Now order online at www.dominos.co.in/orderonline. Cpn:NET09.Vld:25july.T&"
+      },
+      {
+        "id": "iiitd_01145",
+        "orig": "spam",
+        "suggested": null,
+        "text": "World cup Special !!! Listen to latest cricket score of ongoing match when U call someone. Dial *646*444# and activate Cricket Mytunes now!!! Charges apply."
+      },
+      {
+        "id": "iiitd_01775",
+        "orig": "spam",
+        "suggested": null,
+        "text": "New Arrivals !!!Madame coats,  jackets,  sweaters and sweatshirts for women. Arrow Coats,  sweaters and jackets from Men @ Thar Acade,  Kazi Road."
+      },
+      {
+        "id": "iiitd_01562",
+        "orig": "spam",
+        "suggested": null,
+        "text": "onfused with insurance schemes? Need health insurance or home loans? Visit www.FullOnInsurance.com & find the best plan for you & your family. T&C appl"
+      },
+      {
+        "id": "iiitd_01064",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Rs224 ke recharge par full talktime! Recharge par Rs203.08 aur Rs 20.92 ka talktime 48 ghante mein. Talktime 30 din ke liye calls par manya. Offer 5-Jan-11 tak"
+      },
+      {
+        "id": "iiitd_01062",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Rs25 mein Rs25 ka full talktime! Recharge karte hi paayein Rs19.67 aur baki Rs5.33 ka talktime 48 ghante mein. Offer 28-Feb-11 tak manya."
+      },
+      {
+        "id": "iiitd_01153",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Remove Ur Car Scratches Within Minute! With MAGIC CAR SCRATCH REMOVER PEN (Any Car/Any Colour) As Seen on TV Rs.2400 Offer Price 599 Booking Sms: MAGIC to 56767"
+      },
+      {
+        "id": "iiitd_01303",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Prepare for IIT-JEE/AIEEE with HCL-Win Upto 100% Coaching Fee*Appear 4 Scholarship Exam 14Nov.SMS HCLEXL to 53030/Visit HCL CDC or www.hclcdc.in/xcelerate *T&C"
+      },
+      {
+        "id": "iiitd_01322",
+        "orig": "spam",
+        "suggested": null,
+        "text": "pni pasand ke joke paane ke liye dial karein *321*453# (toll-free) aur payiye rozana mazedaar joke kewal Re1/Din mein"
+      }
+    ],
+    "FRAUD": [
+      {
+        "id": "iiitd_01501",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Back to front!,Tiger Woods? victory at the Chevron World Challenge was his first title win after how many months?\n1) 26\n2) 24\n3) 16\n^ 1/ 2/ 3\nAll replies to Blyk on Aircel are FREE"
+      },
+      {
+        "id": "iiitd_01554",
+        "orig": "spam",
+        "suggested": null,
+        "text": "ongratulations!U have won a discount voucher fr being a loyal member.Claim this voucher right now against our spl Numero Uno combo offer-Sunglasses+Watch (Total MRP:Rs5200).Just pa"
+      },
+      {
+        "id": "iiitd_00649",
+        "orig": "ham",
+        "suggested": null,
+        "text": "I M FROM MTS PLZ SEND UR EMAIL ID.AND UR OTHER COMTECT NO.KHUSHIAnees khan."
+      },
+      {
+        "id": "iiitd_01519",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Win a HONG KONG TRIP only at Blue Hyundai during Free Car Care Clinic Campaign. Watch India vs South Africa match on big screen while your car gets servi"
+      },
+      {
+        "id": "iiitd_01117",
+        "orig": "spam",
+        "suggested": null,
+        "text": "RK Singh from Agra had won Mobile Phone in last match. U could also be the one winning an iPod today. Dial 544333 (49Rs/Mnt)"
+      },
+      {
+        "id": "iiitd_01559",
+        "orig": "spam",
+        "suggested": null,
+        "text": "ongratulations! U have won a discount voucher fr being a loyal member.Claim this voucher right now against our spl Numero Uno combo offer-Sunglasses+Watch (Total MRP:Rs5200).Just p"
+      },
+      {
+        "id": "iiitd_01555",
+        "orig": "spam",
+        "suggested": null,
+        "text": "ongratulations! You are Lucky Winner who had Won Pearl Set Worth M.R.P. Rs.2500/. Absolutely Free. For Details & Redemption SMS LUCKY To 56263042 T&C Appl"
+      },
+      {
+        "id": "iiitd_01613",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Your number has won 700,000 in coca-cola 2011.To receive   your Award send your Name, Address and number to  Mr.Gordon on Email: cocacolaprize56@yahoo.com"
+      },
+      {
+        "id": "iiitd_01686",
+        "orig": "spam",
+        "suggested": null,
+        "text": "WHATS YOUR NUMBER contest is bck, Now Get15Grams SiverCoin on 1case & Get Silver+Titan WristWatch on 2Cases, Also U hv chance 2 win GOLD COIN - via WAY2SMS.COM"
+      },
+      {
+        "id": "iiitd_01457",
+        "orig": "spam",
+        "suggested": null,
+        "text": "The Final Hurrah!,Who won the final race of the 2011 F1 season?\n1) Mark Webber\n2) Sebastian Vettel\n3) Lewis Hamilton\n^1/ 2/ 3\nReply within 24 hrs to get a video FREE from Blyk on A"
+      }
+    ],
+    "TRANSACTION": [
+      {
+        "id": "iiitd_01202",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Recharge Alert from MTS : Validity of expiry on your MTS Data Card has already EXPIRED. Recharge with monthly STVs to continue usage - MTS"
+      },
+      {
+        "id": "iiitd_01704",
+        "orig": "spam",
+        "suggested": null,
+        "text": "No holidays! No Sundays! Now Send and Receive money instantly, anytime from your mobile. Contact your bank to know more or visit www.npci.org.in/aboutIMPS.aspx"
+      },
+      {
+        "id": "iiitd_01325",
+        "orig": "spam",
+        "suggested": null,
+        "text": "pne Balance aur Validity ki jaankari ke liye dial karein *121*2# (toll-free). Apne account ki jaankari ke liye dial karein *121# (toll-free)"
+      },
+      {
+        "id": "iiitd_00734",
+        "orig": "ham",
+        "suggested": null,
+        "text": "Indian Railways:PNR: 6220297622Current status:Confirmed 27 S6 RLGNNumber of Tickets: 1Class: SLTrain: 2505 NORTH EAST EXPJourney Date: 12-12-2008Finally, here comes d last sessiona"
+      },
+      {
+        "id": "iiitd_01142",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Requested service has been activated on your number. Since your phone does not support download of settings,  pls call 12118 for help on manual configuration of settings"
+      },
+      {
+        "id": "iiitd_01699",
+        "orig": "spam",
+        "suggested": null,
+        "text": "No worries. Get TRAIN details like latest PNR status, Arrival/Departure timings,  Train Time Table,  Fare & Seat availability by SMS. Type RAIL and SMS it to 139"
+      },
+      {
+        "id": "iiitd_01908",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Mobile Office & MMS settings have been successfully delivered on your phone! Now you can access Airtel Live by long pressing '0' key on Nokia. On other Phones launch Internet Brows"
+      },
+      {
+        "id": "iiitd_01066",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Rs20 ke paper recharge mein full talktime. Talktime sabhi ISD,  Local aur STD calls ke liye 2 din tak manya. Balance talktime jaanne ke liye dial karein *123*5#."
+      },
+      {
+        "id": "iiitd_00779",
+        "orig": "ham",
+        "suggested": null,
+        "text": "Indian railways servers are very busy. Please try after some time.Tip: get mcx spot commodity prices; send HELP MCX to learn more."
+      },
+      {
+        "id": "iiitd_01051",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Rs444 ka Full talktime Rs444 ke recharge pe! Talktime validity-30din,  sabhi calls ke liye manya. Balance ke liye call keejiye *123*5#(muft). Offer 15-Jan-10 tak"
+      }
+    ],
+    "HARASS": [
+      {
+        "id": "iiitd_01488",
+        "orig": "spam",
+        "suggested": null,
+        "text": "ork with the Live Project of MNC.Earn Rs.7000/-m.SMS sending Job from Home. Call? 9609791352 or 9933042936.www.cyberjob.in-Sent 4rm 160by2.co"
+      },
+      {
+        "id": "iiitd_01038",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Window-Pains For Prior?,Matt Prior smashed a window because he was run-out! Want to know more? ^Yes/No\nAll your replies to Blyk on Aircel are free."
+      },
+      {
+        "id": "iiitd_01034",
+        "orig": "spam",
+        "suggested": null,
+        "text": "New Music!,The latest, hottest dance music album, 'Ultimate Dance 2011', has released! Want a sample?\n^YES\nReply to get a music clip. Replies to Blyk on Aircel are always free."
+      },
+      {
+        "id": "iiitd_01601",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Tallest Waterfall,Can you guess the name of the tallest waterfall in India as well as Asia?\n1) Pawa Waterfall\n2) Jog Waterfall\n3) Sultan Garh Waterfall\n^1/ 2/ 3\nReply within 24 hrs"
+      },
+      {
+        "id": "iiitd_01035",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Chikni Chameli,Who?s the item girl in the song ?Chikni Chameli? from Agneepath?\n1) Kareena\n2) Katrina\n3) Malaika\n^1/ 2/ 3\nReply within 24 hrs to know who Chikni Chameli is."
+      },
+      {
+        "id": "iiitd_01556",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Big B's Films Remade!,Two of Amitabh Bachchan's famous old films - Satte Pe Satta & Agneepath - are being remade this year. Which of the two new versions would you see first?\n1) Sa"
+      },
+      {
+        "id": "iiitd_01523",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Bravo to Lara,Is Darren Bravo the new Brian Lara? ^Yes/ No\nReply within 24 hrs to get a\nvideo FREE from Blyk on Aircel."
+      },
+      {
+        "id": "iiitd_01856",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Bizarre!,What do you think this is? (Refer to the picture)\n1)TV\n2) Mobile Phone\n3) Computer\n^1/2/3\nReply within 24hrs to know more about this bizarre gadget."
+      },
+      {
+        "id": "iiitd_01286",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Property Bhi Aapki Rent Bhi Aapka, Invest Rs 17k Lacs in Fully Furnished Office Spaces & Earn Rs 17k per Month Wid Bank Guarantee, Noida Cont.9990584817"
+      },
+      {
+        "id": "iiitd_01020",
+        "orig": "spam",
+        "suggested": null,
+        "text": "Who Are They?,Test your comic knowledge: Snowy, Captain Haddock, and Professor Calculus are characters in which famous comic series?\n1) Tintin\n2) Tinkle\n3) Nagraj\n^1/2/3\nReplies to"
+      }
+    ]
+  },
+  "原spam却标事务": [
+    {
+      "id": "iiitd_01050",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Rs444 ka Full talktime Rs444 ke recharge pe! Talktime validity-30din,  sabhi calls ke liye manya. Balance ke liye call keejiye *123*5#(muft). Offer 07-Feb-10 tak"
+    },
+    {
+      "id": "iiitd_01051",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Rs444 ka Full talktime Rs444 ke recharge pe! Talktime validity-30din,  sabhi calls ke liye manya. Balance ke liye call keejiye *123*5#(muft). Offer 15-Jan-10 tak"
+    },
+    {
+      "id": "iiitd_01059",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Rs275 ka Full Talktime Rs275 ke recharge pe! Talktime ki validity 21din,  sabhi calls ke liye manya. Balance ke liye dial karein *123*5#(muft). Offer 31-Jan tak."
+    },
+    {
+      "id": "iiitd_01066",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Rs20 ke paper recharge mein full talktime. Talktime sabhi ISD,  Local aur STD calls ke liye 2 din tak manya. Balance talktime jaanne ke liye dial karein *123*5#."
+    },
+    {
+      "id": "iiitd_01071",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Rs111 ka Full talktime Rs111 ke recharge par! Yeh talktime Local, STD aur ISD calls ke liye 11 din tak manya hai. Balance ke liye call *123*5# (toll-free)"
+    },
+    {
+      "id": "iiitd_01142",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Requested service has been activated on your number. Since your phone does not support download of settings,  pls call 12118 for help on manual configuration of settings"
+    },
+    {
+      "id": "iiitd_01143",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Request timed out. Code=934 Tid=020003436559"
+    },
+    {
+      "id": "iiitd_01144",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Request timed out. Code=934 Tid=020003436080"
+    },
+    {
+      "id": "iiitd_01200",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Recharge Alert from MTS: Validity of expiry on your MTS Data Card has already EXPIRED. Recharge with monthly STVs to continue usage - MTS"
+    },
+    {
+      "id": "iiitd_01202",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Recharge Alert from MTS : Validity of expiry on your MTS Data Card has already EXPIRED. Recharge with monthly STVs to continue usage - MTS"
+    },
+    {
+      "id": "iiitd_01313",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "With airtel 3G watch over 90 TV channels across Entertainment, Sports, Music, News on your phone- http://apalyaps15.com/tv/TV.jsp .To activate 3G, SMS 3G to 121"
+    },
+    {
+      "id": "iiitd_01321",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "With airtel 3G, play exciting multi-player games and compete with your friends- http://203.115.122.82/?src=mgames&route=games. To activate 3G, SMS 3G to 121."
+    }
+  ],
+  "AD却像骚扰": [
+    {
+      "id": "iiitd_01203",
+      "label": "AD",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "Receive money through mobile banking. Provide mobile no+MMID (9002158) for your a/c XXXXXXX9424 to remitter. For info call 1800-11-2211/visit www.sbi.co.in"
+    }
+  ],
+  "TXN短句无事务信号": [
+    {
+      "id": "iiitd_01610",
+      "label": "TRANSACTION",
+      "orig": "spam",
+      "suggested": null,
+      "annotator": "manual",
+      "text": "o to http://m.google.co.in?dc=gnt on your device's browse"
+    }
+  ]
+}

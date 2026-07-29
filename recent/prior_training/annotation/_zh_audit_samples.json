@@ -1,0 +1,1040 @@
+{
+  "_meta": {
+    "path": "C:\\Users\\woshinibaba\\Documents\\oppo的项目\\Android_SMS_Classifier\\training\\data\\interim\\annotation\\zh_all_suggested.csv",
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "binary_label",
+      "suggest_reason",
+      "label",
+      "annotator",
+      "template_group",
+      "notes"
+    ],
+    "total": 9817,
+    "label_dist": {
+      "NEEDS_REVIEW": 1775,
+      "TRANSACTION": 2186,
+      "AD": 4282,
+      "FRAUD": 599,
+      "HARASS": 975
+    },
+    "annotator_dist": {
+      "": 9817
+    },
+    "empty_label": 0,
+    "invalid_label": 0,
+    "invalid_examples": [],
+    "usable_four_class": {
+      "TRANSACTION": 2186,
+      "AD": 4282,
+      "HARASS": 975,
+      "FRAUD": 599
+    },
+    "needs_review": 1775,
+    "issue_counts": {
+      "TXN短句且无事务词": 101,
+      "AD却有诈骗硬信号": 55,
+      "TXN却有诈骗硬信号": 9,
+      "AD却像灰产贷款/发票": 8,
+      "FRAUD却像普通OTP": 4,
+      "TXN却索要/转发验证码": 4
+    }
+  },
+  "TXN却有诈骗硬信号": [
+    {
+      "id": "zh_00060",
+      "label": "TRANSACTION",
+      "binary_label": "1",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "亲爱的常常思念，您购买的第2013057期双色球已中奖，奖金为10.00元。请登录财付通彩票查看详情。【财付通】"
+    },
+    {
+      "id": "zh_00768",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014024期实战9+3专家推荐:红球02,07,08,11,,17,18,25,27,32；蓝球04,09,15。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_01187",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014088期实战9+3专家推荐:红球02,07,08,11,,17,18,25,27,32；蓝球04,09,15。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_04215",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014087期实战9+3专家推荐:红球02,07,08,11,,17,18,25,27,32；蓝球04,09,15。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_04338",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "social-engineering-pattern",
+      "annotator": "",
+      "text": "【EL】[艺龙]5月23日浙江宾馆担保金额698元,预计当日或次日解冻,如有疑问请咨询发卡行"
+    },
+    {
+      "id": "zh_06721",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014025期实战9+3专家推荐:红球02,07,08,11,,17,18,25,27,32；蓝球04,09,15。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_07800",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "工商银行提示您：近期冒充“公检法、工商税务”人员办案，以及电话欠费、歌华有线欠费、邮局信件未取等诈骗的电话频发，不管对方在电话里提出什么理由，只要涉及到网上银行或转账等方面内容，请您坚守“不信”的原则，以防上当受骗。【工商银行】"
+    },
+    {
+      "id": "zh_09080",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "【大众点评】 亲爱的会员，恭喜您获得大众点评5.0元抵用券，马上用此手机号购买团购吧。http://dpurl.cn/m/coupon 【大众点评】"
+    },
+    {
+      "id": "zh_09476",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "恭喜您获得双金刷卡促动活动积分，回复@525#证件后四位可抽奖新秀丽电脑包、乐扣保鲜盒提袋套装。系统将使用您本活动全部积分为您运行3次抽奖并告知您抽奖结果，2月28日前回复有效。[招商银行]"
+    }
+  ],
+  "AD却有诈骗硬信号": [
+    {
+      "id": "zh_00108",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "social-engineering-pattern",
+      "annotator": "",
+      "text": "【易方达】尊敬的姜燕北，股民的余额理财，可交易的159001！易方达保证金货币基金无论买入或申购，当日均可卖出或赎回。投资者申购新股前，可卖出或赎回159001，资金马上可打新；新股资金解冻后，可买入或申购159001追求增值！基金有风险，详询4008818088。"
+    },
+    {
+      "id": "zh_00319",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014018期实战9+3专家推荐:红球02,05,08,09,12,17,20,24,27；蓝球01,08,10。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_00590",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "9.9元就能洗车、看电影？没错！中行客户点击bjzh.beway.cn，支付9.9元即可100％中奖，奖品先到先得。详询95566【中国银行】"
+    },
+    {
+      "id": "zh_00766",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014032期实战9+3专家推荐:红球01,04,05,13,14,18,22,25,31；蓝球01,05,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_00979",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014085期实战9+3专家推荐:红球01,03,08,12,17,18,25,26,27；蓝球03,09,12。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_01102",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014029期实战9+3专家推荐:红球09,13,14,15,22,23,26,28,31；蓝球02,11,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_01139",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014039期实战9+3专家推荐:红球08,09,12,19,20,21,23,29,30；蓝球08,09,11。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_01183",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014030期实战9+3专家推荐:红球09,13,14,15,22,23,26,28,31；蓝球02,11,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_01341",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014033期实战9+3专家推荐:红球01,04,05,13,14,18,22,25,31；蓝球01,05,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_01979",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014094期实战9+3专家推荐:红球05,08,12,15,22,23,28,29,32；蓝球02,09,11。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_02030",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014080期实战9+3专家推荐:红球08,09,18,19,22,23,25,31,32；蓝球05,07,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_02151",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014035期实战9+3专家推荐:红球01,08,12,14,22,23,24,26,32；蓝球01,04,07。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_02346",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014030期实战9+3专家推荐:红球09,13,14,15,22,23,26,28,31；蓝球02,11,14。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_02417",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "spam-link-promo-candidate",
+      "annotator": "",
+      "text": "杭州无线城市老用户您好！杭州移动特赠送你超值大礼包一份！点击领取 http://wap.zjicity.com/wxcs/4vTdim"
+    },
+    {
+      "id": "zh_02482",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "【中福在线送大礼】买福彩就是做慈善!2013年5月20日至6月16日,每天10:00--14:00点,在深圳福彩中心各直营销售厅参与中福在线竞赛,有机会中奖金再拿奖品,每天赠送价值500元加油卡及电影票多名。各直营厅地址详见http://www.szlottery.org/,详情咨询福彩中心各直营厅电话。"
+    },
+    {
+      "id": "zh_02501",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014036期实战9+3专家推荐:红球01,08,12,14,22,23,24,26,32；蓝球01,04,07。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动和包彩票】"
+    },
+    {
+      "id": "zh_03050",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014021期实战9+3专家推荐:红球01,10,17,19,20,22,24,26,28；蓝球10,11,13。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    },
+    {
+      "id": "zh_03155",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "抢红包的机会又来了！登录 new.tmall.com，天猫新风尚红包疯抢中，T2/T3会员中奖率翻3倍。春装新品5折起！【天猫】"
+    },
+    {
+      "id": "zh_03341",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "[139邮箱]邮件：[领奖通知]中国移动免费赠您50条短信，回复A立即领取，或登录mail.10086.cn使用，精彩短信专题，还可定时发送"
+    },
+    {
+      "id": "zh_03392",
+      "label": "AD",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "双色球 第2014019期实战9+3专家推荐:红球09,10,18,20,21,24,26,32,33；蓝球01,08,10。上述内容仅供参考，不保证中奖。双色球自选回“S#投注号码*倍数”（投注号码为6个红球1个蓝球，多注用#隔开，最大为5注）。帮助回H。本期截止时间为19:23，22:00后回复购买下期。【中国移动手机彩票】"
+    }
+  ],
+  "TXN短句且无事务词": [
+    {
+      "id": "zh_00218",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "(2/2)接检票乘车或换取纸质车票后乘车。【铁路客服】"
+    },
+    {
+      "id": "zh_00253",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "(2/2)存入足额款项，感谢您的配合！交通银行【交通银行】"
+    },
+    {
+      "id": "zh_00349",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "订单状态更新：已安排阿姨，如有变更请随时联系客服小妹【阿姨帮】"
+    },
+    {
+      "id": "zh_00595",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "1 套餐及固定费：138.00元"
+    },
+    {
+      "id": "zh_00671",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "最迟缴费日为10月4日"
+    },
+    {
+      "id": "zh_00706",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "快递到了，到一层取下，申通"
+    },
+    {
+      "id": "zh_00713",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "接上:款无须理会。详情请登录信用卡网站。【浦发银行】"
+    },
+    {
+      "id": "zh_00730",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "40元数据流量套餐（4G）：40.00元"
+    },
+    {
+      "id": "zh_00735",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "最迟缴费日为05月4日"
+    },
+    {
+      "id": "zh_00874",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "你的快递到了，到收发室取下申通"
+    },
+    {
+      "id": "zh_01010",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "您好，京东商城，您来收发室取一下快递好吧！"
+    },
+    {
+      "id": "zh_01043",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "普通账户余额（元）：-86.99"
+    },
+    {
+      "id": "zh_01215",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "【支付宝】(2/2) d.alipay.com/z"
+    },
+    {
+      "id": "zh_01553",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "【21cake】会员通知：七夕订单，如遇台风延误，请在室内稍待。"
+    },
+    {
+      "id": "zh_01716",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "58元300分钟语音套餐（4G）：58.00元"
+    },
+    {
+      "id": "zh_01750",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "88商旅88套餐：88.00元"
+    },
+    {
+      "id": "zh_01760",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "(2/2)尽快换取纸质车票。【铁路客服】"
+    },
+    {
+      "id": "zh_01784",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "(2/2)存入足额款项，感谢您的配合！交通银行【交通银行】"
+    },
+    {
+      "id": "zh_01815",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "全球通套餐专属短信包：10.00元"
+    },
+    {
+      "id": "zh_01902",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "normal-unclear",
+      "annotator": "",
+      "text": "接上:款无须理会。详情请登录信用卡网站。【浦发银行】"
+    }
+  ],
+  "FRAUD却像普通OTP": [
+    {
+      "id": "zh_02865",
+      "label": "FRAUD",
+      "binary_label": "1",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "恭喜您被浙江卫视《中国梦想秀》栏目组抽选为场外幸运用户，荣获梦想基金和苹果笔记本电脑。请登入www.mxxbn.com领取，验证码5188"
+    },
+    {
+      "id": "zh_04434",
+      "label": "FRAUD",
+      "binary_label": "1",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "恭喜你被浙江卫视《中国梦想秀》栏目组抽选为场外幸运用户，荣获梦想基金和苹果笔记本电脑。请登录mxxjz.com领取，验证码5188"
+    },
+    {
+      "id": "zh_04520",
+      "label": "FRAUD",
+      "binary_label": "1",
+      "suggest_reason": "account/order/auth/logistics-result",
+      "annotator": "",
+      "text": "恭喜您被浙江卫视《中国梦想秀》栏目组抽选为场外幸运用户，荣获梦想基金和苹果笔记本电脑。请登录www.mxfcv.com查收,验证码：5188"
+    },
+    {
+      "id": "zh_05933",
+      "label": "FRAUD",
+      "binary_label": "1",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "您的手机已被《中国最强音》抽选为场外幸运号，己获奖金9.8万元及苹果笔记本，登陆www.zgzqyf.com领取验证码0968"
+    }
+  ],
+  "TXN却索要/转发验证码": [
+    {
+      "id": "zh_04738",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "【腾讯科技】你的微信帐号deeplyfun申请找回微信帐号密码，回执单号91164425好友辅助验证码验证码312414请通知2位以上好友把验证码发送到你的微信。查询进度请访问http://url.cn/UZI9YR"
+    },
+    {
+      "id": "zh_06727",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "您的验证码是：98030。请不要把验证码泄露给其他人。【脸脸】"
+    },
+    {
+      "id": "zh_09289",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "【来往】556354 (来往验证码) 为了保护您的帐号安全，您不要把验证码透露给别人。"
+    },
+    {
+      "id": "zh_09530",
+      "label": "TRANSACTION",
+      "binary_label": "0",
+      "suggest_reason": "fraud-intent-keywords",
+      "annotator": "",
+      "text": "【来往】069108 (来往验证码) 为了保护您的帐号安全，您不要把验证码透露给别人。"
+    }
+  ],
+  "AD却像灰产贷款/发票": [
+    {
+      "id": "zh_05580",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "merchant-promo",
+      "annotator": "",
+      "text": "你好，我行为企业，个人提供小额贷款，方便快捷，当天放款，有意详询，13925512927杨经理。"
+    },
+    {
+      "id": "zh_06243",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "spam-unclear",
+      "annotator": "",
+      "text": "生意贷.信用贷.抵 押贷.企业经营贷.本地村民贷，银行下款，银行利率，一站式服务，欢迎来电13825289685(张经理）请保留备用【融资】"
+    },
+    {
+      "id": "zh_07850",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "merchant-promo",
+      "annotator": "",
+      "text": "你好，我行为企业，个人提供小额贷款，方便快捷，当天放款，有意详询，13925571726杨经理。"
+    },
+    {
+      "id": "zh_07976",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "collection/gray/adult/gambling",
+      "annotator": "",
+      "text": "代办银行房产抵押贷款;抵押房二次贷款，最高可贷8成;无抵押装修贷款（3天放款）与银行签约并直接放款！电话58600870【百恩克贷款】"
+    },
+    {
+      "id": "zh_08243",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "merchant-promo",
+      "annotator": "",
+      "text": "平安产险助您轻松获取农业银行无抵押贷款。额度高放款快！详询徐经理13368188779如打扰敬请谅解(资金不得用于股市房市等领域)中国平安[福肯机电]"
+    },
+    {
+      "id": "zh_08284",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "merchant-promo",
+      "annotator": "",
+      "text": "平安银行“新一贷”，快速为您解决消费、经营资金需求，无抵押免担保，手续简便，最高可贷50万，详询13528839645【平安银行】"
+    },
+    {
+      "id": "zh_10471",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "collection/gray/adult/gambling",
+      "annotator": "",
+      "text": "中信贷款 （1-50w) 无抵押 免担保  年利15 门坎低 下款快 让你从此不再为资金而烦恼 需要请联系：18725116712刘经理"
+    },
+    {
+      "id": "zh_10666",
+      "label": "AD",
+      "binary_label": "1",
+      "suggest_reason": "merchant-promo",
+      "annotator": "",
+      "text": "你好，我行为企业，个人提供小额贷款，方便快捷，当天放款，有意详询，13925571726杨经理。"
+    }
+  ],
+  "_random_per_class": {
+    "NEEDS_REVIEW": [
+      {
+        "id": "zh_07828",
+        "text": "泉州市鲤城区妇幼保健院,电话:22985240,地址:九一路龙宫巷15号,更多查询编辑短信发送至118114,查号、天气、股票、彩票、星座、笑话、歌词轻松搞定",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_01664",
+        "text": "美媒曝光中国地下空军:不可战胜[搜狐]-中国移动冲浪助手:http://go.10086.cn/nd/mgp/VCUxh",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_00411",
+        "text": "四川3名儿童高速公路旁扔石头 4车遇袭致1死2伤。详情点击:http://news.qq.com/a/20130419/000255.htm",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_09098",
+        "text": "修改密码#13811168809#JYB1109e",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_03752",
+        "text": "亲，我看明天上午他有个会能不能早些结束，如果可以，我给你电话。：）【王然】",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_03383",
+        "text": "网友总结公交车易走光的5个座位[搜狐]-中国移动冲浪助手:http://go.10086.cn/nd/mbV/nwbos",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_03154",
+        "text": "房屋出租：位于华安一中体育场后面华鑫小区整幢5层套房出租，楼房全部新建精装修，有意者详询：13959665983【华福】",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_02089",
+        "text": "【招商证券】财富收盘版：指数冲高回落收出中阴线，量能有所放大表明前期获利盘离场，综合判断短期继续调整可能性较大。投资建议仅供参考。",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_09026",
+        "text": "新华快讯：外交部今宣布，习近平将出访特立尼达和多巴哥、哥斯达黎加、墨西哥三国，并于6月7日至8日在美国会晤奥巴马。 www.xhqm.cn",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_01499",
+        "text": "周立波李咏不和视频遭曝光，女神朱莉为防癌切双侧乳腺。《夏日风情》活动大奖三星GALAXYNoteII、超市券等你拿，赶快行动吧！-新华E刊http://zsjc.bj.monternet.com/xh1",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_08256",
+        "text": "纸袋碰腿北京2孕妇地铁内互殴[人民]-中国移动冲浪助手:http://go.10086.cn/nd/mh3/sjlzH",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_09085",
+        "text": "嘿~小伙伴向你（尾号8809）发起匿名聊天：*那*。是表白？点 http://msk.cm/xaPC1hZz 看详情【马赛克】",
+        "binary_label": "0",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_06704",
+        "text": "纸袋碰腿北京2孕妇地铁内互殴[人民]-中国移动冲浪助手:http://go.10086.cn/nd/mh9/Tp2l0",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_01279",
+        "text": "【招商证券】短线建议关注信邦制药002390、中体产业600158.沪港通推出前大盘风险不大。个人观点仅供参考15811535171、82498086.--胡东升[回B退订]",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_07226",
+        "text": "【朝阳国税】尊敬的纳税人(110105792111373):警方通报犯罪分子利用木马病毒盗取QQ号等企业信息后，冒充领导要求汇款或冒充对方单位骗取交易款。朝阳国税提醒汇款时请核实真伪。",
+        "binary_label": "0",
+        "suggest_reason": "fraud-intent-keywords"
+      }
+    ],
+    "TRANSACTION": [
+      {
+        "id": "zh_08758",
+        "text": "尾号1707信用卡11月5日19:03消费人民币16944.00元，分12期还款回复JYFQ（空格）3083（空格）170/待续【浦发银行】",
+        "binary_label": "0",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_00705",
+        "text": "（接上条）立即回复#FQ#899907即可将您此笔4,028.40元交易分6期偿还，每期本金671.40元，每期手续费30.21元。[招商银行]",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_00668",
+        "text": "您尾号7544卡25日19:07工商银行收入2,607元。【工商银行】",
+        "binary_label": "0",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_01947",
+        "text": "【携程网】【回复0000可屏蔽】订单1082986996已出票【欧文盛】8月24日 08:25-10:50 海南航空 HU7604 上海虹桥T2-北京首都T1，总金额875.00元（含保险）。建议提前90分钟到机场办理值机登机手续。成行后5天内您会收到报销凭证。您还可以登录 [ http://t.ctrip.cn/ai1KGG ] 操作值机选座、改期退票。携",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_04516",
+        "text": "您好！截至到2014年09月24日14时53分，您已使用数据流量295.71MB，其中套餐外流量8.88MB，已产生套餐外流量费用4.54元，套餐内剩余流量83.17MB，感谢您使用流量查询服务。中国移动",
+        "binary_label": "0",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_04818",
+        "text": "抱歉，预订失败！ 04月13日 12:30 四叶(三里屯店)的店小二正在打瞌睡，试试其他餐厅吧~【大众点评】",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_10388",
+        "text": "\"截止到2014年07月15日，您的帐户当月可用余额为0.00元。",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_00563",
+        "text": "查询余额服务：您的账户余额为35.20元，移动官网充值（ www.10086.cn）优惠便捷。感谢您的使用，中国移动。",
+        "binary_label": "0",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_04096",
+        "text": "【阿姨帮】亲爱的阿姨帮会员，您10月21日的家庭保洁服务消费50元。我们会在2小时后将款项扣除，如有疑问请拨打客服热线：400-000-9898。",
+        "binary_label": "0",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_08709",
+        "text": "语音信箱提醒您： 福建漳州的18060266879在10月21日10时28分给您来电并留言，拨打 1259950034 免费收听完整留言。",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_04572",
+        "text": "您尾号7544卡25日11:54网上银行支出(消费)6,380元。【工商银行】",
+        "binary_label": "0",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_09261",
+        "text": "\"截止到2014年04月15日，您的帐户当月可用余额为0.00元。",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_05639",
+        "text": "尊敬的用户您好,您报修的 11184923故障已受理成功,我们会尽快安排人员进行故障处理,若有问题请及时拨打10000与我们联系.",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_00164",
+        "text": "查询余额服务：您总账户余额为116.76元。详情为：主账户余额116.76元，副账户余额0.00元。温馨提示：主、副账户余额根据您账户进账和消费情况计算得出，所有消费（除通信账户支付业务或其他约定费用外）优先从副账户扣减。移动官网充值（ www.10086.cn），便捷安全，支持网银、支付宝、财付通等，更有超值折扣优惠，还可查询更多话费及产品信息。感谢您的使",
+        "binary_label": "0",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_03297",
+        "text": "您好！您于2014年12月24日14时19分54秒，使用易充值服务为本机充值30.00元，当前余额136.90元。中国移动",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      }
+    ],
+    "AD": [
+      {
+        "id": "zh_08977",
+        "text": "2000元抢占建业华宅！5月22日【建业十八城】二期88-176平建业会员招募启动，入会即享钜惠另享日增值200元2678888【信息服务】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_07231",
+        "text": "东鑫丰田6岁啦！感谢一路有您的陪伴，真情大回馈2.5凯美瑞只要十万即可开走！两年免利息！塘厦东鑫丰田82080777【大东集团】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_05930",
+        "text": "快乐学习50位一线名师接受预约，助您轻松战胜期末考，来电即有机会获赠期末考前名师6课时一对一辅导及6个月全科晚陪读，88318311",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_03123",
+        "text": "【买4G就上10010.com】\"",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_04425",
+        "text": "您只需48万就能享受海外一线海景精装房，享大马永久产权，移民、自住是您最佳选择，千万别错过！贵宾热线：021-31750959",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_07166",
+        "text": "美国移民革新，先获批，后募资，移民局模范认证项目【旧金山猎人角新城】，纽交所上市公司开发！周六2时林和中路威斯汀酒店橙厅87327682汇加",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_02049",
+        "text": "亲，富安娜家纺2013家居节即日开幕，打造365天的精致假日生活！人气天丝夏被先到先得，详情咨询官方UUCARD.CN！【优悠传媒】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_01851",
+        "text": "置业新城区，首选大悦城。一期实景逐步呈现，准现房，零风险入住，多样现房，南北通透，更有82-126平经典户型供您选择，详询6191000",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_08082",
+        "text": "俯瞰森林公园的国际豪宅【同进君望】，昆山唯一纯平层住区，首发158-269平户型，大尺度、多阳台、多套房。顶级贵宾专享特惠57099999",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_01931",
+        "text": "尊敬的客户您好：我行现推出代理类保本型理财产品精选1号（产品无募集期，当天购买，第二天起息），产品期限2年，收益4.33-6，起购金额为5万/100万/300万起，详情请咨询：63883069！【兴业银行宁波分行】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_07625",
+        "text": "??【快的打车】当下最火爆的打车神器来西安啦！打不到车 ？神器在手，不怕不怕啦??????一键约车，随叫随到！??成功打车后分享至微博就有10元话费！??免费下载??让我为您服务吧???http://wdl.so/BeiVfybq",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_07309",
+        "text": "【苏宁】11至15日，狂享苏宁易购双十二时光盛典，保暖内衣买2付1，知名品牌皮带9.9元抢购，众多好货猛戳： t.cn/R7Ngkam",
+        "binary_label": "0",
+        "suggest_reason": "normal-unclear"
+      },
+      {
+        "id": "zh_05603",
+        "text": "宅男女神柳岩倾力推荐灵犀车载版本上线啦，即日起至5月31日，下载和更新就有机会获得三星note2以及柳岩签名礼品，点击 http://lingxi.voicecloud.cn 下载，中奖查询请关注灵犀官方微博。",
+        "binary_label": "1",
+        "suggest_reason": "fraud-intent-keywords"
+      },
+      {
+        "id": "zh_00862",
+        "text": "缴1999元送品牌电动车一辆+3.5寸智能手机+1299元话费，地址：亿方园小区原化纤厂北500米联通营业厅，咨询电话 5069280",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_09764",
+        "text": "专业复古磁砖品牌【长谷磁砖】20周年庆，5月25-26日南京首届团购盛会火热报名中,盛会抢购进行中,全场所有产品直降40，错过这次，再等一年！电话：18013932385万达金陵国际家居二楼,更多详请点击：http://b1426115.xici.net【长谷磁砖】",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      }
+    ],
+    "FRAUD": [
+      {
+        "id": "zh_09841",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_02865",
+        "text": "恭喜您被浙江卫视《中国梦想秀》栏目组抽选为场外幸运用户，荣获梦想基金和苹果笔记本电脑。请登入www.mxxbn.com领取，验证码5188",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_07294",
+        "text": "公司今日下午尾盘进300223北京君正，明日早盘拉高出货勿追。下午将再次巨资打造下只牛股，合作热线：15902774455【鑫泰投资】",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_01764",
+        "text": "尊敬会员：提供2013年湖北特 岗教师与农村义务教 育教师稳 妥资 源，错过我们，再等一年，可后付,腾 讯号： 61540928【考务网】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_10113",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_05705",
+        "text": "贺上周五建仓【中远航运】今早涨幅高达7个点！前建【北辰实业】继周五涨停后今再度涨5个点！散户预约午盘布局内线4006332798【金源基金】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_06947",
+        "text": "不做巴菲特，不做索罗斯，只做涨T板，南易涨T板俱乐部马上将要埋伏在连续三个涨停板的个股，领先一步，步步领先！4006547800【南易基金】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_10656",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_03964",
+        "text": "今日带学员建【300223北京君正】明早盘拉高抛出，为了公司和客户共同盈利，明午盘继续建仓个股。合作专线0752-8475391【鑫光投资】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_01579",
+        "text": "考前喜讯;2013年浙江造价员考前原题.零基础.只需2小时轻松应对Q;847482558可考后付电话;13261822826【新东方教育】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_01218",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_04479",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_05644",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      },
+      {
+        "id": "zh_01765",
+        "text": "华坤基金与其合作伙伴今日尾盘成功带学员共同注入的【300223北京君正】明日将做高抛出，关注勿追。合作专线:400-6989972【华坤】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_04525",
+        "text": "【天上掉下个Iphone5！】通信助手的众亲们，回对应数字设置优先接收的回执精品资讯：2、健康；4体育；6娱乐。成功设置可参与次月Iphone5和1000元话费抽奖。您还可登录 http://v1x.cn/V2X 设置，访问产生的流量费按标准收费。中国移动",
+        "binary_label": "1",
+        "suggest_reason": "account/order/auth/logistics-result"
+      }
+    ],
+    "HARASS": [
+      {
+        "id": "zh_09802",
+        "text": "经营短期周转，月1.5起，3~6个月。银行，年7起。5~30年。直向金融。张经理 15618036640 陆家嘴 浦东南路",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_00922",
+        "text": "加拿大移民重大消息，子女移民年龄即将变更。0元考察70万买房（移民）特大优惠即日启动10项免费，成功之后送金砖4000108678",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_03982",
+        "text": "本公司今天建仓300223 北京君正，明天早盘开市冲高出仓，请重点关注勿追。明天下午建仓专线:4006477286 王老师【元通投 资】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_02857",
+        "text": "移动微博调查:你最喜欢哪个话题？A黄金价格走势，B戛纳电影节，C毕业季，回复参与抽奖，礼品详情http://139url.cn/9jef6g",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_04725",
+        "text": "公司注册2500全包，地址不过年检一千全包，代理记账167元/月网站www.dz126.com黄小姐18925204112【德智企业】",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_06730",
+        "text": "我处提供气枪，猎枪及各类打猎装备《本地现货》有意请电15982044551   QQ1735396839张",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_09379",
+        "text": "今天带学员入(300223北京君正)明日拉绝对精彩,关注勿追!合作双赢才是硬道理!预约明日午盘布入内线0752-8465346【柏乐基金】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_03828",
+        "text": "今天带学员建【300223北京君正】明天早盘拉高抛出，为了公司和客户共同盈利，明天午盘继续建仓金股.合作热线4006479778【鑫光投资】",
+        "binary_label": "1",
+        "suggest_reason": "merchant-promo"
+      },
+      {
+        "id": "zh_01503",
+        "text": "现在买11选5中奖额外送彩金，单注最高奖金580元，别错过！ http://518.qq.com/p?105",
+        "binary_label": "1",
+        "suggest_reason": "fraud-intent-keywords"
+      },
+      {
+        "id": "zh_03899",
+        "text": "有各行业（税--票)代办，需要请联系张生，13535006088，Q_66828692",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_03692",
+        "text": "今天带学员入(300223北京君正)明日拉绝对精彩,关注勿追!合作双赢才是硬道理!预约明日午盘布入内线0752-8467966【东方投资】",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_02014",
+        "text": "尊敬的用户您好，本行可以为你提供资金帮助，年息10，小额免抵押，免担保，当天下款，询：15928847709王主任",
+        "binary_label": "1",
+        "suggest_reason": "collection/gray/adult/gambling"
+      },
+      {
+        "id": "zh_07237",
+        "text": "【手机软件推荐：天下趣闻】一只绵羊跳下悬崖身亡，1500只绵羊随后从同一处悬崖跳下。这是2013年3月发生在土耳其东部城市盖瓦什的一件新鲜事，想知道为什么吗？天下趣闻为你展示出乎意料的世界！点击下载 http://139url.cn/98r6hc",
+        "binary_label": "1",
+        "suggest_reason": "spam-link-promo-candidate"
+      },
+      {
+        "id": "zh_02724",
+        "text": "想知道他人的通 话和短\\信吗?只要提\\供他的号码就可听到他通 话和短信.询:18701749995 何总",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      },
+      {
+        "id": "zh_07639",
+        "text": "民生银行为中小企业主解决资金燃眉之急，联合香港上市公司慧聪网国内首推50万额度法人信贷卡，询15021351994 马拉/慧聪网",
+        "binary_label": "1",
+        "suggest_reason": "spam-unclear"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "seed": 42,
+  "used_distillation": false,
+  "status": "OK",
+  "alpha": 1.0,
+  "beta": 0.0,
+  "temperature": 4.0,
+  "keras_path": "artifacts/student_homework_bootstrap/sms_bytecnn_fp32.keras",
+  "train_count": 10305,
+  "val_metrics": {
+    "accuracy": 0.8791615289765722,
+    "macro_f1": 0.8258489502483665,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9113300492610837,
+        "recall": 0.9024390243902439,
+        "f1": 0.9068627450980392
+      },
+      "AD": {
+        "precision": 0.8964059196617337,
+        "recall": 0.9177489177489178,
+        "f1": 0.906951871657754
+      },
+      "HARASS": {
+        "precision": 0.9411764705882353,
+        "recall": 0.6,
+        "f1": 0.7328244274809161
+      },
+      "FRAUD": {
+        "precision": 0.6666666666666666,
+        "recall": 0.875,
+        "f1": 0.7567567567567567
+      }
+    },
+    "confusion_matrix": [
+      [
+        185,
+        17,
+        0,
+        3
+      ],
+      [
+        14,
+        424,
+        3,
+        21
+      ],
+      [
+        2,
+        26,
+        48,
+        4
+      ],
+      [
+        2,
+        6,
+        0,
+        56
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 811
+  }
+}

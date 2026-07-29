@@ -1,0 +1,206 @@
+{
+  "zh": {
+    "file": "zh_all_suggested.csv",
+    "n": 9817,
+    "label_dist": {
+      "NEEDS_REVIEW": 1790,
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    },
+    "annotator_top": {
+      "audit_fixpass": 9817
+    },
+    "n_devanagari": 0,
+    "n_cjk": 9795,
+    "critical_count": 2,
+    "warn_count": 13,
+    "issues": {
+      "nonTXN_looks_otp": 1,
+      "zh_missing_cjk": 11,
+      "AD_looks_prize_fraud": 1,
+      "AD_looks_adult_harass": 2
+    },
+    "samples": {
+      "nonTXN_looks_otp": [
+        {
+          "id": "zh_00222",
+          "label": "AD",
+          "binary": null,
+          "text": "您好！办理“欢乐在线商务版”由主号免费发送BLSW到10086，根据系统回复提示选择资费套餐后，系统告知业务验证码及副号加入方式，副号凭业务验证码加入即可。温馨提示：欢乐在线商务版只可通过短信服务厅办理，暂无法在网站或其他渠道办理。中国移动"
+        }
+      ],
+      "zh_missing_cjk": [
+        {
+          "id": "zh_00266",
+          "label": "TRANSACTION",
+          "binary": null,
+          "text": "Hostelworld.com Booking 'FUN-D Hostel Chiang Rai', Ref: 75211-58933945, Starts: 11 Jun 2013, Tel: +66-53712123, Address: 753 Phahonyothin Rd"
+        },
+        {
+          "id": "zh_00483",
+          "label": "AD",
+          "binary": null,
+          "text": "http://iread.wo.com.cn/pps/BjYFBb"
+        },
+        {
+          "id": "zh_00557",
+          "label": "NEEDS_REVIEW",
+          "binary": null,
+          "text": "WOSL8755817768c04d05b88d8f3bd9a90b79-0-309-1"
+        },
+        {
+          "id": "zh_00742",
+          "label": "TRANSACTION",
+          "binary": null,
+          "text": "Use 4463349 as Microsoft account security code"
+        },
+        {
+          "id": "zh_02602",
+          "label": "NEEDS_REVIEW",
+          "binary": null,
+          "text": "http://iread.wo.com.cn/pps/Mfiqum"
+        },
+        {
+          "id": "zh_03055",
+          "label": "NEEDS_REVIEW",
+          "binary": null,
+          "text": "auto##504CFE6BFD##mpc_open_ms_201261526##no"
+        },
+        {
+          "id": "zh_03153",
+          "label": "NEEDS_REVIEW",
+          "binary": null,
+          "text": "http://wap.bj.10086.cn/wap/bill/billfront?\""
+        },
+        {
+          "id": "zh_03443",
+          "label": "NEEDS_REVIEW",
+          "binary": null,
+          "text": "auto##275247082##mpc_zhushou##no"
+        }
+      ],
+      "AD_looks_prize_fraud": [
+        {
+          "id": "zh_03341",
+          "label": "AD",
+          "binary": null,
+          "text": "[139邮箱]邮件：[领奖通知]中国移动免费赠您50条短信，回复A立即领取，或登录mail.10086.cn使用，精彩短信专题，还可定时发送"
+        }
+      ],
+      "AD_looks_adult_harass": [
+        {
+          "id": "zh_04734",
+          "label": "AD",
+          "binary": null,
+          "text": "【外教一对一】纯英文浸泡式环境，一步到位突破外语，成人、小孩想学就学，超低优惠，免费体验02164226007"
+        },
+        {
+          "id": "zh_09949",
+          "label": "AD",
+          "binary": null,
+          "text": "【外教一对一】纯英文浸泡式环境，一步到位突破外语，成人、小孩想学就学，超低优惠，免费体验02164226007"
+        }
+      ]
+    },
+    "verdict": "FAIL"
+  },
+  "en": {
+    "file": "uci_all_suggested.csv",
+    "n": 5574,
+    "label_dist": {
+      "NEEDS_REVIEW": 4815,
+      "AD": 393,
+      "HARASS": 134,
+      "TRANSACTION": 12,
+      "FRAUD": 220
+    },
+    "annotator_top": {
+      "(empty)": 5366,
+      "audit_fixpass_en": 122,
+      "qa_fix_v1": 86
+    },
+    "n_devanagari": 0,
+    "n_cjk": 0,
+    "critical_count": 0,
+    "warn_count": 0,
+    "issues": {},
+    "samples": {},
+    "verdict": "PASS"
+  },
+  "id_yudi": {
+    "file": "id_yudiwbs_all_suggested.csv",
+    "n": 1143,
+    "label_dist": {
+      "AD": 210,
+      "TRANSACTION": 80,
+      "NEEDS_REVIEW": 578,
+      "FRAUD": 236,
+      "HARASS": 39
+    },
+    "annotator_top": {
+      "audit_fixpass_id": 1143
+    },
+    "n_devanagari": 0,
+    "n_cjk": 0,
+    "critical_count": 0,
+    "warn_count": 0,
+    "issues": {},
+    "samples": {},
+    "verdict": "PASS"
+  },
+  "id_ss": {
+    "file": "id_spamshield_all_suggested.csv",
+    "n": 1270,
+    "label_dist": {
+      "NEEDS_REVIEW": 961,
+      "FRAUD": 133,
+      "AD": 117,
+      "HARASS": 59
+    },
+    "annotator_top": {
+      "audit_fixpass_ss": 1270
+    },
+    "n_devanagari": 0,
+    "n_cjk": 0,
+    "critical_count": 0,
+    "warn_count": 0,
+    "issues": {},
+    "samples": {},
+    "verdict": "PASS"
+  },
+  "hi": {
+    "file": "iiitd_all_suggested.csv",
+    "n": 2000,
+    "label_dist": {
+      "NEEDS_REVIEW": 1002,
+      "HARASS": 79,
+      "TRANSACTION": 17,
+      "AD": 889,
+      "FRAUD": 13
+    },
+    "annotator_top": {
+      "manual": 1818,
+      "audit_fixpass_iiitd": 182
+    },
+    "n_devanagari": 0,
+    "n_cjk": 0,
+    "critical_count": 1,
+    "warn_count": 0,
+    "issues": {
+      "ham_forced_fourclass": 1
+    },
+    "samples": {
+      "ham_forced_fourclass": [
+        {
+          "id": "iiitd_00649",
+          "label": "HARASS",
+          "binary": "ham",
+          "text": "I M FROM MTS PLZ SEND UR EMAIL ID.AND UR OTHER COMTECT NO.KHUSHIAnees khan."
+        }
+      ]
+    },
+    "verdict": "FAIL"
+  }
+}

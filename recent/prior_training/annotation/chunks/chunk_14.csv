@@ -1,0 +1,301 @@
+id,text,language,source,uci_binary,label,annotator,template_group,notes
+uci_04200,"cmon babe, make me horny, *turn* me on! Txt me your fantasy now babe -) Im hot, sticky and need you now. All replies cost ¡ê1.50. 2 cancel send STOP",en,uci_sms_spam_collection_v1,spam,HARASS,,53ac2990c386,成人色情内容，要求回复并收取费用，属骚扰推销
+uci_04201,I will come tomorrow di,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0d4a15fd0b30,个人日常简短消息，无法归入四类
+uci_04202,Wylie update: my weed dealer carlos went to freedom and had a class with lunsford,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9862b115d317,私人关于drug dealer的闲聊，非业务信息
+uci_04203,Are you happy baby ? Are you alright ? Did you take that job ? I hope your fine. I send you a kiss to make you smile from across the sea ... *kiss* *kiss*,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,be0cc5b46912,亲密朋友间问候私聊，非业务信息
+uci_04204,C movie is juz last minute decision mah. Juz watch 2 lar but i tot ¨¹ not interested.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,12c6c1134a0e,私人关于电影偏好的闲聊对话
+uci_04205,How are you enjoying this semester? Take care brother.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,97544df013bc,朋友间问候，纯私人聊天
+uci_04206,IMPORTANT INFORMATION 4 ORANGE USER 0796XXXXXX. TODAY IS UR LUCKY DAY!2 FIND OUT WHY LOG ONTO http://www.urawinner.com THERE'S A FANTASTIC PRIZEAWAITING YOU!,en,uci_sms_spam_collection_v1,spam,FRAUD,,03bfa31cd909,伪装运营商虚假中奖通知，含钓鱼链接，典型诈骗
+uci_04207,"Get the door, I'm here",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,75218054172d,日常生活简短通知，私人消息
+uci_04208,"Lets use it next week, princess :)",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,504872c3e8c8,情侣间私下对话，无法归类其他
+uci_04209,Or i go home first lar ¨¹ wait 4 me lor.. I put down my stuff first..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8424253821ac,家人/朋友间的日常位置和安排交流
+uci_04210,I want kfc its Tuesday. Only buy 2 meals ONLY 2. No gravy. Only 2 Mark. 2!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3158752630df,关于购买KFC餐食的私人聊天记录
+uci_04211,No da:)he is stupid da..always sending like this:)don believe any of those message.pandy is a mental:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,503c843ff334,私人对某人的评价讨论，非业务信息
+uci_04212,Oi when you gonna ring,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0edf474897e1,简短通话邀约，非业务信息
+uci_04213,Missed call alert. These numbers called but left no message. 07008009200,en,uci_sms_spam_collection_v1,spam,AD,,df8d2116b15f,未接来电回拨服务推销，属商业广告
+uci_04214,I attended but nothing is there.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,57d76300da1f,简短的私人回复消息
+uci_04215,Ard 530 like dat lor. We juz meet in mrt station then ¨¹ dun haf to come out.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,13e507c5880c,关于地铁约会的日常聊天
+uci_04216,No dear i was sleeping :-P,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e66e43832111,关于睡觉的简短私人消息
+uci_04217,Er mw im filled tuth is aight,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0a6e0185a74d,私人简短消息，好友间的模糊回复
+uci_04218,Will be office around 4 pm. Now i am going hospital.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b184dc234298,关于工作和医院的个人行程告知
+uci_04219,Actually i'm waiting for 2 weeks when they start putting ad.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f953905d07ef,关于广告上线的日常讨论，个人对话
+uci_04220,Anything lor if they all go then i go lor...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7f03638e8e81,关于出行安排的私人聊天
+uci_04221,U free on sat rite? U wan 2 watch infernal affairs wif me n darren n mayb xy?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,55ce7a746553,关于周末看电影邀约的私人社交安排
+uci_04222,"Plz note: if anyone calling from a mobile Co. &amp; asks u to type # &lt;#&gt;  or # &lt;#&gt; . Do not do so. Disconnect the call,coz it iz an attempt of 'terrorist' to make use of the sim card no. Itz confirmd by nokia n motorola n has been verified by CNN IBN.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,97584c7521e1,关于SIM卡与恐怖分子的谣言转发消息
+uci_04223,Yo you around? A friend of mine's lookin to pick up later tonight,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9b4af5df1076,朋友间询问是否在附近的私人社交消息
+uci_04224,Stupid auto correct on my phone,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5b12b0a63df2,关于手机自动纠正的简短私人吐槽
+uci_04225,Double eviction this week - Spiral and Michael and good riddance to them!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e0929c173239,关于节目角色的私人讨论
+uci_04226,"""The world suffers a lot... Not because of the violence of bad people. But because of the silence of good people!"", Gud night....",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,24e639440458,转发的晚安励志格言，非业务信息
+uci_04227,"Ok thats cool. Its , just off either raglan rd or edward rd. Behind the cricket ground. Gimme ring when ur closeby see you tuesday.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e02d82c1de78,关于会面地点的日常生活安排
+uci_04228,Buy one egg for me da..please:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1853bdf037ef,请帮忙买鸡蛋的私人请求
+uci_04229,Have you started in skye,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,89f65f1993fa,简短私人询问消息
+uci_04230,Have you bookedthe hut? And also your time off? How are you by the way?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f7b28df0150e,关于旅行和朋友的问候私人消息
+uci_04231,And several to you sir.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a3bb36057163,简短私人对话回复
+uci_04232,U really pig leh sleep so much. My dad wake me up at 10 smth 2 eat lunch today.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b6eb4a864f70,关于睡眠和午餐的日常聊天
+uci_04233,I'm at home. Please call,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,73fe47bca296,简短私人消息告知在家并要求电话
+uci_04234,My love ... I hope your not doing anything drastic. Don't you dare sell your pc or your phone ...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c58db1b589d1,亲密朋友间的情感对话
+uci_04235,Now only i reached home. . . I am very tired now. . I will come tomorro,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,24ba6f90ea45,关于回家和行程的日常生活消息
+uci_04236,FREEMSG: Our records indicate you may be entitled to 3750 pounds for the Accident you had. To claim for free reply with YES to this msg. To opt out text STOP,en,uci_sms_spam_collection_v1,spam,FRAUD,,c2f8d5e4ff43,伪装事故记录虚假奖金通知，要求回复索取，典型诈骗
+uci_04237,"U can WIN ¡ê100 of Music Gift Vouchers every week starting NOW Txt the word DRAW to 87066 TsCs www.Idew.com SkillGame, 1Winaweek, age16. 150ppermessSubscription",en,uci_sms_spam_collection_v1,spam,AD,,9dfa9052b11f,音乐礼品券订阅促销活动，付费赢取每周100镑
+uci_04238,Life style garments account no please.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3f2aef03481a,简短私人询问关于服装账户
+uci_04239,Lol wtf random. Btw is that your lunch break,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,30fafe897991,私人简短对话片段，难以明确分类
+uci_04240,"Sez, hows u & de arab boy? Hope u r all good give my love 2 evry1 love ya eshxxxxxxxxxxx",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,114e37685c64,恋爱对象间的亲昵问候消息
+uci_04241,"The LAY MAN! Just to let you know you are missed and thought off. Do have a great day. And if you can send me bimbo and ugo's numbers, ill appreciate. Safe",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ad2a21bfe7c1,朋友间关心并问候的私人消息
+uci_04242,Detroit. The home of snow. Enjoy it.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,545f149f12e6,关于底特律天气的简短私人评论
+uci_04243,Show ur colours! Euro 2004 2-4-1 Offer! Get an England Flag & 3Lions tone on ur phone! Click on the following service message for info!,en,uci_sms_spam_collection_v1,spam,AD,,a4d87e10f1d2,欧洲杯促销服务通知，点击获取手机铃声和国旗
+uci_04244,Okie...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a6e73a86ca9d,简短确认回复，私人消息
+uci_04245,"Aight, I'm chillin in a friend's room so text me when you're on the way",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0d07f1ec6330,关于等待探望的朋友间对话
+uci_04246,Is toshiba portege m100 gd?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,865e62418457,关于Toshiba笔记本的简短技术询问
+uci_04247,Well welp is sort of a semiobscure internet thing,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,44e7ffa6d46b,关于某网络梗的简短私人讨论
+uci_04248,Text PASS to 69669 to collect your polyphonic ringtones. Normal gprs charges apply only. Enjoy your tones,en,uci_sms_spam_collection_v1,spam,AD,,c137a397cba2,手机铃声订阅服务促销，收取GPRS费用
+uci_04249,"accordingly. I repeat, just text the word ok on your mobile phone and send",en,uci_sms_spam_collection_v1,spam,AD,,32d2cbd5e685,垃圾短信，要求按指示发送ok字参与订阅
+uci_04250,Loosu go to hospital. De dont let it careless.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,486dd061f6c8,关于去医院的简短私人消息
+uci_04251,How much for an eighth?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f1676d7e8310,询问毒品数量的模糊私人消息
+uci_04252,Omg Joanna is freaking me out. She's looked thru all my friends to find photos of me. And then she's asking about stuff on my MySpace which I haven't even logged on in like a year. :/,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,121053d5a28b,关于朋友翻照片的闲聊
+uci_04253,"Send ur birthdate with month and year, I will tel u ur LIFE PARTNER'S name. and the method of calculation. Reply must.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3aa73a3124a1,命理配对服务宣传，要求提供生日
+uci_04254,Juz now havent woke up so a bit blur blur... Can? Dad went out liao... I cant cum now oso...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,47b74b417c9d,关于睡醒和家人的简短私人消息
+uci_04255,"How about clothes, jewelry, and trips?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,02feea351815,私人关于购物推荐的模糊消息
+uci_04256,Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just ¡ê5 by replying GET BBDELUXE and take the challenge,en,uci_sms_spam_collection_v1,spam,AD,,cb638f84f00a,T-Mobile Block Breaker游戏促销，回复购买豪华版
+uci_04257,Aah! A cuddle would be lush! I'd need lots of tea and soup before any kind of fumbling!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3f105c6ec6e1,恋人间的亲密消息
+uci_04258,important information 4 orange user . today is your lucky day!2find out why log onto http://www.urawinner.com THERE'S A FANTASTIC SURPRISE AWAITING YOU!,en,uci_sms_spam_collection_v1,spam,FRAUD,,d9fe28fe7da2,伪装运营商通知虚假惊喜，含钓鱼链接
+uci_04259,I am late. I will be there at,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c6319f76384d,关于迟到的个人行程消息
+uci_04260,Sad story of a Man - Last week was my b'day. My Wife did'nt wish me. My Parents forgot n so did my Kids . I went to work. Even my Colleagues did not wish.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0de513b60c46,转发的关于生日和人际关系的感人故事
+uci_04261,Are you plans with your family set in stone ?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d74bdc4ed704,关于家庭计划的私人对话
+uci_04262,Pls dont forget to study,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d52ea3f4500b,关于学习的简短私人关心消息
+uci_04263,You'll never believe this but i have actually got off at taunton. Wow,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f4d9cc4007aa,关于到达某车站的简短私人消息
+uci_04264,"Den only weekdays got special price... Haiz... Cant eat liao... Cut nails oso muz wait until i finish drivin wat, lunch still muz eat wat...",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ea947631fd36,关于价格、食物和修指甲的闲聊对话
+uci_04265,She just broke down a list of reasons why nobody's in town and I can't tell if she's being sarcastic or just faggy,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b4666d656eb3,对朋友行为的私人讨论
+uci_04266,&lt;DECIMAL&gt; m but its not a common car here so its better to buy from china or asia. Or if i find it less expensive. I.ll holla,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,efbfd0a06c2f,关于从中国购买汽车的私人讨论
+uci_04267,The greatest test of courage on earth is to bear defeat without losing heart....gn tc,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a5f49fc248b5,转发的励志格言
+uci_04268,SORRY IM STIL FUCKED AFTER LAST NITE WENT TOBED AT 430 GOT UP 4 WORK AT 630,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e4d95cb1ab1d,关于昨晚喝酒的简短私人抱怨
+uci_04269,Hey so whats the plan this sat?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d53ac49cc5f3,关于周六计划的简短私人聊天
+uci_04270,Beauty sleep can help ur pimples too.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5a4cb1f9d73a,关于美容的简短私人推荐
+uci_04271,Great. Hope you are using your connections from mode men also cos you can never know why old friends can lead you to today,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9d68f77f7b9f,关于加强人际关系的私人建议
+uci_04272,Natalja (25/F) is inviting you to be her friend. Reply YES-440 or NO-440 See her: www.SMS.ac/u/nat27081980 STOP? Send STOP FRND to 62468,en,uci_sms_spam_collection_v1,spam,HARASS,,d4511910c11f,成人交友服务推广，邀请回复并可能收费
+uci_04273,Where to get those?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9d2c25eebaac,简短私人询问，含义模糊
+uci_04274,"Kind of. Just missed train cos of asthma attack, nxt one in half hr so driving in. not sure where to park.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9cadcbf4ef94,关于身体不适错过火车的私人消息
+uci_04275,Ball is moving a lot.will spin in last :)so very difficult to bat:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6f2d4be01a3d,关于球类比赛的简短私人评论
+uci_04276,Haiyoh... Maybe your hamster was jealous of million,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,63a5e29fab24,私人消息中开玩笑评论朋友仓鼠
+uci_04277,Can you please send me my aunty's number,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dc523e555dc4,关于发送电话号码的私人请求
+uci_04278,I'm glad. You are following your dreams.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c12268973aa5,朋友间祝福追求梦想的关心消息
+uci_04279,I've reached home finally...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0bc42d9ee048,简短个人行程通知
+uci_04280,"URGENT. Important information for 02 user. Today is your lucky day! 2 find out why , log onto http://www.urawinner.com there is a fantastic surprise awaiting you !",en,uci_sms_spam_collection_v1,spam,FRAUD,,932869a08a3f,伪装运营商虚假奖金通知，含钓鱼链接
+uci_04281,WINNER!! As a valued network customer you have been selected to receivea ¡ê900 prize reward! To claim call 09061701461. Claim code KL341. Valid 12 hours only.,en,uci_sms_spam_collection_v1,spam,FRAUD,,c26743d0df31,虚假中奖900镑，需拨打电话领奖，典型付费诈骗
+uci_04282,"Wn u r hurt by d prsn who s close 2 u, do fight wit dem. Coz somtimes dis fight saves a relation bt being quiet leaves nothin in a relation.. Gud eveB-)",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fecae8460bde,转发的情感人生建议
+uci_04283,U can call now...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f5ba502d0af3,简短私人消息告知可以回电话
+uci_04284,"Science tells that chocolate will melt under the sunlight. Please don't walk under the sunlight. BCoz,I don't want to loss a sweet friend.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,790d3bcb64c0,巧克力笑话转发的私人消息
+uci_04285,Yes. I come to nyc for audiitions and am trying to relocate.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4f03a7bf19bc,关于纽约试听的简短私人消息
+uci_04286,I pocked you up there before,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d25d1c4ee269,含义模糊的私人对话片段
+uci_04287,Congrats. That's great. I wanted to tell you not to tell me your score cos it might make me relax. But its motivating me so thanks for sharing,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e6ebb464a730,朋友间关于成绩分享的对话
+uci_04288,I wud never mind if u dont miss me or if u dont need me.. But u wil really hurt me wen u need me &amp; u dont tell me......... Take care:-),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6f0acf054068,表达个人感情的消息
+uci_04289,Hey mr whats the name of that bill brison book the one about language and words,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2138e4dcb99f,关于一本语言书的简短私人询问
+uci_04290,"Okay, good, no problem, and thanx!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b9aca76ba268,简短的私人确认回复
+uci_04291,"For you information, IKEA is spelled with all caps. That is not yelling. when you thought i had left you, you were sitting on the bed among the mess when i came in. i said we were going after you got home from class. please don't try and bullshit me. It makes me want to listen to you less.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0b534e60397d,私人关于书籍和事件的对话
+uci_04292,Call me when u're done...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,52361af4aada,简短私人通话邀约
+uci_04293,G.W.R,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a98f49252c0e,含义不明的简短首字母缩写私人消息
+uci_04294,You best watch what you say cause I get drunk as a motherfucker,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,93f145585035,关于喝酒后易怒的闲聊消息
+uci_04295,Kit Strip - you have been billed 150p. Netcollex Ltd. PO Box 1013 IG11 OJA,en,uci_sms_spam_collection_v1,spam,AD,,add568bb34d4,商业手机铃声服务计费通知
+uci_04296,HMV BONUS SPECIAL 500 pounds of genuine HMV vouchers to be won. Just answer 4 easy questions. Play Now! Send HMV to 86688 More info:www.100percent-real.com,en,uci_sms_spam_collection_v1,spam,FRAUD,,f4738b21547b,虚假HMV奖金宣传，以回答问题为名骗取个人信息和费用
+uci_04297,Please CALL 08712402578 immediately as there is an urgent message waiting for you,en,uci_sms_spam_collection_v1,spam,FRAUD,,c78fd2ac96fb,虚假紧急消息通知，要求拨打未知付费号码，典型电话诈骗
+uci_04298,thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???,en,uci_sms_spam_collection_v1,spam,AD,,7b6cbb0eecb1,短信匿名发送平台的推广宣传
+uci_04299,"WELL DONE! Your 4* Costa Del Sol Holiday or ¡ê5000 await collection. Call 09050090044 Now toClaim. SAE, TCs, POBox334, Stockport, SK38xh, Cost¡ê1.50/pm, Max10mins",en,uci_sms_spam_collection_v1,spam,FRAUD,,a97f305c7682,虚假中奖旅行或5000镑，包含钓鱼电话和PO Box地址
+uci_04300,Hurt me... Tease me... Make me cry... But in the end of my life when i die plz keep one rose on my grave and say STUPID I MISS U.. HAVE A NICE DAY BSLVYL,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,16657df8f6a4,转发的情感思念类私人消息
+uci_04301,"Erm... Woodland avenue somewhere. Do you get the parish magazine, his telephone number will be in there.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f760f649c8f0,私人关于地址和杂志的询问消息
+uci_04302,Are there TA jobs available? Let me know please cos i really need to start working,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2731d21c88bf,关于求职的简短私人询问
+uci_04303,Aiyar hard 2 type. U later free then tell me then i call n scold n tell u.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,009c1524d272,关于稍后打电话的简短私人消息
+uci_04304,Yup i'm free...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6f95086d2fd9,简短的私人确认回复
+uci_04305,"Good good, billy mates all gone. Just been jogging, again! Did enjoy concert?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5ddaab67f118,朋友间关于锻炼和音乐会的闲聊消息
+uci_04306,Yo come over carlos will be here soon,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b247aa3f7cdc,关于朋友要来见的简短私人消息
+uci_04307,Awww dat is sweet! We can think of something to do he he! Have a nice time tonight ill probably txt u later cos im lonely :( xxx.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1b2115e57547,表达孤单和思念的朋友间关心消息
+uci_04308,I guess it is useless calling u 4 something important.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dbaca05f2c69,含义模糊的私人对话片段
+uci_04309,Ha ha - had popped down to the loo when you hello-ed me. Hello!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,278fc072c777,关于洗手间打招呼的闲聊笑话消息
+uci_04310,He dint tell anything. He is angry on me that why you told to abi.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ae963728e6ef,私人关于朋友间矛盾的讨论
+uci_04311,Someone U know has asked our dating service 2 contact you! Cant Guess who? CALL 09058091854 NOW all will be revealed. PO BOX385 M6 6WU,en,uci_sms_spam_collection_v1,spam,HARASS,,4365e140599b,商业约会服务推广，需付费获取谁联系你的信息
+uci_04312,It so happens that there r 2waxsto do wat you want. She can come and ill get her medical insurance. And she'll be able to deliver and have basic care. I'm currently shopping for the right medical insurance for her. So just give me til friday morning. Thats when i.ll see the major person that can guide me to the right insurance.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4dc8ab174e78,关于私人保险安排的详细讨论
+uci_04313,I keep ten rs in my shelf:) buy two egg.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0837a9b1d0f1,私人请求买鸡蛋的消息
+uci_04314,"I wasn't well babe, i have swollen glands at my throat ... What did you end up doing ?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f8f9e8126886,朋友间关于身体不适的关心消息
+uci_04315,Is ur changes 2 da report big? Cos i've already made changes 2 da previous report.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0d97744eb70a,关于工作报告询问的简短私人消息
+uci_04316,Captain is in our room:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0c1b2b2cf3e8,简短私人消息告知朋友在房间
+uci_04317,"I can't speak, bcaz mobile have problem. I can listen you but you cann't listen my voice. So i calls you later.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e3d5b08da3a0,因手机故障需晚点通话的个人通知消息
+uci_04318,HIYA STU WOT U UP 2.IM IN SO MUCH TRUBLE AT HOME AT MOMENT EVONE HATES ME EVEN U! WOT THE HELL AV I DONE NOW? Y WONT U JUST TELL ME TEXT BCK PLEASE LUV DAN,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c09115577e93,私人情感倾诉消息
+uci_04319,S...i will take mokka players only:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,288774809a8b,简短含义模糊的私人对话
+uci_04320,Are you still playing with gautham?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b5ba7fa05356,询问朋友近况的简短私人消息
+uci_04321,Hey mr  and I are going to the sea view and having a couple of gays I mean games! Give me a bell when ya finish,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2e81aaabadda,关于去海边和游戏的私人社交安排
+uci_04322,"K, jason says he's gonna be around so I'll be up there around  &lt;#&gt;",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a4c6d7cb02bd,简短私人确认消息
+uci_04323,Sorry . I will be able to get to you. See you in the morning.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c27a11d621bb,关于道歉和明天见面的私人消息
+uci_04324,Aight well keep me informed,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,98e1789a3979,简短私人回复
+uci_04325,I am not having her number sir,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,71d5674346ff,简短私人通知没有对方号码
+uci_04326,Am only searching for good dual sim mobile pa.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2643a85044e5,私人搜索手机的简短消息
+uci_04327,That seems unnecessarily hostile,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dbf1ed4c27e4,含义模糊的私人简短消息
+uci_04328,Dude got a haircut. Now its breezy up there,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,37d98c7d1ac8,私人关于理发的简短评论
+uci_04329,"Congrats! 2 mobile 3G Videophones R yours. call 09061744553 now! videochat wid ur mates, play java games, Dload polyH music, noline rentl. bx420. ip4. 5we. 150pm",en,uci_sms_spam_collection_v1,spam,AD,,cc5a1bb8128d,3G视频手机的付费推广服务
+uci_04330,1Apple/Day=No Doctor. 1Tulsi Leaf/Day=No Cancer. 1Lemon/Day=No Fat. 1Cup Milk/day=No Bone Problms 3 Litres Watr/Day=No Diseases Snd ths 2 Whom U Care..:-),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dc22b01263f5,关于健康饮食习惯的转发消息
+uci_04331,i thought we were doing a king of the hill thing there.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,83956d9ebb87,含义模糊的私人简短对话片段
+uci_04332,Nope i'll come online now..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cd5e9fbe8846,简短私人确认消息
+uci_04333,ALSO TELL HIM I SAID HAPPY BIRTHDAY,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3b14e95a680f,传达生日祝福的简短私人消息
+uci_04334,Y bishan lei... I tot ¨¹ say lavender?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0fbc0a735684,关于地名/花名的简短私人讨论
+uci_04335,Boo what time u get out? U were supposed to take me shopping today. :(,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3a5e41a131e2,关于未能去购物的私人抱怨消息
+uci_04336,"Now u sound like manky scouse boy steve,like! I is travelling on da bus home.wot has u inmind 4 recreation dis eve?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b1f8befa9f42,朋友间口音调侃和活动安排的私人消息
+uci_04337,"Fyi I'm taking a quick shower, be at epsilon in like  &lt;#&gt;  min",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7bdfe66f0812,关于洗澡和见面的私人行程安排消息
+uci_04338,on a Tuesday night r u 4 real,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5e0de180e0b5,询问朋友是否真实的简短私人消息
+uci_04339,Yes when is the appt again?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8faa0a0fe71b,询问预约时间的简短私人消息
+uci_04340,Just got outta class gonna go gym.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7940bbc078ef,关于去健身房的简短私人消息
+uci_04341,I want to sent  &lt;#&gt; mesages today. Thats y. Sorry if i hurts,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,84a7b80d6b6f,私人关于消息数量和感情表达的消息
+uci_04342,¨¹ all write or wat..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4537b314e192,含义不明的简短私人消息
+uci_04343,Ha! I wouldn't say that I just didn't read anything into way u seemed. I don't like 2 be judgemental....i save that for fridays in the pub!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,03f6af5977f4,朋友间关于印象的闲聊消息
+uci_04344,Its a valentine game. . . send dis msg to all ur friends. . If 5 answers r d same then someone really loves u. . Ques- which colour suits me the best?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,eb5e49262f0d,要求转发给所有朋友的感情测试连环信
+uci_04345,Hi:)did you asked to waheeda fathima about leave?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,987648cb512f,简短私人询问消息
+uci_04346,Enjoy urself tmr...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ca5368fa072f,简短私人祝福消息
+uci_04347,You still around? I could use a half-8th,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,41538b11c282,询问毒品数量或暧昧含义的私人消息
+uci_04348,U 447801259231 have a secret admirer who is looking 2 make contact with U-find out who they R*reveal who thinks UR so special-call on 09058094597,en,uci_sms_spam_collection_v1,spam,HARASS,,6cf92b09077d,商业暗恋者付费调查服务，需付费获取信息
+uci_04349,You give us back my id proof and  &lt;#&gt;  rs. We wont allow you to work. We will come to your home within days,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8d336526b58a,关于ID和还款的威胁性消息，个人间纠纷
+uci_04350,¨¹ bot notes oredi... Cos i juz rem i got...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6b4d8f7ba606,关于笔记的简短私人确认消息
+uci_04351,Yes. Rent is very expensive so its the way we save.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,96dc5f4cd492,关于租金和开销的私人讨论
+uci_04352,"Night has ended for another day, morning has come in a special way. May you smile like the sunny rays and leaves your worries at the blue blue bay. Gud mrng",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1a315246ee2b,转发的早安祝福诗
+uci_04353,Hows the pain dear?y r u smiling?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7f6a5178d153,关心他人感受的私人消息
+uci_04354,"Fun fact: although you would think armand would eventually build up a tolerance or some shit considering how much he smokes, he gets fucked up in like 2 hits",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,eac9fa0d47bc,私人关于朋友酒量的笑话讨论
+uci_04355,important information 4 orange user 0789xxxxxxx. today is your lucky day!2find out why log onto http://www.urawinner.com THERE'S A FANTASTIC SURPRISE AWAITING YOU!,en,uci_sms_spam_collection_v1,spam,FRAUD,,16941c6a9e22,伪装运营商虚假中奖通知，含钓鱼链接
+uci_04356,"Sorry, I can't help you on this.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8fbc78808202,简短私人回复消息
+uci_04357,Great. So should i send you my account number.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ec8e23fef961,关于发送银行账户的私人询问，含义模糊
+uci_04358,"HELLOGORGEOUS, HOWS U? MY FONE WAS ON CHARGE LST NITW WEN U TEXD ME. HOPEU AD A NICE WKEND AS IM SURE U DID LOOKIN 4WARD 2 C-IN U 2MRW LUV JAZ",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4713d9cbaa00,朋友间的私人聊天消息
+uci_04359,"Our dating service has been asked 2 contact U by someone shy! CALL 09058091870 NOW all will be revealed. POBox84, M26 3UZ 150p",en,uci_sms_spam_collection_v1,spam,HARASS,,4c2a60b0bbfc,垃圾约会服务推广，需付费获取谁联系你的信息
+uci_04360,¨¹ only send me the contents page...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e19c7d06d8ef,简短私人回复请求
+uci_04361,"Night sweet, sleep well! I've just been to see The Exorcism of Emily Rose and may never sleep again! Hugs and snogs!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c7a28048994d,私人关于电影的个人感受消息
+uci_04362,"Don't Think About ""What u Have Got"" Think About ""How to Use It That You Have Got"" gooD ni8",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c0272da57fea,励志智慧转发消息
+uci_04363,"I can't right this second, gotta hit people up first",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e6b399337510,关于稍后才能回复的简短私人消息
+uci_04364,"Evry Emotion dsn't hav Words.Evry Wish dsn't hav Prayrs.. If u Smile,D World is wit u.Othrwise even d Drop of Tear dsn't lik 2 Stay wit u.So b happy.. Good morning, keep smiling:-)",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6e05efdc64fe,励志早安智慧转发
+uci_04365,So what about you. What do you remember,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f9120c2625f4,私人关于记忆的讨论消息
+uci_04366,Ujhhhhhhh computer shipped out with address to sandiago and parantella lane. Wtf. Poop.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9f6b1becb511,关于快递地址的闲聊私人消息
+uci_04367,Mm yes dear look how i am hugging you both. :-P,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,74bfd478a275,表达思念和拥抱的私人消息
+uci_04368,I like dis sweater fr mango but no more my size already so irritating.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4fb464e0e474,私人关于毛衣尺寸问题的评论
+uci_04369,1 I don't have her number and 2 its gonna be a massive pain in the ass and i'd rather not get involved if that's possible,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,13cf4491b3c6,私人关于是否参与某事的讨论
+uci_04370,Anytime lor...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b5903427af5e,简短私人确认消息
+uci_04371,Do you want a new Video handset? 750 any time any network mins? UNLIMITED TEXT? Camcorder? Reply or Call now 08000930705 for del Sat AM,en,uci_sms_spam_collection_v1,spam,AD,,157b819157af,视频手机的促销服务，含定价和联系方式
+uci_04372,Purity of friendship between two is not about smiling after reading the forwarded message..Its about smiling just by seeing the name. Gud evng,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6c2c8d0a29db,关于友谊智慧的转发
+uci_04373,"Ur balance is now ¡ê600. Next question: Complete the landmark, Big, A. Bob, B. Barry or C. Ben ?. Text A, B or C to 83738. Good luck!",en,uci_sms_spam_collection_v1,spam,FRAUD,,3840bbdf4d49,伪装账户余额的虚假奖金游戏，需付费回复问题
+uci_04374,Me fine..absolutly fine,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,718519066587,简短私人答复
+uci_04375,K and you're sure I don't have to have consent forms to do it :V,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0b8f00754ddb,私人简短确认消息
+uci_04376,Ur TONEXS subscription has been renewed and you have been charged ¡ê4.50. You can choose 10 more polys this month. www.clubzed.co.uk *BILLING MSG*,en,uci_sms_spam_collection_v1,spam,AD,,c7c336423fe4,手机音乐续费和收费通知的商业账单
+uci_04377,"If you don't, your prize will go to another customer. T&C at www.t-c.biz 18+ 150p/min Polo Ltd Suite 373 London W1J 6HL Please call back if busy",en,uci_sms_spam_collection_v1,spam,FRAUD,,03f1a7d1d366,虚假有奖促销，要求回电或访问网站，典型付费电话陷阱
+uci_04378,How much is torch in 9ja.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6208dfc632c3,询问物品价格的简短私人消息
+uci_04379,"Doing nothing, then u not having dinner w us?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d6df0399a57c,关于是否一起吃晚饭的私人询问
+uci_04380,How are you. Just checking up on you,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,02bcf83ebe4d,关于近况的简短私人关怀消息
+uci_04381,Done it but internet connection v slow and can¡®t send it. Will try again later or first thing tomo.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dacd566de57b,关于网络连接和发送问题的简短私人消息
+uci_04382,Mathews or tait or edwards or anderson,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7b2fea7b24f1,含义模糊的私人姓名列表
+uci_04383,yeah sure thing mate haunt got all my stuff sorted but im going sound anyway promoting hex for .by the way who is this? dont know number. Joke,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c7d69a8825ce,关于拜访朋友和工作的闲聊私人消息
+uci_04384,No need lar i go engin? Cos my sis at arts today...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4cad3b663114,关于上学和专业的简短私人消息
+uci_04385,Thanks honey but still haven't heard anything I will leave it a bit longer so not 2 crowd him and will try later - great advice thanks hope cardiff is still there!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bbd6a60266a7,关于耐心等待某人消息的讨论
+uci_04386,Do you want a New Nokia 3510i Colour Phone Delivered Tomorrow? With 200 FREE minutes to any mobile + 100 FREE text + FREE camcorder Reply or Call 8000930705,en,uci_sms_spam_collection_v1,spam,AD,,eeb8cb15d707,Nokia手机免费赠送促销活动，要求回电
+uci_04387,", im .. On the snowboarding trip. I was wondering if your planning to get everyone together befor we go..a meet and greet kind of affair? Cheers,",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0579bdbb569d,关于聚会安排的私人消息
+uci_04388,S.i'm watching it in live..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,acaa213cba9a,简短私人确认消息
+uci_04389,"see you then, we're all christmassy here!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e78f4846ab2b,简短私人约定消息
+uci_04390,"K I'm ready,  &lt;#&gt; ?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8874f57c9870,简短私人确认消息
+uci_04391,"Do you know why god created gap between your fingers..? So that, One who is made for you comes &amp; fills those gaps by holding your hand with LOVE..!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,30b38c3d5eec,关于爱情的转发生理智慧消息
+uci_04392,The greatest test of courage on earth is to bear defeat without losing heart....gn tc,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a5f49fc248b5,关于勇气的励志格言转发
+uci_04393,what are your new years plans?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,76a8e8e8bd2c,关于新年计划的私人聊天消息
+uci_04394,RECPT 1/3. You have ordered a Ringtone. Your order is being processed...,en,uci_sms_spam_collection_v1,spam,AD,,296d1f592b3c,手机铃声订单确认的商业通知
+uci_04395,Baaaaaaaabe! Wake up ! I miss you ! I crave you! I need you!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4c0e1537237b,关于想念某人的亲密私人消息
+uci_04396,"Only just got this message, not ignoring you. Yes, i was. Shopping that is",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0753076f9ec3,关于购物的简短私人回复
+uci_04397,Dear :-/ why you mood off. I cant drive so i brother to drive,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,dee7084eaa5f,关于开车的简短私人消息
+uci_04398,When did dad get back.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b3f707037692,询问父亲回家的简短私人消息
+uci_04399,"Can you tell Shola to please go to college of medicine and visit the academic department, tell the academic secretary what the current situation is and ask if she can transfer there. She should ask someone to check Sagamu for the same thing and lautech. Its vital she completes her medical education in Nigeria. Its less expensive much less expensive. Unless she will be getting citizen rates in new zealand.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ac0b4537390f,关于大学和转学安排的详细私人消息
+uci_04400,Yes just finished watching days of our lives. I love it.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8cec62f8e5e7,关于电视剧观后感的私人消息
+uci_04401,Juz go google n search 4 qet...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4bbf8b3238d4,关于使用Google的简短私人消息
+uci_04402,Many times we lose our best ones bcoz we are,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fea407570778,不完整的含义模糊转发消息
+uci_04403,"Good FRIENDS CaRE for each Other.. CLoSE Friends UNDERSTaND each Other... and TRUE Friends STaY forever beyond words, beyond time. Gud ni8",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e84591cbc26a,关于友谊的转发智慧
+uci_04404,Just getting back home,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a96c5821ac15,简短私人行程消息
+uci_04405,"Sorry, I'll call later  &lt;#&gt; mins",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b117ee3f0bcf,简短私人道歉消息
+uci_04406,Dun need to use dial up juz open da browser n surf...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c0fb25351fec,关于使用浏览器上网的简短私人消息
+uci_04407,As one of our registered subscribers u can enter the draw 4 a 100 G.B. gift voucher by replying with ENTER. To unsubscribe text STOP,en,uci_sms_spam_collection_v1,spam,AD,,a0af6c31ec77,订阅者抽奖促销可获得礼品券
+uci_04408,"Awesome, plan to get here any time after like  &lt;#&gt; , I'll text you details in a wee bit",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a069772559af,关于行程安排的私人消息
+uci_04409,Take care and sleep well.you need to learn to change in life.you only need to get CONVINCED on that.i will wait but no more conversations between us.GET CONVINCED by that time.Your family is over for you in many senses.respect them but not overemphasise.or u have no role in my life.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f584ac5b77b0,个人关系中的情感对话
+uci_04410,"For your chance to WIN a FREE Bluetooth Headset then simply reply back with ""ADP""",en,uci_sms_spam_collection_v1,spam,AD,,97d64ea48acd,免费蓝牙耳机抽奖促销活动
+uci_04411,You also didnt get na hi hi hi hi hi,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2032ad8c093d,含义不明的简短私人消息
+uci_04412,Ya but it cant display internal subs so i gotta extract them,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0ccb550e5b49,技术对话，含义模糊
+uci_04413,If i said anything wrong sorry de:-),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,336ac7310d8a,简短私人道歉消息
+uci_04414,Sad story of a Man - Last week was my b'day. My Wife did'nt wish me. My Parents forgot n so did my Kids . I went to work. Even my Colleagues did not wish.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0de513b60c46,关于生日的转发感人故事
+uci_04415,How stupid to say that i challenge god.You dont think at all on what i write instead you respond immed.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2cf779177735,私人关于挑战上帝的讨论
+uci_04416,"Yeah I should be able to, I'll text you when I'm ready to meet up",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ae13aeedf4f9,简短私人确认消息
+uci_04417,V skint too but fancied few bevies.waz gona go meet &othrs in spoon but jst bin watchng planet earth&sofa is v comfey; If i dont make it hav gd night,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4b59ff95dcf7,关于喝酒聚会的私人消息
+uci_04418,"says that he's quitting at least5times a day so i wudn't take much notice of that. Nah, she didn't mind. Are you gonna see him again? Do you want to come to taunton tonight? U can tell me all about !",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b937652f6dfb,关于工作和感情生活的闲聊私人消息
+uci_04419,"When you get free, call me",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e08fd0a90598,简短私人通话邀约消息
+uci_04420,How have your little darlings been so far this week? Need a coffee run tomo?Can't believe it's that time of week already ¡­,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c65d52a0b57c,关于工作和聚会的私人关怀消息
+uci_04421,Ok i msg u b4 i leave my house.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,995862b77902,简短私人预告消息
+uci_04422,Still at west coast... Haiz... ¨¹'ll take forever to come back...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,58934edcca78,关于回家行程的抱怨式私人消息
+uci_04423,MMM ... Fuck .... Merry Christmas to me,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c24978592cb8,私人圣诞节抱怨
+uci_04424,alright. Thanks for the advice. Enjoy your night out. I'ma try to get some sleep...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f302613bd76f,关于晚安的私人消息
+uci_04425,Update your face book status frequently :),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5005496668b2,关于更新Facebook的简短私人建议
+uci_04426,Just now saw your message.it k da:),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5c32c59b68b6,简短私人确认消息
+uci_04427,Was it something u ate?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1726814948e2,私人关于是否吃坏东西的关心消息
+uci_04428,So what did the bank say about the money?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cac67059e6b2,关于银行事务的简短私人询问
+uci_04429,Aiyar dun disturb u liao... Thk u have lots 2 do aft ur cupboard come...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8aaa689cccdc,关于家具到货的简短私人消息
+uci_04430,Hey they r not watching movie tonight so i'll prob b home early...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c850952c29e4,关于电影和回家的私人消息
+uci_04431,Yar lor... How u noe? U used dat route too?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4ea05479c976,关于交通路线的简短私人讨论
+uci_04432,2mro i am not coming to gym machan. Goodnight.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,481b20caed1b,简短私人晚安消息
+uci_04433,Dont think you need yellow card for uk travel. Ask someone that has gone before. If you do its just  &lt;#&gt; bucks,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0e1e8f55389f,关于旅行卡建议的私人消息
+uci_04434,Can u look 4 me in da lib i got stuff havent finish yet.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9bb15bc7d6bf,简短私人消息告知有工作未完成
+uci_04435,Sounds great! Im going to sleep now. Have a good night!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6b342746dd4c,简短私人晚安祝福消息
+uci_04436,Don't b floppy... b snappy & happy! Only gay chat service with photo upload call 08718730666 (10p/min). 2 stop our texts call 08712460324,en,uci_sms_spam_collection_v1,spam,HARASS,,0cb4be42d119,成人聊天服务推广，按分钟计费
+uci_04437,"House-Maid is the murderer, coz the man was murdered on  &lt;#&gt; th January.. As public holiday all govt.instituitions are closed,including post office..understand?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2fb412b13400,私人关于故事的困惑讨论
+uci_04438,How come u got nothing to do?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4f83a4a917ea,私人简短询问消息
+uci_04439,Nothing will ever be easy. But don't be looking for a reason not to take a risk on life and love,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9c7222151cf9,转发的人生智慧格言
+uci_04440,i want to grasp your pretty booty :),en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,009034f7d254,关于触摸的暧昧简短私人消息
+uci_04441,I've got it down to a tea. not sure which flavour,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,eb08828238eb,关于茶的简短私人意见
+uci_04442,I'm going 2 orchard now laready me reaching soon. U reaching?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9d7b148280d6,关于行程安排的简短私人消息
+uci_04443,Dear i am not denying your words please,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cbc50de7604c,私人道歉消息
+uci_04444,You know my old Dom I told you about yesterday ? His name is Roger? He got in touch with me last night and wants me to meet him today at 2 pm,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7b38c276e853,关于见某人朋友的私人社交消息
+uci_04445,COME BACK TO TAMPA FFFFUUUUUUU,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a2bbcdc59f73,私人简短情感消息
+uci_04446,"2 celebrate my b?day, y else?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,5c055b439add,关于生日庆祝的私人讨论
+uci_04447,Merry christmas to u too annie!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3b573f047491,圣诞节祝福的简短私人消息
+uci_04448,Please tell me you have some of that special stock you were talking about,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f42d71a10f74,关于私人关系的询问消息
+uci_04449,I sent them. Do you like?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c61d9595fff7,简短私人回复消息
+uci_04450,"Urgent UR awarded a complimentary trip to EuroDisinc Trav, Aco&Entry41 Or ¡ê1000. To claim txt DIS to 87121 18+6*¡ê1.50(moreFrmMob. ShrAcomOrSglSuplt)10, LS1 3AJ",en,uci_sms_spam_collection_v1,spam,FRAUD,,33de1040600c,虚假中奖旅行或1000镑奖金通知，需回复付费短信领取
+uci_04451,"Awesome, be there in a minute",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,79c6a4b117c2,简短私人确认消息
+uci_04452,"And that is the problem. You walk around in ""julianaland"" oblivious to what is going on around you. I say the same things constantly and they go in one ear and out the other while you go off doing whatever you want to do. It's not that you don't know why I'm upset--it's that you don't listen when i tell you WHAT is going to upset me. Then you want to be surprised when I'm mad.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8787072460d7,关于私人关系的长消息
+uci_04453,I've told you everything will stop. Just dont let her get dehydrated.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7692f774a37b,关于补水的私人关怀消息
+uci_04454,Or I guess  &lt;#&gt;  min,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c3ee6565ee67,含义模糊的简短私人消息
+uci_04455,I'm home. Ard wat time will u reach?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,8ff54fd6d049,关于到达时间的私人消息
+uci_04456,"Storming msg: Wen u lift d phne, u say ""HELLO"" Do u knw wt is d real meaning of HELLO?? . . . It's d name of a girl..! . . . Yes.. And u knw who is dat girl?? ""Margaret Hello"" She is d girlfrnd f Grahmbell who invnted telphone... . . . . Moral:One can 4get d name of a person, bt not his girlfrnd... G o o d n i g h t . . .@",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,2f0bb1f45617,关于HELLO字源知识的转发冷知识消息
+uci_04457,"If you want to mapquest it or something look up ""usf dogwood drive"", that's the tiny street where the parking lot is",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0d9f5aaf6a62,关于地址导航的简短私人消息
+uci_04458,Aight should I just plan to come up later tonight?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,d801a3a23b72,关于今晚计划的私人确认消息
+uci_04459,Die... I accidentally deleted e msg i suppose 2 put in e sim archive. Haiz... I so sad...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,66beaf69bf9f,关于删除消息的私人抱怨
+uci_04460,"Welcome to UK-mobile-date this msg is FREE giving you free calling to 08719839835. Future mgs billed at 150p daily. To cancel send ""go stop"" to 89123",en,uci_sms_spam_collection_v1,spam,HARASS,,e342ede90b2e,商业约会服务推广，每日收费需发送STOP取消
+uci_04461,This is wishing you a great day. Moji told me about your offer and as always i was speechless. You offer so easily to go to great lengths on my behalf and its stunning. My exam is next friday. After that i will keep in touch more. Sorry.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a02081798133,关于申请和学校计划的长消息
+uci_04462,"Thanks again for your reply today. When is ur visa coming in. And r u still buying the gucci and bags. My sister things are not easy, uncle john also has his own bills so i really need to think about how to make my own money. Later sha.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,42596a091cdc,关于购物和学费的私人讨论
+uci_04463,"Sorry I flaked last night, shit's seriously goin down with my roommate, what you up to tonight?",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,fdc0b8c11114,关于昨晚失约的道歉和聚会计划消息
+uci_04464,He said i look pretty wif long hair wat. But i thk he's cutting quite short 4 me leh.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,6a6873638c01,关于发型的简短私人评论
+uci_04465,Ranjith cal drpd Deeraj and deepak 5min hold,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e032fcfc5c97,关于转接电话的简短私人消息
+uci_04466,"""CHEERS FOR CALLIN BABE.SOZI CULDNT TALKBUT I WANNATELL U DETAILS LATER WENWECAN CHAT PROPERLY X""",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,0757a786bc6f,简短私人语音消息转文字
+uci_04467,Hey u still at the gym?,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,28753f95d38f,简短私人询问消息
+uci_04468,"She said,'' do u mind if I go into the bedroom for a minute ? '' ''OK'', I sed in a sexy mood. She came out 5 minuts latr wid a cake...n My Wife,",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,9e8cf5f74e37,关于丈夫生日蛋糕的私人家庭对话
+uci_04469,Much better now thanks lol,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,de34b10b026f,简短私人感谢消息
+uci_04470,"Nothing, smsing u n xy lor. Sorry lor da guys neva c u in person but they sort of know u lor. So u wan 2 meet them xy ask me 2 bring u along 4 our next meeting.",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,4af1f53a33b2,关于认识某人的私人社交讨论
+uci_04471,"Lemme know when I can swing by and pick up, I'm free basically any time after 1 all this semester",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,09c68ab3e47f,关于取东西的简短私人消息
+uci_04472,Wa... U so efficient... Gee... Thanx...,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bca21939d23d,简短私人感谢消息
+uci_04473,3. You have received your mobile content. Enjoy,en,uci_sms_spam_collection_v1,spam,AD,,8fa21a33496d,移动内容交付确认的商业消息
+uci_04474,S but not able to sleep.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,bce7853288a6,关于失眠的简短私人消息
+uci_04475,Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min,en,uci_sms_spam_collection_v1,spam,HARASS,,717a25febba6,成人性服务推广，按分钟收费
+uci_04476,We will meet soon princess! Ttyl!,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,faefbc2b9436,简短私人思念消息
+uci_04477,I'll pick you up at about 5.15pm to go to taunton if you still want to come.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,aef75daf6e60,关于接人的简短私人行程安排
+uci_04478,Oh :-)only 4 outside players allowed to play know,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a52fecd5155d,关于比赛规则的简短私人评论
+uci_04479,I anything lor.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,c08242dc545f,简短含义模糊的私人消息
+uci_04480,Erutupalam thandiyachu,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,1ffd7fdb8240,含义模糊的私人消息，可能是地方语言
+uci_04481,"Y cant u try new invention to fly..i'm not joking.,",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7824ee7d17a0,私人简短笑话消息
+uci_04482,No..its ful of song lyrics..,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f18b5196f002,关于歌曲含义的简短私人讨论
+uci_04483,"What do u reckon as need 2 arrange transport if u can't do it, thanks",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3c5289fef8f8,关于交通安排的私人询问
+uci_04484,True lov n care wil nevr go unrecognized. though somone often makes mistakes when valuing it. but they will definitly undrstnd once when they start missing it.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e80623f14aff,关于真爱的转发智慧
+uci_04485,Shopping? Eh ger i toking abt syd leh...Haha,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,a6d97edde72d,关于购物行程的简短私人消息
+uci_04486,What not under standing.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ca3c71b55970,含义不明的简短私人消息
+uci_04487,have * good weekend.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,48647a607db0,周末祝福的简短私人消息
+uci_04488,Miss call miss call khelate kintu opponenter miss call dhorte lage. Thats d rule. One with great phone receiving quality wins.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b393a39905d0,含义模糊的私人技术消息
+uci_04489,Call me when you get the chance plz &lt;3,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,cd720277d2d8,简短私人通话邀约消息
+uci_04490,The new deus ex game comin early next yr,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,ef26e6a255d4,关于游戏的简短私人消息
+uci_04491,My computer just fried the only essential part we don't keep spares of because my fucking idiot roommates looovvve leaving the thing running on full  &lt;#&gt; /7,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,e5bac49ec5db,关于室友的抱怨私人消息
+uci_04492,"My friend, she's studying at warwick, we've planned to go shopping and to concert tmw, but it may be canceled, havn't seen  for ages, yeah we should get together sometime!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,00989983f2ff,关于聚会计划的私人消息
+uci_04493,Probably a couple hours tops,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,f0ae4b55dc21,关于到达时间的简短私人消息
+uci_04494,"LOL .. *grins* .. I'm not babe, but thanks for thinking of me!",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3ad5812d4e2f,简短私人回复消息
+uci_04495,Man this bus is so so so slow. I think you're gonna get there before me,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,3aacc425b368,关于公交车的抱怨简短私人消息
+uci_04496,Hope this text meets you smiling. If not then let this text give you a reason to smile. Have a beautiful day.,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,b76e1ef36e50,关于阳光微笑的转发祝福消息
+uci_04497,"In case you wake up wondering where I am, I forgot I have to take care of something for grandma today, should be done before the parade",en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,32fcd8b3bbcb,关于照顾祖母的简短私人行程消息
+uci_04498,Ok,en,uci_sms_spam_collection_v1,ham,NEEDS_REVIEW,,7a85f4764bbd,简短私人确认回复
+uci_04499,"Latest Nokia Mobile or iPOD MP3 Player +¡ê400 proze GUARANTEED! Reply with: WIN to 83355 now! Norcorp Ltd.¡ê1,50/Mtmsgrcvd18+",en,uci_sms_spam_collection_v1,spam,FRAUD,,6aeffbb5b62e,虚假中奖Nokia或iPod，需回复WIN支付短信费领取奖品

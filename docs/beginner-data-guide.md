@@ -77,6 +77,8 @@ training/data/interim/annotation/
   README_FOR_ANNOTATORS.txt
 ```
 
+> 历史标注表已归档到 `recent/prior_training/annotation/`；当前活动目录为空占位，需重新跑脚本才会生成上表文件。
+
 ### 步骤 C：用 Excel / WPS 打开试点表
 
 打开：`training\data\interim\annotation\uci_pilot_500.csv`
@@ -156,7 +158,7 @@ NEEDS_REVIEW
 
 - UCI 试点 = **练标注 + 英文训练补充**  
 - **不是**冻结测试集  
-- 冻结测试集以后要：四语、每类≥500、双人真标、单独冻结  
+- 冻结测试集以后要：**中文**、每类≥500、双人真标、单独冻结（英/印地/印尼暂缓）  
 
 现在不要纠结「能不能一次过验收」，先把标注手感练出来。
 
@@ -185,7 +187,7 @@ PYTHONPATH=training python training/scripts/distill_student.py \
   --config training/configs/student_homework_bootstrap.yaml --hard-only
 ```
 
-说明见 `docs/homework-bootstrap-training-report.md`。冻结测试集仍需：四语、每类≥500、双人真标。
+说明见 `docs/homework-bootstrap-training-report.md`（全文已归档至 `recent/prior_training/docs/`）。冻结测试集仍需：**中文**、每类≥500、双人真标。
 
 ---
 

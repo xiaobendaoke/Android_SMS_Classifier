@@ -2,7 +2,7 @@
 
 ## Project overview
 
-离线端侧四分类短信分类系统。四类: `TRANSACTION`, `AD`, `HARASS`, `FRAUD`（排除 `NEEDS_REVIEW`）。四语: zh, en, hi, id。
+离线端侧四分类短信分类系统。四类: `TRANSACTION`, `AD`, `HARASS`, `FRAUD`（排除 `NEEDS_REVIEW`）。**当前目标语种：仅中文（zh）**；英/印地/印尼暂不作为验收目标。
 
 ## Repository structure
 

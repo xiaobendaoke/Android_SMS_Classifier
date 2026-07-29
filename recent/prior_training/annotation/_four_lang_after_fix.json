@@ -1,0 +1,62 @@
+{
+  "zh": {
+    "n": 9817,
+    "dist": {
+      "NEEDS_REVIEW": 1790,
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    },
+    "empty": 0,
+    "audit_annot": 9817
+  },
+  "en": {
+    "n": 5574,
+    "dist": {
+      "NEEDS_REVIEW": 4815,
+      "AD": 393,
+      "HARASS": 134,
+      "TRANSACTION": 12,
+      "FRAUD": 220
+    },
+    "empty": 0,
+    "audit_annot": 122
+  },
+  "id_yudi": {
+    "n": 1143,
+    "dist": {
+      "AD": 210,
+      "TRANSACTION": 78,
+      "NEEDS_REVIEW": 578,
+      "FRAUD": 238,
+      "HARASS": 39
+    },
+    "empty": 0,
+    "audit_annot": 1143
+  },
+  "id_ss": {
+    "n": 1270,
+    "dist": {
+      "NEEDS_REVIEW": 961,
+      "FRAUD": 133,
+      "AD": 117,
+      "HARASS": 58,
+      "TRANSACTION": 1
+    },
+    "empty": 0,
+    "audit_annot": 1270
+  },
+  "hi": {
+    "n": 2000,
+    "dist": {
+      "NEEDS_REVIEW": 993,
+      "HARASS": 80,
+      "AD": 897,
+      "TRANSACTION": 17,
+      "FRAUD": 13
+    },
+    "empty": 0,
+    "audit_annot": 174
+  }
+}

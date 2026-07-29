@@ -32,7 +32,7 @@
 | Transaction recall ≥98% | **NOT claimed** — synthetic/small frozen set only |
 | Memory ≤100 MB PSS | **Pending** 4GB/6GB device measurement |
 | Latency ≤500 ms | Code budget enforced (timeout→REVIEW); device p50/p95 pending formal report |
-| Multilingual | Synthetic zh/en/hi/id pipeline exercised; formal report pending real labels |
+| Language scope | **Chinese only** for current acceptance; en/hi/id deferred |
 | Adversarial | Slices regenerated via `build_adversarial_slices.py`; formal scores pending |
 
 ## Residual risks

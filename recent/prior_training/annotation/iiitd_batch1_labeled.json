@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "iiitd_00000",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00001",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00002",
+    "label": "NEEDS_REVIEW",
+    "reason": "夫妻笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00003",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00004",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00005",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00006",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00007",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00008",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人爱情表达，非目标域"
+  },
+  {
+    "id": "iiitd_00009",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00010",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00011",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知位置，闲聊定位"
+  },
+  {
+    "id": "iiitd_00012",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求回复，闲聊"
+  },
+  {
+    "id": "iiitd_00013",
+    "label": "NEEDS_REVIEW",
+    "reason": "油价对比搞笑段子，非目标域"
+  },
+  {
+    "id": "iiitd_00014",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00015",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00016",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求转发的chain message，非目标域"
+  },
+  {
+    "id": "iiitd_00017",
+    "label": "NEEDS_REVIEW",
+    "reason": "Why类冷笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00018",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00019",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生巧克力比喻短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00020",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00021",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00022",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在房间，闲聊定位"
+  },
+  {
+    "id": "iiitd_00023",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在房间，闲聊定位"
+  },
+  {
+    "id": "iiitd_00024",
+    "label": "NEEDS_REVIEW",
+    "reason": "油价对比搞笑段子，非目标域"
+  },
+  {
+    "id": "iiitd_00025",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00026",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00027",
+    "label": "NEEDS_REVIEW",
+    "reason": "Why类冷笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00028",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00029",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00030",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00031",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00032",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人爱情表达，非目标域"
+  },
+  {
+    "id": "iiitd_00033",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00034",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00035",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00036",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00037",
+    "label": "NEEDS_REVIEW",
+    "reason": "Why类冷笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00038",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00039",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00040",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00041",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00042",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00043",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人想念表达，非目标域"
+  },
+  {
+    "id": "iiitd_00044",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在图书馆，闲聊定位"
+  },
+  {
+    "id": "iiitd_00045",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在实验室，闲聊定位"
+  },
+  {
+    "id": "iiitd_00046",
+    "label": "NEEDS_REVIEW",
+    "reason": "讽刺类短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00047",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在实验室，闲聊定位"
+  },
+  {
+    "id": "iiitd_00048",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00049",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00050",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00051",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00052",
+    "label": "NEEDS_REVIEW",
+    "reason": "Santa笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00053",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00054",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00055",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00056",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00057",
+    "label": "NEEDS_REVIEW",
+    "reason": "讽刺类短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00058",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00059",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00060",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00061",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生之书短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00062",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00063",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00064",
+    "label": "NEEDS_REVIEW",
+    "reason": "极短回复/表情，非目标域"
+  },
+  {
+    "id": "iiitd_00065",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00066",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00067",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00068",
+    "label": "NEEDS_REVIEW",
+    "reason": "讽刺类短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00069",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00070",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00071",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00072",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00073",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00074",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00075",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知位置，闲聊定位"
+  },
+  {
+    "id": "iiitd_00076",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00077",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00078",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00079",
+    "label": "NEEDS_REVIEW",
+    "reason": "讽刺类短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00080",
+    "label": "NEEDS_REVIEW",
+    "reason": "面试笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00081",
+    "label": "NEEDS_REVIEW",
+    "reason": "圣诞节祝福短信，非四类目标域"
+  },
+  {
+    "id": "iiitd_00082",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00083",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00084",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00085",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00086",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00087",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00088",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00089",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00090",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00091",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00092",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00093",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去洗澡，闲聊"
+  },
+  {
+    "id": "iiitd_00094",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00095",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00096",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00097",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00098",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00099",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00100",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00101",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00102",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00103",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00104",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00105",
+    "label": "NEEDS_REVIEW",
+    "reason": "Rajnikanth超能笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00106",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00107",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00108",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00109",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求转发的chain message，非目标域"
+  },
+  {
+    "id": "iiitd_00110",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00111",
+    "label": "NEEDS_REVIEW",
+    "reason": "心碎/情感类段子，非目标域"
+  },
+  {
+    "id": "iiitd_00112",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00113",
+    "label": "NEEDS_REVIEW",
+    "reason": "低俗双关笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00114",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00115",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00116",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00117",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00118",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00119",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00120",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00121",
+    "label": "NEEDS_REVIEW",
+    "reason": "chain message受害者自述，非目标域"
+  },
+  {
+    "id": "iiitd_00122",
+    "label": "NEEDS_REVIEW",
+    "reason": "心碎/情感类段子，非目标域"
+  },
+  {
+    "id": "iiitd_00123",
+    "label": "NEEDS_REVIEW",
+    "reason": "chain message受害者自述，非目标域"
+  },
+  {
+    "id": "iiitd_00124",
+    "label": "NEEDS_REVIEW",
+    "reason": "低俗双关笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00125",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00126",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00127",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00128",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00129",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知出门，闲聊定位"
+  },
+  {
+    "id": "iiitd_00130",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知出门，闲聊定位"
+  },
+  {
+    "id": "iiitd_00131",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00132",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00133",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00134",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00135",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00136",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00137",
+    "label": "NEEDS_REVIEW",
+    "reason": "打扰/被扰，闲聊"
+  },
+  {
+    "id": "iiitd_00138",
+    "label": "NEEDS_REVIEW",
+    "reason": "打扰/被扰，闲聊"
+  },
+  {
+    "id": "iiitd_00139",
+    "label": "NEEDS_REVIEW",
+    "reason": "沉默与微笑哲理，非目标域"
+  },
+  {
+    "id": "iiitd_00140",
+    "label": "NEEDS_REVIEW",
+    "reason": "极短回复/表情，非目标域"
+  },
+  {
+    "id": "iiitd_00141",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00142",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00143",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00144",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00145",
+    "label": "NEEDS_REVIEW",
+    "reason": "考试作弊笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00146",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00147",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00148",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00149",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00150",
+    "label": "NEEDS_REVIEW",
+    "reason": "晚安美梦祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00151",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00152",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00153",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00154",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00155",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00156",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00157",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00158",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00159",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00160",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00161",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00162",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00163",
+    "label": "NEEDS_REVIEW",
+    "reason": "晚安美梦祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00164",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00165",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00166",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00167",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00168",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00169",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人爱情表达，非目标域"
+  },
+  {
+    "id": "iiitd_00170",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00171",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮食，非目标域"
+  },
+  {
+    "id": "iiitd_00172",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00173",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00174",
+    "label": "NEEDS_REVIEW",
+    "reason": "Santa笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00175",
+    "label": "NEEDS_REVIEW",
+    "reason": "夫妻笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00176",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00177",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00178",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00179",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人道歉，闲聊"
+  },
+  {
+    "id": "iiitd_00180",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00181",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00182",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00183",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00184",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00185",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00186",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00187",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00188",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00189",
+    "label": "NEEDS_REVIEW",
+    "reason": "对镜微笑短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00190",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00191",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00192",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00193",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00194",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00195",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00196",
+    "label": "NEEDS_REVIEW",
+    "reason": "Navratri节日祝福，非四类目标域"
+  },
+  {
+    "id": "iiitd_00197",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00198",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00199",
+    "label": "NEEDS_REVIEW",
+    "reason": "愚人节祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00200",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊成绩，非目标域"
+  },
+  {
+    "id": "iiitd_00201",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00202",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00203",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00204",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00205",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求转发的chain message，非目标域"
+  },
+  {
+    "id": "iiitd_00206",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00207",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00208",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00209",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00210",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00211",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求转发的chain message，非目标域"
+  },
+  {
+    "id": "iiitd_00212",
+    "label": "NEEDS_REVIEW",
+    "reason": "打扰/被扰，闲聊"
+  },
+  {
+    "id": "iiitd_00213",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00214",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求回复，闲聊"
+  },
+  {
+    "id": "iiitd_00215",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00216",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00217",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00218",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00219",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00220",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00221",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00222",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00223",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00224",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00225",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人爱情表达，非目标域"
+  },
+  {
+    "id": "iiitd_00226",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00227",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00228",
+    "label": "NEEDS_REVIEW",
+    "reason": "Rajnikanth超能笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00229",
+    "label": "NEEDS_REVIEW",
+    "reason": "询问位置，闲聊"
+  },
+  {
+    "id": "iiitd_00230",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00231",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00232",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00233",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00234",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达愤怒/不满，闲聊"
+  },
+  {
+    "id": "iiitd_00235",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00236",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人想念表达，非目标域"
+  },
+  {
+    "id": "iiitd_00237",
+    "label": "NEEDS_REVIEW",
+    "reason": "儿童节祝福短信，非目标域"
+  },
+  {
+    "id": "iiitd_00238",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00239",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00240",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00241",
+    "label": "NEEDS_REVIEW",
+    "reason": "询问位置，闲聊"
+  },
+  {
+    "id": "iiitd_00242",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00243",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00244",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00245",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00246",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00247",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00248",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00249",
+    "label": "NEEDS_REVIEW",
+    "reason": "Why类冷笑话，私人娱乐"
+  },
+  {
+    "id": "iiitd_00250",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00251",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00252",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00253",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00254",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00255",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00256",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00257",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00258",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00259",
+    "label": "NEEDS_REVIEW",
+    "reason": "询问位置，闲聊"
+  },
+  {
+    "id": "iiitd_00260",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去睡觉，闲聊"
+  },
+  {
+    "id": "iiitd_00261",
+    "label": "NEEDS_REVIEW",
+    "reason": "请求叫醒，闲聊"
+  },
+  {
+    "id": "iiitd_00262",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00263",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00264",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00265",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00266",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00267",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00268",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00269",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00270",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00271",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00272",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00273",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00274",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达兴奋，闲聊"
+  },
+  {
+    "id": "iiitd_00275",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人需求表达，非目标域"
+  },
+  {
+    "id": "iiitd_00276",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00277",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00278",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00279",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00280",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00281",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00282",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00283",
+    "label": "NEEDS_REVIEW",
+    "reason": "极短回复/表情，非目标域"
+  },
+  {
+    "id": "iiitd_00284",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00285",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知位置，闲聊定位"
+  },
+  {
+    "id": "iiitd_00286",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00287",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00288",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人道歉，闲聊"
+  },
+  {
+    "id": "iiitd_00289",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00290",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00291",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00292",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求回复，闲聊"
+  },
+  {
+    "id": "iiitd_00293",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00294",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00295",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00296",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00297",
+    "label": "NEEDS_REVIEW",
+    "reason": "Sardar/Jatt笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00298",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00299",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00300",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00301",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00302",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00303",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00304",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00305",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00306",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00307",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00308",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达愤怒/不满，闲聊"
+  },
+  {
+    "id": "iiitd_00309",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00310",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊面试/实习，非目标域"
+  },
+  {
+    "id": "iiitd_00311",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00312",
+    "label": "NEEDS_REVIEW",
+    "reason": "排灯节祝福短信，非四类目标域"
+  },
+  {
+    "id": "iiitd_00313",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00314",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00315",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00316",
+    "label": "NEEDS_REVIEW",
+    "reason": "微笑力量短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00317",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00318",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00319",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00320",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求回复，闲聊"
+  },
+  {
+    "id": "iiitd_00321",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00322",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00323",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00324",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00325",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00326",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00327",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00328",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00329",
+    "label": "NEEDS_REVIEW",
+    "reason": "共和国日祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00330",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00331",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00332",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00333",
+    "label": "NEEDS_REVIEW",
+    "reason": "儿童节祝福短信，非目标域"
+  },
+  {
+    "id": "iiitd_00334",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00335",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00336",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊成绩，非目标域"
+  },
+  {
+    "id": "iiitd_00337",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊成绩，非目标域"
+  },
+  {
+    "id": "iiitd_00338",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00339",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00340",
+    "label": "NEEDS_REVIEW",
+    "reason": "带WAY2SMS签名的短信，非目标域"
+  },
+  {
+    "id": "iiitd_00341",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达害怕，闲聊"
+  },
+  {
+    "id": "iiitd_00342",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00343",
+    "label": "NEEDS_REVIEW",
+    "reason": "人生哲理短信链，非目标域"
+  },
+  {
+    "id": "iiitd_00344",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00345",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00346",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00347",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00348",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00349",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00350",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00351",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00352",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学业，非目标域"
+  },
+  {
+    "id": "iiitd_00353",
+    "label": "NEEDS_REVIEW",
+    "reason": "友谊日/友谊手链chain消息，非目标域"
+  },
+  {
+    "id": "iiitd_00354",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮食，非目标域"
+  },
+  {
+    "id": "iiitd_00355",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00356",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00357",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00358",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00359",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00360",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00361",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00362",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00363",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00364",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00365",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00366",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00367",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00368",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00369",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00370",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00371",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00372",
+    "label": "NEEDS_REVIEW",
+    "reason": "共和国日祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00373",
+    "label": "NEEDS_REVIEW",
+    "reason": "请求叫醒，闲聊"
+  },
+  {
+    "id": "iiitd_00374",
+    "label": "NEEDS_REVIEW",
+    "reason": "带WAY2SMS签名的短信，非目标域"
+  },
+  {
+    "id": "iiitd_00375",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00376",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00377",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00378",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00379",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00380",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00381",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00382",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00383",
+    "label": "NEEDS_REVIEW",
+    "reason": "新年祝福短信，非四类目标域"
+  },
+  {
+    "id": "iiitd_00384",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00385",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00386",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达害怕，闲聊"
+  },
+  {
+    "id": "iiitd_00387",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00388",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00389",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00390",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00391",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00392",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00393",
+    "label": "NEEDS_REVIEW",
+    "reason": "晚安美梦祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00394",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00395",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00396",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达愤怒/不满，闲聊"
+  },
+  {
+    "id": "iiitd_00397",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00398",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00399",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00400",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00401",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊面试/实习，非目标域"
+  },
+  {
+    "id": "iiitd_00402",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00403",
+    "label": "NEEDS_REVIEW",
+    "reason": "极短回复/表情，非目标域"
+  },
+  {
+    "id": "iiitd_00404",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去洗澡，闲聊"
+  },
+  {
+    "id": "iiitd_00405",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去睡觉，闲聊"
+  },
+  {
+    "id": "iiitd_00406",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去睡觉，闲聊"
+  },
+  {
+    "id": "iiitd_00407",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00408",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00409",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间调侃（idiot），闲聊"
+  },
+  {
+    "id": "iiitd_00410",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊大学生活，非目标域"
+  },
+  {
+    "id": "iiitd_00411",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00412",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊面试/实习，非目标域"
+  },
+  {
+    "id": "iiitd_00413",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00414",
+    "label": "NEEDS_REVIEW",
+    "reason": "等待/让等，闲聊"
+  },
+  {
+    "id": "iiitd_00415",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00416",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00417",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00418",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00419",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达无聊，闲聊"
+  },
+  {
+    "id": "iiitd_00420",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在房间，闲聊定位"
+  },
+  {
+    "id": "iiitd_00421",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00422",
+    "label": "NEEDS_REVIEW",
+    "reason": "无关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00423",
+    "label": "NEEDS_REVIEW",
+    "reason": "玩笑式短信链（找CID），非目标域"
+  },
+  {
+    "id": "iiitd_00424",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00425",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00426",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00427",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00428",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00429",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00430",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人爱情表达，非目标域"
+  },
+  {
+    "id": "iiitd_00431",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人通信，非目标域"
+  },
+  {
+    "id": "iiitd_00432",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00433",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00434",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00435",
+    "label": "NEEDS_REVIEW",
+    "reason": "排灯节祝福短信，非四类目标域"
+  },
+  {
+    "id": "iiitd_00436",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00437",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达害怕，闲聊"
+  },
+  {
+    "id": "iiitd_00438",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00439",
+    "label": "NEEDS_REVIEW",
+    "reason": "早安/晚安祝福，非目标域"
+  },
+  {
+    "id": "iiitd_00440",
+    "label": "NEEDS_REVIEW",
+    "reason": "新年祝福短信，非四类目标域"
+  },
+  {
+    "id": "iiitd_00441",
+    "label": "NEEDS_REVIEW",
+    "reason": "让打电话，闲聊"
+  },
+  {
+    "id": "iiitd_00442",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00443",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00444",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00445",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  },
+  {
+    "id": "iiitd_00446",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00447",
+    "label": "NEEDS_REVIEW",
+    "reason": "带WAY2SMS签名的短信，非目标域"
+  },
+  {
+    "id": "iiitd_00448",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00449",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00450",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00451",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00452",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00453",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00454",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00455",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00456",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00457",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊饮品，非目标域"
+  },
+  {
+    "id": "iiitd_00458",
+    "label": "NEEDS_REVIEW",
+    "reason": "非正式对话，非目标域"
+  },
+  {
+    "id": "iiitd_00459",
+    "label": "NEEDS_REVIEW",
+    "reason": "极短回复/表情，非目标域"
+  },
+  {
+    "id": "iiitd_00460",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00461",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00462",
+    "label": "NEEDS_REVIEW",
+    "reason": "要求回复，闲聊"
+  },
+  {
+    "id": "iiitd_00463",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00464",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00465",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00466",
+    "label": "NEEDS_REVIEW",
+    "reason": "情侣笑话段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00467",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达愤怒/不满，闲聊"
+  },
+  {
+    "id": "iiitd_00468",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达开心，闲聊"
+  },
+  {
+    "id": "iiitd_00469",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00470",
+    "label": "NEEDS_REVIEW",
+    "reason": "梦想相关短信，非目标域"
+  },
+  {
+    "id": "iiitd_00471",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊作业/项目，非目标域"
+  },
+  {
+    "id": "iiitd_00472",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊作业/项目，非目标域"
+  },
+  {
+    "id": "iiitd_00473",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知到家，闲聊定位"
+  },
+  {
+    "id": "iiitd_00474",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人闲聊，非四类目标域"
+  },
+  {
+    "id": "iiitd_00475",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00476",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00477",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00478",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊面试/实习，非目标域"
+  },
+  {
+    "id": "iiitd_00479",
+    "label": "NEEDS_REVIEW",
+    "reason": "政治笑话/段子，私人娱乐"
+  },
+  {
+    "id": "iiitd_00480",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00481",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊学习/考试，非目标域"
+  },
+  {
+    "id": "iiitd_00482",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00483",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00484",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人愿望表达，非目标域"
+  },
+  {
+    "id": "iiitd_00485",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00486",
+    "label": "NEEDS_REVIEW",
+    "reason": "想成为你的...，情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00487",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人情感表达，非目标域"
+  },
+  {
+    "id": "iiitd_00488",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00489",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去睡觉，闲聊"
+  },
+  {
+    "id": "iiitd_00490",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知去洗澡，闲聊"
+  },
+  {
+    "id": "iiitd_00491",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常沟通，非四类目标域"
+  },
+  {
+    "id": "iiitd_00492",
+    "label": "NEEDS_REVIEW",
+    "reason": "告知在课堂上，闲聊定位"
+  },
+  {
+    "id": "iiitd_00493",
+    "label": "NEEDS_REVIEW",
+    "reason": "朋友间闲聊，非目标域"
+  },
+  {
+    "id": "iiitd_00494",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人短信，非目标域"
+  },
+  {
+    "id": "iiitd_00495",
+    "label": "NEEDS_REVIEW",
+    "reason": "表达愤怒/不满，闲聊"
+  },
+  {
+    "id": "iiitd_00496",
+    "label": "NEEDS_REVIEW",
+    "reason": "日常短信，非目标域"
+  },
+  {
+    "id": "iiitd_00497",
+    "label": "NEEDS_REVIEW",
+    "reason": "关于昨晚的梦，闲聊"
+  },
+  {
+    "id": "iiitd_00498",
+    "label": "NEEDS_REVIEW",
+    "reason": "私人对话片段，非目标域"
+  },
+  {
+    "id": "iiitd_00499",
+    "label": "NEEDS_REVIEW",
+    "reason": "闲聊消息，非目标域"
+  }
+]

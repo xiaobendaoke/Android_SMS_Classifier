@@ -1,0 +1,372 @@
+{
+  "zh": {
+    "file": "zh_all_suggested.csv",
+    "exists": true,
+    "n": 9817,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "binary_label",
+      "suggest_reason",
+      "label",
+      "annotator",
+      "template_group",
+      "notes"
+    ],
+    "label_dist": {
+      "NEEDS_REVIEW": 1790,
+      "TRANSACTION": 2124,
+      "AD": 4243,
+      "FRAUD": 316,
+      "HARASS": 1344
+    },
+    "annotator_dist": {
+      "audit_fixpass": 9817
+    },
+    "empty_text": 0,
+    "unlabeled": 0,
+    "review_pct": 18.2,
+    "has_suggested_col": false,
+    "suggested_filled": 0,
+    "fix_notes": 566,
+    "audit_annotator_rows": 9817,
+    "n_cjk": 9795,
+    "n_devanagari": 0,
+    "heuristic_issues": {
+      "TXN_looks_promo": 213,
+      "AD_looks_otp": 1,
+      "zh_no_cjk": 13,
+      "AD_looks_prize_fraud": 1
+    },
+    "issue_samples": {
+      "TXN_looks_promo": [
+        {
+          "id": "zh_00068",
+          "label": "TRANSACTION",
+          "text": "交费提醒：截至3月底，您应交纳话费为187.95元。推荐您登录移动官网交费充值（www.10086.cn），便捷安全，支持网银、支付宝、财付通等，更有超值折扣优惠。您也可拨打10086输入银行卡号、密码在线快捷交费。我们一直在努力，只为您的"
+        },
+        {
+          "id": "zh_00106",
+          "label": "TRANSACTION",
+          "text": "套餐门限提醒：截至14年10月19日13时18分，您套餐内包含的国内长市漫合一通话时长已使用270分钟，剩余30分钟。以上内容供参考，具体以月结账单为准。如需退订该提醒服务，请发送QXTCMX至10086。中国移动"
+        },
+        {
+          "id": "zh_00164",
+          "label": "TRANSACTION",
+          "text": "查询余额服务：您总账户余额为116.76元。详情为：主账户余额116.76元，副账户余额0.00元。温馨提示：主、副账户余额根据您账户进账和消费情况计算得出，所有消费（除通信账户支付业务或其他约定费用外）优先从副账户扣减。移动官网充值（ w"
+        },
+        {
+          "id": "zh_00233",
+          "label": "TRANSACTION",
+          "text": "查询余额服务：您的账户余额为13.01元，移动官网充值（ www.10086.cn）优惠便捷。感谢您的使用，中国移动。"
+        },
+        {
+          "id": "zh_00324",
+          "label": "TRANSACTION",
+          "text": "查询余额服务：您的账户余额为47.71元，移动官网充值（ www.10086.cn）优惠便捷。感谢您的使用，中国移动。"
+        }
+      ],
+      "AD_looks_otp": [
+        {
+          "id": "zh_00222",
+          "label": "AD",
+          "text": "您好！办理“欢乐在线商务版”由主号免费发送BLSW到10086，根据系统回复提示选择资费套餐后，系统告知业务验证码及副号加入方式，副号凭业务验证码加入即可。温馨提示：欢乐在线商务版只可通过短信服务厅办理，暂无法在网站或其他渠道办理。中国移动"
+        }
+      ],
+      "zh_no_cjk": [
+        {
+          "id": "zh_00266",
+          "label": "TRANSACTION",
+          "text": "Hostelworld.com Booking 'FUN-D Hostel Chiang Rai', Ref: 75211-58933945, Starts: 11 Jun 2013, Tel: +66-53712123, Address:"
+        },
+        {
+          "id": "zh_00483",
+          "label": "AD",
+          "text": "http://iread.wo.com.cn/pps/BjYFBb"
+        },
+        {
+          "id": "zh_00557",
+          "label": "NEEDS_REVIEW",
+          "text": "WOSL8755817768c04d05b88d8f3bd9a90b79-0-309-1"
+        },
+        {
+          "id": "zh_00742",
+          "label": "TRANSACTION",
+          "text": "Use 4463349 as Microsoft account security code"
+        },
+        {
+          "id": "zh_02602",
+          "label": "NEEDS_REVIEW",
+          "text": "http://iread.wo.com.cn/pps/Mfiqum"
+        }
+      ],
+      "AD_looks_prize_fraud": [
+        {
+          "id": "zh_07046",
+          "label": "AD",
+          "text": "【大众点评】恭喜中奖！您订座成功并到店消费，抽奖获得了5元抵用券，优惠代码：103157506859429190，有效期至2014年9月30日，请至大众点评团使用。如有疑问，详询400-820-5527"
+        }
+      ]
+    }
+  },
+  "en": {
+    "file": "uci_all_suggested.csv",
+    "exists": true,
+    "n": 5574,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "uci_binary",
+      "label",
+      "annotator",
+      "template_group",
+      "notes"
+    ],
+    "label_dist": {
+      "NEEDS_REVIEW": 4831,
+      "AD": 329,
+      "HARASS": 155,
+      "TRANSACTION": 12,
+      "FRAUD": 247
+    },
+    "annotator_dist": {
+      "(empty)": 5488,
+      "qa_fix_v1": 86
+    },
+    "empty_text": 0,
+    "unlabeled": 0,
+    "review_pct": 86.7,
+    "has_suggested_col": false,
+    "suggested_filled": 0,
+    "fix_notes": 86,
+    "audit_annotator_rows": 0,
+    "n_cjk": 0,
+    "n_devanagari": 0,
+    "heuristic_issues": {
+      "FRAUD_maybe_harass": 3
+    },
+    "issue_samples": {
+      "FRAUD_maybe_harass": [
+        {
+          "id": "uci_00752",
+          "label": "FRAUD",
+          "text": "You have an important customer service announcement from PREMIER."
+        },
+        {
+          "id": "uci_00784",
+          "label": "FRAUD",
+          "text": "You have an important customer service announcement from PREMIER. Call FREEPHONE 0800 542 0578 now!"
+        },
+        {
+          "id": "uci_00881",
+          "label": "FRAUD",
+          "text": "Reminder: You have not downloaded the content you have already paid for. Goto http://doit. mymoby. tv/ to collect your c"
+        }
+      ]
+    }
+  },
+  "id_primary": {
+    "file": "id_yudiwbs_all_suggested.csv",
+    "exists": true,
+    "n": 1143,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "orig_label",
+      "label",
+      "annotator",
+      "template_group",
+      "notes",
+      "label_reason"
+    ],
+    "label_dist": {
+      "AD": 208,
+      "TRANSACTION": 80,
+      "NEEDS_REVIEW": 578,
+      "FRAUD": 238,
+      "HARASS": 39
+    },
+    "annotator_dist": {
+      "audit_fixpass_id": 1143
+    },
+    "empty_text": 0,
+    "unlabeled": 0,
+    "review_pct": 50.6,
+    "has_suggested_col": false,
+    "suggested_filled": 0,
+    "fix_notes": 84,
+    "audit_annotator_rows": 1143,
+    "n_cjk": 0,
+    "n_devanagari": 0,
+    "heuristic_issues": {
+      "TXN_looks_promo": 3,
+      "FRAUD_maybe_harass": 13
+    },
+    "issue_samples": {
+      "TXN_looks_promo": [
+        {
+          "id": "id_yudi_00095",
+          "label": "TRANSACTION",
+          "text": "Isi ulang Rp50000.0 berhasil. Kode transaksi 99100827288792. Cek *123*888# untuk promo RABU RAWIT & JUMAT BAIK buat semu"
+        },
+        {
+          "id": "id_yudi_00161",
+          "label": "TRANSACTION",
+          "text": "PAKET BRONET 24JAM 15MB 1hr sudah aktif. Nikmati 15MB berlaku di 00-23.59 aktif s.d 28-08-2016. Promo AXIS lainnya, telp"
+        },
+        {
+          "id": "id_yudi_00163",
+          "label": "TRANSACTION",
+          "text": "Paket BRONET 2GB 60hr 24jam sudah aktif. Nikmati internet 2GB berlaku hingga jam 23.59 aktif s.d 27-10-2016. Promo AXIS "
+        }
+      ],
+      "FRAUD_maybe_harass": [
+        {
+          "id": "id_yudi_00248",
+          "label": "FRAUD",
+          "text": "ANEKA SHOP Berbagi Promo Type Blackberry DAKOTA 2,4 jt, TOURCH 1,7 jt, ONIX.2 1,5 jt, GEMINI 800 rb, U/Pemesanan 0853255"
+        },
+        {
+          "id": "id_yudi_00269",
+          "label": "FRAUD",
+          "text": "Blackberry City Jual Blackberry Discond 40% Dakota 2,5jt Torch2 2,2jt Onyx3 2,1jt Davis 1,3jt Gemini 3G 1,1jt U/info Hub"
+        },
+        {
+          "id": "id_yudi_00272",
+          "label": "FRAUD",
+          "text": "Bpk/Ibu Yth, Pemilik No.08994150xxx PIN Undian:4881247 Resmi m-dptkan Rp.15jt Cs: 02199545139 atau Klik: 3care2016.com"
+        },
+        {
+          "id": "id_yudi_00335",
+          "label": "FRAUD",
+          "text": "Kejutan POIN, hadian Rp 15 jt resmi diberikan untuk pemilik nomor 0812330xxxx. PIN-x7af2547. Untuk Info Kantor Pusat TEL"
+        },
+        {
+          "id": "id_yudi_00376",
+          "label": "FRAUD",
+          "text": "NAGAMAS ELECKTRONIK BB Dakota>2,4jt BB Davis>900rb BB Gemini>rbq BB Torch>1,7jt DLL Call. 085777779458 Sms. 0818433247 P"
+        }
+      ]
+    }
+  },
+  "id_secondary": {
+    "file": "id_spamshield_all_suggested.csv",
+    "exists": true,
+    "n": 1270,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "orig_label",
+      "suggested_label",
+      "suggest_reason",
+      "label",
+      "annotator",
+      "template_group",
+      "notes"
+    ],
+    "label_dist": {
+      "": 1270
+    },
+    "annotator_dist": {
+      "(empty)": 1270
+    },
+    "empty_text": 0,
+    "unlabeled": 1270,
+    "review_pct": 0.0,
+    "has_suggested_col": true,
+    "suggested_filled": 1270,
+    "fix_notes": 0,
+    "audit_annotator_rows": 0,
+    "n_cjk": 0,
+    "n_devanagari": 0,
+    "heuristic_issues": {
+      "invalid_or_empty_label": 1270
+    },
+    "issue_samples": {
+      "invalid_or_empty_label": [
+        {
+          "id": "id_ss_00000",
+          "label": "",
+          "text": "Kami berharap untuk pergi pada 7, dari Langport. Anda masih naik untuk kota malam ini?"
+        },
+        {
+          "id": "id_ss_00001",
+          "label": "",
+          "text": "HELLOGORGEOUS, HOWS U? MY FONE WAS ON CHARGE LST NITW WEN U TEXD ME. HOPEU AD A NICE WKEND AS IM SURE U DID LOOKIN 4WARD"
+        },
+        {
+          "id": "id_ss_00002",
+          "label": "",
+          "text": "Mungkin akan ada di sini untuk sementara waktu, lihat nanti malam ini &lt;)"
+        },
+        {
+          "id": "id_ss_00003",
+          "label": "",
+          "text": "Tidak (dalam suara sterm) - saya belajar. semuanya baik-baik saja dengan saya! tidak pasti hal itu akan diselesaikan, th"
+        },
+        {
+          "id": "id_ss_00004",
+          "label": "",
+          "text": "CLAIRE di sini saya havin borin waktu & sekarang saya sendirian U wanna cum over 2nite? Chat sekarang 09099725823 harapa"
+        }
+      ]
+    }
+  },
+  "hi_iiitd": {
+    "file": "iiitd_all_suggested.csv",
+    "exists": true,
+    "n": 2000,
+    "fields": [
+      "id",
+      "text",
+      "language",
+      "source",
+      "orig_label",
+      "label",
+      "annotator",
+      "template_group",
+      "notes",
+      "reason"
+    ],
+    "label_dist": {
+      "NEEDS_REVIEW": 993,
+      "HARASS": 80,
+      "AD": 897,
+      "TRANSACTION": 17,
+      "FRAUD": 13
+    },
+    "annotator_dist": {
+      "manual": 1826,
+      "audit_fixpass_iiitd": 174
+    },
+    "empty_text": 0,
+    "unlabeled": 0,
+    "review_pct": 49.6,
+    "has_suggested_col": false,
+    "suggested_filled": 0,
+    "fix_notes": 174,
+    "audit_annotator_rows": 174,
+    "n_cjk": 0,
+    "n_devanagari": 0,
+    "heuristic_issues": {
+      "AD_looks_otp": 1
+    },
+    "issue_samples": {
+      "AD_looks_otp": [
+        {
+          "id": "iiitd_01407",
+          "label": "AD",
+          "text": "Pay Income Tax any time,  anywhere through ATM of: Axis Bank Bank of Maharastra Corporation Bank Union Bank of India One"
+        }
+      ]
+    }
+  }
+}

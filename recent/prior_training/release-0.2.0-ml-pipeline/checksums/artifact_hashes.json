@@ -1,0 +1,9 @@
+{
+  "android/classifier-sdk/src/main/assets/model/model_metadata.json": "9c70d8d3753f62f5ea2999f6b3806421fdc19e5f1a49e3c099bc84da9db2f4ee",
+  "android/classifier-sdk/src/main/assets/rules/otp_rules.json": "75d2bf11c10d71cfd1a9a3b78e8cb189f8a4c71500a884c6dd51c1f66b969705",
+  "training/data/manifests/sources.json": "d02d53ce9a33ce7af945a675fb6bf0054e103747ad00f13a82c88ff022b0b4e2",
+  "android/classifier-sdk/src/main/assets/model/sms_bytecnn_int8.tflite": "1cf5aa5309788cbdfda0fc3987c5ff3a649967b85c405c01c8e246ad0918173e",
+  "training/artifacts/student/sms_bytecnn_int8.tflite": "1cf5aa5309788cbdfda0fc3987c5ff3a649967b85c405c01c8e246ad0918173e",
+  "android/app/build/outputs/apk/debug/app-debug.apk": "88cca3f723db7e99be2b23e08eb09ad4c6e7a60a1186939da3b1b911f30efd33",
+  "android/classifier-sdk/build/outputs/aar/classifier-sdk-release.aar": "fc4245852962ad906709537306ee6204b25909f56d726d5a490137c51bc09b35"
+}

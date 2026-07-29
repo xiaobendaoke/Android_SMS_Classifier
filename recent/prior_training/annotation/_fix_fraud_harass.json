@@ -1,0 +1,3167 @@
+{
+  "changes": [
+    {
+      "id": "zh_00099",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00142",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00149",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00170",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00172",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00203",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00219",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00293",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00344",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00346",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00383",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00403",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_00506",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00546",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00571",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00599",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00632",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00700",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00743",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00756",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00760",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00775",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00805",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00877",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00886",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_00910",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01060",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01083",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_01088",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01097",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01118",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01168",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01181",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01205",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01218",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01221",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01246",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01264",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01294",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01326",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01340",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_01347",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01361",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01382",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01387",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01414",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01431",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01458",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01470",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01479",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01487",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01494",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01498",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01504",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01506",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01546",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01560",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01570",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01579",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_01634",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01695",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01732",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01751",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01759",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01763",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01764",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_01765",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01792",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01847",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01855",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_01963",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_01985",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02025",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02045",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02065",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02102",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02134",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02136",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02159",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02215",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02218",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02229",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02232",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02243",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02248",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02322",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02385",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02408",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02418",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02433",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02470",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02552",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02555",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02562",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02626",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02664",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02674",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02678",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02696",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02727",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02749",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02750",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02777",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02782",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02823",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02825",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02851",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02894",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02925",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02939",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02941",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_02958",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02962",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02963",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_02983",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03009",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03017",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03075",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03092",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03102",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03121",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03137",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03156",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03157",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03164",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03200",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03213",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03227",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03251",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03254",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03263",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03267",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03306",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03307",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03339",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03349",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03370",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03374",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03378",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03379",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03388",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03414",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03436",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03451",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03456",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03457",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03460",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03486",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03506",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03552",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_03557",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03559",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03577",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03618",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03625",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03628",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03647",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03648",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03649",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03687",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03717",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03737",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03761",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03765",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03788",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03832",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03849",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03861",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03869",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03887",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03964",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_03968",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_03990",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04018",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04022",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04037",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04059",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04072",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04104",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04117",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04122",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04126",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04140",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04178",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04190",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04192",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04208",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04217",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04242",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04250",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04275",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04286",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04315",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04334",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04339",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_04347",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04353",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04365",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04380",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04416",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04431",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04454",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04479",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04486",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04514",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04525",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04538",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04577",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04595",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04607",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04614",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04615",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04640",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04698",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04702",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04712",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04727",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04729",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04798",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04802",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04804",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04809",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04830",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04864",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04884",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04912",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04925",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_04976",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_04981",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05029",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05044",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05095",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05114",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05235",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05279",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05295",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05306",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05316",
+      "old": "HARASS",
+      "new": "TRANSACTION",
+      "reason": "支付验证码+防诈骗提示，主意图事务"
+    },
+    {
+      "id": "zh_05329",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05364",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05379",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05383",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05388",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_05394",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05408",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05416",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05510",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05511",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05542",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05547",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05570",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05577",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "增值业务强订/扣费诱导，非诈骗转账"
+    },
+    {
+      "id": "zh_05644",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05677",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05695",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05700",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05705",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05757",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05784",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05800",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_05839",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05890",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05892",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05966",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_05974",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_05987",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06003",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06058",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06065",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06068",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06073",
+      "old": "FRAUD",
+      "new": "TRANSACTION",
+      "reason": "付费短信业务验证/计费事务通知"
+    },
+    {
+      "id": "zh_06082",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06083",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06097",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06105",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06164",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06172",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06186",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06196",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06212",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06215",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06230",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06259",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06277",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06291",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06294",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06296",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06323",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06373",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06393",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06394",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06427",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06432",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06443",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06467",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06523",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06542",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06570",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06572",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06573",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06581",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06591",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06606",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06613",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06627",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06629",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06691",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06696",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06709",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06711",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06749",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06771",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06786",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06792",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06830",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06835",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06836",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06851",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06857",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06878",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06926",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06947",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_06978",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_06995",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07015",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07044",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07097",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07119",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07134",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07142",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07153",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07173",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07182",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07280",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07287",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07291",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07294",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07296",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07297",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07327",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07374",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07379",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07393",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07454",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07471",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "移民中介招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_07476",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07477",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07493",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07510",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07535",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07537",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07568",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07618",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07630",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_07645",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07672",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07694",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07701",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07729",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07746",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "移民中介招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_07760",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07770",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07789",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_07798",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07809",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07820",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07832",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07841",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07851",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07868",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07869",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07880",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07899",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07908",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07911",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_07933",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07953",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_07989",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08026",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08028",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08029",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08036",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08038",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08076",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08084",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08086",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_08100",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08107",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08116",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08123",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08125",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08140",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08148",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08157",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08178",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08190",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08236",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08240",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08250",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08257",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08269",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08309",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08366",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08384",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08385",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08388",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08417",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08439",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08508",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08511",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08515",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08528",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08592",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_08606",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08611",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08627",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08640",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08656",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08669",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08686",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08704",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_08708",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08746",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08769",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "增值业务强订/扣费诱导，非诈骗转账"
+    },
+    {
+      "id": "zh_08786",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08792",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "增值业务强订/扣费诱导，非诈骗转账"
+    },
+    {
+      "id": "zh_08794",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08821",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08833",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08857",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08863",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08907",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08914",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08920",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08925",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08941",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_08982",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_08989",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09006",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09021",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09030",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09063",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "增值业务强订/扣费诱导，非诈骗转账"
+    },
+    {
+      "id": "zh_09071",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_09074",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09089",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09105",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09111",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09128",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09145",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09151",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09164",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09255",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09265",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09272",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09279",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "增值业务强订/扣费诱导，非诈骗转账"
+    },
+    {
+      "id": "zh_09297",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09307",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09322",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09339",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09344",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09378",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09424",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09440",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09445",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09448",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09455",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09461",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09495",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09511",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09553",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09579",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09581",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09634",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09661",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09669",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09675",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09741",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09742",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09786",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09841",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09861",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09869",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09889",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09902",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09927",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09938",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09940",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09950",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09976",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09978",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_09981",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_09998",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10057",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10083",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10113",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10125",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10145",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10146",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10154",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10184",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10224",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10302",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10313",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10327",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10376",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10389",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10469",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10484",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10508",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10542",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10561",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10567",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10597",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "灰产/赌博/成人/发票/考试作弊招揽，非典型转账骗局"
+    },
+    {
+      "id": "zh_10620",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10651",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10652",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10656",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10661",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10724",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10790",
+      "old": "FRAUD",
+      "new": "AD",
+      "reason": "运营商正规签名的增值/抽奖促销"
+    },
+    {
+      "id": "zh_10824",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10849",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    },
+    {
+      "id": "zh_10874",
+      "old": "FRAUD",
+      "new": "HARASS",
+      "reason": "荐股/建仓/带客推销，无明确骗转账话术"
+    }
+  ],
+  "reviewed": 1574
+}

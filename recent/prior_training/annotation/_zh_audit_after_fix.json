@@ -1,0 +1,30 @@
+{
+  "applied": 0,
+  "merged": 568,
+  "blocked_fraud_to_ad": 242,
+  "label_dist": {
+    "NEEDS_REVIEW": 1790,
+    "TRANSACTION": 2124,
+    "AD": 4243,
+    "FRAUD": 316,
+    "HARASS": 1344
+  },
+  "audit_remaining": {},
+  "by_transition": {
+    "HARASS->HARASS": 71,
+    "FRAUD->HARASS": 267,
+    "TRANSACTION->AD": 40,
+    "HARASS->TRANSACTION": 1,
+    "AD->HARASS": 24,
+    "AD->FRAUD": 1,
+    "TRANSACTION->HARASS": 4,
+    "FRAUD->AD": 16,
+    "FRAUD->TRANSACTION": 1,
+    "AD->TRANSACTION": 9,
+    "AD->NEEDS_REVIEW": 74,
+    "NEEDS_REVIEW->AD": 45,
+    "NEEDS_REVIEW->TRANSACTION": 9,
+    "NEEDS_REVIEW->HARASS": 5,
+    "TRANSACTION->TRANSACTION": 1
+  }
+}

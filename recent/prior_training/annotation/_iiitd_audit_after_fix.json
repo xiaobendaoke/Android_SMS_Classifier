@@ -1,0 +1,76 @@
+{
+  "pass3_applied": [
+    {
+      "id": "iiitd_00649",
+      "from": "FRAUD",
+      "to": "HARASS",
+      "reason": "要邮箱/联系方式，偏骚扰索取"
+    },
+    {
+      "id": "iiitd_01115",
+      "from": "FRAUD",
+      "to": "HARASS",
+      "reason": "残缺推销要电话，偏骚扰"
+    },
+    {
+      "id": "iiitd_01495",
+      "from": "FRAUD",
+      "to": "AD",
+      "reason": "销售竞赛奖品促销，非假中奖认领"
+    },
+    {
+      "id": "iiitd_01533",
+      "from": "TRANSACTION",
+      "to": "AD",
+      "reason": "赛事比分提示促销，非交易通知"
+    },
+    {
+      "id": "iiitd_01560",
+      "from": "FRAUD",
+      "to": "AD",
+      "reason": "Whats Your Number 销售竞赛"
+    },
+    {
+      "id": "iiitd_01561",
+      "from": "FRAUD",
+      "to": "AD",
+      "reason": "销售竞赛获奖通知+继续WFP"
+    },
+    {
+      "id": "iiitd_01630",
+      "from": "TRANSACTION",
+      "to": "AD",
+      "reason": "余额转赠业务推广"
+    },
+    {
+      "id": "iiitd_01664",
+      "from": "TRANSACTION",
+      "to": "AD",
+      "reason": "充值套餐促销"
+    },
+    {
+      "id": "iiitd_01686",
+      "from": "FRAUD",
+      "to": "AD",
+      "reason": "Whats Your Number 竞赛促销"
+    },
+    {
+      "id": "iiitd_01791",
+      "from": "TRANSACTION",
+      "to": "AD",
+      "reason": "短信CREDIT借话费促销"
+    }
+  ],
+  "label_dist": {
+    "NEEDS_REVIEW": 993,
+    "HARASS": 80,
+    "AD": 897,
+    "TRANSACTION": 17,
+    "FRAUD": 13
+  },
+  "annotator": {
+    "manual": 1826,
+    "audit_fixpass_iiitd": 174
+  },
+  "n_rows": 2000
+}

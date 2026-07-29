@@ -3,13 +3,13 @@
   "issue_count": 0,
   "issues": [],
   "split_counts": {
-    "train": 10305,
-    "validation": 811,
-    "test": 819
+    "train": 7282,
+    "validation": 2708,
+    "test": 2709
   },
   "group_counts": {
-    "train": 6468,
-    "validation": 808,
-    "test": 810
+    "train": 7282,
+    "validation": 2708,
+    "test": 2709
   }
 }

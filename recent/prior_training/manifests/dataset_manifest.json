@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "splits": {
+    "train": {
+      "path": "data/processed/train.jsonl",
+      "count": 10305,
+      "sha256": "c94bfd7049835d074791639ac0303efa0529eb43a871e3c23c23edd3c25e8afe"
+    },
+    "validation": {
+      "path": "data/processed/validation.jsonl",
+      "count": 811,
+      "sha256": "86be99c5c4162c9b53876a333ce15c6a6f8b12dfa9902b4fd726abcac7241b95"
+    },
+    "test": {
+      "path": "data/processed/test.jsonl",
+      "count": 819,
+      "sha256": "35fc6e1492a341f1ce05639f50415d5e6f659eb5cc960b9b2286d3dfac7394e3"
+    }
+  },
+  "dedupe": {
+    "removed_exact": 3135,
+    "removed_normalized": 8
+  },
+  "leakage": {
+    "status": "PASS",
+    "issue_count": 0,
+    "issues": [],
+    "split_counts": {
+      "train": 10305,
+      "validation": 811,
+      "test": 819
+    },
+    "group_counts": {
+      "train": 6468,
+      "validation": 808,
+      "test": 810
+    }
+  }
+}

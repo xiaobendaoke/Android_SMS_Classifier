@@ -1,0 +1,287 @@
+{
+  "changes": [
+    {
+      "id": "zh_00222",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "办理欢乐在线商务版资费套餐指引，主意图办业务推销"
+    },
+    {
+      "id": "zh_00768",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "博彩招揽/彩票投注推销，非业务结果"
+    },
+    {
+      "id": "zh_01187",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "博彩招揽/彩票投注推销，非业务结果"
+    },
+    {
+      "id": "zh_01535",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "积分商城回馈活动与加油包积分兑换推销"
+    },
+    {
+      "id": "zh_01711",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "购后赠送官网现金券，主意图营销拉新/复购"
+    },
+    {
+      "id": "zh_01779",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "活动发放现金券/抵用券，主意图推销使用"
+    },
+    {
+      "id": "zh_01801",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "到店后引导抽奖，主意图营销"
+    },
+    {
+      "id": "zh_01990",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "注册拉新赠送租车代金券"
+    },
+    {
+      "id": "zh_02327",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "抵用券即将过期催用"
+    },
+    {
+      "id": "zh_02415",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "剩余流量提醒中推销办理加油包"
+    },
+    {
+      "id": "zh_02613",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "余量提醒中推销发送加油包选更优惠套餐"
+    },
+    {
+      "id": "zh_02931",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "刷卡兑换现金抵用券/加油优惠，信用卡促销"
+    },
+    {
+      "id": "zh_03004",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量提醒中硬推销办理流量加油包"
+    },
+    {
+      "id": "zh_03185",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "主推申请升级套餐享低价"
+    },
+    {
+      "id": "zh_03305",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量提醒中推荐回复办理流量包"
+    },
+    {
+      "id": "zh_03623",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "手机上网优惠活动/抽奖营销"
+    },
+    {
+      "id": "zh_03751",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "专车代金券过期催用"
+    },
+    {
+      "id": "zh_03976",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "注册成功赠送打车代金券拉新"
+    },
+    {
+      "id": "zh_04215",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "博彩招揽/彩票投注推销，非业务结果"
+    },
+    {
+      "id": "zh_04861",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量不足提醒中推销加油包及夜间叠加包"
+    },
+    {
+      "id": "zh_05160",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "听书赢大奖活动推销"
+    },
+    {
+      "id": "zh_05287",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "借流量短信推销114商城特惠商品"
+    },
+    {
+      "id": "zh_05366",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "开通4G后主推升级和4G套餐"
+    },
+    {
+      "id": "zh_05668",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量提醒中推荐回复办理流量包"
+    },
+    {
+      "id": "zh_05723",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "余量提醒中推销发送加油包选更优惠套餐"
+    },
+    {
+      "id": "zh_06533",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "账单分期优惠/送积分推销"
+    },
+    {
+      "id": "zh_06695",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "剩余流量为0提醒中推销办理加油包"
+    },
+    {
+      "id": "zh_06721",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "博彩招揽/彩票投注推销，非业务结果"
+    },
+    {
+      "id": "zh_06734",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量用尽提醒中推销办理加油包"
+    },
+    {
+      "id": "zh_07156",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "账单分期优惠/手续费折扣推销"
+    },
+    {
+      "id": "zh_07482",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "携程酒店限量抛售促销"
+    },
+    {
+      "id": "zh_08033",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "延保/保险活动送礼包代金券促销"
+    },
+    {
+      "id": "zh_08377",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "银行微信红包抽奖营销活动"
+    },
+    {
+      "id": "zh_08441",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "航司会员网站促销活动"
+    },
+    {
+      "id": "zh_09080",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "发放抵用券引导购买团购"
+    },
+    {
+      "id": "zh_09305",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "专车代金券过期催用"
+    },
+    {
+      "id": "zh_09476",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "刷卡活动积分抽奖营销"
+    },
+    {
+      "id": "zh_09828",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "灰产贷款推销（无抵押免担保、急用钱）"
+    },
+    {
+      "id": "zh_09837",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "账单分期送礼（新秀丽背包）推销"
+    },
+    {
+      "id": "zh_09897",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "流量超量提醒中硬推销加油包"
+    },
+    {
+      "id": "zh_10052",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "纯流量加油包开通推销"
+    },
+    {
+      "id": "zh_10063",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "骚扰式资金周转/预授信放款推销"
+    },
+    {
+      "id": "zh_10326",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "灰产贷款推销（无抵押、放款快）"
+    },
+    {
+      "id": "zh_10358",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "账单分期送礼（新秀丽背包）推销"
+    },
+    {
+      "id": "zh_10658",
+      "old": "TRANSACTION",
+      "new": "AD",
+      "reason": "移动门店智能机冰点价/抽奖促销"
+    },
+    {
+      "id": "zh_10869",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "灰产贷款推销（贷窾政策、最快放款）"
+    },
+    {
+      "id": "zh_10928",
+      "old": "TRANSACTION",
+      "new": "HARASS",
+      "reason": "灰产贷款推销（联保信用贷款）"
+    }
+  ],
+  "reviewed": 2186
+}

@@ -1,0 +1,11 @@
+{
+  "final_dist": {
+    "AD": 210,
+    "TRANSACTION": 80,
+    "NEEDS_REVIEW": 578,
+    "HARASS": 42,
+    "FRAUD": 233
+  },
+  "last_pass_applied": 22,
+  "audit_remaining": {}
+}
