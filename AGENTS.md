@@ -86,3 +86,14 @@ Datasets: `training/data/processed/{train,validation,test}.jsonl`
 - `docs/异机测试环境安装清单.md` — cross-machine environment setup
 - `docs/colab-training-guide.md` — Colab training setup
 - `docs/progress.md` — current status
+
+## Cursor Cloud specific instructions
+
+Environment is pre-provisioned by the startup update script + VM snapshot. Standard commands live in the `## Commands` section above; the notes below are only the non-obvious cloud caveats.
+
+- **Python venv**: `.venv/` at repo root (the update script creates/refreshes it from `training/requirements.lock`). Use `.venv/bin/python` or `source .venv/bin/activate`. Only light deps (numpy, PyYAML, pytest) are installed — this is enough for tests, data prep, baseline, eval (rule mode), and compliance/audit tools. Heavy ML deps (`requirements-train.txt`: torch/TF) are NOT installed; `make train-teacher/distill/quantize` will not run here.
+- **Android SDK**: installed at `~/android-sdk` (API 34, build-tools 34.0.0, platform-tools). `ANDROID_HOME`/`ANDROID_SDK_ROOT` are exported in `~/.bashrc`, so Gradle finds the SDK with no `local.properties` needed. `gradle-wrapper.jar` IS present despite the warning in `android/README-GRADLE.md`; do not regenerate it. First Gradle invocation downloads the Gradle 8.7 distribution + AndroidX deps (needs network).
+- **No emulator / device**: the VM has no `/dev/kvm`, so an Android emulator cannot run, and `:benchmark` / instrumented `androidTest` (device-only) cannot execute. Validate the Android product via JVM unit tests (`./gradlew :classifier-sdk:test`), lint (`./gradlew :classifier-sdk:lintDebug`), and `:app:assembleDebug` (produces `app/build/outputs/apk/debug/app-debug.apk`).
+- **Pre-existing SDK test failure**: `SdkUnitTest.classify_noModelUnknownText_reviewWithoutFakeTransaction` fails (unknown text with no model routes to `SUSPECT`, test expects `REVIEW`). This is a repo logic issue, NOT an environment problem, so `./gradlew test` exits non-zero (17/18 pass). Use `--continue` if you need all modules to run.
+- **No `.tflite` model present**: model artifacts are gitignored and only produced by the (heavy-dep) training pipeline. The SDK/app therefore run rules-only and route uncertain messages to REVIEW; that is expected here.
+- **Running the pipeline mutates tracked files**: `make prepare-data` / `train-baseline` / `evaluate` overwrite tracked JSON under `training/reports/metrics/` and `training/data/manifests/`. Revert them (`git checkout -- <files>`) if you only ran them for verification.
