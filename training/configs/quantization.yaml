@@ -1,25 +1,34 @@
 # INT8 量化（PTQ / QAT）
 
-version: "1.0.0"
+version: "1.1.0"
 seed: 42
 
 mode: ptq  # ptq | qat
 
 representative:
   manifest: data/processed/representative.jsonl
-  num_samples: 500
+  num_samples: 800
 
 converter:
   optimizations: [DEFAULT]
   supported_ops: [TFLITE_BUILTINS_INT8]
-  inference_input_type: int32
+  # Declared converter type for TF>=2.20 validation. Runtime Embedding input stays int32.
+  inference_input_type: float32
   inference_output_type: int8
 
 qat_triggers:
   transaction_recall_drop: 0.003
   macro_f1_drop: 0.01
+  harass_f1_drop: 0.01
   fraud_recall_drop: 0.01
   keras_tflite_mismatch_rate: 0.01
+
+qat:
+  epochs: 2
+  batch_size: 64
+
+validation:
+  manifest: data/processed/validation.jsonl
 
 input_model: artifacts/student/sms_bytecnn_pruned.keras
 output_tflite: artifacts/student/sms_bytecnn_int8.tflite
@@ -27,3 +36,7 @@ output_tflite: artifacts/student/sms_bytecnn_int8.tflite
 verify:
   min_samples: 1000
   min_agreement_rate: 0.99
+  acceptance_targets:
+    macro_f1: 0.86
+    harass_f1: 0.80
+    fraud_recall: 0.80
