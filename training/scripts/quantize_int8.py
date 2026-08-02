@@ -25,7 +25,7 @@ from src.byte_encoder import encode_text  # noqa: E402
 from src.normalize import normalize_text  # noqa: E402
 from src.metrics import summarize_metrics  # noqa: E402
 from src.schema import LABEL_ORDER, SmsRecord, load_jsonl  # noqa: E402
-from src.train_utils import set_seed, write_json  # noqa: E402
+from src.train_utils import set_seed, student_predictions, write_json  # noqa: E402
 
 
 def check_tensorflow() -> Optional[str]:
@@ -259,11 +259,24 @@ def validation_metrics(
     from src.train_utils import records_to_xy
 
     x, y = records_to_xy(records, max_bytes=max_bytes)
-    reference_pred = np.argmax(reference_model.predict(x, verbose=0), axis=-1)
+    reference_logits = reference_model.predict(x, verbose=0)
+    reference_pred = student_predictions(
+        reference_logits,
+        transaction_threshold=(
+            0.5 if reference_logits.shape[-1] > len(LABEL_ORDER) else None
+        ),
+    )
     candidate_keras_pred = (
         reference_pred
         if candidate_model is reference_model
-        else np.argmax(candidate_model.predict(x, verbose=0), axis=-1)
+        else student_predictions(
+            candidate_model.predict(x, verbose=0),
+            transaction_threshold=(
+                0.5
+                if int(candidate_model.output_shape[-1]) > len(LABEL_ORDER)
+                else None
+            ),
+        )
     )
     interp = tf.lite.Interpreter(model_content=tflite_model)
     interp.allocate_tensors()
@@ -274,7 +287,17 @@ def validation_metrics(
         interp.set_tensor(inp["index"], np.asarray([row], dtype=inp["dtype"]))
         interp.invoke()
         result = interp.get_tensor(out["index"])[0]
-        tflite_pred.append(int(result) if np.ndim(result) == 0 else int(np.argmax(result)))
+        if np.dtype(out["dtype"]).kind not in {"f", "c"}:
+            scale, zero_point = out.get("quantization", (0.0, 0))
+            if scale:
+                result = (result.astype(np.float32) - float(zero_point)) * float(scale)
+        predicted = student_predictions(
+            np.asarray([result]),
+            transaction_threshold=(
+                0.5 if np.asarray(result).shape[-1] > len(LABEL_ORDER) else None
+            ),
+        )[0]
+        tflite_pred.append(int(predicted))
     return metrics_from_predictions(
         y,
         reference_pred,
@@ -364,20 +387,53 @@ def clone_bytecnn_for_tfmot(source_model: Any, max_bytes: int) -> Any:
     else:
         x = branch_outputs[0]
 
+    pooled = x
     dense_cfg = source_model.get_layer("dense_hidden").get_config()
     drop_cfg = source_model.get_layer("dropout").get_config()
-    logits_cfg = source_model.get_layer("logits").get_config()
     x = layers.Dense(
         int(dense_cfg["units"]),
         activation=dense_cfg.get("activation", "relu"),
         name="dense_hidden",
     )(x)
     x = layers.Dropout(float(drop_cfg.get("rate", 0.2)), name="dropout")(x)
-    outputs = layers.Dense(
-        int(logits_cfg["units"]),
-        activation=logits_cfg.get("activation", "linear"),
-        name="logits",
-    )(x)
+    dual_head = int(source_model.output_shape[-1]) > len(LABEL_ORDER)
+    if dual_head:
+        class_cfg = source_model.get_layer("class_logits").get_config()
+        protection_cfg = source_model.get_layer(
+            "transaction_protection_logit"
+        ).get_config()
+        class_logits = layers.Dense(
+            int(class_cfg["units"]),
+            activation=class_cfg.get("activation", "linear"),
+            name="class_logits",
+        )(x)
+        protection_features = pooled
+        try:
+            protection_hidden_cfg = source_model.get_layer(
+                "transaction_protection_hidden"
+            ).get_config()
+            protection_features = layers.Dense(
+                int(protection_hidden_cfg["units"]),
+                activation=protection_hidden_cfg.get("activation", "relu"),
+                name="transaction_protection_hidden",
+            )(protection_features)
+        except ValueError:
+            pass
+        protection_logit = layers.Dense(
+            int(protection_cfg["units"]),
+            activation=protection_cfg.get("activation", "linear"),
+            name="transaction_protection_logit",
+        )(protection_features)
+        outputs = layers.Concatenate(name="logits")(
+            [class_logits, protection_logit]
+        )
+    else:
+        logits_cfg = source_model.get_layer("logits").get_config()
+        outputs = layers.Dense(
+            int(logits_cfg["units"]),
+            activation=logits_cfg.get("activation", "linear"),
+            name="logits",
+        )(x)
     cloned = mot_keras.Model(inputs=inputs, outputs=outputs, name="byte_textcnn_tfmot")
 
     # Copy weights by layer name (skip Input).
@@ -426,9 +482,33 @@ def apply_qat(tf: Any, model: Any, train_path: Path, max_bytes: int, cfg: Mappin
     annotated = mot_keras.models.clone_model(qat_base, clone_function=_annotate)
     with tfmot.quantization.keras.quantize_scope():
         q_aware = tfmot.quantization.keras.quantize_apply(annotated)
+    dual_head = int(q_aware.output_shape[-1]) > len(LABEL_ORDER)
+
+    def dual_head_loss(y_true: Any, y_pred: Any) -> Any:
+        labels = tf.cast(tf.reshape(y_true, [-1]), tf.int32)
+        class_loss = tf.keras.losses.sparse_categorical_crossentropy(
+            labels,
+            y_pred[:, : len(LABEL_ORDER)],
+            from_logits=True,
+        )
+        transaction_targets = tf.cast(
+            tf.equal(labels, LABEL_ORDER.index("TRANSACTION")),
+            tf.float32,
+        )
+        protection_loss = tf.nn.weighted_cross_entropy_with_logits(
+            labels=transaction_targets,
+            logits=y_pred[:, len(LABEL_ORDER)],
+            pos_weight=1.5,
+        )
+        return class_loss + 0.35 * protection_loss
+
     q_aware.compile(
         optimizer="adam",
-        loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+        loss=(
+            dual_head_loss
+            if dual_head
+            else tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+        ),
         metrics=["accuracy"],
     )
     x, y = records_to_xy(load_labeled_records(train_path), max_bytes=max_bytes)

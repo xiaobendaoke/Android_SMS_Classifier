@@ -12,8 +12,8 @@
   ],
   "normalizationVersion": "1.0.0",
   "rulesVersion": "1.0.0",
-  "quantization": "HYBRID",
-  "modelSha256": "40c7e33f0b20d94ba1c6255a7296dd346bfe03f9d6c577043eb1c9f9d9d2177e",
+  "quantization": "INT8",
+  "modelSha256": "b4e57ad3a48fc5765fa022b725e801a9f0bd8f8121d6e7ef1b67b26cf31fc6b3",
   "thresholds": {
     "default": {
       "TRANSACTION": 0.55,

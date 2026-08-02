@@ -1,27 +1,45 @@
-# 教师模型：bert-base-multilingual-cased
+# 教师模型：中文 BERT（当前正式验收仅 zh）
 
 version: "1.0.0"
 seed: 42
 
 model:
-  name: bert-base-multilingual-cased
-  hub_id: google-bert/bert-base-multilingual-cased
+  name: bert-base-chinese
+  hub_id: google-bert/bert-base-chinese
   # SMS 通常远短于 512；Colab 用 128 可显著降显存/内存，避免 SIGKILL
   max_length: 128
 
 training:
   batch_size: 8
   learning_rate: 2.0e-5
-  epochs: 3
+  epochs: 8
+  min_epochs: 3
+  early_stopping_patience: 3
   warmup_ratio: 0.1
   weight_decay: 0.01
+  # Moderate focal CE concentrates updates on transaction boundary and HARASS
+  # errors without globally inflating TRANSACTION predictions.
+  focal_gamma: 1.0
   # Colab T4 建议开启；显存仍不足可再把 batch_size 降到 4
   fp16: true
   gradient_checkpointing: true
+  class_weight_strategy: balanced
+  class_weight_clip: [0.75, 1.50]
+  class_weight_multipliers:
+    TRANSACTION: 1.1
+    AD: 1.0
+    HARASS: 1.0
+    FRAUD: 1.0
+  target_transaction_recall: 0.985
+  min_transaction_precision: 0.92
+  min_macro_f1: 0.86
+  min_harass_f1: 0.80
+  min_fraud_recall: 0.80
 
 data:
   train_manifest: data/processed/train.jsonl
   val_manifest: data/processed/validation.jsonl
+  accepted_languages: [zh]
 
 output:
   checkpoint_dir: artifacts/teacher

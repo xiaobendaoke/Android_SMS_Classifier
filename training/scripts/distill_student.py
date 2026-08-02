@@ -22,13 +22,47 @@ from src.metrics import summarize_metrics  # noqa: E402
 from src.model_student import build_keras_model, config_from_mapping  # noqa: E402
 from src.schema import LABEL_ORDER  # noqa: E402
 from src.train_utils import (  # noqa: E402
+    balanced_class_weights,
+    filter_records_by_languages,
     load_labeled_records,
     one_hot,
     records_to_xy,
     set_seed,
     softmax_np,
+    student_predictions,
     write_json,
 )
+
+
+def metric_value(metrics: Dict[str, object], label: str, field: str) -> float:
+    per_class = metrics.get("per_class", {})
+    if not isinstance(per_class, dict):
+        return 0.0
+    label_metrics = per_class.get(label, {})
+    if not isinstance(label_metrics, dict):
+        return 0.0
+    return float(label_metrics.get(field, 0.0))
+
+
+def checkpoint_score(metrics: Dict[str, object], targets: Dict[str, float]) -> Tuple[float, ...]:
+    """Prefer checkpoints passing every gate; otherwise minimize the worst deficit."""
+    macro_f1 = float(metrics.get("macro_f1", 0.0))
+    transaction_recall = metric_value(metrics, "TRANSACTION", "recall")
+    transaction_precision = metric_value(metrics, "TRANSACTION", "precision")
+    harass_f1 = metric_value(metrics, "HARASS", "f1")
+    fraud_recall = metric_value(metrics, "FRAUD", "recall")
+    gate_ratios = (
+        transaction_recall / max(targets["target_transaction_recall"], 1e-9),
+        macro_f1 / max(targets["min_macro_f1"], 1e-9),
+        transaction_precision / max(targets["min_transaction_precision"], 1e-9),
+        harass_f1 / max(targets["min_harass_f1"], 1e-9),
+        fraud_recall / max(targets["min_fraud_recall"], 1e-9),
+    )
+    all_gates_met = float(min(gate_ratios) >= 1.0)
+    if all_gates_met:
+        return (1.0, transaction_recall, macro_f1, min(gate_ratios), 1.0)
+    capped_mean = float(np.mean([min(value, 1.0) for value in gate_ratios]))
+    return (0.0, min(gate_ratios), capped_mean, macro_f1, transaction_recall)
 
 
 def check_tensorflow() -> Optional[str]:
@@ -90,6 +124,49 @@ def main(argv: Optional[List[str]] = None) -> int:
     alpha = float(distill.get("alpha", 0.6))
     beta = float(distill.get("beta", 0.4))
     temperature = float(distill.get("temperature", 4.0))
+    primary_focal_gamma = float(distill.get("primary_focal_gamma", 0.0))
+    hard_positive_multiplier = float(
+        distill.get("transaction_hard_positive_multiplier", 0.0)
+    )
+    hard_negative_multiplier = float(
+        distill.get("transaction_hard_negative_multiplier", 0.0)
+    )
+    boundary_weight_max = float(distill.get("boundary_weight_max", 3.0))
+    teacher_confidence_floor = float(
+        distill.get("teacher_confidence_floor", 0.25)
+    )
+    teacher_confidence_power = float(
+        distill.get("teacher_confidence_power", 1.0)
+    )
+    protection_cfg = cfg.get("transaction_protection", {})
+    protection_enabled = bool(
+        protection_cfg.get(
+            "enabled",
+            student_cfg.transaction_protection_head,
+        )
+    )
+    if protection_enabled != student_cfg.transaction_protection_head:
+        raise ValueError(
+            "model.transaction_protection_head and "
+            "transaction_protection.enabled must agree"
+        )
+    protection_loss_weight = float(protection_cfg.get("loss_weight", 0.35))
+    protection_positive_weight = float(protection_cfg.get("positive_weight", 2.0))
+    protection_threshold = float(protection_cfg.get("threshold", 0.50))
+    protection_focal_gamma = float(protection_cfg.get("focal_gamma", 2.0))
+    protection_hard_label_weight = float(
+        protection_cfg.get("hard_label_weight", 0.5)
+    )
+    protection_teacher_temperature = float(
+        protection_cfg.get("teacher_temperature", 1.0)
+    )
+    protection_checkpoint_scope = str(
+        protection_cfg.get("checkpoint_scope", "primary")
+    )
+    if protection_checkpoint_scope not in {"primary", "protected"}:
+        raise ValueError(
+            "transaction_protection.checkpoint_scope must be primary or protected"
+        )
     train_path = ROOT / cfg.get("data", {}).get("train_manifest", "data/processed/train.jsonl")
     val_path = ROOT / cfg.get("data", {}).get("val_manifest", "data/processed/validation.jsonl")
     output_keras = ROOT / cfg.get("output", {}).get(
@@ -104,21 +181,60 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"Train data missing: {train_path}", file=sys.stderr)
         return 1
 
-    train_records = load_labeled_records(train_path)
-    val_records = load_labeled_records(val_path) if val_path.exists() else []
+    accepted_languages = cfg.get("data", {}).get("accepted_languages", [])
+    train_records = filter_records_by_languages(
+        load_labeled_records(train_path),
+        accepted_languages,
+    )
+    val_records = (
+        filter_records_by_languages(
+            load_labeled_records(val_path),
+            accepted_languages,
+        )
+        if val_path.exists()
+        else []
+    )
     if not train_records:
         print("No labeled training records.", file=sys.stderr)
         return 1
 
     x_train, y_train = records_to_xy(train_records, max_bytes=student_cfg.max_bytes)
     hard = one_hot(y_train, student_cfg.num_classes)
+    transaction_targets = (
+        y_train == LABEL_ORDER.index("TRANSACTION")
+    ).astype(np.float32)
 
     # Class weights to reduce collapse toward majority TRANSACTION.
-    counts = np.bincount(y_train, minlength=student_cfg.num_classes).astype(np.float32)
-    counts = np.maximum(counts, 1.0)
-    class_weights = (counts.sum() / (student_cfg.num_classes * counts)).astype(np.float32)
+    training_cfg = cfg.get("training", {})
+    multipliers_cfg = training_cfg.get("class_weight_multipliers", {})
+    weight_strategy = str(training_cfg.get("class_weight_strategy", "balanced"))
+    if weight_strategy == "uniform":
+        class_weights = np.ones(student_cfg.num_classes, dtype=np.float32)
+    elif weight_strategy == "balanced":
+        class_weights = balanced_class_weights(
+            y_train,
+            student_cfg.num_classes,
+            multipliers=multipliers_cfg,
+        )
+        clip_cfg = training_cfg.get("class_weight_clip")
+        if clip_cfg is not None:
+            if not isinstance(clip_cfg, list) or len(clip_cfg) != 2:
+                raise ValueError("training.class_weight_clip must be [minimum, maximum]")
+            class_weights = np.clip(
+                class_weights,
+                float(clip_cfg[0]),
+                float(clip_cfg[1]),
+            )
+            class_weights *= student_cfg.num_classes / float(class_weights.sum())
+    else:
+        raise ValueError(
+            "training.class_weight_strategy must be 'balanced' or 'uniform'"
+        )
     sample_weights = class_weights[y_train]
-    print(f"class_weights={dict(zip(LABEL_ORDER, class_weights.tolist()))}")
+    print(
+        f"class_weight_strategy={weight_strategy} "
+        f"class_weights={dict(zip(LABEL_ORDER, class_weights.tolist()))}"
+    )
 
     teacher_map = None
     if not args.hard_only:
@@ -134,6 +250,37 @@ def main(argv: Optional[List[str]] = None) -> int:
             ]
         )
         soft = softmax_np(soft_logits / temperature)
+        teacher_probabilities = softmax_np(soft_logits)
+        teacher_transaction_probability = softmax_np(
+            soft_logits / protection_teacher_temperature
+        )[:, LABEL_ORDER.index("TRANSACTION")]
+        teacher_true_probability = teacher_probabilities[
+            np.arange(len(y_train)), y_train
+        ]
+        distill_sample_weights = np.power(
+            np.maximum(teacher_true_probability, teacher_confidence_floor),
+            teacher_confidence_power,
+        ).astype(np.float32)
+        boundary_sample_weights = np.where(
+            transaction_targets > 0.5,
+            1.0
+            + hard_positive_multiplier
+            * (1.0 - teacher_transaction_probability),
+            1.0
+            + hard_negative_multiplier
+            * teacher_transaction_probability,
+        )
+        boundary_sample_weights = np.clip(
+            boundary_sample_weights,
+            1.0,
+            boundary_weight_max,
+        ).astype(np.float32)
+        boundary_sample_weights /= float(boundary_sample_weights.mean())
+        transaction_training_targets = (
+            protection_hard_label_weight * transaction_targets
+            + (1.0 - protection_hard_label_weight)
+            * teacher_transaction_probability
+        ).astype(np.float32)
         use_distill = True
         print(
             f"Distillation: alpha={alpha} beta={beta} T={temperature} "
@@ -141,6 +288,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         )
     else:
         soft = hard
+        transaction_training_targets = transaction_targets
+        distill_sample_weights = np.ones(len(y_train), dtype=np.float32)
+        boundary_sample_weights = np.ones(len(y_train), dtype=np.float32)
         use_distill = False
         alpha, beta = 1.0, 0.0
         print("Teacher logits missing — training with hard labels only.")
@@ -149,26 +299,102 @@ def main(argv: Optional[List[str]] = None) -> int:
     optimizer = tf.keras.optimizers.Adam(
         learning_rate=float(cfg.get("training", {}).get("learning_rate", 1e-3))
     )
-    epochs = int(cfg.get("training", {}).get("epochs", 10))
-    batch_size = int(cfg.get("training", {}).get("batch_size", 64))
+    epochs = int(training_cfg.get("epochs", 10))
+    batch_size = int(training_cfg.get("batch_size", 64))
+    patience = int(training_cfg.get("early_stopping_patience", 4))
+    min_epochs = int(training_cfg.get("min_epochs", 5))
+    targets = {
+        "target_transaction_recall": float(
+            training_cfg.get("target_transaction_recall", 0.985)
+        ),
+        "min_transaction_precision": float(
+            training_cfg.get("min_transaction_precision", 0.92)
+        ),
+        "min_macro_f1": float(training_cfg.get("min_macro_f1", 0.86)),
+        "min_harass_f1": float(training_cfg.get("min_harass_f1", 0.80)),
+        "min_fraud_recall": float(training_cfg.get("min_fraud_recall", 0.80)),
+    }
+    enforce_model_targets = bool(
+        training_cfg.get("enforce_model_validation_targets", True)
+    )
 
     ce = tf.keras.losses.CategoricalCrossentropy(from_logits=True, reduction="none")
     kl = tf.keras.losses.KLDivergence(reduction="none")
 
     @tf.function
-    def train_step(xb, y_hard, y_soft, sw):
+    def train_step(
+        xb,
+        y_hard,
+        y_soft,
+        y_transaction,
+        sw,
+        boundary_weight,
+        distill_weight,
+    ):
         with tf.GradientTape() as tape:
-            logits = model(xb, training=True)
+            all_logits = model(xb, training=True)
+            logits = all_logits[:, : student_cfg.num_classes]
             loss_hard = ce(y_hard, logits)
+            hard_true_probability = tf.reduce_sum(
+                y_hard * tf.nn.softmax(logits),
+                axis=-1,
+            )
+            hard_focal_weight = tf.pow(
+                1.0 - hard_true_probability,
+                primary_focal_gamma,
+            )
             student_soft = tf.nn.softmax(logits / temperature)
             loss_soft = kl(y_soft, student_soft) * (temperature * temperature)
-            per_example = alpha * loss_hard + beta * loss_soft
-            loss = tf.reduce_mean(per_example * sw)
+            # Class weighting belongs only on the supervised CE term. Weighting
+            # KL by hard labels distorts the teacher distribution.
+            per_example = (
+                alpha
+                * loss_hard
+                * sw
+                * boundary_weight
+                * hard_focal_weight
+                + beta * loss_soft * distill_weight
+            )
+            if protection_enabled:
+                protection_logits = all_logits[:, student_cfg.num_classes]
+                protection_bce = tf.nn.sigmoid_cross_entropy_with_logits(
+                    labels=y_transaction,
+                    logits=protection_logits,
+                )
+                protection_prob = tf.nn.sigmoid(protection_logits)
+                protection_pt = (
+                    y_transaction * protection_prob
+                    + (1.0 - y_transaction) * (1.0 - protection_prob)
+                )
+                protection_class_weight = (
+                    y_transaction * protection_positive_weight
+                    + (1.0 - y_transaction)
+                )
+                protection_loss = (
+                    protection_class_weight
+                    * tf.pow(1.0 - protection_pt, protection_focal_gamma)
+                    * protection_bce
+                )
+                per_example += (
+                    protection_loss_weight
+                    * protection_loss
+                    * boundary_weight
+                )
+            loss = tf.reduce_mean(per_example)
         grads = tape.gradient(loss, model.trainable_variables)
         optimizer.apply_gradients(zip(grads, model.trainable_variables))
         return loss
 
+    x_val = y_val = None
+    if val_records:
+        x_val, y_val = records_to_xy(val_records, max_bytes=student_cfg.max_bytes)
+
     n = len(x_train)
+    best_weights = None
+    best_metrics: Dict[str, object] = {}
+    best_score: Optional[Tuple[float, ...]] = None
+    best_epoch = 0
+    stale_epochs = 0
     for epoch in range(epochs):
         perm = np.random.permutation(n)
         losses = []
@@ -178,10 +404,59 @@ def main(argv: Optional[List[str]] = None) -> int:
                 tf.constant(x_train[idx]),
                 tf.constant(hard[idx]),
                 tf.constant(soft[idx].astype(np.float32)),
+                tf.constant(transaction_training_targets[idx]),
                 tf.constant(sample_weights[idx]),
+                tf.constant(boundary_sample_weights[idx]),
+                tf.constant(distill_sample_weights[idx]),
             )
             losses.append(float(loss.numpy()))
-        print(f"epoch {epoch + 1}/{epochs} loss={np.mean(losses):.4f}")
+        line = f"epoch {epoch + 1}/{epochs} loss={np.mean(losses):.4f}"
+        if x_val is not None and y_val is not None:
+            val_logits = model.predict(x_val, verbose=0)
+            primary_val_preds = student_predictions(
+                val_logits,
+                num_classes=student_cfg.num_classes,
+            )
+            protected_val_preds = student_predictions(
+                val_logits,
+                num_classes=student_cfg.num_classes,
+                transaction_threshold=(
+                    protection_threshold if protection_enabled else None
+                ),
+            )
+            val_preds = (
+                protected_val_preds
+                if protection_checkpoint_scope == "protected"
+                else primary_val_preds
+            )
+            epoch_metrics = summarize_metrics(
+                [LABEL_ORDER[i] for i in y_val.tolist()],
+                [LABEL_ORDER[i] for i in val_preds.tolist()],
+                LABEL_ORDER,
+            )
+            score = checkpoint_score(epoch_metrics, targets)
+            unique_classes = len(set(int(x) for x in val_preds.tolist()))
+            if unique_classes >= 3 and (best_score is None or score > best_score):
+                best_score = score
+                best_weights = model.get_weights()
+                best_metrics = epoch_metrics
+                best_epoch = epoch + 1
+                stale_epochs = 0
+            else:
+                stale_epochs += 1
+            line += (
+                f" val_macro_f1={float(epoch_metrics['macro_f1']):.4f}"
+                f" val_txn_recall={metric_value(epoch_metrics, 'TRANSACTION', 'recall'):.4f}"
+                f" val_fraud_recall={metric_value(epoch_metrics, 'FRAUD', 'recall'):.4f}"
+            )
+        print(line)
+        if epoch + 1 >= min_epochs and stale_epochs >= patience:
+            print(f"early stopping: no checkpoint improvement for {patience} epochs")
+            break
+
+    if best_weights is not None:
+        model.set_weights(best_weights)
+        print(f"restored best validation checkpoint from epoch {best_epoch}")
 
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     output_keras.parent.mkdir(parents=True, exist_ok=True)
@@ -189,12 +464,27 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     metrics = {}
     if val_records:
-        x_val, y_val = records_to_xy(val_records, max_bytes=student_cfg.max_bytes)
+        assert x_val is not None and y_val is not None
         logits = model.predict(x_val, verbose=0)
-        preds = np.argmax(logits, axis=-1)
+        primary_preds = student_predictions(
+            logits,
+            num_classes=student_cfg.num_classes,
+        )
+        preds = student_predictions(
+            logits,
+            num_classes=student_cfg.num_classes,
+            transaction_threshold=(
+                protection_threshold if protection_enabled else None
+            ),
+        )
         metrics = summarize_metrics(
             [LABEL_ORDER[i] for i in y_val.tolist()],
             [LABEL_ORDER[i] for i in preds.tolist()],
+            LABEL_ORDER,
+        )
+        primary_metrics = summarize_metrics(
+            [LABEL_ORDER[i] for i in y_val.tolist()],
+            [LABEL_ORDER[i] for i in primary_preds.tolist()],
             LABEL_ORDER,
         )
         write_json(ROOT / "reports" / "metrics" / "student_distill.json", metrics)
@@ -210,6 +500,9 @@ def main(argv: Optional[List[str]] = None) -> int:
                     "status": "FAIL_COLLAPSED",
                     "unique_pred_classes": len(unique_preds),
                     "val_metrics": metrics,
+                    "primary_val_metrics": primary_metrics,
+                    "best_epoch": best_epoch,
+                    "targets": targets,
                     "keras_path": str(output_keras.relative_to(ROOT)).replace("\\", "/"),
                 },
             )
@@ -226,21 +519,108 @@ def main(argv: Optional[List[str]] = None) -> int:
                 file=sys.stderr,
             )
 
+    gate_errors = []
+    if val_records:
+        checks = (
+            (
+                "transaction_recall",
+                metric_value(metrics, "TRANSACTION", "recall"),
+                targets["target_transaction_recall"],
+            ),
+            (
+                "transaction_precision",
+                metric_value(metrics, "TRANSACTION", "precision"),
+                targets["min_transaction_precision"],
+            ),
+            ("macro_f1", float(metrics.get("macro_f1", 0.0)), targets["min_macro_f1"]),
+            (
+                "harass_f1",
+                metric_value(metrics, "HARASS", "f1"),
+                targets["min_harass_f1"],
+            ),
+            (
+                "fraud_recall",
+                metric_value(metrics, "FRAUD", "recall"),
+                targets["min_fraud_recall"],
+            ),
+        )
+        gate_errors = [
+            f"{name}={value:.6f} < {target:.6f}"
+            for name, value, target in checks
+            if value < target
+        ]
+
+    status = (
+        "OK"
+        if not gate_errors
+        else (
+            "FAIL_VALIDATION_TARGETS"
+            if enforce_model_targets
+            else "PENDING_PIPELINE_VALIDATION"
+        )
+    )
     write_json(
         checkpoint_dir / "distill_manifest.json",
         {
             "seed": args.seed,
             "used_distillation": use_distill,
-            "status": "OK",
+            "status": status,
             "alpha": alpha,
             "beta": beta,
             "temperature": temperature,
+            "primary_focal_gamma": primary_focal_gamma,
+            "boundary_hard_positive_multiplier": hard_positive_multiplier,
+            "boundary_hard_negative_multiplier": hard_negative_multiplier,
+            "boundary_weight_max": boundary_weight_max,
+            "teacher_confidence_floor": teacher_confidence_floor,
+            "teacher_confidence_power": teacher_confidence_power,
+            "boundary_weight_summary": {
+                "min": float(boundary_sample_weights.min()),
+                "mean": float(boundary_sample_weights.mean()),
+                "max": float(boundary_sample_weights.max()),
+            },
+            "distill_weight_summary": {
+                "min": float(distill_sample_weights.min()),
+                "mean": float(distill_sample_weights.mean()),
+                "max": float(distill_sample_weights.max()),
+            },
             "keras_path": str(output_keras.relative_to(ROOT)).replace("\\", "/"),
             "train_count": len(train_records),
             "val_metrics": metrics,
+            "primary_val_metrics": primary_metrics if val_records else {},
+            "best_epoch": best_epoch,
+            "targets": targets,
+            "gate_errors": gate_errors,
+            "enforce_model_validation_targets": enforce_model_targets,
+            "class_weights": dict(zip(LABEL_ORDER, class_weights.tolist())),
+            "transaction_protection": {
+                "enabled": protection_enabled,
+                "output_index": (
+                    student_cfg.num_classes if protection_enabled else None
+                ),
+                "threshold": protection_threshold,
+                "loss_weight": protection_loss_weight,
+                "positive_weight": protection_positive_weight,
+                "focal_gamma": protection_focal_gamma,
+                "hard_label_weight": protection_hard_label_weight,
+                "teacher_temperature": protection_teacher_temperature,
+                "checkpoint_scope": protection_checkpoint_scope,
+            },
         },
     )
     print(f"Wrote student model to {output_keras}")
+    if gate_errors and enforce_model_targets:
+        print(
+            "FAIL: validation targets not met; do not evaluate the locked test set:\n  - "
+            + "\n  - ".join(gate_errors),
+            file=sys.stderr,
+        )
+        return 4
+    if gate_errors:
+        print(
+            "Model-only validation targets are not all met; continuing because "
+            "the release gate is configured for the transaction-protected pipeline."
+        )
     return 0
 
 

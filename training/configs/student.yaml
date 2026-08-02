@@ -3,7 +3,7 @@
 version: "1.0.0"
 seed: 42
 
-architecture: byte_textcnn
+architecture: byte_textcnn_dual_head
 
 input:
   max_bytes: 512
@@ -14,27 +14,75 @@ input:
   vocab_size: 257
 
 model:
-  embedding_dim: 48
-  conv_filters: 64
-  conv_kernels: [3, 5, 7]
+  # UTF-8 Chinese characters occupy three bytes. 3/6/9-byte windows represent
+  # one-, two-, and three-character patterns while staying under the INT8 budget.
+  embedding_dim: 32
+  conv_filters: 80
+  conv_kernels: [3, 6, 9]
   dense_units: 96
   dropout: 0.2
   num_classes: 4
+  # The fifth logit is a dedicated TRANSACTION-vs-REST safety head. It shares
+  # the ByteCNN backbone, adding only ~100 parameters instead of enlarging the
+  # whole model beyond the on-device size budget.
+  transaction_protection_head: true
+  transaction_hidden_units: 24
 
 training:
   batch_size: 64
   learning_rate: 1.0e-3
-  epochs: 10
+  epochs: 20
+  min_epochs: 6
+  early_stopping_patience: 5
+  # The hard 98.5% release gate is applied to the validation pipeline. Rules
+  # protect the INBOX action without claiming a ground-truth category.
+  enforce_model_validation_targets: false
+  # Inverse-frequency CE previously underweighted majority TRANSACTION and
+  # reduced its recall. Multipliers apply only to hard CE, never distill KL.
+  class_weight_strategy: balanced
+  class_weight_clip: [0.75, 1.50]
+  class_weight_multipliers:
+    TRANSACTION: 1.1
+    AD: 1.0
+    HARASS: 1.0
+    FRAUD: 1.0
+  # Validation-only release gate. The locked test set must not be read until
+  # all four constraints pass.
+  target_transaction_recall: 0.985
+  min_transaction_precision: 0.92
+  min_macro_f1: 0.86
+  min_harass_f1: 0.80
+  min_fraud_recall: 0.80
 
 distillation:
-  temperature: 4.0
-  alpha: 0.6
-  beta: 0.4
+  temperature: 2.0
+  alpha: 0.55
+  beta: 0.45
+  primary_focal_gamma: 0.50
+  # Use teacher confidence only to identify difficult TRAIN rows. Validation
+  # records are never fed back into training.
+  transaction_hard_positive_multiplier: 1.5
+  transaction_hard_negative_multiplier: 3.0
+  boundary_weight_max: 3.0
+  teacher_confidence_floor: 0.25
+  teacher_confidence_power: 1.0
   teacher_manifest: data/manifests/teacher_logits_manifest.json
+
+transaction_protection:
+  enabled: true
+  output_index: 4
+  threshold: 0.50
+  loss_weight: 0.35
+  positive_weight: 1.10
+  focal_gamma: 1.5
+  hard_label_weight: 0.85
+  teacher_temperature: 1.0
+  checkpoint_scope: primary
 
 data:
   train_manifest: data/processed/train.jsonl
   val_manifest: data/processed/validation.jsonl
+  accepted_languages: [zh]
 
 output:
   checkpoint_dir: artifacts/student

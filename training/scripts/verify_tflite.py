@@ -41,7 +41,17 @@ def display_path(path: Path) -> str:
 sys.path.insert(0, str(ROOT))
 from src.metrics import summarize_metrics  # noqa: E402
 from src.schema import LABEL_ORDER  # noqa: E402
-from src.train_utils import load_labeled_records, records_to_xy, set_seed, write_json  # noqa: E402
+from src.train_utils import (  # noqa: E402
+    load_labeled_records,
+    records_to_xy,
+    set_seed,
+    student_predictions,
+    write_json,
+)
+from src.transaction_protection import (  # noqa: E402
+    apply_transaction_protection_batch,
+    load_protection_rules,
+)
 
 # Ops that must not appear for the acceptance baseline.
 FORBIDDEN_OP_SUBSTRINGS = ("Flex", "SELECT_TF", "CUSTOM")
@@ -245,7 +255,14 @@ def run_tflite(tflite_path: Path, x: np.ndarray) -> np.ndarray:
         inp = np.asarray([row], dtype=input_details["dtype"])
         interp.set_tensor(input_details["index"], inp)
         interp.invoke()
-        outs.append(interp.get_tensor(output_details["index"])[0])
+        output = interp.get_tensor(output_details["index"])[0]
+        if np.dtype(output_details["dtype"]).kind not in {"f", "c"}:
+            scale, zero_point = output_details.get("quantization", (0.0, 0))
+            if scale:
+                output = (
+                    output.astype(np.float32) - float(zero_point)
+                ) * float(scale)
+        outs.append(output)
     return np.asarray(outs)
 
 
@@ -314,12 +331,27 @@ def main(argv: Optional[List[str]] = None) -> int:
         if records:
             model = tf.keras.models.load_model(keras_path)
             x, y = records_to_xy(records, max_bytes=infer_max_bytes(model))
-            keras_pred = np.argmax(model.predict(x, verbose=0), axis=-1)
+            keras_logits = model.predict(x, verbose=0)
+            keras_pred = student_predictions(
+                keras_logits,
+                transaction_threshold=(
+                    0.5
+                    if keras_logits.shape[-1] > len(LABEL_ORDER)
+                    else None
+                ),
+            )
             tflite_out = run_tflite(tflite_path, x)
-            if tflite_out.ndim == 1:
+            if tflite_out.ndim == 1 and tflite_out.shape[0] == len(x):
                 tflite_pred = tflite_out.astype(int)
             else:
-                tflite_pred = np.argmax(tflite_out, axis=-1)
+                tflite_pred = student_predictions(
+                    tflite_out,
+                    transaction_threshold=(
+                        0.5
+                        if tflite_out.shape[-1] > len(LABEL_ORDER)
+                        else None
+                    ),
+                )
             agreement = float(np.mean(keras_pred == tflite_pred))
             if labeled_evaluation_count:
                 true_labels = [
@@ -330,6 +362,26 @@ def main(argv: Optional[List[str]] = None) -> int:
                 ]
                 baseline_labels = [
                     LABEL_ORDER[int(i)] for i in keras_pred[:labeled_evaluation_count]
+                ]
+                protection_rules = load_protection_rules(ROOT / "rules" / "rules")
+                texts = [
+                    record.text for record in records[:labeled_evaluation_count]
+                ]
+                predicted_labels = [
+                    decision.predicted_label
+                    for decision in apply_transaction_protection_batch(
+                        texts,
+                        predicted_labels,
+                        protection_rules,
+                    )
+                ]
+                baseline_labels = [
+                    decision.predicted_label
+                    for decision in apply_transaction_protection_batch(
+                        texts,
+                        baseline_labels,
+                        protection_rules,
+                    )
                 ]
                 baseline_summary = summarize_metrics(
                     true_labels, baseline_labels, LABEL_ORDER
@@ -394,6 +446,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         "per_class": summary.get("per_class") if summary else None,
         "macro_f1": summary.get("macro_f1") if summary else None,
         "acceptance_targets": cfg.get("verify", {}).get("acceptance_targets", {}),
+        "metric_scope": "model_plus_transaction_protection_rules",
         "drop_gates": cfg.get("qat_triggers", {}),
         "gate_metrics": gate_metrics,
         "threshold_errors": threshold_errors,

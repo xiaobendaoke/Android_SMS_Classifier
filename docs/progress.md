@@ -9,6 +9,30 @@
 **历史训练产物归档（2026-07-28）：** `recent/prior_training/`（含 interim 标注、processed 切分、Colab 导出、旧 artifacts/reports、release-0.2.0 包）；活动目录已清空占位，重训/重标写回原路径。  
 **未宣称**事务召回 ≥98%（冻结真标中文测试集与 4GB/6GB 真机 PSS 仍缺）。
 
+### Recall v3 准备（2026-08-01）
+
+- [x] 切分改为 template/sender/parent/fingerprint 连通分量；任一关系相连即同 split。
+- [x] 从两个已审计原始源重建训练冻结集：train 11221 / validation 1402 / test 1402，泄漏门禁 PASS。
+- [x] 预留事务专项集 600 条，OTP/银行/物流/订单/还款/运营商各 100；关联组件共排除 1185 条，防止进入训练。
+- [ ] 事务专项集仍需两名真实人工独立填写 A/B 表。现有 `deepseek_*`、`llm_*`、`audit_*` 是自动化流程标识，不能作为双人金标。
+- [x] Teacher/Student 增加事务 CE 权重、统一归一化、best-checkpoint 与非事务类别保护门禁。
+- [x] Student validation 硬门禁：事务 Recall ≥0.985、事务 Precision ≥0.92、Macro-F1 ≥0.86、HARASS F1 ≥0.80、FRAUD Recall ≥0.80；量化后再次要求事务 Recall ≥0.985，未通过时不读取锁定 test。
+- [x] formal v2 Full-INT8（92048 B）已导出 Android；SHA `b4e57ad3a48fc5765fa022b725e801a9f0bd8f8121d6e7ef1b67b26cf31fc6b3` 与 metadata 一致。
+- [ ] 在批准的本地/内网 GPU 执行 `training/scripts/run_recall_v3.py`；不得上传短信数据到公共 Colab。
+
+### Recall v4 事务保护（2026-08-01）
+
+- [x] 本地 RTX 4070 复现实验：Teacher validation Macro-F1 0.829、事务 Recall 0.947；默认蒸馏学生 Macro-F1 0.818、事务 Recall 0.916，证明单纯类别权重不能达到 0.985。
+- [x] 修复 checkpoint 选择：没有 checkpoint 全部过门禁时，按“最差门禁缺口”选择，不再只追逐事务 Recall。
+- [x] Student 改为共享 ByteCNN 骨干的 5-logit 单输出：前四维保持固定类别顺序，第五维为 `TRANSACTION vs REST` 保护头；增加约 100 个参数。
+- [x] 新增银行、物流、订单、还款、运营商高精度事务保护规则；与欺诈规则冲突时进入 REVIEW，不自动放行。
+- [x] Python/Android 路由均支持保护头和事务规则；对旧四输出模型保持 metadata 向后兼容。
+- [x] `evaluate.py --mode pipeline` 与 `evaluate_pipeline_stages.py` 分开报告模型和完整保护 Pipeline 指标；默认只读 validation。
+- [x] 锁定 test 仍由完整 validation Pipeline 门禁保护；门禁未通过时不量化、不读取 test、不覆盖 Android 模型。
+- [x] Python 轻量测试：42 passed。
+- [ ] 执行 `training/scripts/run_recall_v4.py --skip-teacher` 重新训练双头学生并评估 validation Pipeline；需要 GPU 实验。
+- [ ] Android JVM 测试需先配置 JDK 17 / `JAVA_HOME`。
+
 异机构建提示：仓库路径含中文时，建议使用 ASCII junction：`C:\dev\Android_SMS_Classifier`。
 
 ## 已完成

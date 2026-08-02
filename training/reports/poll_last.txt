@@ -1,0 +1,54 @@
+STATUS_JSON {
+  "stage": "failed",
+  "ts": 1785563733.8541095,
+  "pid": 1457,
+  "returncode": 4,
+  "error": "4"
+}
+PID_FILE 1457
+PID_ALIVE True
+LOG_BYTES 6548
+LOG_TAIL
+epoch 3/6 loss=0.2566 val_acc=0.8588 val_macro_f1=0.8360 val_txn_recall=0.9420
+early stopping: no checkpoint improvement for 2 epochs
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 5064.85it/s]
+restored best validation checkpoint from epoch 1
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:10<00:00, 10.96s/it]
+Writing model shards: 100%|██████████| 1/1 [00:10<00:00, 10.96s/it]
+Wrote teacher checkpoint to /content/Android_SMS_Classifier/training/artifacts/teacher
+Wrote logits cache to /content/Android_SMS_Classifier/training/artifacts/teacher/teacher_logits_train.npz
+RUN /usr/bin/python3 /content/Android_SMS_Classifier/training/scripts/distill_student.py --config /content/Android_SMS_Classifier/training/configs/student.yaml --seed 42
+class_weights={'TRANSACTION': 1.0429214239120483, 'AD': 0.37316828966140747, 'HARASS': 1.609706163406372, 'FRAUD': 0.9742040038108826}
+Distillation: alpha=0.6 beta=0.4 T=4.0 teacher_logits=11219
+2026-08-01 05:55:09.847324: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785563709.848966    4796 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13757 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5
+I0000 00:00:1785563721.132278    4845 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+epoch 1/20 loss=1.0256 val_macro_f1=0.6674 val_txn_recall=0.9420 val_fraud_recall=0.7609
+epoch 2/20 loss=0.5032 val_macro_f1=0.7508 val_txn_recall=0.9374 val_fraud_recall=0.8870
+epoch 3/20 loss=0.3556 val_macro_f1=0.7888 val_txn_recall=0.9165 val_fraud_recall=0.8783
+epoch 4/20 loss=0.2877 val_macro_f1=0.8020 val_txn_recall=0.9304 val_fraud_recall=0.8826
+epoch 5/20 loss=0.2450 val_macro_f1=0.8107 val_txn_recall=0.9258 val_fraud_recall=0.8826
+epoch 6/20 loss=0.2202 val_macro_f1=0.8115 val_txn_recall=0.9304 val_fraud_recall=0.8652
+early stopping: no checkpoint improvement for 5 epochs
+restored best validation checkpoint from epoch 1
+Wrote student model to /content/Android_SMS_Classifier/training/artifacts/student/sms_bytecnn_fp32.keras
+FAIL: validation targets not met; do not evaluate the locked test set:
+  - transaction_recall=0.941995 < 0.985000
+  - transaction_precision=0.638365 < 0.920000
+  - macro_f1=0.667405 < 0.860000
+  - harass_f1=0.404040 < 0.800000
+  - fraud_recall=0.760870 < 0.800000
+STATUS failed
+STATUS failed
+Traceback (most recent call last):
+  File "/content/run_pipeline_recall_v3.py", line 74, in <module>
+    run(
+  File "/content/run_pipeline_recall_v3.py", line 27, in run
+    raise SystemExit(p.returncode)
+SystemExit: 4
+

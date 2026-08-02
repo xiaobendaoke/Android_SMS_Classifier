@@ -37,6 +37,7 @@ verify:
   min_samples: 1000
   min_agreement_rate: 0.99
   acceptance_targets:
+    transaction_recall: 0.985
     macro_f1: 0.86
     harass_f1: 0.80
     fraud_recall: 0.80

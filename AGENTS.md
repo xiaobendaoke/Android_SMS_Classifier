@@ -25,6 +25,12 @@
 ## Environment & setup gotchas
 
 - **Windows Chinese paths**: Gradle can fail with ClassNotFound. `android.overridePathCheck=true` is set in `gradle.properties`. If issues persist, create an ASCII junction: `mklink /J C:\dev\Android_SMS_Classifier "<repo_path>"`
+- **Agent Shell is PowerShell**: never put `$VAR` inside `wsl ... bash -lc "..."` one-liners (PowerShell eats `$`). Never put `oppo的项目` / non-ASCII into `wsl` or `/mnt/c/...` args. Write a `.sh`, then:
+  `powershell -NoProfile -File C:\dev\Android_SMS_Classifier\tools\wsl_run.ps1 -RelPath training\scripts\foo.sh`
+  (copies into `/home/colab/projects/Android_SMS_Classifier` and runs there). Enforced by `.cursor/hooks/guard_wsl_shell.py` + `.cursor/rules/windows-wsl-shell.mdc`.
+- **Preferred local training runtime = WSL** (not Colab): one-shot bootstrap
+  `powershell -NoProfile -File C:\dev\Android_SMS_Classifier\tools\wsl_run.ps1 -RelPath tools\setup_wsl_training_env.sh`
+  Then inside WSL: `source ~/.config/wsl-training.env` (venv + `PYTHONPATH=training`). GPU via Windows NVIDIA driver + WSL (`nvidia-smi`).
 - **gradle-wrapper.jar may be missing** — generate with `cd android && gradle wrapper --gradle-version 8.7` (see `android/README-GRADLE.md`)
 - **JDK 17+**, Android SDK API 34, minSdk 26
 - **Python heavy deps (PyTorch, TF) are separate**: `training/requirements-train.txt`, NOT `requirements.lock`

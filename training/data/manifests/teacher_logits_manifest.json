@@ -1,0 +1,11 @@
+{
+  "path": "artifacts/teacher/teacher_logits_train.npz",
+  "count": 9220,
+  "labels": [
+    "TRANSACTION",
+    "AD",
+    "HARASS",
+    "FRAUD"
+  ],
+  "sha256": "bd14c15326df12690509b29a8bceffd617ec86e45fe0abfd4c4d77681eaaf672"
+}

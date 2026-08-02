@@ -1,0 +1,46 @@
+---
+description: Windows/WSL shell safety — ASCII paths + no PowerShell $ in wsl inline
+alwaysApply: true
+---
+
+# Windows / WSL Shell (mandatory)
+
+This repo lives under a **Chinese Windows path**. Cursor Shell is **PowerShell**. Violating either fact causes flaky WSL launches.
+
+## Canonical paths (use these only)
+
+| Role | Path |
+|------|------|
+| Windows ASCII junction | `C:\dev\Android_SMS_Classifier` |
+| WSL working copy | `/home/colab/projects/Android_SMS_Classifier` |
+| Distro | `Ubuntu-22.04` |
+
+Never put `oppo的项目` or any non-ASCII path into a `wsl` command line or into `/mnt/c/...` arguments.
+
+## How to run bash from the agent
+
+1. Write a `.sh` (or `.py`) file under the repo (Write tool is fine).
+2. Launch **only** via the launcher (no inline bash body on the PowerShell line):
+
+```powershell
+powershell -NoProfile -File C:\dev\Android_SMS_Classifier\tools\wsl_run.ps1 -RelPath training\scripts\foo.sh
+```
+
+The launcher copies the script into the WSL ASCII tree and runs it there.
+
+## Forbidden patterns
+
+- `wsl ... bash -lc "...$HOME..."` / any `$` on the PowerShell-facing `wsl` command (PowerShell eats `$`)
+- `wsl ... /mnt/c/Users/.../oppo的项目/...`
+- Long inline bash pasted into `wsl -- bash -lc '...'`
+
+## Allowed short WSL probes (no `$`, ASCII only)
+
+```powershell
+wsl -d Ubuntu-22.04 -- bash /home/colab/projects/Android_SMS_Classifier/training/scripts/foo.sh
+wsl -d Ubuntu-22.04 -e /home/colab/.local/bin/colab version
+```
+
+## Android / Gradle
+
+Prefer `cd C:\dev\Android_SMS_Classifier\android` before `gradlew`.

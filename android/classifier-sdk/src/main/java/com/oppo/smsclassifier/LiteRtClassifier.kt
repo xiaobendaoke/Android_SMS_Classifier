@@ -80,22 +80,22 @@ class LiteRtClassifier(
         return runCatching {
             val input = Array(1) { IntArray(metadata.inputLength) }
             System.arraycopy(tokenIds, 0, input[0], 0, metadata.inputLength)
-            val numLabels = metadata.labels.size
+            val outputSize = metadata.modelOutputSize
 
             // Prefer float output buffer; if INT8, dequantize via tensor scale/zero-point.
-            val floatOut = Array(1) { FloatArray(numLabels) }
+            val floatOut = Array(1) { FloatArray(outputSize) }
             val okFloat = runCatching {
                 run.invoke(interp, input, floatOut)
                 true
             }.getOrDefault(false)
             if (okFloat) {
-                return@runCatching softmax(floatOut[0])
+                return@runCatching decodeOutput(floatOut[0])
             }
 
-            val intOut = Array(1) { ByteArray(numLabels) }
+            val intOut = Array(1) { ByteArray(outputSize) }
             run.invoke(interp, input, intOut)
             val dequant = dequantizeInt8(interp, intOut[0])
-            softmax(dequant)
+            decodeOutput(dequant)
         }.getOrNull()
     }
 
@@ -143,5 +143,28 @@ class LiteRtClassifier(
         }
         if (total <= 0.0) return FloatArray(logits.size) { 1f / logits.size }
         return FloatArray(logits.size) { i -> (exps[i] / total).toFloat() }
+    }
+
+    /**
+     * Keep the public probability prefix aligned with metadata.labels and expose
+     * an optional sigmoid transaction-protection score at its configured index.
+     */
+    private fun decodeOutput(logits: FloatArray): FloatArray {
+        val labelCount = metadata.labels.size
+        if (logits.size < labelCount) return FloatArray(0)
+        val decoded = logits.copyOf()
+        val classProbs = softmax(logits.copyOfRange(0, labelCount))
+        for (i in classProbs.indices) {
+            decoded[i] = classProbs[i]
+        }
+        val protectionIndex = metadata.transactionProtectionIndex
+        if (protectionIndex != null && protectionIndex in decoded.indices) {
+            decoded[protectionIndex] = sigmoid(logits[protectionIndex])
+        }
+        return decoded
+    }
+
+    private fun sigmoid(value: Float): Float {
+        return (1.0 / (1.0 + exp(-value.toDouble()))).toFloat()
     }
 }

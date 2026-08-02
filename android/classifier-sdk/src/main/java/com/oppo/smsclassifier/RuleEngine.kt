@@ -8,6 +8,7 @@ data class RuleSignals(
     val hasOtpProtect: Boolean = false,
     val hasHighFraudRisk: Boolean = false,
     val hasPickupProtect: Boolean = false,
+    val hasTransactionProtect: Boolean = false,
     val categoryHint: SmsCategory? = null,
     val reasonCode: String = "NO_RULE_MATCH",
 )
@@ -28,6 +29,9 @@ class RuleEngine(
         val hasOtpProtect = matched.any { it.definition.type == RuleType.OTP_PROTECT }
         val hasHighFraudRisk = matched.any { it.definition.type == RuleType.FRAUD_RISK }
         val hasPickupProtect = matched.any { it.definition.type == RuleType.PICKUP_PROTECT }
+        val hasTransactionProtect = matched.any {
+            it.definition.type == RuleType.TRANSACTION_PROTECT
+        }
 
         val categoryWinner = matched
             .filter { it.definition.type.isCategoryHintType() }
@@ -36,9 +40,11 @@ class RuleEngine(
         val categoryHint = categoryWinner?.definition?.categoryHint
         val reasonCode = when {
             hasOtpProtect && hasHighFraudRisk -> "OTP_FRAUD_CONFLICT"
+            hasTransactionProtect && hasHighFraudRisk -> "TRANSACTION_FRAUD_CONFLICT"
             categoryWinner != null -> categoryWinner.definition.reasonCode
             hasOtpProtect -> "OTP_PROTECT"
             hasPickupProtect -> "PICKUP_PROTECT"
+            hasTransactionProtect -> "TRANSACTION_PROTECT"
             hasHighFraudRisk -> "HIGH_FRAUD_RISK"
             else -> "NO_RULE_MATCH"
         }
@@ -48,6 +54,7 @@ class RuleEngine(
             hasOtpProtect = hasOtpProtect,
             hasHighFraudRisk = hasHighFraudRisk,
             hasPickupProtect = hasPickupProtect,
+            hasTransactionProtect = hasTransactionProtect,
             categoryHint = categoryHint,
             reasonCode = reasonCode,
         )
@@ -88,6 +95,7 @@ class RuleEngine(
 private fun RuleType.isCategoryHintType(): Boolean = when (this) {
     RuleType.OTP_PROTECT,
     RuleType.PICKUP_PROTECT,
+    RuleType.TRANSACTION_PROTECT,
     RuleType.TRANSACTION_HINT,
     RuleType.FRAUD_RISK,
     RuleType.AD_HINT,
