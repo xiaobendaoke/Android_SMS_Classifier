@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/mnt/c/dev/Android_SMS_Classifier"
-VENV="/home/colab/projects/Android_SMS_Classifier/.venv"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+ROOT="$(cd "$SCRIPT_DIR/../.." && pwd -P)"
+VENV="${VENV:-$ROOT/.venv}"
 MODEL_DIR="${MODEL_DIR:-/home/colab/hf_cache/bert-base-chinese}"
 
 if [[ ! -x "$VENV/bin/python" ]]; then

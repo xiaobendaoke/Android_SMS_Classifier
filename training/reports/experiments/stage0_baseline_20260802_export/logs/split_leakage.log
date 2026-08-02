@@ -1,0 +1,7 @@
+command= /home/colab/projects/Android_SMS_Classifier/.venv/bin/python /home/colab/projects/Android_SMS_Classifier/training/scripts/check_split_leakage.py --input /home/colab/projects/Android_SMS_Classifier/training/data/processed_v2 --output /home/colab/projects/Android_SMS_Classifier/training/reports/experiments/stage0_baseline_20260802/dataset_leakage_v2.json
+started_at=2026-08-02T06:00:33Z
+usage: check_split_leakage.py [-h] [--processed-dir PROCESSED_DIR]
+                              [--output OUTPUT] [--seed SEED]
+check_split_leakage.py: error: unrecognized arguments: --input /home/colab/projects/Android_SMS_Classifier/training/data/processed_v2
+ended_at=2026-08-02T06:00:33Z
+exit_code=2

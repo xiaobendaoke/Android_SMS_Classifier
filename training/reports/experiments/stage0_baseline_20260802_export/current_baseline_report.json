@@ -1,0 +1,20 @@
+{
+  "run_id": "stage0_baseline_20260802",
+  "status": "INVALID_ENVIRONMENT_RUN",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_model_metrics_read": false,
+  "windows_head": "4337d2c086329b174e9adf3b3bfba64361157943",
+  "wsl_head": "58c3177662e9b0eccf377d55fcfa9c9364901c34",
+  "results": {
+    "pytest": {"exit_code": 0, "result": "35 passed"},
+    "no_network": {"exit_code": 0, "result": "pass"},
+    "sensitive_logs": {"exit_code": 0, "result": "pass"},
+    "release_audit": {"exit_code": 0, "result": "framework_only"},
+    "validate_labels": {"exit_code": 2, "result": "stale_cli"},
+    "split_leakage": {"exit_code": 2, "result": "stale_cli"},
+    "validation_pipeline": {"exit_code": 2, "result": "stale_cli"},
+    "v4_startup_gate": {"exit_code": 2, "result": "stale_file_set"}
+  },
+  "next_action": "Use a new isolated WSL worktree and a new run_id."
+}
