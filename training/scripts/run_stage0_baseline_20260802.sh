@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u -o pipefail
 
-RUN_ID="stage0_baseline_20260802"
+RUN_ID="${RUN_ID:-stage0_baseline_20260802}"
 ROOT="${WSL_RUN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)}"
 VENV="${VENV:-$ROOT/.venv}"
 OUT="$ROOT/training/reports/experiments/$RUN_ID"
@@ -49,8 +49,9 @@ record() {
 } >"$OUT/environment.txt" 2>&1
 
 record pytest "$VENV/bin/python" -m pytest "$ROOT/training/tests" -q
-record validate_labels "$VENV/bin/python" "$ROOT/training/scripts/validate_labels.py" --input "$ROOT/training/data/processed_v2" --split-assignment "$ROOT/training/data/manifests/split_assignment_v2.json"
-record split_leakage "$VENV/bin/python" "$ROOT/training/scripts/check_split_leakage.py" --input "$ROOT/training/data/processed_v2" --output "$OUT/dataset_leakage_v2.json"
+record validate_labels "$VENV/bin/python" "$ROOT/training/scripts/validate_labels.py" --input "$ROOT/training/data/processed_v2"
+record audit_sources "$VENV/bin/python" "$ROOT/training/scripts/audit_sources.py"
+record split_leakage "$VENV/bin/python" "$ROOT/training/scripts/check_split_leakage.py" --processed-dir "$ROOT/training/data/processed_v2" --output "$OUT/dataset_leakage_v2.json"
 record no_network "$VENV/bin/python" "$ROOT/tools/check_no_network_permission.py"
 record sensitive_logs "$VENV/bin/python" "$ROOT/tools/check_no_sensitive_logs.py"
 record release_audit "$VENV/bin/python" "$ROOT/tools/audit_release.py"

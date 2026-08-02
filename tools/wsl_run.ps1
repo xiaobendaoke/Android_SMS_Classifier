@@ -14,7 +14,9 @@ param(
 
     [string]$WinRoot = "C:\dev\Android_SMS_Classifier",
 
-    [string]$InnerRel = "tools/wsl_run_inner.sh"
+    [string]$InnerRel = "tools/wsl_run_inner.sh",
+
+    [string]$WslRoot = "/home/colab/projects/Android_SMS_Classifier"
 )
 
 $ErrorActionPreference = "Stop"
@@ -40,5 +42,5 @@ $utf8 = New-Object System.Text.UTF8Encoding $false
 
 $innerUnix = "/mnt/c/dev/Android_SMS_Classifier/" + ($InnerRel -replace "\\", "/")
 # Intentionally pass paths as argv — do not embed bash variables on this command line.
-& wsl -d $Distro -- bash $innerUnix $relUnix
+& wsl -d $Distro -- env "WSL_RUN_ROOT=$WslRoot" bash $innerUnix $relUnix
 exit $LASTEXITCODE
