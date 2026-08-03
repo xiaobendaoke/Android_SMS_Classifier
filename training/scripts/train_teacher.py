@@ -72,6 +72,12 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Allow CPU training (default: require CUDA GPU).",
     )
+    parser.add_argument(
+        "--logits-manifest",
+        type=Path,
+        default=None,
+        help="Optional isolated teacher-logits manifest path (default preserves legacy path).",
+    )
     return parser
 
 
@@ -480,7 +486,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         "labels": LABEL_ORDER,
         "sha256": hashlib.sha256(logits_path.read_bytes()).hexdigest(),
     }
-    write_json(ROOT / "data" / "manifests" / "teacher_logits_manifest.json", logits_manifest)
+    logits_manifest_path = args.logits_manifest or (ROOT / "data" / "manifests" / "teacher_logits_manifest.json")
+    write_json(logits_manifest_path, logits_manifest)
 
     manifest = {
         "seed": args.seed,
