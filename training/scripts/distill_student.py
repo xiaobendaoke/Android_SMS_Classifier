@@ -257,7 +257,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             carrier_repayment_positive,
             carrier_repayment_weight,
             1.0,
-        )
+        ).astype(np.float32)
     print(
         f"class_weight_strategy={weight_strategy} "
         f"class_weights={dict(zip(LABEL_ORDER, class_weights.tolist()))} "

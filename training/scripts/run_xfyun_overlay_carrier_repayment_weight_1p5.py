@@ -6,7 +6,7 @@ from pathlib import Path
 import yaml
 
 T=Path(__file__).resolve().parent.parent; R=T.parent
-RUN="stage2_xfyun_overlay_carrier_repayment_weight_1p5_20260804_r1"; ART=T/"artifacts/experiments"/RUN; REP=T/"reports/experiments"/RUN
+RUN="stage2_xfyun_overlay_carrier_repayment_weight_1p5_20260804_r2"; ART=T/"artifacts/experiments"/RUN; REP=T/"reports/experiments"/RUN
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  if ART.exists() or REP.exists(): raise SystemExit(f"refusing to overwrite run_id: {RUN}")
