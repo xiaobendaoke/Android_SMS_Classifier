@@ -1,0 +1,39 @@
+version: 1.0.0
+seed: 42
+model:
+  name: bert-base-chinese
+  hub_id: google-bert/bert-base-chinese
+  max_length: 128
+training:
+  batch_size: 8
+  learning_rate: 2.0e-05
+  epochs: 8
+  min_epochs: 3
+  early_stopping_patience: 3
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  focal_gamma: 1.0
+  fp16: true
+  gradient_checkpointing: true
+  class_weight_strategy: balanced
+  class_weight_clip:
+  - 0.75
+  - 1.5
+  class_weight_multipliers:
+    TRANSACTION: 1.4
+    AD: 1.0
+    HARASS: 1.0
+    FRAUD: 1.0
+  target_transaction_recall: 0.985
+  min_transaction_precision: 0.92
+  min_macro_f1: 0.86
+  min_harass_f1: 0.8
+  min_fraud_recall: 0.8
+data:
+  train_manifest: data/processed_xfyun_ai_annotation_20260802_r1/train.jsonl
+  val_manifest: data/processed_xfyun_error_relabel_20260803_r1/validation.jsonl
+  accepted_languages:
+  - zh
+output:
+  checkpoint_dir: artifacts/experiments/stage2_xfyun_overlay_teacher_txn_weight_1p4_20260804_r1
+  manifest: artifacts/experiments/stage2_xfyun_overlay_teacher_txn_weight_1p4_20260804_r1/teacher_manifest.json
