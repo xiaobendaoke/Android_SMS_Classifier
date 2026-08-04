@@ -299,6 +299,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     optimizer = tf.keras.optimizers.Adam(
         learning_rate=float(cfg.get("training", {}).get("learning_rate", 1e-3))
     )
+    gradient_clip_norm = training_cfg.get("gradient_clip_norm")
+    if gradient_clip_norm is not None:
+        gradient_clip_norm = float(gradient_clip_norm)
+        if gradient_clip_norm <= 0.0:
+            raise ValueError("training.gradient_clip_norm must be positive when set")
     epochs = int(training_cfg.get("epochs", 10))
     batch_size = int(training_cfg.get("batch_size", 64))
     patience = int(training_cfg.get("early_stopping_patience", 4))
@@ -382,6 +387,8 @@ def main(argv: Optional[List[str]] = None) -> int:
                 )
             loss = tf.reduce_mean(per_example)
         grads = tape.gradient(loss, model.trainable_variables)
+        if gradient_clip_norm is not None:
+            grads, _ = tf.clip_by_global_norm(grads, gradient_clip_norm)
         optimizer.apply_gradients(zip(grads, model.trainable_variables))
         return loss
 
