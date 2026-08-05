@@ -1,0 +1,345 @@
+{
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "language": "zh",
+  "validation_count": 1146,
+  "student_sha256": "cb626be0f2d2740568392277408a333d26f26eb447b83229dba107b49a376b96",
+  "teacher_sha256": "adc219ac1c83c674735a01688e2410e7f3472e863ba5671da817bfa11302663e",
+  "student_input_bytes": 512,
+  "fusion": "linear four-class softmax probability average; no per-class threshold or rule override",
+  "grid": [
+    {
+      "teacher_weight": 0.0,
+      "transaction_recall": 0.9533169533169533,
+      "transaction_precision": 0.8546255506607929,
+      "macro_f1": 0.8355440109782769,
+      "harass_f1": 0.7264573991031389,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.953317 < 0.985000",
+        "transaction_precision=0.854626 < 0.920000",
+        "macro_f1=0.835544 < 0.860000",
+        "harass_f1=0.726457 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.05,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8625277161862528,
+      "macro_f1": 0.8415781713847315,
+      "harass_f1": 0.7377777777777778,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.862528 < 0.920000",
+        "macro_f1=0.841578 < 0.860000",
+        "harass_f1=0.737778 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.1,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8683035714285714,
+      "macro_f1": 0.8433434580224507,
+      "harass_f1": 0.7377777777777778,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.868304 < 0.920000",
+        "macro_f1=0.843343 < 0.860000",
+        "harass_f1=0.737778 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.15,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8741573033707866,
+      "macro_f1": 0.8482900550379995,
+      "harass_f1": 0.7555555555555555,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.874157 < 0.920000",
+        "macro_f1=0.848290 < 0.860000",
+        "harass_f1=0.755556 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.2,
+      "transaction_recall": 0.9533169533169533,
+      "transaction_precision": 0.8818181818181818,
+      "macro_f1": 0.8494886928198537,
+      "harass_f1": 0.7522123893805309,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.953317 < 0.985000",
+        "transaction_precision=0.881818 < 0.920000",
+        "macro_f1=0.849489 < 0.860000",
+        "harass_f1=0.752212 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.25,
+      "transaction_recall": 0.9533169533169533,
+      "transaction_precision": 0.8838268792710706,
+      "macro_f1": 0.8511336454646957,
+      "harass_f1": 0.7577092511013217,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.953317 < 0.985000",
+        "transaction_precision=0.883827 < 0.920000",
+        "macro_f1=0.851134 < 0.860000",
+        "harass_f1=0.757709 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.3,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8820861678004536,
+      "macro_f1": 0.8532365067936034,
+      "harass_f1": 0.7657657657657657,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.882086 < 0.920000",
+        "macro_f1=0.853237 < 0.860000",
+        "harass_f1=0.765766 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.35,
+      "transaction_recall": 0.9606879606879607,
+      "transaction_precision": 0.8786516853932584,
+      "macro_f1": 0.85449741289955,
+      "harass_f1": 0.7727272727272728,
+      "fraud_recall": 0.8011049723756906,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.960688 < 0.985000",
+        "transaction_precision=0.878652 < 0.920000",
+        "macro_f1=0.854497 < 0.860000",
+        "harass_f1=0.772727 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.4,
+      "transaction_recall": 0.9582309582309583,
+      "transaction_precision": 0.8823529411764706,
+      "macro_f1": 0.8570486523958005,
+      "harass_f1": 0.7798165137614678,
+      "fraud_recall": 0.8121546961325967,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.958231 < 0.985000",
+        "transaction_precision=0.882353 < 0.920000",
+        "macro_f1=0.857049 < 0.860000",
+        "harass_f1=0.779817 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.45,
+      "transaction_recall": 0.9582309582309583,
+      "transaction_precision": 0.8883826879271071,
+      "macro_f1": 0.860793161188855,
+      "harass_f1": 0.7853881278538813,
+      "fraud_recall": 0.8121546961325967,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.958231 < 0.985000",
+        "transaction_precision=0.888383 < 0.920000",
+        "harass_f1=0.785388 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.5,
+      "transaction_recall": 0.9582309582309583,
+      "transaction_precision": 0.896551724137931,
+      "macro_f1": 0.8639077420741549,
+      "harass_f1": 0.7873303167420815,
+      "fraud_recall": 0.8121546961325967,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.958231 < 0.985000",
+        "transaction_precision=0.896552 < 0.920000",
+        "harass_f1=0.787330 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.55,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8983833718244804,
+      "macro_f1": 0.8619453463203464,
+      "harass_f1": 0.7818181818181817,
+      "fraud_recall": 0.8121546961325967,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.898383 < 0.920000",
+        "harass_f1=0.781818 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.6,
+      "transaction_recall": 0.9557739557739557,
+      "transaction_precision": 0.8963133640552995,
+      "macro_f1": 0.858567684682429,
+      "harass_f1": 0.7727272727272728,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.896313 < 0.920000",
+        "macro_f1=0.858568 < 0.860000",
+        "harass_f1=0.772727 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.65,
+      "transaction_recall": 0.9533169533169533,
+      "transaction_precision": 0.9023255813953488,
+      "macro_f1": 0.8594151667492642,
+      "harass_f1": 0.7727272727272728,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.953317 < 0.985000",
+        "transaction_precision=0.902326 < 0.920000",
+        "macro_f1=0.859415 < 0.860000",
+        "harass_f1=0.772727 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.7,
+      "transaction_recall": 0.9508599508599509,
+      "transaction_precision": 0.9020979020979021,
+      "macro_f1": 0.8588374667128538,
+      "harass_f1": 0.7727272727272728,
+      "fraud_recall": 0.8066298342541437,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.950860 < 0.985000",
+        "transaction_precision=0.902098 < 0.920000",
+        "macro_f1=0.858837 < 0.860000",
+        "harass_f1=0.772727 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.75,
+      "transaction_recall": 0.9508599508599509,
+      "transaction_precision": 0.9042056074766355,
+      "macro_f1": 0.8560108981696315,
+      "harass_f1": 0.7657657657657657,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.950860 < 0.985000",
+        "transaction_precision=0.904206 < 0.920000",
+        "macro_f1=0.856011 < 0.860000",
+        "harass_f1=0.765766 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.8,
+      "transaction_recall": 0.9484029484029484,
+      "transaction_precision": 0.9125295508274232,
+      "macro_f1": 0.8610444383712457,
+      "harass_f1": 0.7767857142857143,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.948403 < 0.985000",
+        "transaction_precision=0.912530 < 0.920000",
+        "harass_f1=0.776786 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.85,
+      "transaction_recall": 0.9484029484029484,
+      "transaction_precision": 0.9125295508274232,
+      "macro_f1": 0.8610444383712457,
+      "harass_f1": 0.7767857142857143,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.948403 < 0.985000",
+        "transaction_precision=0.912530 < 0.920000",
+        "harass_f1=0.776786 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.9,
+      "transaction_recall": 0.9434889434889435,
+      "transaction_precision": 0.9142857142857143,
+      "macro_f1": 0.8613641548879236,
+      "harass_f1": 0.7767857142857143,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.943489 < 0.985000",
+        "transaction_precision=0.914286 < 0.920000",
+        "harass_f1=0.776786 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 0.95,
+      "transaction_recall": 0.9434889434889435,
+      "transaction_precision": 0.9142857142857143,
+      "macro_f1": 0.8597367359027639,
+      "harass_f1": 0.7713004484304934,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.943489 < 0.985000",
+        "transaction_precision=0.914286 < 0.920000",
+        "macro_f1=0.859737 < 0.860000",
+        "harass_f1=0.771300 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    },
+    {
+      "teacher_weight": 1.0,
+      "transaction_recall": 0.9434889434889435,
+      "transaction_precision": 0.9164677804295943,
+      "macro_f1": 0.8619490335433951,
+      "harass_f1": 0.7767857142857143,
+      "fraud_recall": 0.7955801104972375,
+      "acceptance_passed": false,
+      "gate_errors": [
+        "transaction_recall=0.943489 < 0.985000",
+        "transaction_precision=0.916468 < 0.920000",
+        "harass_f1=0.776786 < 0.800000",
+        "fraud_recall=0.795580 < 0.800000"
+      ]
+    }
+  ],
+  "acceptance_candidates": [],
+  "best_minimum_gate_ratio": {
+    "teacher_weight": 0.5,
+    "transaction_recall": 0.9582309582309583,
+    "transaction_precision": 0.896551724137931,
+    "macro_f1": 0.8639077420741549,
+    "harass_f1": 0.7873303167420815,
+    "fraud_recall": 0.8121546961325967,
+    "acceptance_passed": false,
+    "gate_errors": [
+      "transaction_recall=0.958231 < 0.985000",
+      "transaction_precision=0.896552 < 0.920000",
+      "harass_f1=0.787330 < 0.800000"
+    ]
+  }
+}
