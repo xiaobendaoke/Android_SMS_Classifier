@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_conv_kernels_3_6_9_12_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Adding only a 12-byte convolution kernel did not improve the authoritative zh validation gates and triggered NaN training loss after epoch 12 before restoring the epoch-8 checkpoint.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.933661, transaction_precision=0.892019, macro_f1=0.844116, harass_f1=0.745455, and fraud_recall=0.812155. Transaction recall, transaction precision, macro F1, and HARASS F1 remain below the required gates.",
+  "next_hypothesis": "The wider receptive field did not help the transaction/HARASS boundary; prefer a stable learning-rate or loss-shaping single-variable adjustment before trying more capacity changes.",
+  "gate_errors": [
+    "transaction_recall=0.933661 < 0.985000",
+    "transaction_precision=0.892019 < 0.920000",
+    "macro_f1=0.844116 < 0.860000",
+    "harass_f1=0.745455 < 0.800000"
+  ]
+}
