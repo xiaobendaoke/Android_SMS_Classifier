@@ -1,0 +1,122 @@
+{
+  "locked_test_read": false,
+  "language": "zh",
+  "model_input_bytes": 512,
+  "transaction_misses": {
+    "count": 19,
+    "by_bucket": [
+      {
+        "coverage_subtype": "CARRIER",
+        "predicted_label": "AD",
+        "count": 8,
+        "char_length_quantiles": [
+          83.0,
+          119.75,
+          121.0,
+          143.5,
+          190.29999999999998,
+          296.0
+        ],
+        "utf8_byte_length_quantiles": [
+          183.0,
+          253.75,
+          255.0,
+          337.0,
+          471.69999999999993,
+          730.0
+        ],
+        "at_or_above_model_limit": 1
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "AD",
+        "count": 9,
+        "char_length_quantiles": [
+          40.0,
+          62.0,
+          69.0,
+          93.0,
+          142.60000000000002,
+          301.0
+        ],
+        "utf8_byte_length_quantiles": [
+          78.0,
+          142.0,
+          179.0,
+          187.0,
+          265.8,
+          301.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "FRAUD",
+        "count": 1,
+        "char_length_quantiles": [
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0
+        ],
+        "utf8_byte_length_quantiles": [
+          77.0,
+          77.0,
+          77.0,
+          77.0,
+          77.0,
+          77.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "HARASS",
+        "count": 1,
+        "char_length_quantiles": [
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0
+        ],
+        "utf8_byte_length_quantiles": [
+          139.0,
+          139.0,
+          139.0,
+          139.0,
+          139.0,
+          139.0
+        ],
+        "at_or_above_model_limit": 0
+      }
+    ]
+  },
+  "transaction_false_positives": {
+    "count": 66,
+    "true_label": {
+      "AD": 54,
+      "HARASS": 5,
+      "FRAUD": 7
+    },
+    "char_length_quantiles": [
+      16.0,
+      65.0,
+      79.5,
+      125.25,
+      159.0,
+      3285.0
+    ],
+    "utf8_byte_length_quantiles": [
+      38.0,
+      147.0,
+      184.0,
+      291.75,
+      385.0,
+      8406.0
+    ]
+  }
+}
