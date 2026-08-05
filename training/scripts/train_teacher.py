@@ -506,7 +506,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         "class_weights": dict(zip(LABEL_ORDER, class_weights_np.tolist())),
         "focal_gamma": focal_gamma,
         "normalization": "normalize_text",
-        "license_note": "bert-base-multilingual-cased is third-party; record hash and license.",
+        "license_note": f"{model_name} is third-party; record hash and license.",
         "third_party": True,
     }
     write_json(manifest_path, manifest)
