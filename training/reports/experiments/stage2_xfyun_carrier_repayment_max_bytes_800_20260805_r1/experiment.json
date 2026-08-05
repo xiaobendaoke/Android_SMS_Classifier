@@ -1,0 +1,88 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_max_bytes_800_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only the ByteCNN input capacity can reduce transaction misses without inference-time category overrides.",
+  "only_changed_variable": "input.max_bytes=800 (baseline=512)",
+  "config_sha256": "3bfd73d2acd1a8e97838d19afe41f468460dd14d99e0f446c3a16819939e8d01",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8586387434554974,
+    "macro_f1": 0.826681442404994,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.837953091684435,
+        "recall": 0.9656019656019657,
+        "f1": 0.8972602739726027
+      },
+      "AD": {
+        "precision": 0.9360613810741688,
+        "recall": 0.8097345132743363,
+        "f1": 0.8683274021352313
+      },
+      "HARASS": {
+        "precision": 0.6936936936936937,
+        "recall": 0.7264150943396226,
+        "f1": 0.7096774193548386
+      },
+      "FRAUD": {
+        "precision": 0.8457142857142858,
+        "recall": 0.8176795580110497,
+        "f1": 0.8314606741573034
+      }
+    },
+    "confusion_matrix": [
+      [
+        393,
+        12,
+        1,
+        1
+      ],
+      [
+        61,
+        366,
+        8,
+        17
+      ],
+      [
+        10,
+        10,
+        77,
+        9
+      ],
+      [
+        5,
+        3,
+        25,
+        148
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 5,
+  "model_sha256": "5e16fd4b6ddfd66f240bc3987da9d4d9dec005292fa7974e5d597b3303475112",
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.965602 < 0.985000",
+    "transaction_precision=0.837953 < 0.920000",
+    "macro_f1=0.826681 < 0.860000",
+    "harass_f1=0.709677 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}
