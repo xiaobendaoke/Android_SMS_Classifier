@@ -1,0 +1,89 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_conv_filters_128_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only ByteCNN convolutional capacity can improve category separation, especially HARASS and transaction-versus-AD errors.",
+  "only_changed_variable": "model.conv_filters=128 (baseline=80)",
+  "config_sha256": "a38e947e31ad2f5bea98e41a31af8dbd839a14f02fb79945e32197898bdda75a",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8603839441535777,
+    "macro_f1": 0.8258005699944257,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8690744920993227,
+        "recall": 0.9459459459459459,
+        "f1": 0.9058823529411766
+      },
+      "AD": {
+        "precision": 0.9440203562340967,
+        "recall": 0.8207964601769911,
+        "f1": 0.8781065088757397
+      },
+      "HARASS": {
+        "precision": 0.6099290780141844,
+        "recall": 0.8113207547169812,
+        "f1": 0.6963562753036437
+      },
+      "FRAUD": {
+        "precision": 0.8520710059171598,
+        "recall": 0.7955801104972375,
+        "f1": 0.8228571428571428
+      }
+    },
+    "confusion_matrix": [
+      [
+        385,
+        11,
+        7,
+        4
+      ],
+      [
+        47,
+        371,
+        20,
+        14
+      ],
+      [
+        6,
+        7,
+        86,
+        7
+      ],
+      [
+        5,
+        4,
+        28,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 7,
+  "model_sha256": "5eb9e83751a5eac7667247218df3c271a9869d6c3a4a60d989e0c2908e3a4bfd",
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.945946 < 0.985000",
+    "transaction_precision=0.869074 < 0.920000",
+    "macro_f1=0.825801 < 0.860000",
+    "harass_f1=0.696356 < 0.800000",
+    "fraud_recall=0.795580 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}
