@@ -1,0 +1,10 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_protection_loss_0p70_20260805_r1",
+  "experiment_commit_sha": "a34665288277d09c36db0561ca2f942e3cfaad39",
+  "remote": "origin",
+  "remote_branch": "cursor/fix-formal-quantize-int8-800d",
+  "push_command": "git -c http.proxy=http://127.0.0.1:7897 push origin HEAD:cursor/fix-formal-quantize-int8-800d",
+  "push_exit_code": 0,
+  "push_status": "pushed",
+  "remote_head_after_push": "a34665288277d09c36db0561ca2f942e3cfaad39"
+}
