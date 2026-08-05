@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from collections import Counter, defaultdict
@@ -42,7 +43,7 @@ def main() -> int:
         for record, prediction in rows:
             grouped[(coverage_subtype(record.text) or "UNMATCHED", prediction)].append(record)
         return [{"coverage_subtype": key[0], "predicted_label": key[1], "count": len(group), "char_length_quantiles": quantiles([len(row.text) for row in group]), "utf8_byte_length_quantiles": quantiles([len(row.text.encode("utf-8")) for row in group]), "at_or_above_model_limit": sum(len(row.text.encode("utf-8")) >= int(model.input_shape[-1]) for row in group)} for key, group in sorted(grouped.items())]
-    payload = {"locked_test_read": False, "language": "zh", "model_input_bytes": int(model.input_shape[-1]), "transaction_misses": {"count": len(misses), "by_bucket": bucket(misses)}, "transaction_false_positives": {"count": len(false_positives), "true_label": dict(Counter(row.label for row, _ in false_positives)), "char_length_quantiles": quantiles([len(row.text) for row, _ in false_positives]), "utf8_byte_length_quantiles": quantiles([len(row.text.encode("utf-8")) for row, _ in false_positives])}}
+    payload = {"locked_test_read": False, "language": "zh", "model_sha256": hashlib.sha256(args.model.read_bytes()).hexdigest(), "model_input_bytes": int(model.input_shape[-1]), "transaction_misses": {"count": len(misses), "by_bucket": bucket(misses)}, "transaction_false_positives": {"count": len(false_positives), "true_label": dict(Counter(row.label for row, _ in false_positives)), "char_length_quantiles": quantiles([len(row.text) for row, _ in false_positives]), "utf8_byte_length_quantiles": quantiles([len(row.text.encode("utf-8")) for row, _ in false_positives])}}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False))

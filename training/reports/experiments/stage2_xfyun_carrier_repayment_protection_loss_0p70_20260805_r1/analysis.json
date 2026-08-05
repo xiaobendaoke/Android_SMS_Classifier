@@ -1,0 +1,101 @@
+{
+  "locked_test_read": false,
+  "language": "zh",
+  "model_sha256": "cb413eb188ec017587607815bfafd8e080ec9a69ed71583481700ddfb3a9e58d",
+  "model_input_bytes": 512,
+  "transaction_misses": {
+    "count": 19,
+    "by_bucket": [
+      {
+        "coverage_subtype": "CARRIER",
+        "predicted_label": "AD",
+        "count": 8,
+        "char_length_quantiles": [
+          83.0,
+          119.75,
+          121.0,
+          152.25,
+          210.59999999999997,
+          296.0
+        ],
+        "utf8_byte_length_quantiles": [
+          183.0,
+          253.75,
+          255.0,
+          360.25,
+          536.8,
+          730.0
+        ],
+        "at_or_above_model_limit": 1
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "AD",
+        "count": 9,
+        "char_length_quantiles": [
+          40.0,
+          67.0,
+          77.0,
+          93.0,
+          142.60000000000002,
+          301.0
+        ],
+        "utf8_byte_length_quantiles": [
+          78.0,
+          171.0,
+          181.0,
+          209.0,
+          265.8,
+          301.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "HARASS",
+        "count": 2,
+        "char_length_quantiles": [
+          27.0,
+          35.0,
+          43.0,
+          51.0,
+          55.8,
+          59.0
+        ],
+        "utf8_byte_length_quantiles": [
+          77.0,
+          92.5,
+          108.0,
+          123.5,
+          132.8,
+          139.0
+        ],
+        "at_or_above_model_limit": 0
+      }
+    ]
+  },
+  "transaction_false_positives": {
+    "count": 68,
+    "true_label": {
+      "FRAUD": 15,
+      "AD": 48,
+      "HARASS": 5
+    },
+    "char_length_quantiles": [
+      16.0,
+      66.75,
+      94.5,
+      126.0,
+      158.60000000000002,
+      593.0
+    ],
+    "utf8_byte_length_quantiles": [
+      38.0,
+      152.75,
+      224.0,
+      283.0,
+      400.80000000000007,
+      1119.0
+    ]
+  }
+}
