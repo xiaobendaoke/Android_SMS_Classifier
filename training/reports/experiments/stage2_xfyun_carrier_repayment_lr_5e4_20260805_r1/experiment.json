@@ -1,0 +1,88 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Reducing only the student learning rate to 5e-4 can improve optimizer stability and transaction/HARASS balance without changing data or inference-time category overrides.",
+  "only_changed_variable": "training.learning_rate=5e-4 (baseline=1e-3)",
+  "config_sha256": "246bbb4871d4fc8ff55bee3face94482582b2aba413bb78f1fc7c185f5039761",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8778359511343804,
+    "macro_f1": 0.8558649893290875,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8775510204081632,
+        "recall": 0.9508599508599509,
+        "f1": 0.9127358490566038
+      },
+      "AD": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8672566371681416,
+        "f1": 0.8779395296752519
+      },
+      "HARASS": {
+        "precision": 0.81,
+        "recall": 0.7641509433962265,
+        "f1": 0.7864077669902914
+      },
+      "FRAUD": {
+        "precision": 0.8902439024390244,
+        "recall": 0.8066298342541437,
+        "f1": 0.846376811594203
+      }
+    },
+    "confusion_matrix": [
+      [
+        387,
+        19,
+        0,
+        1
+      ],
+      [
+        46,
+        392,
+        4,
+        10
+      ],
+      [
+        3,
+        15,
+        81,
+        7
+      ],
+      [
+        5,
+        15,
+        15,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 13,
+  "model_sha256": "3e85a244f0a45d6a5195c46dcbb3e413bb121e8660569c065e7816b9d7c39514",
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.950860 < 0.985000",
+    "transaction_precision=0.877551 < 0.920000",
+    "macro_f1=0.855865 < 0.860000",
+    "harass_f1=0.786408 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}
