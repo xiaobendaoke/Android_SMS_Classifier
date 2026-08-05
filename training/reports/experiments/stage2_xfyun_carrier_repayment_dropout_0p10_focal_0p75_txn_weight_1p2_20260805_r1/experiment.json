@@ -1,0 +1,93 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_0p75_txn_weight_1p2_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1",
+  "hypothesis": "The gamma=0.75 run improved TRANSACTION recall but over-predicted TRANSACTION. Lowering only the TRANSACTION hard-label multiplier may recover precision while preserving the focal recall gain.",
+  "only_changed_variable": "training.class_weight_multipliers.TRANSACTION=1.2 (baseline=1.4)",
+  "carried_forward_from_baseline": {
+    "model.dropout": 0.1,
+    "distillation.primary_focal_gamma": 0.75
+  },
+  "config_sha256": "c269c89dcb39a51a7c0172a36fe668d25fdc3fabe694bf65a738dc17c7f7f5b5",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8455497382198953,
+    "macro_f1": 0.814699350039739,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8492239467849224,
+        "recall": 0.941031941031941,
+        "f1": 0.8927738927738929
+      },
+      "AD": {
+        "precision": 0.9296875,
+        "recall": 0.7898230088495575,
+        "f1": 0.854066985645933
+      },
+      "HARASS": {
+        "precision": 0.6612903225806451,
+        "recall": 0.7735849056603774,
+        "f1": 0.7130434782608696
+      },
+      "FRAUD": {
+        "precision": 0.786096256684492,
+        "recall": 0.8121546961325967,
+        "f1": 0.7989130434782609
+      }
+    },
+    "confusion_matrix": [
+      [
+        383,
+        16,
+        4,
+        4
+      ],
+      [
+        48,
+        357,
+        21,
+        26
+      ],
+      [
+        5,
+        9,
+        82,
+        10
+      ],
+      [
+        15,
+        2,
+        17,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 3,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.941032 < 0.985000",
+    "transaction_precision=0.849224 < 0.920000",
+    "macro_f1=0.814699 < 0.860000",
+    "harass_f1=0.713043 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

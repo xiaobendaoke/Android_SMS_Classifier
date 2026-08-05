@@ -1,0 +1,39 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_0p75_txn_weight_1p2_20260805_r1",
+  "decision": "rejected",
+  "decision_reason": "The same independently evaluated Keras zh validation run did not satisfy all five acceptance gates.",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "automated_gates_passed": false,
+  "independent_evaluation": "post_training_keras_metrics.json",
+  "acceptance_scope": ["zh"],
+  "metrics": {
+    "transaction_recall": 0.9385749385749386,
+    "transaction_precision": 0.8565022421524664,
+    "macro_f1": 0.8184844205646628,
+    "harass_f1": 0.7296137339055794,
+    "fraud_recall": 0.8121546961325967
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "failed_gates": [
+    "transaction_recall=0.938575 < 0.985000",
+    "transaction_precision=0.856502 < 0.920000",
+    "macro_f1=0.818484 < 0.860000",
+    "harass_f1=0.729614 < 0.800000"
+  ],
+  "passed_gates": [
+    "fraud_recall=0.812155 >= 0.800000"
+  ],
+  "nan_observed": false,
+  "locked_test_evaluated": false,
+  "human_review_package_allowed": false
+}
