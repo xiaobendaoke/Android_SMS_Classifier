@@ -1,0 +1,110 @@
+{
+  "run_id": "stage2_xfyun_harass_fraud_overlay_lr_5e4_hard_boundary_both_1p5_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_harass_overlay_lr_5e4_hard_boundary_both_1p5_20260806_r1",
+  "hypothesis": "Round 2 of the data-arbitration direction: stack 100 model-boundary misclassified zh HARASS/FRAUD rows (arbitrated A/B/C, 53 corrections, 2 quarantine) on top of the 22-row template-inconsistency overlay while keeping all round4 training settings unchanged. This should further improve HARASS F1 and FRAUD boundary consistency.",
+  "only_changed_variable": "data manifest=processed_harass_fraud_boundary_arbitration_20260806_r1 (stacked model-boundary arbitration overlay; all training settings unchanged)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.4,
+    "training_mode": "hard_only",
+    "training.hard_boundary_multiplier": 1.5,
+    "training.hard_boundary_labels": [
+      "TRANSACTION",
+      "AD",
+      "FRAUD"
+    ]
+  },
+  "config_sha256": "1831abf4e28d3d8396d4971de81c70da295cb14e914165d158c88752f27b7399",
+  "data_sha256": {
+    "train": "b2edd2f0dd93869be60ac9ff4df559950a98bf4fae826ca809ecfb8990b22de9",
+    "validation": "98f69337917213ee380f06cc694600971287b6ec400f9d1b509ce2b5c8567a43"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8882096069868995,
+    "macro_f1": 0.8701713402308542,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8988235294117647,
+        "recall": 0.9339853300733496,
+        "f1": 0.9160671462829736
+      },
+      "AD": {
+        "precision": 0.9243119266055045,
+        "recall": 0.8538135593220338,
+        "f1": 0.8876651982378855
+      },
+      "HARASS": {
+        "precision": 0.7435897435897436,
+        "recall": 0.8613861386138614,
+        "f1": 0.798165137614679
+      },
+      "FRAUD": {
+        "precision": 0.8682634730538922,
+        "recall": 0.8895705521472392,
+        "f1": 0.8787878787878789
+      }
+    },
+    "confusion_matrix": [
+      [
+        382,
+        21,
+        3,
+        3
+      ],
+      [
+        39,
+        403,
+        14,
+        16
+      ],
+      [
+        2,
+        9,
+        87,
+        3
+      ],
+      [
+        2,
+        3,
+        13,
+        145
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1145
+  },
+  "best_epoch": 10,
+  "model_sha256": "02525343abe52e2ddf01f706123c19e9696b7d7156af7dbdb4fee8dca89d4d2a",
+  "hard_boundary_count": 5126,
+  "hard_boundary_label_counts": {
+    "TRANSACTION": 2811,
+    "AD": 1498,
+    "FRAUD": 817
+  },
+  "hard_boundary_labels": [
+    "TRANSACTION",
+    "AD",
+    "FRAUD"
+  ],
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.933985 < 0.985000",
+    "transaction_precision=0.898824 < 0.920000",
+    "harass_f1=0.798165 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

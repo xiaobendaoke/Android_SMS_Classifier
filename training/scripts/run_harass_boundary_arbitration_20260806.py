@@ -2,6 +2,7 @@
 """Run multi-pass AI arbitration for inconsistent template groups via XFYun."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import sys
@@ -12,7 +13,8 @@ from openai import OpenAI
 from direct_xfyun_call import BASE_URL, api_key_from_demo
 
 ROOT = Path(__file__).resolve().parent.parent
-RUN = "harass_boundary_arbitration_20260806_r1"
+DEFAULT_RUN = "harass_boundary_arbitration_20260806_r1"
+RUN = DEFAULT_RUN
 PACK = ROOT / "data" / "interim" / "annotation" / RUN
 REPORT_WIN = Path("/mnt/c/dev/Android_SMS_Classifier/training/reports/experiments") / RUN
 GUIDE = ROOT.parent / "docs" / "labeling-guide.md"
@@ -116,6 +118,13 @@ def run_pass(
 
 
 def main() -> int:
+    global RUN, PACK, REPORT_WIN
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run-id", default=DEFAULT_RUN)
+    args = parser.parse_args()
+    RUN = args.run_id
+    PACK = ROOT / "data" / "interim" / "annotation" / RUN
+    REPORT_WIN = Path("/mnt/c/dev/Android_SMS_Classifier/training/reports/experiments") / RUN
     if not PACK.exists():
         raise SystemExit(f"missing prepared pack: {PACK}")
     guide_text = GUIDE.read_text(encoding="utf-8")

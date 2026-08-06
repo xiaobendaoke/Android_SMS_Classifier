@@ -2,6 +2,7 @@
 """Finalize provisional labels and create a membership-preserving overlay data version."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import sys
@@ -9,8 +10,10 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data" / "processed_xfyun_carrier_repayment_relabel_20260804_r1"
-RUN = "harass_boundary_arbitration_20260806_r1"
+DEFAULT_RUN = "harass_boundary_arbitration_20260806_r1"
+DEFAULT_DATA = ROOT / "data" / "processed_xfyun_carrier_repayment_relabel_20260804_r1"
+DATA = DEFAULT_DATA
+RUN = DEFAULT_RUN
 PACK = ROOT / "data" / "interim" / "annotation" / RUN
 OUT = ROOT / "data" / f"processed_{RUN}"
 REPORT_WIN = Path("/mnt/c/dev/Android_SMS_Classifier/training/reports/experiments") / RUN
@@ -57,6 +60,20 @@ def parse_raw(name: str) -> dict[str, dict]:
 
 
 def main() -> int:
+    global RUN, DATA, PACK, OUT, REPORT_WIN
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run-id", default=DEFAULT_RUN)
+    parser.add_argument("--base-data", type=Path, default=DEFAULT_DATA)
+    parser.add_argument(
+        "--selection",
+        default="inconsistent_template_groups_only",
+    )
+    args = parser.parse_args()
+    RUN = args.run_id
+    DATA = args.base_data
+    PACK = ROOT / "data" / "interim" / "annotation" / RUN
+    OUT = ROOT / "data" / f"processed_{RUN}"
+    REPORT_WIN = Path("/mnt/c/dev/Android_SMS_Classifier/training/reports/experiments") / RUN
     if OUT.exists() or (REPORT_WIN / "overlay_summary.json").exists():
         raise SystemExit(f"refusing to overwrite finalized run: {RUN}")
 
@@ -191,7 +208,7 @@ def main() -> int:
         "human_verified": False,
         "formal_acceptance_allowed": False,
         "locked_test_read": False,
-        "candidate_selection": "inconsistent_template_groups_only",
+        "candidate_selection": args.selection,
         "source_data_sha256": {
             name: sha256(DATA / f"{name}.jsonl") for name in ("train", "validation")
         },
