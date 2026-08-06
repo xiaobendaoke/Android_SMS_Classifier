@@ -220,6 +220,19 @@ def run_pass(
             else []
         )
         results = parse_raw_file(raw_path, {r["id"] for r in rows})
+        missing = [
+            rid for rid in {r["id"] for r in rows} if rid not in results
+        ]
+        if missing:
+            skipped = sorted(set(skipped) | set(missing))
+            skipped_path.write_text(
+                json.dumps(skipped, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            print(
+                f"{pass_name}: {len(missing)} rows missing parsed output, "
+                "marked skipped"
+            )
         print(
             f"{pass_name}: reused existing raw output "
             f"({len(results)} parsed, {len(skipped)} skipped)"
@@ -255,6 +268,17 @@ def run_pass(
         skipped_path.write_text(
             json.dumps(sorted(skipped), ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
+        )
+    missing = [rid for rid in expected_ids if rid not in results]
+    if missing:
+        skipped = sorted(set(skipped) | set(missing))
+        skipped_path.write_text(
+            json.dumps(skipped, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            f"{pass_name}: {len(missing)} rows missing parsed output, "
+            "marked skipped"
         )
     return results, skipped
 
