@@ -235,23 +235,43 @@ def main(argv: Optional[List[str]] = None) -> int:
     carrier_repayment_weight = float(
         training_cfg.get("carrier_repayment_positive_multiplier", 1.0)
     )
+    carrier_repayment_boundary_weight = float(
+        training_cfg.get("carrier_repayment_boundary_multiplier", 1.0)
+    )
     if carrier_repayment_weight < 1.0:
         raise ValueError(
             "training.carrier_repayment_positive_multiplier must be >= 1.0"
+        )
+    if carrier_repayment_boundary_weight < 1.0:
+        raise ValueError(
+            "training.carrier_repayment_boundary_multiplier must be >= 1.0"
         )
     carrier_repayment_pattern = re.compile(
         r"(?:中国移动|中国联通|中国电信|10086|10010|10000).{0,48}"
         r"(?:话费|流量|套餐|停机|余额|账单|充值|扣费)"
         r"|(?:还款|账单).{0,24}(?:成功|已入账|已还清|到期|应还|最低还款)"
     )
+    carrier_repayment_boundary = np.asarray(
+        [
+            bool(carrier_repayment_pattern.search(record.text))
+            for record in train_records
+        ],
+        dtype=bool,
+    )
     carrier_repayment_positive = np.asarray(
         [
             bool(transaction_targets[index] > 0.5)
-            and bool(carrier_repayment_pattern.search(record.text))
+            and bool(carrier_repayment_boundary[index])
             for index, record in enumerate(train_records)
         ],
         dtype=bool,
     )
+    if carrier_repayment_boundary_weight > 1.0:
+        sample_weights = sample_weights * np.where(
+            carrier_repayment_boundary,
+            carrier_repayment_boundary_weight,
+            1.0,
+        ).astype(np.float32)
     if carrier_repayment_weight > 1.0:
         sample_weights = sample_weights * np.where(
             carrier_repayment_positive,
@@ -261,6 +281,9 @@ def main(argv: Optional[List[str]] = None) -> int:
     print(
         f"class_weight_strategy={weight_strategy} "
         f"class_weights={dict(zip(LABEL_ORDER, class_weights.tolist()))} "
+        f"carrier_repayment_boundary_count="
+        f"{int(carrier_repayment_boundary.sum())} "
+        f"carrier_repayment_boundary_multiplier={carrier_repayment_boundary_weight} "
         f"carrier_repayment_positive_count="
         f"{int(carrier_repayment_positive.sum())} "
         f"carrier_repayment_positive_multiplier={carrier_repayment_weight}"
@@ -630,6 +653,14 @@ def main(argv: Optional[List[str]] = None) -> int:
             "gate_errors": gate_errors,
             "enforce_model_validation_targets": enforce_model_targets,
             "class_weights": dict(zip(LABEL_ORDER, class_weights.tolist())),
+            "carrier_repayment_boundary_count": int(
+                carrier_repayment_boundary.sum()
+            ),
+            "carrier_repayment_boundary_multiplier": carrier_repayment_boundary_weight,
+            "carrier_repayment_positive_count": int(
+                carrier_repayment_positive.sum()
+            ),
+            "carrier_repayment_positive_multiplier": carrier_repayment_weight,
             "transaction_protection": {
                 "enabled": protection_enabled,
                 "output_index": (

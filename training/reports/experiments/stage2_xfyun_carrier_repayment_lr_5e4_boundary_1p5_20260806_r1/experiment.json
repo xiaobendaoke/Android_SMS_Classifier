@@ -1,0 +1,96 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_boundary_1p5_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "hypothesis": "Weighting both sides of the predefined carrier/repayment boundary may improve separation between true TRANSACTION rows and lookalike AD/HARASS/FRAUD rows without biasing the boundary entirely toward TRANSACTION.",
+  "only_changed_variable": "training.carrier_repayment_boundary_multiplier=1.5 (baseline=1.0; learning_rate kept at 5e-4)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.4,
+    "training_mode": "hard_only"
+  },
+  "config_sha256": "56353a25150924d11854bea61129e29548b9556b8de9ea8754b8d344c4be9751",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8699825479930192,
+    "macro_f1": 0.8467332159713487,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.871331828442438,
+        "recall": 0.9484029484029484,
+        "f1": 0.908235294117647
+      },
+      "AD": {
+        "precision": 0.8870967741935484,
+        "recall": 0.8517699115044248,
+        "f1": 0.8690744920993227
+      },
+      "HARASS": {
+        "precision": 0.7920792079207921,
+        "recall": 0.7547169811320755,
+        "f1": 0.7729468599033816
+      },
+      "FRAUD": {
+        "precision": 0.8690476190476191,
+        "recall": 0.8066298342541437,
+        "f1": 0.8366762177650431
+      }
+    },
+    "confusion_matrix": [
+      [
+        386,
+        19,
+        1,
+        1
+      ],
+      [
+        48,
+        385,
+        5,
+        14
+      ],
+      [
+        4,
+        15,
+        80,
+        7
+      ],
+      [
+        5,
+        15,
+        15,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 13,
+  "model_sha256": "75ef9a47f2b0006017a0103da0ed24cd76420a7493d113935e100b08e6548652",
+  "carrier_repayment_boundary_count": 524,
+  "carrier_repayment_positive_count": 291,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.948403 < 0.985000",
+    "transaction_precision=0.871332 < 0.920000",
+    "macro_f1=0.846733 < 0.860000",
+    "harass_f1=0.772947 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}
