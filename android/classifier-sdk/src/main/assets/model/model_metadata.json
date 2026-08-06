@@ -1,6 +1,6 @@
 {
   "modelVersion": "1.0.0",
-  "architecture": "byte_textcnn",
+  "architecture": "byte_textcnn_dual_head",
   "inputLength": 512,
   "padId": 0,
   "byteOffset": 1,
@@ -10,10 +10,13 @@
     "HARASS",
     "FRAUD"
   ],
+  "modelOutputSize": 5,
+  "transactionProtectionIndex": 4,
+  "transactionProtectionThreshold": 0.5,
   "normalizationVersion": "1.0.0",
-  "rulesVersion": "1.0.0",
+  "rulesVersion": "1.1.0",
   "quantization": "INT8",
-  "modelSha256": "b4e57ad3a48fc5765fa022b725e801a9f0bd8f8121d6e7ef1b67b26cf31fc6b3",
+  "modelSha256": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed",
   "thresholds": {
     "default": {
       "TRANSACTION": 0.55,

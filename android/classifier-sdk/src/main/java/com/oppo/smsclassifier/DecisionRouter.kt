@@ -148,6 +148,7 @@ class DecisionRouter(
         if (!hasModelOutput) {
             return when {
                 signals.hasHighFraudRisk -> SmsAction.SUSPECT
+                signals.categoryHint == null -> SmsAction.REVIEW
                 signals.hasPickupProtect -> SmsAction.INBOX
                 category == SmsCategory.TRANSACTION &&
                     (signals.categoryHint == SmsCategory.TRANSACTION) -> SmsAction.INBOX

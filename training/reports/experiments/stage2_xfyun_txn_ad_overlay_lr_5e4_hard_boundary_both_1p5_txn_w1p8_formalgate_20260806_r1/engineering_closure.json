@@ -1,0 +1,52 @@
+{
+  "run_id": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1",
+  "status": "NOT_ACCEPTED_ENGINEERING_CLOSURE",
+  "source_candidate": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "prune": {
+    "status": "DENSE_FALLBACK",
+    "note": "All prune ratios (0.25/0.15/0.10) exceeded the accuracy budget on the provisional validation; the dense FP32 candidate was copied forward so the INT8 chain could continue. This is not a production prune acceptance."
+  },
+  "quantize": {
+    "status": "PASS",
+    "mode": "ptq",
+    "quantization": "full_integer_int8",
+    "bytes": 101696,
+    "model_sha256": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed"
+  },
+  "verify": {
+    "status": "FAIL_EXPECTED_NOT_ACCEPTED",
+    "keras_tflite_agreement_rate": 0.9964,
+    "min_agreement_rate": 0.99,
+    "gate_errors": [
+      "transaction_recall=0.953596 < 0.985000",
+      "macro_f1=0.748363 < 0.860000",
+      "harass_f1=0.723735 < 0.800000",
+      "fraud_recall=0.686916 < 0.800000"
+    ],
+    "note": "Agreement gate passed; absolute acceptance gates failed as expected for the NOT ACCEPTED candidate."
+  },
+  "android_export": {
+    "status": "DONE",
+    "dest": "android/classifier-sdk/src/main/assets",
+    "metadata_model_sha256": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed"
+  },
+  "android_build": {
+    "jvm_tests": 22,
+    "jvm_test_failures": 0,
+    "debug_apk": "android/app/build/outputs/apk/debug/app-debug.apk",
+    "debug_apk_bytes": 32380926
+  },
+  "audit": {
+    "internet_permission_check": "OK (13 manifests)",
+    "audit_release": "PASS_ENGINEERING",
+    "sensitive_log_check": "OK",
+    "model_ops_check": "LOADED no select-tf no custom ops",
+    "sbom": "reports/audit/dependency_sbom.json"
+  },
+  "declaration": "该候选未通过全部自动validation-only门禁（TRANSACTION Recall 0.9568 < 0.985），工程闭环产物仅供内部工程验证；仍未读取locked test，不构成正式验收结论。"
+}

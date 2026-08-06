@@ -45,6 +45,12 @@ def check_tensorflow() -> Optional[str]:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Structured Conv1D channel pruning.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG, help="Pruning config YAML.")
+    parser.add_argument(
+        "--student-config",
+        type=Path,
+        default=STUDENT_CONFIG,
+        help="Student config YAML used for architecture and data manifests.",
+    )
     parser.add_argument("--seed", type=int, default=SEED, help="Random seed.")
     parser.add_argument(
         "--plan-only",
@@ -248,7 +254,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 1
 
     set_seed(int(cfg.get("seed", args.seed)))
-    with STUDENT_CONFIG.open(encoding="utf-8") as fh:
+    with args.student_config.open(encoding="utf-8") as fh:
         student_yaml = yaml.safe_load(fh) or {}
     base_cfg = config_from_mapping(student_yaml)
     src = tf.keras.models.load_model(input_model)
