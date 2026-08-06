@@ -118,7 +118,7 @@ def runner_text(model: str, prompt: Path, stdout: Path, stderr: Path, status: Pa
             "  sleep 10",
             "done",
             "ended_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-            'saved_path=$(grep -oE \'/[^ `]+\\.jsonl\' "$STDOUT" 2>/dev/null | head -1)',
+            'saved_path=$(grep -oE \'/[^ `]+\\.jsonl\' "$STDOUT" 2>/dev/null | head -1 || true)',
             'if [[ -n "$saved_path" && -f "$saved_path" ]]; then cp -f "$saved_path" "$STDOUT"; fi',
             "{",
             f"  printf 'model={model}\\n'",
