@@ -39,5 +39,5 @@ fi
 cd "$ROOT"
 "$PY" training/scripts/prepare_ai_dual_pass_candidate_pack_20260806.py \
   --run-id ai_dual_pass_20260806_r1 \
-  --batch-size-a 50 \
+  --batch-size-a 25 \
   --batch-size-b 25

@@ -134,6 +134,33 @@ def runner_text(model: str, prompt: Path, stdout: Path, stderr: Path, status: Pa
     )
 
 
+def parallel_run_script(runners: list[Path], concurrency: int = 4) -> str:
+    lines = [
+        "#!/usr/bin/env bash",
+        "set -u",
+        "failed=0",
+        "running=()",
+        "i=0",
+    ]
+    for runner in runners:
+        lines += [
+            f"bash {runner} &",
+            "running+=($!)",
+            "i=$((i + 1))",
+            f"if [[ $i -ge {concurrency} ]]; then",
+            "  for pid in \"${running[@]}\"; do wait \"$pid\" || failed=1; done",
+            "  running=()",
+            "  i=0",
+            "fi",
+        ]
+    lines += [
+        "for pid in \"${running[@]}\"; do wait \"$pid\" || failed=1; done",
+        "exit $failed",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-id", default=RUN_ID_DEFAULT)
@@ -221,7 +248,7 @@ def main() -> int:
         "batch_sizes": {"pass_a": args.batch_size_a, "pass_b": args.batch_size_b},
         "guide": {
             "full_sha256": sha256(GUIDE),
-            "pass_a_guide": "full",
+            "pass_a_guide": "condensed",
             "pass_b_guide": "condensed",
             "pass_c_guide": "condensed",
         },
@@ -232,7 +259,7 @@ def main() -> int:
     }
 
     batch_sizes = {"a": args.batch_size_a, "b": args.batch_size_b}
-    guides = {"a": guide, "b": GUIDE_CONDENSED}
+    guides = {"a": GUIDE_CONDENSED, "b": GUIDE_CONDENSED}
     for pass_key, pass_id, model in (("a", PASS_A_ID, PASS_A_MODEL), ("b", PASS_B_ID, PASS_B_MODEL)):
         runners: list[Path] = []
         for batch_index, batch in enumerate(chunks(rows, batch_sizes[pass_key]), start=1):
@@ -272,45 +299,7 @@ def main() -> int:
             )
 
         run_script = out / f"run_pass_{pass_key}.sh"
-        if pass_key == "b":
-            parallel_lines = [
-                "#!/usr/bin/env bash",
-                "set -u",
-                "failed=0",
-                "running=()",
-                "i=0",
-            ]
-            for runner in runners:
-                parallel_lines += [
-                    f"bash {runner} &",
-                    "running+=($!)",
-                    "i=$((i + 1))",
-                    "if [[ $i -ge 4 ]]; then",
-                    "  for pid in \"${running[@]}\"; do wait \"$pid\" || failed=1; done",
-                    "  running=()",
-                    "  i=0",
-                    "fi",
-                ]
-            parallel_lines += [
-                "for pid in \"${running[@]}\"; do wait \"$pid\" || failed=1; done",
-                "exit $failed",
-                "",
-            ]
-            run_script.write_text("\n".join(parallel_lines), encoding="utf-8")
-        else:
-            run_script.write_text(
-                "\n".join(
-                    [
-                        "#!/usr/bin/env bash",
-                        "set -u",
-                        "failed=0",
-                        *[f"bash {runner}; rc=$?; if [[ $rc -ne 0 ]]; then failed=1; fi" for runner in runners],
-                        "exit $failed",
-                        "",
-                    ]
-                ),
-                encoding="utf-8",
-            )
+        run_script.write_text(parallel_run_script(runners, concurrency=4), encoding="utf-8")
         run_script.chmod(0o700)
 
     run_all = out / "run_all.sh"

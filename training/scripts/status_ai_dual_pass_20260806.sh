@@ -19,3 +19,8 @@ if [[ -n "$newest" ]]; then
   echo "NEWEST_STDOUT_BYTES=$(wc -c < "$RUN/stdout/$newest" 2>/dev/null || echo 0)"
 fi
 echo "PROC_ELAPSED=$(ps -eo etime,comm | grep opencode | head -1 | awk '{print $1}')"
+newest_stdout=$(ls -t "$RUN/stdout" 2>/dev/null | head -1)
+echo "NEWEST_STDOUT=$newest_stdout"
+if [[ -n "$newest_stdout" ]]; then
+  echo "NEWEST_STDOUT_BYTES=$(wc -c < "$RUN/stdout/$newest_stdout" 2>/dev/null || echo 0)"
+fi
