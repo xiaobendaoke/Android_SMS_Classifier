@@ -1,0 +1,46 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_protection_positive_1p5_20260806_r1",
+  "decision": "rejected",
+  "decision_reason": "The run observed NaN at epochs 16 and 17 and the restored best checkpoint still did not satisfy all five acceptance gates on the same independently evaluated Keras zh validation run.",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "automated_gates_passed": false,
+  "independent_evaluation": "post_training_keras_metrics.json",
+  "acceptance_scope": [
+    "zh"
+  ],
+  "metrics": {
+    "transaction_recall": 0.9385749385749386,
+    "transaction_precision": 0.8842592592592593,
+    "macro_f1": 0.8492509305407628,
+    "harass_f1": 0.7649769585253458,
+    "fraud_recall": 0.8066298342541437
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "failed_gates": [
+    "transaction_recall=0.938575 < 0.985000",
+    "transaction_precision=0.884259 < 0.920000",
+    "macro_f1=0.849251 < 0.860000",
+    "harass_f1=0.764977 < 0.800000"
+  ],
+  "passed_gates": [
+    "fraud_recall"
+  ],
+  "nan_observed": true,
+  "nan_observed_epochs": [
+    16,
+    17
+  ],
+  "nan_recovery": "Restored best validation checkpoint from epoch 12 before independent Keras evaluation.",
+  "locked_test_evaluated": false,
+  "human_review_package_allowed": false
+}
