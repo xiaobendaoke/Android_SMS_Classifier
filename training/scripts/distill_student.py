@@ -254,6 +254,14 @@ def main(argv: Optional[List[str]] = None) -> int:
         raise ValueError(
             "training.hard_boundary_multiplier must be >= 1.0"
         )
+    hard_boundary_labels = [
+        str(label)
+        for label in training_cfg.get(
+            "hard_boundary_labels", ["AD", "FRAUD", "HARASS"]
+        )
+    ]
+    if not hard_boundary_labels:
+        raise ValueError("training.hard_boundary_labels must not be empty")
     carrier_repayment_pattern = re.compile(
         r"(?:中国移动|中国联通|中国电信|10086|10010|10000).{0,48}"
         r"(?:话费|流量|套餐|停机|余额|账单|充值|扣费)"
@@ -289,7 +297,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     hard_boundary = np.asarray(
         [
             coverage_subtype(record.text) is not None
-            and int(y_train[index]) != LABEL_ORDER.index("TRANSACTION")
+            and LABEL_ORDER[int(y_train[index])] in hard_boundary_labels
             for index, record in enumerate(train_records)
         ],
         dtype=bool,
@@ -318,6 +326,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
     print(
         f"hard_boundary_multiplier={hard_boundary_multiplier} "
+        f"hard_boundary_labels={hard_boundary_labels} "
         f"hard_boundary_count={int(hard_boundary.sum())} "
         f"hard_boundary_label_counts={hard_boundary_label_counts}"
     )
@@ -695,6 +704,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             ),
             "carrier_repayment_positive_multiplier": carrier_repayment_weight,
             "hard_boundary_multiplier": hard_boundary_multiplier,
+            "hard_boundary_labels": hard_boundary_labels,
             "hard_boundary_count": int(hard_boundary.sum()),
             "hard_boundary_label_counts": hard_boundary_label_counts,
             "transaction_protection": {
