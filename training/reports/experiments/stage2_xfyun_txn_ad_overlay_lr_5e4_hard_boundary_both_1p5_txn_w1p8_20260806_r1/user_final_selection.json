@@ -1,0 +1,60 @@
+{
+  "run_id": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "decision": "USER_SELECTED_FINAL_CANDIDATE",
+  "selection_date": "2026-08-06",
+  "selection_basis": "User decided to stop further iterations and adopt the best rejected candidate as the current final result.",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "automated_gates_passed": false,
+  "independent_evaluation": "post_training_keras_metrics.json",
+  "acceptance_scope": [
+    "zh"
+  ],
+  "metrics": {
+    "transaction_recall": 0.956834532374101,
+    "transaction_precision": 0.925754060324826,
+    "macro_f1": 0.886370739734578,
+    "harass_f1": 0.819383259911894,
+    "fraud_recall": 0.878048780487805
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "failed_gates": [
+    "transaction_recall=0.956835 < 0.985000"
+  ],
+  "passed_gates": [
+    "transaction_precision",
+    "macro_f1",
+    "harass_f1",
+    "fraud_recall"
+  ],
+  "config_sha256": "19da059b2e4b30a071223e7b6a8dcc8a05ea032b1385cf5fc808d4b9c8069932",
+  "data_sha256": {
+    "train": "7fefb075b3167800087a47e0c5640df1c38be125315a5b37626b5ff0edabf1e1",
+    "validation": "2aecc6f10412d4307ee5abba1791c1b3fabf865faff82b9f0ee1674ee21da116"
+  },
+  "model_sha256": "a368cd5bdb7d8efc842d6d9e5fa5e601a7098dc755267ee90b2892df90e91205",
+  "best_epoch": 10,
+  "carried_forward_settings": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.8,
+    "training_mode": "hard_only",
+    "training.hard_boundary_multiplier": 1.5,
+    "training.hard_boundary_labels": [
+      "TRANSACTION",
+      "AD",
+      "FRAUD"
+    ]
+  },
+  "human_review_package_generated": false,
+  "human_review_package_reason": "The candidate did not pass all five automated validation-only gates, so no formal human review package was generated.",
+  "declaration": "该候选未通过全部自动validation-only门禁（TRANSACTION Recall 0.9568 < 0.985），由用户决定作为当前最终结果；仍未读取locked test，不构成正式验收结论。"
+}
