@@ -33,6 +33,7 @@ from src.train_utils import (  # noqa: E402
     student_predictions,
     write_json,
 )
+from scripts.prepare_transaction_specialist_freeze import coverage_subtype  # noqa: E402
 
 
 def metric_value(metrics: Dict[str, object], label: str, field: str) -> float:
@@ -246,6 +247,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         raise ValueError(
             "training.carrier_repayment_boundary_multiplier must be >= 1.0"
         )
+    hard_boundary_multiplier = float(
+        training_cfg.get("hard_boundary_multiplier", 1.0)
+    )
+    if hard_boundary_multiplier < 1.0:
+        raise ValueError(
+            "training.hard_boundary_multiplier must be >= 1.0"
+        )
     carrier_repayment_pattern = re.compile(
         r"(?:中国移动|中国联通|中国电信|10086|10010|10000).{0,48}"
         r"(?:话费|流量|套餐|停机|余额|账单|充值|扣费)"
@@ -278,6 +286,26 @@ def main(argv: Optional[List[str]] = None) -> int:
             carrier_repayment_weight,
             1.0,
         ).astype(np.float32)
+    hard_boundary = np.asarray(
+        [
+            coverage_subtype(record.text) is not None
+            and int(y_train[index]) != LABEL_ORDER.index("TRANSACTION")
+            for index, record in enumerate(train_records)
+        ],
+        dtype=bool,
+    )
+    hard_boundary_label_counts: Dict[str, int] = {}
+    for index in np.flatnonzero(hard_boundary):
+        label = LABEL_ORDER[int(y_train[index])]
+        hard_boundary_label_counts[label] = (
+            hard_boundary_label_counts.get(label, 0) + 1
+        )
+    if hard_boundary_multiplier > 1.0:
+        sample_weights = sample_weights * np.where(
+            hard_boundary,
+            hard_boundary_multiplier,
+            1.0,
+        ).astype(np.float32)
     print(
         f"class_weight_strategy={weight_strategy} "
         f"class_weights={dict(zip(LABEL_ORDER, class_weights.tolist()))} "
@@ -287,6 +315,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         f"carrier_repayment_positive_count="
         f"{int(carrier_repayment_positive.sum())} "
         f"carrier_repayment_positive_multiplier={carrier_repayment_weight}"
+    )
+    print(
+        f"hard_boundary_multiplier={hard_boundary_multiplier} "
+        f"hard_boundary_count={int(hard_boundary.sum())} "
+        f"hard_boundary_label_counts={hard_boundary_label_counts}"
     )
 
     teacher_map = None
@@ -661,6 +694,9 @@ def main(argv: Optional[List[str]] = None) -> int:
                 carrier_repayment_positive.sum()
             ),
             "carrier_repayment_positive_multiplier": carrier_repayment_weight,
+            "hard_boundary_multiplier": hard_boundary_multiplier,
+            "hard_boundary_count": int(hard_boundary.sum()),
+            "hard_boundary_label_counts": hard_boundary_label_counts,
             "transaction_protection": {
                 "enabled": protection_enabled,
                 "output_index": (
