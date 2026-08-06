@@ -47,12 +47,20 @@ def metric_value(metrics: Dict[str, object], label: str, field: str) -> float:
 
 
 def checkpoint_score(metrics: Dict[str, object], targets: Dict[str, float]) -> Tuple[float, ...]:
-    """Prefer checkpoints passing every gate; otherwise minimize the worst deficit."""
+    """Prefer checkpoints passing every gate; otherwise maximize geometric mean of gate ratios.
+
+    Uses geometric mean as the primary criterion (smoother than lexicographic min) so
+    that balanced progress across all five gates is rewarded over lifting one gate at
+    the expense of others. NaN-safe: returns a sentinel low score if any metric is NaN.
+    """
     macro_f1 = float(metrics.get("macro_f1", 0.0))
     transaction_recall = metric_value(metrics, "TRANSACTION", "recall")
     transaction_precision = metric_value(metrics, "TRANSACTION", "precision")
     harass_f1 = metric_value(metrics, "HARASS", "f1")
     fraud_recall = metric_value(metrics, "FRAUD", "recall")
+    values = (macro_f1, transaction_recall, transaction_precision, harass_f1, fraud_recall)
+    if any(np.isnan(v) or np.isinf(v) for v in values):
+        return (-1.0, 0.0, 0.0, 0.0, 0.0)
     gate_ratios = (
         transaction_recall / max(targets["target_transaction_recall"], 1e-9),
         macro_f1 / max(targets["min_macro_f1"], 1e-9),
@@ -62,9 +70,12 @@ def checkpoint_score(metrics: Dict[str, object], targets: Dict[str, float]) -> T
     )
     all_gates_met = float(min(gate_ratios) >= 1.0)
     if all_gates_met:
-        return (1.0, transaction_recall, macro_f1, min(gate_ratios), 1.0)
+        geo = float(np.exp(np.mean(np.log(gate_ratios))))
+        return (1.0, geo, min(gate_ratios), macro_f1, transaction_recall)
+    safe_ratios = np.maximum(gate_ratios, 1e-9)
+    geo = float(np.exp(np.mean(np.log(safe_ratios))))
     capped_mean = float(np.mean([min(value, 1.0) for value in gate_ratios]))
-    return (0.0, min(gate_ratios), capped_mean, macro_f1, transaction_recall)
+    return (0.0, geo, capped_mean, min(gate_ratios), macro_f1)
 
 
 def check_tensorflow() -> Optional[str]:
@@ -497,6 +508,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     best_score: Optional[Tuple[float, ...]] = None
     best_epoch = 0
     stale_epochs = 0
+    nan_epochs: List[int] = []
+    per_epoch_scores: List[Tuple[int, str]] = []
     for epoch in range(epochs):
         perm = np.random.permutation(n)
         losses = []
@@ -512,7 +525,15 @@ def main(argv: Optional[List[str]] = None) -> int:
                 tf.constant(distill_sample_weights[idx]),
             )
             losses.append(float(loss.numpy()))
-        line = f"epoch {epoch + 1}/{epochs} loss={np.mean(losses):.4f}"
+        mean_loss = float(np.mean(losses))
+        if np.isnan(mean_loss) or np.isinf(mean_loss):
+            nan_epochs.append(epoch + 1)
+            print(
+                f"WARNING: loss became {mean_loss} at epoch {epoch + 1}; "
+                f"stopping training, restoring best checkpoint from epoch {best_epoch}"
+            )
+            break
+        line = f"epoch {epoch + 1}/{epochs} loss={mean_loss:.4f}"
         if x_val is not None and y_val is not None:
             val_logits = model.predict(x_val, verbose=0)
             primary_val_preds = student_predictions(
@@ -537,6 +558,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 LABEL_ORDER,
             )
             score = checkpoint_score(epoch_metrics, targets)
+            per_epoch_scores.append((epoch + 1, f"{score[0]:.4f}/{score[1]:.4f}"))
             unique_classes = len(set(int(x) for x in val_preds.tolist()))
             if unique_classes >= 3 and (best_score is None or score > best_score):
                 best_score = score
@@ -691,6 +713,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             "val_metrics": metrics,
             "primary_val_metrics": primary_metrics if val_records else {},
             "best_epoch": best_epoch,
+            "nan_epochs": nan_epochs,
+            "per_epoch_scores": per_epoch_scores,
             "targets": targets,
             "gate_errors": gate_errors,
             "enforce_model_validation_targets": enforce_model_targets,

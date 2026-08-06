@@ -35,10 +35,13 @@ def test_safe_checkpoint_beats_higher_transaction_recall_with_collateral_damage(
     assert checkpoint_score(safe, TARGETS) > checkpoint_score(unsafe, TARGETS)
 
 
-def test_transaction_recall_breaks_tie_between_safe_checkpoints():
-    lower = _metrics(txn=0.986, macro=0.88, harass=0.82, fraud=0.82)
-    higher = _metrics(txn=0.990, macro=0.87, harass=0.81, fraud=0.81)
-    assert checkpoint_score(higher, TARGETS) > checkpoint_score(lower, TARGETS)
+def test_geometric_mean_breaks_tie_between_safe_checkpoints():
+    """When all gates pass, the checkpoint with higher geometric mean of gate ratios wins."""
+    lower_geo = _metrics(txn=0.986, macro=0.88, harass=0.82, fraud=0.82)
+    higher_geo = _metrics(txn=0.990, macro=0.87, harass=0.81, fraud=0.81)
+    # lower_geo has better balanced margins across all five gates even though
+    # higher_geo has slightly better txn_recall alone
+    assert checkpoint_score(lower_geo, TARGETS) > checkpoint_score(higher_geo, TARGETS)
 
 
 def test_low_transaction_precision_cannot_win_by_predicting_transaction_too_often():
