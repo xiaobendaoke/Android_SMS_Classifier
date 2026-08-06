@@ -82,34 +82,47 @@ def main() -> int:
     if len(pass_a_rows) != len(pass_b_rows):
         raise SystemExit("pass A/B pack sizes differ")
 
+    skipped_path = PACK / "moderation_skipped.json"
+    skipped_ids = (
+        set(json.loads(skipped_path.read_text(encoding="utf-8")))
+        if skipped_path.exists()
+        else set()
+    )
+    finalized_rows = [r for r in pass_a_rows if r["id"] not in skipped_ids]
+
     pass_a = parse_raw("pass_a")
     pass_b = parse_raw("pass_b")
-    if len(pass_a) != len(pass_a_rows) or len(pass_b) != len(pass_b_rows):
-        raise SystemExit("pass A or B parsed results are incomplete")
+    if any(r["id"] not in pass_a for r in finalized_rows):
+        raise SystemExit("pass A parsed results are incomplete for finalized rows")
+    if any(r["id"] not in pass_b for r in finalized_rows):
+        raise SystemExit("pass B parsed results are incomplete for finalized rows")
 
     disagreements = [
         r["id"]
-        for r in pass_a_rows
+        for r in finalized_rows
         if pass_a[r["id"]]["label"] != pass_b[r["id"]]["label"]
     ]
     pass_c = {}
     if disagreements:
         pass_c = parse_raw("pass_c")
-        if len(pass_c) != len(disagreements):
-            raise SystemExit("pass C parsed results are incomplete")
+        missing_c = [rid for rid in disagreements if rid not in pass_c]
+        if missing_c:
+            raise SystemExit(
+                f"pass C results missing for {len(missing_c)} finalized disagreements"
+            )
 
     source_rows = load_records(DATA / "train.jsonl") + load_records(
         DATA / "validation.jsonl"
     )
     originals = {r["id"]: r for r in source_rows}
-    missing_ids = [r["id"] for r in pass_a_rows if r["id"] not in originals]
+    missing_ids = [r["id"] for r in finalized_rows if r["id"] not in originals]
     if missing_ids:
         raise SystemExit(f"candidate ids missing from source data: {len(missing_ids)}")
 
     records = []
     corrections = []
     quarantine = []
-    for r in pass_a_rows:
+    for r in finalized_rows:
         rid = r["id"]
         a_label = pass_a[rid]["label"]
         b_label = pass_b[rid]["label"]
@@ -188,6 +201,7 @@ def main() -> int:
     final_label_counts = Counter(r["label"] for r in records)
     qa = {
         "candidate_count": len(records),
+        "moderation_skipped_count": len(skipped_ids),
         "agreement_count": len(records) - len(disagreements),
         "disagreement_count": len(disagreements),
         "pass_c_count": len(pass_c),
@@ -238,6 +252,7 @@ def main() -> int:
             {
                 "run_id": RUN,
                 "candidates": len(records),
+                "moderation_skipped": len(skipped_ids),
                 "corrections": len(corrections),
                 "quarantine": len(quarantine),
                 "train_sha": split_shas["train"][:16],

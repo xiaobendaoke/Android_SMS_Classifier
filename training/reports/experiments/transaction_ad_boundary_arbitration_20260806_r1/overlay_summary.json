@@ -1,0 +1,50 @@
+{
+  "run_id": "transaction_ad_boundary_arbitration_20260806_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "candidate_selection": "zh_transaction_ad_model_boundary_misclassified_stacked",
+  "source_data_sha256": {
+    "train": "b2edd2f0dd93869be60ac9ff4df559950a98bf4fae826ca809ecfb8990b22de9",
+    "validation": "98f69337917213ee380f06cc694600971287b6ec400f9d1b509ce2b5c8567a43"
+  },
+  "overlay_data_sha256": {
+    "train": "7fefb075b3167800087a47e0c5640df1c38be125315a5b37626b5ff0edabf1e1",
+    "validation": "2aecc6f10412d4307ee5abba1791c1b3fabf865faff82b9f0ee1674ee21da116"
+  },
+  "split_membership_preserved": true,
+  "locked_test_byte_identical": true,
+  "qa": {
+    "candidate_count": 152,
+    "moderation_skipped_count": 0,
+    "agreement_count": 108,
+    "disagreement_count": 44,
+    "pass_c_count": 44,
+    "quarantine_count": 5,
+    "correction_count": 36,
+    "exact_agreement": 0.7105263157894737,
+    "final_label_counts": {
+      "AD": 81,
+      "FRAUD": 3,
+      "HARASS": 7,
+      "NEEDS_REVIEW": 5,
+      "TRANSACTION": 56
+    },
+    "transition_counts": {
+      "AD->TRANSACTION": 15,
+      "AD->HARASS": 7,
+      "TRANSACTION->AD": 6,
+      "AD->NEEDS_REVIEW": 3,
+      "TRANSACTION->FRAUD": 2,
+      "TRANSACTION->NEEDS_REVIEW": 2,
+      "AD->FRAUD": 1
+    }
+  },
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

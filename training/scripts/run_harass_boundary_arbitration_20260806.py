@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run multi-pass AI arbitration for inconsistent template groups via XFYun."""
+"""Run multi-pass AI arbitration for boundary rows via XFYun with moderation-safe retry."""
 from __future__ import annotations
 
 import argparse
@@ -65,6 +65,144 @@ def build_pass_c_prompt(rows: list[dict], guide_text: str) -> str:
     )
 
 
+def call_chunk(
+    client: OpenAI,
+    model_name: str,
+    rows: list[dict],
+    guide_text: str,
+    prompt_builder,
+) -> str:
+    resp = client.chat.completions.create(
+        model=model_name,
+        messages=[{"role": "user", "content": prompt_builder(rows, guide_text)}],
+        timeout=300.0,
+    )
+    content = resp.choices[0].message.content
+    if not content:
+        raise ValueError("empty xfyun response")
+    return content
+
+
+def parse_chunk_content(content: str, expected_ids: set[str], results: dict) -> None:
+    for line in content.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if (
+            isinstance(row, dict)
+            and row.get("id") in expected_ids
+            and row.get("label") in ALLOWED
+            and row.get("notes")
+        ):
+            results[row["id"]] = row
+
+
+def attempt(
+    client: OpenAI,
+    model_name: str,
+    rows: list[dict],
+    guide_text: str,
+    prompt_builder,
+    expected_ids: set[str],
+    results: dict,
+    raw_chunks: list[str],
+    skipped: list[str],
+    pass_name: str,
+    size: int,
+) -> None:
+    if not rows:
+        return
+    if len(rows) > size:
+        mid = len(rows) // 2
+        attempt(
+            client,
+            model_name,
+            rows[:mid],
+            guide_text,
+            prompt_builder,
+            expected_ids,
+            results,
+            raw_chunks,
+            skipped,
+            pass_name,
+            size,
+        )
+        attempt(
+            client,
+            model_name,
+            rows[mid:],
+            guide_text,
+            prompt_builder,
+            expected_ids,
+            results,
+            raw_chunks,
+            skipped,
+            pass_name,
+            size,
+        )
+        return
+    try:
+        content = call_chunk(client, model_name, rows, guide_text, prompt_builder)
+        raw_chunks.append(content)
+        parse_chunk_content(content, expected_ids, results)
+    except Exception:
+        if len(rows) == 1:
+            skipped.append(rows[0]["id"])
+            print(f"{pass_name}: skipped 1 row after moderation/error retries")
+        else:
+            mid = len(rows) // 2
+            attempt(
+                client,
+                model_name,
+                rows[:mid],
+                guide_text,
+                prompt_builder,
+                expected_ids,
+                results,
+                raw_chunks,
+                skipped,
+                pass_name,
+                max(1, size // 2),
+            )
+            attempt(
+                client,
+                model_name,
+                rows[mid:],
+                guide_text,
+                prompt_builder,
+                expected_ids,
+                results,
+                raw_chunks,
+                skipped,
+                pass_name,
+                max(1, size // 2),
+            )
+
+
+def parse_raw_file(path: Path, expected_ids: set[str]) -> dict[str, dict]:
+    results: dict[str, dict] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if (
+            isinstance(row, dict)
+            and row.get("id") in expected_ids
+            and row.get("label") in ALLOWED
+            and row.get("notes")
+        ):
+            results[row["id"]] = row
+    return results
+
+
 def run_pass(
     client: OpenAI,
     model_name: str,
@@ -72,49 +210,53 @@ def run_pass(
     guide_text: str,
     pass_name: str,
     prompt_builder=build_prompt,
-) -> dict[str, dict]:
+) -> tuple[dict[str, dict], list[str]]:
+    raw_path = PACK / f"{pass_name}_raw.txt"
+    skipped_path = PACK / f"{pass_name}_skipped.json"
+    if raw_path.exists():
+        skipped = (
+            json.loads(skipped_path.read_text(encoding="utf-8"))
+            if skipped_path.exists()
+            else []
+        )
+        results = parse_raw_file(raw_path, {r["id"] for r in rows})
+        print(
+            f"{pass_name}: reused existing raw output "
+            f"({len(results)} parsed, {len(skipped)} skipped)"
+        )
+        return results, skipped
+
     results: dict[str, dict] = {}
-    raw_chunks = []
+    skipped: list[str] = []
+    raw_chunks: list[str] = []
     expected_ids = {r["id"] for r in rows}
     total_batches = (len(rows) + BATCH_SIZE - 1) // BATCH_SIZE
     for index in range(0, len(rows), BATCH_SIZE):
         batch = rows[index : index + BATCH_SIZE]
-        resp = client.chat.completions.create(
-            model=model_name,
-            messages=[{"role": "user", "content": prompt_builder(batch, guide_text)}],
-            timeout=300.0,
+        attempt(
+            client,
+            model_name,
+            batch,
+            guide_text,
+            prompt_builder,
+            expected_ids,
+            results,
+            raw_chunks,
+            skipped,
+            pass_name,
+            BATCH_SIZE,
         )
-        content = resp.choices[0].message.content
-        if not content:
-            raise ValueError(f"{pass_name} batch {index}: empty response")
-        raw_chunks.append(content)
-        for line in content.splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if (
-                isinstance(row, dict)
-                and row.get("id") in expected_ids
-                and row.get("label") in ALLOWED
-                and row.get("notes")
-            ):
-                results[row["id"]] = row
         print(
             f"{pass_name} batch {index // BATCH_SIZE + 1}/{total_batches}: "
-            f"{len(results)}/{len(rows)} parsed"
+            f"{len(results)}/{len(rows)} parsed, {len(skipped)} skipped"
         )
-    out_path = PACK / f"{pass_name}_raw.txt"
-    if out_path.exists():
-        raise SystemExit(f"refusing to overwrite {out_path.name}")
-    out_path.write_text("\n".join(raw_chunks) + "\n", encoding="utf-8")
-    if len(results) != len(rows):
-        missing = len(rows) - len(results)
-        raise SystemExit(f"{pass_name}: {missing} rows missing valid output")
-    return results
+    raw_path.write_text("\n".join(raw_chunks) + "\n", encoding="utf-8")
+    if skipped:
+        skipped_path.write_text(
+            json.dumps(sorted(skipped), ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    return results, skipped
 
 
 def main() -> int:
@@ -139,36 +281,38 @@ def main() -> int:
         max_retries=0,
     )
     print("Running pass A (xopglm52)...")
-    pass_a = run_pass(client, "xopglm52", pass_a_rows, guide_text, "pass_a")
-    print("Running pass B (xopdeepseekv4flash)...")
-    pass_b = run_pass(client, "xopdeepseekv4flash", pass_b_rows, guide_text, "pass_b")
-
-    disagreements = []
-    for r in pass_a_rows:
-        a_label = pass_a[r["id"]]["label"]
-        b_label = pass_b[r["id"]]["label"]
-        if a_label != b_label:
-            disagreements.append(
-                {
-                    "review_key": r["review_key"],
-                    "id": r["id"],
-                    "text": r["text"],
-                    "pass_a_label": a_label,
-                    "pass_b_label": b_label,
-                }
-            )
-    print(
-        f"A/B agreement: {len(pass_a_rows) - len(disagreements)}/{len(pass_a_rows)}, "
-        f"disagreements: {len(disagreements)}"
+    pass_a, a_skipped = run_pass(
+        client, "xopglm52", pass_a_rows, guide_text, "pass_a"
     )
+    print("Running pass B (xopdeepseekv4flash)...")
+    pass_b, b_skipped = run_pass(
+        client, "xopdeepseekv4flash", pass_b_rows, guide_text, "pass_b"
+    )
+
+    skipped_ids = sorted(set(a_skipped) | set(b_skipped))
+    valid_ids = [r["id"] for r in pass_a_rows if r["id"] not in set(skipped_ids)]
+    disagreements = [
+        r
+        for r in pass_a_rows
+        if r["id"] in pass_a
+        and r["id"] in pass_b
+        and pass_a[r["id"]]["label"] != pass_b[r["id"]]["label"]
+    ]
+    agreements = len(valid_ids) - len(disagreements)
+    print(
+        f"A/B agreement: {agreements}/{len(valid_ids)}, "
+        f"disagreements: {len(disagreements)}, skipped: {len(skipped_ids)}"
+    )
+
     pass_c: dict[str, dict] = {}
+    c_skipped: list[str] = []
     if disagreements:
         print("Running pass C (adjudication)...")
         (PACK / "pass_c_input.jsonl").write_text(
             "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in disagreements),
             encoding="utf-8",
         )
-        pass_c = run_pass(
+        pass_c, c_skipped = run_pass(
             client,
             "xopdeepseekv4flash",
             disagreements,
@@ -176,6 +320,13 @@ def main() -> int:
             "pass_c",
             prompt_builder=build_pass_c_prompt,
         )
+    skipped_ids = sorted(set(skipped_ids) | set(c_skipped))
+    if skipped_ids:
+        (PACK / "moderation_skipped.json").write_text(
+            json.dumps(skipped_ids, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
     REPORT_WIN.mkdir(parents=True, exist_ok=True)
     manifest = {
         "run_id": RUN,
@@ -185,17 +336,20 @@ def main() -> int:
         "formal_acceptance_allowed": False,
         "locked_test_read": False,
         "candidate_count": len(pass_a_rows),
+        "moderation_skipped_count": len(skipped_ids),
         "pass_a": {
             "model": "xopglm52",
             "input_sha256": sha256(PACK / "pass_a_blind.jsonl"),
             "output_sha256": sha256(PACK / "pass_a_raw.txt"),
             "parsed_count": len(pass_a),
+            "skipped_count": len(a_skipped),
         },
         "pass_b": {
             "model": "xopdeepseekv4flash",
             "input_sha256": sha256(PACK / "pass_b_blind.jsonl"),
             "output_sha256": sha256(PACK / "pass_b_raw.txt"),
             "parsed_count": len(pass_b),
+            "skipped_count": len(b_skipped),
         },
         "pass_c": {
             "model": "xopdeepseekv4flash",
@@ -206,9 +360,11 @@ def main() -> int:
                 sha256(PACK / "pass_c_raw.txt") if pass_c else None
             ),
             "parsed_count": len(pass_c),
+            "skipped_count": len(c_skipped),
         },
-        "agreement_count": len(pass_a_rows) - len(disagreements),
+        "agreement_count": agreements,
         "disagreement_count": len(disagreements),
+        "valid_count": len(valid_ids),
         "privacy": {
             "raw_sms_text_committed": False,
             "raw_sample_ids_committed": False,
@@ -224,9 +380,11 @@ def main() -> int:
             {
                 "run_id": RUN,
                 "candidate_count": len(pass_a_rows),
-                "agreement_count": manifest["agreement_count"],
-                "disagreement_count": manifest["disagreement_count"],
+                "valid_count": len(valid_ids),
+                "agreement_count": agreements,
+                "disagreement_count": len(disagreements),
                 "pass_c_parsed": len(pass_c),
+                "moderation_skipped_count": len(skipped_ids),
             },
             ensure_ascii=False,
         )
