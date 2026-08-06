@@ -28,6 +28,8 @@ cp -f "$WIN/training/scripts/reconcile_ai_dual_pass_20260806.py" \
   "$ROOT/training/scripts/reconcile_ai_dual_pass_20260806.py"
 cp -f "$WIN/training/scripts/finalize_ai_dual_pass_20260806.py" \
   "$ROOT/training/scripts/finalize_ai_dual_pass_20260806.py"
+cp -f "$WIN/training/scripts/run_ai_dual_pass_20260806.sh" \
+  "$ROOT/training/scripts/run_ai_dual_pass_20260806.sh"
 
 PY="$ROOT/.venv/bin/python"
 if [[ ! -x "$PY" ]]; then
