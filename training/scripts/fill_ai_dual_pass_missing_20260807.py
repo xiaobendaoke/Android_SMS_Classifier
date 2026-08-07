@@ -55,6 +55,9 @@ def main() -> int:
     chunks = [blind[i : i + BATCH_SIZE] for i in range(0, len(blind), BATCH_SIZE)]
     runners: list[Path] = []
     for index, chunk in enumerate(chunks, start=1):
+        slug = f"pass_a_batch_{index:03d}"
+        if status_ok(slug):
+            continue
         runners.append(prepare_batch("a", chunk, PASS_A_MODEL, PASS_A_ID, index))
     for index, chunk in enumerate(chunks, start=1):
         slug = f"pass_b_batch_{index:03d}"
