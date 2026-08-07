@@ -84,6 +84,17 @@ def main() -> int:
     if not (RUN_DIR / "blind_rows.jsonl").exists():
         raise SystemExit(f"missing {RUN_DIR / 'blind_rows.jsonl'}")
 
+    # Clear stale reconcile artifacts from any previous partial run.
+    for name in ("conflicts.jsonl", "user_review_table.csv", "qa_report.json", "run_pass_c.sh"):
+        path = RUN_DIR / name
+        if path.exists():
+            path.unlink()
+    parsed_dir = RUN_DIR / "parsed"
+    if parsed_dir.exists():
+        for path in parsed_dir.iterdir():
+            if path.is_file():
+                path.unlink()
+
     pass_a_runners: list[Path] = []
     for prompt in sorted((RUN_DIR / "prompts").glob("pass_a_batch_*.txt")):
         slug = prompt.stem
@@ -109,6 +120,7 @@ def main() -> int:
                 "#!/usr/bin/env bash",
                 "set -u -o pipefail",
                 'ROOT="${WSL_RUN_ROOT:-$HOME/projects/Android_SMS_Classifier}"',
+                f'cd "{RUN_DIR}"',
                 "failed=0",
                 "bash run_pass_a_repair.sh || failed=1",
                 "bash run_pass_b.sh || failed=1",
