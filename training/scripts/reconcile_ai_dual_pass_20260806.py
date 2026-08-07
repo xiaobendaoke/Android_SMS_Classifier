@@ -215,7 +215,7 @@ def adjudication_runner_text(
             "      sleep 60",
             '      local cur=$(wc -c < "$STDOUT" 2>/dev/null || echo 0)',
             '      if [[ "$cur" -ne "$prev" ]]; then prev="$cur"; idle=0; else idle=$((idle + 60)); fi',
-            f'      if [[ $idle -ge 900 ]]; then pkill -f "[o]pencode run -m {model}" 2>/dev/null || true; break; fi',
+            f'      if [[ $idle -ge 900 ]]; then pkill -f "[o]pencode run -m {PASS_C_MODEL}" 2>/dev/null || true; break; fi',
             "    done",
             "  }",
             "  monitor &",
@@ -278,7 +278,7 @@ def merge_ab(run_dir: Path) -> int:
                 reasons.append("LABEL_MISMATCH")
             if low_conf:
                 reasons.append("LOW_CONFIDENCE")
-            row = dict(by_id[key])
+            row = dict(by_id[key[1]])
             row.update(
                 {
                     "a_label": a["label"],
