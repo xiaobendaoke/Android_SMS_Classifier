@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RUN_DIR = ROOT / "data" / "interim" / "annotation" / "ai_dual_pass_20260806_r1"
-TIMEOUT = 3600
+TIMEOUT = 1800
 PASS_B_BATCH_SIZE = 12
 
 
@@ -107,6 +107,8 @@ def main() -> int:
     pass_b_runners: list[Path] = []
     for index, batch in enumerate(chunks(blind, PASS_B_BATCH_SIZE), start=1):
         slug = f"pass_b_batch_{index:03d}"
+        if status_ok(slug):
+            continue
         prompt = RUN_DIR / "prompts" / f"{slug}.txt"
         prompt.write_text(prompt_text(PASS_B_ID, batch, GUIDE_CONDENSED), encoding="utf-8")
         clear_artifacts(slug)
