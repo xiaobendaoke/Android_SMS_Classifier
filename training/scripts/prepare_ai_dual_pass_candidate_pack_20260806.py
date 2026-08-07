@@ -93,7 +93,14 @@ def prompt_text(pass_id: str, rows: list[dict], guide: str) -> str:
     )
 
 
-def runner_text(model: str, prompt: Path, stdout: Path, stderr: Path, status: Path) -> str:
+def runner_text(
+    model: str,
+    prompt: Path,
+    stdout: Path,
+    stderr: Path,
+    status: Path,
+    timeout: int = 3600,
+) -> str:
     quoted_prompt = str(prompt).replace("'", "'\\''")
     command = f'opencode run -m {model} "$(cat {quoted_prompt})"'
     return "\n".join(
@@ -110,7 +117,7 @@ def runner_text(model: str, prompt: Path, stdout: Path, stderr: Path, status: Pa
             "  attempt=$((attempt + 1))",
             "  started_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)",
             "  set +e",
-            f"  timeout --foreground --signal=TERM 1800 bash -ic '{command}' >\"$STDOUT\" 2>\"$STDERR\"",
+            f"  timeout --foreground --signal=TERM {timeout} bash -ic '{command}' >\"$STDOUT\" 2>\"$STDERR\"",
             "  rc=$?",
             "  set -e",
             '  if [[ $rc -eq 0 && -s "$STDOUT" ]]; then break; fi',

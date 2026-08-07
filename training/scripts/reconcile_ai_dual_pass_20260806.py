@@ -186,7 +186,13 @@ def adjudication_prompt(rows: Sequence[dict], guide: str) -> str:
     )
 
 
-def adjudication_runner_text(prompt: Path, stdout: Path, stderr: Path, status: Path) -> str:
+def adjudication_runner_text(
+    prompt: Path,
+    stdout: Path,
+    stderr: Path,
+    status: Path,
+    timeout: int = 3600,
+) -> str:
     quoted_prompt = str(prompt).replace("'", "'\\''")
     command = f'opencode run -m {PASS_C_MODEL} "$(cat {quoted_prompt})"'
     return "\n".join(
@@ -203,7 +209,7 @@ def adjudication_runner_text(prompt: Path, stdout: Path, stderr: Path, status: P
             "  attempt=$((attempt + 1))",
             "  started_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)",
             "  set +e",
-            f"  timeout --foreground --signal=TERM 1800 bash -ic '{command}' >\"$STDOUT\" 2>\"$STDERR\"",
+            f"  timeout --foreground --signal=TERM {timeout} bash -ic '{command}' >\"$STDOUT\" 2>\"$STDERR\"",
             "  rc=$?",
             "  set -e",
             '  if [[ $rc -eq 0 && -s "$STDOUT" ]]; then break; fi',
