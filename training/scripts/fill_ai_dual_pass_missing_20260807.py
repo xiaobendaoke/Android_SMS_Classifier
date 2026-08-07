@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
-"""Rerun Pass A/B batches whose freshly parsed valid count is below expected."""
+"""Rerun Pass A with 12-row batches; rerun only deficient Pass B batches; then re-merge."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-import reconcile_ai_dual_pass_20260806 as R
+from prepare_ai_dual_pass_candidate_pack_20260806 import (
+    GUIDE_CONDENSED,
+    PASS_A_ID,
+    PASS_A_MODEL,
+    PASS_B_ID,
+    PASS_B_MODEL,
+    prompt_text,
+    runner_text,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 RUN_DIR = ROOT / "data" / "interim" / "annotation" / "ai_dual_pass_20260806_r1"
 TIMEOUT = 1800
-PASS_A_BATCH = 25
-PASS_B_BATCH = 12
+BATCH_SIZE = 12
+
+
+def status_ok(slug: str) -> bool:
+    status = RUN_DIR / "status" / f"{slug}.txt"
+    return status.exists() and "exit_code=0" in status.read_text(encoding="utf-8", errors="replace")
 
 
 def clear_artifacts(slug: str) -> None:
@@ -21,9 +33,11 @@ def clear_artifacts(slug: str) -> None:
             path.unlink()
 
 
-def write_runner(slug: str, prompt: Path, model: str) -> Path:
-    from prepare_ai_dual_pass_candidate_pack_20260806 import runner_text
-
+def prepare_batch(pass_key: str, rows: list[dict], model: str, annotator_id: str, index: int) -> Path:
+    slug = f"pass_{pass_key}_batch_{index:03d}"
+    prompt = RUN_DIR / "prompts" / f"{slug}.txt"
+    prompt.write_text(prompt_text(annotator_id, rows, GUIDE_CONDENSED), encoding="utf-8")
+    clear_artifacts(slug)
     stdout = RUN_DIR / "stdout" / f"{slug}.txt"
     stderr = RUN_DIR / "stderr" / f"{slug}.txt"
     status = RUN_DIR / "status" / f"{slug}.txt"
@@ -37,34 +51,16 @@ def write_runner(slug: str, prompt: Path, model: str) -> Path:
 
 
 def main() -> int:
-    from prepare_ai_dual_pass_candidate_pack_20260806 import PASS_A_MODEL, PASS_B_MODEL
-
-    blind = R.load_jsonl(RUN_DIR / "blind_rows.jsonl")
-    expected = {(r["review_id"], r["id"]): r for r in blind}
-
-    chunks_a = [blind[i : i + PASS_A_BATCH] for i in range(0, len(blind), PASS_A_BATCH)]
-    chunks_b = [blind[i : i + PASS_B_BATCH] for i in range(0, len(blind), PASS_B_BATCH)]
-    expected_count = {}
-    for index, chunk in enumerate(chunks_a, start=1):
-        expected_count[f"pass_a_batch_{index:03d}"] = len(chunk)
-    for index, chunk in enumerate(chunks_b, start=1):
-        expected_count[f"pass_b_batch_{index:03d}"] = len(chunk)
-
-    _, stats_a = R.parse_pass(RUN_DIR, "a", expected)
-    _, stats_b = R.parse_pass(RUN_DIR, "b", expected)
-    stats = {**stats_a, **stats_b}
-
-    runners = []
-    plan = []
-    for slug, count in sorted(expected_count.items()):
-        valid = stats.get(slug, {}).get("valid", 0)
-        if valid >= count:
+    blind = [json.loads(line) for line in (RUN_DIR / "blind_rows.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    chunks = [blind[i : i + BATCH_SIZE] for i in range(0, len(blind), BATCH_SIZE)]
+    runners: list[Path] = []
+    for index, chunk in enumerate(chunks, start=1):
+        runners.append(prepare_batch("a", chunk, PASS_A_MODEL, PASS_A_ID, index))
+    for index, chunk in enumerate(chunks, start=1):
+        slug = f"pass_b_batch_{index:03d}"
+        if status_ok(slug):
             continue
-        model = PASS_A_MODEL if slug.startswith("pass_a_") else PASS_B_MODEL
-        prompt = RUN_DIR / "prompts" / f"{slug}.txt"
-        clear_artifacts(slug)
-        runners.append(write_runner(slug, prompt, model))
-        plan.append({"slug": slug, "expected": count, "valid": valid})
+        runners.append(prepare_batch("b", chunk, PASS_B_MODEL, PASS_B_ID, index))
 
     (RUN_DIR / "run_fill.sh").write_text(
         "\n".join(
@@ -100,7 +96,7 @@ def main() -> int:
         encoding="utf-8",
     )
     (RUN_DIR / "run_fill_all.sh").chmod(0o700)
-    print(json.dumps({"fill_batches": len(plan), "plan": plan}, ensure_ascii=False))
+    print(json.dumps({"batches": len(runners), "batch_size": BATCH_SIZE}, ensure_ascii=False))
     return 0
 
 
