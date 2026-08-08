@@ -1,46 +1,12 @@
 {
   "samples": [
-    {
-      "id": "1",
-      "sender": "95588",
-      "body": "【工商银行】您尾号1234账户于07月14日收入人民币1,200.00元。",
-      "expectedCategory": "TRANSACTION",
-      "expectedAction": "INBOX"
-    },
-    {
-      "id": "2",
-      "sender": "10690000",
-      "body": "Your verification code is 847291. Valid for 5 minutes.",
-      "expectedCategory": "TRANSACTION",
-      "expectedAction": "INBOX"
-    },
-    {
-      "id": "3",
-      "sender": "10086",
-      "body": "尊敬的客户，限时流量包5折抢购，回复TD退订。【中国移动】",
-      "expectedCategory": "AD",
-      "expectedAction": "INBOX"
-    },
-    {
-      "id": "4",
-      "sender": null,
-      "body": "恭喜您中奖100万！请点击 http://fake-prize.example 领取奖金。",
-      "expectedCategory": "FRAUD",
-      "expectedAction": "SUSPECT"
-    },
-    {
-      "id": "5",
-      "sender": "+8613800138000",
-      "body": "आपका खाता निलंबित है। तुरंत सत्यापित करें।",
-      "expectedCategory": "FRAUD",
-      "expectedAction": "REVIEW"
-    },
-    {
-      "id": "6",
-      "sender": "12306",
-      "body": "G1234次列车将于明日08:30从北京南出发，请提前到站。",
-      "expectedCategory": "TRANSACTION",
-      "expectedAction": "INBOX"
-    }
+    {"id": "1", "sender": "95588", "body": "【工商银行】您尾号1234账户于07月14日收入人民币1,200.00元。", "expectedCategory": "TRANSACTION", "expectedAction": "INBOX"},
+    {"id": "2", "sender": "10657557", "body": "【某某银行】您的验证码是847291，5分钟内有效，请勿泄露给他人。", "expectedCategory": "TRANSACTION", "expectedAction": "INBOX"},
+    {"id": "3", "sender": "10086", "body": "尊敬的客户，限时流量包5折抢购，回复TD退订。【中国移动】", "expectedCategory": "AD", "expectedAction": "INBOX"},
+    {"id": "4", "sender": "10690001", "body": "恭喜您中奖100万！请点击 http://fake-prize.example 领取奖金。", "expectedCategory": "FRAUD", "expectedAction": "SUSPECT"},
+    {"id": "5", "sender": "10698001", "body": "最后通知：您名下借款已逾期，请今日内处理，否则将影响征信并联系紧急联系人。", "expectedCategory": "HARASS", "expectedAction": "REVIEW"},
+    {"id": "6", "sender": "12306", "body": "G1234次列车将于明日08:30从北京南出发，请提前到站。", "expectedCategory": "TRANSACTION", "expectedAction": "INBOX"},
+    {"id": "7", "sender": "10086", "body": "本月流量剩余2.3GB，话费余额18.5元。【中国移动】", "expectedCategory": "TRANSACTION", "expectedAction": "INBOX"},
+    {"id": "8", "sender": "95199", "body": "【菜鸟驿站】您的包裹已到达，取件码8-6-2，请及时取件。", "expectedCategory": "TRANSACTION", "expectedAction": "INBOX"}
   ]
 }
