@@ -1,0 +1,78 @@
+{
+  "run_id": "stage2_xfyun_overlay_protection_loss_0p70_20260803_r2",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only shared transaction-protection loss can reduce transaction misses without using threshold routing.",
+  "only_changed_variable": "transaction_protection.loss_weight=0.70 (baseline=0.35; transaction class multiplier remains 1.4)",
+  "config_sha256": "bb2c02f959f1dcbb01913a59de9d771f0eff813768c92d3060fcaba192e0af12",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "1a56679ccb2bbf13ff724efb35c5763e87908ad71d05ff911beb1d7f8175337d"
+  },
+  "returncode": 0,
+  "val_metrics": {
+    "accuracy": 0.8656195462478184,
+    "macro_f1": 0.8388441809218073,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8787185354691075,
+        "recall": 0.920863309352518,
+        "f1": 0.8992974238875878
+      },
+      "AD": {
+        "precision": 0.8878504672897196,
+        "recall": 0.8558558558558559,
+        "f1": 0.8715596330275229
+      },
+      "HARASS": {
+        "precision": 0.7017543859649122,
+        "recall": 0.7692307692307693,
+        "f1": 0.7339449541284404
+      },
+      "FRAUD": {
+        "precision": 0.8862275449101796,
+        "recall": 0.8176795580110497,
+        "f1": 0.8505747126436781
+      }
+    },
+    "confusion_matrix": [
+      [
+        384,
+        29,
+        2,
+        2
+      ],
+      [
+        44,
+        380,
+        9,
+        11
+      ],
+      [
+        5,
+        13,
+        80,
+        6
+      ],
+      [
+        4,
+        6,
+        23,
+        148
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 10
+}

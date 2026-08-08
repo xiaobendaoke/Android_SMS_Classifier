@@ -1,0 +1,79 @@
+{
+  "run_id": "stage2_xfyun_overlay_bytecnn_hard_20260803_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Provisional xfyun label corrections improve validation metrics over the stage-0 baseline without changing architecture or thresholds.",
+  "only_changed_variable": "data=train/validation provisional overlay",
+  "config_sha256": "5dcdb90bfb8dbb33212c977fb2ba71340c35d8e53fbe1a65edaa413b12c1b9f5",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "1a56679ccb2bbf13ff724efb35c5763e87908ad71d05ff911beb1d7f8175337d"
+  },
+  "returncode": 0,
+  "val_metrics": {
+    "accuracy": 0.8481675392670157,
+    "macro_f1": 0.8215627515373967,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8095238095238095,
+        "recall": 0.9376498800959233,
+        "f1": 0.8688888888888889
+      },
+      "AD": {
+        "precision": 0.9166666666666666,
+        "recall": 0.8175675675675675,
+        "f1": 0.8642857142857143
+      },
+      "HARASS": {
+        "precision": 0.74,
+        "recall": 0.7115384615384616,
+        "f1": 0.7254901960784313
+      },
+      "FRAUD": {
+        "precision": 0.8622754491017964,
+        "recall": 0.7955801104972375,
+        "f1": 0.8275862068965518
+      }
+    },
+    "confusion_matrix": [
+      [
+        391,
+        20,
+        4,
+        2
+      ],
+      [
+        61,
+        363,
+        9,
+        11
+      ],
+      [
+        9,
+        11,
+        74,
+        10
+      ],
+      [
+        22,
+        2,
+        13,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 5,
+  "model_sha256": "0e823ad6a34390e76cc2536688c796cc2ebd791d1422a4eb9e426653bc97efdf"
+}

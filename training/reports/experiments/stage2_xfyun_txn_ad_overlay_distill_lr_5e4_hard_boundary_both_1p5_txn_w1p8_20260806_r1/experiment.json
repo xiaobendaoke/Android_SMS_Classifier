@@ -1,0 +1,109 @@
+{
+  "run_id": "stage2_xfyun_txn_ad_overlay_distill_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "hypothesis": "Round 6 (TXN weight 1.8, hard-only) is the best candidate so far. Restoring distillation with teacher logits freshly generated on the same overlay should transfer bert-base-chinese boundary knowledge and raise the remaining TRANSACTION recall without changing student hyperparameters. This is the first real distillation run on the arbitrated data.",
+  "only_changed_variable": "training_mode hard_only -> distillation (teacher logits on the same overlay; all round6 student settings unchanged)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.8,
+    "training.hard_boundary_multiplier": 1.5,
+    "training.hard_boundary_labels": [
+      "TRANSACTION",
+      "AD",
+      "FRAUD"
+    ]
+  },
+  "config_sha256": "9a42ee90fa663983c994b2705bc48174a049871dcead7b6242df9cb87c3e89bf",
+  "data_sha256": {
+    "train": "7fefb075b3167800087a47e0c5640df1c38be125315a5b37626b5ff0edabf1e1",
+    "validation": "2aecc6f10412d4307ee5abba1791c1b3fabf865faff82b9f0ee1674ee21da116"
+  },
+  "teacher_logits_manifest": "artifacts/experiments/stage2_xfyun_txn_ad_overlay_teacher_20260806_r1/teacher_logits_manifest.json",
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.9008771929824562,
+    "macro_f1": 0.8815064444464704,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9228971962616822,
+        "recall": 0.947242206235012,
+        "f1": 0.9349112426035503
+      },
+      "AD": {
+        "precision": 0.927570093457944,
+        "recall": 0.8687089715536105,
+        "f1": 0.8971751412429377
+      },
+      "HARASS": {
+        "precision": 0.7542372881355932,
+        "recall": 0.8725490196078431,
+        "f1": 0.8090909090909091
+      },
+      "FRAUD": {
+        "precision": 0.8795180722891566,
+        "recall": 0.8902439024390244,
+        "f1": 0.8848484848484849
+      }
+    },
+    "confusion_matrix": [
+      [
+        395,
+        19,
+        2,
+        1
+      ],
+      [
+        29,
+        397,
+        14,
+        17
+      ],
+      [
+        1,
+        10,
+        89,
+        2
+      ],
+      [
+        3,
+        2,
+        13,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1140
+  },
+  "best_epoch": 11,
+  "used_distillation": true,
+  "model_sha256": "ab78ba0b12178550d80277886d6a20883e8dc31882fa5a1fcfd828fd089f9de7",
+  "hard_boundary_count": 5124,
+  "hard_boundary_label_counts": {
+    "TRANSACTION": 2808,
+    "AD": 1497,
+    "FRAUD": 819
+  },
+  "hard_boundary_labels": [
+    "TRANSACTION",
+    "AD",
+    "FRAUD"
+  ],
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.947242 < 0.985000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

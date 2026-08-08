@@ -1,0 +1,170 @@
+{
+  "run_id": "ai_annotation_20260802_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "transport": "direct_openai_sdk_xfyun_v2",
+  "counts": {
+    "total": 1080,
+    "quarantine": 101,
+    "resolved_by_c": 228
+  },
+  "label_distribution": {
+    "FRAUD": 66,
+    "HARASS": 78,
+    "AD": 108,
+    "NEEDS_REVIEW": 101,
+    "TRANSACTION": 727
+  },
+  "pass_c_validation": {
+    "expected": 228,
+    "valid": 228,
+    "missing": 0,
+    "duplicates": 0,
+    "unknown": 0,
+    "malformed_lines": 2,
+    "pass": true
+  },
+  "template_consistency_audit": {
+    "inconsistent_review_groups": 28,
+    "groups": {
+      "fp-15715e9bad34fbc042c9": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-1d9d6ee47857d66ccad4": [
+        "AD",
+        "NEEDS_REVIEW"
+      ],
+      "fp-20a16def00818048872b": [
+        "AD",
+        "NEEDS_REVIEW"
+      ],
+      "fp-34c1ae9c3cf7c2ed895e": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "fp-59026ab77984c0161332": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "fp-6e8e7f8db7c848d3b0c8": [
+        "AD",
+        "NEEDS_REVIEW",
+        "TRANSACTION"
+      ],
+      "fp-75f02af6698b815bb7ed": [
+        "AD",
+        "NEEDS_REVIEW"
+      ],
+      "fp-77eeb340274bbc7d89d8": [
+        "NEEDS_REVIEW",
+        "TRANSACTION"
+      ],
+      "fp-7d0b859e0428ea9021d5": [
+        "AD",
+        "TRANSACTION"
+      ],
+      "fp-9754dde20610c597e05c": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "fp-9a6b45fd0942261bb036": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-9ec043bda9e76fd61eed": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-a9d522a5b58a1df8b134": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-aa4e3eee08f13cb35bc0": [
+        "HARASS",
+        "NEEDS_REVIEW"
+      ],
+      "fp-aaeec7649798f6f009a0": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-af0d3070fecc9c665c8a": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "fp-bb52cb2856995669efc5": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-db8ef6b71d4c21862989": [
+        "AD",
+        "HARASS"
+      ],
+      "fp-e5ef7eb624697cb99f0b": [
+        "NEEDS_REVIEW",
+        "TRANSACTION"
+      ],
+      "fp-e651b401f88b5424b10a": [
+        "AD",
+        "NEEDS_REVIEW",
+        "TRANSACTION"
+      ],
+      "fp-e8681895ef218ca931ee": [
+        "NEEDS_REVIEW",
+        "TRANSACTION"
+      ],
+      "fp-ff6334f53d6d68d73ddb": [
+        "AD",
+        "NEEDS_REVIEW"
+      ],
+      "hard-1dec9db5af34d2cad79b": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "hard-6767d2d2132d91977a69": [
+        "AD",
+        "FRAUD"
+      ],
+      "hard-713195e0cafe5be45aec": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "hard-90e427dc984ef46706af": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "hard-b00752b9812b9ff2faf5": [
+        "FRAUD",
+        "HARASS"
+      ],
+      "hard-e0c9fa66fa38d9a0627a": [
+        "FRAUD",
+        "HARASS"
+      ]
+    }
+  },
+  "inputs": {
+    "label_conflicts_a": {
+      "path": "data/interim/annotation/label_conflicts_v2/blind_annotator_A.csv",
+      "sha256": "0d483a2c77e056d8902f0d51e99e32840a80591e3790073fdc2272fcad74deb4",
+      "count": 480
+    },
+    "label_conflicts_b": {
+      "path": "data/interim/annotation/label_conflicts_v2/blind_annotator_B.csv",
+      "sha256": "54fa16622ba41a4e5d2f94095a3c6c9b4fffd1657b2f3767174179989375c19b",
+      "count": 480
+    },
+    "transaction_specialist_a": {
+      "path": "data/interim/annotation/transaction_specialist_v2/specialist_annotator_A.csv",
+      "sha256": "480a855fc162d83c513ecb38d5b6a2d339e9fc0d8735995f65b7c27ed5d59fcc",
+      "count": 600
+    },
+    "transaction_specialist_b": {
+      "path": "data/interim/annotation/transaction_specialist_v2/specialist_annotator_B.csv",
+      "sha256": "405dfa044cf3cf0e24a0f830ef53da67abccd91db8af40d97d9ac14c84fb08ca",
+      "count": 600
+    }
+  }
+}

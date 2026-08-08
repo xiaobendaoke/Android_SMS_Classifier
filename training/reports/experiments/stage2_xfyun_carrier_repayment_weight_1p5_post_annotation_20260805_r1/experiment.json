@@ -1,0 +1,88 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_weight_1p5_post_annotation_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only the pre-defined carrier/repayment transaction sample weight from 1.0 to 1.5 reduces the eight remaining carrier-to-AD misses without inference-time overrides.",
+  "only_changed_variable": "training.carrier_repayment_positive_multiplier=1.5",
+  "config_sha256": "66a6abe86e524c557c2fcfcd59417b6eb763c42c02a17da0067d470ce302ccd1",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "authoritative_final_evaluation": "post_training_keras_metrics.json",
+  "training_manifest_metrics_note": "val_metrics below are training-process metadata; final gate assessment uses the independent saved-checkpoint evaluation file above.",
+  "val_metrics": {
+    "accuracy": 0.8568935427574171,
+    "macro_f1": 0.8254318874446183,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8256302521008403,
+        "recall": 0.9656019656019657,
+        "f1": 0.8901472253680635
+      },
+      "AD": {
+        "precision": 0.9292929292929293,
+        "recall": 0.8141592920353983,
+        "f1": 0.8679245283018867
+      },
+      "HARASS": {
+        "precision": 0.7373737373737373,
+        "recall": 0.6886792452830188,
+        "f1": 0.7121951219512194
+      },
+      "FRAUD": {
+        "precision": 0.8457142857142858,
+        "recall": 0.8176795580110497,
+        "f1": 0.8314606741573034
+      }
+    },
+    "confusion_matrix": [
+      [
+        393,
+        12,
+        1,
+        1
+      ],
+      [
+        58,
+        368,
+        9,
+        17
+      ],
+      [
+        9,
+        15,
+        73,
+        9
+      ],
+      [
+        16,
+        1,
+        16,
+        148
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 5,
+  "model_sha256": null,
+  "gate_errors": [
+    "transaction_recall=0.965602 < 0.985000",
+    "transaction_precision=0.825630 < 0.920000",
+    "macro_f1=0.825432 < 0.860000",
+    "harass_f1=0.712195 < 0.800000"
+  ]
+}

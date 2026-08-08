@@ -1,0 +1,73 @@
+version: 1.0.0
+seed: 42
+architecture: byte_textcnn_dual_head
+input:
+  max_bytes: 512
+  head_bytes: 384
+  tail_bytes: 128
+  pad_id: 0
+  byte_offset: 1
+  vocab_size: 257
+model:
+  embedding_dim: 32
+  conv_filters: 80
+  conv_kernels:
+  - 3
+  - 6
+  - 9
+  dense_units: 96
+  dropout: 0.2
+  num_classes: 4
+  transaction_protection_head: true
+  transaction_hidden_units: 24
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 20
+  min_epochs: 6
+  early_stopping_patience: 5
+  enforce_model_validation_targets: false
+  class_weight_strategy: balanced
+  class_weight_clip:
+  - 0.75
+  - 1.5
+  class_weight_multipliers:
+    TRANSACTION: 1.4
+    AD: 1.0
+    HARASS: 1.0
+    FRAUD: 1.0
+  target_transaction_recall: 0.985
+  min_transaction_precision: 0.92
+  min_macro_f1: 0.86
+  min_harass_f1: 0.8
+  min_fraud_recall: 0.8
+  gradient_clip_norm: 1.0
+distillation:
+  temperature: 2.0
+  alpha: 0.55
+  beta: 0.45
+  primary_focal_gamma: 0.5
+  transaction_hard_positive_multiplier: 1.5
+  transaction_hard_negative_multiplier: 3.0
+  boundary_weight_max: 3.0
+  teacher_confidence_floor: 0.25
+  teacher_confidence_power: 1.0
+  teacher_manifest: data/manifests/teacher_logits_manifest.json
+transaction_protection:
+  enabled: true
+  output_index: 4
+  threshold: 0.5
+  loss_weight: 0.35
+  positive_weight: 1.1
+  focal_gamma: 1.5
+  hard_label_weight: 0.85
+  teacher_temperature: 1.0
+  checkpoint_scope: primary
+data:
+  train_manifest: data/processed_xfyun_ai_annotation_20260802_r1/train.jsonl
+  val_manifest: data/processed_xfyun_error_relabel_20260803_r1/validation.jsonl
+  accepted_languages:
+  - zh
+output:
+  checkpoint_dir: artifacts/experiments/stage2_xfyun_overlay_gradient_clip_1_20260804_r1
+  keras_path: artifacts/experiments/stage2_xfyun_overlay_gradient_clip_1_20260804_r1/sms_bytecnn_fp32.keras

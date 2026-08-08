@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Reducing only the student learning rate to 5e-4 improved the candidate, but the independent zh validation evaluation still missed the gate thresholds.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.931204, transaction_precision=0.900238, macro_f1=0.859470, harass_f1=0.792271, and fraud_recall=0.806630. Transaction recall, transaction precision, macro F1, and HARASS F1 remain below the required gates.",
+  "next_hypothesis": "Try one other stable single-variable optimization adjustment. Do not move this candidate into human review.",
+  "gate_errors": [
+    "transaction_recall=0.931204 < 0.985000",
+    "transaction_precision=0.900238 < 0.920000",
+    "macro_f1=0.859470 < 0.860000",
+    "harass_f1=0.792271 < 0.800000"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "path": "artifacts/experiments/stage2_xfyun_overlay_teacher_txn_weight_1p4_20260804_r1/teacher_logits_train.npz",
+  "count": 9097,
+  "labels": [
+    "TRANSACTION",
+    "AD",
+    "HARASS",
+    "FRAUD"
+  ],
+  "sha256": "d1fc6b9d8cc56be688bc28ad037a2c5f1527ff35f4ed41088ae8b2729252fd90"
+}

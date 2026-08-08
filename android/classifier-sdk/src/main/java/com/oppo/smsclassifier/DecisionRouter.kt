@@ -17,17 +17,36 @@ class DecisionRouter(
         modelProbs: FloatArray?,
         modelAvailable: Boolean,
     ): ClassificationResult {
-        val conflict = signals.hasOtpProtect && signals.hasHighFraudRisk
-        val hasModelOutput = modelAvailable && modelProbs != null && modelProbs.isNotEmpty()
+        val hasModelOutput = modelAvailable &&
+            modelProbs != null &&
+            modelProbs.size >= metadata.labels.size
+        val primaryProbs = if (hasModelOutput) {
+            modelProbs!!.copyOfRange(0, metadata.labels.size)
+        } else {
+            null
+        }
+        val modelTransactionProtect = if (hasModelOutput) {
+            metadata.transactionProtectionIndex
+                ?.takeIf { it in modelProbs!!.indices }
+                ?.let { modelProbs!![it] >= metadata.transactionProtectionThreshold }
+                ?: false
+        } else {
+            false
+        }
+        val hasTransactionProtect = signals.hasOtpProtect ||
+            signals.hasPickupProtect ||
+            signals.hasTransactionProtect ||
+            modelTransactionProtect
+        val conflict = hasTransactionProtect && signals.hasHighFraudRisk
 
         val rawModelCategory = if (hasModelOutput) {
-            argmaxCategory(modelProbs!!)
+            argmaxCategory(primaryProbs!!)
         } else {
             signals.categoryHint ?: SmsCategory.AD
         }
 
         val modelConfidence = if (hasModelOutput) {
-            modelProbs!!.maxOrNull() ?: 0f
+            primaryProbs!!.maxOrNull() ?: 0f
         } else {
             0f
         }
@@ -55,6 +74,7 @@ class DecisionRouter(
             hasModelOutput = hasModelOutput,
             lowConfidence = lowConfidence,
             modelConfidence = modelConfidence,
+            hasTransactionProtect = hasTransactionProtect,
         )
 
         val reasonCode = resolveReasonCode(
@@ -63,10 +83,11 @@ class DecisionRouter(
             lowConfidence = lowConfidence,
             noModelLowConfidence = noModelLowConfidence,
             hasModelOutput = hasModelOutput,
+            modelTransactionProtect = modelTransactionProtect,
         )
 
         val probabilities = if (hasModelOutput) {
-            modelProbs!!.copyOf()
+            primaryProbs!!.copyOf()
         } else {
             uniformProbs()
         }
@@ -101,18 +122,13 @@ class DecisionRouter(
         modelCategory: SmsCategory?,
         signals: RuleSignals,
     ): SmsCategory {
-        if (conflict) {
-            // OTP must not blindly force TRANSACTION when fraud is present.
-            return when {
-                signals.hasHighFraudRisk -> SmsCategory.FRAUD
-                modelCategory != null -> modelCategory
-                signals.categoryHint != null -> signals.categoryHint
-                else -> SmsCategory.TRANSACTION
-            }
-        }
+        // Protection signals control REVIEW/INBOX only. With a model output,
+        // category metrics and UI labels must remain the primary-head argmax.
         if (hasModelOutput && modelCategory != null) {
             return modelCategory
         }
+        // Without a model, fraud conflict remains the safest category fallback.
+        if (conflict && signals.hasHighFraudRisk) return SmsCategory.FRAUD
         // Without model: only use explicit rule hints — never invent TRANSACTION.
         return signals.categoryHint ?: SmsCategory.AD
     }
@@ -124,13 +140,15 @@ class DecisionRouter(
         hasModelOutput: Boolean,
         lowConfidence: Boolean,
         modelConfidence: Float,
+        hasTransactionProtect: Boolean,
     ): SmsAction {
         if (conflict) return SmsAction.REVIEW
-        if (signals.hasOtpProtect) return SmsAction.INBOX
+        if (hasTransactionProtect) return SmsAction.INBOX
 
         if (!hasModelOutput) {
             return when {
                 signals.hasHighFraudRisk -> SmsAction.SUSPECT
+                signals.categoryHint == null -> SmsAction.REVIEW
                 signals.hasPickupProtect -> SmsAction.INBOX
                 category == SmsCategory.TRANSACTION &&
                     (signals.categoryHint == SmsCategory.TRANSACTION) -> SmsAction.INBOX
@@ -158,8 +176,11 @@ class DecisionRouter(
         lowConfidence: Boolean,
         noModelLowConfidence: Boolean,
         hasModelOutput: Boolean,
+        modelTransactionProtect: Boolean,
     ): String = when {
-        conflict -> "OTP_FRAUD_CONFLICT"
+        conflict && signals.hasOtpProtect -> "OTP_FRAUD_CONFLICT"
+        conflict -> "TRANSACTION_FRAUD_CONFLICT"
+        modelTransactionProtect -> "MODEL_TRANSACTION_PROTECT"
         noModelLowConfidence -> "NO_MODEL_LOW_CONFIDENCE"
         lowConfidence -> "MODEL_LOW_CONFIDENCE"
         signals.reasonCode != "NO_RULE_MATCH" -> signals.reasonCode

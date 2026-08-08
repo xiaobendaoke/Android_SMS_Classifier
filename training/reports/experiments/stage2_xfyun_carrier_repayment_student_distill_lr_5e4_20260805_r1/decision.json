@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_student_distill_lr_5e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Reducing only the distillation student's learning rate to 5e-4 did not pass the independent zh validation gates.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.933661, transaction_precision=0.900474, macro_f1=0.857964, harass_f1=0.775701, and fraud_recall=0.812155. Transaction recall, transaction precision, macro F1, and HARASS F1 remain below the required gates.",
+  "next_hypothesis": "Do not move this candidate into human review. Continue with a different stable single-variable optimization focused on TRANSACTION recall and HARASS F1 without sacrificing precision gates.",
+  "gate_errors": [
+    "transaction_recall=0.933661 < 0.985000",
+    "transaction_precision=0.900474 < 0.920000",
+    "macro_f1=0.857964 < 0.860000",
+    "harass_f1=0.775701 < 0.800000"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "run_id": "ai_dual_pass_retrain_20260806_r1",
+  "status": "REJECTED_VALIDATION_GATES",
+  "annotation_status": "USER_REVIEWED_AI_DUAL_PASS",
+  "claim_allowed": false,
+  "human_verified": true,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "independent_evaluation": "post_training_keras_metrics.json",
+  "metrics": {
+    "transaction_recall": 0.8840579710144928,
+    "transaction_precision": 0.9104477611940298,
+    "macro_f1": 0.8530457863828336,
+    "harass_f1": 0.7830188679245284,
+    "fraud_recall": 0.8784530386740331
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "failed_gates": [
+    "transaction_recall",
+    "transaction_precision",
+    "macro_f1",
+    "harass_f1"
+  ],
+  "passed_gates": [
+    "fraud_recall"
+  ],
+  "data_version": "processed_ai_dual_pass_20260806_r1",
+  "decision_reason": "User-reviewed AI dual-pass retrain on frozen split did not meet all five validation gates; per goal, proceed with error clustering and expanded arbitration coverage instead of hyperparameter brute force.",
+  "model_sha256": null,
+  "config_note": "identical to round-6 candidate except data manifests; see training/artifacts/experiments/ai_dual_pass_retrain_20260806_r1/config.yaml",
+  "generated_at_utc": "2026-08-08T04:19:41.245970+00:00"
+}

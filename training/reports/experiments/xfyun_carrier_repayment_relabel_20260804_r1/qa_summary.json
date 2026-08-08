@@ -1,0 +1,81 @@
+{
+  "run_id": "xfyun_carrier_repayment_relabel_20260804_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "blind_input": {
+    "pass_a": {
+      "count": 15,
+      "unique_ids": true,
+      "unique_review_keys": true,
+      "exact_blind_fields": true,
+      "required_fields_nonempty": true,
+      "sha256": "38d8e6d4790cdcf63a9469b5f36e3dbd5e81353e05e93f24f67cbd63aff57357"
+    },
+    "pass_b": {
+      "count": 15,
+      "unique_ids": true,
+      "unique_review_keys": true,
+      "exact_blind_fields": true,
+      "required_fields_nonempty": true,
+      "sha256": "62ff06d837d89ac24765721f32f6e51fe2527c7240f07bc544d277563a53bc6e"
+    },
+    "same_id_membership": true
+  },
+  "pass_a": {
+    "valid": 15,
+    "missing": 0,
+    "malformed": 0,
+    "duplicate_ids": 0,
+    "format_wrapper_lines_ignored": 0,
+    "label_counts": {
+      "TRANSACTION": 12,
+      "HARASS": 1,
+      "AD": 2
+    },
+    "raw_output_sha256": "bf64389ed470e13c1d1ebe1d0670c19e29561e156cd439f325415dc70833a47e"
+  },
+  "pass_b": {
+    "valid": 15,
+    "missing": 0,
+    "malformed": 0,
+    "duplicate_ids": 0,
+    "format_wrapper_lines_ignored": 0,
+    "label_counts": {
+      "AD": 5,
+      "HARASS": 2,
+      "TRANSACTION": 8
+    },
+    "raw_output_sha256": "91512c4edb8e0c8aae1920d00361ef46a87133a2eb39bf9552f00b97b7eb4473"
+  },
+  "pass_c": {
+    "valid": 4,
+    "missing": 0,
+    "malformed": 0,
+    "duplicate_ids": 0,
+    "format_wrapper_lines_ignored": 2,
+    "label_counts": {
+      "AD": 3,
+      "HARASS": 1
+    },
+    "raw_output_sha256": "f482203d4272fb0cbfc9c1fc62a56b1239fa3badfbee742f37e0e7140739a45b"
+  },
+  "independence": {
+    "common_valid": 15,
+    "identical_notes_count": 0,
+    "all_notes_identical": false
+  },
+  "agreement": {
+    "conflict_count": 4,
+    "conflict_ids": [
+      "zh-n2w-02095",
+      "zh-n2w-03338",
+      "zh-n2w-05026",
+      "zh_02354"
+    ],
+    "exact_agreement": 0.7333333333333333
+  },
+  "next_action": "finalize_local_overlay"
+}

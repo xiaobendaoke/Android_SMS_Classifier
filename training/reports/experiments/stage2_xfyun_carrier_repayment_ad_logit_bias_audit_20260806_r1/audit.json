@@ -1,0 +1,338 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_ad_logit_bias_audit_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "hypothesis": "A single fixed AD logit bias might recover TRANSACTION precision by reducing AD-to-TRANSACTION false positives, but must still pass all five zh validation gates on one candidate.",
+  "search_space": {
+    "bias_label": "AD",
+    "bias_min": -2.0,
+    "bias_max": 2.0,
+    "bias_step": 0.05,
+    "single_variable_only": true
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "evaluated_count": 1146,
+  "models": [
+    {
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "9d5883d381f02399af99580b093fa3848a1577e53d3263385479d0600e215ad5",
+      "baseline": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 0.0,
+        "transaction_recall": 0.9557739557739557,
+        "transaction_precision": 0.8922018348623854,
+        "macro_f1": 0.854934611571312,
+        "harass_f1": 0.7644444444444445,
+        "fraud_recall": 0.7845303867403315,
+        "confusion_matrix": [
+          [
+            389,
+            15,
+            1,
+            2
+          ],
+          [
+            30,
+            399,
+            11,
+            12
+          ],
+          [
+            2,
+            11,
+            86,
+            7
+          ],
+          [
+            15,
+            3,
+            21,
+            142
+          ]
+        ],
+        "min_gate_margin": -0.03555555555555556
+      },
+      "sweep_count": 81,
+      "feasible_count": 0,
+      "first_feasible": null,
+      "best_min_gate_margin": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": -0.05,
+        "transaction_recall": 0.9582309582309583,
+        "transaction_precision": 0.8924485125858124,
+        "macro_f1": 0.8561771516766461,
+        "harass_f1": 0.7665198237885462,
+        "fraud_recall": 0.7900552486187845,
+        "confusion_matrix": [
+          [
+            390,
+            14,
+            1,
+            2
+          ],
+          [
+            30,
+            397,
+            12,
+            13
+          ],
+          [
+            2,
+            10,
+            87,
+            7
+          ],
+          [
+            15,
+            2,
+            21,
+            143
+          ]
+        ],
+        "min_gate_margin": -0.03348017621145383
+      },
+      "best_with_transaction_precision_guard": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 1.1,
+        "transaction_recall": 0.9041769041769042,
+        "transaction_precision": 0.9246231155778895,
+        "macro_f1": 0.8343654213638054,
+        "harass_f1": 0.7428571428571428,
+        "fraud_recall": 0.7237569060773481,
+        "confusion_matrix": [
+          [
+            368,
+            37,
+            1,
+            1
+          ],
+          [
+            18,
+            419,
+            6,
+            9
+          ],
+          [
+            1,
+            20,
+            78,
+            7
+          ],
+          [
+            11,
+            20,
+            19,
+            131
+          ]
+        ],
+        "min_gate_margin": -0.08082309582309577
+      },
+      "best_with_transaction_recall_guard": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 1.75,
+        "transaction_recall": 0.855036855036855,
+        "transaction_precision": 0.9720670391061452,
+        "macro_f1": 0.8014523839115558,
+        "harass_f1": 0.7005076142131978,
+        "fraud_recall": 0.6187845303867403,
+        "confusion_matrix": [
+          [
+            348,
+            58,
+            1,
+            0
+          ],
+          [
+            7,
+            438,
+            3,
+            4
+          ],
+          [
+            1,
+            32,
+            69,
+            4
+          ],
+          [
+            2,
+            49,
+            18,
+            112
+          ]
+        ],
+        "min_gate_margin": -0.18121546961325974
+      }
+    },
+    {
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_1p0_20260805_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "5abe58e9cd7325ecf01ce15dcbf2e5ac7cd2be27aa829a325bd47c46de0cfa09",
+      "baseline": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 0.0,
+        "transaction_recall": 0.9484029484029484,
+        "transaction_precision": 0.8935185185185185,
+        "macro_f1": 0.8544802012978414,
+        "harass_f1": 0.7644444444444445,
+        "fraud_recall": 0.8011049723756906,
+        "confusion_matrix": [
+          [
+            386,
+            18,
+            2,
+            1
+          ],
+          [
+            31,
+            396,
+            12,
+            13
+          ],
+          [
+            1,
+            11,
+            86,
+            8
+          ],
+          [
+            14,
+            3,
+            19,
+            145
+          ]
+        ],
+        "min_gate_margin": -0.03659705159705162
+      },
+      "sweep_count": 81,
+      "feasible_count": 0,
+      "first_feasible": null,
+      "best_min_gate_margin": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": -0.15,
+        "transaction_recall": 0.9533169533169533,
+        "transaction_precision": 0.8858447488584474,
+        "macro_f1": 0.8550172883198934,
+        "harass_f1": 0.7719298245614035,
+        "fraud_recall": 0.8011049723756906,
+        "confusion_matrix": [
+          [
+            388,
+            16,
+            2,
+            1
+          ],
+          [
+            34,
+            391,
+            13,
+            14
+          ],
+          [
+            1,
+            9,
+            88,
+            8
+          ],
+          [
+            15,
+            2,
+            19,
+            145
+          ]
+        ],
+        "min_gate_margin": -0.0341552511415526
+      },
+      "best_with_transaction_precision_guard": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 0.8,
+        "transaction_recall": 0.9164619164619164,
+        "transaction_precision": 0.927860696517413,
+        "macro_f1": 0.8502967922357206,
+        "harass_f1": 0.7655502392344498,
+        "fraud_recall": 0.7679558011049724,
+        "confusion_matrix": [
+          [
+            373,
+            32,
+            1,
+            1
+          ],
+          [
+            21,
+            417,
+            4,
+            10
+          ],
+          [
+            1,
+            18,
+            80,
+            7
+          ],
+          [
+            7,
+            17,
+            18,
+            139
+          ]
+        ],
+        "min_gate_margin": -0.06853808353808355
+      },
+      "best_with_transaction_recall_guard": {
+        "bias_name": "ad_logit_bias",
+        "bias_value": 1.8,
+        "transaction_recall": 0.8402948402948403,
+        "transaction_precision": 0.9799426934097422,
+        "macro_f1": 0.8022644775434795,
+        "harass_f1": 0.6974358974358974,
+        "fraud_recall": 0.6353591160220995,
+        "confusion_matrix": [
+          [
+            342,
+            64,
+            1,
+            0
+          ],
+          [
+            5,
+            440,
+            3,
+            4
+          ],
+          [
+            0,
+            35,
+            68,
+            3
+          ],
+          [
+            2,
+            47,
+            17,
+            115
+          ]
+        ],
+        "min_gate_margin": -0.16464088397790055
+      }
+    }
+  ],
+  "feasible_models": [],
+  "decision": "rejected",
+  "decision_reason": "No audited AD logit-bias point produced one candidate that satisfied all five zh validation gates."
+}

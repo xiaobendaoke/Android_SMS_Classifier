@@ -1,0 +1,41 @@
+{
+  "run_id": "harass_boundary_arbitration_20260806_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "candidate_selection": "inconsistent_template_groups_only",
+  "source_data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "overlay_data_sha256": {
+    "train": "9aba63d1a18f767875571bced66245fd9cca10fd0aeba893afea6c8d77797795",
+    "validation": "56e980f025944a357ac265f6ecc0fdafd1d5f6647eb4072023f75df6e31cd216"
+  },
+  "split_membership_preserved": true,
+  "locked_test_byte_identical": true,
+  "qa": {
+    "candidate_count": 22,
+    "agreement_count": 0,
+    "disagreement_count": 22,
+    "pass_c_count": 22,
+    "quarantine_count": 0,
+    "correction_count": 11,
+    "exact_agreement": 0.0,
+    "final_label_counts": {
+      "AD": 6,
+      "HARASS": 16
+    },
+    "transition_counts": {
+      "FRAUD->HARASS": 6,
+      "FRAUD->AD": 5
+    }
+  },
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

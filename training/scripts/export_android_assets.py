@@ -48,6 +48,12 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         help="Optional model_metadata.json source.",
     )
+    parser.add_argument(
+        "--quantization",
+        choices=("auto", "INT8", "HYBRID"),
+        default="auto",
+        help="Metadata quantization mode; use INT8 for verified full_integer_int8 models.",
+    )
     parser.add_argument("--seed", type=int, default=SEED, help="Random seed.")
     return parser
 
@@ -56,18 +62,39 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def build_metadata(model_path: Optional[Path]) -> dict:
+def build_metadata(
+    model_path: Optional[Path],
+    quantization_override: str = "auto",
+) -> dict:
     cfg = {}
     if STUDENT_CONFIG.exists():
         with STUDENT_CONFIG.open(encoding="utf-8") as fh:
             cfg = yaml.safe_load(fh) or {}
     input_cfg = cfg.get("input", {})
+    model_cfg = cfg.get("model", {})
+    protection_cfg = cfg.get("transaction_protection", {})
+    protection_enabled = bool(
+        model_cfg.get("transaction_protection_head", False)
+        and protection_cfg.get("enabled", False)
+    )
+    label_count = 4
+    rule_versions = []
+    for rule_path in (RULES_SRC / "rules").glob("*_rules.json"):
+        try:
+            rule_versions.append(
+                str(json.loads(rule_path.read_text(encoding="utf-8")).get("version", "1.0.0"))
+            )
+        except (json.JSONDecodeError, OSError):
+            continue
+    rules_version = max(rule_versions, default="1.0.0")
     model_sha = "REPLACE_DURING_BUILD"
     if model_path and model_path.exists():
         model_sha = sha256_bytes(model_path.read_bytes())
     quant_report = ROOT / "reports" / "metrics" / "quantize.json"
     quantization = "INT8"
-    if quant_report.exists():
+    if quantization_override != "auto":
+        quantization = quantization_override
+    elif quant_report.exists():
         try:
             q = json.loads(quant_report.read_text(encoding="utf-8"))
             if q.get("quantization") == "hybrid_fallback":
@@ -83,8 +110,17 @@ def build_metadata(model_path: Optional[Path]) -> dict:
         "padId": int(input_cfg.get("pad_id", 0)),
         "byteOffset": int(input_cfg.get("byte_offset", 1)),
         "labels": ["TRANSACTION", "AD", "HARASS", "FRAUD"],
+        "modelOutputSize": label_count + (1 if protection_enabled else 0),
+        "transactionProtectionIndex": (
+            int(protection_cfg.get("output_index", label_count))
+            if protection_enabled
+            else -1
+        ),
+        "transactionProtectionThreshold": float(
+            protection_cfg.get("threshold", 0.50)
+        ),
         "normalizationVersion": "1.0.0",
-        "rulesVersion": "1.0.0",
+        "rulesVersion": rules_version,
         "quantization": quantization,
         "modelSha256": model_sha,
         "thresholds": {
@@ -110,7 +146,9 @@ def copy_tree_if_exists(src: Path, dest: Path) -> int:
     count = 0
     if src.is_dir():
         for item in src.rglob("*"):
-            if item.is_file():
+            # Runtime bundles contain JSON resources only; do not overwrite
+            # Android-local README files from the training tree.
+            if item.is_file() and item.suffix.lower() == ".json":
                 rel = item.relative_to(src)
                 out = dest / rel
                 copy_file_safe(item, out)
@@ -148,7 +186,10 @@ def main(argv: Optional[List[str]] = None) -> int:
         copy_file_safe(args.metadata, meta_dest)
         copied += 1
     else:
-        meta = build_metadata(args.model if args.model.exists() else None)
+        meta = build_metadata(
+            args.model if args.model.exists() else None,
+            args.quantization,
+        )
         meta_dest.write_text(json.dumps(meta, indent=2), encoding="utf-8")
         copied += 1
         print(f"Wrote generated metadata to {meta_dest}")

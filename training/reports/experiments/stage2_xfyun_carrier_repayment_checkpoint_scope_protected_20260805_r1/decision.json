@@ -1,0 +1,21 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_checkpoint_scope_protected_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Using only transaction_protection.checkpoint_scope=protected selected a different restored checkpoint, but the independent zh validation evaluation missed all five gates.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.931204, transaction_precision=0.898104, macro_f1=0.845679, harass_f1=0.744939, and fraud_recall=0.784530. The run also encountered NaN after epoch 11 and restored the epoch-7 checkpoint, so it is not eligible for human review.",
+  "next_hypothesis": "Protected checkpoint selection did not improve the deployable primary classifier; continue with a stable single-variable learning-rate interpolation or another non-threshold training signal.",
+  "gate_errors": [
+    "transaction_recall=0.931204 < 0.985000",
+    "transaction_precision=0.898104 < 0.920000",
+    "macro_f1=0.845679 < 0.860000",
+    "harass_f1=0.744939 < 0.800000",
+    "fraud_recall=0.784530 < 0.800000"
+  ]
+}

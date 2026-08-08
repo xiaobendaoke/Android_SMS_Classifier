@@ -1,0 +1,14 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_conv_filters_128_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Increasing only model.conv_filters from 80 to 128 reduced the authoritative Chinese category metrics. Transaction recall=0.933661, precision=0.885781, macro F1=0.831179, HARASS F1=0.717131, and FRAUD recall=0.795580.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "The Chinese confusion matrix shows 27 true transactions routed to non-transaction classes, and the higher capacity did not improve the required transaction-versus-AD boundary.",
+  "next_hypothesis": "Keep the deployable 80-channel backbone and test one loss or receptive-field variable rather than increasing capacity further."
+}

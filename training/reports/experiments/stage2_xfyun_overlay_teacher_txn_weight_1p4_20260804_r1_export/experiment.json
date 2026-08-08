@@ -1,0 +1,348 @@
+{
+  "run_id": "stage2_xfyun_overlay_teacher_txn_weight_1p4_20260804_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only teacher transaction class weight improves transaction recall without unacceptable boundary regressions.",
+  "only_changed_variable": "training.class_weight_multipliers.TRANSACTION=1.4",
+  "config_sha256": "210c3248be296e241f2a6f403dd7c2cbd86737fc8b57eb2738bde4b26bb7387a",
+  "returncode": 0,
+  "teacher_manifest": {
+    "seed": 42,
+    "model_name": "bert-base-chinese",
+    "pretrained_source": "/home/colab/hf_cache/bert-base-chinese",
+    "backend": "pytorch",
+    "device": "cuda",
+    "local_files_only": true,
+    "checkpoint_dir": "artifacts/experiments/stage2_xfyun_overlay_teacher_txn_weight_1p4_20260804_r1",
+    "checkpoint_sha256": "44672d9335903e76f6cfdab2cb3c7d5ba883f6905652c63b62fddd6f52ac157b",
+    "train_count": 9097,
+    "val_count": 1146,
+    "history": {
+      "loss": [
+        0.20133163517824684,
+        0.09343137466956358,
+        0.07021485906047154,
+        0.047708339558516416
+      ],
+      "val_accuracy": [
+        0.8778359511343804,
+        0.868237347294939,
+        0.8673647469458988,
+        0.8848167539267016
+      ],
+      "val_metrics": [
+        {
+          "accuracy": 0.8778359511343804,
+          "macro_f1": 0.8477541135015766,
+          "per_class": {
+            "TRANSACTION": {
+              "precision": 0.8901601830663616,
+              "recall": 0.9396135265700483,
+              "f1": 0.9142185663924793
+            },
+            "AD": {
+              "precision": 0.9216152019002375,
+              "recall": 0.8680089485458613,
+              "f1": 0.8940092165898617
+            },
+            "HARASS": {
+              "precision": 0.7321428571428571,
+              "recall": 0.7884615384615384,
+              "f1": 0.7592592592592592
+            },
+            "FRAUD": {
+              "precision": 0.8352272727272727,
+              "recall": 0.8121546961325967,
+              "f1": 0.823529411764706
+            }
+          },
+          "confusion_matrix": [
+            [
+              389,
+              23,
+              1,
+              1
+            ],
+            [
+              28,
+              388,
+              12,
+              19
+            ],
+            [
+              4,
+              9,
+              82,
+              9
+            ],
+            [
+              16,
+              1,
+              17,
+              147
+            ]
+          ],
+          "label_order": [
+            "TRANSACTION",
+            "AD",
+            "HARASS",
+            "FRAUD"
+          ],
+          "count": 1146
+        },
+        {
+          "accuracy": 0.868237347294939,
+          "macro_f1": 0.8327836444903328,
+          "per_class": {
+            "TRANSACTION": {
+              "precision": 0.9432989690721649,
+              "recall": 0.8840579710144928,
+              "f1": 0.9127182044887779
+            },
+            "AD": {
+              "precision": 0.8963963963963963,
+              "recall": 0.8903803131991052,
+              "f1": 0.89337822671156
+            },
+            "HARASS": {
+              "precision": 0.6258992805755396,
+              "recall": 0.8365384615384616,
+              "f1": 0.7160493827160493
+            },
+            "FRAUD": {
+              "precision": 0.8228571428571428,
+              "recall": 0.7955801104972375,
+              "f1": 0.8089887640449439
+            }
+          },
+          "confusion_matrix": [
+            [
+              366,
+              37,
+              6,
+              5
+            ],
+            [
+              16,
+              398,
+              15,
+              18
+            ],
+            [
+              1,
+              8,
+              87,
+              8
+            ],
+            [
+              5,
+              1,
+              31,
+              144
+            ]
+          ],
+          "label_order": [
+            "TRANSACTION",
+            "AD",
+            "HARASS",
+            "FRAUD"
+          ],
+          "count": 1146
+        },
+        {
+          "accuracy": 0.8673647469458988,
+          "macro_f1": 0.8333869455007363,
+          "per_class": {
+            "TRANSACTION": {
+              "precision": 0.9431524547803618,
+              "recall": 0.8816425120772947,
+              "f1": 0.9113607990012486
+            },
+            "AD": {
+              "precision": 0.9069767441860465,
+              "recall": 0.87248322147651,
+              "f1": 0.8893956670467502
+            },
+            "HARASS": {
+              "precision": 0.6083916083916084,
+              "recall": 0.8365384615384616,
+              "f1": 0.7044534412955465
+            },
+            "FRAUD": {
+              "precision": 0.8172043010752689,
+              "recall": 0.8397790055248618,
+              "f1": 0.8283378746594006
+            }
+          },
+          "confusion_matrix": [
+            [
+              365,
+              29,
+              10,
+              10
+            ],
+            [
+              19,
+              390,
+              24,
+              14
+            ],
+            [
+              0,
+              7,
+              87,
+              10
+            ],
+            [
+              3,
+              4,
+              22,
+              152
+            ]
+          ],
+          "label_order": [
+            "TRANSACTION",
+            "AD",
+            "HARASS",
+            "FRAUD"
+          ],
+          "count": 1146
+        },
+        {
+          "accuracy": 0.8848167539267016,
+          "macro_f1": 0.8501229400035126,
+          "per_class": {
+            "TRANSACTION": {
+              "precision": 0.9514066496163683,
+              "recall": 0.8985507246376812,
+              "f1": 0.9242236024844721
+            },
+            "AD": {
+              "precision": 0.90625,
+              "recall": 0.9082774049217002,
+              "f1": 0.9072625698324022
+            },
+            "HARASS": {
+              "precision": 0.7181818181818181,
+              "recall": 0.7596153846153846,
+              "f1": 0.7383177570093458
+            },
+            "FRAUD": {
+              "precision": 0.7969543147208121,
+              "recall": 0.8674033149171271,
+              "f1": 0.8306878306878307
+            }
+          },
+          "confusion_matrix": [
+            [
+              372,
+              29,
+              4,
+              9
+            ],
+            [
+              15,
+              406,
+              10,
+              16
+            ],
+            [
+              0,
+              10,
+              79,
+              15
+            ],
+            [
+              4,
+              3,
+              17,
+              157
+            ]
+          ],
+          "label_order": [
+            "TRANSACTION",
+            "AD",
+            "HARASS",
+            "FRAUD"
+          ],
+          "count": 1146
+        }
+      ]
+    },
+    "val_metrics": {
+      "accuracy": 0.8778359511343804,
+      "macro_f1": 0.8477541135015766,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.8901601830663616,
+          "recall": 0.9396135265700483,
+          "f1": 0.9142185663924793
+        },
+        "AD": {
+          "precision": 0.9216152019002375,
+          "recall": 0.8680089485458613,
+          "f1": 0.8940092165898617
+        },
+        "HARASS": {
+          "precision": 0.7321428571428571,
+          "recall": 0.7884615384615384,
+          "f1": 0.7592592592592592
+        },
+        "FRAUD": {
+          "precision": 0.8352272727272727,
+          "recall": 0.8121546961325967,
+          "f1": 0.823529411764706
+        }
+      },
+      "confusion_matrix": [
+        [
+          389,
+          23,
+          1,
+          1
+        ],
+        [
+          28,
+          388,
+          12,
+          19
+        ],
+        [
+          4,
+          9,
+          82,
+          9
+        ],
+        [
+          16,
+          1,
+          17,
+          147
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 1146
+    },
+    "best_epoch": 1,
+    "class_weights": {
+      "TRANSACTION": 0.6981522440910339,
+      "AD": 0.6981522440910339,
+      "HARASS": 1.3963044881820679,
+      "FRAUD": 1.2073912620544434
+    },
+    "focal_gamma": 1.0,
+    "normalization": "normalize_text",
+    "license_note": "bert-base-multilingual-cased is third-party; record hash and license.",
+    "third_party": true
+  }
+}

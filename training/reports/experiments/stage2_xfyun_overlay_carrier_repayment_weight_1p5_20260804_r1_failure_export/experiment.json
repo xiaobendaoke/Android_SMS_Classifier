@@ -1,0 +1,14 @@
+{
+  "run_id": "stage2_xfyun_overlay_carrier_repayment_weight_1p5_20260804_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY_EXECUTION_FAILED",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "only_changed_variable": "training.carrier_repayment_positive_multiplier=1.5",
+  "returncode": 1,
+  "failure_reason": "The opt-in NumPy pattern weight multiplier was float64 and could not multiply the float32 TensorFlow loss tensor.",
+  "next_decision": "Cast the derived sample weights to float32 and repeat under a new run_id."
+}

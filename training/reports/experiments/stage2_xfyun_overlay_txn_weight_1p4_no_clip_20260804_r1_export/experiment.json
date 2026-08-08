@@ -1,0 +1,74 @@
+{
+  "run_id": "stage2_xfyun_overlay_txn_weight_1p4_no_clip_20260804_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Removing only class-weight clipping lets the approved transaction multiplier influence the transaction-versus-advertising boundary.",
+  "only_changed_variable": "training.class_weight_clip=null",
+  "config_sha256": "af243dd9b8a60172a3dabd84ff2561dbb71ac9f78d56c099654dc1cb6f86324b",
+  "returncode": 0,
+  "val_metrics": {
+    "accuracy": 0.8315881326352531,
+    "macro_f1": 0.8019654747612438,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8392070484581498,
+        "recall": 0.9202898550724637,
+        "f1": 0.8778801843317973
+      },
+      "AD": {
+        "precision": 0.9220430107526881,
+        "recall": 0.767337807606264,
+        "f1": 0.8376068376068377
+      },
+      "HARASS": {
+        "precision": 0.6148148148148148,
+        "recall": 0.7980769230769231,
+        "f1": 0.694560669456067
+      },
+      "FRAUD": {
+        "precision": 0.7891891891891892,
+        "recall": 0.8066298342541437,
+        "f1": 0.7978142076502733
+      }
+    },
+    "confusion_matrix": [
+      [
+        381,
+        22,
+        7,
+        4
+      ],
+      [
+        51,
+        343,
+        26,
+        27
+      ],
+      [
+        8,
+        5,
+        83,
+        8
+      ],
+      [
+        14,
+        2,
+        19,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 3
+}

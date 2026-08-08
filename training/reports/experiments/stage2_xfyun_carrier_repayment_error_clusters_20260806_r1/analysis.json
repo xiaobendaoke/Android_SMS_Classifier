@@ -1,0 +1,7100 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_error_clusters_20260806_r1",
+  "status": "TEXT_FREE_VALIDATION_ERROR_ANALYSIS",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "language": "zh",
+  "analysis_privacy": {
+    "raw_sms_text_written": false,
+    "raw_sample_ids_written": false,
+    "raw_ai_outputs_written": false,
+    "group_hashes_are_truncated_sha256": true
+  },
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "evaluated_count": 1146,
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "models": [
+    {
+      "name": "lr_5e4",
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "3e85a244f0a45d6a5195c46dcbb3e413bb121e8660569c065e7816b9d7c39514",
+      "model_input_bytes": 512,
+      "metrics": {
+        "transaction_recall": 0.9312039312039312,
+        "transaction_precision": 0.9002375296912114,
+        "macro_f1": 0.8594695525044496,
+        "harass_f1": 0.7922705314009663,
+        "fraud_recall": 0.8066298342541437
+      },
+      "failed_gates": [
+        "transaction_recall=0.931204 < 0.985000",
+        "transaction_precision=0.900238 < 0.920000",
+        "macro_f1=0.859470 < 0.860000",
+        "harass_f1=0.792271 < 0.800000"
+      ],
+      "confusion_matrix": [
+        [
+          379,
+          27,
+          0,
+          1
+        ],
+        [
+          35,
+          403,
+          4,
+          10
+        ],
+        [
+          2,
+          15,
+          82,
+          7
+        ],
+        [
+          5,
+          15,
+          15,
+          146
+        ]
+      ],
+      "error_pair_counts": [
+        {
+          "key": "AD->TRANSACTION",
+          "count": 35
+        },
+        {
+          "key": "TRANSACTION->AD",
+          "count": 27
+        },
+        {
+          "key": "FRAUD->AD",
+          "count": 15
+        },
+        {
+          "key": "FRAUD->HARASS",
+          "count": 15
+        },
+        {
+          "key": "HARASS->AD",
+          "count": 15
+        },
+        {
+          "key": "AD->FRAUD",
+          "count": 10
+        },
+        {
+          "key": "HARASS->FRAUD",
+          "count": 7
+        },
+        {
+          "key": "FRAUD->TRANSACTION",
+          "count": 5
+        },
+        {
+          "key": "AD->HARASS",
+          "count": 4
+        },
+        {
+          "key": "HARASS->TRANSACTION",
+          "count": 2
+        },
+        {
+          "key": "TRANSACTION->FRAUD",
+          "count": 1
+        }
+      ],
+      "error_clusters": {
+        "TRANSACTION->AD": {
+          "count": 27,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 27
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 15
+            },
+            {
+              "key": "chars_000_064",
+              "count": 5
+            },
+            {
+              "key": "chars_129_256",
+              "count": 4
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 2
+            },
+            {
+              "key": "chars_ge_257",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 13
+            },
+            {
+              "key": "CARRIER",
+              "count": 12
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            },
+            {
+              "key": "OTP",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 19
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 8
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c5a25a46a3693995",
+              "count": 1
+            },
+            {
+              "key": "2f35e585cf2da4a5",
+              "count": 1
+            },
+            {
+              "key": "2ff041df461cd692",
+              "count": 1
+            },
+            {
+              "key": "8ce2388e1f459d73",
+              "count": 1
+            },
+            {
+              "key": "8cd040d4cdf5745d",
+              "count": 1
+            },
+            {
+              "key": "ec48c55439d30df0",
+              "count": 1
+            },
+            {
+              "key": "467d82d1d1f1617d",
+              "count": 1
+            },
+            {
+              "key": "8d8bf593c0c87931",
+              "count": 1
+            },
+            {
+              "key": "7c162b7b84183e63",
+              "count": 1
+            },
+            {
+              "key": "26f0ecd53643b831",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "6559a535f0f7f29c",
+              "count": 1
+            },
+            {
+              "key": "084da9ad9b004d63",
+              "count": 1
+            },
+            {
+              "key": "2a054c5ac7e2a48c",
+              "count": 1
+            },
+            {
+              "key": "c1c918e50d499478",
+              "count": 1
+            },
+            {
+              "key": "85d99e1418382452",
+              "count": 1
+            },
+            {
+              "key": "d736582ab62626c8",
+              "count": 1
+            },
+            {
+              "key": "d34d9e7bbdd177ba",
+              "count": 1
+            },
+            {
+              "key": "f5f9567054278333",
+              "count": 1
+            },
+            {
+              "key": "9648949538d85607",
+              "count": 1
+            },
+            {
+              "key": "fa59012082f79fd9",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 27
+          },
+          "is_adversarial": {
+            "false": 27
+          },
+          "char_length_quantiles": [
+            40.0,
+            72.5,
+            103.0,
+            129.0,
+            222.80000000000027,
+            406.0
+          ],
+          "utf8_byte_length_quantiles": [
+            78.0,
+            182.0,
+            253.0,
+            288.0,
+            403.6000000000002,
+            1114.0
+          ]
+        },
+        "TRANSACTION->FRAUD": {
+          "count": 1,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 1
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "a198126160fa6776",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f332763ee10a50c3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 1
+          },
+          "is_adversarial": {
+            "false": 1
+          },
+          "char_length_quantiles": [
+            27.0,
+            27.0,
+            27.0,
+            27.0,
+            27.0,
+            27.0
+          ],
+          "utf8_byte_length_quantiles": [
+            77.0,
+            77.0,
+            77.0,
+            77.0,
+            77.0,
+            77.0
+          ]
+        },
+        "AD->TRANSACTION": {
+          "count": 35,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 35
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 21
+            },
+            {
+              "key": "chars_000_064",
+              "count": 9
+            },
+            {
+              "key": "chars_129_256",
+              "count": 4
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 13
+            },
+            {
+              "key": "CARRIER",
+              "count": 10
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 5
+            },
+            {
+              "key": "ORDER",
+              "count": 4
+            },
+            {
+              "key": "BANK",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 18
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 17
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "31aff23431e00b15",
+              "count": 1
+            },
+            {
+              "key": "d4af6c775b5a6eb4",
+              "count": 1
+            },
+            {
+              "key": "da0bfae4693dc6bd",
+              "count": 1
+            },
+            {
+              "key": "bfc39a5661de5cad",
+              "count": 1
+            },
+            {
+              "key": "28ef116a20b8ea95",
+              "count": 1
+            },
+            {
+              "key": "0d8adcfb028ef0b0",
+              "count": 1
+            },
+            {
+              "key": "5e608d04387aa1a5",
+              "count": 1
+            },
+            {
+              "key": "a6d38aa35988d613",
+              "count": 1
+            },
+            {
+              "key": "962d7ed28125c155",
+              "count": 1
+            },
+            {
+              "key": "b2356374577b39a2",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "0df14978bcc6d1a9",
+              "count": 3
+            },
+            {
+              "key": "c7679c61f9c5c22b",
+              "count": 1
+            },
+            {
+              "key": "0fb4d4df51008f9d",
+              "count": 1
+            },
+            {
+              "key": "1608e50b93767ae4",
+              "count": 1
+            },
+            {
+              "key": "6eedd2f9aacf70a5",
+              "count": 1
+            },
+            {
+              "key": "b4813288332dc56f",
+              "count": 1
+            },
+            {
+              "key": "13682507ac4caec5",
+              "count": 1
+            },
+            {
+              "key": "f56ca9745867323c",
+              "count": 1
+            },
+            {
+              "key": "449adbbf1319a744",
+              "count": 1
+            },
+            {
+              "key": "e5ef50fcd3579133",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 35
+          },
+          "is_adversarial": {
+            "false": 35
+          },
+          "char_length_quantiles": [
+            16.0,
+            64.0,
+            78.0,
+            102.5,
+            132.0,
+            262.0
+          ],
+          "utf8_byte_length_quantiles": [
+            38.0,
+            147.0,
+            186.0,
+            253.0,
+            306.0,
+            694.0
+          ]
+        },
+        "AD->HARASS": {
+          "count": 4,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 4
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 3
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            },
+            {
+              "key": "BANK",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c2a56c6221b035f5",
+              "count": 1
+            },
+            {
+              "key": "86706183ea72684e",
+              "count": 1
+            },
+            {
+              "key": "34c550192282208c",
+              "count": 1
+            },
+            {
+              "key": "54d0cdddec5f76e6",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7474b5350ddee89f",
+              "count": 1
+            },
+            {
+              "key": "be011f390d1fce19",
+              "count": 1
+            },
+            {
+              "key": "e88c0515786bc8c0",
+              "count": 1
+            },
+            {
+              "key": "d1e0e293ff90d72e",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 4
+          },
+          "is_adversarial": {
+            "false": 4
+          },
+          "char_length_quantiles": [
+            64.0,
+            65.5,
+            66.5,
+            67.5,
+            68.4,
+            69.0
+          ],
+          "utf8_byte_length_quantiles": [
+            134.0,
+            135.5,
+            158.5,
+            184.5,
+            190.8,
+            195.0
+          ]
+        },
+        "AD->FRAUD": {
+          "count": 10,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 10
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 6
+            },
+            {
+              "key": "chars_000_064",
+              "count": 4
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 7
+            },
+            {
+              "key": "LOGISTICS",
+              "count": 1
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 10
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "5aba90aea431f9e6",
+              "count": 1
+            },
+            {
+              "key": "22cd07dc94576499",
+              "count": 1
+            },
+            {
+              "key": "690004621499b132",
+              "count": 1
+            },
+            {
+              "key": "d4a4c532dc7313c9",
+              "count": 1
+            },
+            {
+              "key": "ff793655b3ec84b0",
+              "count": 1
+            },
+            {
+              "key": "df9d342e3feb2854",
+              "count": 1
+            },
+            {
+              "key": "fe191879dd727a27",
+              "count": 1
+            },
+            {
+              "key": "632855c5874ece5e",
+              "count": 1
+            },
+            {
+              "key": "a1699ade0bbc5675",
+              "count": 1
+            },
+            {
+              "key": "d048ba2d9bc3ba93",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "181128b2a69f811f",
+              "count": 1
+            },
+            {
+              "key": "2a7de6e8cd7d1b2c",
+              "count": 1
+            },
+            {
+              "key": "6fccb89feee89d36",
+              "count": 1
+            },
+            {
+              "key": "718c84d53708272c",
+              "count": 1
+            },
+            {
+              "key": "ccd72df885963170",
+              "count": 1
+            },
+            {
+              "key": "0ddf40fc3417cc78",
+              "count": 1
+            },
+            {
+              "key": "12328087cb76de59",
+              "count": 1
+            },
+            {
+              "key": "b78120561c34fa0f",
+              "count": 1
+            },
+            {
+              "key": "fd28b645f278fb30",
+              "count": 1
+            },
+            {
+              "key": "089160f183301dee",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 10
+          },
+          "is_adversarial": {
+            "false": 10
+          },
+          "char_length_quantiles": [
+            61.0,
+            64.0,
+            65.0,
+            67.5,
+            70.0,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            140.0,
+            165.75,
+            175.0,
+            184.5,
+            186.6,
+            192.0
+          ]
+        },
+        "HARASS->TRANSACTION": {
+          "count": 2,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 2
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 2
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "826042070bf9f829",
+              "count": 1
+            },
+            {
+              "key": "7a69558d28d1224e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "81eaa532b7204862",
+              "count": 1
+            },
+            {
+              "key": "f87b82db757217e3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 2
+          },
+          "is_adversarial": {
+            "false": 2
+          },
+          "char_length_quantiles": [
+            69.0,
+            70.75,
+            72.5,
+            74.25,
+            75.3,
+            76.0
+          ],
+          "utf8_byte_length_quantiles": [
+            178.0,
+            178.75,
+            179.5,
+            180.25,
+            180.7,
+            181.0
+          ]
+        },
+        "HARASS->AD": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 7
+            },
+            {
+              "key": "chars_000_064",
+              "count": 7
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 10
+            },
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 10
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "19017c3adb2e97fb",
+              "count": 1
+            },
+            {
+              "key": "b8770c871c72377d",
+              "count": 1
+            },
+            {
+              "key": "0be1e51b1ab761be",
+              "count": 1
+            },
+            {
+              "key": "9639585c3557606a",
+              "count": 1
+            },
+            {
+              "key": "f027e48e29639c28",
+              "count": 1
+            },
+            {
+              "key": "9d7141ae60dc15ac",
+              "count": 1
+            },
+            {
+              "key": "620f43f4396ce572",
+              "count": 1
+            },
+            {
+              "key": "632573cb3d6d69f6",
+              "count": 1
+            },
+            {
+              "key": "6814769664b787fa",
+              "count": 1
+            },
+            {
+              "key": "255c2e93cd02caa1",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7955cd76b3b29a3b",
+              "count": 1
+            },
+            {
+              "key": "e81b3784191ee900",
+              "count": 1
+            },
+            {
+              "key": "d72237f39b60af60",
+              "count": 1
+            },
+            {
+              "key": "f9ba4b934b7de426",
+              "count": 1
+            },
+            {
+              "key": "ee366affbec2cfb3",
+              "count": 1
+            },
+            {
+              "key": "4fcfdf185c1cc841",
+              "count": 1
+            },
+            {
+              "key": "2c2a90398c4f967f",
+              "count": 1
+            },
+            {
+              "key": "a691a9f1432cc9af",
+              "count": 1
+            },
+            {
+              "key": "8dfca5fa81de0cf2",
+              "count": 1
+            },
+            {
+              "key": "f1a621c9837f60ef",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            43.0,
+            57.5,
+            65.0,
+            68.5,
+            83.8,
+            208.0
+          ],
+          "utf8_byte_length_quantiles": [
+            101.0,
+            129.5,
+            167.0,
+            180.0,
+            202.8,
+            606.0
+          ]
+        },
+        "HARASS->FRAUD": {
+          "count": 7,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 7
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 4
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 7
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "ebea5bafbc08185b",
+              "count": 1
+            },
+            {
+              "key": "c8712152b03f20c3",
+              "count": 1
+            },
+            {
+              "key": "5366064618cc3d92",
+              "count": 1
+            },
+            {
+              "key": "e26d1ec6a7749ebc",
+              "count": 1
+            },
+            {
+              "key": "f9a7446525873ec2",
+              "count": 1
+            },
+            {
+              "key": "5ad766b5d63e678b",
+              "count": 1
+            },
+            {
+              "key": "e6204328d241a87f",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "991d3de525b3a640",
+              "count": 1
+            },
+            {
+              "key": "276745c064d5fee1",
+              "count": 1
+            },
+            {
+              "key": "5032c10010678ca2",
+              "count": 1
+            },
+            {
+              "key": "d31210d0838605d6",
+              "count": 1
+            },
+            {
+              "key": "31c05eec03302754",
+              "count": 1
+            },
+            {
+              "key": "b713b29b7b0ba210",
+              "count": 1
+            },
+            {
+              "key": "a418edbe0e6b8fba",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 7
+          },
+          "is_adversarial": {
+            "false": 7
+          },
+          "char_length_quantiles": [
+            60.0,
+            61.0,
+            68.0,
+            68.0,
+            68.4,
+            69.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            141.0,
+            143.0,
+            192.0,
+            192.0,
+            192.0
+          ]
+        },
+        "FRAUD->TRANSACTION": {
+          "count": 5,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 5
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 3
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            },
+            {
+              "key": "chars_129_256",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 3
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 4
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "9ecc973258bd8884",
+              "count": 1
+            },
+            {
+              "key": "fc28d65407a7bb07",
+              "count": 1
+            },
+            {
+              "key": "4a643f9de8f4371d",
+              "count": 1
+            },
+            {
+              "key": "3b81d7e1d681dfde",
+              "count": 1
+            },
+            {
+              "key": "541a090561313cd8",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "363a071fa98b49f4",
+              "count": 1
+            },
+            {
+              "key": "e00324b05ed8a184",
+              "count": 1
+            },
+            {
+              "key": "61e8e5acafe0f785",
+              "count": 1
+            },
+            {
+              "key": "6f16b1b8ef414b97",
+              "count": 1
+            },
+            {
+              "key": "ab9c17bc8a51d162",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 5
+          },
+          "is_adversarial": {
+            "false": 5
+          },
+          "char_length_quantiles": [
+            50.0,
+            68.0,
+            68.0,
+            118.0,
+            142.0,
+            158.0
+          ],
+          "utf8_byte_length_quantiles": [
+            92.0,
+            136.0,
+            164.0,
+            310.0,
+            371.2,
+            412.0
+          ]
+        },
+        "FRAUD->AD": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 12
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 10
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 4
+            },
+            {
+              "key": "BANK",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 13
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "b44559fe56a0359a",
+              "count": 1
+            },
+            {
+              "key": "e4ecccc60352c73f",
+              "count": 1
+            },
+            {
+              "key": "0c071d0e0754ccdf",
+              "count": 1
+            },
+            {
+              "key": "e7a71d1d883e08f0",
+              "count": 1
+            },
+            {
+              "key": "825b4b1fa7e0b511",
+              "count": 1
+            },
+            {
+              "key": "382c88a10ba115b2",
+              "count": 1
+            },
+            {
+              "key": "6c1efa4fcb55d4cc",
+              "count": 1
+            },
+            {
+              "key": "a8dd69125a20188f",
+              "count": 1
+            },
+            {
+              "key": "be4a16e3d718c3b2",
+              "count": 1
+            },
+            {
+              "key": "c65e7f5fc8457396",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "986f9930fb99d6ef",
+              "count": 1
+            },
+            {
+              "key": "28d21c727b29fe8d",
+              "count": 1
+            },
+            {
+              "key": "b50921c81b8f54bb",
+              "count": 1
+            },
+            {
+              "key": "49c1c8d972bab54c",
+              "count": 1
+            },
+            {
+              "key": "6ce6e14bb3e5c1f9",
+              "count": 1
+            },
+            {
+              "key": "bc20f7652d255c90",
+              "count": 1
+            },
+            {
+              "key": "d86d518551e7d00d",
+              "count": 1
+            },
+            {
+              "key": "5d0335663c8d3933",
+              "count": 1
+            },
+            {
+              "key": "4f6703d190584ea6",
+              "count": 1
+            },
+            {
+              "key": "779b3eee4d69e9c8",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            60.0,
+            67.0,
+            126.0,
+            126.0,
+            127.0,
+            127.0
+          ],
+          "utf8_byte_length_quantiles": [
+            142.0,
+            177.0,
+            282.0,
+            282.0,
+            283.0,
+            283.0
+          ]
+        },
+        "FRAUD->HARASS": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 10
+            },
+            {
+              "key": "chars_000_064",
+              "count": 5
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 11
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 3
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 10
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "d4f77a31808522de",
+              "count": 1
+            },
+            {
+              "key": "7b0428554eadffc3",
+              "count": 1
+            },
+            {
+              "key": "1c5041ba314faf53",
+              "count": 1
+            },
+            {
+              "key": "0d3a6d70ef9d9f0d",
+              "count": 1
+            },
+            {
+              "key": "92130b005210e931",
+              "count": 1
+            },
+            {
+              "key": "637c8db2708ddf8f",
+              "count": 1
+            },
+            {
+              "key": "ea8fc03a4deb29ae",
+              "count": 1
+            },
+            {
+              "key": "8f0582cc61d7bbcb",
+              "count": 1
+            },
+            {
+              "key": "134ddd11d273b9ae",
+              "count": 1
+            },
+            {
+              "key": "d1bca1abf35d21c1",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f8ce28010e42d6fb",
+              "count": 2
+            },
+            {
+              "key": "e52e4f8f9b378dbd",
+              "count": 1
+            },
+            {
+              "key": "dc9a3d52bedfe47f",
+              "count": 1
+            },
+            {
+              "key": "9d96e5b4d6339973",
+              "count": 1
+            },
+            {
+              "key": "4749b2967cb100f7",
+              "count": 1
+            },
+            {
+              "key": "311a5117df3bd035",
+              "count": 1
+            },
+            {
+              "key": "ba8c4f53d013c28c",
+              "count": 1
+            },
+            {
+              "key": "ca7978571c0cc795",
+              "count": 1
+            },
+            {
+              "key": "9508b4b310ab6a68",
+              "count": 1
+            },
+            {
+              "key": "397f49415be588b8",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            36.0,
+            62.5,
+            69.0,
+            69.5,
+            70.0,
+            104.0
+          ],
+          "utf8_byte_length_quantiles": [
+            86.0,
+            139.5,
+            171.0,
+            175.0,
+            188.0,
+            268.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "lr_5e4_focal_0p75",
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_lr_5e4_focal_gamma_0p75_20260806_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "b13abb98f55bd3232334a2550d34c2d30e2870e3e0b76c7977c5e3da701e15b8",
+      "model_input_bytes": 512,
+      "metrics": {
+        "transaction_recall": 0.9361179361179361,
+        "transaction_precision": 0.8964705882352941,
+        "macro_f1": 0.8527818597806804,
+        "harass_f1": 0.7641509433962265,
+        "fraud_recall": 0.8011049723756906
+      },
+      "failed_gates": [
+        "transaction_recall=0.936118 < 0.985000",
+        "transaction_precision=0.896471 < 0.920000",
+        "macro_f1=0.852782 < 0.860000",
+        "harass_f1=0.764151 < 0.800000"
+      ],
+      "confusion_matrix": [
+        [
+          381,
+          23,
+          2,
+          1
+        ],
+        [
+          28,
+          404,
+          7,
+          13
+        ],
+        [
+          2,
+          15,
+          81,
+          8
+        ],
+        [
+          14,
+          6,
+          16,
+          145
+        ]
+      ],
+      "error_pair_counts": [
+        {
+          "key": "AD->TRANSACTION",
+          "count": 28
+        },
+        {
+          "key": "TRANSACTION->AD",
+          "count": 23
+        },
+        {
+          "key": "FRAUD->HARASS",
+          "count": 16
+        },
+        {
+          "key": "HARASS->AD",
+          "count": 15
+        },
+        {
+          "key": "FRAUD->TRANSACTION",
+          "count": 14
+        },
+        {
+          "key": "AD->FRAUD",
+          "count": 13
+        },
+        {
+          "key": "HARASS->FRAUD",
+          "count": 8
+        },
+        {
+          "key": "AD->HARASS",
+          "count": 7
+        },
+        {
+          "key": "FRAUD->AD",
+          "count": 6
+        },
+        {
+          "key": "HARASS->TRANSACTION",
+          "count": 2
+        },
+        {
+          "key": "TRANSACTION->HARASS",
+          "count": 2
+        },
+        {
+          "key": "TRANSACTION->FRAUD",
+          "count": 1
+        }
+      ],
+      "error_clusters": {
+        "TRANSACTION->AD": {
+          "count": 23,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 23
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 12
+            },
+            {
+              "key": "chars_129_256",
+              "count": 4
+            },
+            {
+              "key": "chars_000_064",
+              "count": 4
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 2
+            },
+            {
+              "key": "chars_ge_257",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "CARRIER",
+              "count": 13
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 9
+            },
+            {
+              "key": "OTP",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 18
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c5a25a46a3693995",
+              "count": 1
+            },
+            {
+              "key": "2f35e585cf2da4a5",
+              "count": 1
+            },
+            {
+              "key": "2ff041df461cd692",
+              "count": 1
+            },
+            {
+              "key": "8ce2388e1f459d73",
+              "count": 1
+            },
+            {
+              "key": "8cd040d4cdf5745d",
+              "count": 1
+            },
+            {
+              "key": "ec48c55439d30df0",
+              "count": 1
+            },
+            {
+              "key": "7c162b7b84183e63",
+              "count": 1
+            },
+            {
+              "key": "26f0ecd53643b831",
+              "count": 1
+            },
+            {
+              "key": "a8b303f3992babc1",
+              "count": 1
+            },
+            {
+              "key": "e14d323477dc54a7",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "6559a535f0f7f29c",
+              "count": 1
+            },
+            {
+              "key": "084da9ad9b004d63",
+              "count": 1
+            },
+            {
+              "key": "2a054c5ac7e2a48c",
+              "count": 1
+            },
+            {
+              "key": "c1c918e50d499478",
+              "count": 1
+            },
+            {
+              "key": "85d99e1418382452",
+              "count": 1
+            },
+            {
+              "key": "d736582ab62626c8",
+              "count": 1
+            },
+            {
+              "key": "9648949538d85607",
+              "count": 1
+            },
+            {
+              "key": "fa59012082f79fd9",
+              "count": 1
+            },
+            {
+              "key": "826d1eb983de224b",
+              "count": 1
+            },
+            {
+              "key": "c72309e18b366773",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 23
+          },
+          "is_adversarial": {
+            "false": 23
+          },
+          "char_length_quantiles": [
+            40.0,
+            77.0,
+            119.0,
+            138.0,
+            271.6000000000001,
+            406.0
+          ],
+          "utf8_byte_length_quantiles": [
+            78.0,
+            182.0,
+            255.0,
+            316.0,
+            435.4000000000001,
+            1114.0
+          ]
+        },
+        "TRANSACTION->HARASS": {
+          "count": 2,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 2
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 1
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "467d82d1d1f1617d",
+              "count": 1
+            },
+            {
+              "key": "c1899979fb7e8d3d",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "d34d9e7bbdd177ba",
+              "count": 1
+            },
+            {
+              "key": "266046ac116b9f84",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 2
+          },
+          "is_adversarial": {
+            "false": 2
+          },
+          "char_length_quantiles": [
+            63.0,
+            64.0,
+            65.0,
+            66.0,
+            66.6,
+            67.0
+          ],
+          "utf8_byte_length_quantiles": [
+            173.0,
+            176.5,
+            180.0,
+            183.5,
+            185.6,
+            187.0
+          ]
+        },
+        "TRANSACTION->FRAUD": {
+          "count": 1,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 1
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "a198126160fa6776",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f332763ee10a50c3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 1
+          },
+          "is_adversarial": {
+            "false": 1
+          },
+          "char_length_quantiles": [
+            27.0,
+            27.0,
+            27.0,
+            27.0,
+            27.0,
+            27.0
+          ],
+          "utf8_byte_length_quantiles": [
+            77.0,
+            77.0,
+            77.0,
+            77.0,
+            77.0,
+            77.0
+          ]
+        },
+        "AD->TRANSACTION": {
+          "count": 28,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 28
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 15
+            },
+            {
+              "key": "chars_000_064",
+              "count": 10
+            },
+            {
+              "key": "chars_129_256",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 13
+            },
+            {
+              "key": "CARRIER",
+              "count": 6
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 5
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            },
+            {
+              "key": "ORDER",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 14
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 14
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "31aff23431e00b15",
+              "count": 1
+            },
+            {
+              "key": "d4af6c775b5a6eb4",
+              "count": 1
+            },
+            {
+              "key": "da0bfae4693dc6bd",
+              "count": 1
+            },
+            {
+              "key": "bfc39a5661de5cad",
+              "count": 1
+            },
+            {
+              "key": "0d94f6d4d236f1a1",
+              "count": 1
+            },
+            {
+              "key": "28ef116a20b8ea95",
+              "count": 1
+            },
+            {
+              "key": "0d8adcfb028ef0b0",
+              "count": 1
+            },
+            {
+              "key": "5e608d04387aa1a5",
+              "count": 1
+            },
+            {
+              "key": "a6d38aa35988d613",
+              "count": 1
+            },
+            {
+              "key": "962d7ed28125c155",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "0df14978bcc6d1a9",
+              "count": 3
+            },
+            {
+              "key": "c7679c61f9c5c22b",
+              "count": 2
+            },
+            {
+              "key": "0fb4d4df51008f9d",
+              "count": 1
+            },
+            {
+              "key": "1608e50b93767ae4",
+              "count": 1
+            },
+            {
+              "key": "6eedd2f9aacf70a5",
+              "count": 1
+            },
+            {
+              "key": "b4813288332dc56f",
+              "count": 1
+            },
+            {
+              "key": "13682507ac4caec5",
+              "count": 1
+            },
+            {
+              "key": "07be48626a1958c3",
+              "count": 1
+            },
+            {
+              "key": "ae0bd4c4d9ca69f1",
+              "count": 1
+            },
+            {
+              "key": "46ed947757a2cce0",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 28
+          },
+          "is_adversarial": {
+            "false": 28
+          },
+          "char_length_quantiles": [
+            16.0,
+            55.0,
+            75.5,
+            101.75,
+            126.9,
+            141.0
+          ],
+          "utf8_byte_length_quantiles": [
+            38.0,
+            142.0,
+            178.0,
+            248.5,
+            284.3,
+            315.0
+          ]
+        },
+        "AD->HARASS": {
+          "count": 7,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 7
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 4
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 4
+            },
+            {
+              "key": "BANK",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 4
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 3
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c2a56c6221b035f5",
+              "count": 1
+            },
+            {
+              "key": "86706183ea72684e",
+              "count": 1
+            },
+            {
+              "key": "34c550192282208c",
+              "count": 1
+            },
+            {
+              "key": "4cabe59934c9937b",
+              "count": 1
+            },
+            {
+              "key": "4a6824764f424839",
+              "count": 1
+            },
+            {
+              "key": "ed8716a92ef9baf9",
+              "count": 1
+            },
+            {
+              "key": "0f4474b5ce404290",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7474b5350ddee89f",
+              "count": 1
+            },
+            {
+              "key": "be011f390d1fce19",
+              "count": 1
+            },
+            {
+              "key": "e88c0515786bc8c0",
+              "count": 1
+            },
+            {
+              "key": "b0b64ab72a4db745",
+              "count": 1
+            },
+            {
+              "key": "26de230debb1bee9",
+              "count": 1
+            },
+            {
+              "key": "446549f910da7e10",
+              "count": 1
+            },
+            {
+              "key": "6f44555f6f51a7a7",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 7
+          },
+          "is_adversarial": {
+            "false": 7
+          },
+          "char_length_quantiles": [
+            7.0,
+            60.5,
+            65.0,
+            68.0,
+            69.4,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            19.0,
+            146.5,
+            166.0,
+            175.0,
+            186.6,
+            195.0
+          ]
+        },
+        "AD->FRAUD": {
+          "count": 13,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 13
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 7
+            },
+            {
+              "key": "chars_000_064",
+              "count": 6
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 7
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            },
+            {
+              "key": "LOGISTICS",
+              "count": 1
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 12
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "5aba90aea431f9e6",
+              "count": 1
+            },
+            {
+              "key": "22cd07dc94576499",
+              "count": 1
+            },
+            {
+              "key": "690004621499b132",
+              "count": 1
+            },
+            {
+              "key": "d4a4c532dc7313c9",
+              "count": 1
+            },
+            {
+              "key": "ff793655b3ec84b0",
+              "count": 1
+            },
+            {
+              "key": "df9d342e3feb2854",
+              "count": 1
+            },
+            {
+              "key": "9e80ca1184fd44eb",
+              "count": 1
+            },
+            {
+              "key": "fe191879dd727a27",
+              "count": 1
+            },
+            {
+              "key": "632855c5874ece5e",
+              "count": 1
+            },
+            {
+              "key": "a1699ade0bbc5675",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "181128b2a69f811f",
+              "count": 1
+            },
+            {
+              "key": "2a7de6e8cd7d1b2c",
+              "count": 1
+            },
+            {
+              "key": "6fccb89feee89d36",
+              "count": 1
+            },
+            {
+              "key": "718c84d53708272c",
+              "count": 1
+            },
+            {
+              "key": "ccd72df885963170",
+              "count": 1
+            },
+            {
+              "key": "0ddf40fc3417cc78",
+              "count": 1
+            },
+            {
+              "key": "62067aed34c78cb8",
+              "count": 1
+            },
+            {
+              "key": "12328087cb76de59",
+              "count": 1
+            },
+            {
+              "key": "b78120561c34fa0f",
+              "count": 1
+            },
+            {
+              "key": "fd28b645f278fb30",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 13
+          },
+          "is_adversarial": {
+            "false": 13
+          },
+          "char_length_quantiles": [
+            21.0,
+            63.0,
+            65.0,
+            68.0,
+            69.6,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            31.0,
+            142.0,
+            168.0,
+            180.0,
+            186.0,
+            192.0
+          ]
+        },
+        "HARASS->TRANSACTION": {
+          "count": 2,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 2
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 2
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "826042070bf9f829",
+              "count": 1
+            },
+            {
+              "key": "7a69558d28d1224e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "81eaa532b7204862",
+              "count": 1
+            },
+            {
+              "key": "f87b82db757217e3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 2
+          },
+          "is_adversarial": {
+            "false": 2
+          },
+          "char_length_quantiles": [
+            69.0,
+            70.75,
+            72.5,
+            74.25,
+            75.3,
+            76.0
+          ],
+          "utf8_byte_length_quantiles": [
+            178.0,
+            178.75,
+            179.5,
+            180.25,
+            180.7,
+            181.0
+          ]
+        },
+        "HARASS->AD": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 7
+            },
+            {
+              "key": "chars_000_064",
+              "count": 7
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 10
+            },
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 12
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 3
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "19017c3adb2e97fb",
+              "count": 1
+            },
+            {
+              "key": "b8770c871c72377d",
+              "count": 1
+            },
+            {
+              "key": "0be1e51b1ab761be",
+              "count": 1
+            },
+            {
+              "key": "9639585c3557606a",
+              "count": 1
+            },
+            {
+              "key": "f027e48e29639c28",
+              "count": 1
+            },
+            {
+              "key": "9d7141ae60dc15ac",
+              "count": 1
+            },
+            {
+              "key": "632573cb3d6d69f6",
+              "count": 1
+            },
+            {
+              "key": "c3f4ed38bd9a8d16",
+              "count": 1
+            },
+            {
+              "key": "921c13c6c3930152",
+              "count": 1
+            },
+            {
+              "key": "f4b8d27434433eba",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7955cd76b3b29a3b",
+              "count": 1
+            },
+            {
+              "key": "e81b3784191ee900",
+              "count": 1
+            },
+            {
+              "key": "d72237f39b60af60",
+              "count": 1
+            },
+            {
+              "key": "f9ba4b934b7de426",
+              "count": 1
+            },
+            {
+              "key": "ee366affbec2cfb3",
+              "count": 1
+            },
+            {
+              "key": "4fcfdf185c1cc841",
+              "count": 1
+            },
+            {
+              "key": "a691a9f1432cc9af",
+              "count": 1
+            },
+            {
+              "key": "02d99bfaec3a722e",
+              "count": 1
+            },
+            {
+              "key": "fde2caedb2e8a425",
+              "count": 1
+            },
+            {
+              "key": "5ba06fee6673ae07",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            46.0,
+            56.0,
+            66.0,
+            70.0,
+            83.8,
+            208.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            133.5,
+            167.0,
+            180.0,
+            202.8,
+            606.0
+          ]
+        },
+        "HARASS->FRAUD": {
+          "count": 8,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 8
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 4
+            },
+            {
+              "key": "chars_000_064",
+              "count": 4
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 5
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 8
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "ebea5bafbc08185b",
+              "count": 1
+            },
+            {
+              "key": "c8712152b03f20c3",
+              "count": 1
+            },
+            {
+              "key": "5366064618cc3d92",
+              "count": 1
+            },
+            {
+              "key": "e26d1ec6a7749ebc",
+              "count": 1
+            },
+            {
+              "key": "f9a7446525873ec2",
+              "count": 1
+            },
+            {
+              "key": "620f43f4396ce572",
+              "count": 1
+            },
+            {
+              "key": "5ad766b5d63e678b",
+              "count": 1
+            },
+            {
+              "key": "e6204328d241a87f",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "991d3de525b3a640",
+              "count": 1
+            },
+            {
+              "key": "276745c064d5fee1",
+              "count": 1
+            },
+            {
+              "key": "5032c10010678ca2",
+              "count": 1
+            },
+            {
+              "key": "d31210d0838605d6",
+              "count": 1
+            },
+            {
+              "key": "31c05eec03302754",
+              "count": 1
+            },
+            {
+              "key": "2c2a90398c4f967f",
+              "count": 1
+            },
+            {
+              "key": "b713b29b7b0ba210",
+              "count": 1
+            },
+            {
+              "key": "a418edbe0e6b8fba",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 8
+          },
+          "is_adversarial": {
+            "false": 8
+          },
+          "char_length_quantiles": [
+            60.0,
+            60.75,
+            64.5,
+            68.0,
+            68.3,
+            69.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            141.0,
+            151.5,
+            192.0,
+            192.0,
+            192.0
+          ]
+        },
+        "FRAUD->TRANSACTION": {
+          "count": 14,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 14
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 12
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            },
+            {
+              "key": "chars_129_256",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 11
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 13
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "b44559fe56a0359a",
+              "count": 1
+            },
+            {
+              "key": "e4ecccc60352c73f",
+              "count": 1
+            },
+            {
+              "key": "0c071d0e0754ccdf",
+              "count": 1
+            },
+            {
+              "key": "e7a71d1d883e08f0",
+              "count": 1
+            },
+            {
+              "key": "825b4b1fa7e0b511",
+              "count": 1
+            },
+            {
+              "key": "382c88a10ba115b2",
+              "count": 1
+            },
+            {
+              "key": "6c1efa4fcb55d4cc",
+              "count": 1
+            },
+            {
+              "key": "a8dd69125a20188f",
+              "count": 1
+            },
+            {
+              "key": "be4a16e3d718c3b2",
+              "count": 1
+            },
+            {
+              "key": "c65e7f5fc8457396",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "986f9930fb99d6ef",
+              "count": 1
+            },
+            {
+              "key": "28d21c727b29fe8d",
+              "count": 1
+            },
+            {
+              "key": "b50921c81b8f54bb",
+              "count": 1
+            },
+            {
+              "key": "49c1c8d972bab54c",
+              "count": 1
+            },
+            {
+              "key": "6ce6e14bb3e5c1f9",
+              "count": 1
+            },
+            {
+              "key": "bc20f7652d255c90",
+              "count": 1
+            },
+            {
+              "key": "d86d518551e7d00d",
+              "count": 1
+            },
+            {
+              "key": "5d0335663c8d3933",
+              "count": 1
+            },
+            {
+              "key": "4f6703d190584ea6",
+              "count": 1
+            },
+            {
+              "key": "779b3eee4d69e9c8",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 14
+          },
+          "is_adversarial": {
+            "false": 14
+          },
+          "char_length_quantiles": [
+            50.0,
+            125.0,
+            126.0,
+            126.75,
+            127.0,
+            158.0
+          ],
+          "utf8_byte_length_quantiles": [
+            92.0,
+            281.25,
+            282.0,
+            283.0,
+            301.90000000000003,
+            412.0
+          ]
+        },
+        "FRAUD->AD": {
+          "count": 6,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 6
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 3
+            },
+            {
+              "key": "chars_065_128",
+              "count": 2
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 4
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 3
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 3
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "cda4f44f8a58292c",
+              "count": 1
+            },
+            {
+              "key": "a4a5df812ea02e61",
+              "count": 1
+            },
+            {
+              "key": "134ddd11d273b9ae",
+              "count": 1
+            },
+            {
+              "key": "4a643f9de8f4371d",
+              "count": 1
+            },
+            {
+              "key": "a6ae490ac1b9cb67",
+              "count": 1
+            },
+            {
+              "key": "3a263eb4d6ce6d4c",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f3ffc4e5d13dc6a5",
+              "count": 1
+            },
+            {
+              "key": "9d5165201de53fcd",
+              "count": 1
+            },
+            {
+              "key": "ca7978571c0cc795",
+              "count": 1
+            },
+            {
+              "key": "61e8e5acafe0f785",
+              "count": 1
+            },
+            {
+              "key": "8d3d50e32abd9616",
+              "count": 1
+            },
+            {
+              "key": "8c6870207c52efc9",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 6
+          },
+          "is_adversarial": {
+            "false": 6
+          },
+          "char_length_quantiles": [
+            49.0,
+            62.5,
+            65.5,
+            67.75,
+            330.5,
+            593.0
+          ],
+          "utf8_byte_length_quantiles": [
+            117.0,
+            152.5,
+            159.0,
+            169.25,
+            645.0,
+            1119.0
+          ]
+        },
+        "FRAUD->HARASS": {
+          "count": 16,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 16
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 11
+            },
+            {
+              "key": "chars_000_064",
+              "count": 5
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 12
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 3
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 11
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "d4f77a31808522de",
+              "count": 1
+            },
+            {
+              "key": "7b0428554eadffc3",
+              "count": 1
+            },
+            {
+              "key": "1c5041ba314faf53",
+              "count": 1
+            },
+            {
+              "key": "0d3a6d70ef9d9f0d",
+              "count": 1
+            },
+            {
+              "key": "92130b005210e931",
+              "count": 1
+            },
+            {
+              "key": "637c8db2708ddf8f",
+              "count": 1
+            },
+            {
+              "key": "ea8fc03a4deb29ae",
+              "count": 1
+            },
+            {
+              "key": "8f0582cc61d7bbcb",
+              "count": 1
+            },
+            {
+              "key": "d1bca1abf35d21c1",
+              "count": 1
+            },
+            {
+              "key": "a1b9dd064bea5ee5",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f8ce28010e42d6fb",
+              "count": 2
+            },
+            {
+              "key": "e52e4f8f9b378dbd",
+              "count": 1
+            },
+            {
+              "key": "dc9a3d52bedfe47f",
+              "count": 1
+            },
+            {
+              "key": "9d96e5b4d6339973",
+              "count": 1
+            },
+            {
+              "key": "4749b2967cb100f7",
+              "count": 1
+            },
+            {
+              "key": "311a5117df3bd035",
+              "count": 1
+            },
+            {
+              "key": "ba8c4f53d013c28c",
+              "count": 1
+            },
+            {
+              "key": "9508b4b310ab6a68",
+              "count": 1
+            },
+            {
+              "key": "397f49415be588b8",
+              "count": 1
+            },
+            {
+              "key": "6e6c0ba1a7716b87",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 16
+          },
+          "is_adversarial": {
+            "false": 16
+          },
+          "char_length_quantiles": [
+            33.0,
+            62.75,
+            69.0,
+            70.0,
+            70.0,
+            104.0
+          ],
+          "utf8_byte_length_quantiles": [
+            61.0,
+            142.25,
+            170.5,
+            175.0,
+            187.5,
+            268.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "dropout_0p10",
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_dropout_0p10_20260805_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "11668439901a1dd39854257f3bc92e039312cba4c041e4562f2d6031809c7edf",
+      "model_input_bytes": 512,
+      "metrics": {
+        "transaction_recall": 0.9385749385749386,
+        "transaction_precision": 0.9095238095238095,
+        "macro_f1": 0.8544310633118835,
+        "harass_f1": 0.7692307692307693,
+        "fraud_recall": 0.8066298342541437
+      },
+      "failed_gates": [
+        "transaction_recall=0.938575 < 0.985000",
+        "transaction_precision=0.909524 < 0.920000",
+        "macro_f1=0.854431 < 0.860000",
+        "harass_f1=0.769231 < 0.800000"
+      ],
+      "confusion_matrix": [
+        [
+          382,
+          19,
+          1,
+          5
+        ],
+        [
+          26,
+          401,
+          9,
+          16
+        ],
+        [
+          1,
+          13,
+          85,
+          7
+        ],
+        [
+          11,
+          4,
+          20,
+          146
+        ]
+      ],
+      "error_pair_counts": [
+        {
+          "key": "AD->TRANSACTION",
+          "count": 26
+        },
+        {
+          "key": "FRAUD->HARASS",
+          "count": 20
+        },
+        {
+          "key": "TRANSACTION->AD",
+          "count": 19
+        },
+        {
+          "key": "AD->FRAUD",
+          "count": 16
+        },
+        {
+          "key": "HARASS->AD",
+          "count": 13
+        },
+        {
+          "key": "FRAUD->TRANSACTION",
+          "count": 11
+        },
+        {
+          "key": "AD->HARASS",
+          "count": 9
+        },
+        {
+          "key": "HARASS->FRAUD",
+          "count": 7
+        },
+        {
+          "key": "TRANSACTION->FRAUD",
+          "count": 5
+        },
+        {
+          "key": "FRAUD->AD",
+          "count": 4
+        },
+        {
+          "key": "HARASS->TRANSACTION",
+          "count": 1
+        },
+        {
+          "key": "TRANSACTION->HARASS",
+          "count": 1
+        }
+      ],
+      "error_clusters": {
+        "TRANSACTION->AD": {
+          "count": 19,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 19
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 12
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            },
+            {
+              "key": "chars_129_256",
+              "count": 2
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            },
+            {
+              "key": "chars_ge_257",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "CARRIER",
+              "count": 10
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 8
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 13
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 6
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c5a25a46a3693995",
+              "count": 1
+            },
+            {
+              "key": "2f35e585cf2da4a5",
+              "count": 1
+            },
+            {
+              "key": "2ff041df461cd692",
+              "count": 1
+            },
+            {
+              "key": "8ce2388e1f459d73",
+              "count": 1
+            },
+            {
+              "key": "8cd040d4cdf5745d",
+              "count": 1
+            },
+            {
+              "key": "ec48c55439d30df0",
+              "count": 1
+            },
+            {
+              "key": "8d8bf593c0c87931",
+              "count": 1
+            },
+            {
+              "key": "7c162b7b84183e63",
+              "count": 1
+            },
+            {
+              "key": "26f0ecd53643b831",
+              "count": 1
+            },
+            {
+              "key": "ef379b8e9d63864e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "6559a535f0f7f29c",
+              "count": 1
+            },
+            {
+              "key": "084da9ad9b004d63",
+              "count": 1
+            },
+            {
+              "key": "2a054c5ac7e2a48c",
+              "count": 1
+            },
+            {
+              "key": "c1c918e50d499478",
+              "count": 1
+            },
+            {
+              "key": "85d99e1418382452",
+              "count": 1
+            },
+            {
+              "key": "d736582ab62626c8",
+              "count": 1
+            },
+            {
+              "key": "f5f9567054278333",
+              "count": 1
+            },
+            {
+              "key": "9648949538d85607",
+              "count": 1
+            },
+            {
+              "key": "fa59012082f79fd9",
+              "count": 1
+            },
+            {
+              "key": "ba722e7186f30454",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 19
+          },
+          "is_adversarial": {
+            "false": 19
+          },
+          "char_length_quantiles": [
+            40.0,
+            79.0,
+            111.0,
+            123.0,
+            198.39999999999992,
+            301.0
+          ],
+          "utf8_byte_length_quantiles": [
+            78.0,
+            182.0,
+            254.0,
+            288.0,
+            379.5999999999999,
+            730.0
+          ]
+        },
+        "TRANSACTION->HARASS": {
+          "count": 1,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 1
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c1899979fb7e8d3d",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "266046ac116b9f84",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 1
+          },
+          "is_adversarial": {
+            "false": 1
+          },
+          "char_length_quantiles": [
+            63.0,
+            63.0,
+            63.0,
+            63.0,
+            63.0,
+            63.0
+          ],
+          "utf8_byte_length_quantiles": [
+            173.0,
+            173.0,
+            173.0,
+            173.0,
+            173.0,
+            173.0
+          ]
+        },
+        "TRANSACTION->FRAUD": {
+          "count": 5,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 5
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 3
+            },
+            {
+              "key": "chars_065_128",
+              "count": 2
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 3
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 4
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "5ce03155e40e58a2",
+              "count": 1
+            },
+            {
+              "key": "789f17dadfb026ae",
+              "count": 1
+            },
+            {
+              "key": "5492c93ff7f43ab5",
+              "count": 1
+            },
+            {
+              "key": "36ce5176cd78cc87",
+              "count": 1
+            },
+            {
+              "key": "a198126160fa6776",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7d36f652c4167521",
+              "count": 1
+            },
+            {
+              "key": "5d953e7af635a702",
+              "count": 1
+            },
+            {
+              "key": "e1dcd6e08a4b19ba",
+              "count": 1
+            },
+            {
+              "key": "81900d358ef4efa1",
+              "count": 1
+            },
+            {
+              "key": "f332763ee10a50c3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 5
+          },
+          "is_adversarial": {
+            "false": 5
+          },
+          "char_length_quantiles": [
+            27.0,
+            45.0,
+            45.0,
+            65.0,
+            89.60000000000001,
+            106.0
+          ],
+          "utf8_byte_length_quantiles": [
+            77.0,
+            93.0,
+            93.0,
+            139.0,
+            163.0,
+            179.0
+          ]
+        },
+        "AD->TRANSACTION": {
+          "count": 26,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 26
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 14
+            },
+            {
+              "key": "chars_000_064",
+              "count": 9
+            },
+            {
+              "key": "chars_129_256",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 14
+            },
+            {
+              "key": "CARRIER",
+              "count": 7
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 2
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 15
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 11
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "31aff23431e00b15",
+              "count": 1
+            },
+            {
+              "key": "d4af6c775b5a6eb4",
+              "count": 1
+            },
+            {
+              "key": "da0bfae4693dc6bd",
+              "count": 1
+            },
+            {
+              "key": "28ef116a20b8ea95",
+              "count": 1
+            },
+            {
+              "key": "0d8adcfb028ef0b0",
+              "count": 1
+            },
+            {
+              "key": "5e608d04387aa1a5",
+              "count": 1
+            },
+            {
+              "key": "962d7ed28125c155",
+              "count": 1
+            },
+            {
+              "key": "f7a5f8b1d72559d8",
+              "count": 1
+            },
+            {
+              "key": "d5708b7644614707",
+              "count": 1
+            },
+            {
+              "key": "cc9a2077713caf53",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "0df14978bcc6d1a9",
+              "count": 3
+            },
+            {
+              "key": "0fb4d4df51008f9d",
+              "count": 1
+            },
+            {
+              "key": "1608e50b93767ae4",
+              "count": 1
+            },
+            {
+              "key": "6eedd2f9aacf70a5",
+              "count": 1
+            },
+            {
+              "key": "13682507ac4caec5",
+              "count": 1
+            },
+            {
+              "key": "449adbbf1319a744",
+              "count": 1
+            },
+            {
+              "key": "07be48626a1958c3",
+              "count": 1
+            },
+            {
+              "key": "ae0bd4c4d9ca69f1",
+              "count": 1
+            },
+            {
+              "key": "46ed947757a2cce0",
+              "count": 1
+            },
+            {
+              "key": "413dce2a933e876a",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 26
+          },
+          "is_adversarial": {
+            "false": 26
+          },
+          "char_length_quantiles": [
+            7.0,
+            55.0,
+            73.5,
+            102.75,
+            128.0,
+            157.0
+          ],
+          "utf8_byte_length_quantiles": [
+            19.0,
+            142.75,
+            178.0,
+            257.5,
+            289.5,
+            427.0
+          ]
+        },
+        "AD->HARASS": {
+          "count": 9,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 9
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 8
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 7
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 7
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c2a56c6221b035f5",
+              "count": 1
+            },
+            {
+              "key": "692c9efa0fd20a71",
+              "count": 1
+            },
+            {
+              "key": "510f2514cbdf070d",
+              "count": 1
+            },
+            {
+              "key": "86706183ea72684e",
+              "count": 1
+            },
+            {
+              "key": "281f09704dd10ae5",
+              "count": 1
+            },
+            {
+              "key": "34c550192282208c",
+              "count": 1
+            },
+            {
+              "key": "4cabe59934c9937b",
+              "count": 1
+            },
+            {
+              "key": "54d0cdddec5f76e6",
+              "count": 1
+            },
+            {
+              "key": "0f4474b5ce404290",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "90cc1e9c115c6ba3",
+              "count": 2
+            },
+            {
+              "key": "7474b5350ddee89f",
+              "count": 1
+            },
+            {
+              "key": "be011f390d1fce19",
+              "count": 1
+            },
+            {
+              "key": "2a650e752600c77d",
+              "count": 1
+            },
+            {
+              "key": "e88c0515786bc8c0",
+              "count": 1
+            },
+            {
+              "key": "b0b64ab72a4db745",
+              "count": 1
+            },
+            {
+              "key": "d1e0e293ff90d72e",
+              "count": 1
+            },
+            {
+              "key": "6f44555f6f51a7a7",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 9
+          },
+          "is_adversarial": {
+            "false": 9
+          },
+          "char_length_quantiles": [
+            64.0,
+            65.0,
+            66.0,
+            69.0,
+            70.0,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            134.0,
+            166.0,
+            179.0,
+            181.0,
+            189.4,
+            195.0
+          ]
+        },
+        "AD->FRAUD": {
+          "count": 16,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 16
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 9
+            },
+            {
+              "key": "chars_000_064",
+              "count": 7
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 9
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 4
+            },
+            {
+              "key": "LOGISTICS",
+              "count": 1
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 14
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "e921afe7e30d8e85",
+              "count": 1
+            },
+            {
+              "key": "d6225b28977802b0",
+              "count": 1
+            },
+            {
+              "key": "5aba90aea431f9e6",
+              "count": 1
+            },
+            {
+              "key": "22cd07dc94576499",
+              "count": 1
+            },
+            {
+              "key": "690004621499b132",
+              "count": 1
+            },
+            {
+              "key": "d4a4c532dc7313c9",
+              "count": 1
+            },
+            {
+              "key": "ff793655b3ec84b0",
+              "count": 1
+            },
+            {
+              "key": "df9d342e3feb2854",
+              "count": 1
+            },
+            {
+              "key": "fe191879dd727a27",
+              "count": 1
+            },
+            {
+              "key": "632855c5874ece5e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "46dcf4ecd70cfa37",
+              "count": 1
+            },
+            {
+              "key": "312ded7c3cc5a1c3",
+              "count": 1
+            },
+            {
+              "key": "181128b2a69f811f",
+              "count": 1
+            },
+            {
+              "key": "2a7de6e8cd7d1b2c",
+              "count": 1
+            },
+            {
+              "key": "6fccb89feee89d36",
+              "count": 1
+            },
+            {
+              "key": "718c84d53708272c",
+              "count": 1
+            },
+            {
+              "key": "ccd72df885963170",
+              "count": 1
+            },
+            {
+              "key": "0ddf40fc3417cc78",
+              "count": 1
+            },
+            {
+              "key": "12328087cb76de59",
+              "count": 1
+            },
+            {
+              "key": "b78120561c34fa0f",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 16
+          },
+          "is_adversarial": {
+            "false": 16
+          },
+          "char_length_quantiles": [
+            16.0,
+            63.75,
+            65.0,
+            67.25,
+            69.0,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            31.0,
+            140.75,
+            171.5,
+            177.75,
+            186.0,
+            192.0
+          ]
+        },
+        "HARASS->TRANSACTION": {
+          "count": 1,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 1
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "7a69558d28d1224e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f87b82db757217e3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 1
+          },
+          "is_adversarial": {
+            "false": 1
+          },
+          "char_length_quantiles": [
+            76.0,
+            76.0,
+            76.0,
+            76.0,
+            76.0,
+            76.0
+          ],
+          "utf8_byte_length_quantiles": [
+            178.0,
+            178.0,
+            178.0,
+            178.0,
+            178.0,
+            178.0
+          ]
+        },
+        "HARASS->AD": {
+          "count": 13,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 13
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 7
+            },
+            {
+              "key": "chars_065_128",
+              "count": 5
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 8
+            },
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 8
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "19017c3adb2e97fb",
+              "count": 1
+            },
+            {
+              "key": "b8770c871c72377d",
+              "count": 1
+            },
+            {
+              "key": "0be1e51b1ab761be",
+              "count": 1
+            },
+            {
+              "key": "9639585c3557606a",
+              "count": 1
+            },
+            {
+              "key": "f027e48e29639c28",
+              "count": 1
+            },
+            {
+              "key": "9d7141ae60dc15ac",
+              "count": 1
+            },
+            {
+              "key": "620f43f4396ce572",
+              "count": 1
+            },
+            {
+              "key": "632573cb3d6d69f6",
+              "count": 1
+            },
+            {
+              "key": "255c2e93cd02caa1",
+              "count": 1
+            },
+            {
+              "key": "921c13c6c3930152",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7955cd76b3b29a3b",
+              "count": 1
+            },
+            {
+              "key": "e81b3784191ee900",
+              "count": 1
+            },
+            {
+              "key": "d72237f39b60af60",
+              "count": 1
+            },
+            {
+              "key": "f9ba4b934b7de426",
+              "count": 1
+            },
+            {
+              "key": "ee366affbec2cfb3",
+              "count": 1
+            },
+            {
+              "key": "4fcfdf185c1cc841",
+              "count": 1
+            },
+            {
+              "key": "2c2a90398c4f967f",
+              "count": 1
+            },
+            {
+              "key": "a691a9f1432cc9af",
+              "count": 1
+            },
+            {
+              "key": "f1a621c9837f60ef",
+              "count": 1
+            },
+            {
+              "key": "fde2caedb2e8a425",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 13
+          },
+          "is_adversarial": {
+            "false": 13
+          },
+          "char_length_quantiles": [
+            43.0,
+            55.0,
+            62.0,
+            70.0,
+            88.40000000000002,
+            208.0
+          ],
+          "utf8_byte_length_quantiles": [
+            101.0,
+            128.0,
+            167.0,
+            184.0,
+            203.4,
+            606.0
+          ]
+        },
+        "HARASS->FRAUD": {
+          "count": 7,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 7
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 4
+            },
+            {
+              "key": "chars_065_128",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 7
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "ebea5bafbc08185b",
+              "count": 1
+            },
+            {
+              "key": "c8712152b03f20c3",
+              "count": 1
+            },
+            {
+              "key": "5366064618cc3d92",
+              "count": 1
+            },
+            {
+              "key": "e26d1ec6a7749ebc",
+              "count": 1
+            },
+            {
+              "key": "f9a7446525873ec2",
+              "count": 1
+            },
+            {
+              "key": "e6204328d241a87f",
+              "count": 1
+            },
+            {
+              "key": "68bcb250cc32fd81",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "991d3de525b3a640",
+              "count": 1
+            },
+            {
+              "key": "276745c064d5fee1",
+              "count": 1
+            },
+            {
+              "key": "5032c10010678ca2",
+              "count": 1
+            },
+            {
+              "key": "d31210d0838605d6",
+              "count": 1
+            },
+            {
+              "key": "31c05eec03302754",
+              "count": 1
+            },
+            {
+              "key": "a418edbe0e6b8fba",
+              "count": 1
+            },
+            {
+              "key": "e6deb8bd73d7d184",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 7
+          },
+          "is_adversarial": {
+            "false": 7
+          },
+          "char_length_quantiles": [
+            58.0,
+            60.5,
+            61.0,
+            68.0,
+            68.0,
+            68.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            131.5,
+            141.0,
+            192.0,
+            192.0,
+            192.0
+          ]
+        },
+        "FRAUD->TRANSACTION": {
+          "count": 11,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 11
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 9
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            },
+            {
+              "key": "chars_129_256",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 8
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 10
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "b44559fe56a0359a",
+              "count": 1
+            },
+            {
+              "key": "0c071d0e0754ccdf",
+              "count": 1
+            },
+            {
+              "key": "e7a71d1d883e08f0",
+              "count": 1
+            },
+            {
+              "key": "6c1efa4fcb55d4cc",
+              "count": 1
+            },
+            {
+              "key": "a8dd69125a20188f",
+              "count": 1
+            },
+            {
+              "key": "be4a16e3d718c3b2",
+              "count": 1
+            },
+            {
+              "key": "c65e7f5fc8457396",
+              "count": 1
+            },
+            {
+              "key": "9ecc973258bd8884",
+              "count": 1
+            },
+            {
+              "key": "fc28d65407a7bb07",
+              "count": 1
+            },
+            {
+              "key": "3b81d7e1d681dfde",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "986f9930fb99d6ef",
+              "count": 1
+            },
+            {
+              "key": "b50921c81b8f54bb",
+              "count": 1
+            },
+            {
+              "key": "49c1c8d972bab54c",
+              "count": 1
+            },
+            {
+              "key": "d86d518551e7d00d",
+              "count": 1
+            },
+            {
+              "key": "5d0335663c8d3933",
+              "count": 1
+            },
+            {
+              "key": "4f6703d190584ea6",
+              "count": 1
+            },
+            {
+              "key": "779b3eee4d69e9c8",
+              "count": 1
+            },
+            {
+              "key": "363a071fa98b49f4",
+              "count": 1
+            },
+            {
+              "key": "e00324b05ed8a184",
+              "count": 1
+            },
+            {
+              "key": "6f16b1b8ef414b97",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 11
+          },
+          "is_adversarial": {
+            "false": 11
+          },
+          "char_length_quantiles": [
+            50.0,
+            122.0,
+            126.0,
+            127.0,
+            127.0,
+            158.0
+          ],
+          "utf8_byte_length_quantiles": [
+            92.0,
+            282.0,
+            282.0,
+            283.0,
+            310.0,
+            412.0
+          ]
+        },
+        "FRAUD->AD": {
+          "count": 4,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 4
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 3
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 2
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 2
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "cda4f44f8a58292c",
+              "count": 1
+            },
+            {
+              "key": "860e0bde418abf92",
+              "count": 1
+            },
+            {
+              "key": "4a643f9de8f4371d",
+              "count": 1
+            },
+            {
+              "key": "3a263eb4d6ce6d4c",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f3ffc4e5d13dc6a5",
+              "count": 1
+            },
+            {
+              "key": "88cf51cd2ceff946",
+              "count": 1
+            },
+            {
+              "key": "61e8e5acafe0f785",
+              "count": 1
+            },
+            {
+              "key": "8c6870207c52efc9",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 4
+          },
+          "is_adversarial": {
+            "false": 4
+          },
+          "char_length_quantiles": [
+            62.0,
+            65.75,
+            67.5,
+            68.25,
+            68.7,
+            69.0
+          ],
+          "utf8_byte_length_quantiles": [
+            154.0,
+            161.5,
+            167.5,
+            172.0,
+            173.8,
+            175.0
+          ]
+        },
+        "FRAUD->HARASS": {
+          "count": 20,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 20
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 14
+            },
+            {
+              "key": "chars_000_064",
+              "count": 6
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 13
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 6
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 11
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 9
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "e4ecccc60352c73f",
+              "count": 1
+            },
+            {
+              "key": "825b4b1fa7e0b511",
+              "count": 1
+            },
+            {
+              "key": "382c88a10ba115b2",
+              "count": 1
+            },
+            {
+              "key": "d4f77a31808522de",
+              "count": 1
+            },
+            {
+              "key": "7b0428554eadffc3",
+              "count": 1
+            },
+            {
+              "key": "1c5041ba314faf53",
+              "count": 1
+            },
+            {
+              "key": "0d3a6d70ef9d9f0d",
+              "count": 1
+            },
+            {
+              "key": "92130b005210e931",
+              "count": 1
+            },
+            {
+              "key": "637c8db2708ddf8f",
+              "count": 1
+            },
+            {
+              "key": "ea8fc03a4deb29ae",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f8ce28010e42d6fb",
+              "count": 2
+            },
+            {
+              "key": "28d21c727b29fe8d",
+              "count": 1
+            },
+            {
+              "key": "6ce6e14bb3e5c1f9",
+              "count": 1
+            },
+            {
+              "key": "bc20f7652d255c90",
+              "count": 1
+            },
+            {
+              "key": "e52e4f8f9b378dbd",
+              "count": 1
+            },
+            {
+              "key": "dc9a3d52bedfe47f",
+              "count": 1
+            },
+            {
+              "key": "9d96e5b4d6339973",
+              "count": 1
+            },
+            {
+              "key": "4749b2967cb100f7",
+              "count": 1
+            },
+            {
+              "key": "311a5117df3bd035",
+              "count": 1
+            },
+            {
+              "key": "ba8c4f53d013c28c",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 20
+          },
+          "is_adversarial": {
+            "false": 20
+          },
+          "char_length_quantiles": [
+            33.0,
+            62.75,
+            69.0,
+            70.0,
+            125.0,
+            126.0
+          ],
+          "utf8_byte_length_quantiles": [
+            61.0,
+            142.25,
+            171.0,
+            186.25,
+            281.0,
+            282.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "dropout_0p10_focal_0p75",
+      "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1/sms_bytecnn_fp32.keras",
+      "model_sha256": "9d5883d381f02399af99580b093fa3848a1577e53d3263385479d0600e215ad5",
+      "model_input_bytes": 512,
+      "metrics": {
+        "transaction_recall": 0.9557739557739557,
+        "transaction_precision": 0.8922018348623854,
+        "macro_f1": 0.854934611571312,
+        "harass_f1": 0.7644444444444445,
+        "fraud_recall": 0.7845303867403315
+      },
+      "failed_gates": [
+        "transaction_recall=0.955774 < 0.985000",
+        "transaction_precision=0.892202 < 0.920000",
+        "macro_f1=0.854935 < 0.860000",
+        "harass_f1=0.764444 < 0.800000",
+        "fraud_recall=0.784530 < 0.800000"
+      ],
+      "confusion_matrix": [
+        [
+          389,
+          15,
+          1,
+          2
+        ],
+        [
+          30,
+          399,
+          11,
+          12
+        ],
+        [
+          2,
+          11,
+          86,
+          7
+        ],
+        [
+          15,
+          3,
+          21,
+          142
+        ]
+      ],
+      "error_pair_counts": [
+        {
+          "key": "AD->TRANSACTION",
+          "count": 30
+        },
+        {
+          "key": "FRAUD->HARASS",
+          "count": 21
+        },
+        {
+          "key": "TRANSACTION->AD",
+          "count": 15
+        },
+        {
+          "key": "FRAUD->TRANSACTION",
+          "count": 15
+        },
+        {
+          "key": "AD->FRAUD",
+          "count": 12
+        },
+        {
+          "key": "AD->HARASS",
+          "count": 11
+        },
+        {
+          "key": "HARASS->AD",
+          "count": 11
+        },
+        {
+          "key": "HARASS->FRAUD",
+          "count": 7
+        },
+        {
+          "key": "FRAUD->AD",
+          "count": 3
+        },
+        {
+          "key": "TRANSACTION->FRAUD",
+          "count": 2
+        },
+        {
+          "key": "HARASS->TRANSACTION",
+          "count": 2
+        },
+        {
+          "key": "TRANSACTION->HARASS",
+          "count": 1
+        }
+      ],
+      "error_clusters": {
+        "TRANSACTION->AD": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 10
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            },
+            {
+              "key": "chars_129_256",
+              "count": 1
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "CARRIER",
+              "count": 8
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 6
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 10
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 5
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c5a25a46a3693995",
+              "count": 1
+            },
+            {
+              "key": "2f35e585cf2da4a5",
+              "count": 1
+            },
+            {
+              "key": "2ff041df461cd692",
+              "count": 1
+            },
+            {
+              "key": "8ce2388e1f459d73",
+              "count": 1
+            },
+            {
+              "key": "8cd040d4cdf5745d",
+              "count": 1
+            },
+            {
+              "key": "ec48c55439d30df0",
+              "count": 1
+            },
+            {
+              "key": "8d8bf593c0c87931",
+              "count": 1
+            },
+            {
+              "key": "7c162b7b84183e63",
+              "count": 1
+            },
+            {
+              "key": "26f0ecd53643b831",
+              "count": 1
+            },
+            {
+              "key": "ef379b8e9d63864e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "6559a535f0f7f29c",
+              "count": 1
+            },
+            {
+              "key": "084da9ad9b004d63",
+              "count": 1
+            },
+            {
+              "key": "2a054c5ac7e2a48c",
+              "count": 1
+            },
+            {
+              "key": "c1c918e50d499478",
+              "count": 1
+            },
+            {
+              "key": "85d99e1418382452",
+              "count": 1
+            },
+            {
+              "key": "d736582ab62626c8",
+              "count": 1
+            },
+            {
+              "key": "f5f9567054278333",
+              "count": 1
+            },
+            {
+              "key": "9648949538d85607",
+              "count": 1
+            },
+            {
+              "key": "fa59012082f79fd9",
+              "count": 1
+            },
+            {
+              "key": "ba722e7186f30454",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            40.0,
+            76.0,
+            103.0,
+            121.0,
+            135.79999999999998,
+            296.0
+          ],
+          "utf8_byte_length_quantiles": [
+            78.0,
+            176.0,
+            253.0,
+            256.0,
+            326.59999999999997,
+            730.0
+          ]
+        },
+        "TRANSACTION->HARASS": {
+          "count": 1,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 1
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c1899979fb7e8d3d",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "266046ac116b9f84",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 1
+          },
+          "is_adversarial": {
+            "false": 1
+          },
+          "char_length_quantiles": [
+            63.0,
+            63.0,
+            63.0,
+            63.0,
+            63.0,
+            63.0
+          ],
+          "utf8_byte_length_quantiles": [
+            173.0,
+            173.0,
+            173.0,
+            173.0,
+            173.0,
+            173.0
+          ]
+        },
+        "TRANSACTION->FRAUD": {
+          "count": 2,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 2
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 1
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 1
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "5492c93ff7f43ab5",
+              "count": 1
+            },
+            {
+              "key": "a198126160fa6776",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "e1dcd6e08a4b19ba",
+              "count": 1
+            },
+            {
+              "key": "f332763ee10a50c3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 2
+          },
+          "is_adversarial": {
+            "false": 2
+          },
+          "char_length_quantiles": [
+            27.0,
+            36.5,
+            46.0,
+            55.5,
+            61.2,
+            65.0
+          ],
+          "utf8_byte_length_quantiles": [
+            77.0,
+            92.5,
+            108.0,
+            123.5,
+            132.8,
+            139.0
+          ]
+        },
+        "AD->TRANSACTION": {
+          "count": 30,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 30
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 17
+            },
+            {
+              "key": "chars_000_064",
+              "count": 8
+            },
+            {
+              "key": "chars_129_256",
+              "count": 4
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 14
+            },
+            {
+              "key": "CARRIER",
+              "count": 10
+            },
+            {
+              "key": "BANK",
+              "count": 3
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 2
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 21
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 9
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "31aff23431e00b15",
+              "count": 1
+            },
+            {
+              "key": "d4af6c775b5a6eb4",
+              "count": 1
+            },
+            {
+              "key": "da0bfae4693dc6bd",
+              "count": 1
+            },
+            {
+              "key": "28ef116a20b8ea95",
+              "count": 1
+            },
+            {
+              "key": "0d8adcfb028ef0b0",
+              "count": 1
+            },
+            {
+              "key": "e2c772560789118c",
+              "count": 1
+            },
+            {
+              "key": "5e608d04387aa1a5",
+              "count": 1
+            },
+            {
+              "key": "962d7ed28125c155",
+              "count": 1
+            },
+            {
+              "key": "b2356374577b39a2",
+              "count": 1
+            },
+            {
+              "key": "5dddab8477505645",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "0df14978bcc6d1a9",
+              "count": 3
+            },
+            {
+              "key": "0fb4d4df51008f9d",
+              "count": 1
+            },
+            {
+              "key": "1608e50b93767ae4",
+              "count": 1
+            },
+            {
+              "key": "8b2b3eb8b2f98eed",
+              "count": 1
+            },
+            {
+              "key": "6eedd2f9aacf70a5",
+              "count": 1
+            },
+            {
+              "key": "13682507ac4caec5",
+              "count": 1
+            },
+            {
+              "key": "f56ca9745867323c",
+              "count": 1
+            },
+            {
+              "key": "02c33cd065dee66b",
+              "count": 1
+            },
+            {
+              "key": "449adbbf1319a744",
+              "count": 1
+            },
+            {
+              "key": "07be48626a1958c3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 30
+          },
+          "is_adversarial": {
+            "false": 30
+          },
+          "char_length_quantiles": [
+            44.0,
+            63.5,
+            79.5,
+            113.0,
+            135.60000000000002,
+            3285.0
+          ],
+          "utf8_byte_length_quantiles": [
+            115.0,
+            147.25,
+            184.5,
+            263.75,
+            317.1,
+            8406.0
+          ]
+        },
+        "AD->HARASS": {
+          "count": 11,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 11
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 9
+            },
+            {
+              "key": "chars_000_064",
+              "count": 2
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 9
+            },
+            {
+              "key": "BANK",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 9
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "c2a56c6221b035f5",
+              "count": 1
+            },
+            {
+              "key": "692c9efa0fd20a71",
+              "count": 1
+            },
+            {
+              "key": "510f2514cbdf070d",
+              "count": 1
+            },
+            {
+              "key": "5242ed724c9dca4b",
+              "count": 1
+            },
+            {
+              "key": "86706183ea72684e",
+              "count": 1
+            },
+            {
+              "key": "28230c2924f93c7d",
+              "count": 1
+            },
+            {
+              "key": "34c550192282208c",
+              "count": 1
+            },
+            {
+              "key": "4cabe59934c9937b",
+              "count": 1
+            },
+            {
+              "key": "54d0cdddec5f76e6",
+              "count": 1
+            },
+            {
+              "key": "cb9a7af385336480",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "90cc1e9c115c6ba3",
+              "count": 2
+            },
+            {
+              "key": "7474b5350ddee89f",
+              "count": 1
+            },
+            {
+              "key": "ed8907d969db3fef",
+              "count": 1
+            },
+            {
+              "key": "be011f390d1fce19",
+              "count": 1
+            },
+            {
+              "key": "26904f81076bbdef",
+              "count": 1
+            },
+            {
+              "key": "e88c0515786bc8c0",
+              "count": 1
+            },
+            {
+              "key": "b0b64ab72a4db745",
+              "count": 1
+            },
+            {
+              "key": "d1e0e293ff90d72e",
+              "count": 1
+            },
+            {
+              "key": "d52b14b603406635",
+              "count": 1
+            },
+            {
+              "key": "6f44555f6f51a7a7",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 11
+          },
+          "is_adversarial": {
+            "false": 11
+          },
+          "char_length_quantiles": [
+            16.0,
+            65.0,
+            66.0,
+            68.0,
+            69.0,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            38.0,
+            144.5,
+            169.0,
+            180.0,
+            195.0,
+            207.0
+          ]
+        },
+        "AD->FRAUD": {
+          "count": 12,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 12
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 7
+            },
+            {
+              "key": "chars_000_064",
+              "count": 5
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 8
+            },
+            {
+              "key": "LOGISTICS",
+              "count": 1
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 11
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "d6225b28977802b0",
+              "count": 1
+            },
+            {
+              "key": "5aba90aea431f9e6",
+              "count": 1
+            },
+            {
+              "key": "22cd07dc94576499",
+              "count": 1
+            },
+            {
+              "key": "690004621499b132",
+              "count": 1
+            },
+            {
+              "key": "d4a4c532dc7313c9",
+              "count": 1
+            },
+            {
+              "key": "ff793655b3ec84b0",
+              "count": 1
+            },
+            {
+              "key": "df9d342e3feb2854",
+              "count": 1
+            },
+            {
+              "key": "fe191879dd727a27",
+              "count": 1
+            },
+            {
+              "key": "632855c5874ece5e",
+              "count": 1
+            },
+            {
+              "key": "a1699ade0bbc5675",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "312ded7c3cc5a1c3",
+              "count": 1
+            },
+            {
+              "key": "181128b2a69f811f",
+              "count": 1
+            },
+            {
+              "key": "2a7de6e8cd7d1b2c",
+              "count": 1
+            },
+            {
+              "key": "6fccb89feee89d36",
+              "count": 1
+            },
+            {
+              "key": "718c84d53708272c",
+              "count": 1
+            },
+            {
+              "key": "ccd72df885963170",
+              "count": 1
+            },
+            {
+              "key": "0ddf40fc3417cc78",
+              "count": 1
+            },
+            {
+              "key": "12328087cb76de59",
+              "count": 1
+            },
+            {
+              "key": "b78120561c34fa0f",
+              "count": 1
+            },
+            {
+              "key": "fd28b645f278fb30",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 12
+          },
+          "is_adversarial": {
+            "false": 12
+          },
+          "char_length_quantiles": [
+            21.0,
+            63.75,
+            65.0,
+            67.25,
+            69.8,
+            70.0
+          ],
+          "utf8_byte_length_quantiles": [
+            31.0,
+            159.0,
+            175.0,
+            181.5,
+            186.0,
+            192.0
+          ]
+        },
+        "HARASS->TRANSACTION": {
+          "count": 2,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 2
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_129_256",
+              "count": 1
+            },
+            {
+              "key": "chars_065_128",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 2
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "228384611c7fb4cb",
+              "count": 1
+            },
+            {
+              "key": "7a69558d28d1224e",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "5d032765845971be",
+              "count": 1
+            },
+            {
+              "key": "f87b82db757217e3",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 2
+          },
+          "is_adversarial": {
+            "false": 2
+          },
+          "char_length_quantiles": [
+            76.0,
+            94.25,
+            112.5,
+            130.75,
+            141.7,
+            149.0
+          ],
+          "utf8_byte_length_quantiles": [
+            178.0,
+            239.25,
+            300.5,
+            361.75,
+            398.5,
+            423.0
+          ]
+        },
+        "HARASS->AD": {
+          "count": 11,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 11
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_000_064",
+              "count": 6
+            },
+            {
+              "key": "chars_065_128",
+              "count": 4
+            },
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 6
+            },
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 7
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 4
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "19017c3adb2e97fb",
+              "count": 1
+            },
+            {
+              "key": "0be1e51b1ab761be",
+              "count": 1
+            },
+            {
+              "key": "9639585c3557606a",
+              "count": 1
+            },
+            {
+              "key": "f027e48e29639c28",
+              "count": 1
+            },
+            {
+              "key": "9d7141ae60dc15ac",
+              "count": 1
+            },
+            {
+              "key": "620f43f4396ce572",
+              "count": 1
+            },
+            {
+              "key": "c3f4ed38bd9a8d16",
+              "count": 1
+            },
+            {
+              "key": "921c13c6c3930152",
+              "count": 1
+            },
+            {
+              "key": "f4b8d27434433eba",
+              "count": 1
+            },
+            {
+              "key": "97d6c8349e31e0ac",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "7955cd76b3b29a3b",
+              "count": 1
+            },
+            {
+              "key": "d72237f39b60af60",
+              "count": 1
+            },
+            {
+              "key": "f9ba4b934b7de426",
+              "count": 1
+            },
+            {
+              "key": "ee366affbec2cfb3",
+              "count": 1
+            },
+            {
+              "key": "4fcfdf185c1cc841",
+              "count": 1
+            },
+            {
+              "key": "2c2a90398c4f967f",
+              "count": 1
+            },
+            {
+              "key": "02d99bfaec3a722e",
+              "count": 1
+            },
+            {
+              "key": "fde2caedb2e8a425",
+              "count": 1
+            },
+            {
+              "key": "5ba06fee6673ae07",
+              "count": 1
+            },
+            {
+              "key": "c541ef52965f1fca",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 11
+          },
+          "is_adversarial": {
+            "false": 11
+          },
+          "char_length_quantiles": [
+            46.0,
+            58.5,
+            62.0,
+            70.0,
+            93.0,
+            208.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            133.5,
+            168.0,
+            192.5,
+            204.0,
+            606.0
+          ]
+        },
+        "HARASS->FRAUD": {
+          "count": 7,
+          "predicted_label": [
+            {
+              "key": "FRAUD",
+              "count": 7
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 4
+            },
+            {
+              "key": "chars_000_064",
+              "count": 3
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "BANK",
+              "count": 4
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 7
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "ebea5bafbc08185b",
+              "count": 1
+            },
+            {
+              "key": "c8712152b03f20c3",
+              "count": 1
+            },
+            {
+              "key": "5366064618cc3d92",
+              "count": 1
+            },
+            {
+              "key": "e26d1ec6a7749ebc",
+              "count": 1
+            },
+            {
+              "key": "f9a7446525873ec2",
+              "count": 1
+            },
+            {
+              "key": "5ad766b5d63e678b",
+              "count": 1
+            },
+            {
+              "key": "e6204328d241a87f",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "991d3de525b3a640",
+              "count": 1
+            },
+            {
+              "key": "276745c064d5fee1",
+              "count": 1
+            },
+            {
+              "key": "5032c10010678ca2",
+              "count": 1
+            },
+            {
+              "key": "d31210d0838605d6",
+              "count": 1
+            },
+            {
+              "key": "31c05eec03302754",
+              "count": 1
+            },
+            {
+              "key": "b713b29b7b0ba210",
+              "count": 1
+            },
+            {
+              "key": "a418edbe0e6b8fba",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 7
+          },
+          "is_adversarial": {
+            "false": 7
+          },
+          "char_length_quantiles": [
+            60.0,
+            61.0,
+            68.0,
+            68.0,
+            68.4,
+            69.0
+          ],
+          "utf8_byte_length_quantiles": [
+            102.0,
+            141.0,
+            143.0,
+            192.0,
+            192.0,
+            192.0
+          ]
+        },
+        "FRAUD->TRANSACTION": {
+          "count": 15,
+          "predicted_label": [
+            {
+              "key": "TRANSACTION",
+              "count": 15
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 13
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            },
+            {
+              "key": "chars_129_256",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "REPAYMENT",
+              "count": 11
+            },
+            {
+              "key": "BANK",
+              "count": 3
+            },
+            {
+              "key": "UNMATCHED",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 14
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "b44559fe56a0359a",
+              "count": 1
+            },
+            {
+              "key": "e4ecccc60352c73f",
+              "count": 1
+            },
+            {
+              "key": "0c071d0e0754ccdf",
+              "count": 1
+            },
+            {
+              "key": "e7a71d1d883e08f0",
+              "count": 1
+            },
+            {
+              "key": "825b4b1fa7e0b511",
+              "count": 1
+            },
+            {
+              "key": "382c88a10ba115b2",
+              "count": 1
+            },
+            {
+              "key": "6c1efa4fcb55d4cc",
+              "count": 1
+            },
+            {
+              "key": "a8dd69125a20188f",
+              "count": 1
+            },
+            {
+              "key": "be4a16e3d718c3b2",
+              "count": 1
+            },
+            {
+              "key": "c65e7f5fc8457396",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "986f9930fb99d6ef",
+              "count": 1
+            },
+            {
+              "key": "28d21c727b29fe8d",
+              "count": 1
+            },
+            {
+              "key": "b50921c81b8f54bb",
+              "count": 1
+            },
+            {
+              "key": "49c1c8d972bab54c",
+              "count": 1
+            },
+            {
+              "key": "6ce6e14bb3e5c1f9",
+              "count": 1
+            },
+            {
+              "key": "bc20f7652d255c90",
+              "count": 1
+            },
+            {
+              "key": "d86d518551e7d00d",
+              "count": 1
+            },
+            {
+              "key": "5d0335663c8d3933",
+              "count": 1
+            },
+            {
+              "key": "4f6703d190584ea6",
+              "count": 1
+            },
+            {
+              "key": "779b3eee4d69e9c8",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 15
+          },
+          "is_adversarial": {
+            "false": 15
+          },
+          "char_length_quantiles": [
+            50.0,
+            121.5,
+            126.0,
+            126.5,
+            127.0,
+            158.0
+          ],
+          "utf8_byte_length_quantiles": [
+            92.0,
+            281.0,
+            282.0,
+            283.0,
+            299.2,
+            412.0
+          ]
+        },
+        "FRAUD->AD": {
+          "count": 3,
+          "predicted_label": [
+            {
+              "key": "AD",
+              "count": 3
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "bytes_ge_512",
+              "count": 1
+            },
+            {
+              "key": "chars_000_064",
+              "count": 1
+            },
+            {
+              "key": "chars_065_128",
+              "count": 1
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 3
+            }
+          ],
+          "source": [
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 2
+            },
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 1
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "a6ae490ac1b9cb67",
+              "count": 1
+            },
+            {
+              "key": "05026789deb00958",
+              "count": 1
+            },
+            {
+              "key": "3a263eb4d6ce6d4c",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "8d3d50e32abd9616",
+              "count": 1
+            },
+            {
+              "key": "675371938bbfcc77",
+              "count": 1
+            },
+            {
+              "key": "8c6870207c52efc9",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 3
+          },
+          "is_adversarial": {
+            "false": 3
+          },
+          "char_length_quantiles": [
+            61.0,
+            64.0,
+            67.0,
+            330.0,
+            487.8,
+            593.0
+          ],
+          "utf8_byte_length_quantiles": [
+            143.0,
+            157.0,
+            171.0,
+            645.0,
+            929.4000000000001,
+            1119.0
+          ]
+        },
+        "FRAUD->HARASS": {
+          "count": 21,
+          "predicted_label": [
+            {
+              "key": "HARASS",
+              "count": 21
+            }
+          ],
+          "length_bucket": [
+            {
+              "key": "chars_065_128",
+              "count": 11
+            },
+            {
+              "key": "chars_000_064",
+              "count": 10
+            }
+          ],
+          "coverage_subtype": [
+            {
+              "key": "UNMATCHED",
+              "count": 17
+            },
+            {
+              "key": "REPAYMENT",
+              "count": 3
+            },
+            {
+              "key": "ORDER",
+              "count": 1
+            }
+          ],
+          "source": [
+            {
+              "key": "gitcode_zh_sms_8a104",
+              "count": 12
+            },
+            {
+              "key": "normal_2w_zh_relabel",
+              "count": 9
+            }
+          ],
+          "sender_group_hash": [
+            {
+              "key": "d4f77a31808522de",
+              "count": 1
+            },
+            {
+              "key": "71158711717e878e",
+              "count": 1
+            },
+            {
+              "key": "7b0428554eadffc3",
+              "count": 1
+            },
+            {
+              "key": "1c5041ba314faf53",
+              "count": 1
+            },
+            {
+              "key": "cda4f44f8a58292c",
+              "count": 1
+            },
+            {
+              "key": "0d3a6d70ef9d9f0d",
+              "count": 1
+            },
+            {
+              "key": "92130b005210e931",
+              "count": 1
+            },
+            {
+              "key": "637c8db2708ddf8f",
+              "count": 1
+            },
+            {
+              "key": "ea8fc03a4deb29ae",
+              "count": 1
+            },
+            {
+              "key": "8f0582cc61d7bbcb",
+              "count": 1
+            }
+          ],
+          "template_group_hash": [
+            {
+              "key": "f8ce28010e42d6fb",
+              "count": 2
+            },
+            {
+              "key": "e52e4f8f9b378dbd",
+              "count": 1
+            },
+            {
+              "key": "bbcd0369f168e71c",
+              "count": 1
+            },
+            {
+              "key": "f3ffc4e5d13dc6a5",
+              "count": 1
+            },
+            {
+              "key": "dc9a3d52bedfe47f",
+              "count": 1
+            },
+            {
+              "key": "9d96e5b4d6339973",
+              "count": 1
+            },
+            {
+              "key": "4749b2967cb100f7",
+              "count": 1
+            },
+            {
+              "key": "311a5117df3bd035",
+              "count": 1
+            },
+            {
+              "key": "ba8c4f53d013c28c",
+              "count": 1
+            },
+            {
+              "key": "ca7978571c0cc795",
+              "count": 1
+            }
+          ],
+          "is_synthetic": {
+            "false": 21
+          },
+          "is_adversarial": {
+            "false": 21
+          },
+          "char_length_quantiles": [
+            32.0,
+            60.0,
+            66.0,
+            69.0,
+            70.0,
+            104.0
+          ],
+          "utf8_byte_length_quantiles": [
+            54.0,
+            128.0,
+            154.0,
+            174.0,
+            185.0,
+            268.0
+          ]
+        }
+      }
+    }
+  ],
+  "consensus": {
+    "model_names": [
+      "lr_5e4",
+      "lr_5e4_focal_0p75",
+      "dropout_0p10",
+      "dropout_0p10_focal_0p75"
+    ],
+    "any_model_wrong_count": 182,
+    "all_models_wrong_count": 96,
+    "all_models_wrong_by_true_label": {
+      "AD": {
+        "count": 33,
+        "predicted_label": [
+          {
+            "key": "lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 19
+          },
+          {
+            "key": "lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+            "count": 10
+          },
+          {
+            "key": "lr_5e4:HARASS|lr_5e4_focal_0p75:HARASS|dropout_0p10:HARASS|dropout_0p10_focal_0p75:HARASS",
+            "count": 3
+          },
+          {
+            "key": "lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:HARASS",
+            "count": 1
+          }
+        ],
+        "length_bucket": [
+          {
+            "key": "chars_065_128",
+            "count": 19
+          },
+          {
+            "key": "chars_000_064",
+            "count": 12
+          },
+          {
+            "key": "chars_129_256",
+            "count": 2
+          }
+        ],
+        "coverage_subtype": [
+          {
+            "key": "UNMATCHED",
+            "count": 15
+          },
+          {
+            "key": "BANK",
+            "count": 9
+          },
+          {
+            "key": "REPAYMENT",
+            "count": 3
+          },
+          {
+            "key": "CARRIER",
+            "count": 3
+          },
+          {
+            "key": "ORDER",
+            "count": 2
+          },
+          {
+            "key": "LOGISTICS",
+            "count": 1
+          }
+        ],
+        "source": [
+          {
+            "key": "normal_2w_zh_relabel",
+            "count": 23
+          },
+          {
+            "key": "gitcode_zh_sms_8a104",
+            "count": 10
+          }
+        ],
+        "sender_group_hash": [
+          {
+            "key": "5aba90aea431f9e6",
+            "count": 1
+          },
+          {
+            "key": "31aff23431e00b15",
+            "count": 1
+          },
+          {
+            "key": "d4af6c775b5a6eb4",
+            "count": 1
+          },
+          {
+            "key": "da0bfae4693dc6bd",
+            "count": 1
+          },
+          {
+            "key": "c2a56c6221b035f5",
+            "count": 1
+          },
+          {
+            "key": "28ef116a20b8ea95",
+            "count": 1
+          },
+          {
+            "key": "0d8adcfb028ef0b0",
+            "count": 1
+          },
+          {
+            "key": "22cd07dc94576499",
+            "count": 1
+          },
+          {
+            "key": "690004621499b132",
+            "count": 1
+          },
+          {
+            "key": "d4a4c532dc7313c9",
+            "count": 1
+          }
+        ],
+        "template_group_hash": [
+          {
+            "key": "0df14978bcc6d1a9",
+            "count": 3
+          },
+          {
+            "key": "181128b2a69f811f",
+            "count": 1
+          },
+          {
+            "key": "7474b5350ddee89f",
+            "count": 1
+          },
+          {
+            "key": "0fb4d4df51008f9d",
+            "count": 1
+          },
+          {
+            "key": "1608e50b93767ae4",
+            "count": 1
+          },
+          {
+            "key": "2a7de6e8cd7d1b2c",
+            "count": 1
+          },
+          {
+            "key": "6fccb89feee89d36",
+            "count": 1
+          },
+          {
+            "key": "718c84d53708272c",
+            "count": 1
+          },
+          {
+            "key": "ccd72df885963170",
+            "count": 1
+          },
+          {
+            "key": "6eedd2f9aacf70a5",
+            "count": 1
+          }
+        ],
+        "is_synthetic": {
+          "false": 33
+        },
+        "is_adversarial": {
+          "false": 33
+        },
+        "char_length_quantiles": [
+          16.0,
+          63.0,
+          66.0,
+          79.0,
+          103.0,
+          141.0
+        ],
+        "utf8_byte_length_quantiles": [
+          38.0,
+          145.0,
+          175.0,
+          195.0,
+          258.40000000000003,
+          314.0
+        ]
+      },
+      "FRAUD": {
+        "count": 32,
+        "predicted_label": [
+          {
+            "key": "lr_5e4:HARASS|lr_5e4_focal_0p75:HARASS|dropout_0p10:HARASS|dropout_0p10_focal_0p75:HARASS",
+            "count": 14
+          },
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 7
+          },
+          {
+            "key": "lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 4
+          },
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:HARASS|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 3
+          },
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:HARASS",
+            "count": 1
+          },
+          {
+            "key": "lr_5e4:HARASS|lr_5e4_focal_0p75:AD|dropout_0p10:HARASS|dropout_0p10_focal_0p75:HARASS",
+            "count": 1
+          },
+          {
+            "key": "lr_5e4:TRANSACTION|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 1
+          },
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+            "count": 1
+          }
+        ],
+        "length_bucket": [
+          {
+            "key": "chars_065_128",
+            "count": 24
+          },
+          {
+            "key": "chars_000_064",
+            "count": 7
+          },
+          {
+            "key": "chars_129_256",
+            "count": 1
+          }
+        ],
+        "coverage_subtype": [
+          {
+            "key": "REPAYMENT",
+            "count": 14
+          },
+          {
+            "key": "UNMATCHED",
+            "count": 14
+          },
+          {
+            "key": "BANK",
+            "count": 3
+          },
+          {
+            "key": "ORDER",
+            "count": 1
+          }
+        ],
+        "source": [
+          {
+            "key": "normal_2w_zh_relabel",
+            "count": 19
+          },
+          {
+            "key": "gitcode_zh_sms_8a104",
+            "count": 13
+          }
+        ],
+        "sender_group_hash": [
+          {
+            "key": "b44559fe56a0359a",
+            "count": 1
+          },
+          {
+            "key": "e4ecccc60352c73f",
+            "count": 1
+          },
+          {
+            "key": "0c071d0e0754ccdf",
+            "count": 1
+          },
+          {
+            "key": "e7a71d1d883e08f0",
+            "count": 1
+          },
+          {
+            "key": "825b4b1fa7e0b511",
+            "count": 1
+          },
+          {
+            "key": "382c88a10ba115b2",
+            "count": 1
+          },
+          {
+            "key": "6c1efa4fcb55d4cc",
+            "count": 1
+          },
+          {
+            "key": "a8dd69125a20188f",
+            "count": 1
+          },
+          {
+            "key": "be4a16e3d718c3b2",
+            "count": 1
+          },
+          {
+            "key": "c65e7f5fc8457396",
+            "count": 1
+          }
+        ],
+        "template_group_hash": [
+          {
+            "key": "f8ce28010e42d6fb",
+            "count": 2
+          },
+          {
+            "key": "986f9930fb99d6ef",
+            "count": 1
+          },
+          {
+            "key": "28d21c727b29fe8d",
+            "count": 1
+          },
+          {
+            "key": "b50921c81b8f54bb",
+            "count": 1
+          },
+          {
+            "key": "49c1c8d972bab54c",
+            "count": 1
+          },
+          {
+            "key": "6ce6e14bb3e5c1f9",
+            "count": 1
+          },
+          {
+            "key": "bc20f7652d255c90",
+            "count": 1
+          },
+          {
+            "key": "d86d518551e7d00d",
+            "count": 1
+          },
+          {
+            "key": "5d0335663c8d3933",
+            "count": 1
+          },
+          {
+            "key": "4f6703d190584ea6",
+            "count": 1
+          }
+        ],
+        "is_synthetic": {
+          "false": 32
+        },
+        "is_adversarial": {
+          "false": 32
+        },
+        "char_length_quantiles": [
+          36.0,
+          66.75,
+          69.5,
+          126.0,
+          126.9,
+          158.0
+        ],
+        "utf8_byte_length_quantiles": [
+          86.0,
+          152.0,
+          175.0,
+          282.0,
+          283.0,
+          412.0
+        ]
+      },
+      "HARASS": {
+        "count": 17,
+        "predicted_label": [
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+            "count": 9
+          },
+          {
+            "key": "lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+            "count": 6
+          },
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+            "count": 1
+          },
+          {
+            "key": "lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+            "count": 1
+          }
+        ],
+        "length_bucket": [
+          {
+            "key": "chars_065_128",
+            "count": 8
+          },
+          {
+            "key": "chars_000_064",
+            "count": 8
+          },
+          {
+            "key": "bytes_ge_512",
+            "count": 1
+          }
+        ],
+        "coverage_subtype": [
+          {
+            "key": "BANK",
+            "count": 8
+          },
+          {
+            "key": "UNMATCHED",
+            "count": 7
+          },
+          {
+            "key": "REPAYMENT",
+            "count": 2
+          }
+        ],
+        "source": [
+          {
+            "key": "normal_2w_zh_relabel",
+            "count": 11
+          },
+          {
+            "key": "gitcode_zh_sms_8a104",
+            "count": 6
+          }
+        ],
+        "sender_group_hash": [
+          {
+            "key": "ebea5bafbc08185b",
+            "count": 1
+          },
+          {
+            "key": "c8712152b03f20c3",
+            "count": 1
+          },
+          {
+            "key": "5366064618cc3d92",
+            "count": 1
+          },
+          {
+            "key": "e26d1ec6a7749ebc",
+            "count": 1
+          },
+          {
+            "key": "f9a7446525873ec2",
+            "count": 1
+          },
+          {
+            "key": "19017c3adb2e97fb",
+            "count": 1
+          },
+          {
+            "key": "0be1e51b1ab761be",
+            "count": 1
+          },
+          {
+            "key": "9639585c3557606a",
+            "count": 1
+          },
+          {
+            "key": "f027e48e29639c28",
+            "count": 1
+          },
+          {
+            "key": "9d7141ae60dc15ac",
+            "count": 1
+          }
+        ],
+        "template_group_hash": [
+          {
+            "key": "991d3de525b3a640",
+            "count": 1
+          },
+          {
+            "key": "276745c064d5fee1",
+            "count": 1
+          },
+          {
+            "key": "5032c10010678ca2",
+            "count": 1
+          },
+          {
+            "key": "d31210d0838605d6",
+            "count": 1
+          },
+          {
+            "key": "31c05eec03302754",
+            "count": 1
+          },
+          {
+            "key": "7955cd76b3b29a3b",
+            "count": 1
+          },
+          {
+            "key": "d72237f39b60af60",
+            "count": 1
+          },
+          {
+            "key": "f9ba4b934b7de426",
+            "count": 1
+          },
+          {
+            "key": "ee366affbec2cfb3",
+            "count": 1
+          },
+          {
+            "key": "4fcfdf185c1cc841",
+            "count": 1
+          }
+        ],
+        "is_synthetic": {
+          "false": 17
+        },
+        "is_adversarial": {
+          "false": 17
+        },
+        "char_length_quantiles": [
+          46.0,
+          60.0,
+          66.0,
+          70.0,
+          82.80000000000001,
+          208.0
+        ],
+        "utf8_byte_length_quantiles": [
+          102.0,
+          141.0,
+          176.0,
+          192.0,
+          202.2,
+          606.0
+        ]
+      },
+      "TRANSACTION": {
+        "count": 14,
+        "predicted_label": [
+          {
+            "key": "lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+            "count": 13
+          },
+          {
+            "key": "lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+            "count": 1
+          }
+        ],
+        "length_bucket": [
+          {
+            "key": "chars_065_128",
+            "count": 8
+          },
+          {
+            "key": "chars_000_064",
+            "count": 4
+          },
+          {
+            "key": "chars_129_256",
+            "count": 1
+          },
+          {
+            "key": "bytes_ge_512",
+            "count": 1
+          }
+        ],
+        "coverage_subtype": [
+          {
+            "key": "CARRIER",
+            "count": 8
+          },
+          {
+            "key": "UNMATCHED",
+            "count": 6
+          }
+        ],
+        "source": [
+          {
+            "key": "normal_2w_zh_relabel",
+            "count": 9
+          },
+          {
+            "key": "gitcode_zh_sms_8a104",
+            "count": 5
+          }
+        ],
+        "sender_group_hash": [
+          {
+            "key": "c5a25a46a3693995",
+            "count": 1
+          },
+          {
+            "key": "2f35e585cf2da4a5",
+            "count": 1
+          },
+          {
+            "key": "2ff041df461cd692",
+            "count": 1
+          },
+          {
+            "key": "8ce2388e1f459d73",
+            "count": 1
+          },
+          {
+            "key": "8cd040d4cdf5745d",
+            "count": 1
+          },
+          {
+            "key": "ec48c55439d30df0",
+            "count": 1
+          },
+          {
+            "key": "7c162b7b84183e63",
+            "count": 1
+          },
+          {
+            "key": "26f0ecd53643b831",
+            "count": 1
+          },
+          {
+            "key": "e0bc8143dd33c7fe",
+            "count": 1
+          },
+          {
+            "key": "a198126160fa6776",
+            "count": 1
+          }
+        ],
+        "template_group_hash": [
+          {
+            "key": "6559a535f0f7f29c",
+            "count": 1
+          },
+          {
+            "key": "084da9ad9b004d63",
+            "count": 1
+          },
+          {
+            "key": "2a054c5ac7e2a48c",
+            "count": 1
+          },
+          {
+            "key": "c1c918e50d499478",
+            "count": 1
+          },
+          {
+            "key": "85d99e1418382452",
+            "count": 1
+          },
+          {
+            "key": "d736582ab62626c8",
+            "count": 1
+          },
+          {
+            "key": "9648949538d85607",
+            "count": 1
+          },
+          {
+            "key": "fa59012082f79fd9",
+            "count": 1
+          },
+          {
+            "key": "6c28c9b9c5a4864f",
+            "count": 1
+          },
+          {
+            "key": "f332763ee10a50c3",
+            "count": 1
+          }
+        ],
+        "is_synthetic": {
+          "false": 14
+        },
+        "is_adversarial": {
+          "false": 14
+        },
+        "char_length_quantiles": [
+          27.0,
+          63.75,
+          106.0,
+          121.0,
+          137.60000000000002,
+          296.0
+        ],
+        "utf8_byte_length_quantiles": [
+          77.0,
+          149.25,
+          218.0,
+          255.0,
+          335.2000000000001,
+          730.0
+        ]
+      }
+    },
+    "top_prediction_signatures": [
+      {
+        "key": "AD=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 19
+      },
+      {
+        "key": "FRAUD=>lr_5e4:HARASS|lr_5e4_focal_0p75:HARASS|dropout_0p10:HARASS|dropout_0p10_focal_0p75:HARASS",
+        "count": 14
+      },
+      {
+        "key": "TRANSACTION=>lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+        "count": 13
+      },
+      {
+        "key": "AD=>lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+        "count": 10
+      },
+      {
+        "key": "HARASS=>lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+        "count": 9
+      },
+      {
+        "key": "FRAUD=>lr_5e4:AD|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 7
+      },
+      {
+        "key": "HARASS=>lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+        "count": 6
+      },
+      {
+        "key": "AD=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+        "count": 5
+      },
+      {
+        "key": "AD=>lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 5
+      },
+      {
+        "key": "AD=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:AD|dropout_0p10:AD|dropout_0p10_focal_0p75:AD",
+        "count": 5
+      },
+      {
+        "key": "TRANSACTION=>lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 5
+      },
+      {
+        "key": "FRAUD=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 4
+      },
+      {
+        "key": "TRANSACTION=>lr_5e4:AD|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 4
+      },
+      {
+        "key": "FRAUD=>lr_5e4:AD|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:HARASS|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 3
+      },
+      {
+        "key": "TRANSACTION=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:TRANSACTION|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 3
+      },
+      {
+        "key": "AD=>lr_5e4:HARASS|lr_5e4_focal_0p75:HARASS|dropout_0p10:HARASS|dropout_0p10_focal_0p75:HARASS",
+        "count": 3
+      },
+      {
+        "key": "FRAUD=>lr_5e4:FRAUD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:HARASS",
+        "count": 3
+      },
+      {
+        "key": "FRAUD=>lr_5e4:AD|lr_5e4_focal_0p75:FRAUD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:FRAUD",
+        "count": 3
+      },
+      {
+        "key": "AD=>lr_5e4:TRANSACTION|lr_5e4_focal_0p75:AD|dropout_0p10:TRANSACTION|dropout_0p10_focal_0p75:TRANSACTION",
+        "count": 3
+      },
+      {
+        "key": "AD=>lr_5e4:AD|lr_5e4_focal_0p75:AD|dropout_0p10:FRAUD|dropout_0p10_focal_0p75:AD",
+        "count": 2
+      }
+    ]
+  },
+  "decision": "analysis_only_no_candidate",
+  "decision_reason": "This report clusters validation errors without raw text or IDs. It does not create a candidate, change labels, read locked test, or authorize human review."
+}

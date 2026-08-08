@@ -1,0 +1,15 @@
+{
+  "run_id": "stage2_xfyun_teacher_student_ensemble_audit_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis": "A fixed four-class probability ensemble of the existing ByteCNN and BERT teacher may satisfy all category gates without a transaction-specific rule or threshold.",
+  "only_changed_variable": "teacher probability weight in a linear four-class fusion grid from 0.00 through 1.00",
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "No fusion weight passed all gates. The best minimum-gate-ratio row used teacher_weight=0.50, with transaction recall=0.958231, transaction precision=0.896552, macro F1=0.863908, HARASS F1=0.787330, and FRAUD recall=0.812155.",
+  "authoritative_analysis": "ensemble_analysis.json",
+  "next_hypothesis": "Change one deployable ByteCNN capacity or receptive-field variable on the current provisional overlay, then evaluate the resulting Keras model independently."
+}

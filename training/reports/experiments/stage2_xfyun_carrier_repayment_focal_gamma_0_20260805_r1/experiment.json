@@ -1,0 +1,89 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_focal_gamma_0_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only the shared transaction-protection loss weight can reduce transaction misses without inference-time category overrides.",
+  "only_changed_variable": "distillation.primary_focal_gamma=0.0 (baseline=0.50)",
+  "config_sha256": "a16bf83e296d18eef5d549325df9883b428ad442823bc04d03b79615daa4139b",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8595113438045375,
+    "macro_f1": 0.823260383198667,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8888888888888888,
+        "recall": 0.9238329238329238,
+        "f1": 0.9060240963855422
+      },
+      "AD": {
+        "precision": 0.916267942583732,
+        "recall": 0.8473451327433629,
+        "f1": 0.8804597701149426
+      },
+      "HARASS": {
+        "precision": 0.6115107913669064,
+        "recall": 0.8018867924528302,
+        "f1": 0.6938775510204082
+      },
+      "FRAUD": {
+        "precision": 0.8493975903614458,
+        "recall": 0.7790055248618785,
+        "f1": 0.8126801152737753
+      }
+    },
+    "confusion_matrix": [
+      [
+        376,
+        21,
+        6,
+        4
+      ],
+      [
+        38,
+        383,
+        16,
+        15
+      ],
+      [
+        5,
+        10,
+        85,
+        6
+      ],
+      [
+        4,
+        4,
+        32,
+        141
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 4,
+  "model_sha256": "935fddf3149c72f2d0fe73b552972a48177f85a151f3881c7ecdea06512c976b",
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.923833 < 0.985000",
+    "transaction_precision=0.888889 < 0.920000",
+    "macro_f1=0.823260 < 0.860000",
+    "harass_f1=0.693878 < 0.800000",
+    "fraud_recall=0.779006 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

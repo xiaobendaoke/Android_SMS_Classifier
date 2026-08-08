@@ -93,6 +93,37 @@ class RuleEngineTest {
         val signals = engine.collectSignals("请尽快转账到指定账户", null)
         assertFalse(signals.hasOtpProtect)
     }
+
+    @Test
+    fun collectSignals_bankActivity_usesHighPrecisionTransactionProtect() {
+        val engine = RuleEngine.fromReader(AssetLoader::readText)
+        val signals = engine.collectSignals("招商银行信用卡尾号1234消费88.00元，余额变动", null)
+        assertTrue(signals.hasTransactionProtect)
+        assertTrue(signals.matchedRuleIds.contains("TXN_BANK_PROTECT_CN_001"))
+    }
+
+    @Test
+    fun collectSignals_creditCardPromotion_doesNotUseTransactionProtect() {
+        val engine = RuleEngine.fromReader(AssetLoader::readText)
+        val signals = engine.collectSignals("信用卡优惠活动，立即申请享好礼", null)
+        assertFalse(signals.hasTransactionProtect)
+    }
+
+    @Test
+    fun collectSignals_carrierBillingProtected_butPromotionExcluded() {
+        val engine = RuleEngine.fromReader(AssetLoader::readText)
+        val billing = engine.collectSignals(
+            "中国移动提醒：本月话费账单余额不足，请及时充值",
+            "10086",
+        )
+        val promotion = engine.collectSignals(
+            "中国移动套餐到期优惠，充值赠送20GB，回复TD退订",
+            "10086",
+        )
+        assertTrue(billing.hasTransactionProtect)
+        assertTrue(billing.matchedRuleIds.contains("TXN_CARRIER_PROTECT_CN_001"))
+        assertFalse(promotion.hasTransactionProtect)
+    }
 }
 
 class DecisionRouterTest {
@@ -114,6 +145,32 @@ class DecisionRouterTest {
         assertEquals(SmsAction.REVIEW, result.action)
         assertEquals(SmsCategory.FRAUD, result.category)
         assertEquals("OTP_FRAUD_CONFLICT", result.reasonCode)
+    }
+
+    @Test
+    fun route_auxiliaryTransactionHead_protectsActionWithoutRelabeling() {
+        val dualHeadMetadata = ModelMetadata.loadFromJson(
+            AssetLoader.readText("model/model_metadata.json")
+                .replace("\"architecture\": \"byte_textcnn\"", "\"architecture\": \"byte_textcnn_dual_head\"")
+                .replace(
+                    "\"labels\": [",
+                    "\"modelOutputSize\": 5,\n" +
+                        "  \"transactionProtectionIndex\": 4,\n" +
+                        "  \"transactionProtectionThreshold\": 0.5,\n" +
+                        "  \"labels\": [",
+                ),
+        )
+        val result = DecisionRouter(dualHeadMetadata).route(
+            input = SmsInput(sender = null, body = "普通通知", timestampMillis = 0L),
+            normalized = "普通通知",
+            signals = RuleSignals(),
+            modelProbs = floatArrayOf(0.10f, 0.80f, 0.05f, 0.05f, 0.90f),
+            modelAvailable = true,
+        )
+        assertEquals(SmsCategory.AD, result.category)
+        assertEquals(SmsAction.INBOX, result.action)
+        assertEquals("MODEL_TRANSACTION_PROTECT", result.reasonCode)
+        assertEquals(4, result.probabilities.size)
     }
 }
 

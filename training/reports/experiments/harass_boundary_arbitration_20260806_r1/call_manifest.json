@@ -1,0 +1,34 @@
+{
+  "run_id": "harass_boundary_arbitration_20260806_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS_PENDING_FINALIZE",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "candidate_count": 22,
+  "pass_a": {
+    "model": "xopglm52",
+    "input_sha256": "59bec8fe4e20b12736fe547ba5c0f6a45e0277e5c0e651e41cfff43e3455cb20",
+    "output_sha256": "20834e5fb5f53f3503544016d75bd40afb26a8da6f234d5573041e0dc424093e",
+    "parsed_count": 22
+  },
+  "pass_b": {
+    "model": "xopdeepseekv4flash",
+    "input_sha256": "15b3e9e2a940d593425a2d79e61bba907f309aeaee69b100429499ab95d75d23",
+    "output_sha256": "9f103c6ccbe3e19f4ced558e33a4af857a8c494d6334d9b16b6fdf08b70141ee",
+    "parsed_count": 22
+  },
+  "pass_c": {
+    "model": "xopdeepseekv4flash",
+    "input_sha256": "98731686d76ec35f9c91ded3a4e209ec031f83925d16f672bd23816feaba0ba8",
+    "output_sha256": "3031d165a6925e2564a23bab83c1ac03ca72cb74f362adb496fe31a2075e5321",
+    "parsed_count": 22
+  },
+  "agreement_count": 0,
+  "disagreement_count": 22,
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

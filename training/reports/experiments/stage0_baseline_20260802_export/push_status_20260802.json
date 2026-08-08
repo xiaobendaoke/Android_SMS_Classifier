@@ -1,0 +1,14 @@
+{
+  "run_id": "stage0_baseline_20260802",
+  "commit_sha": "095ad4060e56495b58a956cdea3cbd5d44b4f4a3",
+  "branch": "cursor/fix-formal-quantize-int8-800d",
+  "remote": "origin",
+  "command": "git push origin cursor/fix-formal-quantize-int8-800d",
+  "attempts": [
+    {"exit_code": 1, "failure": "Recv failure: Connection was reset"},
+    {"exit_code": 1, "failure": "Failed to connect to github.com port 443 after 21068 ms"},
+    {"exit_code": 0, "proxy": "http://127.0.0.1:7897", "remote_before": "4337d2c", "remote_after": "095ad40"}
+  ],
+  "push_state": "PUSHED",
+  "remote_modified": true
+}

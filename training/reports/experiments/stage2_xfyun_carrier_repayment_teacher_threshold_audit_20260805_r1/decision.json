@@ -1,0 +1,15 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_teacher_threshold_audit_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis": "A transaction probability threshold might reach recall target while preserving the other category gates.",
+  "only_changed_variable": "teacher transaction probability threshold, audited from 0.01 through 0.99",
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "No threshold satisfied the non-transaction gates. At recall 0.985258, transaction precision was 0.789370, macro F1 was 0.825106, HARASS F1 was 0.740741, and FRAUD recall was 0.773481.",
+  "authoritative_analysis": "threshold_analysis.json",
+  "next_hypothesis": "Evaluate a probability-level ensemble of the existing ByteCNN and teacher checkpoints; this must retain all four-category scores and cannot use a transaction-only override."
+}

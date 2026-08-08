@@ -1,0 +1,12 @@
+{
+  "total_template_groups": 11519,
+  "consistent_groups": 11513,
+  "inconsistent_groups": 6,
+  "harass_involved_inconsistent_groups": 5,
+  "total_inconsistent_rows": 22,
+  "harass_inconsistent_rows": 16,
+  "inconsistent_label_pair_counts": {
+    "FRAUD|HARASS": 5,
+    "AD|FRAUD": 1
+  }
+}

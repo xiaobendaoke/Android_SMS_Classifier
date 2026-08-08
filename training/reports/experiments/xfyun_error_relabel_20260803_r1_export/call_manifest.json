@@ -1,0 +1,20 @@
+{
+  "run_id": "xfyun_error_relabel_20260803_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS_PENDING_QA",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "pass_a": {
+    "model": "xopglm52",
+    "input_sha256": "2812a3c16dd4f2c8c2df8c6fb73fbfea348bf72bbc23169d684c9a3d6f01bf04",
+    "output_sha256": "f4e51fcc26c8e635f0ab2cc62d8d401576f7cc4e13de8f68aee9586109898127",
+    "candidate_count": 14
+  },
+  "pass_b": {
+    "model": "xopdeepseekv4flash",
+    "input_sha256": "67cdaf33e6ed3a0b587cf8ca298b3237fa80f3b2bd770d5f8f8053772c144cbe",
+    "output_sha256": "5f97c61a664fcc1145d4f911038beb07dd3bd752646e01fc8e41a7819c6bc6cf",
+    "candidate_count": 14
+  }
+}

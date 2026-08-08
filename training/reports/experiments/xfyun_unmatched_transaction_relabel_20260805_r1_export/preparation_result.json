@@ -1,0 +1,11 @@
+{
+  "run_id": "xfyun_unmatched_transaction_relabel_20260805_r1",
+  "status": "NO_NEW_UNREVIEWED_CANDIDATES",
+  "candidate_count": 0,
+  "external_send_performed": false,
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "reason": "All current unmatched Chinese TRANSACTION false negatives were already included in the prior blind-label review pack."
+}

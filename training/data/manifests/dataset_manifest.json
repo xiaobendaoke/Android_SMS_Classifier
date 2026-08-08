@@ -1,43 +1,108 @@
 {
+  "status": "FROZEN_FOR_TRAINING",
+  "freeze_sha256": "0186b4e8e70dea5e8300bc871e1ad6feeb407b2a119aa7fa2c8fddab8d5c1ae7",
   "seed": 42,
-  "scheme": "train=normal_2w_zh_relabel(all,deduped); val/test=annotated_homework_bootstrap zh-only 50/50 group-split",
+  "split_assignment": "data/manifests/split_assignment_v1.json",
+  "split_assignment_freeze_sha256": "1d06fec1127a1ee8ce62b5cf8ca47d80569317a67f58017dc99d318dc8d9c93a",
+  "source_files": [
+    {
+      "path": "data/raw/normal_2w_zh_relabel.jsonl",
+      "sha256": "e0868e20f8f8953aa995bd7caf24ae84a788c579c1c64773fd3897922b2fe8db"
+    },
+    {
+      "path": "data/raw/annotated_homework_bootstrap.jsonl",
+      "sha256": "959cf208f8d92a3f0fcc9384f80092db923cf36bdee523e420832133551d22d2"
+    }
+  ],
   "splits": {
     "train": {
       "path": "data/processed/train.jsonl",
-      "count": 7282,
-      "sha256": "a9a2c3c3d25eaff57e55dff38d998d0bc3b56c10b94a02ee3a729dd365b4540c"
+      "count": 11158,
+      "sha256": "49a4d4f8f9a3610c2643b168b6a92f98349bc3181205c0b026a2b3c29f0c5d59"
     },
     "validation": {
       "path": "data/processed/validation.jsonl",
-      "count": 2708,
-      "sha256": "b8e430cb579dbb8745b98251a95ee40f604c9c2fb35f785ac915e2ec8e00342b"
+      "count": 1402,
+      "sha256": "4487924f07ca074e6ff4d345b2c79e1e9ea8719decc8cd4e5518ac4346ae9632"
     },
     "test": {
       "path": "data/processed/test.jsonl",
-      "count": 2709,
-      "sha256": "cae511c643976e0466f523f3a58922276de732d382f2046fef1aceceb1310f4b"
+      "count": 1402,
+      "sha256": "fa98aa85fdb3047d8e90fe3ab98dd923f9490cd160cc60c90926eef937c79781"
     }
   },
   "dedupe": {
-    "train_removed_exact": 1339,
-    "train_removed_normalized": 4,
-    "eval_removed_exact": 2607,
-    "eval_removed_normalized": 3,
-    "eval_dropped_overlap_with_train": 0
+    "removed_exact": 4061,
+    "removed_normalized": 12
+  },
+  "holdout": {
+    "manifest": "data/manifests/transaction_specialist_holdout.json",
+    "manifest_sha256": "e6709ba5338513643cb35c12ffad8a4017a6a332f198ada070da4beed3ae6bee",
+    "excluded_connected_records": 1185
+  },
+  "label_corrections": {
+    "manifest": "data/manifests/boundary_label_corrections_v1.json",
+    "manifest_status": "PROVISIONAL_AUTOMATED_REVIEW",
+    "claim_allowed": false,
+    "applied": 704,
+    "removed_needs_review": 34,
+    "unmatched": 5,
+    "quarantined": 29,
+    "changed_labels": 407,
+    "unmatched_by_reason": {
+      "canonical_whitespace_only": 5
+    },
+    "manifest_sha256": "8c251944f8412d67e7886de78f7a097c0ce8f3b107da729f452d0ff89a11cf3b"
+  },
+  "correction_application": {
+    "path": "data/manifests/boundary_correction_application_v1.json",
+    "sha256": "e774a5bee6025b5ca9594872b8a365eb63c3f73846fce700d00d91f654aa919a"
+  },
+  "quarantine": {
+    "path": "data/interim/quarantine/train_quarantine_v1.jsonl",
+    "count": 63,
+    "sha256": "03871a5b49c59198d27c7e37aefca0028d4b3e46d8401ab6ec22291f6dcea084"
   },
   "leakage": {
     "status": "PASS",
     "issue_count": 0,
     "issues": [],
     "split_counts": {
-      "train": 7282,
-      "validation": 2708,
-      "test": 2709
+      "train": 11158,
+      "validation": 1402,
+      "test": 1402
     },
-    "group_counts": {
-      "train": 7282,
-      "validation": 2708,
-      "test": 2709
+    "connected_component_counts": {
+      "train": 9013,
+      "validation": 1133,
+      "test": 1133
     }
-  }
+  },
+  "blockers": [
+    {
+      "type": "frozen_split_text_quality",
+      "split": "validation",
+      "count": 4,
+      "ids": [
+        "zh-n2w-04573",
+        "zh-n2w-01703",
+        "zh-n2w-05342",
+        "zh-n2w-04117"
+      ],
+      "note": "Frozen identity SHA preserved; texts are unrecovered. Do not claim validation-ready until resolved."
+    },
+    {
+      "type": "frozen_split_text_quality",
+      "split": "test",
+      "count": 5,
+      "ids": [
+        "zh-n2w-03809",
+        "zh-n2w-01813",
+        "zh-n2w-00469",
+        "zh-n2w-05979",
+        "zh-n2w-02966"
+      ],
+      "note": "Frozen identity SHA preserved; texts are unrecovered. Do not claim validation-ready until resolved."
+    }
+  ]
 }

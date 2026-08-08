@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "removal_policy": "text_quality_only",
+  "replacement_policy": "none",
+  "model_scores_used": false,
+  "claim_allowed": false,
+  "parent_validation_sha256": "4487924f07ca074e6ff4d345b2c79e1e9ea8719decc8cd4e5518ac4346ae9632",
+  "parent_test_sha256": "fa98aa85fdb3047d8e90fe3ab98dd923f9490cd160cc60c90926eef937c79781",
+  "v2_validation_sha256": "5fef5c83fd14b693e526a8561626aef2e4fdf264c98ff5ef999fd9d41ef55fe0",
+  "v2_test_sha256": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57",
+  "removed_counts": {
+    "validation": 4,
+    "test": 5,
+    "total": 9
+  },
+  "removed_ids": {
+    "validation": [
+      "zh-n2w-01703",
+      "zh-n2w-04117",
+      "zh-n2w-04573",
+      "zh-n2w-05342"
+    ],
+    "test": [
+      "zh-n2w-00469",
+      "zh-n2w-01813",
+      "zh-n2w-02966",
+      "zh-n2w-03809",
+      "zh-n2w-05979"
+    ]
+  },
+  "counts": {
+    "train": 11158,
+    "validation": 1398,
+    "test": 1397
+  },
+  "label_distributions": {
+    "train": {
+      "TRANSACTION": 3399,
+      "AD": 4823,
+      "HARASS": 1218,
+      "FRAUD": 1718
+    },
+    "validation": {
+      "TRANSACTION": 428,
+      "AD": 601,
+      "FRAUD": 230,
+      "HARASS": 139
+    },
+    "test": {
+      "TRANSACTION": 427,
+      "AD": 601,
+      "FRAUD": 230,
+      "HARASS": 139
+    }
+  },
+  "assignment_path": "data/manifests/split_assignment_v2.json",
+  "assignment_freeze_sha256": "000f424e682aa321b0640e9a1eb2e26ae390b452360ef8d15fafa0f4fa243d5d",
+  "recomputed_freeze_sha256": "000f424e682aa321b0640e9a1eb2e26ae390b452360ef8d15fafa0f4fa243d5d"
+}

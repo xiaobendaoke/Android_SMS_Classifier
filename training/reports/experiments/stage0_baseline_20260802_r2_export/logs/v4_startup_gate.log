@@ -1,0 +1,14 @@
+command= /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/.venv/bin/python /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/scripts/run_recall_v4.py --skip-teacher --run-name recall_v7 --seed 42
+started_at=2026-08-02T09:59:15Z
+{
+  "status": "V2_STARTUP_DENIED",
+  "blockers": [
+    "label_conflicts_v2: human annotation incomplete (PENDING_DUAL_HUMAN_ANNOTATION)",
+    "transaction_specialist_v2: human annotation incomplete (PENDING_DUAL_HUMAN_ANNOTATION)",
+    "dataset_manifest_v2 human_annotation_incomplete"
+  ],
+  "locked_test_reachable": false,
+  "data_root": "training/data/processed_v2"
+}
+ended_at=2026-08-02T09:59:18Z
+exit_code=6

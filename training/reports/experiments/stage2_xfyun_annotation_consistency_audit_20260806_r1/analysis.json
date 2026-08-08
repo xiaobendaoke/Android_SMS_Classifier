@@ -1,0 +1,178 @@
+{
+  "run_id": "stage2_xfyun_annotation_consistency_audit_20260806_r1",
+  "status": "ANALYSIS_ONLY_NO_CANDIDATE",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "analysis_privacy": {
+    "raw_sms_text_written": false,
+    "raw_sample_ids_written": false,
+    "raw_ai_outputs_written": false
+  },
+  "documented_ai_arbitrated_row_counts": {
+    "ai_annotation_20260802_r1": 1080,
+    "xfyun_error_relabel_20260803_r1": 14,
+    "xfyun_carrier_repayment_relabel_20260804_r1": 15
+  },
+  "documented_ai_arbitrated_row_sum": 1109,
+  "frozen_split_counts": {
+    "train": 11221,
+    "validation": 1402
+  },
+  "runs": {
+    "ai_annotation_20260802_r1": {
+      "run": "ai_annotation_20260802_r1",
+      "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+      "transport": "direct_openai_sdk_xfyun_v2",
+      "model": "xopdeepseekv4flash",
+      "counts": {
+        "total": 1080,
+        "quarantine": 101,
+        "resolved_by_c": 228
+      },
+      "label_distribution": {
+        "FRAUD": 66,
+        "HARASS": 78,
+        "AD": 108,
+        "NEEDS_REVIEW": 101,
+        "TRANSACTION": 727
+      },
+      "pass_c_validation": {
+        "expected": 228,
+        "valid": 228,
+        "missing": 0,
+        "duplicates": 0,
+        "unknown": 0,
+        "malformed_lines": 2,
+        "pass": true
+      },
+      "inconsistent_template_group_count": 28,
+      "inconsistent_label_pair_counts": {
+        "AD|FRAUD": 1,
+        "AD|HARASS": 7,
+        "AD|NEEDS_REVIEW": 4,
+        "AD|NEEDS_REVIEW|TRANSACTION": 2,
+        "AD|TRANSACTION": 1,
+        "FRAUD|HARASS": 9,
+        "HARASS|NEEDS_REVIEW": 1,
+        "NEEDS_REVIEW|TRANSACTION": 3
+      }
+    },
+    "xfyun_error_relabel_20260803_r1": {
+      "run": "xfyun_error_relabel_20260803_r1",
+      "qa": {
+        "run": "xfyun_error_relabel_20260803_r1",
+        "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+        "claim_allowed": false,
+        "human_verified": false,
+        "formal_acceptance_allowed": false,
+        "locked_test_read": false,
+        "passes": {
+          "pass_a": {
+            "valid": 14,
+            "missing": 0,
+            "malformed": 0
+          },
+          "pass_b": {
+            "valid": 14,
+            "missing": 0,
+            "malformed": 0
+          },
+          "pass_c": {
+            "valid": 4,
+            "missing": 0,
+            "malformed": 0
+          }
+        },
+        "agreement": {
+          "common_valid": 14,
+          "conflict_count": 4,
+          "exact_agreement": 0.7142857142857143
+        },
+        "candidate_count": 14,
+        "final_label_counts": {
+          "TRANSACTION": 9,
+          "AD": 3,
+          "NEEDS_REVIEW": 2
+        }
+      },
+      "overlay": {
+        "run": "xfyun_error_relabel_20260803_r1",
+        "overlay_sha256": "acc23debbe881cf39b9e7794c63f20764495912386aeb228b15fc9f899287a32",
+        "correction_count": null,
+        "needs_review_count": null,
+        "transition_counts": null,
+        "changed_labels": 3,
+        "quarantine_count": 0,
+        "split_membership_preserved": true,
+        "locked_test_byte_identical": true,
+        "validation_reference_status": "PROVISIONAL_AUTOMATED_REFERENCE_LABELS"
+      }
+    },
+    "xfyun_carrier_repayment_relabel_20260804_r1": {
+      "run": "xfyun_carrier_repayment_relabel_20260804_r1",
+      "qa": {
+        "run": "xfyun_carrier_repayment_relabel_20260804_r1",
+        "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+        "claim_allowed": false,
+        "human_verified": false,
+        "formal_acceptance_allowed": false,
+        "locked_test_read": false,
+        "passes": {
+          "pass_a": {
+            "valid": 15,
+            "missing": 0,
+            "malformed": 0
+          },
+          "pass_b": {
+            "valid": 15,
+            "missing": 0,
+            "malformed": 0
+          },
+          "pass_c": {
+            "valid": 4,
+            "missing": 0,
+            "malformed": 0
+          }
+        },
+        "agreement": {
+          "common_valid": null,
+          "conflict_count": 4,
+          "exact_agreement": 0.7333333333333333
+        },
+        "candidate_count": 15,
+        "final_label_counts": null
+      },
+      "overlay": {
+        "run": "xfyun_carrier_repayment_relabel_20260804_r1",
+        "overlay_sha256": "27b1c0627c015210a464986f5991c7c40451e5605a4cf883e6b28fe3f8366a2d",
+        "correction_count": 7,
+        "needs_review_count": 0,
+        "transition_counts": {
+          "TRANSACTION->TRANSACTION": 8,
+          "TRANSACTION->HARASS": 2,
+          "TRANSACTION->AD": 5
+        },
+        "changed_labels": 7,
+        "quarantine_count": 0,
+        "split_membership_preserved": true,
+        "locked_test_byte_identical": true,
+        "validation_reference_status": "PROVISIONAL_AUTOMATED_REFERENCE_LABELS"
+      }
+    },
+    "xfyun_unmatched_transaction_relabel_20260805_r1": {
+      "run": "xfyun_unmatched_transaction_relabel_20260805_r1",
+      "preparation": {
+        "status": "NO_NEW_UNREVIEWED_CANDIDATES",
+        "candidate_count": 0,
+        "external_send_performed": false
+      }
+    }
+  },
+  "decision": "analysis_only_no_candidate",
+  "decision_reason": "Aggregate QA shows multi-pass AI arbitration covers only a small subset of the frozen split; most labels lack multi-pass AI agreement evidence. No candidate, no locked test read, no human review package generated."
+}

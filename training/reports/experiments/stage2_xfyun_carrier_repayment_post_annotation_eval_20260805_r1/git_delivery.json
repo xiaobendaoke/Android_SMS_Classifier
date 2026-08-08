@@ -1,0 +1,9 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_post_annotation_eval_20260805_r1",
+  "experiment_commit": "45a1b79",
+  "remote": "origin",
+  "remote_branch": "cursor/fix-formal-quantize-int8-800d",
+  "push_command": "git -c http.proxy=http://127.0.0.1:7897 push origin HEAD:cursor/fix-formal-quantize-int8-800d",
+  "push_exit_code": 0,
+  "push_result": "85fdbd0..45a1b79 HEAD -> cursor/fix-formal-quantize-int8-800d"
+}

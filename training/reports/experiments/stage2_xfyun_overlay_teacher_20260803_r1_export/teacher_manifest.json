@@ -1,0 +1,334 @@
+{
+  "seed": 42,
+  "model_name": "bert-base-chinese",
+  "pretrained_source": "/home/colab/hf_cache/bert-base-chinese",
+  "backend": "pytorch",
+  "device": "cuda",
+  "local_files_only": true,
+  "checkpoint_dir": "artifacts/experiments/stage2_xfyun_overlay_teacher_20260803_r1",
+  "checkpoint_sha256": "da080d5bc249f6cb32dca64ef3ffc85e4c431c6cb8c21587fb90c23655f8049e",
+  "train_count": 9097,
+  "val_count": 1146,
+  "history": {
+    "loss": [
+      0.20154914628659695,
+      0.09446556289402282,
+      0.06273990010723811,
+      0.04676519217151917
+    ],
+    "val_accuracy": [
+      0.8856893542757417,
+      0.8743455497382199,
+      0.8743455497382199,
+      0.8891797556719022
+    ],
+    "val_metrics": [
+      {
+        "accuracy": 0.8856893542757417,
+        "macro_f1": 0.8562161627087796,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.9164677804295943,
+            "recall": 0.920863309352518,
+            "f1": 0.9186602870813398
+          },
+          "AD": {
+            "precision": 0.909297052154195,
+            "recall": 0.9031531531531531,
+            "f1": 0.9062146892655367
+          },
+          "HARASS": {
+            "precision": 0.7288135593220338,
+            "recall": 0.8269230769230769,
+            "f1": 0.7747747747747747
+          },
+          "FRAUD": {
+            "precision": 0.8571428571428571,
+            "recall": 0.7955801104972375,
+            "f1": 0.8252148997134671
+          }
+        },
+        "confusion_matrix": [
+          [
+            384,
+            30,
+            1,
+            2
+          ],
+          [
+            17,
+            401,
+            11,
+            15
+          ],
+          [
+            3,
+            8,
+            86,
+            7
+          ],
+          [
+            15,
+            2,
+            20,
+            144
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1146
+      },
+      {
+        "accuracy": 0.8743455497382199,
+        "macro_f1": 0.8399431751851325,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.958656330749354,
+            "recall": 0.8896882494004796,
+            "f1": 0.9228855721393036
+          },
+          "AD": {
+            "precision": 0.8943820224719101,
+            "recall": 0.8963963963963963,
+            "f1": 0.8953880764904387
+          },
+          "HARASS": {
+            "precision": 0.6402877697841727,
+            "recall": 0.8557692307692307,
+            "f1": 0.7325102880658436
+          },
+          "FRAUD": {
+            "precision": 0.8228571428571428,
+            "recall": 0.7955801104972375,
+            "f1": 0.8089887640449439
+          }
+        },
+        "confusion_matrix": [
+          [
+            371,
+            40,
+            2,
+            4
+          ],
+          [
+            10,
+            398,
+            16,
+            20
+          ],
+          [
+            2,
+            6,
+            89,
+            7
+          ],
+          [
+            4,
+            1,
+            32,
+            144
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1146
+      },
+      {
+        "accuracy": 0.8743455497382199,
+        "macro_f1": 0.8386107803162888,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.9576719576719577,
+            "recall": 0.86810551558753,
+            "f1": 0.9106918238993712
+          },
+          "AD": {
+            "precision": 0.9136363636363637,
+            "recall": 0.9054054054054054,
+            "f1": 0.9095022624434389
+          },
+          "HARASS": {
+            "precision": 0.6466165413533834,
+            "recall": 0.8269230769230769,
+            "f1": 0.7257383966244725
+          },
+          "FRAUD": {
+            "precision": 0.7794871794871795,
+            "recall": 0.8397790055248618,
+            "f1": 0.8085106382978723
+          }
+        },
+        "confusion_matrix": [
+          [
+            362,
+            29,
+            9,
+            17
+          ],
+          [
+            14,
+            402,
+            14,
+            14
+          ],
+          [
+            0,
+            6,
+            86,
+            12
+          ],
+          [
+            2,
+            3,
+            24,
+            152
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1146
+      },
+      {
+        "accuracy": 0.8891797556719022,
+        "macro_f1": 0.8576483488640788,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.9445843828715366,
+            "recall": 0.8992805755395683,
+            "f1": 0.9213759213759214
+          },
+          "AD": {
+            "precision": 0.9010989010989011,
+            "recall": 0.9234234234234234,
+            "f1": 0.9121245828698554
+          },
+          "HARASS": {
+            "precision": 0.711864406779661,
+            "recall": 0.8076923076923077,
+            "f1": 0.7567567567567568
+          },
+          "FRAUD": {
+            "precision": 0.8522727272727273,
+            "recall": 0.8287292817679558,
+            "f1": 0.8403361344537815
+          }
+        },
+        "confusion_matrix": [
+          [
+            375,
+            32,
+            5,
+            5
+          ],
+          [
+            17,
+            410,
+            6,
+            11
+          ],
+          [
+            0,
+            10,
+            84,
+            10
+          ],
+          [
+            5,
+            3,
+            23,
+            150
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1146
+      }
+    ]
+  },
+  "val_metrics": {
+    "accuracy": 0.8856893542757417,
+    "macro_f1": 0.8562161627087796,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9164677804295943,
+        "recall": 0.920863309352518,
+        "f1": 0.9186602870813398
+      },
+      "AD": {
+        "precision": 0.909297052154195,
+        "recall": 0.9031531531531531,
+        "f1": 0.9062146892655367
+      },
+      "HARASS": {
+        "precision": 0.7288135593220338,
+        "recall": 0.8269230769230769,
+        "f1": 0.7747747747747747
+      },
+      "FRAUD": {
+        "precision": 0.8571428571428571,
+        "recall": 0.7955801104972375,
+        "f1": 0.8252148997134671
+      }
+    },
+    "confusion_matrix": [
+      [
+        384,
+        30,
+        1,
+        2
+      ],
+      [
+        17,
+        401,
+        11,
+        15
+      ],
+      [
+        3,
+        8,
+        86,
+        7
+      ],
+      [
+        15,
+        2,
+        20,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 1,
+  "class_weights": {
+    "TRANSACTION": 0.6903756856918335,
+    "AD": 0.6903756856918335,
+    "HARASS": 1.380751371383667,
+    "FRAUD": 1.2384974956512451
+  },
+  "focal_gamma": 1.0,
+  "normalization": "normalize_text",
+  "license_note": "bert-base-multilingual-cased is third-party; record hash and license.",
+  "third_party": true
+}

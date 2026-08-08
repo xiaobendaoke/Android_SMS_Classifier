@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from src.schema import LABEL_ORDER
+from src.schema import record_from_dict
 
 
 def _load(name: str):
@@ -186,3 +187,38 @@ def test_freeze_dual_packs(tmp_path: Path) -> None:
     meta = json.loads((out_dir / "freeze_shortfall.json").read_text(encoding="utf-8"))
     assert meta["by_lang_label"]["zh"]["TRANSACTION"]["sampled"] == 1
     assert meta["by_lang_label"]["en"]["AD"]["shortfall"] == 2
+
+
+def test_transaction_specialist_selects_all_six_coverage_buckets() -> None:
+    mod = _load("prepare_transaction_specialist_freeze.py")
+    texts = {
+        "OTP": "您的验证码为123456，五分钟内有效",
+        "LOGISTICS": "您的快递已到驿站，请凭取件码领取",
+        "ORDER": "订单已支付成功，预计明日发货",
+        "REPAYMENT": "本期账单还款成功",
+        "CARRIER": "中国移动提醒您本月流量剩余2GB",
+        "BANK": "银行卡尾号1234消费50元",
+    }
+    records = []
+    for idx, (subtype, text) in enumerate(texts.items()):
+        records.append(
+            record_from_dict(
+                {
+                    "id": f"txn-{idx}",
+                    "text": text,
+                    "label": "TRANSACTION",
+                    "language": "zh",
+                    "source": "test",
+                    "source_license": "internal-test",
+                    "sender_group": f"sender-{idx}",
+                    "template_group": f"template-{idx}",
+                    "split": "train",
+                    "annotator_ids": ["audit_pipeline_a", "audit_pipeline_b"],
+                }
+            )
+        )
+    selected, coverage = mod.select_records(records, per_subtype=1, seed=42)
+    assert len(selected) == 6
+    assert {row["coverage_subtype"] for row in selected} == set(texts)
+    assert all(cell["shortfall"] == 0 for cell in coverage.values())
+    assert all(row["existing_human_review_ids"] == [] for row in selected)

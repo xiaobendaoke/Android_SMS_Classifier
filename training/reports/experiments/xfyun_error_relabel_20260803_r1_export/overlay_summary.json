@@ -1,0 +1,35 @@
+{
+  "run_id": "xfyun_error_relabel_20260803_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "applied_ad_corrections": 3,
+  "needs_review_held_out_of_validation": 2,
+  "overlay_sha256": "acc23debbe881cf39b9e7794c63f20764495912386aeb228b15fc9f899287a32",
+  "returncode": 0,
+  "overlay_manifest": {
+    "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+    "claim_allowed": false,
+    "human_verified": false,
+    "formal_acceptance_allowed": false,
+    "overlay_sha256": "acc23debbe881cf39b9e7794c63f20764495912386aeb228b15fc9f899287a32",
+    "source_sha256": {
+      "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+      "validation": "1a56679ccb2bbf13ff724efb35c5763e87908ad71d05ff911beb1d7f8175337d",
+      "test": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57"
+    },
+    "output_sha256": {
+      "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+      "validation": "700dc9883118fe7dada5a217612b6af8b6863d062eb274b540bf19bcc5f0697d",
+      "test": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57"
+    },
+    "split_membership_preserved": true,
+    "locked_test_byte_identical": true,
+    "changed_labels": 3,
+    "quarantine_count": 0,
+    "unmatched_annotation_ids": [],
+    "validation_reference_status": "PROVISIONAL_AUTOMATED_REFERENCE_LABELS"
+  }
+}

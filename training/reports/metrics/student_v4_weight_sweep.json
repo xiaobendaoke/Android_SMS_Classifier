@@ -1,0 +1,69 @@
+{
+  "locked_test_read": false,
+  "results": [
+    {
+      "name": "balanced_txn2",
+      "returncode": 4,
+      "best_epoch": 6,
+      "macro_f1": 0.812339794127552,
+      "transaction_recall": 0.8793503480278422,
+      "transaction_precision": 0.8834498834498834,
+      "harass_f1": 0.6599326599326599,
+      "fraud_recall": 0.8130434782608695,
+      "class_weights": {
+        "TRANSACTION": 1.0429214239120483,
+        "AD": 0.37316828966140747,
+        "HARASS": 1.609706163406372,
+        "FRAUD": 0.9742040038108826
+      }
+    },
+    {
+      "name": "balanced_txn1",
+      "returncode": 4,
+      "best_epoch": 9,
+      "macro_f1": 0.831277354706206,
+      "transaction_recall": 0.8723897911832946,
+      "transaction_precision": 0.8995215311004785,
+      "harass_f1": 0.699248120300752,
+      "fraud_recall": 0.9260869565217391,
+      "class_weights": {
+        "TRANSACTION": 0.5996318459510803,
+        "AD": 0.42910921573638916,
+        "HARASS": 1.8510140180587769,
+        "FRAUD": 1.1202449798583984
+      }
+    },
+    {
+      "name": "clipped_txn1_1",
+      "returncode": 4,
+      "best_epoch": 7,
+      "macro_f1": 0.8269229366823272,
+      "transaction_recall": 0.9095127610208816,
+      "transaction_precision": 0.8558951965065502,
+      "harass_f1": 0.6859205776173285,
+      "fraud_recall": 0.9130434782608695,
+      "class_weights": {
+        "TRANSACTION": 0.7310476303100586,
+        "AD": 0.7310476303100586,
+        "HARASS": 1.4620952606201172,
+        "FRAUD": 1.0758092403411865
+      }
+    },
+    {
+      "name": "uniform",
+      "returncode": 4,
+      "best_epoch": 12,
+      "macro_f1": 0.8180670976926936,
+      "transaction_recall": 0.8352668213457076,
+      "transaction_precision": 0.9230769230769231,
+      "harass_f1": 0.6594982078853047,
+      "fraud_recall": 0.8826086956521739,
+      "class_weights": {
+        "TRANSACTION": 1.0,
+        "AD": 1.0,
+        "HARASS": 1.0,
+        "FRAUD": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_7p5e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Setting only the student learning rate to 7.5e-4 increased transaction recall versus the 5e-4 run, but independent zh validation still missed four gate thresholds and degraded transaction precision and HARASS F1.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.958231, transaction_precision=0.840517, macro_f1=0.838195, harass_f1=0.750000, and fraud_recall=0.823204. Transaction recall, transaction precision, macro F1, and HARASS F1 remain below the required gates.",
+  "next_hypothesis": "Learning-rate interpolation alone is insufficient; continue with a different stable single-variable training signal that improves category separation without pushing AD/HARASS into TRANSACTION.",
+  "gate_errors": [
+    "transaction_recall=0.958231 < 0.985000",
+    "transaction_precision=0.840517 < 0.920000",
+    "macro_f1=0.838195 < 0.860000",
+    "harass_f1=0.750000 < 0.800000"
+  ]
+}

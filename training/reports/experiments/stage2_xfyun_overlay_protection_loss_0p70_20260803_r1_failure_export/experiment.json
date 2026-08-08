@@ -1,0 +1,15 @@
+{
+  "run_id": "stage2_xfyun_overlay_protection_loss_0p70_20260803_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY_EXECUTION_INTERRUPTED",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing only shared transaction-protection loss can reduce transaction misses without using threshold routing.",
+  "only_changed_variable": "transaction_protection.loss_weight=0.70 (baseline=0.35; transaction class multiplier remains 1.4)",
+  "returncode": 124,
+  "failure_reason": "Desktop foreground shell timeout interrupted the WSL launcher before training completed. No metrics, model artifact, or test data were used.",
+  "next_decision": "Repeat under a new isolated run_id using a background launcher; do not overwrite the interrupted artifacts."
+}
