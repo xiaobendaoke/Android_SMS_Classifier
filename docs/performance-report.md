@@ -36,4 +36,15 @@ Source: `reports/benchmarks/emulator_pss_latency.json` (instrumented `:benchmark
 | PSS after run | 59,448 KB |
 | Model loaded | yes (`model_available=true`) |
 
+### 4GB / 6GB emulator rerun (2026-08-08)
+
+The same instrumented test was rerun on two AVDs configured with `hw.ramSize=4096` (Pixel_9a) and `hw.ramSize=6144` (Pixel_9a_6G), API 36, x86_64, 500 synthetic samples each:
+
+| Config | p50 | p95 | p99 | Throughput | PSS warm-up | PSS after run |
+|---|---|---|---|---|---|---|
+| 4GB | 2.4 ms | 3.1 ms | 3.6 ms | 395.7 msg/s | 37,911 KB | 59,504 KB |
+| 6GB | 10.1 ms | 41.4 ms | 93.4 ms | 64.9 msg/s | 38,330 KB | 44,228 KB |
+
+Sources: `reports/benchmarks/emulator_4gb_pss_latency.json` and `reports/benchmarks/emulator_6gb_pss_latency.json`. Both configurations stay below the ≤500 ms latency and ≤100 MB PSS engineering budgets, but these are still emulator-only measurements; the formal 4GB/6GB real-device report remains pending.
+
 > Emulator numbers are engineering evidence only. The formal ≤100 MB PSS and ≤500 ms acceptance report requires 4GB/6GB real devices, default SMS role, and airplane mode.
