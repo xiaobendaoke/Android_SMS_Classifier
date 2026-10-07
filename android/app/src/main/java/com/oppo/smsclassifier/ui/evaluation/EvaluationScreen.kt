@@ -7,6 +7,7 @@ import android.provider.MediaStore
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -16,6 +17,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -38,35 +40,14 @@ import com.oppo.smsclassifier.classifier.DefaultSmsClassifier
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONArray
-import org.json.JSONObject
-
-data class EvalSample(
-    val id: String,
-    val sender: String?,
-    val body: String,
-    val expectedCategory: String?,
-    val expectedAction: String?,
-)
-
-data class EvalResult(
-    val sample: EvalSample,
-    val result: ClassificationResult,
-)
-
-data class EvalSummary(
-    val total: Int,
-    val labeled: Int,
-    val categoryCorrect: Int,
-    val accuracy: Double,
-    val results: List<EvalResult>,
-)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EvaluationScreen() {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val batchOptions = listOf(5, 10, 20)
+    var batchSize by remember { mutableStateOf(10) }
     var summary by remember { mutableStateOf<EvalSummary?>(null) }
     var loading by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -89,8 +70,25 @@ fun EvaluationScreen() {
                 } else {
                     externalJson = text
                     summary = withContext(Dispatchers.IO) {
-                        runOfflineEval(context, text)
+                        runOfflineEval(context, text, batchSize)
                     }
+                }
+            } catch (e: Exception) {
+                error = e.message
+            } finally {
+                loading = false
+            }
+        }
+    }
+
+    fun runRandom(jsonOverride: String?) {
+        scope.launch {
+            loading = true
+            error = null
+            exportMsg = null
+            try {
+                summary = withContext(Dispatchers.IO) {
+                    runOfflineEval(context, jsonOverride, batchSize)
                 }
             } catch (e: Exception) {
                 error = e.message
@@ -111,31 +109,40 @@ fun EvaluationScreen() {
                 .padding(padding)
                 .padding(16.dp),
         ) {
+            Text(
+                text = stringResource(R.string.eval_batch_size),
+                style = MaterialTheme.typography.labelLarge,
+            )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.padding(top = 4.dp, bottom = 8.dp),
+            ) {
+                batchOptions.forEach { option ->
+                    FilterChip(
+                        selected = batchSize == option,
+                        onClick = { batchSize = option },
+                        label = { Text("$option") },
+                    )
+                }
+            }
             Button(
-                onClick = {
-                    scope.launch {
-                        loading = true
-                        error = null
-                        exportMsg = null
-                        externalJson = null
-                        try {
-                            summary = withContext(Dispatchers.IO) {
-                                runOfflineEval(context)
-                            }
-                        } catch (e: Exception) {
-                            error = e.message
-                        } finally {
-                            loading = false
-                        }
-                    }
-                },
+                onClick = { runRandom(externalJson) },
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !loading,
             ) {
                 Text(stringResource(R.string.eval_run))
             }
             Button(
-                onClick = { openDocument.launch(arrayOf("application/json", "text/*")) },
+                onClick = { runRandom(externalJson) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp),
+                enabled = summary != null && !loading,
+            ) {
+                Text(stringResource(R.string.eval_resample))
+            }
+            Button(
+                onClick = { openDocument.launch(arrayOf("*/*")) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 8.dp),
@@ -173,9 +180,22 @@ fun EvaluationScreen() {
             }
             summary?.let { s ->
                 Text(
+                    text = stringResource(R.string.eval_pool_hint, s.poolSize, s.sampled),
+                    style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.padding(top = 8.dp),
+                )
+                if (s.poolSize > 1 && s.sampled < batchSize) {
+                    Text(
+                        text = stringResource(R.string.eval_batch_shrink_hint, s.sampled),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.secondary,
+                        modifier = Modifier.padding(top = 4.dp),
+                    )
+                }
+                Text(
                     text = stringResource(
                         R.string.eval_summary,
-                        s.total,
+                        s.sampled,
                         s.labeled,
                         s.categoryCorrect,
                         (s.accuracy * 100).toInt(),
@@ -221,34 +241,16 @@ private fun EvalResultCard(item: EvalResult) {
 
 private suspend fun runOfflineEval(
     context: android.content.Context,
-    jsonOverride: String? = null,
+    jsonOverride: String?,
+    batchSize: Int,
 ): EvalSummary {
     DefaultSmsClassifier.init(context)
-    val json = jsonOverride
+    val text = jsonOverride
         ?: context.assets.open("eval/sample_eval.json").bufferedReader().use { it.readText() }
-    val trimmed = json.trim()
-    val samplesArray = when {
-        trimmed.startsWith("[") -> JSONArray(trimmed)
-        else -> {
-            val root = JSONObject(trimmed)
-            when {
-                root.has("samples") -> root.getJSONArray("samples")
-                else -> error("评测 JSON 需为数组，或含 samples 字段的对象")
-            }
-        }
-    }
-    val samples = (0 until samplesArray.length()).map { i ->
-        val obj = samplesArray.getJSONObject(i)
-        EvalSample(
-            id = obj.optString("id", "eval-$i"),
-            sender = obj.optString("sender").takeIf { it.isNotBlank() },
-            body = obj.optString("body", obj.optString("text")),
-            expectedCategory = obj.optString("expectedCategory", obj.optString("label"))
-                .takeIf { it.isNotBlank() },
-            expectedAction = obj.optString("expectedAction").takeIf { it.isNotBlank() },
-        )
-    }
-    val results = samples.map { sample ->
+    val pool = OfflineEvalLogic.parseSamples(text)
+    if (pool.isEmpty()) error("评测样本池为空")
+    val sampled = OfflineEvalLogic.sample(pool, batchSize)
+    val results = sampled.map { sample ->
         val result = DefaultSmsClassifier.classify(
             context,
             SmsInput(
@@ -259,43 +261,14 @@ private suspend fun runOfflineEval(
         )
         EvalResult(sample = sample, result = result)
     }
-    val labeled = results.filter { it.sample.expectedCategory != null }
-    val correct = labeled.count { it.sample.expectedCategory == it.result.category.name }
-    return EvalSummary(
-        total = results.size,
-        labeled = labeled.size,
-        categoryCorrect = correct,
-        accuracy = if (labeled.isEmpty()) 0.0 else correct.toDouble() / labeled.size,
-        results = results,
-    )
+    return OfflineEvalLogic.summarize(pool.size, results)
 }
 
 /**
  * Export redacted metrics only (no full SMS bodies) via MediaStore Downloads.
  */
 private fun exportRedactedReport(context: android.content.Context, summary: EvalSummary): String {
-    val rows = JSONArray()
-    for (item in summary.results) {
-        rows.put(
-            JSONObject()
-                .put("id", item.sample.id)
-                .put("expectedCategory", item.sample.expectedCategory)
-                .put("predictedCategory", item.result.category.name)
-                .put("action", item.result.action.name)
-                .put("confidence", item.result.confidence)
-                .put("elapsedMs", item.result.elapsedMs)
-                .put("reasonCode", item.result.reasonCode)
-                .put("bodyRedacted", true)
-                .put("bodyLength", item.sample.body.length),
-        )
-    }
-    val payload = JSONObject()
-        .put("total", summary.total)
-        .put("labeled", summary.labeled)
-        .put("categoryCorrect", summary.categoryCorrect)
-        .put("accuracy", summary.accuracy)
-        .put("rows", rows)
-        .toString(2)
+    val payload = OfflineEvalLogic.buildRedactedPayload(summary).toString(2)
 
     val fileName = "sms_eval_redacted_${System.currentTimeMillis()}.json"
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {

@@ -7,6 +7,7 @@
     <string name="tab_suspect">可疑</string>
     <string name="tab_review">待复核</string>
     <string name="tab_evaluation">离线评估</string>
+    <string name="tab_judge">短信判断</string>
     <string name="tab_performance">性能</string>
     <string name="tab_about">关于</string>
 
@@ -41,12 +42,30 @@
     <string name="detail_rules_version">规则版本</string>
     <string name="detail_no_meta">暂无分类元数据</string>
     <string name="detail_safety_note">安全提示：请谨慎点击短信中的链接，勿向陌生人转账或泄露验证码。</string>
+    <string name="judge_sender">发件人（可选）</string>
+    <string name="judge_body">短信内容</string>
+    <string name="judge_run">开始判断</string>
+    <string name="judge_clear">清空</string>
+    <string name="judge_body_required">请输入短信内容</string>
+    <string name="judge_result_title">判断结果</string>
+    <string name="judge_elapsed">耗时</string>
+    <string name="category_transaction">事务</string>
+    <string name="category_ad">广告</string>
+    <string name="category_harass">骚扰</string>
+    <string name="category_fraud">诈骗</string>
+    <string name="action_inbox">收件箱</string>
+    <string name="action_suspect">可疑</string>
+    <string name="action_review">待复核</string>
 
     <!-- Evaluation -->
     <string name="eval_run">运行离线评估</string>
     <string name="eval_import_saf">从文件导入测试集</string>
     <string name="eval_export">导出脱敏报告</string>
     <string name="eval_summary">样本 %1$d · 有标签 %2$d · 类别正确 %3$d · 准确率 %4$d%%</string>
+    <string name="eval_resample">换一批</string>
+    <string name="eval_batch_size">抽取条数</string>
+    <string name="eval_pool_hint">样本池 %1$d 条 · 本次抽取 %2$d 条</string>
+    <string name="eval_batch_shrink_hint">样本池较少，本次自动抽取 %1$d 条以支持“换一批”</string>
 
     <!-- Performance -->
     <string name="performance_title">分类性能指标</string>

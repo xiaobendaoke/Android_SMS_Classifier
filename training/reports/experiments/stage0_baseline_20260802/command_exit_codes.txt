@@ -1,0 +1,8 @@
+pytest 0
+validate_labels 2
+split_leakage 2
+no_network 0
+sensitive_logs 0
+release_audit 0
+validation_pipeline 2
+v4_startup_gate 2

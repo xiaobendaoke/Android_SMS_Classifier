@@ -7,6 +7,7 @@ object NavRoutes {
     const val REVIEW = "review"
     const val DETAIL = "detail/{messageUri}"
     const val EVALUATION = "evaluation"
+    const val JUDGE = "judge"
     const val PERFORMANCE = "performance"
     const val ABOUT = "about"
 
