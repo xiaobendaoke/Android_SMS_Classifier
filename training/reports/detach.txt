@@ -1,0 +1,13 @@
+DETACHED_PID 1457
+STATUS_BOOT {
+  "stage": "download_teacher",
+  "ts": 1785562898.4149103,
+  "pid": 1457
+}
+LOG_BOOT STATUS started
+STATUS download_teacher
+DOWNLOAD_TEACHER_START
+
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 10 files:  10%|█         | 1/10 [00:00<00:03,  2.68it/s]

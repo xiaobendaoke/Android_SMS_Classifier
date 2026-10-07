@@ -1,0 +1,41 @@
+# 候选专用 INT8 PTQ 配置：第 6 轮最佳候选工程闭环（NOT ACCEPTED 口径）
+version: "1.1.0"
+seed: 42
+
+mode: ptq
+
+representative:
+  manifest: data/interim/annotation/formalgate_candidate_20260806_r1/representative.jsonl
+  num_samples: 800
+
+converter:
+  optimizations: [DEFAULT]
+  supported_ops: [TFLITE_BUILTINS_INT8]
+  inference_input_type: float32
+  inference_output_type: int8
+
+qat_triggers:
+  transaction_recall_drop: 0.003
+  macro_f1_drop: 0.01
+  harass_f1_drop: 0.01
+  fraud_recall_drop: 0.01
+  keras_tflite_mismatch_rate: 0.01
+
+qat:
+  epochs: 2
+  batch_size: 64
+
+validation:
+  manifest: data/processed_transaction_ad_boundary_arbitration_20260806_r1/validation.jsonl
+
+input_model: artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1/sms_bytecnn_pruned.keras
+output_tflite: artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1/sms_bytecnn_int8.tflite
+
+verify:
+  min_samples: 1000
+  min_agreement_rate: 0.99
+  acceptance_targets:
+    transaction_recall: 0.985
+    macro_f1: 0.86
+    harass_f1: 0.80
+    fraud_recall: 0.80

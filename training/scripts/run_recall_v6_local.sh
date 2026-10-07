@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="/mnt/c/dev/Android_SMS_Classifier"
+VENV="/home/colab/projects/Android_SMS_Classifier/.venv"
+MODEL_DIR="${MODEL_DIR:-/home/colab/hf_cache/bert-base-chinese}"
+
+if [[ ! -x "$VENV/bin/python" ]]; then
+  echo "WSL training environment missing: $VENV" >&2
+  exit 1
+fi
+if [[ ! -s "$MODEL_DIR/config.json" ]]; then
+  echo "Chinese teacher model missing: $MODEL_DIR" >&2
+  echo "Run run_recall_v5_local.sh once to download it." >&2
+  exit 2
+fi
+if [[ ! -s "$MODEL_DIR/model.safetensors" && ! -s "$MODEL_DIR/pytorch_model.bin" ]]; then
+  echo "Chinese teacher weights missing: $MODEL_DIR" >&2
+  exit 2
+fi
+
+export PATH="$VENV/bin:$PATH"
+export PYTHONPATH="$ROOT/training"
+export TF_CPP_MIN_LOG_LEVEL="${TF_CPP_MIN_LOG_LEVEL:-2}"
+export TOKENIZERS_PARALLELISM=false
+export HF_HUB_DISABLE_XET=1
+
+cd "$ROOT"
+exec "$VENV/bin/python" -u training/scripts/run_recall_v4.py \
+  --teacher-model-path "$MODEL_DIR" \
+  --run-name recall_v6 \
+  --seed 42

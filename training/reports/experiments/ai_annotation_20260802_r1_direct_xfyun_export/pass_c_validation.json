@@ -1,0 +1,9 @@
+{
+  "expected": 228,
+  "valid": 228,
+  "missing": 0,
+  "duplicates": 0,
+  "unknown": 0,
+  "malformed_lines": 2,
+  "pass": true
+}

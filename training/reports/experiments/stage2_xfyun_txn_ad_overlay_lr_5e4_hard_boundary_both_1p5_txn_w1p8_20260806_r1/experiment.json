@@ -1,0 +1,108 @@
+{
+  "run_id": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p6_20260806_r1",
+  "hypothesis": "Round 4 showed TXN class weight 1.6 raises TXN recall to 0.9448 while precision stays at 0.9314. Raising the multiplier to 1.8 on the same data should add more recall; precision has headroom above the 0.92 gate.",
+  "only_changed_variable": "training.class_weight_multipliers.TRANSACTION 1.6 -> 1.8 (data manifest unchanged)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training_mode": "hard_only",
+    "training.hard_boundary_multiplier": 1.5,
+    "training.hard_boundary_labels": [
+      "TRANSACTION",
+      "AD",
+      "FRAUD"
+    ]
+  },
+  "config_sha256": "19da059b2e4b30a071223e7b6a8dcc8a05ea032b1385cf5fc808d4b9c8069932",
+  "data_sha256": {
+    "train": "7fefb075b3167800087a47e0c5640df1c38be125315a5b37626b5ff0edabf1e1",
+    "validation": "2aecc6f10412d4307ee5abba1791c1b3fabf865faff82b9f0ee1674ee21da116"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8991228070175439,
+    "macro_f1": 0.8820358856109372,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9049773755656109,
+        "recall": 0.9592326139088729,
+        "f1": 0.9313154831199068
+      },
+      "AD": {
+        "precision": 0.9440389294403893,
+        "recall": 0.849015317286652,
+        "f1": 0.8940092165898618
+      },
+      "HARASS": {
+        "precision": 0.744,
+        "recall": 0.9117647058823529,
+        "f1": 0.8193832599118942
+      },
+      "FRAUD": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8780487804878049,
+        "f1": 0.8834355828220859
+      }
+    },
+    "confusion_matrix": [
+      [
+        400,
+        16,
+        1,
+        0
+      ],
+      [
+        37,
+        388,
+        17,
+        15
+      ],
+      [
+        1,
+        5,
+        93,
+        3
+      ],
+      [
+        4,
+        2,
+        14,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1140
+  },
+  "best_epoch": 10,
+  "model_sha256": "a368cd5bdb7d8efc842d6d9e5fa5e601a7098dc755267ee90b2892df90e91205",
+  "hard_boundary_count": 5124,
+  "hard_boundary_label_counts": {
+    "TRANSACTION": 2808,
+    "AD": 1497,
+    "FRAUD": 819
+  },
+  "hard_boundary_labels": [
+    "TRANSACTION",
+    "AD",
+    "FRAUD"
+  ],
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.959233 < 0.985000",
+    "transaction_precision=0.904977 < 0.920000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

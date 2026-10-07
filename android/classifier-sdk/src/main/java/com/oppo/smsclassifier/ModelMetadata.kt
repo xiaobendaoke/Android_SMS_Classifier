@@ -16,6 +16,9 @@ data class ModelMetadata(
     val rulesVersion: String,
     val quantization: String,
     val thresholds: Map<String, Map<SmsCategory, Float>>,
+    val modelOutputSize: Int,
+    val transactionProtectionIndex: Int?,
+    val transactionProtectionThreshold: Float,
 ) {
     fun thresholdFor(category: SmsCategory): Float {
         val default = thresholds["default"] ?: emptyMap()
@@ -52,6 +55,13 @@ data class ModelMetadata(
                 rulesVersion = root.getString("rulesVersion"),
                 quantization = root.getString("quantization"),
                 thresholds = thresholds,
+                modelOutputSize = root.optInt("modelOutputSize", labels.size),
+                transactionProtectionIndex = root
+                    .optInt("transactionProtectionIndex", -1)
+                    .takeIf { it >= 0 },
+                transactionProtectionThreshold = root
+                    .optDouble("transactionProtectionThreshold", 0.5)
+                    .toFloat(),
             )
         }
 
@@ -67,6 +77,9 @@ data class ModelMetadata(
               "normalizationVersion": "1.0.0",
               "rulesVersion": "1.0.0",
               "quantization": "INT8",
+              "modelOutputSize": 4,
+              "transactionProtectionIndex": -1,
+              "transactionProtectionThreshold": 0.5,
               "thresholds": {
                 "default": {
                   "TRANSACTION": 0.55,

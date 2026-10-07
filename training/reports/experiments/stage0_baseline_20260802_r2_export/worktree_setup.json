@@ -1,0 +1,8 @@
+{
+  "run_id": "stage0_baseline_20260802_r2",
+  "source": "/mnt/c/dev/Android_SMS_Classifier",
+  "head": "095ad4060e56495b58a956cdea3cbd5d44b4f4a3",
+  "network_used": false,
+  "locked_test_model_metrics_read": false,
+  "copied_inputs": ["raw", "interim", "processed", "processed_v2", "artifacts/student"]
+}

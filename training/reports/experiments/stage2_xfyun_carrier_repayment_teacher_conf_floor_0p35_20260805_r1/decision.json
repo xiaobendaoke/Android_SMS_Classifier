@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_teacher_conf_floor_0p35_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Increasing only teacher_confidence_floor to 0.35 did not pass the independent zh validation gates.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.928747, transaction_precision=0.921951, macro_f1=0.842082, harass_f1=0.739336, and fraud_recall=0.767956. Transaction precision passed, but transaction recall, macro F1, HARASS F1, and FRAUD recall remained below threshold.",
+  "next_hypothesis": "Do not move this candidate into human review. Raising the teacher confidence floor recovered transaction precision but weakened the remaining gates.",
+  "gate_errors": [
+    "transaction_recall=0.928747 < 0.985000",
+    "macro_f1=0.842082 < 0.860000",
+    "harass_f1=0.739336 < 0.800000",
+    "fraud_recall=0.767956 < 0.800000"
+  ]
+}

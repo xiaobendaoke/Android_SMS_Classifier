@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import shutil
 import sys
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple
 
@@ -19,8 +21,14 @@ DEFAULT_CONFIG = ROOT / "configs" / "teacher.yaml"
 
 sys.path.insert(0, str(ROOT))
 from src.metrics import summarize_metrics  # noqa: E402
+from src.normalize import normalize_text  # noqa: E402
 from src.schema import LABEL_ORDER  # noqa: E402
-from src.train_utils import load_labeled_records, set_seed, write_json  # noqa: E402
+from src.train_utils import (  # noqa: E402
+    filter_records_by_languages,
+    load_labeled_records,
+    set_seed,
+    write_json,
+)
 
 
 def check_deps() -> Optional[str]:
@@ -64,6 +72,12 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Allow CPU training (default: require CUDA GPU).",
     )
+    parser.add_argument(
+        "--logits-manifest",
+        type=Path,
+        default=None,
+        help="Optional isolated teacher-logits manifest path (default preserves legacy path).",
+    )
     return parser
 
 
@@ -85,7 +99,7 @@ def encode_batch(
     device,
 ):
     enc = tokenizer(
-        list(texts),
+        [normalize_text(text) for text in texts],
         truncation=True,
         padding="max_length",
         max_length=max_length,
@@ -122,6 +136,8 @@ def train_epoch(
     *,
     use_fp16: bool,
     scaler,
+    class_weights,
+    focal_gamma: float,
 ):
     import torch
 
@@ -139,19 +155,43 @@ def train_epoch(
         optimizer.zero_grad(set_to_none=True)
         if use_fp16 and device.type == "cuda":
             with torch.autocast(device_type="cuda", dtype=torch.float16):
-                out = model(**batch, labels=batch_y)
-                loss = out.loss
+                out = model(**batch)
+                per_example = torch.nn.functional.cross_entropy(
+                    out.logits,
+                    batch_y,
+                    weight=class_weights,
+                    reduction="none",
+                )
+                true_probability = torch.softmax(out.logits, dim=-1).gather(
+                    1, batch_y.unsqueeze(1)
+                ).squeeze(1)
+                loss = (
+                    torch.pow(1.0 - true_probability, focal_gamma)
+                    * per_example
+                ).mean()
             scaler.scale(loss).backward()
             scaler.step(optimizer)
             scaler.update()
         else:
-            out = model(**batch, labels=batch_y)
-            loss = out.loss
+            out = model(**batch)
+            per_example = torch.nn.functional.cross_entropy(
+                out.logits,
+                batch_y,
+                weight=class_weights,
+                reduction="none",
+            )
+            true_probability = torch.softmax(out.logits, dim=-1).gather(
+                1, batch_y.unsqueeze(1)
+            ).squeeze(1)
+            loss = (
+                torch.pow(1.0 - true_probability, focal_gamma)
+                * per_example
+            ).mean()
             loss.backward()
             optimizer.step()
         total_loss += float(loss.detach().item())
         n_batches += 1
-        del batch, batch_y, out, loss
+        del batch, batch_y, out, loss, per_example, true_probability
     if device.type == "cuda":
         torch.cuda.empty_cache()
     return total_loss / max(1, n_batches)
@@ -164,6 +204,27 @@ def eval_accuracy(model, tokenizer, records, label_to_idx, max_length, batch_siz
     preds = np.argmax(logits, axis=-1)
     acc = float(np.mean(preds == y_true)) if len(y_true) else 0.0
     return acc, y_true, preds
+
+
+def teacher_checkpoint_score(metrics: Dict[str, object], cfg: Dict[str, float]) -> Tuple[float, ...]:
+    per_class = metrics.get("per_class", {})
+    transaction_recall = float(per_class.get("TRANSACTION", {}).get("recall", 0.0))
+    transaction_precision = float(per_class.get("TRANSACTION", {}).get("precision", 0.0))
+    harass_f1 = float(per_class.get("HARASS", {}).get("f1", 0.0))
+    fraud_recall = float(per_class.get("FRAUD", {}).get("recall", 0.0))
+    macro_f1 = float(metrics.get("macro_f1", 0.0))
+    gate_ratios = (
+        transaction_recall / max(cfg["target_transaction_recall"], 1e-9),
+        transaction_precision / max(cfg["min_transaction_precision"], 1e-9),
+        macro_f1 / max(cfg["min_macro_f1"], 1e-9),
+        harass_f1 / max(cfg["min_harass_f1"], 1e-9),
+        fraud_recall / max(cfg["min_fraud_recall"], 1e-9),
+    )
+    all_gates_met = float(min(gate_ratios) >= 1.0)
+    if all_gates_met:
+        return (1.0, transaction_recall, macro_f1, min(gate_ratios), 1.0)
+    capped_mean = float(np.mean([min(value, 1.0) for value in gate_ratios]))
+    return (0.0, min(gate_ratios), capped_mean, macro_f1, transaction_recall)
 
 
 def main(argv: Optional[List[str]] = None) -> int:
@@ -198,8 +259,19 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"Training manifest missing: {train_path}", file=sys.stderr)
         return 1
 
-    train_records = load_labeled_records(train_path)
-    val_records = load_labeled_records(val_path) if val_path.exists() else []
+    accepted_languages = cfg.get("data", {}).get("accepted_languages", [])
+    train_records = filter_records_by_languages(
+        load_labeled_records(train_path),
+        accepted_languages,
+    )
+    val_records = (
+        filter_records_by_languages(
+            load_labeled_records(val_path),
+            accepted_languages,
+        )
+        if val_path.exists()
+        else []
+    )
     if args.max_samples > 0:
         train_records = train_records[: args.max_samples]
         val_records = val_records[: max(1, args.max_samples // 5)]
@@ -232,7 +304,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     print(f"  train={len(train_records)} val={len(val_records)} max_length={max_length}")
 
     try:
-        tokenizer = AutoTokenizer.from_pretrained(pretrained, local_files_only=bool(args.model_path))
+        tokenizer = AutoTokenizer.from_pretrained(
+            pretrained,
+            local_files_only=bool(args.model_path),
+            fix_mistral_regex=True,
+        )
         model = AutoModelForSequenceClassification.from_pretrained(
             pretrained,
             num_labels=len(LABEL_ORDER),
@@ -254,15 +330,72 @@ def main(argv: Optional[List[str]] = None) -> int:
             print("gradient_checkpointing: enabled")
 
     label_to_idx = {label: i for i, label in enumerate(LABEL_ORDER)}
-    batch_size = int(args.batch_size or cfg.get("training", {}).get("batch_size", 8))
-    epochs = int(args.epochs or cfg.get("training", {}).get("epochs", 2))
-    lr = float(cfg.get("training", {}).get("learning_rate", 2e-5))
-    use_fp16 = bool(cfg.get("training", {}).get("fp16", True)) and not args.no_fp16 and device.type == "cuda"
+    training_cfg = cfg.get("training", {})
+    batch_size = int(args.batch_size or training_cfg.get("batch_size", 8))
+    epochs = int(args.epochs or training_cfg.get("epochs", 2))
+    lr = float(training_cfg.get("learning_rate", 2e-5))
+    use_fp16 = bool(training_cfg.get("fp16", True)) and not args.no_fp16 and device.type == "cuda"
     scaler = torch.cuda.amp.GradScaler(enabled=use_fp16)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
-    print(f"  batch_size={batch_size} epochs={epochs} fp16={use_fp16}")
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=lr,
+        weight_decay=float(training_cfg.get("weight_decay", 0.01)),
+    )
+    train_labels = np.asarray([label_to_idx[r.label] for r in train_records], dtype=np.int64)
+    counts = np.bincount(train_labels, minlength=len(LABEL_ORDER)).astype(np.float32)
+    counts = np.maximum(counts, 1.0)
+    weight_strategy = str(training_cfg.get("class_weight_strategy", "balanced"))
+    if weight_strategy == "uniform":
+        class_weights_np = np.ones(len(LABEL_ORDER), dtype=np.float32)
+    elif weight_strategy == "balanced":
+        class_weights_np = counts.sum() / (len(LABEL_ORDER) * counts)
+        for idx, label in enumerate(LABEL_ORDER):
+            class_weights_np[idx] *= float(
+                training_cfg.get("class_weight_multipliers", {}).get(label, 1.0)
+            )
+        class_weights_np *= len(LABEL_ORDER) / float(class_weights_np.sum())
+        clip_cfg = training_cfg.get("class_weight_clip")
+        if clip_cfg is not None:
+            if not isinstance(clip_cfg, list) or len(clip_cfg) != 2:
+                raise ValueError("training.class_weight_clip must be [minimum, maximum]")
+            class_weights_np = np.clip(
+                class_weights_np,
+                float(clip_cfg[0]),
+                float(clip_cfg[1]),
+            )
+            class_weights_np *= len(LABEL_ORDER) / float(class_weights_np.sum())
+    else:
+        raise ValueError(
+            "training.class_weight_strategy must be 'balanced' or 'uniform'"
+        )
+    class_weights = torch.tensor(class_weights_np, dtype=torch.float32, device=device)
+    targets = {
+        "target_transaction_recall": float(
+            training_cfg.get("target_transaction_recall", 0.985)
+        ),
+        "min_transaction_precision": float(
+            training_cfg.get("min_transaction_precision", 0.92)
+        ),
+        "min_macro_f1": float(training_cfg.get("min_macro_f1", 0.86)),
+        "min_harass_f1": float(training_cfg.get("min_harass_f1", 0.80)),
+        "min_fraud_recall": float(training_cfg.get("min_fraud_recall", 0.80)),
+    }
+    patience = int(training_cfg.get("early_stopping_patience", 3))
+    min_epochs = int(training_cfg.get("min_epochs", 3))
+    focal_gamma = float(training_cfg.get("focal_gamma", 0.0))
+    print(
+        f"  batch_size={batch_size} epochs={epochs} fp16={use_fp16} "
+        f"class_weight_strategy={weight_strategy} "
+        f"focal_gamma={focal_gamma} "
+        f"class_weights={dict(zip(LABEL_ORDER, class_weights_np.tolist()))}"
+    )
 
-    history: Dict[str, List[float]] = {"loss": [], "val_accuracy": []}
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
+    best_dir = Path(tempfile.mkdtemp(prefix="teacher_best_", dir=output_dir.parent))
+    best_score: Optional[Tuple[float, ...]] = None
+    best_epoch = 0
+    stale_epochs = 0
+    history: Dict[str, List] = {"loss": [], "val_accuracy": [], "val_metrics": []}
     for epoch in range(epochs):
         train_loss = train_epoch(
             model,
@@ -275,20 +408,55 @@ def main(argv: Optional[List[str]] = None) -> int:
             device,
             use_fp16=use_fp16,
             scaler=scaler,
+            class_weights=class_weights,
+            focal_gamma=focal_gamma,
         )
         history["loss"].append(train_loss)
         if val_records:
-            val_acc, _, _ = eval_accuracy(
+            val_acc, val_y, val_preds = eval_accuracy(
                 model, tokenizer, val_records, label_to_idx, max_length, batch_size, device
             )
+            epoch_metrics = summarize_metrics(
+                [LABEL_ORDER[i] for i in val_y.tolist()],
+                [LABEL_ORDER[i] for i in val_preds.tolist()],
+                LABEL_ORDER,
+            )
             history["val_accuracy"].append(val_acc)
-            print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} val_acc={val_acc:.4f}")
+            history["val_metrics"].append(epoch_metrics)
+            score = teacher_checkpoint_score(epoch_metrics, targets)
+            if best_score is None or score > best_score:
+                best_score = score
+                best_epoch = epoch + 1
+                stale_epochs = 0
+                model.save_pretrained(best_dir)
+                tokenizer.save_pretrained(best_dir)
+            else:
+                stale_epochs += 1
+            print(
+                f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f} "
+                f"val_acc={val_acc:.4f} val_macro_f1={epoch_metrics['macro_f1']:.4f} "
+                f"val_txn_recall="
+                f"{epoch_metrics['per_class']['TRANSACTION']['recall']:.4f}"
+            )
         else:
             print(f"epoch {epoch + 1}/{epochs} loss={train_loss:.4f}")
+        if val_records and epoch + 1 >= min_epochs and stale_epochs >= patience:
+            print(f"early stopping: no checkpoint improvement for {patience} epochs")
+            break
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    if best_epoch:
+        del optimizer, model
+        if device.type == "cuda":
+            torch.cuda.empty_cache()
+        model = AutoModelForSequenceClassification.from_pretrained(
+            best_dir,
+            local_files_only=True,
+        ).to(device)
+        print(f"restored best validation checkpoint from epoch {best_epoch}")
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
+    shutil.rmtree(best_dir, ignore_errors=True)
 
     metrics = {}
     if val_records:
@@ -318,7 +486,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         "labels": LABEL_ORDER,
         "sha256": hashlib.sha256(logits_path.read_bytes()).hexdigest(),
     }
-    write_json(ROOT / "data" / "manifests" / "teacher_logits_manifest.json", logits_manifest)
+    logits_manifest_path = args.logits_manifest or (ROOT / "data" / "manifests" / "teacher_logits_manifest.json")
+    write_json(logits_manifest_path, logits_manifest)
 
     manifest = {
         "seed": args.seed,
@@ -333,7 +502,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         "val_count": len(val_records),
         "history": history,
         "val_metrics": metrics,
-        "license_note": "bert-base-multilingual-cased is third-party; record hash and license.",
+        "best_epoch": best_epoch,
+        "class_weights": dict(zip(LABEL_ORDER, class_weights_np.tolist())),
+        "focal_gamma": focal_gamma,
+        "normalization": "normalize_text",
+        "license_note": f"{model_name} is third-party; record hash and license.",
         "third_party": True,
     }
     write_json(manifest_path, manifest)

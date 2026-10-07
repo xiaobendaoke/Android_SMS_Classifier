@@ -1,0 +1,422 @@
+{
+  "seed": 42,
+  "stage": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1",
+  "classifier": "keras",
+  "mode": "keras",
+  "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1/sms_bytecnn_fp32.keras",
+  "test_count": 1398,
+  "evaluated_count": 1386,
+  "needs_review_count": 12,
+  "prediction_distribution": {
+    "TRANSACTION": 532,
+    "AD": 556,
+    "FRAUD": 179,
+    "HARASS": 119
+  },
+  "metrics": {
+    "accuracy": 0.7943722943722944,
+    "macro_f1": 0.7572368398025087,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.7424812030075187,
+        "recall": 0.9382422802850356,
+        "f1": 0.8289611752360966
+      },
+      "AD": {
+        "precision": 0.8561151079136691,
+        "recall": 0.7973199329983249,
+        "f1": 0.8256721595836947
+      },
+      "HARASS": {
+        "precision": 0.7226890756302521,
+        "recall": 0.6277372262773723,
+        "f1": 0.671875
+      },
+      "FRAUD": {
+        "precision": 0.8044692737430168,
+        "recall": 0.6233766233766234,
+        "f1": 0.7024390243902439
+      }
+    },
+    "confusion_matrix": [
+      [
+        395,
+        23,
+        1,
+        2
+      ],
+      [
+        88,
+        476,
+        11,
+        22
+      ],
+      [
+        12,
+        28,
+        86,
+        11
+      ],
+      [
+        37,
+        29,
+        21,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1386
+  },
+  "per_language": {
+    "en": {
+      "accuracy": 0.32857142857142857,
+      "macro_f1": 0.14375,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "AD": {
+          "precision": 0.6388888888888888,
+          "recall": 0.5227272727272727,
+          "f1": 0.575
+        },
+        "HARASS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "FRAUD": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          19,
+          23,
+          0,
+          2
+        ],
+        [
+          4,
+          7,
+          0,
+          2
+        ],
+        [
+          7,
+          5,
+          0,
+          0
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 70
+    },
+    "hi": {
+      "accuracy": 0.4,
+      "macro_f1": 0.16739995809763253,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.05263157894736842,
+          "recall": 0.4,
+          "f1": 0.09302325581395349
+        },
+        "AD": {
+          "precision": 0.8205128205128205,
+          "recall": 0.4444444444444444,
+          "f1": 0.5765765765765766
+        },
+        "HARASS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "FRAUD": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          34,
+          32,
+          0,
+          6
+        ],
+        [
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 85
+    },
+    "id": {
+      "accuracy": 0.32941176470588235,
+      "macro_f1": 0.213511420828494,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.14285714285714285,
+          "recall": 0.5,
+          "f1": 0.22222222222222224
+        },
+        "AD": {
+          "precision": 0.41509433962264153,
+          "recall": 0.7586206896551724,
+          "f1": 0.5365853658536586
+        },
+        "HARASS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "FRAUD": {
+          "precision": 0.5,
+          "recall": 0.05263157894736842,
+          "f1": 0.09523809523809525
+        }
+      },
+      "confusion_matrix": [
+        [
+          4,
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          22,
+          0,
+          2
+        ],
+        [
+          4,
+          6,
+          0,
+          0
+        ],
+        [
+          15,
+          21,
+          0,
+          2
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 85
+    },
+    "zh": {
+      "accuracy": 0.8865619546247818,
+      "macro_f1": 0.854934611571312,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.8922018348623854,
+          "recall": 0.9557739557739557,
+          "f1": 0.9228944246737841
+        },
+        "AD": {
+          "precision": 0.9322429906542056,
+          "recall": 0.8827433628318584,
+          "f1": 0.9068181818181819
+        },
+        "HARASS": {
+          "precision": 0.7226890756302521,
+          "recall": 0.8113207547169812,
+          "f1": 0.7644444444444445
+        },
+        "FRAUD": {
+          "precision": 0.8711656441717791,
+          "recall": 0.7845303867403315,
+          "f1": 0.8255813953488372
+        }
+      },
+      "confusion_matrix": [
+        [
+          389,
+          15,
+          1,
+          2
+        ],
+        [
+          30,
+          399,
+          11,
+          12
+        ],
+        [
+          2,
+          11,
+          86,
+          7
+        ],
+        [
+          15,
+          3,
+          21,
+          142
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 1146
+    }
+  },
+  "acceptance_scope": {
+    "languages": [
+      "zh"
+    ],
+    "metrics": {
+      "accuracy": 0.8865619546247818,
+      "macro_f1": 0.854934611571312,
+      "per_class": {
+        "TRANSACTION": {
+          "precision": 0.8922018348623854,
+          "recall": 0.9557739557739557,
+          "f1": 0.9228944246737841
+        },
+        "AD": {
+          "precision": 0.9322429906542056,
+          "recall": 0.8827433628318584,
+          "f1": 0.9068181818181819
+        },
+        "HARASS": {
+          "precision": 0.7226890756302521,
+          "recall": 0.8113207547169812,
+          "f1": 0.7644444444444445
+        },
+        "FRAUD": {
+          "precision": 0.8711656441717791,
+          "recall": 0.7845303867403315,
+          "f1": 0.8255813953488372
+        }
+      },
+      "confusion_matrix": [
+        [
+          389,
+          15,
+          1,
+          2
+        ],
+        [
+          30,
+          399,
+          11,
+          12
+        ],
+        [
+          2,
+          11,
+          86,
+          7
+        ],
+        [
+          15,
+          3,
+          21,
+          142
+        ]
+      ],
+      "label_order": [
+        "TRANSACTION",
+        "AD",
+        "HARASS",
+        "FRAUD"
+      ],
+      "count": 1146
+    }
+  },
+  "transaction_recall": 0.9557739557739557,
+  "transaction_precision": 0.8922018348623854,
+  "transaction_recall_ci95": [
+    0.9311796856119817,
+    0.9718447403468305
+  ],
+  "macro_f1": 0.854934611571312,
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "gate_errors": [
+    "transaction_recall=0.955774 < 0.985000",
+    "transaction_precision=0.892202 < 0.920000",
+    "macro_f1=0.854935 < 0.860000",
+    "harass_f1=0.764444 < 0.800000",
+    "fraud_recall=0.784530 < 0.800000"
+  ],
+  "acceptance_passed": false,
+  "transaction_protection": {
+    "enabled": false,
+    "rules_dir": null,
+    "model_head_positive_count": 486,
+    "protected_count": 0,
+    "fraud_conflict_count": 0,
+    "safety_metrics": null,
+    "raw_metrics": null
+  },
+  "claim_allowed": false,
+  "claim_note": "Synthetic or small frozen sets must not claim transaction recall ≥98%. Only a dual-annotated real freeze with matching SHA may claim PASS.",
+  "review_semantics": {
+    "NEEDS_REVIEW": "Ambiguous or policy-escalation label excluded from training and macro metrics. On-device routing may send low-confidence or conflicting-rule messages to human review instead of forcing a four-class prediction.",
+    "excluded_from_training": [
+      "NEEDS_REVIEW"
+    ],
+    "production_labels": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ]
+  }
+}

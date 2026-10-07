@@ -1,0 +1,5 @@
+command= /home/colab/projects/Android_SMS_Classifier/.venv/bin/python /home/colab/projects/Android_SMS_Classifier/tools/check_no_sensitive_logs.py
+started_at=2026-08-02T06:00:33Z
+OK: no obvious sensitive log patterns (Phase 0 heuristic)
+ended_at=2026-08-02T06:00:33Z
+exit_code=0

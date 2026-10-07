@@ -1,0 +1,21 @@
+command= /home/colab/projects/Android_SMS_Classifier/.venv/bin/python /home/colab/projects/Android_SMS_Classifier/tools/audit_release.py
+started_at=2026-08-02T06:00:33Z
+{
+  "release": "0.2.1-p0-fixes",
+  "status": "FRAMEWORK_ONLY",
+  "p0": 0,
+  "p1": 1,
+  "p2": 1,
+  "checksPassed": 2,
+  "checksFailed": 0,
+  "internetPermissionHits": [],
+  "datasetLeakage": "PASS",
+  "artifactHashesFile": "artifact_hashes.json",
+  "hasInt8Model": false,
+  "hasDebugApk": false,
+  "note": "Engineering closed-loop on synthetic data after P0 leakage fixes. Do NOT claim transaction recall >=98% without frozen real labeled test set + device reports.",
+  "generatedAt": "2026-08-02T06:00:33.951576+00:00",
+  "reviewers": []
+}
+ended_at=2026-08-02T06:00:33Z
+exit_code=0

@@ -1,0 +1,21 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_3e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Reducing only the student learning rate to 3e-4 avoided NaN but did not improve the authoritative zh validation gates versus the 5e-4 candidate.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.921376, transaction_precision=0.878220, macro_f1=0.838921, harass_f1=0.752212, and fraud_recall=0.790055. All five gates remain below threshold.",
+  "next_hypothesis": "Learning-rate reduction below 5e-4 is not promising; return to a different single-variable loss-shaping or teacher-signal adjustment.",
+  "gate_errors": [
+    "transaction_recall=0.921376 < 0.985000",
+    "transaction_precision=0.878220 < 0.920000",
+    "macro_f1=0.838921 < 0.860000",
+    "harass_f1=0.752212 < 0.800000",
+    "fraud_recall=0.790055 < 0.800000"
+  ]
+}

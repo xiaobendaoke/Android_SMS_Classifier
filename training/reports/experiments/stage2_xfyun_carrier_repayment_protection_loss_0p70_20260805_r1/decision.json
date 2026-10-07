@@ -1,0 +1,14 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_protection_loss_0p70_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Increasing only transaction_protection.loss_weight from 0.35 to 0.70 did not improve the authoritative Chinese transaction recall and left four category gates unmet.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "analysis.json",
+  "next_hypothesis": "The remaining transaction-versus-AD misses require a category-separation intervention rather than greater shared protection-head pressure; test one constrained model/training variable after this run is committed and pushed."
+}

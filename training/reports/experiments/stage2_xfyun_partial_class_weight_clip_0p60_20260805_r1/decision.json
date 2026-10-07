@@ -1,0 +1,26 @@
+{
+  "run_id": "stage2_xfyun_partial_class_weight_clip_0p60_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Lowering only the class-weight clip floor to 0.60 did not pass the independent zh validation gates; the run also observed NaN during training before restoring the best checkpoint.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.928747, transaction_precision=0.915254, macro_f1=0.851603, harass_f1=0.761905, and fraud_recall=0.773481. All five acceptance gates failed.",
+  "training_instability": {
+    "nan_loss_first_observed_epoch": 11,
+    "checkpoint_restored_epoch": 9,
+    "release_eligible": false
+  },
+  "next_hypothesis": "Do not move this candidate into human review. The lower class-weight clip floor improved TRANSACTION precision but did not solve TRANSACTION recall or HARASS/FRAUD gates.",
+  "gate_errors": [
+    "transaction_recall=0.928747 < 0.985000",
+    "transaction_precision=0.915254 < 0.920000",
+    "macro_f1=0.851603 < 0.860000",
+    "harass_f1=0.761905 < 0.800000",
+    "fraud_recall=0.773481 < 0.800000"
+  ]
+}

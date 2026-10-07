@@ -1,0 +1,36 @@
+{
+  "run_id": "stage0_baseline_20260802_r2",
+  "status": "BASELINE_COMPLETE_WITH_PHASE_1_BLOCKER",
+  "validation_only": true,
+  "locked_test_model_metrics_read": false,
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "checks": {
+    "pytest": {"passed": 74},
+    "labels": "PASS",
+    "sources": "PASS",
+    "split_leakage": "PASS",
+    "no_network": "PASS",
+    "sensitive_logs": "PASS",
+    "release_audit": "PASS_ENGINEERING"
+  },
+  "zh_validation_baseline": {
+    "count": 1158,
+    "transaction_recall": 0.9154589371980676,
+    "transaction_precision": 0.8875878220140515,
+    "macro_f1": 0.8513949584838643,
+    "harass_f1": 0.7577092511013215,
+    "fraud_recall": 0.8287292817679558,
+    "formal_gate_evaluated": false
+  },
+  "v4_startup": {
+    "exit_code": 6,
+    "status": "V2_STARTUP_DENIED",
+    "locked_test_reachable": false,
+    "blockers": [
+      "label_conflicts_v2 human annotation incomplete",
+      "transaction_specialist_v2 human annotation incomplete",
+      "dataset_manifest_v2 human_annotation_incomplete"
+    ]
+  }
+}

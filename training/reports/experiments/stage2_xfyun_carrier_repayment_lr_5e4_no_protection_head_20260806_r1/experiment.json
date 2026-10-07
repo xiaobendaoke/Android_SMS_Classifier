@@ -1,0 +1,105 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_no_protection_head_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "hypothesis": "Disabling only the transaction-protection auxiliary head and loss on the lr=5e-4 hard-label front may let the four-class primary head optimize TRANSACTION/HARASS/AD/FRAUD separation directly, testing whether the auxiliary protection objective is hurting acceptance-gate tradeoffs.",
+  "only_changed_variable": "model.transaction_protection_head=false and transaction_protection.enabled=false (baseline=true; learning_rate kept at 5e-4)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.4,
+    "training_mode": "hard_only"
+  },
+  "config_sha256": "133c98ca0b4a2eacd984b8ff38f3b17fc2ba46ee26a3b22cde513a97864c22ae",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8568935427574171,
+    "macro_f1": 0.8259476416672427,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8511111111111112,
+        "recall": 0.941031941031941,
+        "f1": 0.8938156359393232
+      },
+      "AD": {
+        "precision": 0.9236453201970444,
+        "recall": 0.8296460176991151,
+        "f1": 0.8741258741258741
+      },
+      "HARASS": {
+        "precision": 0.7358490566037735,
+        "recall": 0.7358490566037735,
+        "f1": 0.7358490566037735
+      },
+      "FRAUD": {
+        "precision": 0.7934782608695652,
+        "recall": 0.8066298342541437,
+        "f1": 0.8
+      }
+    },
+    "confusion_matrix": [
+      [
+        383,
+        17,
+        3,
+        4
+      ],
+      [
+        45,
+        375,
+        9,
+        23
+      ],
+      [
+        6,
+        11,
+        78,
+        11
+      ],
+      [
+        16,
+        3,
+        16,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 5,
+  "model_sha256": "255338382e65cf12fb1378727d6cbc6ec0813622b94dd6dc5360a3c0602db034",
+  "transaction_protection": {
+    "enabled": false,
+    "output_index": null,
+    "threshold": 0.5,
+    "loss_weight": 0.35,
+    "positive_weight": 1.1,
+    "focal_gamma": 1.5,
+    "hard_label_weight": 0.85,
+    "teacher_temperature": 1.0,
+    "checkpoint_scope": "primary"
+  },
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.941032 < 0.985000",
+    "transaction_precision=0.851111 < 0.920000",
+    "macro_f1=0.825948 < 0.860000",
+    "harass_f1=0.735849 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

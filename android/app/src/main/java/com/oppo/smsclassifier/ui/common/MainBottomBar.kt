@@ -2,12 +2,8 @@ package com.oppo.smsclassifier.ui.common
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Assessment
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Report
-import androidx.compose.material.icons.filled.Science
-import androidx.compose.material.icons.filled.Speed
-import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -23,20 +19,11 @@ data class BottomNavItem(
 )
 
 val mainBottomNavItems = listOf(
-    BottomNavItem(NavRoutes.INBOX, R.string.tab_inbox) {
-        Icon(Icons.Default.Home, contentDescription = null)
-    },
-    BottomNavItem(NavRoutes.SUSPECT, R.string.tab_suspect) {
-        Icon(Icons.Default.Report, contentDescription = null)
-    },
-    BottomNavItem(NavRoutes.REVIEW, R.string.tab_review) {
-        Icon(Icons.Default.Visibility, contentDescription = null)
-    },
     BottomNavItem(NavRoutes.EVALUATION, R.string.tab_evaluation) {
-        Icon(Icons.Default.Science, contentDescription = null)
+        Icon(Icons.Default.Assessment, contentDescription = null)
     },
-    BottomNavItem(NavRoutes.PERFORMANCE, R.string.tab_performance) {
-        Icon(Icons.Default.Speed, contentDescription = null)
+    BottomNavItem(NavRoutes.JUDGE, R.string.tab_judge) {
+        Icon(Icons.Default.Edit, contentDescription = null)
     },
     BottomNavItem(NavRoutes.ABOUT, R.string.tab_about) {
         Icon(Icons.Default.Info, contentDescription = null)

@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_txn_hard_positive_2p0_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Increasing only transaction_hard_positive_multiplier to 2.0 did not pass the independent zh validation gates.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.936118, transaction_precision=0.888112, macro_f1=0.846666, harass_f1=0.758929, and fraud_recall=0.812155. The candidate still missed transaction recall, transaction precision, macro F1, and HARASS F1 gates.",
+  "next_hypothesis": "Do not move this candidate into human review. Try a distillation-side weighting adjustment such as teacher_confidence_floor instead of further hard-positive inflation.",
+  "gate_errors": [
+    "transaction_recall=0.936118 < 0.985000",
+    "transaction_precision=0.888112 < 0.920000",
+    "macro_f1=0.846666 < 0.860000",
+    "harass_f1=0.758929 < 0.800000"
+  ]
+}

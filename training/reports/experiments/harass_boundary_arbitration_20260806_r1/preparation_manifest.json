@@ -1,0 +1,39 @@
+{
+  "run_id": "harass_boundary_arbitration_20260806_r1",
+  "status": "PENDING_EXTERNAL_APPROVAL",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "source_data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "candidate_selection": "inconsistent_template_groups_only",
+  "inconsistent_template_group_count": 6,
+  "harass_involved_inconsistent_group_count": 5,
+  "inconsistent_label_pair_counts": {
+    "FRAUD|HARASS": 5,
+    "AD|FRAUD": 1
+  },
+  "candidate_count": 22,
+  "split_membership_preserved": true,
+  "blind_fields": [
+    "review_key",
+    "id",
+    "text"
+  ],
+  "excluded_fields": [
+    "prior_label",
+    "model_prediction",
+    "split",
+    "annotator_ids"
+  ],
+  "pass_a_sha256": "59bec8fe4e20b12736fe547ba5c0f6a45e0277e5c0e651e41cfff43e3455cb20",
+  "pass_b_sha256": "15b3e9e2a940d593425a2d79e61bba907f309aeaee69b100429499ab95d75d23",
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

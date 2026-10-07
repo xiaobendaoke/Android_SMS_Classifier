@@ -1,0 +1,89 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dense_units_160_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_student_distill_20260805_r1",
+  "hypothesis": "Increasing only the post-convolution dense layer width may improve HARASS/AD/FRAUD class-boundary separation while preserving the existing transaction-focused training setup.",
+  "only_changed_variable": "model.dense_units=160 (baseline=96)",
+  "config_sha256": "48586086d08507dd57a7bed2072042d7848c377000c8371418901a32e0f5d212",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8656195462478184,
+    "macro_f1": 0.8326218875883138,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8606741573033708,
+        "recall": 0.941031941031941,
+        "f1": 0.8990610328638499
+      },
+      "AD": {
+        "precision": 0.8926940639269406,
+        "recall": 0.8650442477876106,
+        "f1": 0.8786516853932583
+      },
+      "HARASS": {
+        "precision": 0.7373737373737373,
+        "recall": 0.6886792452830188,
+        "f1": 0.7121951219512194
+      },
+      "FRAUD": {
+        "precision": 0.8841463414634146,
+        "recall": 0.8011049723756906,
+        "f1": 0.8405797101449275
+      }
+    },
+    "confusion_matrix": [
+      [
+        383,
+        22,
+        1,
+        1
+      ],
+      [
+        40,
+        391,
+        10,
+        11
+      ],
+      [
+        6,
+        20,
+        73,
+        7
+      ],
+      [
+        16,
+        5,
+        15,
+        145
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 10,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.941032 < 0.985000",
+    "transaction_precision=0.860674 < 0.920000",
+    "macro_f1=0.832622 < 0.860000",
+    "harass_f1=0.712195 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

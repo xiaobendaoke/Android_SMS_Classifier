@@ -1,0 +1,66 @@
+{
+  "run_id": "xfyun_carrier_repayment_relabel_20260804_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "annotators": [
+    "AI_GLM_XOPGLM52_PASS_A_001",
+    "AI_DEEPSEEK_XOPDEEPSEEKV4FLASH_PASS_B_001",
+    "AI_DEEPSEEK_XOPDEEPSEEKV4FLASH_ADJUDICATOR_001"
+  ],
+  "transport": "direct_openai_sdk_xfyun_v2",
+  "input_sha256": {
+    "pass_a": "bf64389ed470e13c1d1ebe1d0670c19e29561e156cd439f325415dc70833a47e",
+    "pass_b": "91512c4edb8e0c8aae1920d00361ef46a87133a2eb39bf9552f00b97b7eb4473",
+    "pass_c": "f482203d4272fb0cbfc9c1fc62a56b1239fa3badfbee742f37e0e7140739a45b"
+  },
+  "agreement": {
+    "conflict_count": 4,
+    "conflict_ids": [
+      "zh-n2w-02095",
+      "zh-n2w-03338",
+      "zh-n2w-05026",
+      "zh_02354"
+    ],
+    "exact_agreement": 0.7333333333333333
+  },
+  "qa_summary_sha256": "f2b03671c12b4b7d19493afcfb2ca89922f6854d18ef507012e2ce3db0a72210",
+  "correction_count": 7,
+  "needs_review_count": 0,
+  "transition_counts": {
+    "TRANSACTION->TRANSACTION": 8,
+    "TRANSACTION->HARASS": 2,
+    "TRANSACTION->AD": 5
+  },
+  "overlay_sha256": "27b1c0627c015210a464986f5991c7c40451e5605a4cf883e6b28fe3f8366a2d",
+  "returncode": 0,
+  "overlay_manifest": {
+    "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+    "claim_allowed": false,
+    "human_verified": false,
+    "formal_acceptance_allowed": false,
+    "overlay_sha256": "27b1c0627c015210a464986f5991c7c40451e5605a4cf883e6b28fe3f8366a2d",
+    "source_sha256": {
+      "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+      "validation": "700dc9883118fe7dada5a217612b6af8b6863d062eb274b540bf19bcc5f0697d",
+      "test": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57"
+    },
+    "output_sha256": {
+      "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+      "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f",
+      "test": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57"
+    },
+    "split_membership_preserved": true,
+    "locked_test_byte_identical": true,
+    "changed_labels": 7,
+    "quarantine_count": 0,
+    "unmatched_annotation_ids": [],
+    "validation_reference_status": "PROVISIONAL_AUTOMATED_REFERENCE_LABELS"
+  },
+  "template_audit": {
+    "status": "NO_RAW_TEMPLATE_CONTENT_EXPORTED",
+    "candidate_count": 15
+  }
+}

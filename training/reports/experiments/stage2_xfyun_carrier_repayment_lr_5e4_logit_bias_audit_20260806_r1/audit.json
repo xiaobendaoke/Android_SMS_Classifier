@@ -1,0 +1,537 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_logit_bias_audit_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "hypothesis": "A single fixed class-logit bias on the lr=5e-4 front might recover one acceptance tradeoff, but must pass all five zh validation gates on one candidate.",
+  "search_space": {
+    "bias_labels": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "bias_min": -2.0,
+    "bias_max": 2.0,
+    "bias_step": 0.05,
+    "single_variable_only": true
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "evaluated_count": 1146,
+  "model": {
+    "model_path": "/home/colab/projects/Android_SMS_Classifier/training/artifacts/experiments/stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1/sms_bytecnn_fp32.keras",
+    "model_sha256": "3e85a244f0a45d6a5195c46dcbb3e413bb121e8660569c065e7816b9d7c39514",
+    "baseline": {
+      "bias_name": "none",
+      "bias_value": 0.0,
+      "transaction_recall": 0.9312039312039312,
+      "transaction_precision": 0.9002375296912114,
+      "macro_f1": 0.8594695525044496,
+      "harass_f1": 0.7922705314009663,
+      "fraud_recall": 0.8066298342541437,
+      "confusion_matrix": [
+        [
+          379,
+          27,
+          0,
+          1
+        ],
+        [
+          35,
+          403,
+          4,
+          10
+        ],
+        [
+          2,
+          15,
+          82,
+          7
+        ],
+        [
+          5,
+          15,
+          15,
+          146
+        ]
+      ],
+      "min_gate_margin": -0.0537960687960688
+    },
+    "single_variable_sweeps": [
+      {
+        "label": "TRANSACTION",
+        "sweep_count": 81,
+        "feasible_count": 0,
+        "first_feasible": null,
+        "best_min_gate_margin": {
+          "bias_name": "transaction_logit_bias",
+          "bias_value": 0.7,
+          "transaction_recall": 0.941031941031941,
+          "transaction_precision": 0.8744292237442922,
+          "macro_f1": 0.8541313992953206,
+          "harass_f1": 0.7864077669902914,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              383,
+              23,
+              0,
+              1
+            ],
+            [
+              45,
+              393,
+              4,
+              10
+            ],
+            [
+              3,
+              15,
+              81,
+              7
+            ],
+            [
+              7,
+              13,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.04557077625570782
+        },
+        "best_with_transaction_precision_guard": {
+          "bias_name": "transaction_logit_bias",
+          "bias_value": -0.65,
+          "transaction_recall": 0.9090909090909091,
+          "transaction_precision": 0.9273182957393483,
+          "macro_f1": 0.8599780433693115,
+          "harass_f1": 0.7904761904761906,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              370,
+              31,
+              2,
+              4
+            ],
+            [
+              24,
+              414,
+              4,
+              10
+            ],
+            [
+              1,
+              15,
+              83,
+              7
+            ],
+            [
+              4,
+              16,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.07590909090909093
+        },
+        "best_with_transaction_recall_guard": {
+          "bias_name": "transaction_logit_bias",
+          "bias_value": -1.75,
+          "transaction_recall": 0.8525798525798526,
+          "transaction_precision": 0.9559228650137741,
+          "macro_f1": 0.8501595421338657,
+          "harass_f1": 0.7757009345794392,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              347,
+              48,
+              6,
+              6
+            ],
+            [
+              12,
+              426,
+              4,
+              10
+            ],
+            [
+              1,
+              15,
+              83,
+              7
+            ],
+            [
+              3,
+              17,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.1324201474201474
+        }
+      },
+      {
+        "label": "AD",
+        "sweep_count": 81,
+        "feasible_count": 0,
+        "first_feasible": null,
+        "best_min_gate_margin": {
+          "bias_name": "ad_logit_bias",
+          "bias_value": -0.9,
+          "transaction_recall": 0.9459459459459459,
+          "transaction_precision": 0.8789954337899544,
+          "macro_f1": 0.8474352806345293,
+          "harass_f1": 0.7555555555555555,
+          "fraud_recall": 0.8232044198895028,
+          "confusion_matrix": [
+            [
+              385,
+              19,
+              1,
+              2
+            ],
+            [
+              46,
+              383,
+              7,
+              16
+            ],
+            [
+              2,
+              12,
+              85,
+              7
+            ],
+            [
+              5,
+              1,
+              26,
+              149
+            ]
+          ],
+          "min_gate_margin": -0.04444444444444451
+        },
+        "best_with_transaction_precision_guard": {
+          "bias_name": "ad_logit_bias",
+          "bias_value": 0.65,
+          "transaction_recall": 0.9213759213759214,
+          "transaction_precision": 0.9259259259259259,
+          "macro_f1": 0.847594151367018,
+          "harass_f1": 0.7537688442211055,
+          "fraud_recall": 0.7790055248618785,
+          "confusion_matrix": [
+            [
+              375,
+              31,
+              0,
+              1
+            ],
+            [
+              24,
+              415,
+              4,
+              9
+            ],
+            [
+              2,
+              22,
+              75,
+              7
+            ],
+            [
+              4,
+              22,
+              14,
+              141
+            ]
+          ],
+          "min_gate_margin": -0.0636240786240786
+        },
+        "best_with_transaction_recall_guard": {
+          "bias_name": "ad_logit_bias",
+          "bias_value": 1.7,
+          "transaction_recall": 0.8673218673218673,
+          "transaction_precision": 0.9540540540540541,
+          "macro_f1": 0.8188016008358555,
+          "harass_f1": 0.6994535519125682,
+          "fraud_recall": 0.7237569060773481,
+          "confusion_matrix": [
+            [
+              353,
+              54,
+              0,
+              0
+            ],
+            [
+              12,
+              431,
+              2,
+              7
+            ],
+            [
+              2,
+              37,
+              64,
+              3
+            ],
+            [
+              3,
+              36,
+              11,
+              131
+            ]
+          ],
+          "min_gate_margin": -0.11767813267813265
+        }
+      },
+      {
+        "label": "HARASS",
+        "sweep_count": 81,
+        "feasible_count": 0,
+        "first_feasible": null,
+        "best_min_gate_margin": {
+          "bias_name": "harass_logit_bias",
+          "bias_value": -0.05,
+          "transaction_recall": 0.9312039312039312,
+          "transaction_precision": 0.9002375296912114,
+          "macro_f1": 0.8594695525044496,
+          "harass_f1": 0.7922705314009663,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              379,
+              27,
+              0,
+              1
+            ],
+            [
+              35,
+              403,
+              4,
+              10
+            ],
+            [
+              2,
+              15,
+              82,
+              7
+            ],
+            [
+              5,
+              15,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.0537960687960688
+        },
+        "best_with_transaction_precision_guard": {
+          "bias_name": "harass_logit_bias",
+          "bias_value": -0.05,
+          "transaction_recall": 0.9312039312039312,
+          "transaction_precision": 0.9002375296912114,
+          "macro_f1": 0.8594695525044496,
+          "harass_f1": 0.7922705314009663,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              379,
+              27,
+              0,
+              1
+            ],
+            [
+              35,
+              403,
+              4,
+              10
+            ],
+            [
+              2,
+              15,
+              82,
+              7
+            ],
+            [
+              5,
+              15,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.0537960687960688
+        },
+        "best_with_transaction_recall_guard": {
+          "bias_name": "harass_logit_bias",
+          "bias_value": 1.4,
+          "transaction_recall": 0.9164619164619164,
+          "transaction_precision": 0.9053398058252428,
+          "macro_f1": 0.8340885993580605,
+          "harass_f1": 0.7137254901960784,
+          "fraud_recall": 0.7569060773480663,
+          "confusion_matrix": [
+            [
+              373,
+              26,
+              8,
+              0
+            ],
+            [
+              33,
+              394,
+              15,
+              10
+            ],
+            [
+              1,
+              8,
+              91,
+              6
+            ],
+            [
+              5,
+              4,
+              35,
+              137
+            ]
+          ],
+          "min_gate_margin": -0.0862745098039216
+        }
+      },
+      {
+        "label": "FRAUD",
+        "sweep_count": 81,
+        "feasible_count": 0,
+        "first_feasible": null,
+        "best_min_gate_margin": {
+          "bias_name": "fraud_logit_bias",
+          "bias_value": -0.2,
+          "transaction_recall": 0.9312039312039312,
+          "transaction_precision": 0.9002375296912114,
+          "macro_f1": 0.8603903003625251,
+          "harass_f1": 0.7922705314009663,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              379,
+              27,
+              0,
+              1
+            ],
+            [
+              35,
+              404,
+              4,
+              9
+            ],
+            [
+              2,
+              15,
+              82,
+              7
+            ],
+            [
+              5,
+              15,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.0537960687960688
+        },
+        "best_with_transaction_precision_guard": {
+          "bias_name": "fraud_logit_bias",
+          "bias_value": -0.2,
+          "transaction_recall": 0.9312039312039312,
+          "transaction_precision": 0.9002375296912114,
+          "macro_f1": 0.8603903003625251,
+          "harass_f1": 0.7922705314009663,
+          "fraud_recall": 0.8066298342541437,
+          "confusion_matrix": [
+            [
+              379,
+              27,
+              0,
+              1
+            ],
+            [
+              35,
+              404,
+              4,
+              9
+            ],
+            [
+              2,
+              15,
+              82,
+              7
+            ],
+            [
+              5,
+              15,
+              15,
+              146
+            ]
+          ],
+          "min_gate_margin": -0.0537960687960688
+        },
+        "best_with_transaction_recall_guard": {
+          "bias_name": "fraud_logit_bias",
+          "bias_value": 2.0,
+          "transaction_recall": 0.914004914004914,
+          "transaction_precision": 0.9051094890510949,
+          "macro_f1": 0.8394612765917394,
+          "harass_f1": 0.7777777777777778,
+          "fraud_recall": 0.8397790055248618,
+          "confusion_matrix": [
+            [
+              372,
+              25,
+              0,
+              10
+            ],
+            [
+              32,
+              391,
+              3,
+              26
+            ],
+            [
+              2,
+              14,
+              77,
+              13
+            ],
+            [
+              5,
+              12,
+              12,
+              152
+            ]
+          ],
+          "min_gate_margin": -0.07099508599508597
+        }
+      }
+    ]
+  },
+  "feasible_sweeps": [],
+  "decision": "rejected",
+  "decision_reason": "No audited single-variable logit-bias point on the lr=5e-4 front satisfied all five zh validation gates."
+}

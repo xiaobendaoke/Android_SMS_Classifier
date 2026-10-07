@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "status": "PROVISIONAL_AUTOMATED_REVIEW",
+  "claim_allowed": false,
+  "note": "Deterministic label contradictions and high-risk samples forced into NEEDS_REVIEW / human re-review. AI must not auto-assign final four-class labels.",
+  "ids": [
+    "zh_08937",
+    "zh-n2w-07703",
+    "zh-n2w-07929",
+    "zh-n2w-09673",
+    "zh-n2w-03416",
+    "zh-n2w-06672",
+    "zh-n2w-07304",
+    "zh-n2w-07558",
+    "zh-n2w-07605",
+    "zh-n2w-07617",
+    "zh-n2w-07725",
+    "zh-n2w-07978",
+    "zh-n2w-08206",
+    "zh-n2w-07310",
+    "zh_10548",
+    "zh_01214",
+    "zh-n2w-06829",
+    "zh-n2w-04902",
+    "zh-n2w-08728",
+    "zh-n2w-08886"
+  ],
+  "groups": {
+    "contradictory_adjudication_loan_marketing": [
+      "zh_08937",
+      "zh-n2w-07703",
+      "zh-n2w-07929"
+    ],
+    "loan_limit_unused_boundary": [
+      "zh-n2w-09673"
+    ],
+    "survey_satisfaction_needs_review": [
+      "zh-n2w-03416",
+      "zh-n2w-06672",
+      "zh-n2w-07304",
+      "zh-n2w-07558",
+      "zh-n2w-07605",
+      "zh-n2w-07617",
+      "zh-n2w-07725",
+      "zh-n2w-07978",
+      "zh-n2w-08206"
+    ],
+    "high_risk_manual_review": [
+      "zh-n2w-07310",
+      "zh_10548",
+      "zh_01214",
+      "zh-n2w-06829",
+      "zh-n2w-04902",
+      "zh-n2w-08728",
+      "zh-n2w-08886"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "run_id": "stage2_xfyun_teacher_student_ensemble_audit_20260805_r1",
+  "experiment_commit_sha": "713ba4476d823b1916aa2051901114a6f2f4637d",
+  "remote": "origin",
+  "remote_branch": "cursor/fix-formal-quantize-int8-800d",
+  "push_command": "git -c http.proxy=http://127.0.0.1:7897 push origin HEAD:cursor/fix-formal-quantize-int8-800d",
+  "push_exit_code": 0,
+  "push_status": "pushed",
+  "remote_head_after_push": "713ba4476d823b1916aa2051901114a6f2f4637d"
+}

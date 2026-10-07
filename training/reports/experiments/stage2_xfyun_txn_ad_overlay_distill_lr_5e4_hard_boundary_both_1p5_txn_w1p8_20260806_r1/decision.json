@@ -1,0 +1,41 @@
+{
+  "run_id": "stage2_xfyun_txn_ad_overlay_distill_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1",
+  "decision": "rejected",
+  "decision_reason": "The independently evaluated Keras zh validation run did not satisfy all five acceptance gates.",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "automated_gates_passed": false,
+  "independent_evaluation": "post_training_keras_metrics.json",
+  "acceptance_scope": [
+    "zh"
+  ],
+  "metrics": {
+    "transaction_recall": 0.94484412470024,
+    "transaction_precision": 0.931442080378251,
+    "macro_f1": 0.883289556885062,
+    "harass_f1": 0.809090909090909,
+    "fraud_recall": 0.890243902439024
+  },
+  "acceptance_targets": {
+    "transaction_recall": 0.985,
+    "transaction_precision": 0.92,
+    "macro_f1": 0.86,
+    "harass_f1": 0.8,
+    "fraud_recall": 0.8
+  },
+  "failed_gates": [
+    "transaction_recall=0.944844 < 0.985000"
+  ],
+  "passed_gates": [
+    "transaction_precision",
+    "macro_f1",
+    "harass_f1",
+    "fraud_recall"
+  ],
+  "nan_observed": false,
+  "locked_test_evaluated": false,
+  "human_review_package_allowed": false
+}

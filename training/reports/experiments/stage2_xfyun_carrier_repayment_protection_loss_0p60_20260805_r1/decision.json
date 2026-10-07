@@ -1,0 +1,20 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_protection_loss_0p60_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "rejection_reason": "Lowering transaction_protection.loss_weight to 0.60 still missed the independent zh validation gates and underperformed the 0.70 variant on the recall-precision tradeoff.",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "error_analysis": "Independent Keras evaluation on zh validation reported transaction_recall=0.950860, transaction_precision=0.850549, macro_f1=0.840807, harass_f1=0.757576, and fraud_recall=0.806630. Transaction recall improved over the raw baseline, but transaction precision, macro F1, and HARASS F1 remained below threshold.",
+  "next_hypothesis": "Do not move this candidate into human review. Continue with a more localized transaction-boundary adjustment such as transaction_hard_positive_multiplier.",
+  "gate_errors": [
+    "transaction_recall=0.950860 < 0.985000",
+    "transaction_precision=0.850549 < 0.920000",
+    "macro_f1=0.840807 < 0.860000",
+    "harass_f1=0.757576 < 0.800000"
+  ]
+}

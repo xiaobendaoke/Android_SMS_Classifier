@@ -1,0 +1,20 @@
+command= /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/.venv/bin/python /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/scripts/evaluate.py --mode pipeline --keras /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/artifacts/student/sms_bytecnn_fp32.keras --test /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/data/processed_v2/validation.jsonl --stage stage0_baseline_20260802_r2 --output /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/reports/experiments/stage0_baseline_20260802_r2/current_validation_pipeline.json --targets-config /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/configs/student.yaml --seed 42
+started_at=2026-08-02T09:59:08Z
+2026-08-02 17:59:09.721475: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1785664749.733344     549 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1785664749.736684     549 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1785664749.747169     549 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1785664749.747205     549 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1785664749.747206     549 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1785664749.747208     549 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+I0000 00:00:1785664751.558789     549 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 5520 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4070 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.9
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785664752.499424     616 service.cc:152] XLA service 0x715e5c017d00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1785664752.499456     616 service.cc:160]   StreamExecutor device (0): NVIDIA GeForce RTX 4070 Laptop GPU, Compute Capability 8.9
+I0000 00:00:1785664752.542808     616 cuda_dnn.cc:529] Loaded cuDNN version 90300
+I0000 00:00:1785664753.731124     616 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Wrote evaluation to /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/reports/experiments/stage0_baseline_20260802_r2/current_validation_pipeline.json
+mode=pipeline macro_f1=0.750 transaction_recall=0.907 pred_dist={'TRANSACTION': 571, 'AD': 538, 'FRAUD': 170, 'HARASS': 119}
+ended_at=2026-08-02T09:59:15Z
+exit_code=0

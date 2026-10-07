@@ -1,0 +1,58 @@
+{
+  "run_id": "xfyun_error_relabel_20260803_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "pass_a": {
+    "expected": 14,
+    "valid": 14,
+    "missing": 0,
+    "malformed": 0,
+    "label_counts": {
+      "NEEDS_REVIEW": 2,
+      "TRANSACTION": 11,
+      "AD": 1
+    }
+  },
+  "pass_b": {
+    "expected": 14,
+    "valid": 14,
+    "missing": 0,
+    "malformed": 0,
+    "label_counts": {
+      "TRANSACTION": 8,
+      "AD": 4,
+      "NEEDS_REVIEW": 1,
+      "FRAUD": 1
+    }
+  },
+  "pass_c": {
+    "expected": 4,
+    "valid": 4,
+    "missing": 0,
+    "malformed": 0,
+    "label_counts": {
+      "AD": 2,
+      "TRANSACTION": 1,
+      "NEEDS_REVIEW": 1
+    }
+  },
+  "agreement": {
+    "common_valid": 14,
+    "conflict_count": 4,
+    "conflict_ids": [
+      "zh-n2w-05265",
+      "zh-n2w-05588",
+      "zh_07637",
+      "zh_07890"
+    ],
+    "exact_agreement": 0.7142857142857143
+  },
+  "final_label_counts": {
+    "TRANSACTION": 9,
+    "AD": 3,
+    "NEEDS_REVIEW": 2
+  }
+}

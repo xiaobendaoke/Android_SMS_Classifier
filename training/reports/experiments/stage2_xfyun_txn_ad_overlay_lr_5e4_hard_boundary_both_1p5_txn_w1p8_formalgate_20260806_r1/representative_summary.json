@@ -1,0 +1,30 @@
+{
+  "input": "/home/colab/projects/Android_SMS_Classifier/training/data/processed_transaction_ad_boundary_arbitration_20260806_r1/train.jsonl",
+  "output": "/home/colab/projects/Android_SMS_Classifier/training/data/interim/annotation/formalgate_candidate_20260806_r1/representative.jsonl",
+  "seed": 42,
+  "requested_samples": 800,
+  "selected_samples": 800,
+  "train_only": true,
+  "sha256": "44c5be0789f1307d7e2e22d5a697e0e8e6f294fddaf0483780099b8860cdd8b9",
+  "distribution": {
+    "label": {
+      "AD": 238,
+      "FRAUD": 195,
+      "HARASS": 209,
+      "TRANSACTION": 158
+    },
+    "source": {
+      "gitcode_zh_sms_8a104": 182,
+      "iiitd_sms_spam_v1": 113,
+      "normal_2w_zh_relabel": 206,
+      "spamshield_indonesian_v1": 78,
+      "uci_sms_spam_collection_v1": 97,
+      "yudiwbs_id_sms_spam_v1": 124
+    },
+    "length_bucket": {
+      "long": 195,
+      "medium": 409,
+      "short": 196
+    }
+  }
+}

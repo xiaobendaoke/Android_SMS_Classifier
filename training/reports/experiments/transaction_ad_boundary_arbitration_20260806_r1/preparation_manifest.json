@@ -1,0 +1,47 @@
+{
+  "run_id": "transaction_ad_boundary_arbitration_20260806_r1",
+  "status": "PENDING_EXTERNAL_APPROVAL",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "base_data_sha256": {
+    "train": "b2edd2f0dd93869be60ac9ff4df559950a98bf4fae826ca809ecfb8990b22de9",
+    "validation": "98f69337917213ee380f06cc694600971287b6ec400f9d1b509ce2b5c8567a43"
+  },
+  "base_data_version": "data/processed_harass_fraud_boundary_arbitration_20260806_r1",
+  "candidate_selection": "zh_transaction_ad_model_boundary_misclassified",
+  "previous_arbitration_excluded_ids": 122,
+  "candidate_count": 152,
+  "split_counts": {
+    "train": 74,
+    "validation": 78
+  },
+  "true_pred_pair_counts": {
+    "AD->FRAUD": 51,
+    "AD->TRANSACTION": 42,
+    "TRANSACTION->AD": 42,
+    "AD->HARASS": 8,
+    "TRANSACTION->FRAUD": 5,
+    "TRANSACTION->HARASS": 4
+  },
+  "model_sha256": "02525343abe52e2ddf01f706123c19e9696b7d7156af7dbdb4fee8dca89d4d2a",
+  "blind_fields": [
+    "review_key",
+    "id",
+    "text"
+  ],
+  "excluded_fields": [
+    "prior_label",
+    "model_prediction",
+    "split",
+    "annotator_ids"
+  ],
+  "pass_a_sha256": "329fc601ffb7f44f45924dd2b8049522176f5cfd6f8ff8aef108531d82c7e1bd",
+  "pass_b_sha256": "b37256b4fc9dfb870023c0c902add900c3c95271e7c7ccc65bb11475a3b75477",
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

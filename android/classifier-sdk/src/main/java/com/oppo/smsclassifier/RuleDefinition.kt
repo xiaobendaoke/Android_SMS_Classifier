@@ -7,6 +7,7 @@ import java.util.regex.Pattern
 enum class RuleType {
     OTP_PROTECT,
     PICKUP_PROTECT,
+    TRANSACTION_PROTECT,
     TRANSACTION_HINT,
     FRAUD_RISK,
     AD_HINT,

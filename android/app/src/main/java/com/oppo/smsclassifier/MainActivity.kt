@@ -25,6 +25,7 @@ import com.oppo.smsclassifier.ui.common.NavRoutes
 import com.oppo.smsclassifier.ui.common.SmsClassifierTheme
 import com.oppo.smsclassifier.ui.detail.MessageDetailScreen
 import com.oppo.smsclassifier.ui.evaluation.EvaluationScreen
+import com.oppo.smsclassifier.ui.judge.JudgeScreen
 import com.oppo.smsclassifier.ui.inbox.InboxScreen
 import com.oppo.smsclassifier.ui.onboarding.OnboardingScreen
 import com.oppo.smsclassifier.ui.performance.PerformanceScreen
@@ -73,15 +74,12 @@ private fun SmsClassifierNav(
     val backStack by navController.currentBackStackEntryAsState()
     val currentRoute = backStack?.destination?.route?.substringBefore('?')
     val showBottomBar = currentRoute in setOf(
-        NavRoutes.INBOX,
-        NavRoutes.SUSPECT,
-        NavRoutes.REVIEW,
         NavRoutes.EVALUATION,
-        NavRoutes.PERFORMANCE,
+        NavRoutes.JUDGE,
         NavRoutes.ABOUT,
     )
     val startDestination = if (OnboardingPrefs.isComplete(context)) {
-        deepLinkUri?.let { NavRoutes.detail(it) } ?: NavRoutes.INBOX
+        deepLinkUri?.let { NavRoutes.detail(it) } ?: NavRoutes.EVALUATION
     } else {
         NavRoutes.ONBOARDING
     }
@@ -93,7 +91,7 @@ private fun SmsClassifierNav(
                     currentRoute = currentRoute,
                     onNavigate = { route ->
                         navController.navigate(route) {
-                            popUpTo(NavRoutes.INBOX) { saveState = true }
+                            popUpTo(NavRoutes.EVALUATION) { saveState = true }
                             launchSingleTop = true
                             restoreState = true
                         }
@@ -111,7 +109,7 @@ private fun SmsClassifierNav(
                 OnboardingScreen(
                     onContinue = {
                         OnboardingPrefs.markComplete(context)
-                        navController.navigate(NavRoutes.INBOX) {
+                        navController.navigate(NavRoutes.EVALUATION) {
                             popUpTo(NavRoutes.ONBOARDING) { inclusive = true }
                         }
                     },
@@ -147,6 +145,7 @@ private fun SmsClassifierNav(
                 MessageDetailScreen(messageUri = NavRoutes.decodeMessageUri(encoded))
             }
             composable(NavRoutes.EVALUATION) { EvaluationScreen() }
+            composable(NavRoutes.JUDGE) { JudgeScreen() }
             composable(NavRoutes.PERFORMANCE) { PerformanceScreen() }
             composable(NavRoutes.ABOUT) { AboutScreen() }
         }

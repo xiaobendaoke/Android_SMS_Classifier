@@ -1,0 +1,50 @@
+{
+  "run_id": "harass_fraud_boundary_arbitration_20260806_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "candidate_selection": "zh_harass_fraud_model_boundary_misclassified_stacked",
+  "source_data_sha256": {
+    "train": "9aba63d1a18f767875571bced66245fd9cca10fd0aeba893afea6c8d77797795",
+    "validation": "56e980f025944a357ac265f6ecc0fdafd1d5f6647eb4072023f75df6e31cd216"
+  },
+  "overlay_data_sha256": {
+    "train": "b2edd2f0dd93869be60ac9ff4df559950a98bf4fae826ca809ecfb8990b22de9",
+    "validation": "98f69337917213ee380f06cc694600971287b6ec400f9d1b509ce2b5c8567a43"
+  },
+  "split_membership_preserved": true,
+  "locked_test_byte_identical": true,
+  "qa": {
+    "candidate_count": 100,
+    "agreement_count": 63,
+    "disagreement_count": 37,
+    "pass_c_count": 37,
+    "quarantine_count": 2,
+    "correction_count": 53,
+    "exact_agreement": 0.63,
+    "final_label_counts": {
+      "AD": 28,
+      "FRAUD": 26,
+      "HARASS": 41,
+      "NEEDS_REVIEW": 2,
+      "TRANSACTION": 3
+    },
+    "transition_counts": {
+      "HARASS->AD": 19,
+      "HARASS->FRAUD": 11,
+      "FRAUD->AD": 9,
+      "FRAUD->HARASS": 9,
+      "HARASS->TRANSACTION": 2,
+      "FRAUD->NEEDS_REVIEW": 1,
+      "FRAUD->TRANSACTION": 1,
+      "HARASS->NEEDS_REVIEW": 1
+    }
+  },
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

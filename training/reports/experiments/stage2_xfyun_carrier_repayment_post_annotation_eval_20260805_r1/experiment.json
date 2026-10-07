@@ -1,0 +1,71 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_post_annotation_eval_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "The fixed ByteCNN's validation metrics change only because seven provisional A/B/C label corrections update the reference labels.",
+  "only_changed_variable": "validation manifest=processed_xfyun_carrier_repayment_relabel_20260804_r1",
+  "model_sha256": "cb626be0f2d2740568392277408a333d26f26eb447b83229dba107b49a376b96",
+  "validation_sha256": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f",
+  "config_sha256": "fb1a9cb8d7dad18d5e89527602c01e60966a41c608549e243eef6e5337bf290d",
+  "command": [
+    "/home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/.venv/bin/python",
+    "/home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/scripts/evaluate.py",
+    "--test",
+    "/home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/data/processed_xfyun_carrier_repayment_relabel_20260804_r1/validation.jsonl",
+    "--mode",
+    "keras",
+    "--keras",
+    "/home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/artifacts/experiments/stage2_xfyun_overlay_txn_weight_1p4_20260803_r1/sms_bytecnn_fp32.keras",
+    "--output",
+    "/mnt/c/dev/Android_SMS_Classifier/training/reports/experiments/stage2_xfyun_carrier_repayment_post_annotation_eval_20260805_r1/metrics.json",
+    "--seed",
+    "42",
+    "--stage",
+    "stage2_xfyun_carrier_repayment_post_annotation_eval_20260805_r1",
+    "--error-samples",
+    "0",
+    "--require-acceptance",
+    "--targets-config",
+    "/home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/configs/student.yaml"
+  ],
+  "returncode": 4,
+  "gate_errors": [
+    "transaction_recall=0.953317 < 0.985000",
+    "transaction_precision=0.854626 < 0.920000",
+    "macro_f1=0.835544 < 0.860000",
+    "harass_f1=0.726457 < 0.800000"
+  ],
+  "metrics": {
+    "transaction_recall": 0.9533169533169533,
+    "transaction_precision": 0.8546255506607929,
+    "macro_f1": 0.8355440109782769,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8546255506607929,
+        "recall": 0.9533169533169533,
+        "f1": 0.9012775842044134
+      },
+      "AD": {
+        "precision": 0.9262899262899262,
+        "recall": 0.834070796460177,
+        "f1": 0.8777648428405121
+      },
+      "HARASS": {
+        "precision": 0.6923076923076923,
+        "recall": 0.7641509433962265,
+        "f1": 0.7264573991031389
+      },
+      "FRAUD": {
+        "precision": 0.8690476190476191,
+        "recall": 0.8066298342541437,
+        "f1": 0.8366762177650431
+      }
+    }
+  }
+}

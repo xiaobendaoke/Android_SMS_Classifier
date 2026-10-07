@@ -1,0 +1,39 @@
+{
+  "run_id": "txn_boundary_r2_arbitration_20260806_r1",
+  "status": "PROVISIONAL_AUTOMATED_MULTI_PASS_PENDING_FINALIZE",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "candidate_count": 160,
+  "moderation_skipped_count": 1,
+  "pass_a": {
+    "model": "xopglm52",
+    "input_sha256": "4317ee470a917c0ab32f4b97a42fc3e9102d7c4ca4bd93b070b63abd77d872de",
+    "output_sha256": "f227ae597eedfee2a2be412b9c6d88cdbe5e65b66a41d6cabb405a0a9cfa5000",
+    "parsed_count": 160,
+    "skipped_count": 0
+  },
+  "pass_b": {
+    "model": "xopdeepseekv4flash",
+    "input_sha256": "b0da19c8cbe0bdb658545b50e2802475ea6d10407a510e8bda3f55bfc594282e",
+    "output_sha256": "71a5e381536a93e9f76c40e7737d04c2ecc6a32fefb93be34bd24e2e0855455b",
+    "parsed_count": 159,
+    "skipped_count": 1
+  },
+  "pass_c": {
+    "model": "xopdeepseekv4flash",
+    "input_sha256": "a7ab244eb49cd6319621d00edae9f81f69359bed9339a4ab947441e9dd918544",
+    "output_sha256": "a7a932d1009546b4e287a47343d48d4308c0e0d31088cb1eadd335bbbd0dd078",
+    "parsed_count": 60,
+    "skipped_count": 0
+  },
+  "agreement_count": 99,
+  "disagreement_count": 60,
+  "valid_count": 159,
+  "privacy": {
+    "raw_sms_text_committed": false,
+    "raw_sample_ids_committed": false,
+    "raw_ai_outputs_committed": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "run_id": "stage2_xfyun_partial_class_weight_clip_0p60_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Lowering only the class-weight clip floor exposes a controlled TRANSACTION-versus-AD weight difference and improves recall without the no-clip precision collapse.",
+  "only_changed_variable": "training.class_weight_clip=[0.60,1.50]",
+  "config_sha256": "1d141e8cdde8423adc2bfd68b0d2ad17af50f905b7a54bac6ea8b220d271ec75",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_instability": {
+    "nan_loss_first_observed_epoch": 11,
+    "checkpoint_restored_epoch": 9,
+    "release_eligible": false
+  },
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8769633507853403,
+    "macro_f1": 0.8482896718376125,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9066985645933014,
+        "recall": 0.9312039312039312,
+        "f1": 0.9187878787878787
+      },
+      "AD": {
+        "precision": 0.8849557522123894,
+        "recall": 0.8849557522123894,
+        "f1": 0.8849557522123894
+      },
+      "HARASS": {
+        "precision": 0.6991869918699187,
+        "recall": 0.8113207547169812,
+        "f1": 0.7510917030567686
+      },
+      "FRAUD": {
+        "precision": 0.9150326797385621,
+        "recall": 0.7734806629834254,
+        "f1": 0.838323353293413
+      }
+    },
+    "confusion_matrix": [
+      [
+        379,
+        24,
+        4,
+        0
+      ],
+      [
+        30,
+        400,
+        13,
+        9
+      ],
+      [
+        3,
+        13,
+        86,
+        4
+      ],
+      [
+        6,
+        15,
+        20,
+        140
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 9,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.931204 < 0.985000",
+    "transaction_precision=0.906699 < 0.920000",
+    "macro_f1=0.848290 < 0.860000",
+    "harass_f1=0.751092 < 0.800000",
+    "fraud_recall=0.773481 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

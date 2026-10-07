@@ -1,0 +1,14 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_focal_gamma_0_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "hypothesis_outcome": "rejected",
+  "authoritative_metrics": "post_training_keras_metrics.json",
+  "rejection_reason": "Removing only primary focal weighting caused NaN training loss at epoch 8. The restored epoch-4 checkpoint failed all Chinese validation gates: transaction recall 0.918919, transaction precision 0.903382, macro F1 0.831193, HARASS F1 0.720000, and FRAUD recall 0.779006.",
+  "error_analysis": "The restored checkpoint remains below every acceptance threshold, so no AI-labelled data is eligible for human audit as a formal candidate from this run.",
+  "next_hypothesis": "Retain primary_focal_gamma=0.5 and evaluate one stable, single-variable optimization adjustment before considering any human review."
+}

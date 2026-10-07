@@ -1,0 +1,100 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_hard_boundary_2p0_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "hypothesis": "Weighting only train rows that match a transaction-domain coverage subtype (OTP/LOGISTICS/ORDER/REPAYMENT/CARRIER/BANK) and carry a non-TRANSACTION label sharpens the hard AD/HARASS/FRAUD boundary without re-weighting TRANSACTION rows, targeting the CARRIER/UNMATCHED and BANK/UNMATCHED confusion structure without using validation results.",
+  "only_changed_variable": "training.hard_boundary_multiplier=2.0 (baseline=1.0/off; mask=train-only coverage_subtype on non-TRANSACTION rows)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.4,
+    "training_mode": "hard_only"
+  },
+  "config_sha256": "8f52d26bddde526f4d0dd7bc28cbe52d132400e933370ba1aae09871640710aa",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.868237347294939,
+    "macro_f1": 0.8349034131784469,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8789954337899544,
+        "recall": 0.9459459459459459,
+        "f1": 0.9112426035502957
+      },
+      "AD": {
+        "precision": 0.9140811455847255,
+        "recall": 0.8473451327433629,
+        "f1": 0.8794489092996557
+      },
+      "HARASS": {
+        "precision": 0.6585365853658537,
+        "recall": 0.7641509433962265,
+        "f1": 0.7074235807860263
+      },
+      "FRAUD": {
+        "precision": 0.8795180722891566,
+        "recall": 0.8066298342541437,
+        "f1": 0.8414985590778099
+      }
+    },
+    "confusion_matrix": [
+      [
+        385,
+        17,
+        4,
+        1
+      ],
+      [
+        45,
+        383,
+        11,
+        13
+      ],
+      [
+        4,
+        15,
+        81,
+        6
+      ],
+      [
+        4,
+        4,
+        27,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 13,
+  "model_sha256": "3c464a00d3a9b70d28834544b1ebbcc8189a1808e552d8d4c396e86875e86b1f",
+  "hard_boundary_count": 2812,
+  "hard_boundary_label_counts": {
+    "AD": 1494,
+    "HARASS": 507,
+    "FRAUD": 811
+  },
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.945946 < 0.985000",
+    "transaction_precision=0.878995 < 0.920000",
+    "macro_f1=0.834903 < 0.860000",
+    "harass_f1=0.707424 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

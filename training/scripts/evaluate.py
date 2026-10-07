@@ -9,12 +9,15 @@ Modes:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple
+
+import yaml
 
 SEED = 42
 
@@ -25,7 +28,11 @@ from src.byte_encoder import encode_text  # noqa: E402
 from src.metrics import summarize_metrics, wilson_interval  # noqa: E402
 from src.normalize import normalize_text  # noqa: E402
 from src.schema import LABEL_ORDER, load_jsonl  # noqa: E402
-from src.train_utils import set_seed  # noqa: E402
+from src.train_utils import set_seed, split_student_logits  # noqa: E402
+from src.transaction_protection import (  # noqa: E402
+    apply_transaction_protection_batch,
+    load_protection_rules,
+)
 
 RULE_PATTERNS: List[Tuple[str, str, int]] = [
     ("TRANSACTION", r"(?:入账|扣款|payment|pembayaran|भुगतान|订单|flight|shipped|ticket|deposit)", 80),
@@ -47,6 +54,10 @@ SDK_TFLITE = (
 )
 
 
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Evaluate model on frozen test set.")
     parser.add_argument(
@@ -57,9 +68,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--mode",
-        choices=["auto", "tflite", "rule", "predictions"],
+        choices=["auto", "keras", "tflite", "pipeline", "rule", "predictions"],
         default="auto",
         help="Evaluation path. auto prefers TFLite when present.",
+    )
+    parser.add_argument(
+        "--keras",
+        type=Path,
+        default=None,
+        help="Keras student path for --mode keras/pipeline.",
     )
     parser.add_argument(
         "--tflite",
@@ -80,6 +97,25 @@ def build_parser() -> argparse.ArgumentParser:
         help="Metrics output JSON.",
     )
     parser.add_argument("--seed", type=int, default=SEED, help="Random seed.")
+    parser.add_argument("--stage", type=str, default="evaluation")
+    parser.add_argument(
+        "--rules-dir",
+        type=Path,
+        default=ROOT / "rules" / "rules",
+        help="Exported JSON rules used by --mode pipeline.",
+    )
+    parser.add_argument("--error-samples", type=int, default=0)
+    parser.add_argument("--error-output", type=Path, default=None)
+    parser.add_argument(
+        "--require-acceptance",
+        action="store_true",
+        help="Fail unless configured validation targets all pass.",
+    )
+    parser.add_argument(
+        "--targets-config",
+        type=Path,
+        default=ROOT / "configs" / "student.yaml",
+    )
     return parser
 
 
@@ -114,7 +150,44 @@ def resolve_tflite(path: Optional[Path]) -> Optional[Path]:
     return None
 
 
-def tflite_predict_batch(model_path: Path, texts: Sequence[str]) -> List[str]:
+def _decode_student_outputs(outputs) -> Tuple[List[str], List[bool]]:
+    import numpy as np
+
+    class_logits, protection_logits = split_student_logits(
+        np.asarray(outputs),
+        len(LABEL_ORDER),
+    )
+    indices = np.argmax(class_logits, axis=-1)
+    labels = [LABEL_ORDER[int(index)] for index in indices]
+    if protection_logits is None:
+        return labels, [False] * len(labels)
+    protection_probs = 1.0 / (1.0 + np.exp(-protection_logits))
+    return labels, [bool(value >= 0.5) for value in protection_probs]
+
+
+def keras_predict_batch(
+    model_path: Path,
+    texts: Sequence[str],
+) -> Tuple[List[str], List[bool]]:
+    import numpy as np
+    import tensorflow as tf
+
+    model = tf.keras.models.load_model(model_path)
+    max_bytes = int(model.input_shape[-1])
+    encoded = np.asarray(
+        [
+            encode_text(normalize_text(text), length=max_bytes)
+            for text in texts
+        ],
+        dtype=np.int32,
+    )
+    return _decode_student_outputs(model.predict(encoded, verbose=0))
+
+
+def tflite_predict_batch(
+    model_path: Path,
+    texts: Sequence[str],
+) -> Tuple[List[str], List[bool]]:
     import numpy as np
     import tensorflow as tf
 
@@ -122,7 +195,7 @@ def tflite_predict_batch(model_path: Path, texts: Sequence[str]) -> List[str]:
     interpreter.allocate_tensors()
     input_details = interpreter.get_input_details()[0]
     output_details = interpreter.get_output_details()[0]
-    preds: List[str] = []
+    outputs = []
     for text in texts:
         ids = encode_text(normalize_text(text), length=512)
         inp = np.asarray([ids], dtype=input_details["dtype"])
@@ -130,12 +203,13 @@ def tflite_predict_batch(model_path: Path, texts: Sequence[str]) -> List[str]:
         interpreter.invoke()
         out = interpreter.get_tensor(output_details["index"])[0]
         if out.dtype != np.float32 and out.dtype != np.float64:
-            # INT8 logits: pick argmax on quantized values (monotonic for same scale).
-            idx = int(np.argmax(out))
-        else:
-            idx = int(np.argmax(out))
-        preds.append(LABEL_ORDER[idx])
-    return preds
+            scale, zero_point = output_details.get("quantization", (0.0, 0))
+            if scale:
+                out = (
+                    out.astype(np.float32) - float(zero_point)
+                ) * float(scale)
+        outputs.append(out)
+    return _decode_student_outputs(np.asarray(outputs))
 
 
 def per_language_metrics(records, y_true, y_pred) -> Dict[str, object]:
@@ -165,6 +239,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     if mode == "auto":
         if args.predictions and args.predictions.exists():
             mode = "predictions"
+        elif args.keras and args.keras.exists():
+            mode = "keras"
         elif resolve_tflite(args.tflite) is not None:
             mode = "tflite"
         else:
@@ -175,6 +251,9 @@ def main(argv: Optional[List[str]] = None) -> int:
             )
             return 1
 
+    raw_predictions: Optional[List[str]] = None
+    model_protection_flags: List[bool] = [False] * len(evaluable)
+    protection_decisions = []
     if mode == "predictions":
         if not args.predictions or not args.predictions.exists():
             print("--mode predictions requires --predictions file", file=sys.stderr)
@@ -192,13 +271,42 @@ def main(argv: Optional[List[str]] = None) -> int:
             "transaction recall.",
             file=sys.stderr,
         )
-    else:
+    elif mode == "keras":
+        if not args.keras or not args.keras.exists():
+            print("--mode keras requires an existing --keras model", file=sys.stderr)
+            return 1
+        try:
+            y_pred, model_protection_flags = keras_predict_batch(
+                args.keras,
+                [record.text for record in evaluable],
+            )
+        except ImportError:
+            print("TensorFlow required for --mode keras.", file=sys.stderr)
+            return 2
+        classifier = "keras"
+        model_path_str = str(args.keras).replace("\\", "/")
+    elif mode in {"tflite", "pipeline"}:
         model_path = resolve_tflite(args.tflite)
-        if model_path is None:
+        use_keras_pipeline = (
+            mode == "pipeline"
+            and args.keras is not None
+            and args.keras.exists()
+        )
+        if model_path is None and not use_keras_pipeline:
             print("TFLite model not found.", file=sys.stderr)
             return 1
         try:
-            y_pred = tflite_predict_batch(model_path, [r.text for r in evaluable])
+            if use_keras_pipeline:
+                raw_predictions, model_protection_flags = keras_predict_batch(
+                    args.keras,
+                    [record.text for record in evaluable],
+                )
+            else:
+                assert model_path is not None
+                raw_predictions, model_protection_flags = tflite_predict_batch(
+                    model_path,
+                    [record.text for record in evaluable],
+                )
         except ImportError:
             print(
                 "TensorFlow required for --mode tflite. "
@@ -206,23 +314,156 @@ def main(argv: Optional[List[str]] = None) -> int:
                 file=sys.stderr,
             )
             return 2
-        classifier = "tflite"
+        if mode == "pipeline":
+            rules = load_protection_rules(args.rules_dir)
+            protection_decisions = apply_transaction_protection_batch(
+                [record.text for record in evaluable],
+                raw_predictions,
+                rules,
+                model_transaction_protect=model_protection_flags,
+            )
+            y_pred = [decision.predicted_label for decision in protection_decisions]
+            classifier = (
+                "keras_transaction_protection_pipeline"
+                if use_keras_pipeline
+                else "tflite_transaction_protection_pipeline"
+            )
+        else:
+            y_pred = raw_predictions
+            classifier = "tflite"
         try:
-            model_path_str = str(model_path.relative_to(ROOT.parent)).replace("\\", "/")
+            selected_model = args.keras if use_keras_pipeline else model_path
+            assert selected_model is not None
+            model_path_str = str(
+                selected_model.relative_to(ROOT.parent)
+            ).replace("\\", "/")
         except ValueError:
-            model_path_str = str(model_path).replace("\\", "/")
+            model_path_str = str(selected_model).replace("\\", "/")
+    else:
+        print(f"Unsupported evaluation mode: {mode}", file=sys.stderr)
+        return 1
 
     y_true = [r.label for r in evaluable]
     summary = summarize_metrics(y_true, y_pred, LABEL_ORDER)
+    acceptance_summary = summary
+    acceptance_languages: List[str] = []
+    acceptance_indices = list(range(len(evaluable)))
     pred_dist = dict(Counter(y_pred))
+    gate_errors: List[str] = []
+    acceptance_targets: Dict[str, float] = {}
+    if args.require_acceptance:
+        config = yaml.safe_load(args.targets_config.read_text(encoding="utf-8")) or {}
+        training_cfg = config.get("training", {})
+        acceptance_languages = [
+            str(language).strip().lower()
+            for language in config.get("data", {}).get("accepted_languages", [])
+            if str(language).strip()
+        ]
+        if acceptance_languages:
+            acceptance_indices = [
+                index
+                for index, record in enumerate(evaluable)
+                if (record.language or "").strip().lower() in acceptance_languages
+            ]
+            if not acceptance_indices:
+                print(
+                    "No records match configured acceptance languages: "
+                    + ", ".join(acceptance_languages),
+                    file=sys.stderr,
+                )
+                return 2
+            acceptance_summary = summarize_metrics(
+                [y_true[index] for index in acceptance_indices],
+                [y_pred[index] for index in acceptance_indices],
+                LABEL_ORDER,
+            )
+        checks = {
+            "transaction_recall": (
+                float(acceptance_summary["per_class"]["TRANSACTION"]["recall"]),
+                float(training_cfg.get("target_transaction_recall", 0.985)),
+            ),
+            "transaction_precision": (
+                float(acceptance_summary["per_class"]["TRANSACTION"]["precision"]),
+                float(training_cfg.get("min_transaction_precision", 0.92)),
+            ),
+            "macro_f1": (
+                float(acceptance_summary["macro_f1"]),
+                float(training_cfg.get("min_macro_f1", 0.86)),
+            ),
+            "harass_f1": (
+                float(acceptance_summary["per_class"]["HARASS"]["f1"]),
+                float(training_cfg.get("min_harass_f1", 0.80)),
+            ),
+            "fraud_recall": (
+                float(acceptance_summary["per_class"]["FRAUD"]["recall"]),
+                float(training_cfg.get("min_fraud_recall", 0.80)),
+            ),
+        }
+        acceptance_targets = {
+            name: required for name, (_, required) in checks.items()
+        }
+        gate_errors = [
+            f"{name}={actual:.6f} < {required:.6f}"
+            for name, (actual, required) in checks.items()
+            if actual < required
+        ]
 
     txn_idx = LABEL_ORDER.index("TRANSACTION")
-    matrix = summary["confusion_matrix"]
+    matrix = acceptance_summary["confusion_matrix"]
     txn_tp = int(matrix[txn_idx][txn_idx])
     txn_total = int(sum(matrix[txn_idx]))
+    transaction_safety: Optional[Dict[str, object]] = None
+    if protection_decisions:
+        scoped = [
+            (evaluable[index], protection_decisions[index])
+            for index in acceptance_indices
+        ]
+        true_transactions = [
+            decision
+            for record, decision in scoped
+            if record.label == "TRANSACTION"
+        ]
+        non_transactions = [
+            decision
+            for record, decision in scoped
+            if record.label != "TRANSACTION"
+        ]
+        safe_transaction_count = sum(
+            decision.action in {"INBOX", "REVIEW"}
+            for decision in true_transactions
+        )
+        collateral_inbox_count = sum(
+            decision.action == "INBOX"
+            for decision in non_transactions
+        )
+        transaction_safety = {
+            "definition": (
+                "A true transaction is safe when routed to INBOX or REVIEW; "
+                "category remains the primary four-class model output."
+            ),
+            "transaction_count": len(true_transactions),
+            "safe_transaction_count": safe_transaction_count,
+            "transaction_safe_recall": (
+                safe_transaction_count / len(true_transactions)
+                if true_transactions
+                else 0.0
+            ),
+            "transaction_safe_recall_ci95": wilson_interval(
+                safe_transaction_count,
+                len(true_transactions),
+            ),
+            "non_transaction_count": len(non_transactions),
+            "collateral_inbox_count": collateral_inbox_count,
+            "collateral_inbox_rate": (
+                collateral_inbox_count / len(non_transactions)
+                if non_transactions
+                else 0.0
+            ),
+        }
 
     report: Dict[str, object] = {
         "seed": args.seed,
+        "stage": args.stage,
         "classifier": classifier,
         "mode": mode,
         "model_path": model_path_str,
@@ -232,10 +473,42 @@ def main(argv: Optional[List[str]] = None) -> int:
         "prediction_distribution": pred_dist,
         "metrics": summary,
         "per_language": per_language_metrics(evaluable, y_true, y_pred),
-        "transaction_recall": summary["per_class"]["TRANSACTION"]["recall"],
-        "transaction_precision": summary["per_class"]["TRANSACTION"]["precision"],
+        "acceptance_scope": {
+            "languages": acceptance_languages or "all",
+            "metrics": acceptance_summary,
+        },
+        "transaction_recall": acceptance_summary["per_class"]["TRANSACTION"]["recall"],
+        "transaction_precision": acceptance_summary["per_class"]["TRANSACTION"]["precision"],
         "transaction_recall_ci95": wilson_interval(txn_tp, txn_total),
-        "macro_f1": summary["macro_f1"],
+        "macro_f1": acceptance_summary["macro_f1"],
+        "acceptance_targets": acceptance_targets,
+        "gate_errors": gate_errors,
+        "acceptance_passed": args.require_acceptance and not gate_errors,
+        "transaction_protection": {
+            "enabled": mode == "pipeline",
+            "rules_dir": (
+                str(args.rules_dir).replace("\\", "/")
+                if mode == "pipeline"
+                else None
+            ),
+            "model_head_positive_count": sum(model_protection_flags),
+            "protected_count": sum(
+                decision.protected for decision in protection_decisions
+            ),
+            "fraud_conflict_count": sum(
+                decision.fraud_conflict for decision in protection_decisions
+            ),
+            "safety_metrics": transaction_safety,
+            "raw_metrics": (
+                summarize_metrics(
+                    y_true,
+                    raw_predictions,
+                    LABEL_ORDER,
+                )
+                if raw_predictions is not None and mode == "pipeline"
+                else None
+            ),
+        },
         "claim_allowed": False,
         "claim_note": (
             "Synthetic or small frozen sets must not claim transaction recall ≥98%. "
@@ -257,6 +530,25 @@ def main(argv: Optional[List[str]] = None) -> int:
     args.output.write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
+    if args.error_samples > 0:
+        error_path = args.error_output or args.output.with_name(
+            f"{args.output.stem}_errors.json"
+        )
+        errors = [
+            {
+                "id": record.id,
+                "text": record.text,
+                "true_label": truth,
+                "predicted_label": prediction,
+            }
+            for record, truth, prediction in zip(evaluable, y_true, y_pred)
+            if truth != prediction
+        ][: args.error_samples]
+        error_path.parent.mkdir(parents=True, exist_ok=True)
+        error_path.write_text(
+            json.dumps(errors, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
     print(f"Wrote evaluation to {args.output}")
     print(
         f"mode={mode} macro_f1={summary['macro_f1']:.3f} "
@@ -271,6 +563,13 @@ def main(argv: Optional[List[str]] = None) -> int:
             file=sys.stderr,
         )
         return 3
+    if gate_errors:
+        print(
+            "FAIL: validation pipeline targets not met:\n  - "
+            + "\n  - ".join(gate_errors),
+            file=sys.stderr,
+        )
+        return 4
     return 0
 
 

@@ -1,0 +1,375 @@
+{
+  "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABELS",
+  "labels": [
+    {
+      "id": "zh-n2w-00252",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00924",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00953",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02982",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03269",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03360",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03843",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03900",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-04288",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-04755",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-04831",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05748",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05860",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06618",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07098",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08269",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08771",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-09113",
+      "final_label": "TRANSACTION",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02265",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02277",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03070",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-04926",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05120",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05635",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06526",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06634",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06694",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07506",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07765",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08883",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-09045",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00058",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00838",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-01080",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-01147",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05620",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-05632",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06185",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07457",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08118",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08171",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-01081",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02819",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06393",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-09492",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02344",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02434",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02937",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03513",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07560",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07805",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-09926",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00475",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02886",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07721",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh_00335",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh_00477",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh_02725",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00490",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-02976",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-04230",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-01140",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03846",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07164",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh_03140",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh_08627",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-00716",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-07400",
+      "final_label": "HARASS",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-03985",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-06774",
+      "final_label": "NEEDS_REVIEW",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-01224",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "zh-n2w-08922",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "uci_00515",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    },
+    {
+      "id": "uci_02642",
+      "final_label": "FRAUD",
+      "status": "PROVISIONAL_AUTOMATED_REFERENCE_LABEL"
+    }
+  ]
+}

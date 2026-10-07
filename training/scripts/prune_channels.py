@@ -22,7 +22,13 @@ sys.path.insert(0, str(ROOT))
 from src.metrics import summarize_metrics  # noqa: E402
 from src.model_student import StudentModelConfig, build_keras_model, config_from_mapping  # noqa: E402
 from src.schema import LABEL_ORDER  # noqa: E402
-from src.train_utils import load_labeled_records, records_to_xy, set_seed, write_json  # noqa: E402
+from src.train_utils import (  # noqa: E402
+    load_labeled_records,
+    records_to_xy,
+    set_seed,
+    student_predictions,
+    write_json,
+)
 
 
 def check_tensorflow() -> Optional[str]:
@@ -39,6 +45,12 @@ def check_tensorflow() -> Optional[str]:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Structured Conv1D channel pruning.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG, help="Pruning config YAML.")
+    parser.add_argument(
+        "--student-config",
+        type=Path,
+        default=STUDENT_CONFIG,
+        help="Student config YAML used for architecture and data manifests.",
+    )
     parser.add_argument("--seed", type=int, default=SEED, help="Random seed.")
     parser.add_argument(
         "--plan-only",
@@ -91,7 +103,12 @@ def eval_model(model, val_path: Path, max_bytes: int) -> Dict:
         return {}
     xv, yv = records_to_xy(val_records, max_bytes=max_bytes)
     logits = model.predict(xv, verbose=0)
-    preds = np.argmax(logits, axis=-1)
+    preds = student_predictions(
+        logits,
+        transaction_threshold=(
+            0.5 if logits.shape[-1] > len(LABEL_ORDER) else None
+        ),
+    )
     return summarize_metrics(
         [LABEL_ORDER[i] for i in yv.tolist()],
         [LABEL_ORDER[i] for i in preds.tolist()],
@@ -133,6 +150,8 @@ def prune_once(
         dense_units=base_cfg.dense_units,
         dropout=base_cfg.dropout,
         num_classes=base_cfg.num_classes,
+        transaction_protection_head=base_cfg.transaction_protection_head,
+        transaction_hidden_units=base_cfg.transaction_hidden_units,
         max_bytes=base_cfg.max_bytes,
         pad_id=base_cfg.pad_id,
         byte_offset=base_cfg.byte_offset,
@@ -149,9 +168,31 @@ def prune_once(
     if train_path.exists():
         records = load_labeled_records(train_path)
         x, y = records_to_xy(records, max_bytes=pruned_cfg.max_bytes)
+        def dual_head_loss(y_true, y_pred):
+            labels = tf.cast(tf.reshape(y_true, [-1]), tf.int32)
+            class_loss = tf.keras.losses.sparse_categorical_crossentropy(
+                labels,
+                y_pred[:, : len(LABEL_ORDER)],
+                from_logits=True,
+            )
+            transaction_targets = tf.cast(
+                tf.equal(labels, LABEL_ORDER.index("TRANSACTION")),
+                tf.float32,
+            )
+            protection_loss = tf.nn.weighted_cross_entropy_with_logits(
+                labels=transaction_targets,
+                logits=y_pred[:, len(LABEL_ORDER)],
+                pos_weight=1.5,
+            )
+            return class_loss + 0.35 * protection_loss
+
         dst.compile(
             optimizer=tf.keras.optimizers.Adam(learning_rate=lr),
-            loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+            loss=(
+                dual_head_loss
+                if pruned_cfg.transaction_protection_head
+                else tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+            ),
             metrics=["accuracy"],
         )
         dst.fit(x, y, epochs=epochs, batch_size=64, verbose=1)
@@ -213,7 +254,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 1
 
     set_seed(int(cfg.get("seed", args.seed)))
-    with STUDENT_CONFIG.open(encoding="utf-8") as fh:
+    with args.student_config.open(encoding="utf-8") as fh:
         student_yaml = yaml.safe_load(fh) or {}
     base_cfg = config_from_mapping(student_yaml)
     src = tf.keras.models.load_model(input_model)

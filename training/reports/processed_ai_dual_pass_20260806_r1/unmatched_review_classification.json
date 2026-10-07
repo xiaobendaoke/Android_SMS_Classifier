@@ -1,0 +1,18 @@
+{
+  "run_id": "processed_ai_dual_pass_20260806_r1",
+  "note": "Review rows not present in frozen train/validation/test splits, classified by candidate source. Aggregates only; no raw text or record IDs.",
+  "unmatched_count": 56,
+  "by_source": {
+    "label_conflicts": 10,
+    "transaction_specialist": 46
+  },
+  "transaction_specialist_holdout_count": 46,
+  "final_label_distribution": {
+    "AD": 8,
+    "FRAUD": 9,
+    "TRANSACTION": 38,
+    "HARASS": 1
+  },
+  "review_csv_sha256": "c1d5babf5491795babf024c55bb74a523b6ecc3006f5568e2f1a6f737c6d6317",
+  "generated_at_utc": "2026-08-08T04:14:34.234489+00:00"
+}

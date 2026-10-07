@@ -1,0 +1,8 @@
+command= /home/colab/projects/Android_SMS_Classifier/.venv/bin/python /home/colab/projects/Android_SMS_Classifier/training/scripts/evaluate.py --mode pipeline --keras /home/colab/projects/Android_SMS_Classifier/training/artifacts/student/sms_bytecnn_fp32.keras --test /home/colab/projects/Android_SMS_Classifier/training/data/processed_v2/validation.jsonl --stage stage0_baseline_20260802 --output /home/colab/projects/Android_SMS_Classifier/training/reports/experiments/stage0_baseline_20260802/current_validation_pipeline.json --targets-config /home/colab/projects/Android_SMS_Classifier/training/configs/student.yaml --seed 42
+started_at=2026-08-02T06:00:33Z
+usage: evaluate.py [-h] [--test TEST] [--mode {auto,tflite,rule,predictions}]
+                   [--tflite TFLITE] [--predictions PREDICTIONS]
+                   [--output OUTPUT] [--seed SEED]
+evaluate.py: error: argument --mode: invalid choice: 'pipeline' (choose from auto, tflite, rule, predictions)
+ended_at=2026-08-02T06:00:34Z
+exit_code=2

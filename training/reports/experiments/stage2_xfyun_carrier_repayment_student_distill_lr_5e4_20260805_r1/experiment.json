@@ -1,0 +1,88 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_student_distill_lr_5e4_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Reducing only the distillation student's learning rate to 5e-4 may preserve the teacher signal while stabilizing the final student.",
+  "only_changed_variable": "training.learning_rate=5e-4 (baseline=1e-3)",
+  "config_sha256": "d72cdec7a76e8980b358d51c7c89d730af3eae163d52bfa0d03b920199fa81cf",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8787085514834206,
+    "macro_f1": 0.8533000134268068,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8807339449541285,
+        "recall": 0.9434889434889435,
+        "f1": 0.911032028469751
+      },
+      "AD": {
+        "precision": 0.9036697247706422,
+        "recall": 0.8716814159292036,
+        "f1": 0.8873873873873875
+      },
+      "HARASS": {
+        "precision": 0.7663551401869159,
+        "recall": 0.7735849056603774,
+        "f1": 0.7699530516431926
+      },
+      "FRAUD": {
+        "precision": 0.8802395209580839,
+        "recall": 0.8121546961325967,
+        "f1": 0.8448275862068965
+      }
+    },
+    "confusion_matrix": [
+      [
+        384,
+        20,
+        2,
+        1
+      ],
+      [
+        36,
+        394,
+        8,
+        14
+      ],
+      [
+        2,
+        17,
+        82,
+        5
+      ],
+      [
+        14,
+        5,
+        15,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 9,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.943489 < 0.985000",
+    "transaction_precision=0.880734 < 0.920000",
+    "macro_f1=0.853300 < 0.860000",
+    "harass_f1=0.769953 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

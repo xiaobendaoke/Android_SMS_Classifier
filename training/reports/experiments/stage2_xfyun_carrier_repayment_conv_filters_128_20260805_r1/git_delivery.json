@@ -1,0 +1,10 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_conv_filters_128_20260805_r1",
+  "experiment_commit_sha": "3209264f6c84b1a431104fb4f1ec26fa89a1fc56",
+  "remote": "origin",
+  "remote_branch": "cursor/fix-formal-quantize-int8-800d",
+  "push_command": "git -c http.proxy=http://127.0.0.1:7897 push origin HEAD:cursor/fix-formal-quantize-int8-800d",
+  "push_exit_code": 0,
+  "push_status": "pushed",
+  "remote_head_after_push": "3209264f6c84b1a431104fb4f1ec26fa89a1fc56"
+}

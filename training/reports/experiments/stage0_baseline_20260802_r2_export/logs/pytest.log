@@ -1,0 +1,7 @@
+command= /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/.venv/bin/python -m pytest /home/colab/projects/Android_SMS_Classifier_stage0_baseline_20260802_r2/training/tests -q
+started_at=2026-08-02T09:58:56Z
+........................................................................ [ 97%]
+..                                                                       [100%]
+74 passed in 3.45s
+ended_at=2026-08-02T09:59:01Z
+exit_code=0

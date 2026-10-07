@@ -1,0 +1,299 @@
+{
+  "seed": 42,
+  "mode": "ptq",
+  "quantization": "full_integer_int8",
+  "profile": "formal",
+  "status": "PASS",
+  "failure_reasons": [],
+  "acceptance_eligible": true,
+  "representative": {
+    "manifest": "data/interim/annotation/formalgate_candidate_20260806_r1/representative.jsonl",
+    "sha256": "44c5be0789f1307d7e2e22d5a697e0e8e6f294fddaf0483780099b8860cdd8b9",
+    "samples": 800,
+    "distribution": {
+      "label": {
+        "AD": 238,
+        "FRAUD": 195,
+        "HARASS": 209,
+        "TRANSACTION": 158
+      },
+      "source": {
+        "gitcode_zh_sms_8a104": 182,
+        "iiitd_sms_spam_v1": 113,
+        "normal_2w_zh_relabel": 206,
+        "spamshield_indonesian_v1": 78,
+        "uci_sms_spam_collection_v1": 97,
+        "yudiwbs_id_sms_spam_v1": 124
+      },
+      "length_bucket": {
+        "long": 195,
+        "medium": 409,
+        "short": 196
+      }
+    }
+  },
+  "input_model": "artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1/sms_bytecnn_pruned.keras",
+  "input_model_sha256": "a368cd5bdb7d8efc842d6d9e5fa5e601a7098dc755267ee90b2892df90e91205",
+  "output_tflite": "artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1/sms_bytecnn_int8.tflite",
+  "output_written": true,
+  "bytes": 101696,
+  "model_sha256": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed",
+  "sha256": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed",
+  "qat_applied": false,
+  "qat_triggered": false,
+  "qat_trigger_reasons": [],
+  "post_qat_trigger_reasons": null,
+  "qat_triggers": {
+    "transaction_recall_drop": 0.003,
+    "macro_f1_drop": 0.01,
+    "harass_f1_drop": 0.01,
+    "fraud_recall_drop": 0.01,
+    "keras_tflite_mismatch_rate": 0.01
+  },
+  "baseline_metrics": {
+    "accuracy": 0.7601449275362319,
+    "macro_f1": 0.7473007395921853,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.641185647425897,
+        "recall": 0.9535962877030162,
+        "f1": 0.7667910447761194
+      },
+      "AD": {
+        "precision": 0.943127962085308,
+        "recall": 0.6611295681063123,
+        "f1": 0.7773437499999999
+      },
+      "HARASS": {
+        "precision": 0.744,
+        "recall": 0.6992481203007519,
+        "f1": 0.7209302325581395
+      },
+      "FRAUD": {
+        "precision": 0.765625,
+        "recall": 0.6869158878504673,
+        "f1": 0.7241379310344828
+      }
+    },
+    "confusion_matrix": [
+      [
+        411,
+        16,
+        1,
+        3
+      ],
+      [
+        154,
+        398,
+        17,
+        33
+      ],
+      [
+        26,
+        5,
+        93,
+        9
+      ],
+      [
+        50,
+        3,
+        14,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1380
+  },
+  "candidate_metrics": {
+    "accuracy": 0.7601449275362319,
+    "macro_f1": 0.7483632734070592,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.6381987577639752,
+        "recall": 0.9535962877030162,
+        "f1": 0.7646511627906977
+      },
+      "AD": {
+        "precision": 0.943127962085308,
+        "recall": 0.6611295681063123,
+        "f1": 0.7773437499999999
+      },
+      "HARASS": {
+        "precision": 0.75,
+        "recall": 0.6992481203007519,
+        "f1": 0.7237354085603113
+      },
+      "FRAUD": {
+        "precision": 0.7736842105263158,
+        "recall": 0.6869158878504673,
+        "f1": 0.7277227722772278
+      }
+    },
+    "confusion_matrix": [
+      [
+        411,
+        16,
+        1,
+        3
+      ],
+      [
+        157,
+        398,
+        16,
+        31
+      ],
+      [
+        26,
+        5,
+        93,
+        9
+      ],
+      [
+        50,
+        3,
+        14,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1380,
+    "keras_tflite_mismatch_rate": 0.0036231884057971015,
+    "candidate_keras_tflite_agreement_rate": 0.9963768115942029
+  },
+  "baseline_semantics": "original_input_keras",
+  "candidate_semantics": "final_tflite",
+  "candidate_keras_tflite_agreement_rate": 0.9963768115942029,
+  "pre_qat_baseline_metrics": {
+    "accuracy": 0.7601449275362319,
+    "macro_f1": 0.7473007395921853,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.641185647425897,
+        "recall": 0.9535962877030162,
+        "f1": 0.7667910447761194
+      },
+      "AD": {
+        "precision": 0.943127962085308,
+        "recall": 0.6611295681063123,
+        "f1": 0.7773437499999999
+      },
+      "HARASS": {
+        "precision": 0.744,
+        "recall": 0.6992481203007519,
+        "f1": 0.7209302325581395
+      },
+      "FRAUD": {
+        "precision": 0.765625,
+        "recall": 0.6869158878504673,
+        "f1": 0.7241379310344828
+      }
+    },
+    "confusion_matrix": [
+      [
+        411,
+        16,
+        1,
+        3
+      ],
+      [
+        154,
+        398,
+        17,
+        33
+      ],
+      [
+        26,
+        5,
+        93,
+        9
+      ],
+      [
+        50,
+        3,
+        14,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1380
+  },
+  "pre_qat_candidate_metrics": {
+    "accuracy": 0.7601449275362319,
+    "macro_f1": 0.7483632734070592,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.6381987577639752,
+        "recall": 0.9535962877030162,
+        "f1": 0.7646511627906977
+      },
+      "AD": {
+        "precision": 0.943127962085308,
+        "recall": 0.6611295681063123,
+        "f1": 0.7773437499999999
+      },
+      "HARASS": {
+        "precision": 0.75,
+        "recall": 0.6992481203007519,
+        "f1": 0.7237354085603113
+      },
+      "FRAUD": {
+        "precision": 0.7736842105263158,
+        "recall": 0.6869158878504673,
+        "f1": 0.7277227722772278
+      }
+    },
+    "confusion_matrix": [
+      [
+        411,
+        16,
+        1,
+        3
+      ],
+      [
+        157,
+        398,
+        16,
+        31
+      ],
+      [
+        26,
+        5,
+        93,
+        9
+      ],
+      [
+        50,
+        3,
+        14,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1380,
+    "keras_tflite_mismatch_rate": 0.0036231884057971015,
+    "candidate_keras_tflite_agreement_rate": 0.9963768115942029
+  },
+  "post_qat_baseline_metrics": null,
+  "post_qat_candidate_metrics": null,
+  "note": "hybrid_fallback is not the acceptance baseline; metadata must not claim full INT8 unless quantization=full_integer_int8."
+}

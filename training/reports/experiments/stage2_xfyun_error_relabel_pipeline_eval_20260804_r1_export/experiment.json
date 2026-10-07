@@ -1,0 +1,15 @@
+{
+  "run_id": "stage2_xfyun_error_relabel_pipeline_eval_20260804_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY_SCOPE_INVALID",
+  "claim_allowed": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "only_changed_variable": "validation provisional overlay labels",
+  "returncode": 0,
+  "result_not_gate_eligible": true,
+  "failure_reason": "Evaluation used the full multi-language overlay validation manifest instead of the zh-only acceptance subset.",
+  "next_decision": "Create a new isolated zh-only validation subset and rerun without changing the model, rules, or labels."
+}

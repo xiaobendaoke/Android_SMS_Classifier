@@ -1,0 +1,6 @@
+command= /home/colab/projects/Android_SMS_Classifier/.venv/bin/python /home/colab/projects/Android_SMS_Classifier/training/scripts/validate_labels.py --input /home/colab/projects/Android_SMS_Classifier/training/data/processed_v2 --split-assignment /home/colab/projects/Android_SMS_Classifier/training/data/manifests/split_assignment_v2.json
+started_at=2026-08-02T06:00:33Z
+usage: validate_labels.py [-h] [--input INPUT] [--config CONFIG] [--seed SEED]
+validate_labels.py: error: unrecognized arguments: --split-assignment /home/colab/projects/Android_SMS_Classifier/training/data/manifests/split_assignment_v2.json
+ended_at=2026-08-02T06:00:33Z
+exit_code=2

@@ -1,0 +1,105 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_0p75_hard_boundary_both_1p5_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_dropout_0p10_focal_gamma_0p75_20260805_r1",
+  "hypothesis": "Stacking the both-sides train-only hard-boundary hook (TRANSACTION/AD/FRAUD coverage rows at 1.5) onto the best historical candidate may push TRANSACTION recall/precision together while teacher distillation and focal CE keep HARASS and FRAUD gates close to baseline.",
+  "only_changed_variable": "training.hard_boundary_multiplier=1.5 with hard_boundary_labels=[TRANSACTION, AD, FRAUD] (baseline has hook disabled)",
+  "carried_forward_from_baseline": {
+    "model.dropout": 0.1,
+    "distillation.primary_focal_gamma": 0.75,
+    "distillation.teacher_manifest": "artifacts/experiments/stage2_xfyun_carrier_repayment_teacher_20260805_r1/teacher_logits_manifest.json"
+  },
+  "config_sha256": "e1e5a9c9243f3360ca33c668cc5d0947c038220b975bfcbb6a244514f3906d54",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8525305410122164,
+    "macro_f1": 0.8230957259120889,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8571428571428571,
+        "recall": 0.9434889434889435,
+        "f1": 0.8982456140350877
+      },
+      "AD": {
+        "precision": 0.9424083769633508,
+        "recall": 0.7964601769911505,
+        "f1": 0.8633093525179857
+      },
+      "HARASS": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8113207547169812,
+        "f1": 0.7319148936170213
+      },
+      "FRAUD": {
+        "precision": 0.786096256684492,
+        "recall": 0.8121546961325967,
+        "f1": 0.7989130434782609
+      }
+    },
+    "confusion_matrix": [
+      [
+        384,
+        16,
+        4,
+        3
+      ],
+      [
+        43,
+        360,
+        22,
+        27
+      ],
+      [
+        6,
+        4,
+        86,
+        10
+      ],
+      [
+        15,
+        2,
+        17,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 3,
+  "hard_boundary_count": 5115,
+  "hard_boundary_label_counts": {
+    "TRANSACTION": 2810,
+    "AD": 1494,
+    "FRAUD": 811
+  },
+  "hard_boundary_labels": [
+    "TRANSACTION",
+    "AD",
+    "FRAUD"
+  ],
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.943489 < 0.985000",
+    "transaction_precision=0.857143 < 0.920000",
+    "macro_f1=0.823096 < 0.860000",
+    "harass_f1=0.731915 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

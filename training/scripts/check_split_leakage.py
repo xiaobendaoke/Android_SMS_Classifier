@@ -23,6 +23,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--processed-dir",
+        "--input-dir",
+        dest="processed_dir",
         type=Path,
         default=ROOT / "data" / "processed",
         help="Directory containing train/validation/test JSONL.",

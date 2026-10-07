@@ -1,0 +1,827 @@
+{
+  "split": "validation",
+  "languages": [
+    "zh"
+  ],
+  "locked_test_read": false,
+  "count": 1162,
+  "best_recall_with_other_gates": null,
+  "best_recall_with_precision_at_least_0_92": {
+    "threshold": 0.54,
+    "transaction_recall": 0.8992805755395683,
+    "transaction_precision": 0.9213759213759214,
+    "macro_f1": 0.8713930857683805,
+    "harass_f1": 0.7782805429864253,
+    "fraud_recall": 0.9392265193370166
+  },
+  "best_recall_with_precision_and_macro_gates": {
+    "threshold": 0.54,
+    "transaction_recall": 0.8992805755395683,
+    "transaction_precision": 0.9213759213759214,
+    "macro_f1": 0.8713930857683805,
+    "harass_f1": 0.7782805429864253,
+    "fraud_recall": 0.9392265193370166
+  },
+  "best_precision_with_recall_at_least_0_985": {
+    "threshold": 0.03,
+    "transaction_recall": 0.9856115107913669,
+    "transaction_precision": 0.7061855670103093,
+    "macro_f1": 0.8138345260126838,
+    "harass_f1": 0.7830188679245284,
+    "fraud_recall": 0.9226519337016574
+  },
+  "curve": [
+    {
+      "threshold": 0.01,
+      "transaction_recall": 0.9928057553956835,
+      "transaction_precision": 0.5847457627118644,
+      "macro_f1": 0.7286339879033289,
+      "harass_f1": 0.6989247311827957,
+      "fraud_recall": 0.8729281767955801
+    },
+    {
+      "threshold": 0.02,
+      "transaction_recall": 0.988009592326139,
+      "transaction_precision": 0.6710097719869706,
+      "macro_f1": 0.7957300775018413,
+      "harass_f1": 0.780952380952381,
+      "fraud_recall": 0.9171270718232044
+    },
+    {
+      "threshold": 0.03,
+      "transaction_recall": 0.9856115107913669,
+      "transaction_precision": 0.7061855670103093,
+      "macro_f1": 0.8138345260126838,
+      "harass_f1": 0.7830188679245284,
+      "fraud_recall": 0.9226519337016574
+    },
+    {
+      "threshold": 0.04,
+      "transaction_recall": 0.9808153477218226,
+      "transaction_precision": 0.7290552584670231,
+      "macro_f1": 0.8228575103660904,
+      "harass_f1": 0.7793427230046949,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.05,
+      "transaction_recall": 0.9760191846522782,
+      "transaction_precision": 0.7440585009140768,
+      "macro_f1": 0.8301472579103709,
+      "harass_f1": 0.7850467289719626,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.06,
+      "transaction_recall": 0.9760191846522782,
+      "transaction_precision": 0.7621722846441947,
+      "macro_f1": 0.8361141942221688,
+      "harass_f1": 0.7813953488372093,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.07,
+      "transaction_recall": 0.973621103117506,
+      "transaction_precision": 0.7718631178707225,
+      "macro_f1": 0.8397836730830303,
+      "harass_f1": 0.7813953488372093,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.08,
+      "transaction_recall": 0.973621103117506,
+      "transaction_precision": 0.7852998065764023,
+      "macro_f1": 0.8451873331343478,
+      "harass_f1": 0.7813953488372093,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.09,
+      "transaction_recall": 0.9712230215827338,
+      "transaction_precision": 0.7894736842105263,
+      "macro_f1": 0.8464175923322925,
+      "harass_f1": 0.7813953488372093,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.1,
+      "transaction_recall": 0.9712230215827338,
+      "transaction_precision": 0.7956777996070727,
+      "macro_f1": 0.8492328791723166,
+      "harass_f1": 0.7870370370370371,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.11,
+      "transaction_recall": 0.9664268585131894,
+      "transaction_precision": 0.7980198019801981,
+      "macro_f1": 0.8492991988157448,
+      "harass_f1": 0.7870370370370371,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.12,
+      "transaction_recall": 0.9664268585131894,
+      "transaction_precision": 0.806,
+      "macro_f1": 0.8533169622589873,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.13,
+      "transaction_recall": 0.9664268585131894,
+      "transaction_precision": 0.8125,
+      "macro_f1": 0.8556943998286206,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.14,
+      "transaction_recall": 0.9640287769784173,
+      "transaction_precision": 0.8204081632653061,
+      "macro_f1": 0.8574858637893704,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.15,
+      "transaction_recall": 0.9616306954436451,
+      "transaction_precision": 0.8251028806584362,
+      "macro_f1": 0.8583588675088847,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.16,
+      "transaction_recall": 0.9616306954436451,
+      "transaction_precision": 0.8251028806584362,
+      "macro_f1": 0.8583588675088847,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.17,
+      "transaction_recall": 0.9616306954436451,
+      "transaction_precision": 0.8319502074688797,
+      "macro_f1": 0.8607233258048645,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.18,
+      "transaction_recall": 0.9616306954436451,
+      "transaction_precision": 0.8354166666666667,
+      "macro_f1": 0.8619039015935986,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.19,
+      "transaction_recall": 0.9616306954436451,
+      "transaction_precision": 0.8389121338912134,
+      "macro_f1": 0.8630834264967159,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.2,
+      "transaction_recall": 0.9592326139088729,
+      "transaction_precision": 0.8385744234800838,
+      "macro_f1": 0.8625154366280638,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.21,
+      "transaction_recall": 0.9592326139088729,
+      "transaction_precision": 0.8421052631578947,
+      "macro_f1": 0.8636936305819588,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.22,
+      "transaction_recall": 0.9592326139088729,
+      "transaction_precision": 0.8438818565400844,
+      "macro_f1": 0.8642823623601719,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.23,
+      "transaction_recall": 0.9592326139088729,
+      "transaction_precision": 0.8456659619450317,
+      "macro_f1": 0.8648708570428709,
+      "harass_f1": 0.7926267281105991,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.24,
+      "transaction_recall": 0.9568345323741008,
+      "transaction_precision": 0.854389721627409,
+      "macro_f1": 0.8665909977071102,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.25,
+      "transaction_recall": 0.9544364508393285,
+      "transaction_precision": 0.8577586206896551,
+      "macro_f1": 0.8666049422773522,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.26,
+      "transaction_recall": 0.9544364508393285,
+      "transaction_precision": 0.8577586206896551,
+      "macro_f1": 0.8666049422773522,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.27,
+      "transaction_recall": 0.9544364508393285,
+      "transaction_precision": 0.8596112311015118,
+      "macro_f1": 0.867192201328436,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.28,
+      "transaction_recall": 0.9520383693045563,
+      "transaction_precision": 0.8611713665943601,
+      "macro_f1": 0.8672091226233556,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.29,
+      "transaction_recall": 0.947242206235012,
+      "transaction_precision": 0.8643326039387309,
+      "macro_f1": 0.8672412184379402,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.3,
+      "transaction_recall": 0.9448441247002398,
+      "transaction_precision": 0.8640350877192983,
+      "macro_f1": 0.866670454019861,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.31,
+      "transaction_recall": 0.9448441247002398,
+      "transaction_precision": 0.8640350877192983,
+      "macro_f1": 0.866670454019861,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.32,
+      "transaction_recall": 0.9424460431654677,
+      "transaction_precision": 0.8791946308724832,
+      "macro_f1": 0.8704454577447698,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.33,
+      "transaction_recall": 0.9424460431654677,
+      "transaction_precision": 0.8831460674157303,
+      "macro_f1": 0.8716146579654165,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.34,
+      "transaction_recall": 0.9424460431654677,
+      "transaction_precision": 0.8851351351351351,
+      "macro_f1": 0.8721990674861315,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9337016574585635
+    },
+    {
+      "threshold": 0.35,
+      "transaction_recall": 0.9400479616306955,
+      "transaction_precision": 0.8868778280542986,
+      "macro_f1": 0.8726206733999553,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.36,
+      "transaction_recall": 0.9400479616306955,
+      "transaction_precision": 0.8888888888888888,
+      "macro_f1": 0.8732054505137594,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.37,
+      "transaction_recall": 0.9400479616306955,
+      "transaction_precision": 0.8909090909090909,
+      "macro_f1": 0.8737901152759653,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.38,
+      "transaction_recall": 0.935251798561151,
+      "transaction_precision": 0.8944954128440367,
+      "macro_f1": 0.8738112470791466,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.39,
+      "transaction_recall": 0.9328537170263789,
+      "transaction_precision": 0.8942528735632184,
+      "macro_f1": 0.8732370691595694,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.4,
+      "transaction_recall": 0.9280575539568345,
+      "transaction_precision": 0.8937644341801386,
+      "macro_f1": 0.8720882137672832,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.41,
+      "transaction_recall": 0.9280575539568345,
+      "transaction_precision": 0.8979118329466357,
+      "macro_f1": 0.8732555630732306,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.42,
+      "transaction_recall": 0.920863309352518,
+      "transaction_precision": 0.8992974238875878,
+      "macro_f1": 0.8721133221708843,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.43,
+      "transaction_recall": 0.920863309352518,
+      "transaction_precision": 0.9014084507042254,
+      "macro_f1": 0.8726964094646701,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.44,
+      "transaction_recall": 0.920863309352518,
+      "transaction_precision": 0.9014084507042254,
+      "macro_f1": 0.8726964094646701,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.45,
+      "transaction_recall": 0.920863309352518,
+      "transaction_precision": 0.9035294117647059,
+      "macro_f1": 0.8732794298767397,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.46,
+      "transaction_recall": 0.920863309352518,
+      "transaction_precision": 0.9035294117647059,
+      "macro_f1": 0.8732794298767397,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.47,
+      "transaction_recall": 0.9160671462829736,
+      "transaction_precision": 0.9052132701421801,
+      "macro_f1": 0.872710115417445,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.48,
+      "transaction_recall": 0.9160671462829736,
+      "transaction_precision": 0.9052132701421801,
+      "macro_f1": 0.872710115417445,
+      "harass_f1": 0.7889908256880734,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.49,
+      "transaction_recall": 0.9112709832134293,
+      "transaction_precision": 0.9047619047619048,
+      "macro_f1": 0.870907222465376,
+      "harass_f1": 0.7853881278538812,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.5,
+      "transaction_recall": 0.9040767386091128,
+      "transaction_precision": 0.9040767386091128,
+      "macro_f1": 0.8678974345965069,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.51,
+      "transaction_recall": 0.9040767386091128,
+      "transaction_precision": 0.908433734939759,
+      "macro_f1": 0.8690617505992395,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.52,
+      "transaction_recall": 0.9016786570743405,
+      "transaction_precision": 0.910411622276029,
+      "macro_f1": 0.869064212707884,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.53,
+      "transaction_recall": 0.9016786570743405,
+      "transaction_precision": 0.910411622276029,
+      "macro_f1": 0.869064212707884,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.54,
+      "transaction_recall": 0.8992805755395683,
+      "transaction_precision": 0.9213759213759214,
+      "macro_f1": 0.8713930857683805,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.55,
+      "transaction_recall": 0.8992805755395683,
+      "transaction_precision": 0.9213759213759214,
+      "macro_f1": 0.8713930857683805,
+      "harass_f1": 0.7782805429864253,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.56,
+      "transaction_recall": 0.8896882494004796,
+      "transaction_precision": 0.9228855721393034,
+      "macro_f1": 0.8690213486457679,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.57,
+      "transaction_recall": 0.8896882494004796,
+      "transaction_precision": 0.9251870324189526,
+      "macro_f1": 0.8696025946161055,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.58,
+      "transaction_recall": 0.8896882494004796,
+      "transaction_precision": 0.9275,
+      "macro_f1": 0.870183846538586,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.59,
+      "transaction_recall": 0.882494004796163,
+      "transaction_precision": 0.9269521410579346,
+      "macro_f1": 0.8684347683145981,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.6,
+      "transaction_recall": 0.882494004796163,
+      "transaction_precision": 0.9269521410579346,
+      "macro_f1": 0.8684347683145981,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.61,
+      "transaction_recall": 0.8800959232613909,
+      "transaction_precision": 0.9267676767676768,
+      "macro_f1": 0.8678511812745424,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.62,
+      "transaction_recall": 0.8776978417266187,
+      "transaction_precision": 0.9265822784810127,
+      "macro_f1": 0.8672673056844129,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.63,
+      "transaction_recall": 0.8776978417266187,
+      "transaction_precision": 0.9289340101522843,
+      "macro_f1": 0.8678479051184096,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.64,
+      "transaction_recall": 0.8752997601918465,
+      "transaction_precision": 0.9455958549222798,
+      "macro_f1": 0.8713277838206139,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.65,
+      "transaction_recall": 0.8657074340527577,
+      "transaction_precision": 0.9450261780104712,
+      "macro_f1": 0.8689837093646604,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.66,
+      "transaction_recall": 0.8657074340527577,
+      "transaction_precision": 0.94750656167979,
+      "macro_f1": 0.8695639816220291,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.67,
+      "transaction_recall": 0.8657074340527577,
+      "transaction_precision": 0.9575596816976127,
+      "macro_f1": 0.8718858035778119,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.68,
+      "transaction_recall": 0.8633093525179856,
+      "transaction_precision": 0.9574468085106383,
+      "macro_f1": 0.8709517615860637,
+      "harass_f1": 0.7747747747747747,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.69,
+      "transaction_recall": 0.8585131894484412,
+      "transaction_precision": 0.9597855227882037,
+      "macro_f1": 0.8697296247454567,
+      "harass_f1": 0.7713004484304933,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.7,
+      "transaction_recall": 0.8561151079136691,
+      "transaction_precision": 0.9596774193548387,
+      "macro_f1": 0.8691399138642139,
+      "harass_f1": 0.7713004484304933,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.71,
+      "transaction_recall": 0.8513189448441247,
+      "transaction_precision": 0.9594594594594594,
+      "macro_f1": 0.8679594122867285,
+      "harass_f1": 0.7713004484304933,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.72,
+      "transaction_recall": 0.8489208633093526,
+      "transaction_precision": 0.9619565217391305,
+      "macro_f1": 0.8679485681018471,
+      "harass_f1": 0.7713004484304933,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.73,
+      "transaction_recall": 0.8465227817745803,
+      "transaction_precision": 0.9644808743169399,
+      "macro_f1": 0.8673175686177297,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.74,
+      "transaction_recall": 0.8465227817745803,
+      "transaction_precision": 0.9644808743169399,
+      "macro_f1": 0.8673175686177297,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.75,
+      "transaction_recall": 0.8465227817745803,
+      "transaction_precision": 0.9644808743169399,
+      "macro_f1": 0.8673175686177297,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.76,
+      "transaction_recall": 0.841726618705036,
+      "transaction_precision": 0.9669421487603306,
+      "macro_f1": 0.8661804111342185,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.77,
+      "transaction_recall": 0.8369304556354916,
+      "transaction_precision": 0.9667590027700831,
+      "macro_f1": 0.8649946339228288,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.78,
+      "transaction_recall": 0.8369304556354916,
+      "transaction_precision": 0.9667590027700831,
+      "macro_f1": 0.8649946339228288,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.79,
+      "transaction_recall": 0.8369304556354916,
+      "transaction_precision": 0.9694444444444444,
+      "macro_f1": 0.8655748655731214,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.8,
+      "transaction_recall": 0.8321342925659473,
+      "transaction_precision": 0.9692737430167597,
+      "macro_f1": 0.8643871888502619,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.81,
+      "transaction_recall": 0.8321342925659473,
+      "transaction_precision": 0.9692737430167597,
+      "macro_f1": 0.8643871888502619,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.82,
+      "transaction_recall": 0.8321342925659473,
+      "transaction_precision": 0.9692737430167597,
+      "macro_f1": 0.8643871888502619,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.83,
+      "transaction_recall": 0.829736211031175,
+      "transaction_precision": 0.969187675070028,
+      "macro_f1": 0.8637927292685555,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.84,
+      "transaction_recall": 0.8249400479616307,
+      "transaction_precision": 0.9690140845070423,
+      "macro_f1": 0.8626025418452014,
+      "harass_f1": 0.7678571428571429,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.85,
+      "transaction_recall": 0.8177458033573142,
+      "transaction_precision": 0.96875,
+      "macro_f1": 0.8601960471182291,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.86,
+      "transaction_recall": 0.8129496402877698,
+      "transaction_precision": 0.9685714285714285,
+      "macro_f1": 0.8590004808849591,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.87,
+      "transaction_recall": 0.8105515587529976,
+      "transaction_precision": 0.9684813753581661,
+      "macro_f1": 0.8584020164502895,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.88,
+      "transaction_recall": 0.8105515587529976,
+      "transaction_precision": 0.9684813753581661,
+      "macro_f1": 0.8584020164502895,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.89,
+      "transaction_recall": 0.8081534772182254,
+      "transaction_precision": 0.9683908045977011,
+      "macro_f1": 0.8578030907828209,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.9,
+      "transaction_recall": 0.8009592326139089,
+      "transaction_precision": 0.9709302325581395,
+      "macro_f1": 0.856581620842681,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.91,
+      "transaction_recall": 0.7937649880095923,
+      "transaction_precision": 0.9706744868035191,
+      "macro_f1": 0.8547771732157355,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.92,
+      "transaction_recall": 0.7889688249400479,
+      "transaction_precision": 0.9705014749262537,
+      "macro_f1": 0.8535717148530725,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.93,
+      "transaction_recall": 0.7841726618705036,
+      "transaction_precision": 0.9703264094955489,
+      "macro_f1": 0.8520060821447365,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.94,
+      "transaction_recall": 0.7817745803357314,
+      "transaction_precision": 0.9731343283582089,
+      "macro_f1": 0.8514604375308775,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9392265193370166
+    },
+    {
+      "threshold": 0.95,
+      "transaction_recall": 0.7745803357314148,
+      "transaction_precision": 0.9817629179331308,
+      "macro_f1": 0.8518876174593819,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9502762430939227
+    },
+    {
+      "threshold": 0.96,
+      "transaction_recall": 0.7338129496402878,
+      "transaction_precision": 0.9839228295819936,
+      "macro_f1": 0.8420529219598367,
+      "harass_f1": 0.7644444444444445,
+      "fraud_recall": 0.9502762430939227
+    },
+    {
+      "threshold": 0.97,
+      "transaction_recall": 0.7122302158273381,
+      "transaction_precision": 0.99,
+      "macro_f1": 0.8363620706352217,
+      "harass_f1": 0.7577092511013215,
+      "fraud_recall": 0.9502762430939227
+    },
+    {
+      "threshold": 0.98,
+      "transaction_recall": 0.6834532374100719,
+      "transaction_precision": 0.9930313588850174,
+      "macro_f1": 0.8283898734292852,
+      "harass_f1": 0.7543859649122806,
+      "fraud_recall": 0.9502762430939227
+    },
+    {
+      "threshold": 0.99,
+      "transaction_recall": 0.6235011990407674,
+      "transaction_precision": 0.9923664122137404,
+      "macro_f1": 0.810879802289962,
+      "harass_f1": 0.7510917030567685,
+      "fraud_recall": 0.9502762430939227
+    }
+  ]
+}

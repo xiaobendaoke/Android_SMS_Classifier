@@ -1,0 +1,100 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_uniform_weight_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "hypothesis": "Using uniform supervised class weights on the lr=5e-4 hard-label front may remove the balanced-weight downweighting of TRANSACTION and AD, testing whether transaction recall can recover without losing HARASS/FRAUD gates.",
+  "only_changed_variable": "training.class_weight_strategy=uniform (baseline=balanced; learning_rate kept at 5e-4)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training_mode": "hard_only"
+  },
+  "config_sha256": "15db064964a28e65b6e1ad4d4f6c92dbc7bbd65d521c3378e69ee945c0422226",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8691099476439791,
+    "macro_f1": 0.8362994857541405,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8674157303370786,
+        "recall": 0.9484029484029484,
+        "f1": 0.9061032863849765
+      },
+      "AD": {
+        "precision": 0.9112149532710281,
+        "recall": 0.8628318584070797,
+        "f1": 0.8863636363636365
+      },
+      "HARASS": {
+        "precision": 0.7676767676767676,
+        "recall": 0.7169811320754716,
+        "f1": 0.7414634146341463
+      },
+      "FRAUD": {
+        "precision": 0.8275862068965517,
+        "recall": 0.7955801104972375,
+        "f1": 0.8112676056338027
+      }
+    },
+    "confusion_matrix": [
+      [
+        386,
+        16,
+        1,
+        4
+      ],
+      [
+        41,
+        390,
+        6,
+        15
+      ],
+      [
+        3,
+        16,
+        76,
+        11
+      ],
+      [
+        15,
+        6,
+        16,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 7,
+  "model_sha256": "7e01585c967665f6c6da43dda9b341353d0255451110be38485c04ea52a22c79",
+  "training_manifest_class_weights": {
+    "TRANSACTION": 1.0,
+    "AD": 1.0,
+    "HARASS": 1.0,
+    "FRAUD": 1.0
+  },
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.948403 < 0.985000",
+    "transaction_precision=0.867416 < 0.920000",
+    "macro_f1=0.836299 < 0.860000",
+    "harass_f1=0.741463 < 0.800000",
+    "fraud_recall=0.795580 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

@@ -1,0 +1,93 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_embedding_dim_48_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_dropout_0p10_20260805_r1",
+  "hypothesis": "Increasing only the byte embedding dimension may improve Chinese byte-pattern representation for transaction templates and HARASS boundary phrases without changing convolution filters, losses, split, labels, or teacher logits.",
+  "only_changed_variable": "model.embedding_dim=48 (baseline=32)",
+  "carried_forward_from_baseline": {
+    "model.dropout": 0.1
+  },
+  "config_sha256": "b283e51f60ccd24045dffd9751324dfc46f80227b65a2e550f77c5631cbb52a6",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8726003490401396,
+    "macro_f1": 0.8431045106696947,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8660714285714286,
+        "recall": 0.9533169533169533,
+        "f1": 0.9076023391812866
+      },
+      "AD": {
+        "precision": 0.9254807692307693,
+        "recall": 0.8517699115044248,
+        "f1": 0.8870967741935485
+      },
+      "HARASS": {
+        "precision": 0.7155172413793104,
+        "recall": 0.7830188679245284,
+        "f1": 0.7477477477477479
+      },
+      "FRAUD": {
+        "precision": 0.8674698795180723,
+        "recall": 0.7955801104972375,
+        "f1": 0.829971181556196
+      }
+    },
+    "confusion_matrix": [
+      [
+        388,
+        16,
+        1,
+        2
+      ],
+      [
+        42,
+        385,
+        13,
+        12
+      ],
+      [
+        3,
+        12,
+        83,
+        8
+      ],
+      [
+        15,
+        3,
+        19,
+        144
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 10,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.953317 < 0.985000",
+    "transaction_precision=0.866071 < 0.920000",
+    "macro_f1=0.843105 < 0.860000",
+    "harass_f1=0.747748 < 0.800000",
+    "fraud_recall=0.795580 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

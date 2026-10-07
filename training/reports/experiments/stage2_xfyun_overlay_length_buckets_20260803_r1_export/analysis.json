@@ -1,0 +1,166 @@
+{
+  "locked_test_read": false,
+  "language": "zh",
+  "model_input_bytes": 512,
+  "transaction_misses": {
+    "count": 29,
+    "by_bucket": [
+      {
+        "coverage_subtype": "CARRIER",
+        "predicted_label": "AD",
+        "count": 11,
+        "char_length_quantiles": [
+          83.0,
+          120.0,
+          121.0,
+          144.0,
+          196.0,
+          296.0
+        ],
+        "utf8_byte_length_quantiles": [
+          183.0,
+          254.5,
+          278.0,
+          345.0,
+          524.0,
+          730.0
+        ],
+        "at_or_above_model_limit": 2
+      },
+      {
+        "coverage_subtype": "REPAYMENT",
+        "predicted_label": "AD",
+        "count": 3,
+        "char_length_quantiles": [
+          62.0,
+          66.0,
+          70.0,
+          102.0,
+          121.2,
+          134.0
+        ],
+        "utf8_byte_length_quantiles": [
+          166.0,
+          171.0,
+          176.0,
+          273.0,
+          331.2,
+          370.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "REPAYMENT",
+        "predicted_label": "HARASS",
+        "count": 1,
+        "char_length_quantiles": [
+          52.0,
+          52.0,
+          52.0,
+          52.0,
+          52.0,
+          52.0
+        ],
+        "utf8_byte_length_quantiles": [
+          148.0,
+          148.0,
+          148.0,
+          148.0,
+          148.0,
+          148.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "AD",
+        "count": 11,
+        "char_length_quantiles": [
+          40.0,
+          62.5,
+          69.0,
+          91.0,
+          103.0,
+          301.0
+        ],
+        "utf8_byte_length_quantiles": [
+          78.0,
+          152.5,
+          179.0,
+          197.0,
+          257.0,
+          301.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "FRAUD",
+        "count": 2,
+        "char_length_quantiles": [
+          27.0,
+          36.25,
+          45.5,
+          54.75,
+          60.3,
+          64.0
+        ],
+        "utf8_byte_length_quantiles": [
+          77.0,
+          89.25,
+          101.5,
+          113.75,
+          121.1,
+          126.0
+        ],
+        "at_or_above_model_limit": 0
+      },
+      {
+        "coverage_subtype": "UNMATCHED",
+        "predicted_label": "HARASS",
+        "count": 1,
+        "char_length_quantiles": [
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0
+        ],
+        "utf8_byte_length_quantiles": [
+          139.0,
+          139.0,
+          139.0,
+          139.0,
+          139.0,
+          139.0
+        ],
+        "at_or_above_model_limit": 0
+      }
+    ]
+  },
+  "transaction_false_positives": {
+    "count": 66,
+    "true_label": {
+      "AD": 54,
+      "HARASS": 5,
+      "FRAUD": 7
+    },
+    "char_length_quantiles": [
+      16.0,
+      65.0,
+      79.5,
+      125.25,
+      159.0,
+      3285.0
+    ],
+    "utf8_byte_length_quantiles": [
+      38.0,
+      147.0,
+      184.0,
+      291.75,
+      385.0,
+      8406.0
+    ]
+  }
+}

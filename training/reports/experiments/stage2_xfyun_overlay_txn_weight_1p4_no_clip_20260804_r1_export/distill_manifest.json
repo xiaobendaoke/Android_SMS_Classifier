@@ -1,0 +1,176 @@
+{
+  "seed": 42,
+  "used_distillation": false,
+  "status": "PENDING_PIPELINE_VALIDATION",
+  "alpha": 1.0,
+  "beta": 0.0,
+  "temperature": 2.0,
+  "primary_focal_gamma": 0.5,
+  "boundary_hard_positive_multiplier": 1.5,
+  "boundary_hard_negative_multiplier": 3.0,
+  "boundary_weight_max": 3.0,
+  "teacher_confidence_floor": 0.25,
+  "teacher_confidence_power": 1.0,
+  "boundary_weight_summary": {
+    "min": 1.0,
+    "mean": 1.0,
+    "max": 1.0
+  },
+  "distill_weight_summary": {
+    "min": 1.0,
+    "mean": 1.0,
+    "max": 1.0
+  },
+  "keras_path": "artifacts/experiments/stage2_xfyun_overlay_txn_weight_1p4_no_clip_20260804_r1/sms_bytecnn_fp32.keras",
+  "train_count": 9097,
+  "val_metrics": {
+    "accuracy": 0.8315881326352531,
+    "macro_f1": 0.8019654747612438,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8392070484581498,
+        "recall": 0.9202898550724637,
+        "f1": 0.8778801843317973
+      },
+      "AD": {
+        "precision": 0.9220430107526881,
+        "recall": 0.767337807606264,
+        "f1": 0.8376068376068377
+      },
+      "HARASS": {
+        "precision": 0.6148148148148148,
+        "recall": 0.7980769230769231,
+        "f1": 0.694560669456067
+      },
+      "FRAUD": {
+        "precision": 0.7891891891891892,
+        "recall": 0.8066298342541437,
+        "f1": 0.7978142076502733
+      }
+    },
+    "confusion_matrix": [
+      [
+        381,
+        22,
+        7,
+        4
+      ],
+      [
+        51,
+        343,
+        26,
+        27
+      ],
+      [
+        8,
+        5,
+        83,
+        8
+      ],
+      [
+        14,
+        2,
+        19,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "primary_val_metrics": {
+    "accuracy": 0.8394415357766143,
+    "macro_f1": 0.8121385336693694,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8613636363636363,
+        "recall": 0.9154589371980676,
+        "f1": 0.8875878220140514
+      },
+      "AD": {
+        "precision": 0.9184210526315789,
+        "recall": 0.7807606263982103,
+        "f1": 0.8440145102781137
+      },
+      "HARASS": {
+        "precision": 0.6285714285714286,
+        "recall": 0.8461538461538461,
+        "f1": 0.721311475409836
+      },
+      "FRAUD": {
+        "precision": 0.7849462365591398,
+        "recall": 0.8066298342541437,
+        "f1": 0.7956403269754767
+      }
+    },
+    "confusion_matrix": [
+      [
+        379,
+        24,
+        7,
+        4
+      ],
+      [
+        44,
+        349,
+        26,
+        28
+      ],
+      [
+        3,
+        5,
+        88,
+        8
+      ],
+      [
+        14,
+        2,
+        19,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 3,
+  "targets": {
+    "target_transaction_recall": 0.985,
+    "min_transaction_precision": 0.92,
+    "min_macro_f1": 0.86,
+    "min_harass_f1": 0.8,
+    "min_fraud_recall": 0.8
+  },
+  "gate_errors": [
+    "transaction_recall=0.920290 < 0.985000",
+    "transaction_precision=0.839207 < 0.920000",
+    "macro_f1=0.801965 < 0.860000",
+    "harass_f1=0.694561 < 0.800000"
+  ],
+  "enforce_model_validation_targets": false,
+  "class_weights": {
+    "TRANSACTION": 0.6715371012687683,
+    "AD": 0.45182111859321594,
+    "HARASS": 1.5795844793319702,
+    "FRAUD": 1.2970572710037231
+  },
+  "transaction_protection": {
+    "enabled": true,
+    "output_index": 4,
+    "threshold": 0.5,
+    "loss_weight": 0.35,
+    "positive_weight": 1.1,
+    "focal_gamma": 1.5,
+    "hard_label_weight": 0.85,
+    "teacher_temperature": 1.0,
+    "checkpoint_scope": "primary"
+  }
+}

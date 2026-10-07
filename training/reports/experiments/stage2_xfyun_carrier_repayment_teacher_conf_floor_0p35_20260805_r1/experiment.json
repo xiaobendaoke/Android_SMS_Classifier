@@ -1,0 +1,89 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_teacher_conf_floor_0p35_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "hypothesis": "Increasing the teacher confidence floor may upweight harder distillation examples and improve HARASS and transaction recall without changing the teacher logits or label mix.",
+  "only_changed_variable": "distillation.teacher_confidence_floor=0.35 (baseline=0.25)",
+  "config_sha256": "d2667bb14b9ad698bb5ce9a437efa6bf0640159ec8847b231700aac01868c4aa",
+  "teacher_manifest_sha256": "eb36737473a19b070a9743e9b4d41cd22316c374d2ce4ca7196b71ba6675f4d2",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.8769633507853403,
+    "macro_f1": 0.8419672232801634,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.9080188679245284,
+        "recall": 0.9459459459459459,
+        "f1": 0.9265944645006017
+      },
+      "AD": {
+        "precision": 0.8818380743982495,
+        "recall": 0.8915929203539823,
+        "f1": 0.8866886688668867
+      },
+      "HARASS": {
+        "precision": 0.7428571428571429,
+        "recall": 0.7358490566037735,
+        "f1": 0.7393364928909951
+      },
+      "FRAUD": {
+        "precision": 0.86875,
+        "recall": 0.7679558011049724,
+        "f1": 0.8152492668621701
+      }
+    },
+    "confusion_matrix": [
+      [
+        385,
+        18,
+        3,
+        1
+      ],
+      [
+        31,
+        403,
+        6,
+        12
+      ],
+      [
+        3,
+        17,
+        78,
+        8
+      ],
+      [
+        5,
+        19,
+        18,
+        139
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 8,
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.945946 < 0.985000",
+    "transaction_precision=0.908019 < 0.920000",
+    "macro_f1=0.841967 < 0.860000",
+    "harass_f1=0.739336 < 0.800000",
+    "fraud_recall=0.767956 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

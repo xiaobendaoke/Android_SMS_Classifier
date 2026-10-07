@@ -1,0 +1,100 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_lr_5e4_hard_boundary_1p3_20260806_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_lr_5e4_20260805_r1",
+  "hypothesis": "The 2.0 hard-boundary hook lifted TRANSACTION precision past 0.92 but dragged HARASS F1 down; lowering the same train-only coverage-subtype multiplier to 1.3 should keep part of the precision gain without over-rotating the HARASS BANK/UNMATCHED boundary.",
+  "only_changed_variable": "training.hard_boundary_multiplier=1.3 (round1=2.0; mask definition unchanged)",
+  "carried_forward_from_baseline": {
+    "training.learning_rate": 0.0005,
+    "training.class_weight_multipliers.TRANSACTION": 1.4,
+    "training_mode": "hard_only"
+  },
+  "config_sha256": "7bb57f173ad77fe912997d102df38b82b9cf96967e132bb32ba6d52e55a673e8",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  },
+  "returncode": 0,
+  "training_manifest_val_metrics": {
+    "accuracy": 0.87521815008726,
+    "macro_f1": 0.8422204800629535,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.8800904977375565,
+        "recall": 0.9557739557739557,
+        "f1": 0.9163722025912838
+      },
+      "AD": {
+        "precision": 0.9365853658536586,
+        "recall": 0.8495575221238938,
+        "f1": 0.8909512761020882
+      },
+      "HARASS": {
+        "precision": 0.672,
+        "recall": 0.7924528301886793,
+        "f1": 0.7272727272727274
+      },
+      "FRAUD": {
+        "precision": 0.863905325443787,
+        "recall": 0.8066298342541437,
+        "f1": 0.8342857142857144
+      }
+    },
+    "confusion_matrix": [
+      [
+        389,
+        15,
+        2,
+        1
+      ],
+      [
+        41,
+        384,
+        12,
+        15
+      ],
+      [
+        6,
+        9,
+        84,
+        7
+      ],
+      [
+        6,
+        2,
+        27,
+        146
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1146
+  },
+  "best_epoch": 10,
+  "model_sha256": "839e0f8d5c08ec0d406bfd8625359e4507d0231758939d2fc541c97c61d53df5",
+  "hard_boundary_count": 2812,
+  "hard_boundary_label_counts": {
+    "AD": 1494,
+    "HARASS": 507,
+    "FRAUD": 811
+  },
+  "training_manifest_gate_errors": [
+    "transaction_recall=0.955774 < 0.985000",
+    "transaction_precision=0.880090 < 0.920000",
+    "macro_f1=0.842220 < 0.860000",
+    "harass_f1=0.727273 < 0.800000"
+  ],
+  "authoritative_final_evaluation": "post_training_keras_metrics.json"
+}

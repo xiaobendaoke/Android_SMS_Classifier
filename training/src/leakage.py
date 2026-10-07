@@ -1,10 +1,11 @@
-"""Detect train/validation/test group leakage."""
+"""Detect train/validation/test leakage across connected grouping identities."""
 from __future__ import annotations
 
-from typing import Dict, Iterable, List, Sequence, Set, Tuple
+from collections import defaultdict
+from typing import Callable, Dict, List, Sequence, Set
 
 from .schema import SmsRecord
-from .split_groups import group_key
+from .split_groups import connected_group_ids, template_fingerprint
 
 
 def collect_split_ids(records: Sequence[SmsRecord]) -> Dict[str, Set[str]]:
@@ -16,10 +17,12 @@ def collect_split_ids(records: Sequence[SmsRecord]) -> Dict[str, Set[str]]:
 
 
 def collect_split_groups(records: Sequence[SmsRecord]) -> Dict[str, Set[str]]:
+    """Collect connected-component IDs per split."""
     out: Dict[str, Set[str]] = {"train": set(), "validation": set(), "test": set()}
-    for record in records:
+    component_ids = connected_group_ids(records)
+    for idx, record in enumerate(records):
         split = record.split if record.split in out else "train"
-        out[split].add(group_key(record))
+        out[split].add(component_ids[idx])
     return out
 
 
@@ -48,13 +51,39 @@ def detect_group_leakage(split_groups: Dict[str, Set[str]]) -> List[Dict[str, ob
         if overlap:
             issues.append(
                 {
-                    "type": "template_sender_group_leak",
+                    "type": "connected_component_leak",
                     "splits": [left, right],
                     "count": len(overlap),
                     "examples": overlap[:10],
                 }
             )
     return issues
+
+
+def detect_identity_leakage(
+    records: Sequence[SmsRecord],
+    *,
+    identity_name: str,
+    identity: Callable[[SmsRecord], str],
+) -> List[Dict[str, object]]:
+    """Report any template/sender/fingerprint identity spanning splits."""
+    splits_by_identity: Dict[str, Set[str]] = defaultdict(set)
+    for record in records:
+        value = identity(record)
+        if value:
+            splits_by_identity[value].add(record.split)
+    leaked = sorted(
+        value for value, splits in splits_by_identity.items() if len(splits) > 1
+    )
+    if not leaked:
+        return []
+    return [
+        {
+            "type": f"{identity_name}_leak",
+            "count": len(leaked),
+            "examples": leaked[:10],
+        }
+    ]
 
 
 def detect_parent_leakage(records: Sequence[SmsRecord]) -> List[Dict[str, object]]:
@@ -68,7 +97,7 @@ def detect_parent_leakage(records: Sequence[SmsRecord]) -> List[Dict[str, object
         parent = by_id.get(record.parent_id)
         if parent is None:
             continue
-        if parent.split != record.split and record.split == "test":
+        if parent.split != record.split:
             examples.append(
                 {
                     "child_id": record.id,
@@ -94,6 +123,21 @@ def audit_leakage(records: Sequence[SmsRecord]) -> Dict[str, object]:
     issues = (
         detect_id_overlap(split_ids)
         + detect_group_leakage(split_groups)
+        + detect_identity_leakage(
+            records,
+            identity_name="template_group",
+            identity=lambda record: record.template_group,
+        )
+        + detect_identity_leakage(
+            records,
+            identity_name="sender_group",
+            identity=lambda record: record.sender_group,
+        )
+        + detect_identity_leakage(
+            records,
+            identity_name="template_fingerprint",
+            identity=lambda record: template_fingerprint(record.text),
+        )
         + detect_parent_leakage(records)
     )
     return {
@@ -101,5 +145,5 @@ def audit_leakage(records: Sequence[SmsRecord]) -> Dict[str, object]:
         "issue_count": len(issues),
         "issues": issues,
         "split_counts": {k: len(v) for k, v in split_ids.items()},
-        "group_counts": {k: len(v) for k, v in split_groups.items()},
+        "connected_component_counts": {k: len(v) for k, v in split_groups.items()},
     }

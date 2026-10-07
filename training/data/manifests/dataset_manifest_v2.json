@@ -1,0 +1,285 @@
+{
+  "status": "FROZEN_FOR_TRAINING_V2",
+  "version": "2.0.0",
+  "claim_allowed": false,
+  "freeze_sha256": "000f424e682aa321b0640e9a1eb2e26ae390b452360ef8d15fafa0f4fa243d5d",
+  "split_assignment": "data/manifests/split_assignment_v2.json",
+  "parent_assignment_sha256": "8273cf4465593690120d60ab10b07d4fa13e7226059275bc2592e736a505802b",
+  "removal_policy": "text_quality_only",
+  "replacement_policy": "none",
+  "model_scores_used": false,
+  "seed": 42,
+  "source_files": [
+    {
+      "path": "data/raw/normal_2w_zh_relabel.jsonl",
+      "sha256": "e0868e20f8f8953aa995bd7caf24ae84a788c579c1c64773fd3897922b2fe8db"
+    },
+    {
+      "path": "data/raw/annotated_homework_bootstrap.jsonl",
+      "sha256": "959cf208f8d92a3f0fcc9384f80092db923cf36bdee523e420832133551d22d2"
+    }
+  ],
+  "splits": {
+    "train": {
+      "path": "data/processed_v2/train.jsonl",
+      "count": 11158,
+      "sha256": "49a4d4f8f9a3610c2643b168b6a92f98349bc3181205c0b026a2b3c29f0c5d59",
+      "parent_sha256": "49a4d4f8f9a3610c2643b168b6a92f98349bc3181205c0b026a2b3c29f0c5d59",
+      "label_distribution": {
+        "TRANSACTION": 3399,
+        "AD": 4823,
+        "HARASS": 1218,
+        "FRAUD": 1718
+      },
+      "language_distribution": {
+        "zh": 9159,
+        "hi": 801,
+        "en": 504,
+        "id": 694
+      },
+      "label_proportions_ci95": {
+        "TRANSACTION": {
+          "count": 3399,
+          "proportion": 0.3046244846746729,
+          "wilson_ci95": [
+            0.2961529891002037,
+            0.31323046604576443
+          ]
+        },
+        "AD": {
+          "count": 4823,
+          "proportion": 0.43224592220828106,
+          "wilson_ci95": [
+            0.42307882624990484,
+            0.4414596563603484
+          ]
+        },
+        "HARASS": {
+          "count": 1218,
+          "proportion": 0.10915934755332497,
+          "wilson_ci95": [
+            0.10350709725548105,
+            0.11508063113514586
+          ]
+        },
+        "FRAUD": {
+          "count": 1718,
+          "proportion": 0.1539702455637211,
+          "wilson_ci95": [
+            0.14739252841355957,
+            0.16078615063166182
+          ]
+        }
+      }
+    },
+    "validation": {
+      "path": "data/processed_v2/validation.jsonl",
+      "count": 1398,
+      "sha256": "5fef5c83fd14b693e526a8561626aef2e4fdf264c98ff5ef999fd9d41ef55fe0",
+      "parent_sha256": "4487924f07ca074e6ff4d345b2c79e1e9ea8719decc8cd4e5518ac4346ae9632",
+      "label_distribution": {
+        "TRANSACTION": 428,
+        "AD": 601,
+        "FRAUD": 230,
+        "HARASS": 139
+      },
+      "language_distribution": {
+        "zh": 1158,
+        "hi": 85,
+        "en": 70,
+        "id": 85
+      },
+      "label_proportions_ci95": {
+        "TRANSACTION": {
+          "count": 428,
+          "proportion": 0.3061516452074392,
+          "wilson_ci95": [
+            0.28254980474164154,
+            0.3308159278775074
+          ]
+        },
+        "AD": {
+          "count": 601,
+          "proportion": 0.42989985693848354,
+          "wilson_ci95": [
+            0.40417537514947666,
+            0.4560085429194407
+          ]
+        },
+        "HARASS": {
+          "count": 139,
+          "proportion": 0.0994277539341917,
+          "wilson_ci95": [
+            0.08482245087804634,
+            0.11622850951576706
+          ]
+        },
+        "FRAUD": {
+          "count": 230,
+          "proportion": 0.16452074391988555,
+          "wilson_ci95": [
+            0.14601014958676728,
+            0.18487002974305144
+          ]
+        }
+      }
+    },
+    "test": {
+      "path": "data/processed_v2/test.jsonl",
+      "count": 1397,
+      "sha256": "1fff6c62f23ed51c11cabd602921b74922af1d0db53344c19228380a58c83f57",
+      "parent_sha256": "fa98aa85fdb3047d8e90fe3ab98dd923f9490cd160cc60c90926eef937c79781",
+      "label_distribution": {
+        "TRANSACTION": 427,
+        "AD": 601,
+        "FRAUD": 230,
+        "HARASS": 139
+      },
+      "language_distribution": {
+        "zh": 1125,
+        "en": 74,
+        "id": 94,
+        "hi": 104
+      },
+      "label_proportions_ci95": {
+        "TRANSACTION": {
+          "count": 427,
+          "proportion": 0.30565497494631355,
+          "wilson_ci95": [
+            0.28205718247177924,
+            0.33031869214530807
+          ]
+        },
+        "AD": {
+          "count": 601,
+          "proportion": 0.4302075876879026,
+          "wilson_ci95": [
+            0.4044708794441144,
+            0.45632708657859644
+          ]
+        },
+        "HARASS": {
+          "count": 139,
+          "proportion": 0.09949892627057981,
+          "wilson_ci95": [
+            0.0848836181765709,
+            0.11631086376913945
+          ]
+        },
+        "FRAUD": {
+          "count": 230,
+          "proportion": 0.164638511095204,
+          "wilson_ci95": [
+            0.1461157435030074,
+            0.1850006368215061
+          ]
+        }
+      }
+    }
+  },
+  "removed_corrupt": [
+    {
+      "id": "zh-n2w-04573",
+      "split": "validation",
+      "quality_reason": "null_prefix",
+      "text_sha256": "5288054c99b5dae291dfcb65c7cd63450ad69142429f1c92787af6d3de63bbe1",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-21938ef144eab1df8773"
+    },
+    {
+      "id": "zh-n2w-01703",
+      "split": "validation",
+      "quality_reason": "replacement_character",
+      "text_sha256": "42e40f238a225782ad9b613094d966f7a00fdabbf57fb12c323b2b30130865c8",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-ac731b11d7661a92f14a"
+    },
+    {
+      "id": "zh-n2w-05342",
+      "split": "validation",
+      "quality_reason": "replacement_character",
+      "text_sha256": "2b35e5780e97ffbac956f57db6d5791cf56067b39b30ab2be32aa50478c86743",
+      "label": "AD",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-68b034f0ba406d6a8829"
+    },
+    {
+      "id": "zh-n2w-04117",
+      "split": "validation",
+      "quality_reason": "replacement_character",
+      "text_sha256": "be87d0efc0fbc3e38cd108d6876d364f41a243cdd0744dedec93941ce0e6342e",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-9df639e85fad100c40ce"
+    },
+    {
+      "id": "zh-n2w-03809",
+      "split": "test",
+      "quality_reason": "null_prefix",
+      "text_sha256": "620c8fcef45f1fd708590bd8a1ff868afd98b5ccde9bb1a23b47f06e97988409",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-ecce61148bf84769ae06"
+    },
+    {
+      "id": "zh-n2w-01813",
+      "split": "test",
+      "quality_reason": "replacement_character",
+      "text_sha256": "b27383d4a5f394398223bed9c990740b8d5d1ff9ecf52cbe3aa38ae074bdfad4",
+      "label": "AD",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-d036f0edaa705177bba6"
+    },
+    {
+      "id": "zh-n2w-00469",
+      "split": "test",
+      "quality_reason": "replacement_character",
+      "text_sha256": "992b30e2c7b84e023b93a00feee319f86fada5f6aa55d8577e6fda4a749be28f",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-3f67ef739b8f12a99226"
+    },
+    {
+      "id": "zh-n2w-05979",
+      "split": "test",
+      "quality_reason": "null_prefix",
+      "text_sha256": "f6f7613df601f9342eda1d57f859cd3901a845d25fc56387b903251f3ffe552a",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-91c762bdf3e8ca7de4cd"
+    },
+    {
+      "id": "zh-n2w-02966",
+      "split": "test",
+      "quality_reason": "null_prefix",
+      "text_sha256": "047b2fa3d77ea5adfb0256b99070d98a06ed07a4bc23a70cc066f2eb33cecaa8",
+      "label": "TRANSACTION",
+      "source": "normal_2w_zh_relabel",
+      "component_id": "cc-d0f300545c9ca35a3bad"
+    }
+  ],
+  "leakage": {
+    "status": "PASS",
+    "issue_count": 0,
+    "issues": [],
+    "split_counts": {
+      "train": 11158,
+      "validation": 1398,
+      "test": 1397
+    },
+    "connected_component_counts": {
+      "train": 9013,
+      "validation": 1129,
+      "test": 1128
+    }
+  },
+  "blockers": [
+    {
+      "type": "human_annotation_incomplete",
+      "note": "Dual-human annotation packs are pending. claim_allowed remains false until provenance closes."
+    }
+  ],
+  "generated_at": "2026-08-02T02:36:45.019612+00:00"
+}

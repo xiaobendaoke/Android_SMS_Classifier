@@ -1,0 +1,21 @@
+{
+  "run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_pipeline_audit_20260805_r1",
+  "status": "EXPLORATORY_PROVISIONAL_VALIDATION_ONLY",
+  "annotation_status": "PROVISIONAL_AUTOMATED_MULTI_PASS",
+  "claim_allowed": false,
+  "human_verified": false,
+  "formal_acceptance_allowed": false,
+  "locked_test_read": false,
+  "quantization_run": false,
+  "android_export_run": false,
+  "seed": 42,
+  "baseline": "stage2_xfyun_carrier_repayment_dropout_0p10_20260805_r1",
+  "hypothesis": "Auditing the existing Keras transaction-protection pipeline on fixed zh validation tests whether the protected routing path can close the transaction recall gap without retraining or reading locked test.",
+  "only_changed_variable": "evaluation_mode=pipeline (baseline evaluation_mode=keras)",
+  "source_model_run_id": "stage2_xfyun_carrier_repayment_dropout_0p10_20260805_r1",
+  "authoritative_final_evaluation": "post_training_pipeline_metrics.json",
+  "data_sha256": {
+    "train": "0777cae6ef9681ffea48d1eaf74d7f582aeed49719a200eb62a453195d807fa0",
+    "validation": "4ff8e9ea6698c6098f95e997f5d0b378ddd75673eb1084e261bcb182d032a64f"
+  }
+}

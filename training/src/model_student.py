@@ -21,6 +21,8 @@ class StudentModelConfig:
     dense_units: int = 96
     dropout: float = 0.2
     num_classes: int = 4
+    transaction_protection_head: bool = False
+    transaction_hidden_units: int = 0
     max_bytes: int = MAX_BYTES
     pad_id: int = PAD_ID
     byte_offset: int = BYTE_OFFSET
@@ -30,7 +32,9 @@ class StudentModelConfig:
         return (self.max_bytes,)
 
     def output_shape(self) -> Sequence[int]:
-        return (self.num_classes,)
+        return (
+            self.num_classes + (1 if self.transaction_protection_head else 0),
+        )
 
     def describe_layers(self) -> List[Dict[str, object]]:
         """Return a human-readable layer stack for documentation/tests."""
@@ -58,7 +62,30 @@ class StudentModelConfig:
             },
             {"type": "Dense", "units": self.dense_units, "activation": "relu"},
             {"type": "Dropout", "rate": self.dropout},
-            {"type": "Dense", "units": self.num_classes, "activation": "linear"},
+            {
+                "type": "Dense",
+                "units": self.num_classes,
+                "activation": "linear",
+                "name": "class_logits",
+            },
+            *(
+                [
+                    {
+                        "type": "Dense",
+                        "units": self.transaction_hidden_units,
+                        "activation": "relu",
+                        "name": "transaction_protection_hidden",
+                    },
+                    {
+                        "type": "Dense",
+                        "units": 1,
+                        "activation": "linear",
+                        "name": "transaction_protection_logit",
+                    }
+                ]
+                if self.transaction_protection_head
+                else []
+            ),
         ]
 
 
@@ -78,6 +105,12 @@ def config_from_mapping(data: Mapping[str, Any]) -> StudentModelConfig:
         dense_units=int(model_cfg.get("dense_units", 96)),
         dropout=float(model_cfg.get("dropout", 0.2)),
         num_classes=int(model_cfg.get("num_classes", 4)),
+        transaction_protection_head=bool(
+            model_cfg.get("transaction_protection_head", False)
+        ),
+        transaction_hidden_units=int(
+            model_cfg.get("transaction_hidden_units", 0)
+        ),
         max_bytes=int(input_cfg.get("max_bytes", MAX_BYTES)),
         pad_id=int(input_cfg.get("pad_id", PAD_ID)),
         byte_offset=int(input_cfg.get("byte_offset", BYTE_OFFSET)),
@@ -129,16 +162,35 @@ def build_keras_model(config: StudentModelConfig):
     else:
         x = branch_outputs[0]
 
+    pooled = x
     x = layers.Dense(
         config.dense_units,
         activation="relu",
         name="dense_hidden",
     )(x)
     x = layers.Dropout(config.dropout, name="dropout")(x)
-    outputs = layers.Dense(
+    class_logits = layers.Dense(
         config.num_classes,
         activation="linear",
-        name="logits",
+        name="class_logits" if config.transaction_protection_head else "logits",
     )(x)
+    if config.transaction_protection_head:
+        protection_features = pooled
+        if config.transaction_hidden_units > 0:
+            protection_features = layers.Dense(
+                config.transaction_hidden_units,
+                activation="relu",
+                name="transaction_protection_hidden",
+            )(protection_features)
+        transaction_logit = layers.Dense(
+            1,
+            activation="linear",
+            name="transaction_protection_logit",
+        )(protection_features)
+        outputs = layers.Concatenate(name="logits")(
+            [class_logits, transaction_logit]
+        )
+    else:
+        outputs = class_logits
 
     return keras.Model(inputs=inputs, outputs=outputs, name="byte_textcnn")

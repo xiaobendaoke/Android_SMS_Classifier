@@ -1,0 +1,275 @@
+{
+  "seed": 42,
+  "importance": "l1_norm",
+  "prune_ratios_tried": [
+    0.25,
+    0.15,
+    0.1
+  ],
+  "input_model": "artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_20260806_r1/sms_bytecnn_fp32.keras",
+  "output_model": "artifacts/experiments/stage2_xfyun_txn_ad_overlay_lr_5e4_hard_boundary_both_1p5_txn_w1p8_formalgate_20260806_r1/sms_bytecnn_pruned.keras",
+  "constraints": {
+    "max_transaction_recall_drop": 0.005,
+    "max_macro_f1_drop": 0.01
+  },
+  "method": "rebuild_smaller_conv_channels",
+  "baseline_val_metrics": {
+    "accuracy": 0.7601449275362319,
+    "macro_f1": 0.7473007395921853,
+    "per_class": {
+      "TRANSACTION": {
+        "precision": 0.641185647425897,
+        "recall": 0.9535962877030162,
+        "f1": 0.7667910447761194
+      },
+      "AD": {
+        "precision": 0.943127962085308,
+        "recall": 0.6611295681063123,
+        "f1": 0.7773437499999999
+      },
+      "HARASS": {
+        "precision": 0.744,
+        "recall": 0.6992481203007519,
+        "f1": 0.7209302325581395
+      },
+      "FRAUD": {
+        "precision": 0.765625,
+        "recall": 0.6869158878504673,
+        "f1": 0.7241379310344828
+      }
+    },
+    "confusion_matrix": [
+      [
+        411,
+        16,
+        1,
+        3
+      ],
+      [
+        154,
+        398,
+        17,
+        33
+      ],
+      [
+        26,
+        5,
+        93,
+        9
+      ],
+      [
+        50,
+        3,
+        14,
+        147
+      ]
+    ],
+    "label_order": [
+      "TRANSACTION",
+      "AD",
+      "HARASS",
+      "FRAUD"
+    ],
+    "count": 1380
+  },
+  "attempts": [
+    {
+      "prune_ratio": 0.25,
+      "kept_filters": 60,
+      "val_metrics": {
+        "accuracy": 0.8695652173913043,
+        "macro_f1": 0.834259410996536,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.927400468384075,
+            "recall": 0.9187935034802784,
+            "f1": 0.9230769230769231
+          },
+          "AD": {
+            "precision": 0.8535433070866142,
+            "recall": 0.9003322259136213,
+            "f1": 0.8763136620856913
+          },
+          "HARASS": {
+            "precision": 0.7850467289719626,
+            "recall": 0.631578947368421,
+            "f1": 0.7000000000000001
+          },
+          "FRAUD": {
+            "precision": 0.8436018957345972,
+            "recall": 0.8317757009345794,
+            "f1": 0.8376470588235294
+          }
+        },
+        "confusion_matrix": [
+          [
+            396,
+            33,
+            2,
+            0
+          ],
+          [
+            25,
+            542,
+            11,
+            24
+          ],
+          [
+            3,
+            37,
+            84,
+            9
+          ],
+          [
+            3,
+            23,
+            10,
+            178
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1380
+      },
+      "within_budget": false
+    },
+    {
+      "prune_ratio": 0.15,
+      "kept_filters": 68,
+      "val_metrics": {
+        "accuracy": 0.8572463768115942,
+        "macro_f1": 0.8300630524876063,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.875,
+            "recall": 0.925754060324826,
+            "f1": 0.8996617812852312
+          },
+          "AD": {
+            "precision": 0.8684654300168634,
+            "recall": 0.8554817275747508,
+            "f1": 0.8619246861924685
+          },
+          "HARASS": {
+            "precision": 0.8148148148148148,
+            "recall": 0.6616541353383458,
+            "f1": 0.7302904564315352
+          },
+          "FRAUD": {
+            "precision": 0.8116591928251121,
+            "recall": 0.8457943925233645,
+            "f1": 0.8283752860411899
+          }
+        },
+        "confusion_matrix": [
+          [
+            399,
+            28,
+            1,
+            3
+          ],
+          [
+            40,
+            515,
+            17,
+            30
+          ],
+          [
+            2,
+            34,
+            88,
+            9
+          ],
+          [
+            15,
+            16,
+            2,
+            181
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1380
+      },
+      "within_budget": false
+    },
+    {
+      "prune_ratio": 0.1,
+      "kept_filters": 72,
+      "val_metrics": {
+        "accuracy": 0.8572463768115942,
+        "macro_f1": 0.8219068586974263,
+        "per_class": {
+          "TRANSACTION": {
+            "precision": 0.9207459207459208,
+            "recall": 0.9164733178654292,
+            "f1": 0.9186046511627907
+          },
+          "AD": {
+            "precision": 0.8527508090614887,
+            "recall": 0.8754152823920266,
+            "f1": 0.8639344262295082
+          },
+          "HARASS": {
+            "precision": 0.712,
+            "recall": 0.6691729323308271,
+            "f1": 0.689922480620155
+          },
+          "FRAUD": {
+            "precision": 0.8269230769230769,
+            "recall": 0.8037383177570093,
+            "f1": 0.815165876777251
+          }
+        },
+        "confusion_matrix": [
+          [
+            395,
+            30,
+            4,
+            2
+          ],
+          [
+            29,
+            527,
+            21,
+            25
+          ],
+          [
+            2,
+            33,
+            89,
+            9
+          ],
+          [
+            3,
+            28,
+            11,
+            172
+          ]
+        ],
+        "label_order": [
+          "TRANSACTION",
+          "AD",
+          "HARASS",
+          "FRAUD"
+        ],
+        "count": 1380
+      },
+      "within_budget": false
+    }
+  ],
+  "status": "DENSE_FALLBACK",
+  "effective_constraints": {
+    "max_transaction_recall_drop": 0.005,
+    "max_macro_f1_drop": 0.01
+  },
+  "note": "All prune ratios exceeded budget on current val set; copied dense FP32 model to pruned path so quantize can continue. Not a production prune accept."
+}
