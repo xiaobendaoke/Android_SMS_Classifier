@@ -1,75 +1,134 @@
-# Android 终端侧离线短信分类识别系统
+# Android 端侧离线短信分类系统
 
-端侧离线四分类短信识别 Demo App + 可复用 SDK（AAR）+ 训练/蒸馏/剪枝/量化流水线。  
-**当前课题目标语种：仅中文**（英/印地/印尼不纳入本期验收）。
+> 面向 4GB/6GB 中低端 Android 设备的端侧离线短信四分类系统：零上云、无重型大模型、短信不出设备，实现「事务 / 广告 / 骚扰 / 诈骗」细分类与可解释输出。
 
-## 主规格文档
+## 项目简介
 
-实施与验收以仓库根目录主规格为准：
+营销广告、骚扰推广与验证码、物流、银行动账等短信高度混杂，云端分类存在短信正文上传的隐私风险，重型大模型又难以部署到中低端设备。本项目提供一套端到端本地方案：
 
-- [Android终端侧离线短信分类识别系统-完整实施与最终审核方案.md](./Android终端侧离线短信分类识别系统-完整实施与最终审核方案.md)
+- **全链路本地处理**：短信读取 → 归一化 → 规则引擎 → Byte TextCNN → 决策路由 → 结果展示。
+- **轻量模型**：Full-INT8 TFLite，模型仅约 101 KB，适配中低端设备。
+- **防误杀设计**：规则优先保护事务短信，低置信与超时一律进入 REVIEW 兜底，永不自动删除短信。
+- **高隐私**：App/SDK 无 `INTERNET` 权限，短信正文只在本机内存处理。
+- **可解释输出**：返回类别、动作、置信度、耗时、原因码与命中规则，便于人工复核。
 
-## 项目结构
+## 系统架构
+
+```text
+短信 Provider / Receiver
+  → TextNormalizer（NFKC 归一化 / 混淆字符替换）
+  → RuleEngine（事务保护 / 欺诈拦截 / 骚扰识别规则）
+  → ByteEncoder（UTF-8 字节编码，固定长度 512）
+  → LiteRtClassifier（TFLite INT8 推理）
+  → DecisionRouter（INBOX / SUSPECT / REVIEW + 可解释依据）
+```
+
+关键设计：分类与处置分离，规则只影响动作、不篡改模型分类；模型负责细分类，规则与低置信兜底共同保证事务短信不被误杀。
+
+## 当前指标
+
+### 分类质量（中文 validation，Keras 独立评测）
+
+| 门禁 | 目标 | 当前 | 状态 |
+|------|------|------|------|
+| TRANSACTION Recall | ≥0.985 | 0.9568 | 未达 |
+| TRANSACTION Precision | ≥0.920 | 0.9258 | 达标 |
+| Macro-F1 | ≥0.860 | 0.8864 | 达标 |
+| HARASS F1 | ≥0.800 | 0.8194 | 达标 |
+| FRAUD Recall | ≥0.800 | 0.8780 | 达标 |
+
+> 说明：当前交付版本的事务类短信召回率未达到 98% 硬指标，其余四项门禁通过；完整口径见 `00_验收报告/最终验收报告.md`。
+
+### 性能（模拟器工程测量）
+
+| 配置 | p99 时延 | 吞吐 | PSS 暖启动 → 跑后 |
+|------|---------|------|-------------------|
+| 模拟器 4GB（Pixel_9a） | 3.6 ms | 395.7 msg/s | 37.9 MB → 59.5 MB |
+| 模拟器 6GB（Pixel_9a_6G） | 93.4 ms | 64.9 msg/s | 38.3 MB → 44.2 MB |
+
+> 说明：以上为 x86_64 模拟器工程测量（数据见 `05_指标报告/`），不代表真机结果。
+
+### 模型
+
+- 架构：Byte TextCNN（字节级编码，输入长度 512）。
+- 量化：Full-INT8 TFLite，`101,696` B。
+- SHA256：`b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed`。
+- Keras/TFLite 一致性：0.9964（≥0.99）。
+
+## 目录结构
 
 | 目录 | 说明 |
 |------|------|
-| `android/` | Gradle 多模块：app、classifier-sdk、benchmark |
-| `training/` | Python 数据与模型训练流水线 |
-| `tools/` | 发布审核、SBOM、合规检查脚本 |
-| `docs/` | 架构、标注、隐私、测试与报告文档 |
-| `reports/` | 指标、基准、审核与发布报告输出目录 |
+| `00_验收报告/` | 最终验收报告 |
+| `01_模型/` | INT8 TFLite、FP32 Keras、量化报告、模型元数据 |
+| `02_Android/` | Demo APK、SDK AAR、Android 三模块源码 |
+| `03_规则引擎/` | 事务/广告/骚扰/诈骗/OTP 规则与归一化表 |
+| `04_训练与数据/` | 训练源码、配置、数据快照与说明（仅内部使用） |
+| `05_指标报告/` | 分类指标、模拟器性能、App 端批量评估 |
+| `06_审计与合规/` | 发布审计、SBOM、权限清单、产物哈希 |
 
-## 环境要求
+## 快速开始
 
-- Python ≥ 3.8
-- JDK 17+（Android 构建）
-- Android SDK（API 34，minSdk 26）
-- Gradle Wrapper（见 `android/README-GRADLE.md`）
+### 安装 Demo
 
-**换机测试前必读：** [docs/异机测试环境安装清单.md](./docs/异机测试环境安装清单.md)  
-**Colab 训练微调：** [docs/colab-training-guide.md](./docs/colab-training-guide.md)  
-**当前进度：** [docs/progress.md](./docs/progress.md)
+1. 将 `02_Android/app-debug.apk` 安装到 Android 8.0+（minSdk 26）设备或模拟器。
+2. 首次启动授予短信读取/接收权限。
+3. 使用三个页面：离线测评（内置样例或导入 JSON/JSONL）、短信判断（手动输入正文）、关于。
 
-> Windows 路径含中文时，Gradle 单测可能 ClassNotFound：请建 ASCII junction，例如  
-> `mklink /J C:\dev\Android_SMS_Classifier "<本仓库绝对路径>"`，再在 junction 下执行 `gradlew`。
+### 集成 SDK
 
-## Make 目标
+SDK AAR：`02_Android/classifier-sdk-release.aar`。核心接口为 `SmsClassifier.classify(SmsInput)`，返回 `ClassificationResult`（类别、动作、置信度、原因码、命中规则等）。
 
-```bash
-make help                 # 列出所有目标
-make setup-python         # 创建虚拟环境并安装锁定依赖
-make audit-data           # 数据来源审计
-make prepare-data         # 构建数据集
-make train-baseline       # 训练 n-gram 基线
-make train-teacher        # 微调多语 BERT 教师
-make distill              # 蒸馏 Byte TextCNN 学生
-make prune                # 结构化通道剪枝
-make quantize             # INT8 量化
-make verify-model         # Keras/TFLite 一致性验证
-make evaluate             # 冻结测试集评测
-make export-android-assets # 导出模型与规则到 SDK assets
-make android-test         # Android 单元/仪器化测试
-make android-build        # 构建 Debug APK
-make benchmark            # 真机性能基准（仪器化）
-make audit-release        # 发布前合规审核
-make package-release      # 打包发布产物
+```kotlin
+val classifier: SmsClassifier = DefaultSmsClassifier(readAsset = ::readAsset, modelBytes = modelBytes)
+val result = classifier.classify(
+    SmsInput(
+        sender = "10086",
+        body = "【银行】您尾号1234的账户到账人民币500.00元",
+        timestampMillis = System.currentTimeMillis()
+    )
+)
+println(result.category)   // TRANSACTION / AD / HARASS / FRAUD
+println(result.action)     // INBOX / SUSPECT / REVIEW
+println(result.reasonCode) // 可解释依据
 ```
 
-## 快速验证（轻量，本机可做）
+### 源码构建
 
 ```bash
-PYTHONPATH=training python3 -m pytest training/tests -q
-python3 tools/check_no_network_permission.py
+cd 02_Android/android-src
+./gradlew test
+./gradlew :app:assembleDebug
 ```
 
-Android 构建与训练链请按 [异机测试环境安装清单](./docs/异机测试环境安装清单.md) 在开发机/训练机执行。
+构建前提：JDK 17+、Android SDK（compileSdk 34 / minSdk 26）；`local.properties` 中配置 `sdk.dir` 或设置 `ANDROID_HOME`。详细说明见 `02_Android/android-src/README-GRADLE.md`。
 
-## 约束
+### 训练源码与数据
 
-- App 与 SDK **不得**申请 `INTERNET` 权限
-- 原始短信数据不入 Git（见 `training/data/README.md`）
-- 不自动永久删除短信；疑似垃圾可恢复
+`04_训练与数据/` 包含训练核心模块（`src/`）、配置（`configs/`）与数据快照（`data/`）。本交付包聚焦最终产物，训练脚本与中间过程不随包提供；数据口径见 `04_训练与数据/data/README-数据.md`。
 
-## 许可证
+## 数据与合规
 
-Apache License 2.0 — 见 [LICENSE](./LICENSE) 与 [NOTICE](./NOTICE)。
+- 数据快照：train 11,095 / validation 1,398 / test 1,397 行，见 `04_训练与数据/data/README-数据.md`。
+- 原始短信 JSONL 仅限内部审核与答辩使用，禁止公开、上传或二次分发。
+- App/SDK 无 `INTERNET` 权限，运行链路零上云，分类全部本地完成。
+- 交付包不含 API 密钥，不含第三方原始文件与训练中间产物。
+
+## 已知限制
+
+- 事务类短信召回率当前 0.9568，未达到 98% 硬指标。
+- 当前验收口径仅中文；英文、印地语、印尼语为架构预留，尚无正式评测。
+- 性能数据为模拟器工程测量，不代表真机结果。
+
+## 交付物清单
+
+- Demo APK：`02_Android/app-debug.apk`（SHA256 `5374914c54f4...`）。
+- SDK AAR：`02_Android/classifier-sdk-release.aar`（SHA256 `fc4245852962...`）。
+- 端侧模型：`01_模型/sms_bytecnn_int8.tflite`。
+- 指标与审计：`05_指标报告/`、`06_审计与合规/`。
+
+## 参考文档
+
+- 最终验收报告：`00_验收报告/最终验收报告.md`
+- 数据说明：`04_训练与数据/data/README-数据.md`
+- Gradle 构建说明：`02_Android/android-src/README-GRADLE.md`

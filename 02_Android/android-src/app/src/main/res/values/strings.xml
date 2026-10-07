@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">短信分类器</string>
+
+    <!-- Bottom tabs -->
+    <string name="tab_inbox">收件箱</string>
+    <string name="tab_suspect">可疑</string>
+    <string name="tab_review">待复核</string>
+    <string name="tab_evaluation">离线评估</string>
+    <string name="tab_judge">短信判断</string>
+    <string name="tab_performance">性能</string>
+    <string name="tab_about">关于</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">欢迎使用短信分类器</string>
+    <string name="onboarding_privacy">本应用完全离线运行，不会上传短信内容。分类元数据（类别、置信度等）保存在本地数据库，不含短信正文。</string>
+    <string name="onboarding_role_hint">请将本应用设为默认短信应用，以便接收并分类新短信。</string>
+    <string name="onboarding_request_role">申请默认短信角色</string>
+    <string name="onboarding_role_granted">已持有默认短信角色</string>
+    <string name="onboarding_continue">进入应用</string>
+    <string name="onboarding_permission_hint">首次使用需授予读取短信权限，否则收件箱无法加载。</string>
+    <string name="onboarding_request_permission">授予短信权限</string>
+    <string name="onboarding_permission_granted">已授予短信权限</string>
+
+    <!-- Inbox / lists -->
+    <string name="inbox_empty">暂无短信</string>
+    <string name="sms_permission_needed">需要读取短信权限才能显示收件箱</string>
+    <string name="sms_permission_grant">授予权限</string>
+    <string name="suspect_empty">暂无可疑短信</string>
+    <string name="review_empty">暂无待复核短信</string>
+    <string name="suspect_restore">恢复至收件箱</string>
+    <string name="review_restore">恢复至收件箱</string>
+
+    <!-- Detail -->
+    <string name="detail_title">消息详情</string>
+    <string name="detail_category">类别</string>
+    <string name="detail_action">动作</string>
+    <string name="detail_confidence">置信度</string>
+    <string name="detail_reason">原因码</string>
+    <string name="detail_rules">命中规则</string>
+    <string name="detail_model_version">模型版本</string>
+    <string name="detail_rules_version">规则版本</string>
+    <string name="detail_no_meta">暂无分类元数据</string>
+    <string name="detail_safety_note">安全提示：请谨慎点击短信中的链接，勿向陌生人转账或泄露验证码。</string>
+    <string name="judge_sender">发件人（可选）</string>
+    <string name="judge_body">短信内容</string>
+    <string name="judge_run">开始判断</string>
+    <string name="judge_clear">清空</string>
+    <string name="judge_body_required">请输入短信内容</string>
+    <string name="judge_result_title">判断结果</string>
+    <string name="judge_elapsed">耗时</string>
+    <string name="category_transaction">事务</string>
+    <string name="category_ad">广告</string>
+    <string name="category_harass">骚扰</string>
+    <string name="category_fraud">诈骗</string>
+    <string name="action_inbox">收件箱</string>
+    <string name="action_suspect">可疑</string>
+    <string name="action_review">待复核</string>
+
+    <!-- Evaluation -->
+    <string name="eval_run">运行离线评估</string>
+    <string name="eval_import_saf">从文件导入测试集</string>
+    <string name="eval_export">导出脱敏报告</string>
+    <string name="eval_summary">样本 %1$d · 有标签 %2$d · 类别正确 %3$d · 准确率 %4$d%%</string>
+    <string name="eval_resample">换一批</string>
+    <string name="eval_batch_size">抽取条数</string>
+    <string name="eval_pool_hint">样本池 %1$d 条 · 本次抽取 %2$d 条</string>
+    <string name="eval_batch_shrink_hint">样本池较少，本次自动抽取 %1$d 条以支持“换一批”</string>
+
+    <!-- Performance -->
+    <string name="performance_title">分类性能指标</string>
+    <string name="performance_run">本地测速</string>
+    <string name="performance_p50">P50 延迟</string>
+    <string name="performance_p95">P95 延迟</string>
+    <string name="performance_p99">P99 延迟</string>
+    <string name="performance_throughput">吞吐量</string>
+    <string name="performance_placeholder_hint">点击「本地测速」在本机运行离线分类基准（冷/热路径混合）。</string>
+    <string name="performance_model_on">模型路径：已加载 TFLite（或规则+模型混合）</string>
+    <string name="performance_model_off">模型路径：无模型或降级为规则</string>
+    <string name="performance_budget_hint">验收预算：单条全链路 ≤500 ms；端侧额外内存 ≤100 MB（需真机 PSS）。</string>
+
+    <!-- About -->
+    <string name="about_title">关于</string>
+    <string name="about_version">版本 0.2.0-ml-pipeline</string>
+    <string name="about_opensource">开源组件声明</string>
+    <string name="about_opensource_link">Android Jetpack · Kotlin · Room · Compose · Material3 · TensorFlow Lite</string>
+
+    <!-- Compose SMS -->
+    <string name="compose_title">撰写短信</string>
+    <string name="compose_address">收件人</string>
+    <string name="compose_body">内容</string>
+    <string name="compose_send">发送</string>
+    <string name="compose_sent">已发送</string>
+    <string name="compose_send_failed">发送失败</string>
+    <string name="compose_permission_denied">需要 SEND_SMS 权限</string>
+
+    <!-- Notifications (lock-screen safe: no body / OTP) -->
+    <string name="channel_inbox">收件箱通知</string>
+    <string name="channel_suspect">可疑短信</string>
+    <string name="channel_mms">彩信</string>
+    <string name="notification_inbox_title">新短信</string>
+    <string name="notification_suspect_title">可疑短信</string>
+    <string name="notification_review_title">待复核短信</string>
+    <string name="notification_mms_title">收到彩信</string>
+    <string name="notification_mms_body">彩信已接收（占位处理）</string>
+    <string name="notification_private_body">有新消息，解锁后查看</string>
+    <string name="notification_from_redacted">来自 %1$s</string>
+</resources>

@@ -1,0 +1,15 @@
+{
+  "device": "sdk_gphone64_x86_64",
+  "sdk": 36,
+  "sample_count": 500,
+  "p50_ms": 10.1,
+  "p95_ms": 41.4,
+  "p99_ms": 93.4,
+  "throughput_msg_per_sec": 64.9,
+  "pss_kb_after_warmup": 38330,
+  "pss_kb_after_run": 44228,
+  "model_available": true,
+  "note": "Engineering emulator measurement; not a 4GB/6GB formal device report.",
+  "ram_mb": 6144,
+  "avd": "Pixel_9a_6G"
+}

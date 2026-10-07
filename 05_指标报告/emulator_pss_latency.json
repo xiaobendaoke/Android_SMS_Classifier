@@ -1,0 +1,13 @@
+{
+  "device": "sdk_gphone64_x86_64",
+  "sdk": 36,
+  "sample_count": 500,
+  "p50_ms": 2.4,
+  "p95_ms": 2.8,
+  "p99_ms": 3.2,
+  "throughput_msg_per_sec": 401.5,
+  "pss_kb_after_warmup": 37864,
+  "pss_kb_after_run": 59448,
+  "model_available": true,
+  "note": "Engineering emulator measurement; not a 4GB\/6GB formal device report."
+}

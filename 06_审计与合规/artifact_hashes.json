@@ -1,0 +1,21 @@
+{
+  "_note": "Updated for 2026-08-09 r2 delivery snapshot; paths match current repository layout.",
+  "01_模型/sms_bytecnn_int8.tflite": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed",
+  "01_模型/sms_bytecnn_fp32.keras": "a368cd5bdb7d8efc842d6d9e5fa5e601a7098dc755267ee90b2892df90e91205",
+  "01_模型/model_metadata.json": "eb1c931dab5f08b2b151534eb81c55d07f843d639098d0e442aabb12f35d0378",
+  "01_模型/config.yaml": "b375a732fa438a518ab075b1e59ae43530ff3b5df8ec7967fa87d188ce171812",
+  "01_模型/quantize.json": "006a8b3cb88ba0323ea273eda9bda189dd6ab5837cd3690f3765416bedbd6a50",
+  "02_Android/app-debug.apk": "5374914c54f4a62ee9d6fc4e4c590a871cd957fb7ab741c4934a7b593b4fae1d",
+  "02_Android/classifier-sdk-release.aar": "fc4245852962ad906709537306ee6204b25909f56d726d5a490137c51bc09b35",
+  "02_Android/assets/sms_bytecnn_int8.tflite": "b4c53f180ed3d23b0b01205f75610e174fe06fe5b9116e53d936a714f052baed",
+  "02_Android/assets/model_metadata.json": "eb1c931dab5f08b2b151534eb81c55d07f843d639098d0e442aabb12f35d0378",
+  "02_Android/assets/rules/transaction_rules.json": "ffa4799614f6437dfe65d31557cdb53c274a24cbee5044e2d7853bd340a174ef",
+  "02_Android/assets/rules/otp_rules.json": "75d2bf11c10d71cfd1a9a3b78e8cb189f8a4c71500a884c6dd51c1f66b969705",
+  "02_Android/assets/rules/harass_rules.json": "fc934e7b1c0a43ff3be0727af121739f2dcbad9d92d9957c18fdb69f3d1c9589",
+  "02_Android/assets/rules/fraud_rules.json": "47c926cf3f9fc45728146acd004025f2dad828c92d4a3a3bec1d774645513814",
+  "02_Android/assets/rules/ad_rules.json": "fe10108e239e443c34e4da1267f9c9c2c47bea000a8248fc7efd85434a0898a6",
+  "02_Android/assets/normalize/confusables.json": "cae3f5b0b54adee161312c6783e560d5582dccbeb0fc631ccd45a6787dc2f59b",
+  "04_训练与数据/data/train.jsonl": "aa8f71162ea1f5ff956afb38b0e42185db12e94d03310a6d097fb09a84f4717f",
+  "04_训练与数据/data/validation.jsonl": "394916fa3506a565c451219c3b2590df9ca23188be6cf4d0e0fd1540e016d1d8",
+  "04_训练与数据/data/test.jsonl": "d20f877b1718b93a5ea28f80dfb607fa0949b1666d12c57e906825e9cef25ee1"
+}

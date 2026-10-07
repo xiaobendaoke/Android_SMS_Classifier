@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "FRAUD_CN_001",
+      "language": "zh",
+      "type": "FRAUD_RISK",
+      "priority": 90,
+      "pattern": "(?:安全账户.{0,30}转账|转账.{0,30}安全账户)",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "HIGH_FRAUD_RISK",
+      "enabled": true
+    },
+    {
+      "id": "FRAUD_CN_002",
+      "language": "zh",
+      "type": "FRAUD_RISK",
+      "priority": 92,
+      "pattern": "(?:公检法|公安局|检察院|法院).{0,40}(?:冻结|调查|涉嫌)",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "HIGH_FRAUD_RISK",
+      "enabled": true
+    },
+    {
+      "id": "FRAUD_CN_003",
+      "language": "zh",
+      "type": "FRAUD_RISK",
+      "priority": 88,
+      "pattern": "(?:验证码|动态密码).{0,20}(?:发送|提供|告知).{0,20}(?:工作人员|客服)",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "HIGH_FRAUD_RISK",
+      "enabled": true
+    },
+    {
+      "id": "FRAUD_CN_004",
+      "language": "zh",
+      "type": "FRAUD_RISK",
+      "priority": 85,
+      "pattern": "(?:冒充|假冒).{0,20}(?:银行|公安|快递|领导)",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "HIGH_FRAUD_RISK",
+      "enabled": true
+    },
+    {
+      "id": "FRAUD_EN_001",
+      "language": "en",
+      "type": "FRAUD_RISK",
+      "priority": 85,
+      "pattern": "(?:secure\\s+account|verify\\s+immediately|suspended\\s+account).{0,40}(?:click|link|http)",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "PHISHING_RISK",
+      "enabled": true
+    },
+    {
+      "id": "FRAUD_EN_002",
+      "language": "en",
+      "type": "FRAUD_RISK",
+      "priority": 80,
+      "pattern": "(?:bit\\.ly|tinyurl|goo\\.gl|t\\.co)/[A-Za-z0-9]+",
+      "categoryHint": "FRAUD",
+      "action": "REVIEW",
+      "reasonCode": "SUSPICIOUS_URL",
+      "enabled": true
+    }
+  ]
+}

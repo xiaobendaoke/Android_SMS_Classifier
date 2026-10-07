@@ -1,0 +1,8 @@
+{
+  "file": "02_Android/app-debug.apk",
+  "reason": "2026-08-09 三页版 App（离线测评/短信判断/关于）构建；supersedes delivery_apk_20260808 9D32C937...",
+  "note": "Delivered APK snapshot for 2026-08-09 package. Historical audit artifact_hashes.json keeps the formalgate build hash.",
+  "built_at_utc": "2026-08-09T02:40:17Z",
+  "sha256": "3CB0BE2FB37228B3460FFD723705B7B2E8C7282EAE51F411C6E09A6EFF4654CC",
+  "superseded_by": "delivery_apk_20260809_r2.json"
+}

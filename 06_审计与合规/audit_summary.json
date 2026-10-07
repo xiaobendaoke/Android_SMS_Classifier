@@ -1,0 +1,17 @@
+{
+  "release": "0.2.1-p0-fixes",
+  "status": "PASS_ENGINEERING",
+  "p0": 0,
+  "p1": 0,
+  "p2": 0,
+  "checksPassed": 4,
+  "checksFailed": 0,
+  "internetPermissionHits": [],
+  "datasetLeakage": "PASS",
+  "artifactHashesFile": "artifact_hashes.json",
+  "hasInt8Model": true,
+  "hasDebugApk": true,
+  "note": "工程闭环：validation-only 评测，TRANSACTION Recall 0.9568 未达 98% 硬指标；性能为模拟器工程测量。",
+  "generatedAt": "2026-08-06T09:45:54.720867+00:00",
+  "reviewers": []
+}

@@ -1,0 +1,46 @@
+{
+  "bomFormat": "SMSClassifier-SBOM",
+  "specVersion": "0.2",
+  "version": "0.2.0-ml-pipeline",
+  "timestamp": "2026-08-06T09:46:21.455537+00:00",
+  "components": [
+    {
+      "name": "org.tensorflow:tensorflow-lite",
+      "version": "2.14.0",
+      "type": "library",
+      "license": "Apache-2.0",
+      "scope": "android/classifier-sdk"
+    },
+    {
+      "name": "androidx.compose.ui",
+      "version": "BOM",
+      "type": "library",
+      "license": "Apache-2.0",
+      "scope": "android/app"
+    },
+    {
+      "name": "androidx.room",
+      "version": "2.x",
+      "type": "library",
+      "license": "Apache-2.0",
+      "scope": "android/app"
+    },
+    {
+      "name": "tensorflow (training)",
+      "version": ">=2.16",
+      "type": "library",
+      "license": "Apache-2.0",
+      "scope": "training",
+      "note": "Training-only; not shipped in APK"
+    },
+    {
+      "name": "bert-base-multilingual-cased",
+      "version": "third-party",
+      "type": "model",
+      "license": "Apache-2.0",
+      "scope": "training/teacher",
+      "third_party": true,
+      "note": "Optional teacher; local cache preferred. Not shipped on-device."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "file": "02_Android/app-debug.apk",
+  "reason": "2026-08-09 换一批收窄修复（OfflineEvalLogic）后重建；supersedes delivery_apk_20260809 3CB0BE2F...",
+  "note": "Delivered APK snapshot for 2026-08-09 r2. Historical audit artifact_hashes.json keeps the formalgate build hash.",
+  "built_at_utc": "2026-08-09T04:00:00Z",
+  "sha256": "5374914C54F4A62EE9D6FC4E4C590A871CD957FB7AB741C4934A7B593B4FAE1D"
+}

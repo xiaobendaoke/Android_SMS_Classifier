@@ -1,0 +1,8 @@
+{
+  "file": "02_Android/app-debug.apk",
+  "reason": "Rebuilt with all-Chinese offline eval samples; supersedes formalgate APK aec4393fbe8a05660c0426a3c2ae3b38fae0cb073c4adde2f59bdcf9456e16e7",
+  "note": "Delivered APK snapshot for 2026-08-08 package. Historical audit artifact_hashes.json keeps the formalgate build hash.",
+  "built_at_utc": "2026-08-08T15:05:00Z",
+  "sha256": "9D32C937EACE96616E9CCDCAAE637893F8DCF837B2C010B6E9F8D7773CA42757",
+  "superseded_by": "delivery_apk_20260809.json"
+}

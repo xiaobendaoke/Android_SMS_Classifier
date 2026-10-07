@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "AD_CN_001",
+      "language": "zh",
+      "type": "AD_HINT",
+      "priority": 60,
+      "pattern": "(?:退订|回复TD|回复T退订|优惠券|限时促销|点击领取)",
+      "categoryHint": "AD",
+      "action": "SUSPECT",
+      "reasonCode": "AD_HINT",
+      "enabled": true
+    },
+    {
+      "id": "AD_EN_001",
+      "language": "en",
+      "type": "AD_HINT",
+      "priority": 60,
+      "pattern": "(?:unsubscribe|reply\\s+STOP|special\\s+offer|limited\\s+time\\s+deal)",
+      "categoryHint": "AD",
+      "action": "SUSPECT",
+      "reasonCode": "AD_HINT",
+      "enabled": true
+    }
+  ]
+}

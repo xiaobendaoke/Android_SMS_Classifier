@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "HARASS_CN_001",
+      "language": "zh",
+      "type": "HARASS_HINT",
+      "priority": 70,
+      "pattern": "(?:还钱|催债|别装看不见|天天给你打电话|拉黑我就|去你公司找你)",
+      "categoryHint": "HARASS",
+      "action": "SUSPECT",
+      "reasonCode": "HARASS_DEBT_PRESSURE",
+      "enabled": true
+    },
+    {
+      "id": "HARASS_EN_001",
+      "language": "en",
+      "type": "HARASS_HINT",
+      "priority": 70,
+      "pattern": "(?:pay\\s+me\\s+back|keep\\s+calling|know\\s+where\\s+you\\s+work|contact\\s+your\\s+manager|stop\\s+ignoring\\s+me)",
+      "categoryHint": "HARASS",
+      "action": "SUSPECT",
+      "reasonCode": "HARASS_PRESSURE",
+      "enabled": true
+    },
+    {
+      "id": "HARASS_HI_001",
+      "language": "hi",
+      "type": "HARASS_HINT",
+      "priority": 70,
+      "pattern": "(?:पैसा\\s*वापस|परेशान|बार-बार\\s*कॉल)",
+      "categoryHint": "HARASS",
+      "action": "SUSPECT",
+      "reasonCode": "HARASS_PRESSURE",
+      "enabled": true
+    },
+    {
+      "id": "HARASS_ID_001",
+      "language": "id",
+      "type": "HARASS_HINT",
+      "priority": 70,
+      "pattern": "(?:bayar\\s+utang|terus\\s+menghubungi|jangan\\s+abaikan|tahu\\s+alamat)",
+      "categoryHint": "HARASS",
+      "action": "SUSPECT",
+      "reasonCode": "HARASS_PRESSURE",
+      "enabled": true
+    }
+  ]
+}

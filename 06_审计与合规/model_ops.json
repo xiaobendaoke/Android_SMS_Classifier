@@ -1,0 +1,32 @@
+{
+  "model": "02_Android/assets/sms_bytecnn_int8.tflite",
+  "exists": true,
+  "selectTfOps": false,
+  "customOps": false,
+  "status": "LOADED",
+  "note": "Full op inspection requires TensorFlow Lite on the training machine.",
+  "sizeBytes": 101696,
+  "tensorCount": 41,
+  "sampleTensorNames": [
+    "StatefulPartitionedCall_1:0",
+    "arith.constant",
+    "arith.constant1",
+    "arith.constant2",
+    "arith.constant3",
+    "arith.constant4",
+    "byte_textcnn_1/byte_embedding_1/GatherV2;",
+    "byte_textcnn_1/byte_embedding_1/Less",
+    "byte_textcnn_1/byte_embedding_1/SelectV2",
+    "byte_textcnn_1/byte_embedding_1/add",
+    "byte_textcnn_1/class_logits_1/MatMul;byte_textcnn_1/class_logits_1/BiasAdd",
+    "byte_textcnn_1/concat_branches_1/concat",
+    "byte_textcnn_1/conv1d_k3_0_1/Relu;byte_textcnn_1/conv1d_k3_0_1/BiasAdd;byte_textcnn_1/conv1d_k3_0_1/convolution/Squeeze;",
+    "byte_textcnn_1/conv1d_k3_0_1/Relu;byte_textcnn_1/conv1d_k3_0_1/BiasAdd;byte_textcnn_1/conv1d_k3_0_1/convolution/Squeeze;;byte_textcnn_1/conv1d_k3_0_1/convolution",
+    "byte_textcnn_1/conv1d_k3_0_1/convolution/ExpandDims",
+    "byte_textcnn_1/conv1d_k6_1_1/Relu;byte_textcnn_1/conv1d_k6_1_1/BiasAdd;byte_textcnn_1/conv1d_k6_1_1/convolution/Squeeze;",
+    "byte_textcnn_1/conv1d_k6_1_1/Relu;byte_textcnn_1/conv1d_k6_1_1/BiasAdd;byte_textcnn_1/conv1d_k6_1_1/convolution/Squeeze;;byte_textcnn_1/conv1d_k6_1_1/convolution",
+    "byte_textcnn_1/conv1d_k9_2_1/Relu;byte_textcnn_1/conv1d_k9_2_1/BiasAdd;byte_textcnn_1/conv1d_k9_2_1/convolution/Squeeze;",
+    "byte_textcnn_1/conv1d_k9_2_1/Relu;byte_textcnn_1/conv1d_k9_2_1/BiasAdd;byte_textcnn_1/conv1d_k9_2_1/convolution/Squeeze;;byte_textcnn_1/conv1d_k9_2_1/convolution",
+    "byte_textcnn_1/dense_hidden_1/MatMul;byte_textcnn_1/dense_hidden_1/Relu;byte_textcnn_1/dense_hidden_1/BiasAdd"
+  ]
+}

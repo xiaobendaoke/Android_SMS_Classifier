@@ -1,0 +1,26 @@
+# 标签与类别定义
+
+version: "1.0.0"
+
+labels:
+  - TRANSACTION
+  - AD
+  - HARASS
+  - FRAUD
+
+# 模型与评测输出顺序（固定）
+output_order:
+  - TRANSACTION
+  - AD
+  - HARASS
+  - FRAUD
+
+# 训练时不纳入的标记
+excluded_labels:
+  - NEEDS_REVIEW
+
+languages:
+  - zh
+  - en
+  - hi
+  - id
